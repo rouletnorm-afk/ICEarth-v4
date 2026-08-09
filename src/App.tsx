@@ -1,4 +1,4 @@
-// ICEarth Sovereign Portal Release v4.6 - Native gcloud --remove-annotations Cloud Run Container Deploy Pipeline
+// ICEarth Sovereign Portal Release v4.7 - Standardized Cloud Build Substitution Variables & Clean Container Deploy Pipeline
 import React, { useState, useEffect, useRef } from 'react';
 import { BUILD_VERSION } from './version';
 import {
