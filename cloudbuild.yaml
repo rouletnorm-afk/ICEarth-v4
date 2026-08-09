@@ -18,17 +18,39 @@ steps:
       - 'push'
       - '$_IMAGE_NAME'
 
-  # Step 2: Deploy container image to Cloud Run
-  - name: 'gcr.io/cloud-builders/gcloud'
+  # Step 2: Strip stale source annotations and deploy updated container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
     args:
-      - 'run'
-      - 'deploy'
-      - '$_SERVICE_NAME'
-      - '--image=$_IMAGE_NAME'
-      - '--region=$_REGION'
-      - '--platform=managed'
-      - '--quiet'
-      - '--allow-unauthenticated'
+      - '-c'
+      - |
+        set -e
+        echo "Fetching current Cloud Run service specification..."
+        gcloud run services describe $_SERVICE_NAME --region=$_REGION --format="export" > service.yaml || true
+
+        if [ -s service.yaml ]; then
+          echo "Cleaning stale source annotations from service spec..."
+          sed -i '/run.googleapis.com\/sources/d' service.yaml
+
+          echo "Updating container image to $_IMAGE_NAME..."
+          python3 -c "
+import sys, re
+with open('service.yaml', 'r') as f:
+    content = f.read()
+
+new_image = sys.argv[1]
+updated_content = re.sub(r'(image:\s*)[^\n]+', r'\1' + new_image, content, count=1)
+
+with open('service.yaml', 'w') as f:
+    f.write(updated_content)
+" "$_IMAGE_NAME"
+
+          echo "Replacing Cloud Run service configuration..."
+          gcloud run services replace service.yaml --region=$_REGION
+        else
+          echo "Service not found, performing initial deployment..."
+          gcloud run deploy $_SERVICE_NAME --image=$_IMAGE_NAME --region=$_REGION --platform=managed --quiet --allow-unauthenticated
+        fi
 
 images:
   - '$_IMAGE_NAME'
