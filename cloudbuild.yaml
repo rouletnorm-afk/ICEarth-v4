@@ -1,0 +1,52 @@
+substitutions:
+  _IMAGE_NAME: 'us-east1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/icearth-v3:${COMMIT_SHA}'
+
+steps:
+  # Step 1: Build Docker container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_IMAGE_NAME'
+      - '.'
+
+  # Step 2: Push container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_IMAGE_NAME'
+
+  # Step 3: Strip stale source annotations & deploy container image to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        IMAGE_URI="$1"
+        SERVICE_NAME="roulet-s-law-book-icearth-platform"
+        REGION="us-east1"
+
+        echo "Stripping stale source annotations from Cloud Run service if present..."
+        gcloud run services update "$SERVICE_NAME" \
+          --region="$REGION" \
+          --remove-annotations="run.googleapis.com/sources,run.googleapis.com/source-location" \
+          --quiet || true
+
+        echo "Deploying container image $IMAGE_URI to Cloud Run service $SERVICE_NAME..."
+        gcloud run deploy "$SERVICE_NAME" \
+          --image="$IMAGE_URI" \
+          --region="$REGION" \
+          --platform=managed \
+          --quiet \
+          --allow-unauthenticated
+      - '_'
+      - '$_IMAGE_NAME'
+
+images:
+  - '$_IMAGE_NAME'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+
+
