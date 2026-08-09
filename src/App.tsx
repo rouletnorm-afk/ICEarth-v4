@@ -1,4 +1,4 @@
-// ICEarth Sovereign Portal Release v4.7 - Standardized Cloud Build Substitution Variables & Clean Container Deploy Pipeline
+// ICEarth Sovereign Portal Release v5.0 - Standard Clean Cloud Run Container Build & Deploy Pipeline
 import React, { useState, useEffect, useRef } from 'react';
 import { BUILD_VERSION } from './version';
 import {
