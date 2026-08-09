@@ -1,23 +1,38 @@
 substitutions:
+  _IMAGE_NAME: 'gcr.io/${PROJECT_ID}/roulet-s-law-book-icearth-platform:${COMMIT_SHA}'
   _SERVICE_NAME: 'roulet-s-law-book-icearth-platform'
   _REGION: 'us-east1'
 
 steps:
-  # Deploy to Cloud Run directly from source repository
+  # Step 1: Build Docker container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_IMAGE_NAME'
+      - '.'
+
+  # Step 2: Push container image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_IMAGE_NAME'
+
+  # Step 3: Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
       - 'deploy'
       - '$_SERVICE_NAME'
-      - '--source=.'
+      - '--image=$_IMAGE_NAME'
       - '--region=$_REGION'
       - '--platform=managed'
+      - '--service-account=568434421085-compute@developer.gserviceaccount.com'
       - '--quiet'
       - '--allow-unauthenticated'
 
+images:
+  - '$_IMAGE_NAME'
+
 options:
   logging: CLOUD_LOGGING_ONLY
-
-
-
-
