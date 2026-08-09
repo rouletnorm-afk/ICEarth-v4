@@ -1,4 +1,4 @@
-// ICEarth Sovereign Portal Release v5.1 - Source-Based Cloud Run Direct Deployment Pipeline
+// ICEarth Sovereign Portal Release v5.5 - Source Annotation Removal & Container Deployment Pipeline
 import React, { useState, useEffect, useRef } from 'react';
 import { BUILD_VERSION } from './version';
 import {
