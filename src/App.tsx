@@ -36,8 +36,10 @@ import {
   Feather,
   Fingerprint,
   Menu,
-  X
+  X,
+  Sprout
 } from 'lucide-react';
+import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
 import {
   Chapter,
   ChatMessage,
@@ -56,6 +58,7 @@ import {
 import scatterplotImg from './assets/images/Scatterplot.jpg';
 import icearthGif from './assets/images/ICEarth1.gif';
 import icearthLaunchImg from './assets/images/icearth_launch.png';
+import launching1Img from './assets/images/Launching1.png';
 import BenchmarkingEngine from './components/BenchmarkingEngine';
 import { PFASCavitationSimulator } from './components/PFASCavitationSimulator';
 import { OdisseDataviz } from './components/OdisseDataviz';
@@ -79,7 +82,7 @@ import { SovereignMembershipPortal } from './components/SovereignMembershipPorta
 
 export default function App() {
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -713,6 +716,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.1 UCANX Commodities Exchange */}
+                <button
+                  onClick={() => setActiveTab('ucanx')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ucanx'
+                      ? 'bg-amber-900 text-amber-50 border-amber-600/50 shadow-sm font-bold'
+                      : 'hover:bg-amber-50/80 text-amber-900 border-amber-200/50 bg-amber-50/20'
+                  }`}
+                >
+                  <Sprout size={16} className={activeTab === 'ucanx' ? 'text-amber-400' : 'text-amber-600'} />
+                  <span className="flex-1">🌱 UCANX Commodities Exchange</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-700 text-[8px] tracking-wide rounded uppercase font-bold border border-amber-500/30">
+                    UCANX
+                  </span>
+                </button>
+
                 {/* 1. Sovereign Exposure Profiler */}
                 <button
                   onClick={() => setActiveTab('profiler')}
@@ -1168,6 +1187,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   
                   {[
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
+                    { id: 'ucanx', icon: Sprout, label: '🌱 UCANX Commodities Exchange', badge: 'UCANX', color: 'amber' },
                     { id: 'profiler', icon: Fingerprint, label: '🛡️ Sovereign Exposure Profiler', badge: 'Onboard', color: 'emerald' },
                     { id: 'manuscript', icon: BookOpen, label: "📖 ICEarth Owners' Manual", badge: 'Docs', color: 'amber' },
                     { id: 'proofs', icon: TrendingUp, label: '🧠 Lead-Crime Hypotheses Proofs', badge: 'Core', color: 'red' },
@@ -1244,6 +1264,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
 
             <span className="truncate font-semibold text-[11px] text-amber-100 px-2 flex-1 text-center font-sans">
               {activeTab === 'sovereign_portal' && '🪶 Sovereign Member Portal'}
+              {activeTab === 'ucanx' && '🌱 UCANX Commodities Exchange'}
               {activeTab === 'profiler' && '🛡️ Exposure Profiler'}
               {activeTab === 'manuscript' && "📖 ICEarth Owners' Manual"}
               {activeTab === 'proofs' && '🧠 Lead-Crime Proofs'}
@@ -2581,7 +2602,14 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {/* TAB 0: SOVEREIGN MEMBER PORTAL & EXPOSOME PROFILE */}
           {activeTab === 'sovereign_portal' && (
             <div className="flex-1 overflow-y-auto bg-neutral-950 text-white">
-              <SovereignMembershipPortal />
+              <SovereignMembershipPortal onNavigateTab={(tab) => setActiveTab(tab as any)} />
+            </div>
+          )}
+
+          {/* TAB 0.1: UCANX COMMODITIES EXCHANGE */}
+          {activeTab === 'ucanx' && (
+            <div className="flex-1 overflow-y-auto bg-[#FBFBFA]">
+              <UCANXCommoditiesExchange onNavigateTab={(tab) => setActiveTab(tab as any)} />
             </div>
           )}
 

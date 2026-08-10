@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import launching1Img from '../assets/images/Launching1.png';
 import {
   Shield,
   UserCheck,
@@ -32,7 +33,8 @@ import {
   Info,
   Layers,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  ArrowUpRight
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -316,6 +318,99 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
               <Sparkles className="w-3.5 h-3.5" />
               Load Ouray Muskrat Demo
             </button>
+          </div>
+        </div>
+
+        {/* FEATURED FOUNDING BANNER: ICEARTH NOW LAUNCHING */}
+        <div className="mt-6 bg-gradient-to-br from-stone-900 via-stone-900 to-amber-950/60 rounded-2xl border border-amber-500/30 p-5 sm:p-6 shadow-xl space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-amber-500/20 pb-3">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-mono font-bold uppercase rounded">
+                Founding Emblem & Charter
+              </span>
+              <span className="text-xs text-stone-400 font-mono">Internet Community Earth Matrix</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://taoski.com/sites/default/files/inline-images/Launching1.png"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 px-2.5 py-1 rounded flex items-center gap-1 transition-colors"
+              >
+                <span>View Launching1.png Original</span>
+                <ArrowUpRight size={12} />
+              </a>
+              <a
+                href="https://taoski.com/ICESaturn"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[11px] font-mono bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold px-3 py-1 rounded flex items-center gap-1 transition-colors"
+              >
+                <span>ICESaturn Presentation</span>
+                <ArrowUpRight size={12} />
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-7 bg-stone-950 rounded-xl p-3 border border-amber-500/30 shadow-2xl group relative overflow-hidden">
+              <div className="w-full aspect-[16/9] bg-white rounded-lg border border-stone-300 p-3 flex items-center justify-center overflow-hidden">
+                <img
+                  src={launching1Img}
+                  alt="ICEarth Now Launching - DNA Double Helix and Earth Logo"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-102"
+                />
+              </div>
+              <div className="mt-2.5 flex items-center justify-between px-1 text-[10px] font-mono text-stone-400">
+                <span className="text-amber-300 font-semibold">🧬 DNA Matrix + Sovereign Earth Rings</span>
+                <span>ICEarth Launching #1</span>
+              </div>
+            </div>
+
+            <div className="md:col-span-5 space-y-3">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono text-amber-400 tracking-wider uppercase font-bold block">
+                  Sovereign Architecture Axiom
+                </span>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-stone-100">
+                  ICEarth now launching...
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                Framed by the human double helix and the orbital planetary emblem, the original ICEarth launch charter unifies individual biological sovereignty, toxic exposome protection, and open community trade.
+              </p>
+
+              <div className="p-3 bg-stone-950/80 border border-amber-500/20 rounded-xl space-y-1.5 text-xs text-stone-200">
+                <div className="font-bold text-amber-300 font-mono text-[11px]">
+                  🏛️ Founding Principles:
+                </div>
+                <ul className="text-[11px] text-stone-300 space-y-1 list-disc list-inside">
+                  <li><strong>Human Custody:</strong> Direct data ownership and ZK-verified identity without central surveillance.</li>
+                  <li><strong>Exposome Defense:</strong> Address-level monitoring of soil lead, heavy metals, and pipe toxicity.</li>
+                  <li><strong>UCANX Open Exchange:</strong> Phytoremediation commodities and sovereign resource trading.</li>
+                </ul>
+              </div>
+
+              {onNavigateTab && (
+                <div className="pt-1 flex items-center gap-2">
+                  <button
+                    onClick={() => onNavigateTab('ucanx')}
+                    className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5"
+                  >
+                    <span>Explore UCANX Exchange</span>
+                    <ArrowUpRight size={13} />
+                  </button>
+                  <button
+                    onClick={() => onNavigateTab('manuscript')}
+                    className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs rounded-lg transition-colors"
+                  >
+                    ICEarth Owners' Manual
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
