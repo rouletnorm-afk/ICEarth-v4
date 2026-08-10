@@ -139,7 +139,7 @@ export default function App() {
     const chapterParam = params.get('chapter') || params.get('id') || window.location.hash.replace('#', '');
 
     if (tabParam) {
-      const allowedTabs = ['sovereign_portal', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
+      const allowedTabs = ['sovereign_portal', 'ucanx', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
       if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }

@@ -161,6 +161,18 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab }
   return (
     <div className="flex-1 flex flex-col h-full bg-[#FCFCFC] text-[#1A1A1A] overflow-y-auto font-sans">
       
+      {/* TOP HEADER BANNER: CO-FOUNDER AGUA DAS LEGACY HEADER PHOTO */}
+      <div className="w-full bg-neutral-950 border-b border-amber-500/30 flex justify-center items-center py-2 px-2 sm:px-6 shadow-md shrink-0">
+        <div className="w-full max-w-6xl flex justify-center items-center overflow-hidden rounded-lg bg-black border border-neutral-800">
+          <img
+            src={caseAlumnusHeaderImg}
+            alt="Co-Founder Agua Das - Hemp-I-Scream Pioneer Header"
+            referrerPolicy="no-referrer"
+            className="w-full h-auto max-h-[420px] object-cover sm:object-contain mx-auto"
+          />
+        </div>
+      </div>
+
       {/* HERO BANNER & HISTORICAL CONTEXT */}
       <section className="bg-neutral-900 text-white border-b border-neutral-800 p-6 sm:p-8 shrink-0 relative overflow-hidden">
         {/* Subtle grid backdrop decoration */}
