@@ -163,11 +163,11 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
     },
     {
       id: 'IP-004',
-      title: 'NanoSpire 20 Years Cavitation & PFAS Destruction Roadmap',
+      title: 'NanoSpire NanoCanX 20 Years Cavitation & PFAS Destruction Roadmap',
       type: 'Patent & Technical Roadmap',
       imageSrc: nanoSpire20YearsImg,
-      link: '#simulator',
-      description: 'Two decades of nanosecond cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
+      link: '#nanospire_nanocanx',
+      description: 'Two decades of nanoscale cavitation research, sub-50nm high-shear processing, and zero-chemical destruction of toxic PFAS/PFOS compounds.',
       sovereignHash: '0xNANOSPIRE_20_YEARS_CAVITATION'
     }
   ]);
@@ -1342,7 +1342,17 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
 
                 <div className="space-y-4">
                   {memberMediaIp.map((item) => (
-                    <div key={item.id} className="bg-stone-950 rounded-xl border border-stone-800 p-3 space-y-2.5 overflow-hidden group">
+                    <div 
+                      key={item.id} 
+                      onClick={() => {
+                        if (!item.link.startsWith('http') && onNavigateTab) {
+                          onNavigateTab(item.link.replace('#', ''));
+                        }
+                      }}
+                      className={`bg-stone-950 rounded-xl border border-stone-800 p-3 space-y-2.5 overflow-hidden group ${
+                        !item.link.startsWith('http') ? 'cursor-pointer hover:border-amber-500/50 transition-colors' : ''
+                      }`}
+                    >
                       <div className="w-full aspect-video bg-stone-900 rounded-lg overflow-hidden border border-stone-800 relative">
                         <img
                           src={item.imageSrc}

@@ -1485,7 +1485,7 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
                 </div>
               </div>
 
-              {/* DEMO FEATURED PROCESSING COMPANY #0002: NANOSPIRE NANOCANNX */}
+              {/* DEMO FEATURED PROCESSING COMPANY #0002: NANOSPIRE NANOCANX */}
               <div className={`p-6 sm:p-8 rounded-3xl border shadow-lg space-y-5 ${
                 isLight ? 'bg-cyan-50/40 border-cyan-200' : 'bg-stone-900 border-cyan-500/30'
               }`}>
@@ -1502,13 +1502,13 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
                     <h3 className={`text-lg sm:text-xl font-bold font-serif mt-1 ${
                       isLight ? 'text-stone-900' : 'text-white'
                     }`}>
-                      NanoSpire NanoCannX (Exclusive Cannabis Nanotech Rights)
+                      NanoSpire NanoCanX (Exclusive Cannabis Nanotech Rights)
                     </h3>
                   </div>
 
                   {onNavigateTab && (
                     <button
-                      onClick={() => onNavigateTab('nanospire_nanocannx')}
+                      onClick={() => onNavigateTab('nanospire_nanocanx')}
                       className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all cursor-pointer flex items-center gap-2 shrink-0 active:scale-95 font-mono"
                     >
                       <Zap size={16} />

@@ -46,7 +46,7 @@ import {
   Zap
 } from 'lucide-react';
 import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
-import { NanoSpireNanoCannX } from './components/NanoSpireNanoCannX';
+import { NanoSpireNanoCanX } from './components/NanoSpireNanoCanX';
 import {
   Chapter,
   ChatMessage,
@@ -169,7 +169,7 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['sovereign_portal', 'ucanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
+      const allowedTabs = ['sovereign_portal', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
       if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }
@@ -836,17 +836,17 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
-                {/* 0.2 NanoSpire NanoCannX Processing Portal */}
+                {/* 0.2 NanoSpire NanoCanX Processing Portal */}
                 <button
-                  onClick={() => setActiveTab('nanospire_nanocannx' as any)}
+                  onClick={() => setActiveTab('nanospire_nanocanx' as any)}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
-                    activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire'
+                    activeTab === 'nanospire_nanocanx' || (activeTab as string) === 'nanocanx' || activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire'
                       ? 'bg-cyan-950 text-cyan-50 border-cyan-600/50 shadow-sm font-bold'
                       : 'hover:bg-cyan-50/80 text-cyan-900 border-cyan-200/50 bg-cyan-50/20'
                   }`}
                 >
-                  <Zap size={16} className={activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire' ? 'text-cyan-400' : 'text-cyan-600'} />
-                  <span className="flex-1">⚡ NanoSpire NanoCannX</span>
+                  <Zap size={16} className={activeTab === 'nanospire_nanocanx' || (activeTab as string) === 'nanocanx' || activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire' ? 'text-cyan-400' : 'text-cyan-600'} />
+                  <span className="flex-1">⚡ NanoSpire NanoCanX</span>
                   <span className="px-1.5 py-0.2 bg-cyan-500/20 text-cyan-700 text-[8px] tracking-wide rounded uppercase font-bold border border-cyan-500/30">
                     Nanotech
                   </span>
@@ -2757,10 +2757,10 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             </div>
           )}
 
-          {/* TAB 0.2: NANOSPIRE NANOCANNX PROCESSING TECHNOLOGY COMPANY */}
-          {(activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire') && (
+          {/* TAB 0.2: NANOSPIRE NANOCANX PROCESSING TECHNOLOGY COMPANY */}
+          {(activeTab === 'nanospire_nanocanx' || (activeTab as string) === 'nanocanx' || activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire') && (
             <div className="flex-1 overflow-y-auto">
-              <NanoSpireNanoCannX 
+              <NanoSpireNanoCanX 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

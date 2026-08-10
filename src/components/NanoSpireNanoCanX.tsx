@@ -35,7 +35,7 @@ interface NanoSpireProps {
   siteTheme?: 'light' | 'dark';
 }
 
-export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, siteTheme = 'light' }) => {
+export const NanoSpireNanoCanX: React.FC<NanoSpireProps> = ({ onNavigateTab, siteTheme = 'light' }) => {
   const isLight = siteTheme === 'light';
 
   // Modal State for High-Res Image Inspection
@@ -65,7 +65,7 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
           
           {/* Top Breadcrumb & Status Badges */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-            <div className="flex items-center gap-2 text-xs font-mono">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
               <span className={`px-2.5 py-1 rounded-md font-bold uppercase ${
                 isLight ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-amber-950/80 text-amber-300 border border-amber-700/50'
               }`}>
@@ -75,6 +75,9 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
                 isLight ? 'bg-cyan-100 text-cyan-900 border border-cyan-300' : 'bg-cyan-950/80 text-cyan-300 border border-cyan-700/50'
               }`}>
                 ⚡ Exclusive Cannabis Nanotech Rights
+              </span>
+              <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 rounded-md font-bold border border-emerald-500/30">
+                UCANX = "You CAN X"
               </span>
             </div>
 
@@ -108,22 +111,28 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
           {/* Title Header */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 rounded-full text-xs font-mono font-bold border border-cyan-500/20">
+              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1 bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 rounded-full text-xs font-mono font-bold border border-cyan-500/20">
                 <Atom size={14} className="animate-spin-slow" />
                 <span>Patented Reentrant Micro-Jet Cavitation Technology</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-tight">
-                NanoSpire NanoCannX
+                NanoSpire NanoCanX
               </h1>
               
               <p className="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-serif">
                 Standardized Nanotechnology Processing Enterprise & Exclusive Industry Licensing Portal for Cannabis, Industrial Hemp, Advanced Materials, and Energy Systems.
               </p>
 
-              <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
-                Pioneering nanosecond cavitation physics to revolutionize particle homogenization, nano-emulsions, nanocellulose composite fabrication, bio-energy, and zero-chemical environmental remediation.
-              </p>
+              <div className="p-3 bg-stone-100 dark:bg-stone-900 border border-cyan-500/30 rounded-xl text-xs font-mono space-y-1 text-stone-700 dark:text-stone-300">
+                <p className="font-bold text-cyan-700 dark:text-cyan-400 flex items-center gap-1.5">
+                  <Sparkles size={14} />
+                  <span>Universal Capability Concept: "Nano CAN X" & "You CAN X" (UCANX)</span>
+                </p>
+                <p className="text-[11px] leading-normal text-stone-600 dark:text-stone-400">
+                  <strong>NanoCanX</strong> embodies the universal truth that nanoscale cavitation physics can accomplish any transformative process ("Nano CAN X") — from sub-50nm cannabis oil homogenization and high-tensile hemp biopolymers to zero-chemical PFAS destruction and bio-energy. Paired with <strong>UCANX ("You CAN X")</strong>, it empowers sovereign producers to execute any industrial application.
+                </p>
+              </div>
             </div>
 
             {/* Sovereign Partner & Contact Card */}
@@ -175,6 +184,113 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* OFFICIAL COMPANY OVERVIEW, AWARD & VALUE PROPOSITION SECTION */}
+      <section className={`py-10 border-b ${
+        isLight ? 'bg-white border-stone-200' : 'bg-stone-950 border-stone-800'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          {/* TOKYO INNOVATION AWARD BANNER */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-cyan-500/10 to-amber-500/15 border border-amber-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+            <div className="flex items-start sm:items-center gap-3">
+              <div className="p-3 bg-amber-500 text-stone-950 rounded-xl font-bold shrink-0">
+                🏆
+              </div>
+              <div>
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400 block">
+                  Prestigious Global Recognition
+                </span>
+                <h3 className="text-sm sm:text-base font-bold font-serif text-stone-900 dark:text-stone-100">
+                  Innovation Technology Award Winner — Nanotech 2003 + Future Conference (Tokyo, Japan)
+                </h3>
+              </div>
+            </div>
+            <span className="px-3 py-1 bg-amber-500/20 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold rounded-lg border border-amber-500/30 whitespace-nowrap self-start sm:self-center">
+              Tokyo Nanotech Award
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* OFFICIAL COMPANY OVERVIEW */}
+            <div className={`p-6 rounded-2xl border ${
+              isLight ? 'bg-cyan-50/30 border-cyan-200' : 'bg-stone-900/80 border-cyan-500/30'
+            }`}>
+              <div className="flex items-center gap-2 mb-3">
+                <Atom size={18} className="text-cyan-600 dark:text-cyan-400" />
+                <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-stone-100">
+                  NanoSpire, Inc. Company Overview
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed font-serif space-y-3">
+                NanoSpire, Inc. was founded in December, 2001 to commercialize a new generation of cavitation reentrant jet-based high shear nanotechnology tools and processes. NanoSpire provides the first nanotechnology tools by harnessing and directing the energy of cavitation microjets. NanoSpire technology can be used for a wide range of nanofabrication applications. NanoSpire’s team has been invited to present at numerous nanotechnology conferences. NanoSpire won the prestigious Innovation Technology Award at the Nanotech 2003 + Future Conference in Tokyo. NanoSpire is pursuing licensing and forming joint ventures with strategic partners using our disruptive technology.
+              </p>
+            </div>
+
+            {/* VALUE PROPOSITION */}
+            <div className={`p-6 rounded-2xl border ${
+              isLight ? 'bg-amber-50/30 border-amber-200' : 'bg-stone-900/80 border-amber-500/30'
+            }`}>
+              <div className="flex items-center gap-2 mb-3">
+                <Zap size={18} className="text-amber-600 dark:text-amber-400" />
+                <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-stone-100">
+                  Value Proposition
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed font-serif space-y-3">
+                NanoSpire’s high-shear technology enables manufacturers in their respective spaces to significantly reduce manufacturing expenses while providing value-added performance features that have typically demanded a premium or have been otherwise unavailable. NanoSpire high-shear cavitation technology will serve potentially thousands of industries, promising strong growth and diversifying NanoSpire’s product and service mix. NanoSpire will quickly gain traction in all markets as word spreads of the unique disruptiveness of harnessed cavitation technology.
+              </p>
+            </div>
+
+          </div>
+
+          {/* CORE APPLICATIONS PILLARS */}
+          <div className="space-y-4">
+            <div>
+              <span className="text-xs font-mono font-bold uppercase text-cyan-600 dark:text-cyan-400 tracking-wider">
+                Industrial Nanofabrication Capabilities
+              </span>
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mt-1">
+                Core High-Shear Processing Applications
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {[
+                { name: 'Dispersion', icon: '🌀', desc: 'Uniform sub-micron & nanoscale particle dispersion across solvents and matrices.' },
+                { name: 'Emulsification', icon: '🧪', desc: 'Ultra-stable nano-emulsions for cannabis oils, wood preservatives & nutraceuticals.' },
+                { name: 'Cell Rupture', icon: '💥', desc: 'Non-chemical cellular cleavage for full-spectrum botanical oil and protein extraction.' },
+                { name: 'High Shear Processing', icon: '⚡', desc: 'Extreme hydrodynamic micro-jets generating up to 100,000 atmospheres.' },
+                { name: 'Microencapsulation', icon: '🛡️', desc: 'Sub-micron encapsulation enhancing bioavailability by 500%–1000%.' },
+                { name: 'Wet Milling', icon: '⚙️', desc: 'Continuous fluid particle milling down to sub-50nm scale without thermal degradation.' },
+              ].map((app, idx) => (
+                <div 
+                  key={idx}
+                  className={`p-4 rounded-xl border flex flex-col justify-between transition-all hover:shadow-md ${
+                    isLight ? 'bg-white border-stone-200 hover:border-cyan-400' : 'bg-stone-900 border-stone-800 hover:border-cyan-500'
+                  }`}
+                >
+                  <div>
+                    <div className="text-2xl mb-2">{app.icon}</div>
+                    <h4 className="font-bold text-xs sm:text-sm font-serif text-stone-900 dark:text-stone-100 mb-1">
+                      {app.name}
+                    </h4>
+                    <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-snug">
+                      {app.desc}
+                    </p>
+                  </div>
+                  <div className="mt-3 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[10px] font-mono text-cyan-600 dark:text-cyan-400 font-bold">
+                    <span>Pillar #{idx + 1}</span>
+                    <span>Ready</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -394,7 +510,7 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
                 onClick={() => setSelectedImage({
                   url: nanoSpire20YearsImg,
                   title: 'NanoSpire 20 Years Cavitation & PFAS Destruction Roadmap',
-                  subtitle: 'Two decades of nanosecond cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
+                  subtitle: 'Two decades of nanoscale cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
                   hash: '0xNANOSPIRE_20_YEARS_CAVITATION'
                 })}
                 className="p-2 bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg text-stone-700 dark:text-stone-200 transition-colors cursor-pointer"
@@ -408,7 +524,7 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
               onClick={() => setSelectedImage({
                 url: nanoSpire20YearsImg,
                 title: 'NanoSpire 20 Years Cavitation & PFAS Destruction Roadmap',
-                subtitle: 'Two decades of nanosecond cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
+                subtitle: 'Two decades of nanoscale cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
                 hash: '0xNANOSPIRE_20_YEARS_CAVITATION'
               })}
               className="relative aspect-4/3 overflow-hidden rounded-xl bg-stone-950 border border-stone-800 cursor-pointer group mb-4"
@@ -425,7 +541,7 @@ export const NanoSpireNanoCannX: React.FC<NanoSpireProps> = ({ onNavigateTab, si
             </div>
 
             <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed font-sans mb-3">
-              Two decades of nanosecond cavitation research demonstrating <strong>zero-chemical molecular destruction of toxic PFAS/PFOS forever chemicals</strong>, heavy metal shearing, helium transmutation, and material restructuring.
+              Two decades of nanoscale cavitation research demonstrating <strong>zero-chemical molecular destruction of toxic PFAS/PFOS forever chemicals</strong>, heavy metal shearing, helium transmutation, and material restructuring.
             </p>
 
             <div className="flex items-center justify-between p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-[11px] font-mono text-amber-900 dark:text-amber-300">
