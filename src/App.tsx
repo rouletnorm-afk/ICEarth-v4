@@ -34,7 +34,9 @@ import {
   Link2,
   Gavel,
   Feather,
-  Fingerprint
+  Fingerprint,
+  Menu,
+  X
 } from 'lucide-react';
 import {
   Chapter,
@@ -78,6 +80,10 @@ import { SovereignMembershipPortal } from './components/SovereignMembershipPorta
 export default function App() {
   // Navigation / Tabs
   const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo'>('sovereign_portal');
+
+  // Mobile Navigation State
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [mobileChapterListOpen, setMobileChapterListOpen] = useState<boolean>(false);
 
   // Remediation Track Selection ('lead' = Pb/Exposenomics, 'pfas' = PFAS/NanoSpire Quantum Cavitation)
   const [remediationTrack, setRemediationTrack] = useState<'lead' | 'pfas'>('lead');
@@ -585,9 +591,9 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
     <div className="flex flex-col h-screen w-full bg-[#FCFCFC] text-[#1A1A1A] font-sans selection:bg-[#E5E7EB] overflow-hidden">
       
       {/* HEADER */}
-      <header className="h-16 border-b border-[#E5E5E5] flex items-center justify-between px-8 bg-white shrink-0">
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-8 rounded-md overflow-hidden border border-neutral-800 bg-black flex items-center justify-center text-white font-mono font-bold text-lg tracking-wider relative group shadow-sm shrink-0">
+      <header className="h-14 sm:h-16 border-b border-[#E5E5E5] flex items-center justify-between px-3 sm:px-8 bg-white shrink-0">
+        <div className="flex items-center gap-2.5 sm:gap-4">
+          <div className="w-10 sm:w-14 h-7 sm:h-8 rounded-md overflow-hidden border border-neutral-800 bg-black flex items-center justify-center text-white font-mono font-bold text-base sm:text-lg tracking-wider relative group shadow-xs shrink-0">
             <img 
               src={icearthLaunchImg} 
               alt="ICEarth Logo" 
@@ -596,15 +602,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             />
           </div>
           <div>
-            <h1 className="text-sm font-semibold tracking-tight uppercase flex items-center gap-2">
-              The Roulet's Law Proof <span className="text-[#999] font-normal font-mono text-[11px]">v4.2.0</span>
+            <h1 className="text-xs sm:text-sm font-semibold tracking-tight uppercase flex items-center gap-1.5 sm:gap-2">
+              <span>Roulet's Law Proof</span>
+              <span className="text-[#999] font-normal font-mono text-[10px] sm:text-[11px]">v5.5.0</span>
             </h1>
-            <p className="text-[10px] text-[#666] tracking-wider uppercase">Sovereign Exposenomics & Decarbonization Hub</p>
+            <p className="text-[9px] sm:text-[10px] text-[#666] tracking-wider uppercase truncate max-w-[200px] sm:max-w-none">Sovereign Exposenomics & Decarbonization</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <div className="hidden lg:flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
             Sovereign Session Reconstructed
           </div>
@@ -615,36 +622,45 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               setCopiedGlobalTabLink(true);
               setTimeout(() => setCopiedGlobalTabLink(false), 2000);
             }}
-            className="flex items-center gap-2 text-xs font-semibold px-4 py-2 bg-amber-50 border border-amber-200 text-amber-950 hover:bg-amber-100/80 rounded transition-colors cursor-pointer"
+            className="hidden sm:flex items-center gap-1.5 sm:gap-2 text-xs font-semibold px-2.5 sm:px-4 py-1.5 sm:py-2 bg-amber-50 border border-amber-200 text-amber-950 hover:bg-amber-100/80 rounded transition-colors cursor-pointer"
             title="Copy Permanent Link to Current View"
           >
             {copiedGlobalTabLink ? (
               <>
                 <Check size={14} className="text-emerald-700 font-bold" />
-                <span className="text-emerald-700 font-bold uppercase">Link Copied!</span>
+                <span className="text-emerald-700 font-bold uppercase text-[10px] sm:text-xs">Copied!</span>
               </>
             ) : (
               <>
                 <Link2 size={14} className="text-amber-800" />
-                <span className="uppercase font-bold text-amber-900">Share Current View</span>
+                <span className="uppercase font-bold text-amber-900 text-[10px] sm:text-xs">Share View</span>
               </>
             )}
           </button>
           <button 
             onClick={handleExportManuscript}
-            className="flex items-center gap-2 text-xs font-semibold px-4 py-2 border border-[#E5E5E5] hover:bg-gray-50 active:bg-gray-100 rounded transition-colors cursor-pointer"
+            className="hidden md:flex items-center gap-2 text-xs font-semibold px-4 py-2 border border-[#E5E5E5] hover:bg-gray-50 active:bg-gray-100 rounded transition-colors cursor-pointer"
           >
             <Download size={14} className="text-[#666]" />
-            EXPORT FULL MANUSCRIPT
+            EXPORT MANUSCRIPT
+          </button>
+          
+          {/* Mobile Hamburger Toggle Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors cursor-pointer flex items-center justify-center shrink-0"
+            aria-label="Toggle Mobile Directory Menu"
+          >
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </header>
 
       {/* MAIN CONTAINER */}
-      <main className="flex-1 flex overflow-hidden">
+      <main className="flex-1 flex overflow-hidden relative">
         
-        {/* SIDEBAR NAVIGATION */}
-        <aside className="w-72 border-r border-[#E5E5E5] bg-white flex flex-col shrink-0 overflow-y-auto">
+        {/* DESKTOP SIDEBAR NAVIGATION */}
+        <aside className="hidden md:flex md:w-72 lg:w-80 border-r border-[#E5E5E5] bg-white flex-col shrink-0 overflow-y-auto">
           <div className="p-6 space-y-6">
             
             {/* REMEDIATION TRACK SELECTOR */}
@@ -1085,15 +1101,189 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           </div>
         </aside>
 
+        {/* MOBILE SLIDE-OVER DRAWER (BACKDROP + NAVIGATION MENU) */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-50 md:hidden flex">
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            
+            {/* Drawer Content */}
+            <div className="relative w-80 max-w-[85vw] bg-white h-full z-10 flex flex-col shadow-2xl overflow-y-auto animate-in slide-in-from-left duration-200">
+              <div className="p-4 border-b border-neutral-200 flex items-center justify-between bg-neutral-900 text-white shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded border border-neutral-700 bg-black flex items-center justify-center overflow-hidden shrink-0">
+                    <img src={icearthLaunchImg} alt="ICEarth" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-bold font-sans tracking-wide uppercase">Sovereign Directory</h3>
+                    <p className="text-[9px] text-neutral-400 font-mono">ICEarth Platform v5.5.0</p>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 cursor-pointer"
+                  aria-label="Close Mobile Directory Menu"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              <div className="p-4 space-y-5 flex-1">
+                {/* REMEDIATION TRACK SELECTOR */}
+                <section className="bg-neutral-50 p-3 rounded-xl border border-neutral-200/80 space-y-2">
+                  <h2 className="text-[10px] font-bold text-[#888] uppercase tracking-widest flex items-center justify-between">
+                    <span>Active Remediation Track</span>
+                    <span className="font-mono text-[9px] px-1.5 py-0.5 bg-black text-white rounded font-bold">ICEARTH</span>
+                  </h2>
+                  <div className="grid grid-cols-2 gap-1 p-1 bg-neutral-200/40 rounded-lg border border-neutral-200">
+                    <button
+                      onClick={() => setRemediationTrack('lead')}
+                      className={`py-1.5 px-1 text-center rounded font-sans font-bold text-[10px] tracking-tight transition-all cursor-pointer ${
+                        remediationTrack === 'lead'
+                          ? 'bg-white text-black shadow-xs border border-neutral-300'
+                          : 'text-neutral-500 hover:text-neutral-800'
+                      }`}
+                    >
+                      🔴 Pb & Lead
+                    </button>
+                    <button
+                      onClick={() => setRemediationTrack('pfas')}
+                      className={`py-1.5 px-1 text-center rounded font-sans font-bold text-[10px] tracking-tight transition-all cursor-pointer ${
+                        remediationTrack === 'pfas'
+                          ? 'bg-white text-black shadow-xs border border-neutral-300'
+                          : 'text-neutral-500 hover:text-neutral-800'
+                      }`}
+                    >
+                      🧪 PFAS & Advanced
+                    </button>
+                  </div>
+                </section>
+
+                {/* DIRECTORY NAV BUTTONS */}
+                <section className="space-y-1">
+                  <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-2">Primary Modules</h2>
+                  
+                  {[
+                    { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
+                    { id: 'profiler', icon: Fingerprint, label: '🛡️ Sovereign Exposure Profiler', badge: 'Onboard', color: 'emerald' },
+                    { id: 'manuscript', icon: BookOpen, label: "📖 ICEarth Owners' Manual", badge: 'Docs', color: 'amber' },
+                    { id: 'proofs', icon: TrendingUp, label: '🧠 Lead-Crime Hypotheses Proofs', badge: 'Core', color: 'red' },
+                    { id: 'terrorism_proofs', icon: ShieldAlert, label: '🔥 Lead-Terrorism Proof', badge: 'Threat', color: 'rose' },
+                    { id: 'genocost', icon: ShieldAlert, label: '🇨🇩 DRC Genocost & Lead Genocide', badge: 'Genocost', color: 'amber' },
+                    { id: 'litigation', icon: Scale, label: '⚖️ Environmental Litigation Profiler', badge: 'Active', color: 'purple' },
+                    { id: 'reports', icon: Newspaper, label: '📰 News and Reports Hub', badge: 'Social', color: 'cyan' },
+                    { id: 'cleveland', icon: Building2, label: '🏙️ Cleveland Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'chicago', icon: Building2, label: '🏙️ Chicago Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'buffalo', icon: Building2, label: '🦬 Buffalo Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'milwaukee', icon: Building2, label: '🍻 Milwaukee Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'bihar', icon: Building2, label: '🇮🇳 Bihar Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'toledo', icon: Building2, label: '⚓ Toledo Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
+                    { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
+                    { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
+                    { id: 'nodes', icon: Database, label: remediationTrack === 'lead' ? '⛓️ ICEarth Ledger Nodes' : '⛓️ PFAS Nodes', badge: 'Ledger', color: 'neutral' },
+                    { id: 'chat', icon: MessageSquare, label: remediationTrack === 'lead' ? '🤖 Sovereign Co-Author AI' : '🤖 Cavitation Advisor AI', badge: 'AI', color: 'neutral' },
+                  ].map((item) => {
+                    const IconComp = item.icon;
+                    const isActive = activeTab === item.id;
+                    return (
+                      <button
+                        key={item.id}
+                        onClick={() => {
+                          setActiveTab(item.id as any);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                          isActive
+                            ? 'bg-neutral-900 text-white border-transparent shadow-sm font-bold'
+                            : 'hover:bg-neutral-100 text-neutral-800 border-neutral-100 bg-neutral-50/50'
+                        }`}
+                      >
+                        <IconComp size={15} className={isActive ? 'text-amber-400' : 'text-neutral-500'} />
+                        <span className="flex-1 truncate">{item.label}</span>
+                        <span className="px-1.5 py-0.2 bg-neutral-200 text-neutral-700 text-[8px] tracking-wide rounded uppercase font-bold shrink-0">
+                          {item.badge}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </section>
+              </div>
+
+              <div className="p-4 border-t border-neutral-200 bg-neutral-50 shrink-0">
+                <button 
+                  onClick={() => {
+                    handleExportManuscript();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full py-2.5 bg-[#1A1A1A] text-white text-xs font-bold rounded hover:bg-black uppercase tracking-wider transition-all shadow-xs cursor-pointer flex items-center justify-center gap-2"
+                >
+                  <Download size={14} />
+                  <span>Export Full Manuscript</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* WORKSPACE AREA */}
         <section className="flex-1 bg-white flex flex-col overflow-hidden">
+          
+          {/* MOBILE STICKY SUB-HEADER BAR */}
+          <div className="md:hidden bg-neutral-900 text-white px-3 py-2 flex items-center justify-between border-b border-neutral-800 shrink-0 text-xs">
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-md font-bold uppercase tracking-wider text-[10px] shrink-0 hover:bg-amber-500/30 transition-colors"
+            >
+              <Menu size={13} />
+              <span>Browse Menu</span>
+            </button>
+
+            <span className="truncate font-semibold text-[11px] text-amber-100 px-2 flex-1 text-center font-sans">
+              {activeTab === 'sovereign_portal' && '🪶 Sovereign Member Portal'}
+              {activeTab === 'profiler' && '🛡️ Exposure Profiler'}
+              {activeTab === 'manuscript' && "📖 ICEarth Owners' Manual"}
+              {activeTab === 'proofs' && '🧠 Lead-Crime Proofs'}
+              {activeTab === 'terrorism_proofs' && '🔥 Lead-Terrorism Proof'}
+              {activeTab === 'genocost' && '🇨🇩 DRC Genocost'}
+              {activeTab === 'litigation' && '⚖️ Environmental Litigation'}
+              {activeTab === 'reports' && '📰 News and Reports'}
+              {activeTab === 'cleveland' && '🏙️ Cleveland Audit'}
+              {activeTab === 'chicago' && '🏙️ Chicago Audit'}
+              {activeTab === 'buffalo' && '🦬 Buffalo Audit'}
+              {activeTab === 'milwaukee' && '🍻 Milwaukee Audit'}
+              {activeTab === 'bihar' && '🇮🇳 Bihar Audit'}
+              {activeTab === 'toledo' && '⚓ Toledo Audit'}
+              {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
+              {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
+              {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
+              {activeTab === 'nodes' && '⛓️ Ledger Nodes'}
+              {activeTab === 'chat' && '🤖 Sovereign Co-Author AI'}
+            </span>
+
+            <button
+              onClick={() => {
+                const url = `${window.location.origin}${window.location.pathname}?tab=${activeTab}${activeTab === 'manuscript' ? `&chapter=${selectedChapterId}` : ''}`;
+                navigator.clipboard.writeText(url);
+                setCopiedGlobalTabLink(true);
+                setTimeout(() => setCopiedGlobalTabLink(false), 2000);
+              }}
+              className="p-1 bg-neutral-800 hover:bg-neutral-700 rounded text-amber-200 shrink-0 cursor-pointer"
+              title="Share Link"
+            >
+              {copiedGlobalTabLink ? <Check size={14} className="text-emerald-400" /> : <Link2 size={14} />}
+            </button>
+          </div>
           
           {/* TAB 1: MANUSCRIPT READER */}
           {activeTab === 'manuscript' && (
             <div className="flex-1 flex overflow-hidden">
               
-              {/* CHAPTER DIRECTORY SUB-SIDEBAR */}
-              <div className="w-80 border-r border-[#E5E5E5] bg-white flex flex-col shrink-0">
+              {/* CHAPTER DIRECTORY SUB-SIDEBAR (DESKTOP) */}
+              <div className="hidden lg:flex lg:w-80 border-r border-[#E5E5E5] bg-white flex-col shrink-0">
                 <div className="p-4 border-b border-[#E5E5E5] bg-[#FAFAFA]">
                   <div className="relative">
                     <Search className="absolute left-3 top-2.5 text-[#999]" size={14} />
@@ -1200,44 +1390,152 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               </div>
 
               {/* BOOK READER CONTENT AREA */}
-              <div className="flex-1 flex flex-col overflow-hidden">
+              <div className="flex-1 flex flex-col overflow-hidden relative">
+                
+                {/* MOBILE CHAPTER SELECTOR TOP BAR */}
+                <div className="lg:hidden bg-amber-50/90 border-b border-amber-200/80 px-3 py-2 flex items-center justify-between gap-2 shrink-0">
+                  <button
+                    onClick={() => setMobileChapterListOpen(true)}
+                    className="flex items-center gap-2 text-xs font-bold text-amber-950 bg-white px-3 py-1.5 rounded-lg border border-amber-300 shadow-2xs truncate flex-1 cursor-pointer hover:bg-amber-50/50 transition-colors"
+                  >
+                    <BookOpen size={14} className="text-amber-700 shrink-0" />
+                    <span className="truncate">
+                      {selectedChapterId === 'indigenous' ? '🪶 Indigenous Sovereign Ledger' : selectedChapter.title}
+                    </span>
+                    <span className="ml-auto text-[10px] font-mono text-amber-900 bg-amber-100 px-2 py-0.5 rounded font-bold shrink-0">
+                      Chapter Index ▼
+                    </span>
+                  </button>
+                </div>
+
+                {/* MOBILE CHAPTER SELECTOR MODAL SHEET */}
+                {mobileChapterListOpen && (
+                  <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white">
+                    <div className="p-4 border-b border-neutral-200 flex items-center justify-between bg-neutral-900 text-white shrink-0">
+                      <div className="flex items-center gap-2">
+                        <BookOpen size={16} className="text-amber-400" />
+                        <span className="text-xs font-bold uppercase tracking-wide">Owner's Manual Chapter Index</span>
+                      </div>
+                      <button 
+                        onClick={() => setMobileChapterListOpen(false)}
+                        className="p-1.5 rounded-lg bg-neutral-800 text-neutral-300 hover:text-white cursor-pointer"
+                        aria-label="Close Mobile Chapter List"
+                      >
+                        <X size={18} />
+                      </button>
+                    </div>
+
+                    <div className="p-4 border-b border-neutral-200 bg-neutral-50 shrink-0">
+                      <div className="relative">
+                        <Search className="absolute left-3 top-2.5 text-neutral-400" size={14} />
+                        <input
+                          type="text"
+                          placeholder="Search manual chapters..."
+                          value={chapterSearch}
+                          onChange={(e) => setChapterSearch(e.target.value)}
+                          className="w-full pl-9 pr-4 py-2 bg-white border border-neutral-300 rounded-lg text-xs font-sans focus:outline-none focus:border-neutral-900"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                      {/* SOVEREIGN DIRECTORY TOP LINK */}
+                      <button
+                        onClick={() => {
+                          setSelectedChapterId('indigenous');
+                          setMobileChapterListOpen(false);
+                        }}
+                        className={`w-full p-3 rounded-xl border text-left cursor-pointer transition-all flex items-start gap-2.5 ${
+                          selectedChapterId === 'indigenous'
+                            ? 'bg-amber-900 text-white border-amber-950 shadow-sm'
+                            : 'bg-white hover:bg-neutral-50 text-neutral-800 border-amber-200'
+                        }`}
+                      >
+                        <span className="text-base leading-none">🪶</span>
+                        <div>
+                          <h4 className="text-xs font-bold font-sans">Indigenous Sovereign Ledger</h4>
+                          <p className="text-[10px] opacity-80 mt-0.5 font-sans">Territorial Stewardship & Bio-Cultural Preservation</p>
+                        </div>
+                      </button>
+
+                      {/* CHAPTER GROUPS */}
+                      {['Part I: The Cinematic Timeline', 'Part II: The Contemporary Crucible', 'Part III: The Multi-Trillion-Dollar Prescription', 'Part IV: Deep-Time & Cosmic Physics', 'Appendices: Historical Evidence', 'Appendices: Strategic Blueprint'].map((part) => {
+                        const chaptersInPart = filteredChapters.filter(ch => ch.part === part);
+                        if (chaptersInPart.length === 0) return null;
+                        return (
+                          <div key={part} className="space-y-1.5">
+                            <h3 className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider px-1">
+                              {part}
+                            </h3>
+                            <div className="space-y-1">
+                              {chaptersInPart.map((ch) => {
+                                const isSelected = selectedChapterId === ch.id;
+                                return (
+                                  <button
+                                    key={ch.id}
+                                    onClick={() => {
+                                      setSelectedChapterId(ch.id);
+                                      setMobileChapterListOpen(false);
+                                    }}
+                                    className={`w-full p-2.5 rounded-lg border text-left transition-all flex items-center justify-between gap-2 cursor-pointer ${
+                                      isSelected
+                                        ? 'bg-neutral-900 text-white border-neutral-900 font-semibold'
+                                        : 'bg-white hover:bg-neutral-50 text-neutral-800 border-neutral-200'
+                                    }`}
+                                  >
+                                    <div className="min-w-0 flex-1">
+                                      <h4 className="text-xs truncate">{ch.title}</h4>
+                                      <p className="text-[10px] opacity-70 truncate mt-0.5">{ch.subtitle}</p>
+                                    </div>
+                                    <ChevronRight size={14} className={isSelected ? 'text-amber-400' : 'text-neutral-400'} />
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
                 {selectedChapterId === 'indigenous' ? (
-                  <div className="flex-1 p-8 overflow-y-auto bg-gray-50/50">
+                  <div className="flex-1 p-3 sm:p-6 md:p-8 overflow-y-auto bg-gray-50/50">
                     <IndigenousSovereigntyTab />
                   </div>
                 ) : (
                   <>
                     {/* TOP CHAPTER BANNER */}
-                    <div className="px-8 py-4 border-b border-[#E5E5E5] bg-[#FAFAFA] flex items-center justify-between shrink-0">
-                  <div className="text-xs font-mono text-[#666] uppercase tracking-wider">
-                    {selectedChapter.part}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={handlePrevChapter}
-                      disabled={currentChapterIndex === 0}
-                      className="p-1.5 border border-[#E5E5E5] bg-white rounded-md hover:bg-gray-50 active:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      <ChevronLeft size={14} />
-                    </button>
-                    <span className="text-[11px] font-mono font-medium">
-                      {currentChapterIndex + 1} / {allChapters.length}
-                    </span>
-                    <button
-                      onClick={handleNextChapter}
-                      disabled={currentChapterIndex === allChapters.length - 1}
-                      className="p-1.5 border border-[#E5E5E5] bg-white rounded-md hover:bg-gray-50 active:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      <ChevronRight size={14} />
-                    </button>
-                  </div>
-                </div>
+                    <div className="px-4 sm:px-8 py-3 sm:py-4 border-b border-[#E5E5E5] bg-[#FAFAFA] flex items-center justify-between shrink-0">
+                      <div className="text-[11px] sm:text-xs font-mono text-[#666] uppercase tracking-wider truncate">
+                        {selectedChapter.part}
+                      </div>
+                      <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                        <button
+                          onClick={handlePrevChapter}
+                          disabled={currentChapterIndex === 0}
+                          className="p-1.5 border border-[#E5E5E5] bg-white rounded-md hover:bg-gray-50 active:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                        >
+                          <ChevronLeft size={14} />
+                        </button>
+                        <span className="text-[11px] font-mono font-medium">
+                          {currentChapterIndex + 1} / {allChapters.length}
+                        </span>
+                        <button
+                          onClick={handleNextChapter}
+                          disabled={currentChapterIndex === allChapters.length - 1}
+                          className="p-1.5 border border-[#E5E5E5] bg-white rounded-md hover:bg-gray-50 active:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                        >
+                          <ChevronRight size={14} />
+                        </button>
+                      </div>
+                    </div>
 
-                {/* THE MANUSCRIPT CONTENT (SERIF) */}
-                <div className="flex-1 overflow-y-auto p-12 lg:p-16 flex justify-center bg-white">
-                  <article className="max-w-2xl w-full flex flex-col">
-                    {/* SOVEREIGN PREAMBLE & DEDICATION TO DR. BRUCE LANPHEAR */}
-                    <div className="mb-8 border border-emerald-100 bg-[#FCFBF7] rounded-xl overflow-hidden p-6 shadow-sm">
+                    {/* THE MANUSCRIPT CONTENT (SERIF) */}
+                    <div className="flex-1 overflow-y-auto p-4 sm:p-8 md:p-12 lg:p-16 flex justify-center bg-white">
+                      <article className="max-w-2xl w-full flex flex-col">
+                        {/* SOVEREIGN PREAMBLE & DEDICATION TO DR. BRUCE LANPHEAR */}
+                        <div className="mb-6 sm:mb-8 border border-emerald-100 bg-[#FCFBF7] rounded-xl overflow-hidden p-3.5 sm:p-6 shadow-xs">
                       <div className="flex justify-between items-center pb-3 border-b border-emerald-100/60 mb-4">
                         <div className="flex items-center gap-2">
                           <span className="text-[9px] font-mono font-bold tracking-widest text-emerald-800 uppercase bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
