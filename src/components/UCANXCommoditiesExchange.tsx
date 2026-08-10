@@ -7,6 +7,8 @@ import tkiGisImg from '../assets/images/TKI-GIS.png';
 import tkiGis2Img from '../assets/images/TKI-GIS2.png';
 import tkiTimelineImg from '../assets/images/TKI-Timeline.png';
 import {
+  Zap,
+  Atom,
   Sprout,
   Wheat,
   TrendingUp,
@@ -317,7 +319,7 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
               <span>•</span>
               <span className="text-cyan-700 dark:text-cyan-400 font-bold">3 Acequia Water Rights</span>
               <span>•</span>
-              <span className="text-amber-800 dark:text-amber-400 font-bold">NM License #NM-AG-2026-TKI-001</span>
+              <span className="text-amber-800 dark:text-amber-400 font-bold">NM License #NM-AG-XXXX-TKI-XXX</span>
             </div>
           </div>
         </div>
@@ -1078,10 +1080,10 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
 
               <div className="space-y-3 text-xs font-mono">
                 {[
-                  { name: "Heavy Metal ICP-MS Screen (Lead, Cadmium, Arsenic)", result: "< 0.8 ppm Pb (PASS)", lab: "NM Environmental Lab #2026-TKI-01" },
+                  { name: "Heavy Metal ICP-MS Screen (Lead, Cadmium, Arsenic)", result: "< 0.8 ppm Pb (PASS)", lab: "NM Environmental Lab #XXXX-TKI-XX" },
                   { name: "Cannabinoid HPLC Potency Profile (CBD/CBG Flower)", result: "18.4% CBG, 0.12% Δ9-THC (PASS)", lab: "Sovereign Ag Testing Station" },
                   { name: "Acequia Spring Water Purity Panel", result: "Non-Detect PFAS, Zero Lead (PASS)", lab: "Upper Rio Grande Watershed Lab" },
-                  { name: "State Agriculture & Hemp Producer License", result: "Active License #NM-AG-2026-TKI-001", lab: "NM Dept of Agriculture" }
+                  { name: "State Agriculture & Hemp Producer License", result: "Active License #NM-AG-XXXX-TKI-XXX", lab: "NM Dept of Agriculture" }
                 ].map((doc, i) => (
                   <div key={i} className="bg-stone-950 p-4 rounded-xl border border-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div>
@@ -1452,7 +1454,7 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
                 </div>
 
                 <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-700' : 'text-neutral-300'}`}>
-                  The <strong>Taos Kush Institute</strong> is a premier sovereign high-altitude agricultural research farm located directly across from Taos Pueblo land at 260 New Mexico 150, El Prado, NM. Featuring <strong>3.6 acres of organic agricultural property</strong>, <strong>3 surface water rights along the Acequia Madre de Taos</strong>, and State Agriculture License <strong>#NM-AG-2026-TKI-001</strong>, this property demonstrates how sovereign farms connect directly into the UCANX exchange.
+                  The <strong>Taos Kush Institute</strong> is a premier sovereign high-altitude agricultural research farm located directly across from Taos Pueblo land at 260 New Mexico 150, El Prado, NM. Featuring <strong>3.6 acres of organic agricultural property</strong>, <strong>3 surface water rights along the Acequia Madre de Taos</strong>, and State Agriculture License <strong>#NM-AG-XXXX-TKI-XXX</strong>, this property demonstrates how sovereign farms connect directly into the UCANX exchange.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1 text-xs font-mono">
@@ -1478,7 +1480,72 @@ export const UCANXCommoditiesExchange: React.FC<UCANXProps> = ({ onNavigateTab, 
                     isLight ? 'bg-emerald-50/80 border-emerald-200' : 'bg-neutral-950 border-neutral-800'
                   }`}>
                     <span className={`text-[10px] block uppercase ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>State Licensing</span>
-                    <span className="font-bold text-emerald-800 dark:text-emerald-400">#NM-AG-2026-TKI-001</span>
+                    <span className="font-bold text-emerald-800 dark:text-emerald-400">#NM-AG-XXXX-TKI-XXX</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* DEMO FEATURED PROCESSING COMPANY #0002: NANOSPIRE NANOCANNX */}
+              <div className={`p-6 sm:p-8 rounded-3xl border shadow-lg space-y-5 ${
+                isLight ? 'bg-cyan-50/40 border-cyan-200' : 'bg-stone-900 border-cyan-500/30'
+              }`}>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <span className={`px-2 py-0.5 border text-[10px] font-mono font-bold uppercase rounded ${
+                        isLight ? 'bg-cyan-100 text-cyan-950 border-cyan-300' : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30'
+                      }`}>
+                        ⚡ STANDARDIZED PROCESSING TECHNOLOGY COMPANY #0002
+                      </span>
+                      <span className={`text-xs font-mono ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>User #1 Partner Company</span>
+                    </div>
+                    <h3 className={`text-lg sm:text-xl font-bold font-serif mt-1 ${
+                      isLight ? 'text-stone-900' : 'text-white'
+                    }`}>
+                      NanoSpire NanoCannX (Exclusive Cannabis Nanotech Rights)
+                    </h3>
+                  </div>
+
+                  {onNavigateTab && (
+                    <button
+                      onClick={() => onNavigateTab('nanospire_nanocannx')}
+                      className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all cursor-pointer flex items-center gap-2 shrink-0 active:scale-95 font-mono"
+                    >
+                      <Zap size={16} />
+                      <span>Open NanoSpire Processing Portal</span>
+                      <ArrowUpRight size={14} />
+                    </button>
+                  )}
+                </div>
+
+                <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-700' : 'text-neutral-300'}`}>
+                  Standardized Nanotechnology Processing Enterprise & Exclusive Industry Licensing Portal operated by <strong>Norm Roulet (User #1)</strong>. Utilizing patented <strong>reentrant micro-jet acoustic & hydrodynamic cavitation</strong> developed by key inventor <strong>Mark L. LeClair</strong> (CEO & Founder) and <strong>Serge Lebid</strong> (President & Co-Founder) with guidance from Caltech Prof. Christopher Brennen and Capt. Edmond Pope. Provides particle reduction down to sub-50nm, nano-emulsions, wood oil homogenization (e.g., <strong>Hemp Shield</strong>), biopolymer nanofibrils, biofuels, and zero-chemical PFAS remediation.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1 text-xs font-mono">
+                  <div className={`p-2.5 rounded-lg border ${
+                    isLight ? 'bg-white border-cyan-200' : 'bg-neutral-950 border-neutral-800'
+                  }`}>
+                    <span className={`text-[10px] block uppercase ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>Particle Scale</span>
+                    <span className="font-bold text-cyan-800 dark:text-cyan-300">Sub-50 Nanometers</span>
+                  </div>
+                  <div className={`p-2.5 rounded-lg border ${
+                    isLight ? 'bg-white border-amber-200' : 'bg-neutral-950 border-neutral-800'
+                  }`}>
+                    <span className={`text-[10px] block uppercase ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>Featured Proposal</span>
+                    <span className="font-bold text-amber-800 dark:text-amber-300">Hemp Shield Licensing</span>
+                  </div>
+                  <div className={`p-2.5 rounded-lg border ${
+                    isLight ? 'bg-white border-emerald-200' : 'bg-neutral-950 border-neutral-800'
+                  }`}>
+                    <span className={`text-[10px] block uppercase ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>Extract Bioavailability</span>
+                    <span className="font-bold text-emerald-800 dark:text-emerald-300">500% - 1000% Boost</span>
+                  </div>
+                  <div className={`p-2.5 rounded-lg border ${
+                    isLight ? 'bg-white border-stone-300' : 'bg-neutral-950 border-neutral-800'
+                  }`}>
+                    <span className={`text-[10px] block uppercase ${isLight ? 'text-stone-500' : 'text-neutral-400'}`}>PFAS Destruction</span>
+                    <span className="font-bold text-stone-900 dark:text-stone-100">Zero Chemical Cleavage</span>
                   </div>
                 </div>
               </div>
