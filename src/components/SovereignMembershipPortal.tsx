@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import launching1Img from '../assets/images/Launching1.png';
+import caseAlumnusHeaderImg from '../assets/images/CaseAlumnusHeader.JPG';
+import scatterplotImg from '../assets/images/Scatterplot.jpg';
+import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
+import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import {
   Shield,
   UserCheck,
@@ -34,7 +38,13 @@ import {
   Layers,
   CheckCircle2,
   AlertCircle,
-  ArrowUpRight
+  ArrowUpRight,
+  HardDrive,
+  Download,
+  Image,
+  Share2,
+  ShieldCheck,
+  FileSpreadsheet
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -54,6 +64,7 @@ import {
 
 interface SovereignMembershipPortalProps {
   onNavigateTab?: (tab: string) => void;
+  siteTheme?: 'light' | 'dark';
 }
 
 interface HistoricalAddress {
@@ -72,46 +83,116 @@ interface OccupationalHazard {
   exposureIntensity: 'Severe' | 'Moderate' | 'Mild';
 }
 
-export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps> = ({ onNavigateTab }) => {
+export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps> = ({ onNavigateTab, siteTheme = 'light' }) => {
+  const isLight = siteTheme === 'light';
   // Main Sub-tabs inside Portal
-  const [activePortalSubTab, setActivePortalSubTab] = useState<'onboarding' | 'exposome_profiler' | 'tribal_gov' | 'membership_pricing'>('exposome_profiler');
+  const [activePortalSubTab, setActivePortalSubTab] = useState<'sovereign_vault' | 'onboarding' | 'exposome_profiler' | 'tribal_gov' | 'membership_pricing'>('sovereign_vault');
 
   // USER AUTHENTICATION & IDENTITY STATE
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true); // Pre-logged in as demo sovereign member
   const [authRole, setAuthRole] = useState<'individual' | 'tribal_official' | 'municipal_officer' | 'supporter'>('individual');
   
-  // MEMBER PROFILE FIELDS
-  const [memberName, setMemberName] = useState<string>('Ouray Muskrat');
-  const [tribalAffiliation, setTribalAffiliation] = useState<string>('Jicarilla Apache Nation');
-  const [tribalRollId, setTribalRollId] = useState<string>('JAN-77492-ZKP');
-  const [nationalIdHash, setNationalIdHash] = useState<string>('US-SSN-***-**-8491');
-  const [currentAddress, setCurrentAddress] = useState<string>('Dulce, New Mexico 87528 (Jicarilla Reservation)');
-  const [email, setEmail] = useState<string>('ouray.muskrat@jicarilla-sovereign.org');
-  const [phone, setPhone] = useState<string>('(575) 759-3200');
-  const [zkVerificationStatus, setZkVerificationStatus] = useState<string>('Verified Human (ZKP-Humanity Standard #0x8F92)');
+  // MEMBER PROFILE FIELDS - DEFAULTED TO USER #1 (NORM ROULET / FOUNDER)
+  const [memberName, setMemberName] = useState<string>('Norm Roulet');
+  const [tribalAffiliation, setTribalAffiliation] = useState<string>('ICEarth Founder & UCANX Co-Founder • Taos Kush Institute');
+  const [tribalRollId, setTribalRollId] = useState<string>('ICEARTH-USER-00000001-FOUNDER');
+  const [nationalIdHash, setNationalIdHash] = useState<string>('US-FOUNDER-ZK-00000001');
+  const [currentAddress, setCurrentAddress] = useState<string>('Taos, New Mexico 87571 (Upper Rio Grande Watershed)');
+  const [email, setEmail] = useState<string>('rouletnorm@gmail.com');
+  const [phone, setPhone] = useState<string>('(505) 555-0100');
+  const [zkVerificationStatus, setZkVerificationStatus] = useState<string>('User #1 Sovereign Founder Key (0x00000001-NORM-ROULET)');
   const [showZkKeyModal, setShowZkKeyModal] = useState<boolean>(false);
 
+  // SOVEREIGN MEMBER VAULT SECTIONS (PROPERTIES, HEALTH, MEDIA & IP, COMPACT)
+  const [memberProperties, setMemberProperties] = useState([
+    {
+      id: 'PROP-001',
+      name: 'Taos Kush Institute Agricultural Property (User #1 Founder Holding)',
+      location: '260 New Mexico 150, El Prado, NM 87529 (Upper Rio Grande Watershed)',
+      acres: '3.6 Acres Agricultural Property',
+      waterRights: '3 Acequia Surface Water Rights (Acequia Madre / Rio Pueblo System)',
+      cropType: 'High-CBD/CBG Cannabinoids & Phytoremediation Industrial Hemp',
+      soilLeadPpm: 18,
+      status: 'NM State License #NM-AG-2026-TKI-001 (Active)'
+    },
+    {
+      id: 'PROP-002',
+      name: 'Spectrum Telecom & Wireless Infrastructure Site',
+      location: 'Taos Mesa, NM 87571 (Upper Rio Grande Watershed)',
+      acres: '2.0 Acres',
+      waterRights: 'Solar Powered Off-Grid Wireless Hub',
+      cropType: 'Environmental Monitoring & Decentralized Node Infrastructure',
+      soilLeadPpm: 12,
+      status: 'Active Telecom Node'
+    }
+  ]);
+
+  const [memberHealthLogs, setMemberHealthLogs] = useState([
+    { id: 'HLTH-001', date: '2026-06-15', metric: 'Capillary Blood Lead Level (BLL)', value: '0.8 µg/dL', status: 'Pristine (Low Risk)', provider: 'Taos Health Clinic ZK-Lab' },
+    { id: 'HLTH-002', date: '2026-05-20', metric: 'Tap Water PFAS & Heavy Metal Screen', value: 'Non-Detect (< 1.0 ppt)', status: 'Optimal Alpine Water', provider: 'NM Environmental Lab' },
+    { id: 'HLTH-003', date: '2026-03-10', metric: 'Soil Bio-Accumulation Heavy Metal Panel', value: '18 ppm Lead, 0.2 ppm Cadmium', status: 'Safe Organic Soil', provider: 'UCANX Soil Test Station' }
+  ]);
+
+  const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-001',
+      title: 'Co-Founder Agua Das at Hemp-I-Scream Booth (Case Alumnus Photo)',
+      type: 'Historical Photography',
+      imageSrc: caseAlumnusHeaderImg,
+      link: 'https://taoskushinstitute.com/sites/default/files/inline-images/CaseAlumnusHeader.JPG',
+      description: 'Original photograph of Agua Das promoting non-dairy high-EFA hemp ice cream at 2010 exhibition booth.',
+      sovereignHash: '0xAGUA_DAS_CASE_ALUMNUS_2010'
+    },
+    {
+      id: 'IP-002',
+      title: 'ICEarth Now Launching - DNA Helix & Sovereign Earth Emblem',
+      type: 'Founding Charter Graphic',
+      imageSrc: launching1Img,
+      link: 'https://taoski.com/sites/default/files/inline-images/Launching1.png',
+      description: 'Original 1996 ICEarth launch slide 1 featuring Earth bound by orbital data rings adjacent to human DNA.',
+      sovereignHash: '0xICEARTH_LAUNCHING_SLIDE_01'
+    },
+    {
+      id: 'IP-003',
+      title: 'Roulet\'s Law: Lead-Crime Correlation Proof Scatterplot',
+      type: 'Research Dataset & Scatterplot',
+      imageSrc: scatterplotImg,
+      link: '#proofs',
+      description: 'Comprehensive scatterplot proving blood lead levels vs violent crime rate drops following gasoline lead ban.',
+      sovereignHash: '0xROULETS_LAW_PROOF_SCATTERPLOT'
+    },
+    {
+      id: 'IP-004',
+      title: 'NanoSpire 20 Years Cavitation & PFAS Destruction Roadmap',
+      type: 'Patent & Technical Roadmap',
+      imageSrc: nanoSpire20YearsImg,
+      link: '#simulator',
+      description: 'Two decades of nanosecond cavitation research and zero-chemical destruction of toxic PFAS/PFOS compounds.',
+      sovereignHash: '0xNANOSPIRE_20_YEARS_CAVITATION'
+    }
+  ]);
+
   // LIFETIME EXPOSOME PROFILER STATE
-  const [addressQuery, setAddressQuery] = useState<string>('Dulce, New Mexico 87528');
-  const [analyzedLocation, setAnalyzedLocation] = useState<string>('Dulce, NM (Jicarilla Apache Nation)');
+  const [addressQuery, setAddressQuery] = useState<string>('Taos, New Mexico 87571');
+  const [analyzedLocation, setAnalyzedLocation] = useState<string>('Taos, NM (Taos Kush Institute High-Altitude Farm)');
   const [isAnalyzingAddress, setIsAnalyzingAddress] = useState<boolean>(false);
 
   // Environmental Metrics for currently analyzed location
   const [envData, setEnvData] = useState({
-    soilLeadPpm: 185, // ppm (target < 50)
-    waterLeadPpb: 12.4, // ppb (EPA action level 15, WHO target < 1)
-    airAqi: 28, // AQI Good
-    pm25: 6.8, // ug/m3
-    miningProximityKm: 14.2, // Proximity to historical uranium/lead mining
-    pfasRisk: 'Moderate (Rio Arriba Catchment)',
-    overallExposomeRiskScore: 68, // out of 100
+    soilLeadPpm: 18,
+    waterLeadPpb: 0.8,
+    airAqi: 12,
+    pm25: 2.1,
+    miningProximityKm: 35.0,
+    pfasRisk: 'Pristine Alpine Spring (Non-Detect)',
+    overallExposomeRiskScore: 12
   });
 
   // Lifetime History Elements
   const [historicalAddresses, setHistoricalAddresses] = useState<HistoricalAddress[]>([
-    { id: '1', location: 'Dulce, NM (Jicarilla Reservation)', years: '2012 - Present', leadRisk: 'Moderate', notes: 'Well water source, older home plumbing' },
-    { id: '2', location: 'Farmington, NM (San Juan Basin)', years: '2004 - 2012', leadRisk: 'High', notes: 'Near oil/gas & industrial smelting corridor' },
-    { id: '3', location: 'Albuquerque, NM', years: '1995 - 2004', leadRisk: 'High', notes: 'Pre-1978 housing stock with lead paint' }
+    { id: '1', location: 'Taos, NM (Upper Rio Grande Basin)', years: '2010 - Present', leadRisk: 'Low', notes: 'Pristine mountain spring water & organic soil' },
+    { id: '2', location: 'Dulce, NM (Jicarilla Reservation)', years: '2012 - 2020', leadRisk: 'Moderate', notes: 'Well water source, historical mining catchment' },
+    { id: '3', location: 'Cleveland, OH (Cuyahoga Industrial Corridor)', years: '1990 - 2010', leadRisk: 'High', notes: 'Pre-1978 infrastructure & urban industrial soil' }
   ]);
 
   const [occupationalHazards, setOccupationalHazards] = useState<OccupationalHazard[]>([
@@ -120,9 +201,9 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   // Lifestyle Exposures
-  const [huntingLeadAmmo, setHuntingLeadAmmo] = useState<boolean>(true);
-  const [gameConsumptionFreq, setGameConsumptionFreq] = useState<number>(3); // times/week
-  const [traditionalPotteryUse, setTraditionalPotteryUse] = useState<boolean>(true);
+  const [huntingLeadAmmo, setHuntingLeadAmmo] = useState<boolean>(false);
+  const [gameConsumptionFreq, setGameConsumptionFreq] = useState<number>(0); // times/week
+  const [traditionalPotteryUse, setTraditionalPotteryUse] = useState<boolean>(false);
   const [pipeWaterSource, setPipeWaterSource] = useState<'well' | 'tribal_municipal' | 'bottled'>('well');
   const [smokingStatus, setSmokingStatus] = useState<boolean>(false);
 
@@ -153,6 +234,35 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   const [donationAmount, setDonationAmount] = useState<number>(100);
   const [paymentSuccessModal, setPaymentSuccessModal] = useState<boolean>(false);
 
+  // Pre-load preset for Norm Roulet (User #1 Founder)
+  const handleLoadNormRouletUser1Preset = () => {
+    setMemberName('Norm Roulet');
+    setTribalAffiliation('ICEarth Founder & UCANX Co-Founder • Taos Kush Institute');
+    setTribalRollId('ICEARTH-USER-00000001-FOUNDER');
+    setNationalIdHash('US-FOUNDER-ZK-00000001');
+    setCurrentAddress('Taos, New Mexico 87571 (Upper Rio Grande Watershed)');
+    setEmail('rouletnorm@gmail.com');
+    setPhone('(505) 555-0100');
+    setZkVerificationStatus('User #1 Sovereign Founder Key (0x00000001-NORM-ROULET)');
+    setAddressQuery('Taos, New Mexico 87571');
+    setAnalyzedLocation('Taos, NM (Taos Kush Institute High-Altitude Farm)');
+    setEnvData({
+      soilLeadPpm: 18,
+      waterLeadPpb: 0.8,
+      airAqi: 12,
+      pm25: 2.1,
+      miningProximityKm: 35.0,
+      pfasRisk: 'Pristine Alpine Spring (Non-Detect)',
+      overallExposomeRiskScore: 12
+    });
+    setHuntingLeadAmmo(false);
+    setGameConsumptionFreq(0);
+    setTraditionalPotteryUse(false);
+    setPipeWaterSource('well');
+    setAuthRole('individual');
+    setActivePortalSubTab('sovereign_vault');
+  };
+
   // Pre-load preset for Ouray Muskrat
   const handleLoadOurayMuskratPreset = () => {
     setMemberName('Ouray Muskrat');
@@ -177,6 +287,47 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
     setPipeWaterSource('well');
     setAuthRole('individual');
     setActivePortalSubTab('exposome_profiler');
+  };
+
+  // Export JSON Sovereign Data Package
+  const handleExportSovereignDataPackage = () => {
+    const dataPackage = {
+      icearthVersion: '2026.1.0',
+      sovereignMember: {
+        userId: 'USER-00000001',
+        name: memberName,
+        affiliation: tribalAffiliation,
+        rollId: tribalRollId,
+        address: currentAddress,
+        email: email,
+        zkpVerificationStatus: zkVerificationStatus,
+        exportTimestamp: new Date().toISOString()
+      },
+      dataSovereigntyCompact: {
+        ownership: '100% Exclusively Owned by Sovereign Member',
+        commercializationRights: 'None - Zero Third-Party Monetization',
+        privacyStandard: 'Zero-Knowledge Cryptographic Storage'
+      },
+      properties: memberProperties,
+      healthAndExposomeLogs: memberHealthLogs,
+      intellectualPropertyVault: memberMediaIp.map(item => ({
+        id: item.id,
+        title: item.title,
+        type: item.type,
+        link: item.link,
+        sovereignHash: item.sovereignHash
+      }))
+    };
+
+    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(
+      JSON.stringify(dataPackage, null, 2)
+    )}`;
+    const downloadAnchor = document.createElement('a');
+    downloadAnchor.setAttribute('href', jsonString);
+    downloadAnchor.setAttribute('download', `ICEarth_Sovereign_Vault_${memberName.replace(/\s+/g, '_')}.json`);
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
   };
 
   const handleAnalyzeAddress = () => {
@@ -417,6 +568,32 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
         {/* Portal Navigation Tabs */}
         <div className="mt-8 border-t border-stone-800 pt-4 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 w-full md:w-auto">
+            <button
+              id="subtab-sovereign-vault"
+              onClick={() => setActivePortalSubTab('sovereign_vault')}
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+                activePortalSubTab === 'sovereign_vault'
+                  ? 'bg-amber-500 text-stone-950 shadow-md'
+                  : 'bg-stone-800/80 text-stone-300 hover:bg-stone-800 hover:text-white'
+              }`}
+            >
+              <HardDrive className="w-4 h-4 text-amber-950" />
+              Sovereign Member Vault (User #1)
+            </button>
+
+            <button
+              id="subtab-onboarding"
+              onClick={() => setActivePortalSubTab('onboarding')}
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+                activePortalSubTab === 'onboarding'
+                  ? 'bg-amber-500 text-stone-950 shadow-md'
+                  : 'bg-stone-800/80 text-stone-300 hover:bg-stone-800 hover:text-white'
+              }`}
+            >
+              <UserCheck className="w-4 h-4" />
+              Join ICEarth & Onboarding
+            </button>
+
             <button
               id="subtab-exposome-profiler"
               onClick={() => setActivePortalSubTab('exposome_profiler')}
@@ -948,18 +1125,318 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       )}
 
       {/* ========================================================================= */}
+      {/* SUBTAB 1: SOVEREIGN MEMBER VAULT (USER #1 & GENERAL MEMBERSHIP)           */}
+      {/* ========================================================================= */}
+      {activePortalSubTab === 'sovereign_vault' && (
+        <div className="space-y-8 animate-fadeIn">
+          
+          {/* VAULT BANNER & PRESET SWITCHER */}
+          <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 shadow-xl space-y-4">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase">
+                    Member Vault #00000001
+                  </span>
+                  <span className="text-xs text-stone-400 font-mono">Zero-Knowledge Private Ledger</span>
+                </div>
+                <h2 className="text-2xl font-bold text-stone-100 font-serif mt-1 flex items-center gap-2">
+                  <HardDrive className="w-6 h-6 text-amber-500" />
+                  Sovereign Personal Data Vault: {memberName}
+                </h2>
+                <p className="text-xs sm:text-sm text-stone-400 mt-1 max-w-3xl">
+                  Your private, sovereign-held repository on ICEarth.org. Contains exact land & agricultural coordinates, private health and blood lead logs, and original intellectual property (photos, papers, research). 100% owned by you — never indexed, advertised against, or monetized by external third parties.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={handleLoadNormRouletUser1Preset}
+                  className="px-3.5 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs rounded-xl shadow transition-all flex items-center gap-1.5"
+                >
+                  <User className="w-4 h-4" />
+                  <span>Load User #1 (Norm Roulet)</span>
+                </button>
+                <button
+                  onClick={handleLoadOurayMuskratPreset}
+                  className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5"
+                >
+                  <Users className="w-4 h-4 text-amber-400" />
+                  <span>Load Ouray Muskrat Preset</span>
+                </button>
+                <button
+                  onClick={handleExportSovereignDataPackage}
+                  className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold text-xs rounded-xl shadow transition-all flex items-center gap-1.5"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Export Vault JSON</span>
+                </button>
+              </div>
+            </div>
+
+            {/* QUICK STATS & BILL OF RIGHTS SUMMARY */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div className="bg-stone-950 p-3 rounded-xl border border-stone-800">
+                <div className="text-[10px] uppercase font-mono text-stone-400">Sovereign Identity</div>
+                <div className="text-sm font-bold text-amber-300 truncate">{memberName}</div>
+                <div className="text-[10px] text-stone-500 font-mono truncate">{tribalRollId}</div>
+              </div>
+              <div className="bg-stone-950 p-3 rounded-xl border border-stone-800">
+                <div className="text-[10px] uppercase font-mono text-stone-400">Real Land Assets</div>
+                <div className="text-sm font-bold text-stone-200">{memberProperties.length} Properties</div>
+                <div className="text-[10px] text-emerald-400 font-mono">14.5 Total Acres</div>
+              </div>
+              <div className="bg-stone-950 p-3 rounded-xl border border-stone-800">
+                <div className="text-[10px] uppercase font-mono text-stone-400">Exposome Lab Logs</div>
+                <div className="text-sm font-bold text-stone-200">{memberHealthLogs.length} Verified Records</div>
+                <div className="text-[10px] text-amber-400 font-mono">BLL & PFAS Tested</div>
+              </div>
+              <div className="bg-stone-950 p-3 rounded-xl border border-stone-800">
+                <div className="text-[10px] uppercase font-mono text-stone-400">Sovereign IP Vault</div>
+                <div className="text-sm font-bold text-stone-200">{memberMediaIp.length} Works & Archives</div>
+                <div className="text-[10px] text-stone-400 font-mono">Photos, Datasets, Deck</div>
+              </div>
+            </div>
+          </div>
+
+          {/* MAIN GRID: PROPERTIES, HEALTH, AND MEDIA/IP */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            {/* LEFT COLUMN (7 COLS): PROPERTIES & HEALTH LABS */}
+            <div className="lg:col-span-7 space-y-6">
+
+              {/* SECTION 1: LAND & PROPERTY ASSETS */}
+              <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 shadow-md space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-stone-100 flex items-center gap-2 font-serif">
+                      <MapPin className="w-5 h-5 text-amber-500" />
+                      1. Real Land, Agricultural & Water Holdings
+                    </h3>
+                    <p className="text-xs text-stone-400">
+                      Exact geographic coordinates, acreages, crops, and water rights stored exclusively in your sovereign vault.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      const newProp = {
+                        id: `PROP-${Date.now()}`,
+                        name: 'New Agricultural Parcel / Infrastructure Unit',
+                        location: 'Upper Rio Grande Watershed, NM',
+                        acres: '5.0 Acres',
+                        waterRights: 'Acequia / Surface Well Water',
+                        cropType: 'Phytoremediation Hemp / Crops',
+                        soilLeadPpm: 15,
+                        status: 'Registered Sovereign Asset'
+                      };
+                      setMemberProperties([...memberProperties, newProp]);
+                    }}
+                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-1 transition-all"
+                  >
+                    <Plus className="w-3.5 h-3.5" /> Add Property
+                  </button>
+                </div>
+
+                <div className="space-y-3">
+                  {memberProperties.map((prop) => (
+                    <div key={prop.id} className="bg-stone-950 p-4 rounded-xl border border-amber-500/20 space-y-2 relative group">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <span className="px-2 py-0.5 bg-stone-800 text-amber-300 text-[10px] font-mono font-semibold rounded">
+                            {prop.id} • {prop.acres}
+                          </span>
+                          <h4 className="text-sm font-bold text-stone-100 mt-1">{prop.name}</h4>
+                          <p className="text-xs text-stone-400 flex items-center gap-1 mt-0.5">
+                            <MapPin className="w-3 h-3 text-amber-500" /> {prop.location}
+                          </p>
+                        </div>
+                        <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">
+                          {prop.status}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-stone-800 text-stone-300">
+                        <div>
+                          <span className="text-stone-500 text-[10px] block uppercase font-mono">Water Rights</span>
+                          <span>{prop.waterRights}</span>
+                        </div>
+                        <div>
+                          <span className="text-stone-500 text-[10px] block uppercase font-mono">Crops & Soil Lead</span>
+                          <span className="text-amber-300">{prop.cropType} ({prop.soilLeadPpm} ppm Pb)</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* SECTION 2: PRIVATE HEALTH & EXPOSOME RECORDS */}
+              <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 shadow-md space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-stone-100 flex items-center gap-2 font-serif">
+                      <Heart className="w-5 h-5 text-amber-500" />
+                      2. Sovereign Health & Blood Lead ($Pb$) Vault
+                    </h3>
+                    <p className="text-xs text-stone-400">
+                      Private medical screening data, capillary BLL levels, and environmental exposure lab logs.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      const newLog = {
+                        id: `HLTH-${Date.now()}`,
+                        date: new Date().toISOString().split('T')[0],
+                        metric: 'Capillary Blood Lead Screening (BLL)',
+                        value: '0.9 µg/dL',
+                        status: 'Optimal / Verified',
+                        provider: 'Sovereign Lab ZK-Standard'
+                      };
+                      setMemberHealthLogs([...memberHealthLogs, newLog]);
+                    }}
+                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-1 transition-all"
+                  >
+                    <Plus className="w-3.5 h-3.5" /> Add Lab Record
+                  </button>
+                </div>
+
+                <div className="space-y-3">
+                  {memberHealthLogs.map((log) => (
+                    <div key={log.id} className="bg-stone-950 p-3.5 rounded-xl border border-stone-800 flex items-center justify-between gap-3 text-xs">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-stone-400 font-mono text-[10px]">{log.date}</span>
+                          <span className="text-amber-400 font-bold">{log.metric}</span>
+                        </div>
+                        <div className="text-stone-300 font-mono mt-0.5">Result: <strong className="text-stone-100">{log.value}</strong> ({log.status})</div>
+                        <div className="text-[10px] text-stone-500 mt-0.5">Lab Provider: {log.provider}</div>
+                      </div>
+                      <span className="px-2 py-1 bg-amber-500/10 text-amber-300 border border-amber-500/20 text-[10px] font-mono rounded">
+                        ZK-Encrypted
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* RIGHT COLUMN (5 COLS): ORIGINAL IP & MEDIA REPOSITORY (YOUTUBE / NAPSTER / FACEBOOK ALTERNATIVE) */}
+            <div className="lg:col-span-5 space-y-6">
+
+              <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 shadow-md space-y-4">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-bold text-stone-100 flex items-center gap-2 font-serif">
+                      <Image className="w-5 h-5 text-amber-500" />
+                      3. Sovereign Media & IP Vault
+                    </h3>
+                    <span className="text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded">
+                      Member Owned
+                    </span>
+                  </div>
+                  <p className="text-xs text-stone-400 mt-1">
+                    Your sovereign alternative to YouTube, Napster, and Facebook. Store original photography, articles, slide decks, and data.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {memberMediaIp.map((item) => (
+                    <div key={item.id} className="bg-stone-950 rounded-xl border border-stone-800 p-3 space-y-2.5 overflow-hidden group">
+                      <div className="w-full aspect-video bg-stone-900 rounded-lg overflow-hidden border border-stone-800 relative">
+                        <img
+                          src={item.imageSrc}
+                          alt={item.title}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute top-2 right-2 bg-stone-950/80 backdrop-blur-sm text-stone-200 text-[10px] font-mono px-2 py-0.5 rounded border border-stone-700">
+                          {item.type}
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <h4 className="text-xs font-bold text-stone-100 group-hover:text-amber-400 transition-colors">
+                          {item.title}
+                        </h4>
+                        <p className="text-[11px] text-stone-400 leading-snug">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-1 border-t border-stone-800 text-[10px] font-mono text-stone-500">
+                        <span className="truncate max-w-[180px]">{item.sovereignHash}</span>
+                        {item.link.startsWith('http') ? (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
+                          >
+                            <span>Original Link</span>
+                            <ArrowUpRight size={11} />
+                          </a>
+                        ) : (
+                          <button
+                            onClick={() => onNavigateTab && onNavigateTab(item.link.replace('#', ''))}
+                            className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
+                          >
+                            <span>View App Section</span>
+                            <ArrowUpRight size={11} />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* MEMBER DATA COMPACT & LEGAL RIGHTS */}
+              <div className="bg-gradient-to-br from-stone-900 to-amber-950/30 border border-amber-500/30 rounded-2xl p-5 shadow-md space-y-3">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5 text-amber-400" />
+                  <h4 className="text-sm font-bold text-stone-100">ICEarth Data Sovereignty Compact</h4>
+                </div>
+                <ul className="text-xs text-stone-300 space-y-1.5 list-disc list-inside leading-relaxed">
+                  <li><strong>Individual Ownership:</strong> 100% of property, medical, and media assets remain your exclusive property.</li>
+                  <li><strong>Zero Monetization:</strong> ICEarth will never sell, lease, or trade member data to third-party brokers or AI training corpora.</li>
+                  <li><strong>Zero Surveillance:</strong> No invasive tracking pixels or cross-site fingerprinting.</li>
+                  <li><strong>Full Portability:</strong> Export or wipe your entire vault at any time in standard JSON or encrypted format.</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      )}
+
+      {/* ========================================================================= */}
       {/* SUBTAB 2: MEMBER ONBOARDING & AUTHENTICATION HUB                         */}
       {/* ========================================================================= */}
       {activePortalSubTab === 'onboarding' && (
         <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 sm:p-8 shadow-xl space-y-8 animate-fadeIn max-w-4xl mx-auto">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">Sovereign Onboarding</span>
-            <h2 className="text-2xl font-bold text-stone-100 font-serif mt-1">
-              Join ICEarth as an Individual Sovereign Member
-            </h2>
-            <p className="text-sm text-stone-400 mt-1">
-              Establish your authentic human identity, connect your sovereign tribal credentials, and lock your health data inside a Zero-Knowledge privacy vault.
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-800 pb-4">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">Sovereign Onboarding</span>
+              <h2 className="text-2xl font-bold text-stone-100 font-serif mt-1">
+                Join ICEarth as an Individual Sovereign Member
+              </h2>
+              <p className="text-sm text-stone-400 mt-1">
+                Establish your authentic human identity, connect your sovereign tribal credentials, and lock your health data inside a Zero-Knowledge privacy vault.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={handleLoadNormRouletUser1Preset}
+                className="px-3.5 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs rounded-xl shadow transition-all flex items-center gap-1.5"
+              >
+                <User className="w-4 h-4" />
+                <span>Auto-Fill User #1 (Norm Roulet)</span>
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

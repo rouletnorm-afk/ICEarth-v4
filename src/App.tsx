@@ -37,7 +37,12 @@ import {
   Fingerprint,
   Menu,
   X,
-  Sprout
+  Sprout,
+  Sun,
+  Moon,
+  Printer,
+  ExternalLink,
+  Copy
 } from 'lucide-react';
 import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
 import {
@@ -81,6 +86,9 @@ import LeadTerrorismProofs from './components/LeadTerrorismProofs';
 import { SovereignMembershipPortal } from './components/SovereignMembershipPortal';
 
 export default function App() {
+  // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
+  const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
+
   // Navigation / Tabs
   const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo'>('sovereign_portal');
 
@@ -103,6 +111,23 @@ export default function App() {
   const [exhibitViewMode, setExhibitViewMode] = useState<'interactive' | 'original'>('interactive');
   const [hoveredNodeId, setHoveredNodeId] = useState<number | null>(null);
   const [imageLoadError, setImageLoadError] = useState<boolean>(false);
+  const [isPrintModalOpen, setIsPrintModalOpen] = useState<boolean>(false);
+
+  // Auto-detect print query parameters for standalone window printing
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('print') === 'true' || params.get('print_standalone') === 'true') {
+      setIsPrintModalOpen(true);
+      const timer = setTimeout(() => {
+        try {
+          window.print();
+        } catch (err) {
+          console.warn('Auto print trigger error:', err);
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   // PFAS Simulator State (NanoSpire Quantum Cavitation)
   const [pfasSimState, setPfasSimState] = useState({
@@ -136,9 +161,12 @@ export default function App() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const tabParam = params.get('tab');
+    const farmParam = params.get('farm');
     const chapterParam = params.get('chapter') || params.get('id') || window.location.hash.replace('#', '');
 
-    if (tabParam) {
+    if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
+      setActiveTab('ucanx');
+    } else if (tabParam) {
       const allowedTabs = ['sovereign_portal', 'ucanx', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
       if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
@@ -591,10 +619,48 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
   ];
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#FCFCFC] text-[#1A1A1A] font-sans selection:bg-[#E5E7EB] overflow-hidden">
+    <div className={`flex flex-col h-screen w-full font-sans selection:bg-amber-200 overflow-hidden transition-colors duration-200 ${
+      siteTheme === 'light' ? 'bg-stone-50 text-stone-900' : 'bg-stone-950 text-stone-100'
+    }`}>
+      {/* GLOBAL PRINT & HIGH-CONTRAST EYE-SAFE STYLES */}
+      <style>{`
+        @media print {
+          header, aside, .no-print, button, nav, input, select {
+            display: none !important;
+          }
+          body, main, section, div {
+            background: #ffffff !important;
+            color: #000000 !important;
+            overflow: visible !important;
+            height: auto !important;
+            max-height: none !important;
+            box-shadow: none !important;
+            border-color: #d1d5db !important;
+          }
+          .print\\:block {
+            display: block !important;
+          }
+          .print\\:text-black {
+            color: #000000 !important;
+          }
+          .print\\:bg-white {
+            background-color: #ffffff !important;
+          }
+          .print\\:border-black {
+            border-color: #000000 !important;
+          }
+          @page {
+            margin: 1.5cm;
+          }
+        }
+      `}</style>
       
       {/* HEADER */}
-      <header className="h-14 sm:h-16 border-b border-[#E5E5E5] flex items-center justify-between px-3 sm:px-8 bg-white shrink-0">
+      <header className={`h-14 sm:h-16 border-b flex items-center justify-between px-3 sm:px-8 shrink-0 transition-colors ${
+        siteTheme === 'light'
+          ? 'bg-white border-stone-200 text-stone-900'
+          : 'bg-stone-900 border-stone-800 text-stone-100'
+      }`}>
         <div className="flex items-center gap-2.5 sm:gap-4">
           <div className="w-10 sm:w-14 h-7 sm:h-8 rounded-md overflow-hidden border border-neutral-800 bg-black flex items-center justify-center text-white font-mono font-bold text-base sm:text-lg tracking-wider relative group shadow-xs shrink-0">
             <img 
@@ -609,15 +675,58 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               <span>Roulet's Law Proof</span>
               <span className="text-[#999] font-normal font-mono text-[10px] sm:text-[11px]">v5.5.0</span>
             </h1>
-            <p className="text-[9px] sm:text-[10px] text-[#666] tracking-wider uppercase truncate max-w-[200px] sm:max-w-none">Sovereign Exposenomics & Decarbonization</p>
+            <p className="text-[9px] sm:text-[10px] text-[#666] dark:text-stone-400 tracking-wider uppercase truncate max-w-[200px] sm:max-w-none">Sovereign Exposenomics & Decarbonization</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-4">
-          <div className="hidden lg:flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="hidden xl:flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 dark:text-emerald-300 px-3 py-1.5 rounded-full border border-emerald-100 dark:border-emerald-800/40">
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
             Sovereign Session Reconstructed
           </div>
+
+          {/* SITE-WIDE LIGHT / DARK THEME TOGGLE BUTTON */}
+          <button 
+            onClick={() => setSiteTheme(prev => prev === 'light' ? 'dark' : 'light')}
+            className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-bold font-mono transition-colors cursor-pointer ${
+              siteTheme === 'light'
+                ? 'bg-amber-100/90 text-amber-950 border-amber-300 hover:bg-amber-200/80 shadow-xs'
+                : 'bg-stone-800 text-amber-300 border-amber-500/40 hover:bg-stone-700 shadow-xs'
+            }`}
+            title="Toggle Site-Wide Light / Dark View (High Contrast Eyesight Mode)"
+          >
+            {siteTheme === 'light' ? (
+              <>
+                <Sun size={14} className="text-amber-800 font-bold" />
+                <span className="uppercase text-[10px] sm:text-xs">☀️ Light View</span>
+              </>
+            ) : (
+              <>
+                <Moon size={14} className="text-amber-300" />
+                <span className="uppercase text-[10px] sm:text-xs text-amber-300">🌙 Dark View</span>
+              </>
+            )}
+          </button>
+
+          {/* SITE-WIDE PRINT PAGE BUTTON */}
+          <button
+            onClick={() => {
+              setIsPrintModalOpen(true);
+              setTimeout(() => {
+                try { window.print(); } catch (err) { console.warn('window.print error:', err); }
+              }, 150);
+            }}
+            className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-bold font-mono transition-colors cursor-pointer ${
+              siteTheme === 'light'
+                ? 'bg-amber-100 text-amber-950 border-amber-300 hover:bg-amber-200 shadow-xs'
+                : 'bg-stone-800 text-stone-100 border-stone-700 hover:bg-stone-700 shadow-xs'
+            }`}
+            title="Print or Save Current Active Page as High-Contrast Document"
+          >
+            <Printer size={14} className={siteTheme === 'light' ? 'text-amber-800' : 'text-stone-300'} />
+            <span className="uppercase text-[10px] sm:text-xs font-bold">🖨️ Print Page</span>
+          </button>
+
           <button 
             onClick={() => {
               const url = `${window.location.origin}${window.location.pathname}?tab=${activeTab}${activeTab === 'manuscript' ? `&chapter=${selectedChapterId}` : ''}`;
@@ -625,33 +734,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               setCopiedGlobalTabLink(true);
               setTimeout(() => setCopiedGlobalTabLink(false), 2000);
             }}
-            className="hidden sm:flex items-center gap-1.5 sm:gap-2 text-xs font-semibold px-2.5 sm:px-4 py-1.5 sm:py-2 bg-amber-50 border border-amber-200 text-amber-950 hover:bg-amber-100/80 rounded transition-colors cursor-pointer"
+            className="hidden sm:flex items-center gap-1.5 sm:gap-2 text-xs font-semibold px-2.5 sm:px-3 py-1.5 bg-amber-50 dark:bg-stone-800 border border-amber-200 dark:border-amber-500/30 text-amber-950 dark:text-amber-300 hover:bg-amber-100/80 rounded transition-colors cursor-pointer"
             title="Copy Permanent Link to Current View"
           >
             {copiedGlobalTabLink ? (
               <>
-                <Check size={14} className="text-emerald-700 font-bold" />
-                <span className="text-emerald-700 font-bold uppercase text-[10px] sm:text-xs">Copied!</span>
+                <Check size={14} className="text-emerald-700 dark:text-emerald-400 font-bold" />
+                <span className="text-emerald-700 dark:text-emerald-400 font-bold uppercase text-[10px] sm:text-xs">Copied!</span>
               </>
             ) : (
               <>
-                <Link2 size={14} className="text-amber-800" />
-                <span className="uppercase font-bold text-amber-900 text-[10px] sm:text-xs">Share View</span>
+                <Link2 size={14} className="text-amber-800 dark:text-amber-400" />
+                <span className="uppercase font-bold text-amber-900 dark:text-amber-300 text-[10px] sm:text-xs">Share View</span>
               </>
             )}
-          </button>
-          <button 
-            onClick={handleExportManuscript}
-            className="hidden md:flex items-center gap-2 text-xs font-semibold px-4 py-2 border border-[#E5E5E5] hover:bg-gray-50 active:bg-gray-100 rounded transition-colors cursor-pointer"
-          >
-            <Download size={14} className="text-[#666]" />
-            EXPORT MANUSCRIPT
           </button>
           
           {/* Mobile Hamburger Toggle Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors cursor-pointer flex items-center justify-center shrink-0"
+            className="md:hidden p-2 rounded-lg bg-neutral-100 dark:bg-stone-800 hover:bg-neutral-200 dark:hover:bg-stone-700 text-neutral-800 dark:text-stone-200 transition-colors cursor-pointer flex items-center justify-center shrink-0"
             aria-label="Toggle Mobile Directory Menu"
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -663,7 +765,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
       <main className="flex-1 flex overflow-hidden relative">
         
         {/* DESKTOP SIDEBAR NAVIGATION */}
-        <aside className="hidden md:flex md:w-72 lg:w-80 border-r border-[#E5E5E5] bg-white flex-col shrink-0 overflow-y-auto">
+        <aside className="hidden md:flex md:w-72 lg:w-80 border-r border-stone-200 bg-white text-stone-900 flex-col shrink-0 overflow-y-auto">
           <div className="p-6 space-y-6">
             
             {/* REMEDIATION TRACK SELECTOR */}
@@ -1250,7 +1352,9 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
         )}
 
         {/* WORKSPACE AREA */}
-        <section className="flex-1 bg-white flex flex-col overflow-hidden">
+        <section className={`flex-1 flex flex-col overflow-hidden transition-colors duration-200 ${
+          siteTheme === 'light' ? 'bg-stone-50 text-stone-900' : 'bg-stone-950 text-stone-100'
+        }`}>
           
           {/* MOBILE STICKY SUB-HEADER BAR */}
           <div className="md:hidden bg-neutral-900 text-white px-3 py-2 flex items-center justify-between border-b border-neutral-800 shrink-0 text-xs">
@@ -1296,6 +1400,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               title="Share Link"
             >
               {copiedGlobalTabLink ? <Check size={14} className="text-emerald-400" /> : <Link2 size={14} />}
+            </button>
+
+            <button
+              onClick={() => setSiteTheme(prev => prev === 'light' ? 'dark' : 'light')}
+              className="p-1 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 rounded text-amber-300 shrink-0 cursor-pointer text-[10px] font-bold font-mono"
+              title="Toggle Theme"
+            >
+              {siteTheme === 'light' ? <Sun size={14} /> : <Moon size={14} />}
+            </button>
+
+            <button
+              onClick={() => window.print()}
+              className="p-1 bg-neutral-800 hover:bg-neutral-700 rounded text-stone-200 shrink-0 cursor-pointer"
+              title="Print Page"
+            >
+              <Printer size={14} />
             </button>
           </div>
           
@@ -2601,15 +2721,21 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
 
           {/* TAB 0: SOVEREIGN MEMBER PORTAL & EXPOSOME PROFILE */}
           {activeTab === 'sovereign_portal' && (
-            <div className="flex-1 overflow-y-auto bg-neutral-950 text-white">
-              <SovereignMembershipPortal onNavigateTab={(tab) => setActiveTab(tab as any)} />
+            <div className={`flex-1 overflow-y-auto transition-colors duration-200 ${
+              siteTheme === 'light' ? 'bg-stone-50 text-stone-900' : 'bg-stone-950 text-stone-100'
+            }`}>
+              <SovereignMembershipPortal onNavigateTab={(tab) => setActiveTab(tab as any)} siteTheme={siteTheme} />
             </div>
           )}
 
           {/* TAB 0.1: UCANX COMMODITIES EXCHANGE */}
           {activeTab === 'ucanx' && (
             <div className="flex-1 overflow-y-auto bg-[#FBFBFA]">
-              <UCANXCommoditiesExchange onNavigateTab={(tab) => setActiveTab(tab as any)} />
+              <UCANXCommoditiesExchange 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                initialFarmId={new URLSearchParams(window.location.search).get('farm') === 'taos_kush_institute' ? 'taos_kush_institute' : null}
+                siteTheme={siteTheme}
+              />
             </div>
           )}
 
@@ -4064,6 +4190,162 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </div>
                 </>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* GLOBAL PRINT & HIGH-CONTRAST PDF PRESENTATION MODAL */}
+      {isPrintModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex flex-col p-2 sm:p-6 overflow-y-auto font-sans">
+          {/* Action Header - Hidden on physical print */}
+          <div className="max-w-5xl w-full mx-auto bg-stone-900 border border-amber-500/40 text-stone-100 rounded-t-2xl p-4 flex flex-wrap items-center justify-between gap-3 shadow-2xl no-print shrink-0">
+            <div className="flex items-center gap-2.5">
+              <Printer className="text-amber-400 shrink-0" size={22} />
+              <div>
+                <h3 className="font-bold text-sm text-white font-mono flex items-center gap-2">
+                  <span>High-Contrast Print & PDF Presentation Dossier</span>
+                  <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded uppercase font-mono">Ready to Print</span>
+                </h3>
+                <p className="text-[11px] text-stone-300">Optimized for physical printing, PDF export, and presentation to business owners</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => {
+                  try { window.print(); } catch (e) { console.warn('Print trigger warning:', e); }
+                }}
+                className="px-3.5 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center gap-1.5 shadow-md active:scale-95"
+              >
+                <Printer size={15} />
+                <span>🖨️ Print / Save PDF Now</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  const printUrl = `${window.location.origin}${window.location.pathname}?tab=${activeTab}&print_standalone=true`;
+                  window.open(printUrl, '_blank');
+                }}
+                className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/40 font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center gap-1.5 shadow-xs"
+                title="Opens in a standalone browser tab outside the AI Studio iframe where printing is 100% unrestricted"
+              >
+                <ExternalLink size={15} />
+                <span>🚀 Open Standalone Window</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  const printText = `ROULET'S LAW & UCANX COMMODITIES EXCHANGE DOSSIER\nDate: August 10, 2026\nSovereign Owner: Norm Roulet (User #1)\nPhone: 575-741-1750\nEmail: rouletnorm@gmail.com\nFarm Property: Taos Kush Institute (260 New Mexico 150, El Prado, NM 87529)\nAcreage: 3.6 Acres • Water Rights: 3 Acequia Rights • State License: #NM-AG-2026-TKI-001\nPlatform: ICEarth.org & UCANX Commodity Exchange`;
+                  navigator.clipboard.writeText(printText);
+                  alert("Official Dossier text copied to clipboard!");
+                }}
+                className="px-3 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
+              >
+                <Copy size={14} />
+                <span>📋 Copy Text</span>
+              </button>
+
+              <button
+                onClick={() => setIsPrintModalOpen(false)}
+                className="p-2 bg-stone-800 hover:bg-stone-700 text-stone-300 rounded-xl transition-colors cursor-pointer"
+                aria-label="Close Print Window"
+              >
+                <X size={18} />
+              </button>
+            </div>
+          </div>
+
+          {/* Printable White Document Canvas */}
+          <div className="max-w-5xl w-full mx-auto bg-white text-black border border-stone-300 rounded-b-2xl p-6 sm:p-10 shadow-2xl space-y-6 overflow-y-auto">
+            {/* Header / Legal Affidavit Banner */}
+            <div className="border-b-2 border-stone-900 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-800 block">
+                  OFFICIAL LEGISLATIVE & COMMERCE AFFIDAVIT • ICEARTH.ORG / UCANX
+                </span>
+                <h1 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
+                  Taos Kush Institute & UCANX Sovereign Ag Dossier
+                </h1>
+                <p className="text-xs text-stone-600 mt-0.5">
+                  Standardized Farm Presence, Water Rights Record & Agricultural Commodities Trade
+                </p>
+              </div>
+
+              <div className="text-left sm:text-right font-mono text-xs border-l-2 sm:border-l-0 sm:border-r-2 border-amber-600 pl-3 sm:pl-0 sm:pr-3">
+                <p className="font-bold text-stone-900">Norm Roulet (User #1 Owner)</p>
+                <p className="text-stone-800">📞 Phone: <strong>575-741-1750</strong></p>
+                <p className="text-stone-800">✉️ Email: <strong>rouletnorm@gmail.com</strong></p>
+                <p className="text-stone-500 text-[10px]">Date Generated: August 10, 2026</p>
+              </div>
+            </div>
+
+            {/* Farm Property & Owner Profile Section */}
+            <div className="bg-stone-50 border border-stone-300 p-5 rounded-xl space-y-3">
+              <div className="flex justify-between items-center border-b border-stone-200 pb-2">
+                <h3 className="font-bold text-sm font-serif text-stone-900">
+                  🏛️ Primary Farm Location & State Compliance Registration
+                </h3>
+                <span className="text-xs font-mono font-bold bg-amber-100 text-amber-950 border border-amber-300 px-2.5 py-0.5 rounded">
+                  State License #NM-AG-2026-TKI-001
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans">
+                <div>
+                  <span className="font-mono text-[10px] text-stone-500 block uppercase font-bold">Physical Property Address</span>
+                  <p className="font-semibold text-stone-900">260 New Mexico 150, El Prado, NM 87529</p>
+                  <p className="text-stone-600 text-[11px] mt-0.5">Directly across from Taos Pueblo Sacred High-Altitude Valley</p>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[10px] text-stone-500 block uppercase font-bold">Business Entity & Brand</span>
+                  <p className="font-semibold text-stone-900">Taos Kush Institute</p>
+                  <p className="text-stone-600 text-[11px] mt-0.5">UCANX Standardized Member Farm Presence #0001</p>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[10px] text-stone-500 block uppercase font-bold">Agricultural Land Area</span>
+                  <p className="font-semibold text-stone-900">3.6 Acres Organic Soil</p>
+                  <p className="text-stone-600 text-[11px] mt-0.5">High-altitude volcanic organic topsoil (7,000 ft elevation)</p>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[10px] text-stone-500 block uppercase font-bold">Surface Water Rights</span>
+                  <p className="font-semibold text-stone-900">3 Surface Water Rights</p>
+                  <p className="text-stone-600 text-[11px] mt-0.5">Acequia Madre de Taos sovereign irrigation canal access</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Active Page View Content */}
+            <div className="space-y-4 pt-2">
+              <h3 className="font-bold text-sm font-mono uppercase text-stone-800 border-b border-stone-300 pb-1">
+                📄 Active Module Overview: {activeTab.toUpperCase()}
+              </h3>
+
+              <div className="text-xs text-stone-800 leading-relaxed space-y-3 font-sans">
+                <p>
+                  This official document reflects the sovereign data recorded inside the ICEarth platform and UCANX Commodities Exchange system. Standardized functions, heavy metal lab verification, phytoremediation metrics, and legal compliance records are secured directly via decentralized cryptographic ledgers.
+                </p>
+                <div className="p-4 bg-stone-100 border border-stone-300 rounded-lg font-mono text-[11px] space-y-1">
+                  <div><strong>Sovereign Verification Record:</strong> Hash #0xUCANX_SOVEREIGN_PROOF_2026_NORM_ROULET</div>
+                  <div><strong>Jurisdiction:</strong> Inter-Sovereign Tribal Compact & State of New Mexico Agricultural Division</div>
+                  <div><strong>Commercial Direct Contact (Pick-up / Delivery / Contracting):</strong> 575-741-1750 • rouletnorm@gmail.com</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Signoff */}
+            <div className="pt-6 border-t border-stone-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono">
+              <div>
+                <p className="font-bold text-stone-900">ICEarth.org & UCANX Sovereign Exchange</p>
+                <p className="text-stone-500 text-[10px]">Sovereign Exposenomics & Decarbonization Architecture</p>
+              </div>
+
+              <div className="text-stone-600 text-[11px]">
+                <p>Page 1 of 1 • Official Print Version</p>
+              </div>
             </div>
           </div>
         </div>
