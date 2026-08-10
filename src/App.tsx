@@ -43,10 +43,17 @@ import {
   Printer,
   ExternalLink,
   Copy,
-  Zap
+  Zap,
+  GraduationCap,
+  User,
+  Compass
 } from 'lucide-react';
 import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
 import { NanoSpireNanoCanX } from './components/NanoSpireNanoCanX';
+import { SwissSchoolOfExposenomics } from './components/SwissSchoolOfExposenomics';
+import { NormRouletHome } from './components/NormRouletHome';
+import { MemberMatrix } from './components/MemberMatrix';
+import { ICETaos } from './components/ICETaos';
 import {
   Chapter,
   ChatMessage,
@@ -169,7 +176,7 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['sovereign_portal', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
+      const allowedTabs = ['icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
       if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }
@@ -804,6 +811,38 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <section>
               <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-3">Sovereign Directory</h2>
               <nav className="space-y-1">
+                {/* 0.0 Member Matrix */}
+                <button
+                  onClick={() => setActiveTab('member_matrix' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'member_matrix' || (activeTab as string) === 'matrix'
+                      ? 'bg-amber-950 text-white border-amber-600 shadow-md font-bold ring-1 ring-amber-500/50'
+                      : 'hover:bg-amber-500/10 text-amber-950 border-amber-300 bg-amber-50/60'
+                  }`}
+                >
+                  <Users size={16} className={activeTab === 'member_matrix' || (activeTab as string) === 'matrix' ? 'text-amber-400' : 'text-amber-700'} />
+                  <span className="flex-1 font-bold">🌐 Member Matrix</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Directory
+                  </span>
+                </button>
+
+                {/* 0.01 ICETaos Community Hub */}
+                <button
+                  onClick={() => setActiveTab('icetaos' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'icetaos' || (activeTab as string) === 'taos' || (activeTab as string) === 'icetaos_hub'
+                      ? 'bg-teal-950 text-teal-100 border-teal-500 shadow-md font-bold ring-1 ring-teal-400/50'
+                      : 'hover:bg-teal-50/80 text-teal-950 border-teal-300 bg-teal-50/40'
+                  }`}
+                >
+                  <Compass size={16} className={activeTab === 'icetaos' || (activeTab as string) === 'taos' ? 'text-teal-400' : 'text-teal-700'} />
+                  <span className="flex-1 font-bold">🏜️ ICETaos Community Hub</span>
+                  <span className="px-1.5 py-0.2 bg-teal-500 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Taos NM
+                  </span>
+                </button>
+
                 {/* 0. Sovereign Member Portal */}
                 <button
                   onClick={() => setActiveTab('sovereign_portal')}
@@ -817,6 +856,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1">🪶 Sovereign Member Portal</span>
                   <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-700 text-[8px] tracking-wide rounded uppercase font-bold border border-amber-500/30">
                     Portal
+                  </span>
+                </button>
+
+                {/* 0.05 Swiss School of Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('swiss_school' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'swiss_school' || (activeTab as string) === 'exposenomics'
+                      ? 'bg-red-950 text-white border-red-700/50 shadow-sm font-bold'
+                      : 'hover:bg-red-50/80 text-red-900 border-red-200/50 bg-red-50/20'
+                  }`}
+                >
+                  <GraduationCap size={16} className={activeTab === 'swiss_school' || (activeTab as string) === 'exposenomics' ? 'text-red-400' : 'text-red-600'} />
+                  <span className="flex-1">🇨🇭 Swiss School of Exposenomics</span>
+                  <span className="px-1.5 py-0.2 bg-red-500/20 text-red-700 text-[8px] tracking-wide rounded uppercase font-bold border border-red-500/30">
+                    Swiss Vault
                   </span>
                 </button>
 
@@ -2737,12 +2792,52 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             </div>
           )}
 
+          {/* TAB 0.001: ICETaos COMMUNITY HUB */}
+          {(activeTab === 'icetaos' || (activeTab as string) === 'taos' || (activeTab as string) === 'icetaos_hub') && (
+            <div className="flex-1 overflow-y-auto">
+              <ICETaos 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0: MEMBER MATRIX — ONE ICEARTH HOME FOR ALL */}
+          {(activeTab === 'member_matrix' || (activeTab as string) === 'matrix') && (
+            <div className="flex-1 overflow-y-auto">
+              <MemberMatrix 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.01: NORM ROULET USER #1 HOME */}
+          {(activeTab === 'norm_roulet' || (activeTab as string) === 'normroulet' || (activeTab as string) === 'norm_roulet_home' || (activeTab as string) === 'norm') && (
+            <div className="flex-1 overflow-y-auto">
+              <NormRouletHome 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
           {/* TAB 0: SOVEREIGN MEMBER PORTAL & EXPOSOME PROFILE */}
           {activeTab === 'sovereign_portal' && (
             <div className={`flex-1 overflow-y-auto transition-colors duration-200 ${
               siteTheme === 'light' ? 'bg-stone-50 text-stone-900' : 'bg-stone-950 text-stone-100'
             }`}>
               <SovereignMembershipPortal onNavigateTab={(tab) => setActiveTab(tab as any)} siteTheme={siteTheme} />
+            </div>
+          )}
+
+          {/* TAB 0.05: SWISS SCHOOL OF EXPOSENOMICS */}
+          {(activeTab === 'swiss_school' || (activeTab as string) === 'exposenomics') && (
+            <div className="flex-1 overflow-y-auto">
+              <SwissSchoolOfExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
             </div>
           )}
 

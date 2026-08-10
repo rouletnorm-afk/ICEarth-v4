@@ -169,6 +169,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: '#nanospire_nanocanx',
       description: 'Two decades of nanoscale cavitation research, sub-50nm high-shear processing, and zero-chemical destruction of toxic PFAS/PFOS compounds.',
       sovereignHash: '0xNANOSPIRE_20_YEARS_CAVITATION'
+    },
+    {
+      id: 'IP-005',
+      title: 'Swiss School of Exposenomics Repository & Roulet Law Vault',
+      type: 'Organization of Thought & Research Vault',
+      imageSrc: nanoSpire20YearsImg,
+      link: '#swiss_school',
+      description: 'User #1 Personal Vault repository housing the Genome x Biome x Exposome Human Equation, Swiss Neuchâtel ancestry stewardship, and data rights publishing.',
+      sovereignHash: '0xSWISS_EXPOSENOMICS_ORGANIZATION_OF_THOUGHT'
     }
   ]);
 
