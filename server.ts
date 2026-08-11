@@ -685,9 +685,64 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok", port: PORT, env: process.env.NODE_ENV || "development" });
 });
 
+// File-backed News Repository Persistence
+import fs from "fs";
+const NEWS_FILE = path.join(process.cwd(), "news_data.json");
+
+function readNewsFile(): any[] {
+  try {
+    if (fs.existsSync(NEWS_FILE)) {
+      const data = fs.readFileSync(NEWS_FILE, "utf-8");
+      return JSON.parse(data);
+    }
+  } catch (err) {
+    console.error("Error reading news file:", err);
+  }
+  return [];
+}
+
+function writeNewsFile(articles: any[]) {
+  try {
+    fs.writeFileSync(NEWS_FILE, JSON.stringify(articles, null, 2), "utf-8");
+  } catch (err) {
+    console.error("Error writing news file:", err);
+  }
+}
+
+app.get("/api/news", (req, res) => {
+  const articles = readNewsFile();
+  res.json({ articles });
+});
+
+app.post("/api/news", (req, res) => {
+  const newArticle = req.body;
+  if (!newArticle || !newArticle.id || !newArticle.title) {
+    return res.status(400).json({ error: "Invalid article payload" });
+  }
+
+  const articles = readNewsFile();
+  const index = articles.findIndex((a: any) => a.id === newArticle.id);
+  if (index >= 0) {
+    articles[index] = newArticle;
+  } else {
+    articles.unshift(newArticle);
+  }
+
+  writeNewsFile(articles);
+  res.json({ success: true, article: newArticle, total: articles.length });
+});
+
+app.delete("/api/news/:id", (req, res) => {
+  const { id } = req.params;
+  let articles = readNewsFile();
+  articles = articles.filter((a: any) => a.id !== id);
+  writeNewsFile(articles);
+  res.json({ success: true, total: articles.length });
+});
+
 // Vite middleware for development
 async function startServer() {
-  const isProduction = process.env.NODE_ENV === "production" || Boolean(process.env.K_SERVICE) || process.env.PORT !== undefined;
+  const isProduction = process.env.NODE_ENV === "production";
   if (!isProduction) {
     const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({

@@ -28,17 +28,48 @@ import {
   Key,
   Database,
   FileText,
-  Compass
+  Compass,
+  Newspaper
 } from 'lucide-react';
 
 // Import local image assets
-import plazaPanImg from '../assets/images/PlazaPan1.JPG';
+import plazaPanImg from '../assets/images/PlazaPan2.JPG';
 import caseAlumnusImg from '../assets/images/CaseAlumnusHeader.JPG';
 import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import tkiGisImg from '../assets/images/TKI-GIS2.png';
+import tkiGis1Img from '../assets/images/TKI-GIS.png';
+import tkiTimelineImg from '../assets/images/TKI-Timeline.png';
 import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
+import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import scatterplotImg from '../assets/images/Scatterplot.jpg';
 import icearthLaunchImg from '../assets/images/Launching1.png';
+import icearth1Gif from '../assets/images/ICEarth1.gif';
+import mittalCanaryPanLogoImg from '../assets/images/MittalCanaryPanLogo.jpg';
+import mittal720Img from '../assets/images/Mittal720.JPG';
+import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819.jpg';
+
+const resolvePhotoUrl = (url: string): string => {
+  if (!url) return plazaPanImg;
+  const u = url.trim();
+  if (u.includes('Mittal720') || u.toLowerCase().includes('mittal720.jpg')) {
+    return mittal720Img;
+  }
+  if (u.includes('MittalCanaryPanLogo') || u.toLowerCase().includes('canary')) {
+    return mittalCanaryPanLogoImg;
+  }
+  if (u.includes('PlazaPan') || u.toLowerCase().includes('taos') || u.toLowerCase().includes('plaza')) {
+    return plazaPanImg;
+  }
+  if (u.includes('CaseAlumnus')) return caseAlumnusImg;
+  if (u.includes('TKI-GIS2')) return tkiGisImg;
+  if (u.includes('TKI-GIS')) return tkiGis1Img;
+  if (u.includes('NanoSpire20Years')) return nanoSpire20YearsImg;
+  if (u.includes('Scatterplot')) return scatterplotImg;
+  if (u.includes('Launching1')) return icearthLaunchImg;
+  if (u.includes('ICEarth1')) return icearth1Gif;
+  if (u.includes('agua_das_hemp')) return aguaDasHempImg;
+  return u;
+};
 
 interface NormRouletHomeProps {
   onNavigateTab?: (tab: string) => void;
@@ -55,17 +86,19 @@ interface ArticleFeedItem {
   tags: string[];
   linkHash: string;
   publishedUrl?: string;
+  imageSrc?: string;
 }
 
 interface PhotoGalleryItem {
   id: string;
   title: string;
-  category: 'Agua Das' | 'Taos Kush Institute' | 'ICEarth Historic' | 'NanoSpire & Proofs' | 'ICETaos & Taos Heritage';
+  category: string;
   imageSrc: string;
   location: string;
   date: string;
   description: string;
   vaultHash: string;
+  tags: string[];
 }
 
 export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
@@ -93,12 +126,38 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Selected Photograph for Lightbox View Modal
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoGalleryItem | null>(null);
 
-  // Search state for magazine
+  // Search and Filter state for magazine
   const [magazineQuery, setMagazineQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
+  // Photography Vault Tag Filter, Search, and Add Photo Modal State
+  const [photoTagFilter, setPhotoTagFilter] = useState<string>('All');
+  const [photoSearchQuery, setPhotoSearchQuery] = useState<string>('');
+  const [showAddPhotoModal, setShowAddPhotoModal] = useState<boolean>(false);
+
+  // New photo upload/entry form state
+  const [newPhotoTitle, setNewPhotoTitle] = useState('');
+  const [newPhotoCategory, setNewPhotoCategory] = useState('ICETaos & Taos Heritage');
+  const [newPhotoLocation, setNewPhotoLocation] = useState('');
+  const [newPhotoDescription, setNewPhotoDescription] = useState('');
+  const [newPhotoTags, setNewPhotoTags] = useState('Taos, Header, Photography');
+  const [newPhotoUrl, setNewPhotoUrl] = useState('');
+  const [customPhotos, setCustomPhotos] = useState<PhotoGalleryItem[]>([]);
+
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-000',
+      title: 'Independence of the Day - May the people of NEO find freedom from air pollution',
+      category: 'Exposenomics',
+      date: '2008-07-04',
+      summary: 'Original realNEO Co-op Dispatch by Norm Roulet • Environmental Sovereignty & Clean Air in Northeast Ohio featuring the canary in the coal mine ArcelorMittal industrial pollution analysis.',
+      fullText: `Independence of the Day - May the people of NEO find freedom from air pollution!\n\nAs citizens gather to celebrate liberty, true independence for Northeast Ohio must include the fundamental human right to breathe clean air free from toxic steel manufacturing emissions, heavy particulate matter, and benzene plumes.\n\nThe canary in the coal mine image features Mittal Steel / ArcelorMittal industrial pollution analysis, symbolising community vigilance and environmental exposenomics sovereignty.`,
+      tags: ['realNEO', 'Cleveland', 'Air Pollution', 'Mittal Steel', 'Exposenomics'],
+      linkHash: '0xREALNEO_INDEPENDENCE_DAY_AIR_POLLUTION_2008',
+      publishedUrl: 'http://realneo.us/independence-of-the-day-may-the-people-of-neo-find-freedom-from-air-pollution',
+      imageSrc: mittalCanaryPanLogoImg
+    },
     {
       id: 'MAG-001',
       title: 'ICEarth — Information Community Earth — Conceptual Framework (normALST 02/07/01)',
@@ -140,11 +199,45 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       fullText: `Roulet's Law establishes that municipal toxic footprints create quantifiable liabilities that grow exponentially if unmitigated. By combining zero-knowledge exposure verification with phytoremediation, affected citizens achieve unassailable legal tort standing without sacrificing data privacy.`,
       tags: ["Roulet's Law", 'Lead Audit', 'Cleveland', 'Buffalo', 'ZK-Proofs'],
       linkHash: '0xROULETS_LAW_PROOF_SCATTERPLOT'
+    },
+    {
+      id: 'MAG-005',
+      title: 'Taos School of Art & Pueblo Master Crafters Joint Exhibition at Taos Plaza',
+      category: 'Community',
+      date: '2026-08-08',
+      summary: 'Celebrating 125 years of world-renowned Taos impressionist art paired with millennia-old Taos Pueblo pottery, silverwork, and weaving traditions on historic Taos Plaza.',
+      fullText: `The Town of Taos Plaza will host a landmark multi-generational art showcase featuring oil paintings from the Taos School of Art alongside micaceous clay pottery and turquoise jewelry crafted by Taos Pueblo artisans. Live classical guitar and native flute performances will accompany the public opening.`,
+      tags: ['ICETaos', 'Taos Pueblo', 'Taos Art', 'Plaza Exhibition'],
+      linkHash: '0xTAOS_PLAZA_ART_SHOWCASE_2026',
+      publishedUrl: 'https://taoski.com/culture/taos-plaza-art-showcase',
+      imageSrc: plazaPanImg
     }
   ];
 
-  // Creative Photography Gallery Items
-  const photographyGallery: PhotoGalleryItem[] = [
+  // Creative Photography Gallery Items Archive
+  const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000',
+      title: 'Mittal Steel, Cleveland — Industrial Plume & Air Quality Analysis',
+      category: 'Exposenomics & Cleveland',
+      imageSrc: mittal720Img,
+      location: 'Mittal Steel Plant, Cleveland Industrial Valley, Ohio',
+      date: '2008-07-04',
+      description: 'High-resolution environmental exposenomics photo documenting Mittal Steel industrial manufacturing emissions and particulate plumes over Cleveland from realneo.us.',
+      vaultHash: '0xREALNEO_MITTAL720_CLEVELAND_HEADER',
+      tags: ['Cleveland', 'Mittal Steel', 'Air Quality', 'realNEO', 'Exposenomics']
+    },
+    {
+      id: 'PHOTO-000B',
+      title: 'Canary in the Coal Mine — Mittal Steel / ArcelorMittal Air Quality Analysis',
+      category: 'Exposenomics & Cleveland',
+      imageSrc: mittalCanaryPanLogoImg,
+      location: 'Industrial Valley, Cleveland & Northeast Ohio',
+      date: '2008-07-04',
+      description: 'Historical realNEO environmental exposenomics monitoring graphic featuring the canary in the coal mine analyzing ArcelorMittal steel plant emissions, coke oven plumes, and urban air quality.',
+      vaultHash: '0xREALNEO_CANARY_AIR_QUALITY_HEADER',
+      tags: ['Cleveland', 'Air Quality', 'Mittal Steel', 'realNEO', 'Exposenomics', 'Canary']
+    },
     {
       id: 'PHOTO-001',
       title: 'Historic Taos Plaza Panorama Header',
@@ -153,7 +246,8 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'Historic District Plaza, Town of Taos, New Mexico',
       date: '2026-08-10',
       description: 'Panoramic wide-angle header of the historic Taos Plaza, the cultural, commercial, and artistic focal point of Northern New Mexico.',
-      vaultHash: '0xTAOS_PLAZA_PANORAMA_HEADER'
+      vaultHash: '0xTAOS_PLAZA_PANORAMA_HEADER',
+      tags: ['Taos', 'Taos Plaza', 'Pueblo', 'ICETaos', 'Heritage', 'Panorama']
     },
     {
       id: 'PHOTO-002',
@@ -163,7 +257,8 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'Case Western Reserve / Cleveland Water Legacy',
       date: '2010-05-15',
       description: 'Historical archive banner celebrating water stewardship, environmental research, and alumni innovation at Case Western Reserve University.',
-      vaultHash: '0xCASE_ALUMNUS_WATER_STEWARDSHIP_HEADER'
+      vaultHash: '0xCASE_ALUMNUS_WATER_STEWARDSHIP_HEADER',
+      tags: ['Cleveland', 'Water Stewardship', 'Agua Das', 'Case Alumnus']
     },
     {
       id: 'PHOTO-003',
@@ -173,7 +268,8 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'Taos Mesa, New Mexico (7,000 ft Elevation)',
       date: '2021-10-04',
       description: 'Panoramic mountain vista framing the high-altitude cannabis and hemp genetic research laboratory at Taos Kush Institute.',
-      vaultHash: '0xTAOS_KUSH_INSTITUTE_PANORAMIC_HEADER'
+      vaultHash: '0xTAOS_KUSH_INSTITUTE_PANORAMIC_HEADER',
+      tags: ['Taos', 'Taos Kush Institute', 'Phytoremediation', 'Mesa', 'Hemp']
     },
     {
       id: 'PHOTO-004',
@@ -183,7 +279,8 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'GIS Spatial Laboratory, Taos',
       date: '2022-03-20',
       description: 'Geographic Information System (GIS) mapping overlay quantifying heavy metal concentrations, watershed vectors, and phytoremediation yields.',
-      vaultHash: '0xTKI_GIS_SPATIAL_ENVIRONMENTAL_MAPPING'
+      vaultHash: '0xTKI_GIS_SPATIAL_ENVIRONMENTAL_MAPPING',
+      tags: ['Taos', 'GIS', 'Soil Toxicity', 'Heavy Metals', 'Mapping']
     },
     {
       id: 'PHOTO-005',
@@ -193,7 +290,8 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'ICEarth Platform Genesis',
       date: '2001-02-07',
       description: 'Historic launching banner depicting Information Community Earth and the emergence of the Info Mediated Enterprise.',
-      vaultHash: '0xICEARTH_LAUNCHING_SLIDE_01'
+      vaultHash: '0xICEARTH_LAUNCHING_SLIDE_01',
+      tags: ['ICEarth', 'Infomediation', 'Genesis', '2001']
     },
     {
       id: 'PHOTO-006',
@@ -203,9 +301,91 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       location: 'Cleveland & Great Lakes Urban Audit',
       date: '2025-02-14',
       description: 'Original mathematical scatterplot proof demonstrating direct correlation between municipal environmental toxins and biological economic loss.',
-      vaultHash: '0xROULETS_LAW_PROOF_SCATTERPLOT_GRAPHIC'
+      vaultHash: '0xROULETS_LAW_PROOF_SCATTERPLOT_GRAPHIC',
+      tags: ['Cleveland', 'Proofs', 'Scatterplot', "Roulet's Law", 'Lead Audit', 'Exposenomics']
+    },
+    {
+      id: 'PHOTO-007',
+      title: 'NanoSpire 20 Years Cavitation Machine Architectural Blueprint',
+      category: 'NanoSpire & Proofs',
+      imageSrc: nanoSpire20YearsImg,
+      location: 'NanoSpire Cavitation Laboratory',
+      date: '2022-01-10',
+      description: '20-year archival summary of NanoSpire high-pressure cavitation technology and commercial nanoplasmonic IP.',
+      vaultHash: '0xNANOSPIRE_20_YEARS_ARCHIVE',
+      tags: ['NanoSpire', 'Cavitation', 'Nanotechnology', 'Proofs']
+    },
+    {
+      id: 'PHOTO-008',
+      title: 'ICEarth 2001 Global Information Community Interactive Blueprint',
+      category: 'ICEarth Historic',
+      imageSrc: icearth1Gif,
+      location: 'ICEarth Architecture Genesis',
+      date: '2001-02-07',
+      description: 'Original animated network topology illustrating ICEarth federated nodes and sovereign data vault routing.',
+      vaultHash: '0xICEARTH_2001_NETWORK_BLUEPRINT',
+      tags: ['ICEarth', 'Blueprint', 'Global Network', 'Infomediation']
+    },
+    {
+      id: 'PHOTO-009',
+      title: 'Agua Das Organics Hemp Ice Cream & Botanical Innovation',
+      category: 'Agua Das',
+      imageSrc: aguaDasHempImg,
+      location: 'Taos & Cleveland Organic Agriculture',
+      date: '2023-06-12',
+      description: 'Organic botanical formulation and hemp ice cream product development uniting Agua Das water purity with high-altitude nutrition.',
+      vaultHash: '0xAGUA_DAS_HEMP_ICE_CREAM',
+      tags: ['Taos', 'Agua Das', 'Botanicals', 'Hemp', 'Organics']
     }
   ];
+
+  const photographyGallery: PhotoGalleryItem[] = [...customPhotos, ...basePhotographyGallery];
+
+  const photoTagsList = ['All', 'Taos', 'Cleveland', 'Air Quality', 'Water Stewardship', 'Taos Kush Institute', 'ICEarth', 'NanoSpire', 'Exposenomics'];
+
+  const filteredPhotos = photographyGallery.filter(photo => {
+    const matchesTag = photoTagFilter === 'All' ||
+      photo.tags?.some(t => t.toLowerCase() === photoTagFilter.toLowerCase()) ||
+      photo.category.toLowerCase().includes(photoTagFilter.toLowerCase()) ||
+      photo.location.toLowerCase().includes(photoTagFilter.toLowerCase()) ||
+      photo.title.toLowerCase().includes(photoTagFilter.toLowerCase());
+      
+    const matchesQuery = photoSearchQuery === '' ||
+      photo.title.toLowerCase().includes(photoSearchQuery.toLowerCase()) ||
+      photo.description.toLowerCase().includes(photoSearchQuery.toLowerCase()) ||
+      photo.location.toLowerCase().includes(photoSearchQuery.toLowerCase()) ||
+      photo.tags?.some(t => t.toLowerCase().includes(photoSearchQuery.toLowerCase()));
+
+    return matchesTag && matchesQuery;
+  });
+
+  const handleAddCustomPhoto = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newPhotoTitle.trim()) return;
+
+    const tagsArray = newPhotoTags.split(',').map(t => t.trim()).filter(Boolean);
+    const resolvedImg = resolvePhotoUrl(newPhotoUrl);
+    const newPhoto: PhotoGalleryItem = {
+      id: `PHOTO-USER-${Date.now()}`,
+      title: newPhotoTitle.trim(),
+      category: newPhotoCategory,
+      imageSrc: resolvedImg,
+      location: newPhotoLocation.trim() || 'User #1 Sovereign Vault Archive',
+      date: new Date().toISOString().split('T')[0],
+      description: newPhotoDescription.trim() || 'Archived visual header uploaded to Norm Roulet Photography Vault.',
+      vaultHash: `0xUSER_001_HEADER_${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+      tags: tagsArray.length > 0 ? tagsArray : ['User Header', 'Vault']
+    };
+
+    setCustomPhotos([newPhoto, ...customPhotos]);
+    setShowAddPhotoModal(false);
+
+    setNewPhotoTitle('');
+    setNewPhotoLocation('');
+    setNewPhotoDescription('');
+    setNewPhotoUrl('');
+    alert(`Visual header "${newPhoto.title}" added to your continuously updating Photography Archive!`);
+  };
 
   // Filtered Magazine Articles
   const filteredArticles = magazineArticles.filter(item => {
@@ -598,6 +778,16 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
                   tab: 'icetaos',
                   icon: Compass,
                   color: 'teal'
+                },
+                {
+                  title: 'ICEarth Content & Research Wire',
+                  category: 'News Origination & Curation',
+                  badge: '20-Year Research Repository',
+                  desc: 'Continuous research newsfeed on lead poisoning, municipal grant accountability, Cuyahoga County, ICETaos, and Exposenomics with precision tags.',
+                  membersCount: 'Curated Research Wire',
+                  tab: 'reports',
+                  icon: Newspaper,
+                  color: 'amber'
                 }
               ].map((group, idx) => {
                 const Icon = group.icon;
@@ -720,6 +910,24 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
                       <span className="text-stone-400">{article.date}</span>
                     </div>
 
+                    {article.imageSrc && (
+                      <div className="rounded-xl overflow-hidden h-44 bg-stone-900 border border-stone-200 dark:border-stone-800">
+                        <img
+                          src={article.imageSrc}
+                          alt={article.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            if (article.title.toLowerCase().includes('taos') || article.category.toLowerCase().includes('taos')) {
+                              target.src = plazaPanImg;
+                            } else {
+                              target.src = mittalCanaryPanLogoImg;
+                            }
+                          }}
+                        />
+                      </div>
+                    )}
+
                     <h3 className="font-serif font-bold text-lg text-stone-900 dark:text-stone-100 leading-snug">
                       {article.title}
                     </h3>
@@ -758,67 +966,189 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
         {/* SECTION 4: CREATIVE CONTENT & PHOTOGRAPHY VAULT */}
         {(activeSection === 'all' || activeSection === 'photography') && (
           <section className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
               <div>
-                <span className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 tracking-wider">
-                  Visual Assets & Creative Vault
+                <span className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 tracking-wider flex items-center gap-1.5">
+                  <Camera size={14} />
+                  <span>Continuously Updating Visual Assets & Header Archive</span>
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100 mt-1">
                   Norm Roulet Photography & Visual Header Archive
                 </h2>
                 <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
-                  Featuring original photography headers from Agua Das, Taos Kush Institute, and ICEarth historic archives.
+                  Original high-resolution photography headers, environmental monitoring graphics, and historic regional panoramas (Taos, Cleveland, Agua Das, ICEarth).
                 </p>
               </div>
 
-              <span className="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-xs font-bold rounded-lg border border-amber-500/20">
-                🔒 Cryptographically Watermarked
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {photographyGallery.map((photo) => (
-                <div
-                  key={photo.id}
-                  onClick={() => setSelectedPhoto(photo)}
-                  className={`group rounded-2xl border overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:scale-[1.01] ${
-                    isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'
-                  }`}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowAddPhotoModal(true)}
+                  className="px-3.5 py-2 bg-amber-500 hover:bg-amber-600 text-stone-950 font-mono text-xs font-bold rounded-xl shadow-sm transition-all flex items-center gap-1.5 cursor-pointer"
                 >
-                  <div className="aspect-video relative bg-stone-950 overflow-hidden">
-                    <img
-                      src={photo.imageSrc}
-                      alt={photo.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                    <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-stone-950/80 backdrop-blur text-amber-300 font-mono text-[10px] rounded border border-stone-800">
-                      📍 {photo.location}
-                    </span>
-                  </div>
-
-                  <div className="p-4 space-y-2">
-                    <div className="flex items-center justify-between text-[10px] font-mono text-stone-400">
-                      <span className="text-amber-600 dark:text-amber-400 font-bold">{photo.category}</span>
-                      <span>{photo.date}</span>
-                    </div>
-
-                    <h3 className="font-serif font-bold text-sm text-stone-900 dark:text-stone-100 leading-snug group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                      {photo.title}
-                    </h3>
-
-                    <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-2">
-                      {photo.description}
-                    </p>
-
-                    <div className="pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[10px] font-mono text-stone-400">
-                      <span className="truncate max-w-[150px]">{photo.vaultHash}</span>
-                      <span className="text-amber-500 font-bold">View Lightbox →</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  <Camera size={14} />
+                  <span>+ Archive Visual Header</span>
+                </button>
+                <span className="px-3 py-2 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-xs font-bold rounded-xl border border-amber-500/20">
+                  🔒 Cryptographically Watermarked
+                </span>
+              </div>
             </div>
+
+            {/* Interactive Tag Filtering & Search Bar */}
+            <div className={`p-4 rounded-2xl border space-y-3 ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'}`}>
+              <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+                
+                {/* Search Input */}
+                <div className="relative flex-1">
+                  <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400" />
+                  <input
+                    type="text"
+                    value={photoSearchQuery}
+                    onChange={(e) => setPhotoSearchQuery(e.target.value)}
+                    placeholder="Search image title, location, tags, or description (e.g. Taos, Cleveland, Canary, Water)..."
+                    className="w-full pl-10 pr-4 py-2 text-xs rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:outline-none focus:ring-2 focus:ring-amber-500/50"
+                  />
+                  {photoSearchQuery && (
+                    <button
+                      onClick={() => setPhotoSearchQuery('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+
+                {/* Filter Summary */}
+                <div className="text-xs font-mono text-stone-500 flex items-center gap-2">
+                  <Filter size={14} className="text-amber-500" />
+                  <span>Displaying {filteredPhotos.length} of {photographyGallery.length} Headers</span>
+                </div>
+              </div>
+
+              {/* Tag Chip Filters */}
+              <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-stone-100 dark:border-stone-800">
+                <span className="text-[11px] font-mono font-bold text-stone-400 mr-1 flex items-center gap-1">
+                  <Tag size={12} className="text-amber-500" />
+                  <span>Filter by Tag:</span>
+                </span>
+                {photoTagsList.map((tag) => {
+                  const isActive = photoTagFilter.toLowerCase() === tag.toLowerCase();
+                  const count = tag === 'All'
+                    ? photographyGallery.length
+                    : photographyGallery.filter(p =>
+                        p.tags?.some(t => t.toLowerCase() === tag.toLowerCase()) ||
+                        p.category.toLowerCase().includes(tag.toLowerCase()) ||
+                        p.location.toLowerCase().includes(tag.toLowerCase()) ||
+                        p.title.toLowerCase().includes(tag.toLowerCase())
+                      ).length;
+
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => setPhotoTagFilter(tag)}
+                      className={`px-3 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-1 ${
+                        isActive
+                          ? 'bg-amber-500 text-stone-950 font-bold shadow-sm'
+                          : isLight
+                            ? 'bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200'
+                            : 'bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700'
+                      }`}
+                    >
+                      <span>{tag}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-stone-950/20 text-stone-950' : 'bg-stone-200 dark:bg-stone-900 text-stone-500'}`}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Photo Gallery Grid */}
+            {filteredPhotos.length === 0 ? (
+              <div className={`p-8 rounded-2xl border text-center space-y-3 ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'}`}>
+                <ImageIcon size={32} className="mx-auto text-stone-400" />
+                <h3 className="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">No photos found matching tag "{photoTagFilter}"</h3>
+                <p className="text-xs text-stone-500">Try clearing your search query or selecting "All" tag filter.</p>
+                <button
+                  onClick={() => { setPhotoTagFilter('All'); setPhotoSearchQuery(''); }}
+                  className="px-4 py-2 bg-amber-500 text-stone-950 font-mono text-xs font-bold rounded-xl"
+                >
+                  Reset Photo Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredPhotos.map((photo) => (
+                  <div
+                    key={photo.id}
+                    onClick={() => setSelectedPhoto(photo)}
+                    className={`group rounded-2xl border overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:scale-[1.01] ${
+                      isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'
+                    }`}
+                  >
+                    <div className="aspect-video relative bg-stone-950 overflow-hidden">
+                      <img
+                        src={photo.imageSrc}
+                        alt={photo.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          if (photo.title.toLowerCase().includes('taos') || photo.location.toLowerCase().includes('taos')) {
+                            target.src = plazaPanImg;
+                          } else {
+                            target.src = mittalCanaryPanLogoImg;
+                          }
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                      <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-stone-950/80 backdrop-blur text-amber-300 font-mono text-[10px] rounded border border-stone-800">
+                        📍 {photo.location}
+                      </span>
+                      <span className="absolute top-2 right-2 px-2 py-0.5 bg-stone-950/80 backdrop-blur text-amber-400 font-mono text-[10px] font-bold rounded border border-stone-800">
+                        {photo.category}
+                      </span>
+                    </div>
+
+                    <div className="p-4 space-y-2">
+                      <div className="flex items-center justify-between text-[10px] font-mono text-stone-400">
+                        <span className="text-amber-600 dark:text-amber-400 font-bold">{photo.category}</span>
+                        <span>{photo.date}</span>
+                      </div>
+
+                      <h3 className="font-serif font-bold text-sm text-stone-900 dark:text-stone-100 leading-snug group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                        {photo.title}
+                      </h3>
+
+                      <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-2">
+                        {photo.description}
+                      </p>
+
+                      {/* Tag Chips */}
+                      <div className="flex flex-wrap items-center gap-1 pt-1">
+                        {photo.tags?.map((tag, tIdx) => (
+                          <span
+                            key={tIdx}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setPhotoTagFilter(tag);
+                            }}
+                            className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 hover:bg-amber-500/20 cursor-pointer"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[10px] font-mono text-stone-400">
+                        <span className="truncate max-w-[140px]">{photo.vaultHash}</span>
+                        <span className="text-amber-500 font-bold group-hover:underline">View Lightbox →</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
@@ -849,6 +1179,24 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
                 ✕
               </button>
             </div>
+
+            {selectedArticle.imageSrc && (
+              <div className="rounded-2xl overflow-hidden max-h-72 bg-stone-900 border border-stone-200 dark:border-stone-800 my-2">
+                <img
+                  src={selectedArticle.imageSrc}
+                  alt={selectedArticle.title}
+                  className="w-full h-full object-cover max-h-72"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    if (selectedArticle.title.toLowerCase().includes('taos')) {
+                      target.src = plazaPanImg;
+                    } else {
+                      target.src = mittalCanaryPanLogoImg;
+                    }
+                  }}
+                />
+              </div>
+            )}
 
             <div className="prose dark:prose-invert max-w-none text-xs sm:text-sm leading-relaxed font-serif whitespace-pre-wrap space-y-4">
               {selectedArticle.fullText}
@@ -888,35 +1236,192 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
           <div className="w-full max-w-4xl rounded-3xl bg-stone-950 border border-stone-800 text-white overflow-hidden space-y-4 p-6 relative">
             <button
               onClick={() => setSelectedPhoto(null)}
-              className="absolute top-4 right-4 p-2 bg-stone-900/80 text-stone-400 hover:text-white rounded-xl border border-stone-800 z-10"
+              className="absolute top-4 right-4 p-2 bg-stone-900/80 text-stone-400 hover:text-white rounded-xl border border-stone-800 z-10 cursor-pointer"
             >
               ✕
             </button>
 
-            <div className="max-h-[60vh] overflow-hidden rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center">
+            <div className="max-h-[60vh] overflow-hidden rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center relative group">
               <img
                 src={selectedPhoto.imageSrc}
                 alt={selectedPhoto.title}
                 className="max-h-[60vh] w-auto object-contain rounded-2xl"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  if (selectedPhoto.title.toLowerCase().includes('taos')) {
+                    target.src = plazaPanImg;
+                  } else {
+                    target.src = mittalCanaryPanLogoImg;
+                  }
+                }}
               />
             </div>
 
-            <div className="space-y-2 font-serif">
-              <div className="flex items-center justify-between text-xs font-mono text-amber-400">
-                <span>{selectedPhoto.category} • {selectedPhoto.location}</span>
-                <span>{selectedPhoto.date}</span>
+            <div className="space-y-3 font-serif">
+              <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-amber-400">
+                <span className="px-2.5 py-1 bg-amber-500/10 rounded border border-amber-500/20 font-bold">
+                  {selectedPhoto.category} • 📍 {selectedPhoto.location}
+                </span>
+                <span>📅 {selectedPhoto.date}</span>
               </div>
 
-              <h3 className="text-xl font-bold">{selectedPhoto.title}</h3>
-              <p className="text-xs text-stone-300 font-sans leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold leading-tight">{selectedPhoto.title}</h3>
+              <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed">
                 {selectedPhoto.description}
               </p>
 
-              <div className="pt-3 border-t border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-500">
+              {/* Tag Chips in Lightbox */}
+              {selectedPhoto.tags && selectedPhoto.tags.length > 0 && (
+                <div className="flex flex-wrap items-center gap-1.5 pt-2">
+                  <span className="text-[11px] font-mono text-stone-400 mr-1 flex items-center gap-1">
+                    <Tag size={12} className="text-amber-500" />
+                    <span>Tags:</span>
+                  </span>
+                  {selectedPhoto.tags.map((tag, tIdx) => (
+                    <button
+                      key={tIdx}
+                      onClick={() => {
+                        setPhotoTagFilter(tag);
+                        setSelectedPhoto(null);
+                      }}
+                      className="text-xs font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500/30 cursor-pointer transition-colors"
+                    >
+                      #{tag}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] font-mono text-stone-500">
                 <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
-                <span>{selectedPhoto.vaultHash}</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-amber-400 font-mono">{selectedPhoto.vaultHash}</span>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(selectedPhoto.imageSrc);
+                      alert(`Image asset path copied: ${selectedPhoto.imageSrc}`);
+                    }}
+                    className="px-3 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold rounded-lg cursor-pointer"
+                  >
+                    Copy Asset Path
+                  </button>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* ARCHIVE NEW VISUAL HEADER MODAL */}
+      {showAddPhotoModal && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className={`w-full max-w-lg rounded-3xl border p-6 sm:p-8 space-y-5 ${
+            isLight ? 'bg-white border-stone-200 text-stone-900' : 'bg-stone-900 border-stone-800 text-stone-100'
+          }`}>
+            <div className="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+              <div className="flex items-center gap-2">
+                <Camera size={20} className="text-amber-500" />
+                <h3 className="text-lg font-serif font-bold">Archive Visual Header Photo</h3>
+              </div>
+              <button
+                onClick={() => setShowAddPhotoModal(false)}
+                className="p-1.5 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleAddCustomPhoto} className="space-y-4 text-xs font-mono">
+              <div className="space-y-1">
+                <label className="font-bold text-stone-700 dark:text-stone-300">Header Title *</label>
+                <input
+                  type="text"
+                  required
+                  value={newPhotoTitle}
+                  onChange={(e) => setNewPhotoTitle(e.target.value)}
+                  placeholder="e.g. Taos Mesa Sunset & High-Altitude Agricultural Vista"
+                  className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-1">
+                  <label className="font-bold text-stone-700 dark:text-stone-300">Category</label>
+                  <select
+                    value={newPhotoCategory}
+                    onChange={(e) => setNewPhotoCategory(e.target.value)}
+                    className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500"
+                  >
+                    <option value="ICETaos & Taos Heritage">ICETaos & Taos Heritage</option>
+                    <option value="Agua Das">Agua Das</option>
+                    <option value="Taos Kush Institute">Taos Kush Institute</option>
+                    <option value="Exposenomics & Cleveland">Exposenomics & Cleveland</option>
+                    <option value="ICEarth Historic">ICEarth Historic</option>
+                    <option value="NanoSpire & Proofs">NanoSpire & Proofs</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="font-bold text-stone-700 dark:text-stone-300">Location</label>
+                  <input
+                    type="text"
+                    value={newPhotoLocation}
+                    onChange={(e) => setNewPhotoLocation(e.target.value)}
+                    placeholder="e.g. Taos, NM or Cleveland, OH"
+                    className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="font-bold text-stone-700 dark:text-stone-300">Image Asset URL or File Path</label>
+                <input
+                  type="text"
+                  value={newPhotoUrl}
+                  onChange={(e) => setNewPhotoUrl(e.target.value)}
+                  placeholder="e.g. /src/assets/images/MittalCanaryPanLogo.jpg or https://..."
+                  className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="font-bold text-stone-700 dark:text-stone-300">Filter Tags (comma separated)</label>
+                <input
+                  type="text"
+                  value={newPhotoTags}
+                  onChange={(e) => setNewPhotoTags(e.target.value)}
+                  placeholder="e.g. Taos, Air Quality, Header, Water Stewardship"
+                  className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="font-bold text-stone-700 dark:text-stone-300">Description</label>
+                <textarea
+                  rows={3}
+                  value={newPhotoDescription}
+                  onChange={(e) => setNewPhotoDescription(e.target.value)}
+                  placeholder="Provide background context, environmental research notes, or artistic description..."
+                  className="w-full p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 focus:ring-2 focus:ring-amber-500 font-sans"
+                />
+              </div>
+
+              <div className="pt-3 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setShowAddPhotoModal(false)}
+                  className="px-4 py-2 bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold rounded-xl hover:opacity-80"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-5 py-2 bg-amber-500 text-stone-950 font-bold rounded-xl hover:bg-amber-600 transition-colors cursor-pointer"
+                >
+                  Save to Photography Archive
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

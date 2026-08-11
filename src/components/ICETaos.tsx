@@ -31,7 +31,7 @@ import {
 } from 'lucide-react';
 
 // Import local image assets
-import plazaPanImg from '../assets/images/PlazaPan1.JPG';
+import plazaPanImg from '../assets/images/PlazaPan2.JPG';
 import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import tkiGisImg from '../assets/images/TKI-GIS2.png';
 
@@ -243,22 +243,24 @@ export const ICETaos: React.FC<ICETaosProps> = ({
   return (
     <div className={`min-h-screen ${isLight ? 'bg-stone-100 text-stone-900' : 'bg-stone-950 text-stone-100'}`}>
       
-      {/* TAOS PANORAMIC HEADER HERO */}
-      <header className="relative w-full border-b border-amber-900/40 bg-stone-950 text-white overflow-hidden">
-        
-        {/* Background Image Container */}
-        <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity hover:opacity-60 transition-opacity duration-700">
-          <img
-            src={plazaPanImg}
-            alt="Historic Taos Plaza Panorama"
-            className="w-full h-full object-cover object-center scale-105 filter contrast-125"
-          />
+      {/* FULL WIDTH TAOS PLAZA PANORAMA HEADER IMAGE (UNOBSTRUCTED AT THE VERY TOP) */}
+      <div className="w-full bg-stone-950 relative overflow-hidden border-b border-amber-900/40">
+        <img
+          src={plazaPanImg}
+          alt="Historic Taos Plaza Panorama Header"
+          className="w-full h-auto max-h-[650px] object-cover sm:object-contain mx-auto block"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = plazaPanImg;
+          }}
+        />
+        <div className="absolute bottom-3 right-3 px-3 py-1 bg-stone-950/85 backdrop-blur-md text-amber-300 font-mono text-xs font-bold rounded-xl border border-stone-800 flex items-center gap-1.5 shadow-lg">
+          <span>📍 Historic Taos Plaza Panorama Header — Norm Roulet Visual Vault</span>
         </div>
+      </div>
 
-        {/* New Mexico Color Gradients Overlay (Turquoise, Gold, Adobe Terracotta) */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-stone-950 via-teal-950/80 to-amber-950/90" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 relative z-10 space-y-6">
+      {/* TAOS COMMUNITY HEADER CONTENT & TEXT BLOCK */}
+      <header className="relative w-full border-b border-stone-200 dark:border-stone-800 bg-stone-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10 space-y-6">
           
           {/* Header Badges */}
           <div className="flex flex-wrap items-center justify-between gap-3">

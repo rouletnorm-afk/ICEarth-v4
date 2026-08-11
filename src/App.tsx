@@ -54,6 +54,7 @@ import { SwissSchoolOfExposenomics } from './components/SwissSchoolOfExposenomic
 import { NormRouletHome } from './components/NormRouletHome';
 import { MemberMatrix } from './components/MemberMatrix';
 import { ICETaos } from './components/ICETaos';
+import { ICEarthNewsRepository } from './components/ICEarthNewsRepository';
 import {
   Chapter,
   ChatMessage,
@@ -176,7 +177,7 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
+      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
       if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }
@@ -2909,9 +2910,12 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           )}
 
           {/* TAB 2.12: GLOBAL REPORT INGESTION & AUTOMATED NEWSFEED HUB */}
-          {activeTab === 'reports' && (
-            <div className="flex-1 p-8 overflow-y-auto bg-gray-50/50">
-              <ReportIngestionHub />
+          {(activeTab === 'reports' || (activeTab as string) === 'news' || (activeTab as string) === 'news_repository' || (activeTab as string) === 'repository') && (
+            <div className="flex-1 overflow-y-auto">
+              <ICEarthNewsRepository
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
             </div>
           )}
 
