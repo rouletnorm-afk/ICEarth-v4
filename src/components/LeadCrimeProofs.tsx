@@ -237,6 +237,12 @@ export default function LeadCrimeProofs({ onNavigateTab }: LeadCrimeProofsProps 
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button 
+                onClick={() => onNavigateTab('flint')} 
+                className="px-2.5 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 font-mono text-[11px] font-bold rounded-lg border border-red-500/30 transition-all cursor-pointer flex items-center gap-1"
+              >
+                ☣️ Flint 810 <ArrowRight size={10} />
+              </button>
+              <button 
                 onClick={() => onNavigateTab('toledo')} 
                 className="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-mono text-[11px] font-bold rounded-lg border border-amber-500/30 transition-all cursor-pointer flex items-center gap-1"
               >

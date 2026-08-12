@@ -91,6 +91,7 @@ import { IndigenousSovereigntyTab } from './components/IndigenousSovereigntyTab'
 import { GenocostTab } from './components/GenocostTab';
 import { ExposureProfiler } from './components/ExposureProfiler';
 import { ToledoLeadAudit } from './components/ToledoLeadAudit';
+import { FlintLeadAudit } from './components/FlintLeadAudit';
 import LeadCrimeProofs from './components/LeadCrimeProofs';
 import LeadTerrorismProofs from './components/LeadTerrorismProofs';
 import { SovereignMembershipPortal } from './components/SovereignMembershipPortal';
@@ -100,7 +101,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1052,6 +1053,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Flint Lead Audit & Roulet's Law Scatterplots */}
+                <button
+                  onClick={() => setActiveTab('flint')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'flint'
+                      ? 'bg-red-950 text-white border-transparent shadow-sm font-bold'
+                      : 'hover:bg-red-950/40 text-red-800 border-transparent bg-red-50/20'
+                  }`}
+                >
+                  <MapPin size={16} className={activeTab === 'flint' ? 'text-red-400' : 'text-red-600'} />
+                  <span className="flex-1">☣️ Flint Lead Audit & Scatterplots</span>
+                  <span className="px-1.5 py-0.2 bg-red-500/15 text-red-700 text-[8px] tracking-wide rounded uppercase font-bold border border-red-500/20">
+                    810
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -1394,6 +1411,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'milwaukee', icon: Building2, label: '🍻 Milwaukee Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'bihar', icon: Building2, label: '🇮🇳 Bihar Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'toledo', icon: Building2, label: '⚓ Toledo Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'flint', icon: Building2, label: '☣️ Flint Lead Audit & Scatterplots', badge: 'Audit', color: 'red' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -1473,6 +1491,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'milwaukee' && '🍻 Milwaukee Audit'}
               {activeTab === 'bihar' && '🇮🇳 Bihar Audit'}
               {activeTab === 'toledo' && '⚓ Toledo Audit'}
+              {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -2891,6 +2910,13 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {activeTab === 'toledo' && (
             <div className="flex-1 overflow-y-auto bg-white flex flex-col">
               <ToledoLeadAudit onNavigateTab={(tab) => setActiveTab(tab as any)} />
+            </div>
+          )}
+
+          {/* TAB 2.96: FLINT LEAD AUDIT & ROULET'S LAW SCATTERPLOT CASE STUDY */}
+          {activeTab === 'flint' && (
+            <div className="flex-1 overflow-y-auto bg-stone-950 text-stone-100 flex flex-col">
+              <FlintLeadAudit onNavigateTab={(tab) => setActiveTab(tab as any)} />
             </div>
           )}
 
