@@ -42,7 +42,7 @@ import {
   Sliders
 } from 'lucide-react';
 
-export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event';
+export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
 
 export interface NewsArticle {
   id: string;
@@ -98,6 +98,27 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NEWS-CDC-PODCAST-2026',
+    contentType: 'Video',
+    title: 'EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1: Teaching Data to Talk',
+    subtitle: 'Produced through CDC Environmental Health (EH) Nexus • Featuring LeadADVISOR AI Tool',
+    sourceUrl: 'https://www.youtube.com/watch?v=LM1_VW3dnFE',
+    sourceName: 'Centers for Disease Control and Prevention (CDC) • Official Public Information',
+    publishDate: '2026-08-11',
+    author: 'Scott Pauley (CDC) & Kristen Milbrath (Marion County Public Health Dept)',
+    authorName: 'CDC Environmental Health Nexus',
+    abstract: 'Episode 1 of CDC EH Nexus podcast features CDC host Scott Pauley interviewing Kristen Milbrath on LeadADVISOR—an AI tool translating complex lead inspection reports for Marion County residents.',
+    editorCommentary: 'Gemini AI & Norm Roulet Analysis: This CDC podcast validates why we are developing ICEarth. Raw lead inspection data and toxicological reports are useless if locked behind bureaucratic friction. ICEarth combines AI infomediation, Roulet’s Law, and ZK-proof audits to empower families with actionable environmental health sovereignty.',
+    fullExcerpt: 'EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1, Teaching Data to Talk is produced through CDC’s Environmental Health (EH) Nexus. In this episode, host Scott Pauley from CDC’s Childhood Lead Poisoning Prevention Program interviews Kristen Milbrath from the Marion County Public Health Department in Indianapolis, Indiana. Milbrath shares the story behind LeadADVISOR, an AI-powered tool designed to help residents and homebuyers make sense of complex lead inspection reports.',
+    tags: ['CDC', 'Childhood Lead', 'LeadADVISOR', 'Environmental Health', 'AI', 'ICEarth', 'RouletsLaw', 'Exposenomics'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xCDC_EH_NEXUS_LEAD_PODCAST_EP1_YOUTUBE',
+    editorName: 'Norm Roulet & Gemini AI',
+    editorRole: 'ICEarth Co-Developers & Lead AI Research Team',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'REALNEO-BLOG-2008',
     contentType: 'Blog',

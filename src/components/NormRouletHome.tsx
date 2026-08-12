@@ -29,7 +29,10 @@ import {
   Database,
   FileText,
   Compass,
-  Newspaper
+  Newspaper,
+  Play,
+  Tv,
+  Video
 } from 'lucide-react';
 
 // Import local image assets
@@ -108,7 +111,7 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   const isLight = siteTheme === 'light';
 
   // Sub-navigation state within Norm Roulet Home
-  const [activeSection, setActiveSection] = useState<'all' | 'highlights' | 'projects' | 'magazine' | 'photography' | 'infomediation'>('all');
+  const [activeSection, setActiveSection] = useState<'all' | 'highlights' | 'featured_video' | 'projects' | 'magazine' | 'photography' | 'infomediation'>('all');
 
   // Interactive Infomediation Data Brokerage Controls State
   const [infomediationSettings, setInfomediationSettings] = useState({
@@ -146,6 +149,17 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-CDC-001',
+      title: 'EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1, Teaching Data to Talk',
+      category: 'Exposenomics',
+      date: '2026-08-11',
+      summary: 'Produced through CDC Environmental Health (EH) Nexus. Host Scott Pauley interviews Kristen Milbrath (Marion County Public Health Dept) on LeadADVISOR — an AI tool translating complex lead inspection reports.',
+      fullText: `EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1: Teaching Data to Talk\nSource: Centers for Disease Control and Prevention (CDC)\nURL: https://www.youtube.com/watch?v=LM1_VW3dnFE\n\nIn this episode, host Scott Pauley from CDC's Childhood Lead Poisoning Prevention Program interviews Kristen Milbrath from the Marion County Public Health Department in Indianapolis, Indiana.\n\nMilbrath shares the story behind LeadADVISOR, an AI-powered tool designed to help residents and homebuyers make sense of complex lead inspection reports. She explains how the idea came to life, the hurdles her team faced along the way, and the tool's impact on families across Marion County.\n\nWHY GEMINI AI & NORM ROULET ARE DEVELOPING ICEARTH:\nThis CDC podcast directly mirrors why Gemini AI and Norm Roulet are engineering ICEarth. Public health and environmental exposure data must be translated into human-intelligible health sovereignty. Just as LeadADVISOR decodes lead inspections for Marion County families, ICEarth applies Roulet's Law, Zero-Knowledge environmental proofs, and AI infomediation to liberate toxicological data for every community.`,
+      tags: ['CDC', 'ChildhoodLead', 'LeadADVISOR', 'EnvironmentalHealth', 'AIForGood', 'ICEarth', 'RouletsLaw', 'Exposenomics'],
+      linkHash: '0xCDC_EH_NEXUS_LEAD_PODCAST_EP1',
+      publishedUrl: 'https://www.youtube.com/watch?v=LM1_VW3dnFE'
+    },
     {
       id: 'MAG-000',
       title: 'Independence of the Day - May the people of NEO find freedom from air pollution',
@@ -537,6 +551,7 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
           <div className="flex items-center gap-2 mt-8 pt-4 border-t border-stone-800/80 overflow-x-auto scrollbar-none">
             {[
               { id: 'all', label: 'Complete Home Overview', icon: Layers },
+              { id: 'featured_video', label: 'CDC LeadADVISOR Video', icon: Tv },
               { id: 'highlights', label: 'Development Highlights', icon: Sparkles },
               { id: 'projects', label: 'Projects & Communities', icon: Users },
               { id: 'magazine', label: 'Personal Magazine & Articles', icon: BookOpen },
@@ -567,6 +582,147 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
       {/* MAIN CONTENT CONTAINERS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        {/* FEATURED VIDEO: CDC EH NEXUS PODCAST - LEADADVISOR & WHY GEMINI & NORM ROULET ARE DEVELOPING ICEARTH */}
+        {(activeSection === 'all' || activeSection === 'featured_video') && (
+          <section className="space-y-4">
+            <div className="w-full rounded-3xl bg-gradient-to-br from-stone-900 via-stone-950 to-stone-900 border border-amber-500/40 p-6 sm:p-8 text-white space-y-6 shadow-2xl relative overflow-hidden">
+              
+              {/* Background ambient lighting */}
+              <div className="absolute -top-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Header Badges & Source Attribution */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4 relative z-10">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3.5 py-1.5 bg-amber-500 text-stone-950 font-mono text-xs font-black uppercase tracking-wider rounded-xl shadow-lg flex items-center gap-2 animate-pulse">
+                    <Play size={15} className="fill-stone-950" />
+                    <span>NEW FEATURED VIDEO</span>
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono text-xs font-bold rounded-xl flex items-center gap-1.5">
+                    <ShieldCheck size={15} className="text-blue-400" />
+                    <span>Centers for Disease Control and Prevention (CDC) • Official Public Information</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-mono text-amber-400 font-bold">
+                  <Calendar size={14} />
+                  <span>EH Nexus Podcast • Episode 1</span>
+                </div>
+              </div>
+
+              {/* Main Content Grid: Video Player + Official Abstract & Gemini Analysis */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                
+                {/* Left Side: Embedded YouTube Video Viewer */}
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black border-2 border-stone-800 shadow-2xl group">
+                    <iframe
+                      src="https://www.youtube.com/embed/LM1_VW3dnFE?rel=0&modestbranding=1"
+                      title="EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1, Teaching Data to Talk"
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-100 leading-tight">
+                      EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1, Teaching Data to Talk
+                    </h3>
+                    
+                    <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-stone-300">
+                      <span className="text-amber-400 font-bold">Produced By:</span>
+                      <span>CDC Environmental Health (EH) Nexus</span>
+                      <span className="text-stone-600">•</span>
+                      <span className="text-stone-300">Host: Scott Pauley (CDC)</span>
+                      <span className="text-stone-600">•</span>
+                      <span className="text-stone-300">Guest: Kristen Milbrath (Marion County Public Health Dept)</span>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
+                      <a
+                        href="https://www.youtube.com/watch?v=LM1_VW3dnFE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono font-bold rounded-xl border border-stone-700 transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+                      >
+                        <span>Watch Directly on YouTube</span>
+                        <ExternalLink size={14} />
+                      </a>
+
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText('https://www.youtube.com/watch?v=LM1_VW3dnFE');
+                          alert('CDC Podcast YouTube URL copied: https://www.youtube.com/watch?v=LM1_VW3dnFE');
+                        }}
+                        className="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-mono font-bold rounded-xl border border-amber-500/30 transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+                      >
+                        <Share2 size={14} />
+                        <span>Copy Video URL</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Side: Official Public Information Abstract & Gemini AI Synthesis */}
+                <div className="lg:col-span-5 space-y-5 bg-stone-900/90 rounded-2xl p-6 border border-stone-800 shadow-xl">
+                  
+                  {/* Official CDC Abstract */}
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
+                      <FileText size={15} />
+                      <span>Official Public Information Abstract</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed">
+                      Produced through CDC's Environmental Health (EH) Nexus, Episode 1 features CDC host Scott Pauley interviewing Kristen Milbrath from the Marion County Public Health Department in Indianapolis, Indiana.
+                    </p>
+                    <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed">
+                      Milbrath shares the story behind <strong className="text-white">LeadADVISOR</strong>, an AI-powered tool designed to help residents and homebuyers make sense of complex lead inspection reports, hurdles faced, and its impact on protecting children's health across Marion County.
+                    </p>
+                  </div>
+
+                  {/* WHY GEMINI & NORM ROULET ARE DEVELOPING ICEARTH */}
+                  <div className="pt-4 border-t border-stone-800 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                      <Sparkles size={16} className="text-emerald-400" />
+                      <span>Why Gemini AI & Norm Roulet Are Developing ICEarth</span>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-stone-200 font-sans leading-relaxed space-y-3">
+                      <p>
+                        <strong className="text-emerald-300 font-serif block text-sm">1. Teaching Complex Environmental Data to Talk:</strong>
+                        Raw toxicological measurements, lead inspection forms, soil metal audits, and steel mill emissions are useless to families if buried in impenetrable government bureaucracy. ICEarth translates environmental data into clear, actionable health sovereignty.
+                      </p>
+                      <p>
+                        <strong className="text-emerald-300 font-serif block text-sm">2. Roulet's Law & Sovereign Infomediation:</strong>
+                        Just as Marion County's <em>LeadADVISOR</em> AI decodes lead inspections for homebuyers, ICEarth applies <em>Roulet's Law</em> and Zero-Knowledge (ZK) environmental proofs—allowing citizens to independently audit lead hazards and heavy metal contamination without losing privacy or sovereign control.
+                      </p>
+                      <p>
+                        <strong className="text-emerald-300 font-serif block text-sm">3. AI as a Public Health Sentinel:</strong>
+                        Gemini AI and Norm Roulet are building ICEarth so that AI acts as an unyielding public advocate—uniting community phytoremediation, ZK lead audits, and open journalism to safeguard children and vulnerable neighborhoods worldwide.
+                      </p>
+                    </div>
+
+                    {/* Tag Chips */}
+                    <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                      {['CDC', 'ChildhoodLead', 'LeadADVISOR', 'EnvironmentalHealth', 'AIForGood', 'ICEarth', 'RouletsLaw', 'Exposenomics', 'MarionCounty'].map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-bold"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* SECTION 1: RECENT DEVELOPMENT HIGHLIGHTS WINDOW */}
         {(activeSection === 'all' || activeSection === 'highlights') && (
