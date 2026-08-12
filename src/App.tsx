@@ -178,8 +178,10 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo'];
-      if (allowedTabs.includes(tabParam)) {
+      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study'];
+      if (tabParam === 'flint_audit' || tabParam === 'flint_case_study') {
+        setActiveTab('flint');
+      } else if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }
     }
