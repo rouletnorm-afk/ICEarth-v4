@@ -434,6 +434,30 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       
+      {/* TOP NAVIGATION BAR TO ICEARTH LAUNCH HOME PAGE */}
+      <div className="bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 border border-amber-500/40 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-amber-950 dark:text-amber-200 shadow-md">
+        <div className="flex items-center gap-2.5">
+          <Globe size={18} className="text-amber-600 dark:text-amber-400 animate-pulse shrink-0" />
+          <div>
+            <span className="font-bold uppercase tracking-wider block text-amber-800 dark:text-amber-300">
+              Sovereign Directory Navigation:
+            </span>
+            <span>You are viewing the <strong>ICEarth Sovereign Member & Exposome Portal</strong>.</span>
+          </div>
+        </div>
+
+        {onNavigateTab && (
+          <button
+            id="btn-return-icearth-home"
+            onClick={() => onNavigateTab('norm_roulet_home')}
+            className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-2 shrink-0 cursor-pointer hover:scale-105"
+          >
+            <Globe size={16} className="text-stone-950" />
+            <span>🏠 ICEarth Launch Home Page</span>
+          </button>
+        )}
+      </div>
+
       {/* TOP SOVEREIGN HEADER & DEMO PRESET SWITCHER */}
       <div className="bg-gradient-to-r from-stone-900 via-amber-950 to-stone-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl border border-amber-800/40 relative overflow-hidden">
         <div className="absolute -right-12 -top-12 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />

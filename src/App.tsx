@@ -812,6 +812,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <section>
               <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-3">Sovereign Directory</h2>
               <nav className="space-y-1">
+                {/* 0.00 ICEarth Launch Home Page */}
+                <button
+                  onClick={() => setActiveTab('norm_roulet_home' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'norm_roulet' || (activeTab as string) === 'normroulet' || (activeTab as string) === 'norm_roulet_home' || (activeTab as string) === 'norm'
+                      ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-100/80 font-bold'
+                  }`}
+                >
+                  <Globe size={16} className={activeTab === 'norm_roulet' || (activeTab as string) === 'norm_roulet_home' ? 'text-stone-950' : 'text-amber-800'} />
+                  <span className="flex-1 font-bold">🏠 ICEarth Launch Home Page</span>
+                  <span className="px-1.5 py-0.2 bg-stone-950 text-amber-400 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    HOME
+                  </span>
+                </button>
+
                 {/* 0.0 Member Matrix */}
                 <button
                   onClick={() => setActiveTab('member_matrix' as any)}
@@ -1362,6 +1378,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-2">Primary Modules</h2>
                   
                   {[
+                    { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
                     { id: 'ucanx', icon: Sprout, label: '🌱 UCANX Commodities Exchange', badge: 'UCANX', color: 'amber' },
                     { id: 'profiler', icon: Fingerprint, label: '🛡️ Sovereign Exposure Profiler', badge: 'Onboard', color: 'emerald' },

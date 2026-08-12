@@ -39,7 +39,10 @@ import {
   Users,
   CheckSquare,
   Square,
-  Sliders
+  Sliders,
+  Tv,
+  Play,
+  Video
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -99,6 +102,40 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'NEWS-MISSION-UNLEADED-2026',
+    contentType: 'Article',
+    title: 'Mission Unleaded (missionunleaded.org): Integrating World-Class Lead Poisoning Prevention Solutions into ICEarth',
+    subtitle: 'What if walls could talk? Now they can. How LeadADVISOR & MissionUnleaded.org set the benchmark for property lead history transparency.',
+    sourceUrl: 'https://missionunleaded.org/',
+    sourceName: 'Mission Unleaded • Marion County Public Health Department & Plow Digital',
+    publishDate: '2026-08-11',
+    author: 'Marion County Public Health Dept & Plow Digital',
+    authorName: 'Mission Unleaded Team',
+    abstract: 'ICEarth seeks to integrate world-class solutions for lead poisoning prevention across communities worldwide, and Mission Unleaded (missionunleaded.org) is clearly that. Featuring LeadADVISOR, this platform empowers residents and homebuyers to look up property lead histories and ask questions using publicly available inspection reports.',
+    editorCommentary: 'Gemini AI & Norm Roulet Analysis: Mission Unleaded (missionunleaded.org) represents the peak practical benchmark for public health AI tools. By allowing families to look up property lead history ("What if walls could talk? Now they can."), Mission Unleaded turns hidden housing records into actionable protection for children. ICEarth integrates this model into our global exposome profiler and Zero-Knowledge lead audit ledger.',
+    fullExcerpt: `Mission Unleaded: Integrating World-Class Lead Poisoning Prevention Solutions
+
+Official Website: https://missionunleaded.org/
+Partnership Benchmark: Marion County Public Health Department & Plow Digital
+
+"What if walls could talk? Now they can."
+
+You can ask questions about a specific property or general questions about lead using publicly available information. After all, you and your family deserve a safe, lead-free home! Go ahead! Ask The LeadADVISOR anything!
+
+LEARN ABOUT LEAD • LOOK UP PROPERTY HISTORY:
+Are you curious about a property’s lead history? Find out! Knowing that history will help you make informed decisions, especially if you live with small children. Look up an address to find out if a lead history exists.
+
+WHY ICEARTH INTEGRATES THIS WORLD-CLASS MODEL:
+ICEarth seeks to integrate world-class solutions for lead poisoning prevention across communities globally, and Mission Unleaded is clearly that gold standard. By uniting transparent property inspection lookups with grounded, anti-hallucinatory AI guidance (LeadADVISOR), Mission Unleaded establishes the blueprint for ICEarth's global exposome profiler and Zero-Knowledge property lead audit ledger.`,
+    tags: ['MissionUnleaded', 'LeadADVISOR', 'ChildhoodLead', 'PropertyHistory', 'CDC', 'ICEarth', 'RouletsLaw', 'Exposenomics'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics', 'ICETaos'],
+    vaultHash: '0xMISSION_UNLEADED_WORLD_CLASS_LEAD_SOLUTION',
+    editorName: 'Norm Roulet & Gemini AI',
+    editorRole: 'ICEarth Co-Developers & Lead AI Research Team',
+    featured: true,
+    promotedToHomePage: true
+  },
+  {
     id: 'NEWS-CDC-PODCAST-2026',
     contentType: 'Video',
     title: 'EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1: Teaching Data to Talk',
@@ -109,8 +146,22 @@ const DEFAULT_ARTICLES: NewsArticle[] = [
     author: 'Scott Pauley (CDC) & Kristen Milbrath (Marion County Public Health Dept)',
     authorName: 'CDC Environmental Health Nexus',
     abstract: 'Episode 1 of CDC EH Nexus podcast features CDC host Scott Pauley interviewing Kristen Milbrath on LeadADVISOR—an AI tool translating complex lead inspection reports for Marion County residents.',
-    editorCommentary: 'Gemini AI & Norm Roulet Analysis: This CDC podcast validates why we are developing ICEarth. Raw lead inspection data and toxicological reports are useless if locked behind bureaucratic friction. ICEarth combines AI infomediation, Roulet’s Law, and ZK-proof audits to empower families with actionable environmental health sovereignty.',
-    fullExcerpt: 'EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1, Teaching Data to Talk is produced through CDC’s Environmental Health (EH) Nexus. In this episode, host Scott Pauley from CDC’s Childhood Lead Poisoning Prevention Program interviews Kristen Milbrath from the Marion County Public Health Department in Indianapolis, Indiana. Milbrath shares the story behind LeadADVISOR, an AI-powered tool designed to help residents and homebuyers make sense of complex lead inspection reports.',
+    editorCommentary: 'Gemini AI & Norm Roulet Analysis: This CDC podcast provides first-person proof from CDC & Marion County Health Dept for our AI public health solution on ICEarth. Key takeaways: 1) Public data is already public, just inaccessible; 2) Isolated "middleman" servers prevent PHI leaks (Roulet’s Law / ZK-proofs); 3) Tailored depth for both practitioners and worried parents; 4) RAG restricted to verified CDC/EPA/HUD data with honest "I don’t know" fallback guardrails.',
+    fullExcerpt: `EH Nexus: Childhood Lead Poisoning Prevention Podcast – Episode 1: Teaching Data to Talk (CDC EH Nexus)
+
+TRANSCRIPT HIGHLIGHTS & SOLUTION PROOF FOR ICEARTH:
+
+• [14:26 - 15:46] Overcoming Public Fear of AI:
+"With that, we were able to talk with individuals and figure out what their fear or hesitancy was... a lot of it had to do with public health information becoming public. Once we explained to tech people that this stuff is already publicly available, it's just not accessible, they were like, okay, let's figure out how we can do this."
+
+• [15:59 - 17:31] Middleman Security Server Architecture:
+"We have our servers at the health department that pull very specific data points and put those into another server, and from that server our LeadADVISOR pulls those data... a middleman to make sure things aren't being transmitted that shouldn't be."
+
+• [17:40 - 19:39] Tailored Community & Clinical Utility:
+"You can ask it questions and it can go in depth as you want, or as surface level as you want... if you're a parent that just found out your child might have lead exposure, you can ask basic questions to make yourself feel better and know there are resources out there."
+
+• [19:48 - 23:40] Grounded AI Curation & Anti-Hallucination Guardrails:
+"Our AI tool is a little different... it's not pulling from the entire internet, it's pulling from what we've given it—CDC, EPA, HUD—places that are well established. If you ask a question and it doesn't know the answer, it tells you to reach out to us rather than coming up with an answer that is not factual."`,
     tags: ['CDC', 'Childhood Lead', 'LeadADVISOR', 'Environmental Health', 'AI', 'ICEarth', 'RouletsLaw', 'Exposenomics'],
     communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
     vaultHash: '0xCDC_EH_NEXUS_LEAD_PODCAST_EP1_YOUTUBE',
@@ -226,6 +277,25 @@ const DEFAULT_ARTICLES: NewsArticle[] = [
     promotedToHomePage: true
   }
 ];
+
+// YouTube Embed URL Resolver Helper
+const getYouTubeEmbedUrl = (url?: string): string | null => {
+  if (!url) return null;
+  if (url.includes('youtube.com/watch') || url.includes('youtu.be') || url.includes('youtube.com/embed')) {
+    let videoId = '';
+    if (url.includes('v=')) {
+      videoId = url.split('v=')[1]?.split('&')[0] || '';
+    } else if (url.includes('youtu.be/')) {
+      videoId = url.split('youtu.be/')[1]?.split('?')[0] || '';
+    } else if (url.includes('youtube.com/embed/')) {
+      videoId = url.split('youtube.com/embed/')[1]?.split('?')[0] || '';
+    }
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
+    }
+  }
+  return null;
+};
 
 export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
   onNavigateTab,
@@ -574,6 +644,7 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
   // Get icon for Content Type
   const getContentTypeIcon = (type: ContentType) => {
     switch (type) {
+      case 'Video': return <Tv size={14} className="text-amber-400" />;
       case 'Article': return <Newspaper size={14} className="text-blue-500" />;
       case 'Book': return <BookOpen size={14} className="text-amber-500" />;
       case 'Page': return <FileCode2 size={14} className="text-teal-500" />;
@@ -619,6 +690,16 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
             </div>
 
             <div className="flex flex-wrap items-center gap-3 shrink-0">
+              {onNavigateTab && (
+                <button
+                  onClick={() => onNavigateTab('norm_roulet_home')}
+                  className="px-4 py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-black rounded-2xl shadow-xl transition-all cursor-pointer flex items-center gap-2 border border-amber-400"
+                >
+                  <Globe size={16} className="text-stone-950" />
+                  <span>🏠 ICEarth Launch Home</span>
+                </button>
+              )}
+
               <button
                 onClick={handleOpenCreateModal}
                 className="px-5 py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold rounded-2xl shadow-xl transition-all cursor-pointer flex items-center gap-2 border border-amber-400"
@@ -914,6 +995,25 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                     </p>
                   )}
                 </div>
+
+                {/* Embedded Video Viewer (if YouTube source URL or Video content type) */}
+                {getYouTubeEmbedUrl(article.sourceUrl) && (
+                  <div className="space-y-2 my-3">
+                    <div className="flex items-center gap-2 font-mono text-xs text-amber-500 font-bold uppercase tracking-wider">
+                      <Tv size={15} />
+                      <span>Embedded Media Stream • Watch Podcast / Video Directly Below</span>
+                    </div>
+                    <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black border-2 border-amber-500/40 shadow-2xl">
+                      <iframe
+                        src={getYouTubeEmbedUrl(article.sourceUrl)!}
+                        title={article.title}
+                        className="w-full h-full border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                )}
 
                 {/* Editor Commentary / Context */}
                 {article.editorCommentary && (
