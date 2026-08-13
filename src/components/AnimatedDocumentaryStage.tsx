@@ -257,44 +257,60 @@ export const AnimatedDocumentaryStage: React.FC<AnimatedDocumentaryStageProps> =
       </div>
 
       {/* CINEMATIC DISPLAY SCREEN */}
-      <div className="bg-stone-950 rounded-3xl border-2 border-amber-500/30 p-6 sm:p-8 shadow-2xl space-y-6">
-        {/* CINEMATIC FRAME WITH OVERLAYS */}
-        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border-2 border-stone-800 bg-black shadow-2xl group">
-          <img
-            src={currentScene.image}
-            alt={currentScene.title}
-            referrerPolicy="no-referrer"
-            className={`w-full h-full object-cover transition-all duration-1000 ${
-              isPlaying ? 'scale-105 filter brightness-105' : 'scale-100'
-            }`}
-          />
+      <div className="bg-stone-950 rounded-3xl border-2 border-amber-500/30 p-4 sm:p-8 shadow-2xl space-y-6">
+        {/* CINEMATIC CANVAS & DEDICATED NARRATION SCRIPT CARD */}
+        <div className="space-y-4">
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border-2 border-amber-500/40 bg-black shadow-2xl group">
+            <img
+              src={currentScene.image}
+              alt={currentScene.title}
+              referrerPolicy="no-referrer"
+              className={`w-full h-full object-cover transition-all duration-1000 ${
+                isPlaying ? 'scale-105 filter brightness-105' : 'scale-100'
+              }`}
+            />
 
-          {/* TOP CINEMATIC HUD BAR */}
-          <div className="absolute top-0 inset-x-0 p-4 bg-gradient-to-b from-stone-950/90 to-transparent flex items-center justify-between font-mono text-xs">
-            <div className="flex items-center gap-2">
-              <span className="px-2.5 py-1 bg-amber-500 text-stone-950 font-black text-[10px] uppercase rounded-lg">
-                {currentScene.sceneNumber}
-              </span>
-              <span className="text-amber-300 font-bold hidden sm:inline">
-                {currentScene.era}
+            {/* TOP CINEMATIC HUD BAR */}
+            <div className="absolute top-0 inset-x-0 p-3 sm:p-4 bg-gradient-to-b from-stone-950/90 via-stone-950/50 to-transparent flex items-center justify-between font-mono text-xs z-10">
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-1 bg-amber-500 text-stone-950 font-black text-[10px] uppercase rounded-lg shadow-md">
+                  {currentScene.sceneNumber}
+                </span>
+                <span className="text-amber-300 font-bold text-[11px] sm:text-xs">
+                  {currentScene.era}
+                </span>
+              </div>
+
+              <button
+                onClick={() => setSelectedImageModal(true)}
+                className="px-3 py-1 bg-stone-900/90 hover:bg-stone-900 text-stone-200 rounded-lg border border-stone-700 flex items-center gap-1 cursor-pointer text-[11px] shadow-lg"
+              >
+                <Maximize2 size={13} />
+                <span>Expand Scene</span>
+              </button>
+            </div>
+
+            {/* BOTTOM TITLE OVERLAY ON CANVAS (CLEAN & NON-BLOCKING) */}
+            <div className="absolute bottom-0 inset-x-0 p-3 sm:p-5 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent z-10">
+              <h2 className="text-base sm:text-2xl font-serif font-extrabold text-white drop-shadow-md">
+                {currentScene.title}
+              </h2>
+            </div>
+          </div>
+
+          {/* DEDICATED NARRATION SCRIPT & CC TELEPROMPTER CARD (BELOW CANVAS FOR 100% MOBILE IMAGE CLARITY) */}
+          <div className="p-4 sm:p-5 bg-stone-900/90 rounded-2xl border-2 border-amber-500/30 space-y-2 shadow-2xl">
+            <div className="flex items-center justify-between font-mono text-xs border-b border-stone-800 pb-2">
+              <div className="flex items-center gap-2 text-amber-400 font-bold">
+                <Volume2 size={16} className="animate-pulse" />
+                <span>Docudrama Voiceover Script & CC Subtitles</span>
+              </div>
+              <span className="text-[10px] text-amber-300 bg-amber-950/80 px-2.5 py-0.5 rounded-full border border-amber-500/30">
+                Scene {activeSceneIndex + 1} of {scenes.length}
               </span>
             </div>
 
-            <button
-              onClick={() => setSelectedImageModal(true)}
-              className="px-3 py-1 bg-stone-900/80 hover:bg-stone-900 text-stone-200 rounded-lg border border-stone-700 flex items-center gap-1 cursor-pointer text-[11px]"
-            >
-              <Maximize2 size={13} />
-              <span>Expand Scene</span>
-            </button>
-          </div>
-
-          {/* BOTTOM NARRATION CAPTION OVERLAY */}
-          <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-t from-stone-950 via-stone-950/90 to-transparent space-y-2">
-            <h2 className="text-lg sm:text-2xl font-serif font-extrabold text-white">
-              {currentScene.title}
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-sans max-w-4xl bg-stone-950/60 p-3 rounded-xl border border-stone-800/80 backdrop-blur-sm">
+            <p className="text-sm sm:text-base text-stone-100 leading-relaxed font-sans p-3.5 bg-stone-950/90 rounded-xl border border-stone-800 shadow-inner">
               "{currentScene.narration}"
             </p>
           </div>
@@ -428,13 +444,21 @@ export const AnimatedDocumentaryStage: React.FC<AnimatedDocumentaryStageProps> =
               </button>
             </div>
 
-            <div className="p-4 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-stone-950">
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-stone-950 space-y-4">
               <img
                 src={currentScene.image}
                 alt={currentScene.title}
                 referrerPolicy="no-referrer"
-                className="max-h-[65vh] w-auto object-contain rounded-2xl border border-stone-800 shadow-2xl"
+                className="max-h-[50vh] w-auto object-contain rounded-2xl border border-stone-800 shadow-2xl"
               />
+              <div className="p-4 bg-stone-900/90 rounded-2xl border border-amber-500/30 max-w-3xl w-full text-center space-y-1">
+                <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest block font-bold">
+                  Voiceover Script & Narration
+                </span>
+                <p className="text-xs sm:text-sm text-stone-200 font-sans leading-relaxed">
+                  "{currentScene.narration}"
+                </p>
+              </div>
             </div>
 
             <div className="p-4 bg-stone-950 border-t border-stone-800 flex items-center justify-between text-xs font-mono">
