@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import mittalCanaryPanLogoImg from '../assets/images/MittalCanaryPanLogo.jpg';
+import mittalCanaryAiLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import mittal720Img from '../assets/images/Mittal720.JPG';
 import plazaPanImg from '../assets/images/PlazaPan2.JPG';
+import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import {
   Newspaper,
   PlusCircle,
@@ -80,21 +82,43 @@ interface ICEarthNewsRepositoryProps {
 
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
+  const u = url.trim().toLowerCase();
   if (
+    u.includes('mittal_canary_logo') ||
+    u.includes('1786591941409') ||
+    u.includes('canary_ai')
+  ) {
+    return mittalCanaryAiLogoImg;
+  }
+  if (
+    u.includes('mittalcanarypanlogo') ||
+    u.includes('canary') ||
+    u.includes('src/assets/images/mittalcanarypanlogo.jpg') ||
+    u.includes('/src/assets/images/mittalcanarypanlogo.jpg') ||
+    u === 'mittalcanarypanlogo.jpg' ||
+    url === 'http://realneo.us/system/files/MittalCanaryPanLogo.jpg' ||
+    url === 'https://realneo.us/system/files/MittalCanaryPanLogo.jpg'
+  ) {
+    return mittalCanaryPanLogoImg;
+  }
+  if (
+    u.includes('mittal720') ||
     url === 'http://realneo.us/system/files/Mittal720.JPG' ||
-    url === 'https://realneo.us/system/files/Mittal720.JPG' ||
-    url.includes('Mittal720')
+    url === 'https://realneo.us/system/files/Mittal720.JPG'
   ) {
     return mittal720Img;
   }
   if (
-    url === 'http://realneo.us/system/files/MittalCanaryPanLogo.jpg' ||
-    url === 'https://realneo.us/system/files/MittalCanaryPanLogo.jpg' ||
-    url.includes('MittalCanaryPanLogo')
+    u.includes('taoskiheader') ||
+    u.includes('100421s') ||
+    u.includes('taoskiheader100421s_0_0') ||
+    u.includes('taos_kush_institute_header') ||
+    u.includes('taos_ki_header') ||
+    u.includes('phytoremediation')
   ) {
-    return mittalCanaryPanLogoImg;
+    return taosKIHeaderImg;
   }
-  if (url.includes('PlazaPan') || url.includes('Taos') || url.includes('plaza')) {
+  if (u.includes('plazapan') || u.includes('taos_plaza') || u.includes('taosplaza') || u.includes('plaza')) {
     return plazaPanImg;
   }
   return url;
@@ -289,6 +313,50 @@ TRANSCRIPT HIGHLIGHTS & SOLUTION PROOF FOR ICEARTH:
     tags: ['realNEO', 'Cleveland', 'Air Pollution', 'Mittal Steel', 'Independence Day', 'Northeast Ohio', 'Environment', 'Exposenomics'],
     communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
     vaultHash: '0xREALNEO_INDEPENDENCE_DAY_AIR_POLLUTION_2008',
+    editorName: 'Norm Roulet',
+    editorRole: 'realNEO Founder & ICEarth Lead',
+    featured: true,
+    promotedToHomePage: true
+  },
+  {
+    id: 'REALNEO-CANARY-IMAGE-2008',
+    contentType: 'Image',
+    title: 'Canary in the Coal Mine — Mittal Steel / ArcelorMittal Air Quality Analysis',
+    subtitle: 'Historical realNEO Environmental Exposenomics Monitoring Graphic & Air Quality Analysis (2008)',
+    sourceUrl: 'http://realneo.us/system/files/MittalCanaryPanLogo.jpg',
+    sourceName: 'realNEO Co-op Publication Vault (realneo.us)',
+    publishDate: '2008-07-04',
+    author: 'Norm Roulet',
+    authorName: 'Norm Roulet',
+    imageUrl: mittalCanaryPanLogoImg,
+    abstract: 'Historical realNEO environmental monitoring graphic featuring the canary in the coal mine analyzing ArcelorMittal steel plant emissions, coke oven plumes, and urban air quality across Cleveland and Northeast Ohio.',
+    editorCommentary: 'Original realNEO legacy visual asset created by Norm Roulet. Symbolizes community vigilance and environmental exposenomics sovereignty over industrial air pollution in the Cleveland Industrial Valley.',
+    fullExcerpt: 'Canary in the Coal Mine — Mittal Steel / ArcelorMittal Air Quality Analysis\n\nAsset File Path: src/assets/images/MittalCanaryPanLogo.jpg\nSource Web URL: http://realneo.us/system/files/MittalCanaryPanLogo.jpg\n\nThis historical environmental monitoring graphic depicts the canary in the coal mine as an early warning indicator for community health, toxic industrial steel plant emissions, heavy particulate matter, and coke oven benzene plumes in Cleveland and Northeast Ohio.',
+    tags: ['Mittal Steel', 'ArcelorMittal', 'Canary', 'Cleveland', 'Air Quality', 'Exposenomics', 'realNEO', 'Image Gallery'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xREALNEO_CANARY_IN_THE_COAL_MINE_IMAGE_2008',
+    editorName: 'Norm Roulet',
+    editorRole: 'realNEO Founder & ICEarth Lead',
+    featured: true,
+    promotedToHomePage: true
+  },
+  {
+    id: 'REALNEO-CANARY-AI-IMAGE-2026',
+    contentType: 'Image',
+    title: 'Canary in the Coal Mine — AI Studio Generative Artwork & Re-creation',
+    subtitle: 'AI Studio Generative Cognition Artwork & Modern Visual Synthesis of the 2008 realNEO Canary Logo',
+    sourceUrl: 'src/assets/images/mittal_canary_logo_1786591941409.jpg',
+    sourceName: 'AI Studio Generative Cognition Suite & realNEO Archives',
+    publishDate: '2026-08-12',
+    author: 'AI Studio & Norm Roulet',
+    authorName: 'AI Studio & Norm Roulet',
+    imageUrl: mittalCanaryAiLogoImg,
+    abstract: 'High-resolution AI Studio generative re-interpretation created in August 2026. Synthesizes a caged yellow canary bird over industrial steel mill smoke plumes, particulate emissions, and realNEO exposenomics monitoring overlays.',
+    editorCommentary: 'Origins: Created during interactive AI Studio applet development on August 12, 2026. Prompted by historic realNEO environmental exposenomics data, this artwork depicts the yellow canary indicator bird framed in a vintage cage overlooking the Cleveland Industrial Valley steel mills.',
+    fullExcerpt: 'Canary in the Coal Mine — AI Studio Generative Artwork & Re-creation\n\nAsset File Path: src/assets/images/mittal_canary_logo_1786591941409.jpg\nCreated: August 12, 2026 via AI Studio\n\nOrigins & Concept: Generated as a modern visual synthesis during AI Studio applet construction. It interprets Norm Roulet\'s 2008 realNEO "Canary in the Coal Mine" air pollution monitoring campaign, rendering a caged yellow canary positioned against Cleveland steel mill smokestacks and particulate emission plumes.',
+    tags: ['AI Artwork', 'Canary', 'AI Studio', 'Mittal Steel', 'Cleveland', 'Air Quality', 'Exposenomics', 'realNEO', 'Image Gallery'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xAI_STUDIO_GENERATIVE_CANARY_ARTWORK_2026',
     editorName: 'Norm Roulet',
     editorRole: 'realNEO Founder & ICEarth Lead',
     featured: true,

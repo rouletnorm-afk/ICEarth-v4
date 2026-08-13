@@ -96,7 +96,9 @@ import LeadCrimeProofs from './components/LeadCrimeProofs';
 import LeadTerrorismProofs from './components/LeadTerrorismProofs';
 import { SovereignMembershipPortal } from './components/SovereignMembershipPortal';
 import { AITestimonialCognition } from './components/AITestimonialCognition';
-import { Brain } from 'lucide-react';
+import { SovereignAnalyticsDashboard } from './components/SovereignAnalyticsDashboard';
+import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
+import { Brain, BarChart3 } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
@@ -180,11 +182,13 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study', 'ai_testimonial', 'ai_cognition', 'ai_lead', 'ai_truth'];
+      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study', 'ai_testimonial', 'ai_cognition', 'ai_lead', 'ai_truth', 'analytics', 'analytics_dashboard', 'metrics', 'stats'];
       if (tabParam === 'flint_audit' || tabParam === 'flint_case_study') {
         setActiveTab('flint');
       } else if (tabParam === 'ai_cognition' || tabParam === 'ai_lead' || tabParam === 'ai_truth') {
         setActiveTab('ai_testimonial' as any);
+      } else if (tabParam === 'analytics_dashboard' || tabParam === 'metrics' || tabParam === 'stats') {
+        setActiveTab('analytics' as any);
       } else if (allowedTabs.includes(tabParam)) {
         setActiveTab(tabParam as any);
       }
@@ -203,6 +207,21 @@ export default function App() {
         setActiveTab('manuscript');
       }
     }
+
+    // Initialize Google Analytics if measurement ID exists
+    initGoogleAnalytics();
+  }, []);
+
+  // Track page views and active dwell time
+  useEffect(() => {
+    recordPageView(activeTab);
+  }, [activeTab]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      updateSessionDuration(10);
+    }, 10000);
+    return () => clearInterval(interval);
   }, []);
 
   // Sync tab and chapter to URL query parameters on state changes
@@ -851,6 +870,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.002 Sovereign Analytics & Visitor Metrics */}
+                <button
+                  onClick={() => setActiveTab('analytics' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'analytics' || (activeTab as string) === 'analytics_dashboard' || (activeTab as string) === 'metrics'
+                      ? 'bg-amber-950 text-amber-200 border-amber-500 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/10 text-amber-950 border-amber-300/80 bg-amber-50/70 font-bold'
+                  }`}
+                >
+                  <BarChart3 size={16} className={activeTab === 'analytics' ? 'text-amber-400' : 'text-amber-700'} />
+                  <span className="flex-1 font-bold">📊 Visitor Analytics & Metrics</span>
+                  <span className="px-1.5 py-0.2 bg-emerald-500 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Stats
+                  </span>
+                </button>
+
                 {/* 0.0 Member Matrix */}
                 <button
                   onClick={() => setActiveTab('member_matrix' as any)}
@@ -1419,6 +1454,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   {[
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'ai_testimonial', icon: Brain, label: '🤖 AI Testimonial & Cognition', badge: 'AI/Pb', color: 'amber' },
+                    { id: 'analytics', icon: BarChart3, label: '📊 Visitor Analytics & Metrics', badge: 'Stats', color: 'emerald' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
                     { id: 'ucanx', icon: Sprout, label: '🌱 UCANX Commodities Exchange', badge: 'UCANX', color: 'amber' },
                     { id: 'profiler', icon: Fingerprint, label: '🛡️ Sovereign Exposure Profiler', badge: 'Onboard', color: 'emerald' },
@@ -2887,6 +2923,15 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'ai_testimonial' || (activeTab as string) === 'ai_cognition' || (activeTab as string) === 'ai_lead') && (
             <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-stone-100">
               <AITestimonialCognition 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.002: STAND-ALONE SOVEREIGN VISITOR ANALYTICS & METRICS DASHBOARD */}
+          {(activeTab === 'analytics' || (activeTab as string) === 'analytics_dashboard' || (activeTab as string) === 'metrics' || (activeTab as string) === 'stats') && (
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-stone-100">
+              <SovereignAnalyticsDashboard 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
               />
             </div>

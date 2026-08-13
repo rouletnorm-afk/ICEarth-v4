@@ -54,30 +54,56 @@ import scatterplotImg from '../assets/images/Scatterplot.jpg';
 import icearthLaunchImg from '../assets/images/Launching1.png';
 import icearth1Gif from '../assets/images/ICEarth1.gif';
 import mittalCanaryPanLogoImg from '../assets/images/MittalCanaryPanLogo.jpg';
+import mittalCanaryAiLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import mittal720Img from '../assets/images/Mittal720.JPG';
 import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
-  const u = url.trim();
-  if (u.includes('Mittal720') || u.toLowerCase().includes('mittal720.jpg')) {
-    return mittal720Img;
+  const u = url.trim().toLowerCase();
+  if (
+    u.includes('mittal_canary_logo') ||
+    u.includes('1786591941409') ||
+    u.includes('canary_ai')
+  ) {
+    return mittalCanaryAiLogoImg;
   }
-  if (u.includes('MittalCanaryPanLogo') || u.toLowerCase().includes('canary')) {
+  if (
+    u.includes('mittalcanarypanlogo') ||
+    u.includes('canary') ||
+    u.includes('src/assets/images/mittalcanarypanlogo.jpg') ||
+    u.includes('/src/assets/images/mittalcanarypanlogo.jpg') ||
+    u === 'mittalcanarypanlogo.jpg'
+  ) {
     return mittalCanaryPanLogoImg;
   }
-  if (u.includes('PlazaPan') || u.toLowerCase().includes('taos') || u.toLowerCase().includes('plaza')) {
+  if (u.includes('mittal720') || u.includes('mittal720.jpg')) {
+    return mittal720Img;
+  }
+  if (
+    u.includes('taoskiheader') ||
+    u.includes('100421s') ||
+    u.includes('taoskiheader100421s_0_0') ||
+    u.includes('taos_kush_institute_header') ||
+    u.includes('taos_ki_header') ||
+    u.includes('phytoremediation')
+  ) {
+    return taosKIHeaderImg;
+  }
+  if (u.includes('plazapan') || u.includes('taos_plaza') || u.includes('taosplaza') || u.includes('plaza')) {
     return plazaPanImg;
   }
-  if (u.includes('CaseAlumnus')) return caseAlumnusImg;
-  if (u.includes('TKI-GIS2')) return tkiGisImg;
-  if (u.includes('TKI-GIS')) return tkiGis1Img;
-  if (u.includes('NanoSpire20Years')) return nanoSpire20YearsImg;
-  if (u.includes('Scatterplot')) return scatterplotImg;
-  if (u.includes('Launching1')) return icearthLaunchImg;
-  if (u.includes('ICEarth1')) return icearth1Gif;
+  if (u.includes('casealumnus')) return caseAlumnusImg;
+  if (u.includes('tki-gis2')) return tkiGisImg;
+  if (u.includes('tki-gis')) return tkiGis1Img;
+  if (u.includes('nanospire20years')) return nanoSpire20YearsImg;
+  if (u.includes('nanospireroadmap')) return nanoSpireRoadmapImg;
+  if (u.includes('scatterplot')) return scatterplotImg;
+  if (u.includes('launching1')) return icearthLaunchImg;
+  if (u.includes('icearth1')) return icearth1Gif;
   if (u.includes('agua_das_hemp')) return aguaDasHempImg;
-  return u;
+  if (u.includes('tkitimeline')) return tkiTimelineImg;
+  return url;
 };
 
 interface NormRouletHomeProps {
@@ -391,6 +417,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
       description: 'Historical realNEO environmental exposenomics monitoring graphic featuring the canary in the coal mine analyzing ArcelorMittal steel plant emissions, coke oven plumes, and urban air quality.',
       vaultHash: '0xREALNEO_CANARY_AIR_QUALITY_HEADER',
       tags: ['Cleveland', 'Air Quality', 'Mittal Steel', 'realNEO', 'Exposenomics', 'Canary']
+    },
+    {
+      id: 'PHOTO-000C',
+      title: 'Canary in the Coal Mine — AI Studio Generative Artwork & Re-creation',
+      category: 'Exposenomics & Cleveland',
+      imageSrc: mittalCanaryAiLogoImg,
+      location: 'Cleveland Industrial Valley / AI Studio Cognition Lab',
+      date: '2026-08-12',
+      description: 'Origins: Generated during interactive AI Studio applet creation on August 12, 2026. High-resolution digital artwork interpreting Norm Roulet\'s 2008 realNEO "Canary in the Coal Mine" air pollution campaign, depicting a yellow canary in a vintage cage over industrial steel mill smoke plumes.',
+      vaultHash: '0xAI_STUDIO_GENERATIVE_CANARY_ARTWORK_2026',
+      tags: ['AI Artwork', 'Canary', 'AI Studio', 'Mittal Steel', 'Cleveland', 'Air Quality', 'Exposenomics', 'realNEO']
     },
     {
       id: 'PHOTO-001',
@@ -1808,8 +1845,9 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                     {article.imageSrc && (
                       <div className="rounded-xl overflow-hidden h-44 bg-stone-900 border border-stone-200 dark:border-stone-800">
                         <img
-                          src={article.imageSrc}
+                          src={resolvePhotoUrl(article.imageSrc)}
                           alt={article.title}
+                          referrerPolicy="no-referrer"
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
@@ -1984,8 +2022,9 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                   >
                     <div className="aspect-video relative bg-stone-950 overflow-hidden">
                       <img
-                        src={photo.imageSrc}
+                        src={resolvePhotoUrl(photo.imageSrc)}
                         alt={photo.title}
+                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
@@ -2078,7 +2117,7 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             {selectedArticle.imageSrc && (
               <div className="rounded-2xl overflow-hidden max-h-72 bg-stone-900 border border-stone-200 dark:border-stone-800 my-2">
                 <img
-                  src={selectedArticle.imageSrc}
+                  src={resolvePhotoUrl(selectedArticle.imageSrc)}
                   alt={selectedArticle.title}
                   className="w-full h-full object-cover max-h-72"
                   onError={(e) => {
@@ -2138,8 +2177,9 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
             <div className="max-h-[60vh] overflow-hidden rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center relative group">
               <img
-                src={selectedPhoto.imageSrc}
+                src={resolvePhotoUrl(selectedPhoto.imageSrc)}
                 alt={selectedPhoto.title}
+                referrerPolicy="no-referrer"
                 className="max-h-[60vh] w-auto object-contain rounded-2xl"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
