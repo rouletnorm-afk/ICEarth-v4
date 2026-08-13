@@ -98,8 +98,9 @@ import { SovereignMembershipPortal } from './components/SovereignMembershipPorta
 import { AITestimonialCognition } from './components/AITestimonialCognition';
 import { SovereignAnalyticsDashboard } from './components/SovereignAnalyticsDashboard';
 import { EvolutionaryCanaryProof } from './components/EvolutionaryCanaryProof';
+import { PicaExposenomics } from './components/PicaExposenomics';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
@@ -873,6 +874,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.0002 Pica Disorder & Geophagy Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('pica_exposenomics' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'pica_exposenomics' || (activeTab as string) === 'pica' || (activeTab as string) === 'geophagy'
+                      ? 'bg-amber-600 text-white border-amber-500 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-900 border-amber-400/50 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Utensils size={16} className={activeTab === 'pica_exposenomics' ? 'text-white' : 'text-amber-800'} />
+                  <span className="flex-1 font-bold">👅 Pica & Geophagy Exposenomics</span>
+                  <span className="px-1.5 py-0.2 bg-amber-950 text-amber-200 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    GLOBAL PICA
+                  </span>
+                </button>
+
                 {/* 0.001 AI Testimonial & Cognition: AI as the New Pb */}
                 <button
                   onClick={() => setActiveTab('ai_testimonial' as any)}
@@ -1473,6 +1490,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   {[
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
+                    { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
                     { id: 'ai_testimonial', icon: Brain, label: '🤖 AI Testimonial & Cognition', badge: 'AI/Pb', color: 'amber' },
                     { id: 'analytics', icon: BarChart3, label: '📊 Visitor Analytics & Metrics', badge: 'Stats', color: 'emerald' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
@@ -2961,6 +2979,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {activeTab === 'evolutionary_canary' && (
             <div className="flex-1 overflow-y-auto">
               <EvolutionaryCanaryProof 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.004: PICA DISORDER & GEOPHAGY EXPOSENOMICS ANALYTICS */}
+          {(activeTab === 'pica_exposenomics' || (activeTab as string) === 'pica' || (activeTab as string) === 'geophagy') && (
+            <div className="flex-1 overflow-y-auto">
+              <PicaExposenomics 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

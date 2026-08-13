@@ -58,10 +58,19 @@ import mittalCanaryAiLogoImg from '../assets/images/mittal_canary_logo_178659194
 import mittal720Img from '../assets/images/Mittal720.JPG';
 import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('pica') ||
+    u.includes('geophagy') ||
+    u.includes('1786618000000') ||
+    u.includes('craving_dirt')
+  ) {
+    return picaGeophagyImg;
+  }
   if (
     u.includes('nature_soil_canary') ||
     u.includes('1786614634627') ||
@@ -222,6 +231,30 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-PICA-GEOPHAGY-LEAD-2026',
+      title: 'Pica Disorder & Gestational Anemia (12 August 2026): Why Pregnant Women Crave Dirt & The Toxic Heavy Metal Soil Legacy',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: picaGeophagyImg,
+      summary: 'Mom.com & Int. Journal of Women\'s Health report reveals up to 46% of pregnant women experience Pica disorder, persistently craving soil, sand, and clay due to gestational iron and zinc deficiencies. Combined with 1,000,000 years of anthropogenic soil lead and sweet lead paint chips, Pica is a primary global lead poisoning vector.',
+      fullText: `Yes, Some Women Actually Crave Dirt When Pregnant. Here's Why
+
+Published: 12 August 2026
+Source: Mom.com / International Journal of Women's Health
+URL: https://www.mom.com/2234790/crave-dirt-when-pregnant-meaning/
+ICEarth Proof Section: https://icearth.org/?tab=pica_exposenomics
+
+KEY FINDINGS & ROULET'S LAW SYNTHESIS:
+• Up to 46% of U.S. women experience Pica during pregnancy, with soil, clay, and sand among the most common cravings.
+• Anemic pregnant women have a 1.6x greater likelihood of developing Pica.
+• Global geophagy prevalence reaches 45%–65% in parts of Sub-Saharan Africa and South Asia.
+• Ingesting contaminated soil exposes mothers and fetuses to lead, cadmium, and arsenic toxicity.
+• Toddlers with Pica eating sweet-tasting lead paint chips (up to 100,000 ppm lead) suffer acute prefrontal cortex damage, contributing to the 800 million children worldwide with blood lead poisoning.`,
+      tags: ['Pica', 'Geophagy', 'SoilLead', 'GestationalAnemia', 'SweetLeadPaint', 'Exposenomics', 'ICEarth'],
+      linkHash: '0xPICA_GEOPHAGY_GESTATIONAL_ANEMIA_LEAD_2026',
+      publishedUrl: 'https://www.mom.com/2234790/crave-dirt-when-pregnant-meaning/'
+    },
     {
       id: 'MAG-NATURE-2026-TRENTON-SOIL',
       title: 'Nature Journal Study (31 July 2026): Exterior Soil Lead Is Tracked Indoors Into Paint-Free Homes, Proving Roulet\'s Law & H. sapiens Evolutionary Canary Model',
@@ -432,6 +465,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000E',
+      title: 'Pica Disorder, Maternal Geophagy & Sweet Lead Paint Chips Infographic — Gemini AI & Norm Roulet Co-Created Asset',
+      category: 'Exposenomics & Collaboration',
+      imageSrc: picaGeophagyImg,
+      location: 'ICEarth Sovereign Cognition Lab & Mom.com / IJWH Study Synthesis',
+      date: '2026-08-13',
+      description: 'Origins: Co-created visual infographic illustrating Pica disorder, maternal geophagy, gestational iron deficiency anemia, sweet-tasting lead paint chips (100,000 ppm Pb), and regional prevalence across Sub-Saharan Africa, South Asia, and the Americas.',
+      vaultHash: '0xPICA_GEOPHAGY_LEAD_COLLABORATION_GRAPHIC_2026',
+      tags: ['Pica', 'Geophagy', 'GestationalAnemia', 'SweetLeadPaint', 'GeminiAI', 'SoilLead', 'RouletsLaw', 'Exposenomics', 'Collaboration', 'ICEarth']
+    },
     {
       id: 'PHOTO-000D',
       title: 'H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Graphic — Gemini AI & Norm Roulet Collaboration',

@@ -6,6 +6,7 @@ import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
 import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
+import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import {
   Shield,
   UserCheck,
@@ -154,6 +155,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: 'evolutionary_canary',
       description: 'Historical industrial baseline image capturing Mittal Steel plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
       sovereignHash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
+    },
+    {
+      id: 'IP-000C',
+      title: 'Pica Disorder, Maternal Geophagy & Sweet Lead Paint Chips Model (Plate #03)',
+      type: 'Global Exposenomics & Maternal Toxicology Model',
+      imageSrc: picaGeophagyImg,
+      link: 'pica_exposenomics',
+      description: 'Co-created visual infographic analyzing Pica disorder, gestational iron deficiency anemia, cultural geophagy, and sweet lead paint chips (100,000 ppm Pb) as primary drivers of global lead poisoning in 800 million children.',
+      sovereignHash: '0xPICA_GEOPHAGY_GESTATIONAL_ANEMIA_LEAD_2026'
     },
     {
       id: 'IP-001',
