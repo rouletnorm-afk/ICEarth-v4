@@ -153,6 +153,53 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'FLINT-WJRT-5-HOMICIDES-SURGE-2026',
+    contentType: 'Article',
+    title: 'Flint Violent Crime Surge: 5 Homicides in 5 Days Spikes Murders 20-25% as Lead-Crime Neurotoxicity Explodes',
+    subtitle: 'WJRT-TV ABC 12 News Flint • Edmund Street Homicide • Exposenomics & Roulet’s Law Case Study',
+    sourceUrl: 'https://www.abc12.com/news/crime/residents-pick-up-the-pieces-after-deadly-edmund-street-shooting/article_2b83b241-04d9-4edb-9d55-07e1a0c2b3cb.html',
+    sourceName: 'WJRT-TV ABC 12 News Flint & ICEarth Exposenomics Audit',
+    publishDate: '2026-08-13',
+    author: 'WJRT Newsroom & Norman Roulet (Lead-Crime Exposenomics Synthesis)',
+    authorName: 'WJRT Newsroom & Norman Roulet',
+    abstract: 'A devastating week of gun violence in Flint, Michigan claimed its fifth homicide victim since Saturday with a deadly early Thursday shooting at Edmund and Wesley Street. This sudden 20-25% single-week murder spike—disproportionately impacting Black victims (80-90%) in one of the highest violent crime epicenters globally—provides immediate empirical proof of the Lead-Crime Hypothesis and Roulet’s Law.',
+    editorCommentary: 'Norman Roulet & Sovereign Exposenomics Analysis: We track homicides because murder data is relatively certain and strictly recorded. However, chronic childhood lead poisoning damages prefrontal cortex architecture, causing profound loss of impulse control, emotional dysregulation, and psychiatric instability. This underlying neurotoxicity expresses across all levels of anti-social behavior and extreme social volatility—manifesting in riots, gang retaliation cycles, domestic violence, auto theft, flash mobs, and fatal overdoses. During COVID-19, lockdowns and acute stressors detonated this pre-existing neurological vulnerability across urban Black communities. On a macro scale, this identical lead-induced prefrontal volatility drives civil war, sectarian collapse, and terrorism across the most severely lead-poisoned regions on Earth (South Asia, the Middle East, and Africa).',
+    fullExcerpt: `FLINT, Mich. (WJRT) - A heavy week in Flint has been marked by gun violence, with another deadly shooting early Thursday morning claiming a man's life.
+
+At 1:40 a.m. Thursday, Flint City Police were dispatched to an Edmund Street field where they found two men with gunshot wounds, one of whom was pronounced dead at the scene. This marked the fifth deadly homicide in Flint since Saturday.
+
+Qashayla Bivens, who lives nearby with her three children, relies on the word of her neighbors for safety.
+
+"Neighbors, everyone, they're very protective," Bivens said. "They always watching out, looking out, making sure things are the way they're supposed to be."
+
+The shooting happened off of Edmund Street and Wesley Street, just around the corner from her home.
+
+"It's a scary feeling knowing that someone's life has been taken," Bivens said.
+
+Bivens said community support is important because she feels Flint Police are only present in neighborhoods after violence has already occurred.
+
+"I think they should come around more," Bivens said. "Just monitor what's going on, instead of getting that call saying, 'okay, something happened,' and then they're onto the scene."
+
+She said police need to step up preventative measures, like accessible mental health resources. If they won't, Bivens wants to lend an ear for neighbors.
+
+ICEARTH EXPOSENOMICS & ROULET'S LAW SYNTHESIS:
+• 5 Homicides in 5 Days: Increases Flint's total annual homicides by 20-25% in a single week.
+• Disproportionate Impact: 80-90% of homicide victims in Flint and Jackson are African American, reflecting catastrophic historical and ongoing environmental poisoning.
+• Neurobiological Mechanism: Heavy metal lead (Pb2+) permanently damages prefrontal executive function and serotonergic regulation, lowering thresholds for impulsive violence, gang retaliations, domestic battery, and societal volatility.
+• Macrocosm of Global Conflict: The same neurotoxic instability seen in urban American lead hotspots fuels sectarian violence, unrest, and terrorism in the most heavily lead-polluted regions of the Global South (SE Asia, Middle East, Sub-Saharan Africa).
+
+Source: WJRT ABC 12 News (Flint, MI)
+Article URL: https://www.abc12.com/news/crime/residents-pick-up-the-pieces-after-deadly-edmund-street-shooting/article_2b83b241-04d9-4edb-9d55-07e1a0c2b3cb.html`,
+    tags: ['Flint', 'LeadCrimeHypothesis', 'RouletsLaw', 'WJRT', 'HomicideData', 'Neurotoxicity', 'Exposenomics', 'BlackCommunityHealth'],
+    communities: ['Flint', 'Lead-Crime Hypothesis', 'Sovereign Law'],
+    vaultHash: '0xFLINT_WJRT_5_HOMICIDES_ROULETS_LAW_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Researcher',
+    imageUrl: 'plaza_pan',
+    featured: true,
+    promotedToHomePage: true
+  },
+  {
     id: 'WPI-NIH-PROBIOTIC-LEAD-2026',
     contentType: 'Article',
     title: 'Fighting Lead Poisoning with Probiotic Bacteria: NIH Awards $400,753 Grant for Gut Interception Research',

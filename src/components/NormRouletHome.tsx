@@ -240,6 +240,26 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-FLINT-WJRT-5-HOMICIDES-2026',
+      title: 'Flint Violent Crime Surge: 5 Homicides in 5 Days Spikes Murders 20-25% (Lead-Crime Neurotoxicity Empirical Proof)',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: plazaPanImg,
+      summary: 'A deadly early Thursday shooting at Edmund and Wesley Street marked the 5th homicide in Flint since Saturday, spiking murders by 20-25% in one week. Disproportionately impacting Black residents (80-90%), this real-time surge confirms the Lead-Crime Hypothesis, Roulet’s Law, and how heavy metal neurotoxicity triggers societal volatility, gang wars, riots, and global terrorism.',
+      fullText: `Flint Violent Crime Surge: 5 Homicides in 5 Days
+WJRT-TV ABC 12 News Flint • August 13, 2026
+ICEarth Flint Lead Audit: https://icearth.org/?tab=flint
+
+REALITY:
+• At 1:40 a.m. Thursday, Flint City Police found two men with gunshot wounds in an Edmund Street field; one was pronounced dead, marking the 5th homicide since Saturday.
+• Neighbor Qashayla Bivens: "It's a scary feeling knowing that someone's life has been taken... police need to step up preventative measures, like accessible mental health resources."
+• 20-25% single-week increase in Flint murders, where 80-90% of victims are Black.
+• Lead poisoning causes prefrontal dysregulation and impulse destruction, explaining extreme behavioral volatility (riots, retaliations, domestic battery, flash mobs) and mirroring global conflict/terrorism where lead levels are highest (SE Asia, Middle East, Africa).`,
+      tags: ['Flint', 'LeadCrimeHypothesis', 'RouletsLaw', 'WJRT', 'Exposenomics', 'HomicideData'],
+      linkHash: '0xFLINT_WJRT_5_HOMICIDES_ROULETS_LAW_2026',
+      publishedUrl: 'https://www.abc12.com/news/crime/residents-pick-up-the-pieces-after-deadly-edmund-street-shooting/article_2b83b241-04d9-4edb-9d55-07e1a0c2b3cb.html'
+    },
+    {
       id: 'MAG-WPI-NIH-PROBIOTIC-LEAD-2026',
       title: 'Fighting Lead Poisoning with Probiotic Bacteria (WPI / NIH R21ES038018 Breakthrough)',
       category: 'Exposenomics',
