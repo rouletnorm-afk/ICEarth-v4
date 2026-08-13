@@ -8,6 +8,7 @@ import natureSoilCanaryImg from '../assets/images/nature_soil_canary_17866146346
 import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
+import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 import {
   Shield,
   UserCheck,
@@ -192,6 +193,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: 'medical_interventions',
       description: 'Interactive medical diagram & research engine analyzing Dr. Natalie Farny (WPI) & NIH Award R21ES038018 probiotic E. coli Nissle lead-aptamer trapping alongside chelation and DMT1 competitive nutrition.',
       sovereignHash: '0xWPI_NIH_PROBIOTIC_LEAD_INTERVENTION_2026'
+    },
+    {
+      id: 'IP-000G',
+      title: 'Flint Lead-Crime Continuum & Roulet’s Law Scatterplot IP Asset',
+      type: 'Exposenomics Infographic & Legal Proof',
+      imageSrc: flintLeadCrimeProofImg,
+      link: 'flint',
+      description: 'Sovereign mathematical proof of Roulet’s Law connecting 50+ years of cumulative lead poisoning (1970s leaded gasoline through water crisis) to prefrontal neurotoxicity, special education, violent crimes/homicides, neighborhood demolitions, and municipal economic collapse.',
+      sovereignHash: '0xFLINT_LEAD_CRIME_ROULETS_LAW_IP_2026'
     },
     {
       id: 'IP-001',

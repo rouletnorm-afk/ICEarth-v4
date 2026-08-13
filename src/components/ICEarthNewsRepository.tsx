@@ -7,6 +7,7 @@ import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
+import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -86,6 +87,15 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('flint_lead_crime') ||
+    u.includes('1786663441194') ||
+    u.includes('flint-wjrt') ||
+    u.includes('edmund') ||
+    u.includes('homicide_surge')
+  ) {
+    return flintLeadCrimeProofImg;
+  }
   if (
     u.includes('probiotic') ||
     u.includes('1786650125640') ||
@@ -195,7 +205,7 @@ Article URL: https://www.abc12.com/news/crime/residents-pick-up-the-pieces-after
     vaultHash: '0xFLINT_WJRT_5_HOMICIDES_ROULETS_LAW_2026',
     editorName: 'Norm Roulet',
     editorRole: 'ICEarth Founder & Lead Researcher',
-    imageUrl: 'plaza_pan',
+    imageUrl: 'flint_lead_crime_proof',
     featured: true,
     promotedToHomePage: true
   },

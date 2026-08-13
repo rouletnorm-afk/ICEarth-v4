@@ -42,6 +42,7 @@ import {
 
 import scatterplot2Img from '../assets/images/Scatterplot2.png';
 import scatterplot3Img from '../assets/images/Scatterplot3.png';
+import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 
 interface FlintLeadAuditProps {
   onNavigateTab?: (tab: string) => void;
@@ -153,6 +154,118 @@ export const FlintLeadAudit: React.FC<FlintLeadAuditProps> = ({ onNavigateTab })
               </button>
             );
           })}
+        </div>
+      </div>
+
+      {/* TOP-LEVEL VISUAL INFOGRAPHIC & SCIENTIFIC CONTINUUM SHOWCASE */}
+      <div className="bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950/80 rounded-3xl p-6 sm:p-8 border-2 border-amber-500/60 shadow-2xl space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-amber-500/30 pb-4">
+          <div className="flex items-center gap-2">
+            <span className="p-1.5 bg-amber-500 text-stone-950 rounded-lg font-black font-mono text-xs flex items-center gap-1.5 shadow-md">
+              <Sparkles size={16} />
+              EXPOSENOMICS FOUNDATIONAL PROOF
+            </span>
+            <span className="font-mono text-xs font-bold text-amber-300 uppercase tracking-wide">
+              The Lead-Crime Hypothesis & Roulet’s Law in Flint, MI
+            </span>
+          </div>
+          <span className="text-xs font-mono text-stone-400">
+            Cincinnati Lead Study Benchmark • 50+ Years Cumulative Exposure
+          </span>
+        </div>
+
+        {/* Two-Column Grid: Infographic Graphic + Deep Scientific Context */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          {/* Visual Showcase (Click to Enlarge) */}
+          <div className="lg:col-span-5 space-y-3">
+            <div 
+              onClick={() => setSelectedScatterplot({
+                src: flintLeadCrimeProofImg,
+                title: "The Flint Lead-Crime Continuum & Roulet’s Law Infographic",
+                subtitle: "From 1970s Leaded Gasoline & Industrial Toxins to Water Poisoning, Prefrontal Brain Injury, Special Ed Spikes, Homicide Waves, Neighborhood Demolitions & Total Municipal Collapse"
+              })}
+              className="relative group cursor-pointer rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-xl bg-stone-950 aspect-video flex items-center justify-center"
+            >
+              <img
+                src={flintLeadCrimeProofImg}
+                alt="Flint Lead-Crime Continuum Infographic"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white font-mono text-[11px]">
+                <span className="font-bold flex items-center gap-1.5 bg-stone-900/90 px-2.5 py-1 rounded-lg border border-amber-500/40">
+                  <Maximize2 size={12} className="text-amber-400" />
+                  Click to Enlarge Full Infographic Plate
+                </span>
+                <span className="text-amber-300 font-extrabold">#PHOTO-000H</span>
+              </div>
+            </div>
+
+            {/* Quick Scatterplot2.png Link Box */}
+            <div 
+              onClick={() => setSelectedScatterplot({
+                src: scatterplot2Img,
+                title: "Log-Scale Scatterplot #2: Lead Exposure vs. Crime, Demolitions & Dollars Spent",
+                subtitle: "5-Year Empirical Regression Tracking Cumulative Financial Losses, Special Ed Costs & Municipal Collapse"
+              })}
+              className="p-3 bg-stone-900/90 hover:bg-stone-850 rounded-xl border border-stone-700 hover:border-amber-400 transition-all cursor-pointer flex items-center justify-between gap-3 text-xs font-mono"
+            >
+              <div className="flex items-center gap-2">
+                <FileSpreadsheet size={16} className="text-amber-400 shrink-0" />
+                <span className="text-stone-200">
+                  Inspect Scatterplot 2 (Actual Dollars Spent vs Crime): <strong className="text-amber-300 underline">Scatterplot2.png</strong>
+                </span>
+              </div>
+              <ChevronRight size={14} className="text-amber-400 shrink-0" />
+            </div>
+          </div>
+
+          {/* Deep Exposenomics Narrative & Lessons */}
+          <div className="lg:col-span-7 space-y-3.5 text-xs sm:text-sm text-stone-200 leading-relaxed font-sans">
+            <h3 className="text-xl sm:text-2xl font-serif font-black text-white">
+              Why Water Did Not Start the Crisis: The Cumulative Historical Continuum
+            </h3>
+
+            <p>
+              The foundational premise of the <strong>Lead-Crime Hypothesis</strong>—rigorously validated in medical literature by the pioneering <em>Cincinnati Lead Study</em>—proves that childhood lead ingestion destroys prefrontal cortex brain architecture, crippling impulse regulation, executive judgment, and stress tolerance.
+            </p>
+
+            <p>
+              In Flint, Michigan, <strong>the 2014 water crisis did not initiate lead poisoning</strong>. Like all legacy industrial urban centers, Flint suffered decades of severe heavy metal saturation from <strong>tetraethyl leaded gasoline emissions (pre-1990s)</strong>, GM foundry particulate, and lead-soldered infrastructure. Water corrosion poured salt into a pre-existing, multi-generational neurological wound.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div className="p-3 bg-stone-950/80 rounded-xl border border-red-500/40 space-y-1">
+                <span className="font-mono text-[10px] font-bold text-red-400 uppercase block">1. Cognitive & Special Ed Collapse</span>
+                <p className="text-xs text-stone-300 font-sans">
+                  Flint public schools saw special education rates surge past 28-30%, creating insurmountable district budget deficits and catastrophic cognitive loss for young learners.
+                </p>
+              </div>
+
+              <div className="p-3 bg-stone-950/80 rounded-xl border border-amber-500/40 space-y-1">
+                <span className="font-mono text-[10px] font-bold text-amber-300 uppercase block">2. Violent Crime & 80-90% Black Victims</span>
+                <p className="text-xs text-stone-300 font-sans">
+                  Prefrontal impulsivity translates directly into extreme violent crime spikes, reckless shooting, and retaliations where 80-90% of homicide victims are Black.
+                </p>
+              </div>
+
+              <div className="p-3 bg-stone-950/80 rounded-xl border border-stone-700 space-y-1">
+                <span className="font-mono text-[10px] font-bold text-stone-400 uppercase block">3. Neighborhood Demolitions</span>
+                <p className="text-xs text-stone-300 font-sans">
+                  Widespread blight triggered the mass demolition of over 10,000 vacant and abandoned residential structures, hollowing out the physical fabric of the city.
+                </p>
+              </div>
+
+              <div className="p-3 bg-stone-950/80 rounded-xl border border-emerald-500/40 space-y-1">
+                <span className="font-mono text-[10px] font-bold text-emerald-300 uppercase block">4. Municipal Economic Ruin & Roulet’s Law</span>
+                <p className="text-xs text-stone-300 font-sans">
+                  Flint’s population crashed from 200,000 to &lt;80,000. Roulet’s Law tracks the multi-billion dollar liabilities and actual dollars spent on the log scatterplot.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

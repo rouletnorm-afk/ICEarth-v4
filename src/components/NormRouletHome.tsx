@@ -60,10 +60,20 @@ import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
+import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('flint_lead_crime') ||
+    u.includes('1786663441194') ||
+    u.includes('flint-wjrt') ||
+    u.includes('edmund') ||
+    u.includes('flint_lead_proof')
+  ) {
+    return flintLeadCrimeProofImg;
+  }
   if (
     u.includes('probiotic') ||
     u.includes('1786650125640') ||
@@ -244,7 +254,7 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
       title: 'Flint Violent Crime Surge: 5 Homicides in 5 Days Spikes Murders 20-25% (Lead-Crime Neurotoxicity Empirical Proof)',
       category: 'Exposenomics',
       date: '2026-08-13',
-      imageSrc: plazaPanImg,
+      imageSrc: flintLeadCrimeProofImg,
       summary: 'A deadly early Thursday shooting at Edmund and Wesley Street marked the 5th homicide in Flint since Saturday, spiking murders by 20-25% in one week. Disproportionately impacting Black residents (80-90%), this real-time surge confirms the Lead-Crime Hypothesis, Roulet’s Law, and how heavy metal neurotoxicity triggers societal volatility, gang wars, riots, and global terrorism.',
       fullText: `Flint Violent Crime Surge: 5 Homicides in 5 Days
 WJRT-TV ABC 12 News Flint • August 13, 2026
@@ -557,6 +567,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000H',
+      title: 'Flint Lead-Crime Continuum & Roulet’s Law Scatterplot Proof — Exposenomics Infographic Plate',
+      category: 'Exposenomics & Collaboration',
+      imageSrc: flintLeadCrimeProofImg,
+      location: 'ICEarth Sovereign Cognition Lab & Flint Lead Audit Case Study',
+      date: '2026-08-13',
+      description: 'Origins: Comprehensive scientific infographic synthesizing 50+ years of cumulative lead poisoning in Flint, Michigan. Tracing the causal continuum from 1970s-1990s leaded gasoline exhaust to corroded water infrastructure, prefrontal neurotoxicity, special education surges, violent crime spikes, neighborhood demolitions, and municipal economic collapse proving Roulet\'s Law.',
+      vaultHash: '0xFLINT_LEAD_CRIME_ROULETS_LAW_INFOGRAPHIC_2026',
+      tags: ['Flint', 'LeadCrimeHypothesis', 'RouletsLaw', 'Scatterplot', 'LeadedGasoline', 'WaterCrisis', 'HomicideData', 'Exposenomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000F',
       title: 'Graphical Storybook Plate #01: The Canary in the Coal Mine — Gemini AI & Norm Roulet Educational Edition',
