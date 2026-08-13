@@ -101,15 +101,16 @@ import { EvolutionaryCanaryProof } from './components/EvolutionaryCanaryProof';
 import { PicaExposenomics } from './components/PicaExposenomics';
 import { ExposenomicsStorybook } from './components/ExposenomicsStorybook';
 import { AnimatedDocumentaryStage } from './components/AnimatedDocumentaryStage';
+import { MedicalInterventionsTab } from './components/MedicalInterventionsTab';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'storybook' | 'documentary' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'storybook' | 'documentary' | 'medical_interventions' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -198,6 +199,19 @@ export default function App() {
         setActiveTab('storybook');
       } else if (lower === 'documentary' || lower === 'film' || lower === 'video') {
         setActiveTab('documentary');
+      } else if (
+        lower === 'medical_interventions' ||
+        lower === 'medical-interventions' ||
+        lower === 'medical' ||
+        lower === 'interventions' ||
+        lower === 'probiotics' ||
+        lower === 'probiotic' ||
+        lower === 'chelation' ||
+        lower === 'nutrition' ||
+        lower.includes('probiotic') ||
+        lower.includes('interventions')
+      ) {
+        setActiveTab('medical_interventions');
       } else if (
         lower === 'pica' ||
         lower === 'geophagy' ||
@@ -968,6 +982,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.0005 Medical Interventions: Probiotics, Chelation & Nutrition */}
+                <button
+                  onClick={() => setActiveTab('medical_interventions' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'medical_interventions' || (activeTab as string) === 'probiotics' || (activeTab as string) === 'chelation'
+                      ? 'bg-emerald-600 text-white border-emerald-500 shadow-md font-extrabold ring-1 ring-emerald-400/50'
+                      : 'hover:bg-emerald-500/20 text-emerald-950 border-emerald-400/50 bg-emerald-50/90 font-bold'
+                  }`}
+                >
+                  <Stethoscope size={16} className={activeTab === 'medical_interventions' ? 'text-white' : 'text-emerald-800'} />
+                  <span className="flex-1 font-bold">🧪 Medical Interventions (WPI/NIH)</span>
+                  <span className="px-1.5 py-0.2 bg-emerald-950 text-emerald-200 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    NIH 2026
+                  </span>
+                </button>
+
                 {/* 0.001 AI Testimonial & Cognition: AI as the New Pb */}
                 <button
                   onClick={() => setActiveTab('ai_testimonial' as any)}
@@ -1571,6 +1601,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
                     { id: 'storybook', icon: BookOpen, label: '📖 Graphical Storybook (Early Learners)', badge: 'Storybook', color: 'amber' },
                     { id: 'documentary', icon: Film, label: '🎬 Animated Documentary Stage', badge: 'Film', color: 'amber' },
+                    { id: 'medical_interventions', icon: Stethoscope, label: '🧪 Medical Interventions (WPI/NIH)', badge: 'NIH 2026', color: 'emerald' },
                     { id: 'ai_testimonial', icon: Brain, label: '🤖 AI Testimonial & Cognition', badge: 'AI/Pb', color: 'amber' },
                     { id: 'analytics', icon: BarChart3, label: '📊 Visitor Analytics & Metrics', badge: 'Stats', color: 'emerald' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
@@ -3089,6 +3120,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {((activeTab as string) === 'documentary' || (activeTab as string) === 'film' || (activeTab as string) === 'video') && (
             <div className="flex-1 overflow-y-auto p-4 sm:p-8">
               <AnimatedDocumentaryStage 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.007: MEDICAL INTERVENTIONS (PROBIOTICS, CHELATION, NUTRITION) */}
+          {(activeTab === 'medical_interventions' || (activeTab as string) === 'probiotics' || (activeTab as string) === 'chelation' || (activeTab as string) === 'nutrition') && (
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8">
+              <MedicalInterventionsTab 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

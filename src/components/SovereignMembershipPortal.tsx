@@ -7,6 +7,7 @@ import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
+import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import {
   Shield,
   UserCheck,
@@ -182,6 +183,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: 'documentary',
       description: 'Interactive documentary presentation stage tracing 1,000,000 years of hominin lead exposure from cave hearths to industrial steel and Pica disorder.',
       sovereignHash: '0xICEARTH_ANIMATED_DOCUMENTARY_STAGE_IP_2026'
+    },
+    {
+      id: 'IP-000F',
+      title: 'Medical Interventions Engine: Probiotic Lead Trapping, Chelation & DMT1 Nutrition',
+      type: 'Synthetic Biology & Medical Interventions Model',
+      imageSrc: probioticGraphicImg,
+      link: 'medical_interventions',
+      description: 'Interactive medical diagram & research engine analyzing Dr. Natalie Farny (WPI) & NIH Award R21ES038018 probiotic E. coli Nissle lead-aptamer trapping alongside chelation and DMT1 competitive nutrition.',
+      sovereignHash: '0xWPI_NIH_PROBIOTIC_LEAD_INTERVENTION_2026'
     },
     {
       id: 'IP-001',

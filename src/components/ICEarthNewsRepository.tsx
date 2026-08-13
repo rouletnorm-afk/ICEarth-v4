@@ -6,6 +6,7 @@ import plazaPanImg from '../assets/images/PlazaPan2.JPG';
 import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
+import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -86,6 +87,14 @@ const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
   if (
+    u.includes('probiotic') ||
+    u.includes('1786650125640') ||
+    u.includes('wpi') ||
+    u.includes('farny')
+  ) {
+    return probioticGraphicImg;
+  }
+  if (
     u.includes('pica') ||
     u.includes('geophagy') ||
     u.includes('1786618000000') ||
@@ -143,6 +152,61 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'WPI-NIH-PROBIOTIC-LEAD-2026',
+    contentType: 'Article',
+    title: 'Fighting Lead Poisoning with Probiotic Bacteria: NIH Awards $400,753 Grant for Gut Interception Research',
+    subtitle: 'Worcester Polytechnic Institute (WPI) • Natalie Farny, Dmitry Korkin & Robert F. Ferrari • NIH NIEHS Award R21ES038018',
+    sourceUrl: 'https://www.wpi.edu/news/fighting-lead-poisoning-probiotic-bacteria',
+    sourceName: 'Worcester Polytechnic Institute (WPI) News & National Institutes of Health (NIH)',
+    publishDate: '2026-08-13',
+    author: 'Colleen Wamback (WPI Public Relations Director)',
+    authorName: 'Colleen Wamback & WPI Marketing Communications',
+    abstract: 'In the hunt for ways to reduce lead poisoning, researchers in Natalie Farny\'s Worcester Polytechnic Institute lab are turning to E. coli Nissle probiotic bacteria engineered to produce nucleic acid aptamers in the gastrointestinal tract, trapping ingested lead (Pb2+) for excretion before intestinal absorption occurs. Computer scientist Dmitry Korkin uses AI algorithms to identify and rearrange genetic code for optimal lead binding.',
+    editorCommentary: 'Norm Roulet & Sovereign Exposenomics Synthesis: Synthetic biology and AI-guided probiotic aptamers represent a revolutionary non-invasive medical intervention against chronic environmental heavy metal poisoning. While environmental remediation and source removal can take years, continuous probiotic GI-gut trapping provides immediate prophylactic protection for children living with lead-contaminated water, topsoil, or paint dust.',
+    fullExcerpt: `Fighting Lead Poisoning with Probiotic Bacteria
+Worcester Polytechnic Institute (WPI) Press Release • August 13, 2026
+Media Contact: Colleen Wamback, Director Public Relations, Marketing Communications, +1 (508) 831-5000 x6775, media@wpi.edu
+NIH NIEHS Award Number: R21ES038018 ($400,753)
+
+In the hunt for ways to reduce lead poisoning, researchers in Natalie Farny's Worcester Polytechnic Institute (WPI) lab are turning to some tiny worms with a taste for bacteria.
+
+Farny, an associate professor in the Department of Biology and Biotechnology, has been awarded a $400,753 grant from the National Institutes of Health for early-stage research that will examine whether harmless bacteria could be put to work in the gastrointestinal tract of C. elegans nematodes to block the absorption of lead. The two-year project will focus on bacteria in a probiotic supplement that is used outside the United States.
+
+“Most lead exposure occurs when humans ingest contaminated water, food, dust, or paint particles,” Farny said. “There is evidence that bacteria are good at sensing and responding to metals, so our idea is that a potential solution for people in high-risk environments, especially children, might be to consume a probiotic to protect against lead poisoning.”
+
+Researchers led by Farny will focus their work on E. coli Nissle, a harmless bacteria used in probiotics that are sold outside the United States to treat gastrointestinal ailments such as diarrhea. They will test their ideas in C. elegans, a soil-dwelling worm that feeds on bacteria, measures about 1 millimeter in length, and is often used in genetic and neurological research as a model for more complex organisms.
+
+The project will involve inserting code into the genes of E. coli Nissle so that the bacteria produce aptamers, which are strands of nucleic acids. The researchers will then feed the bacteria and lead to worms to determine if, in the worms’ guts, the bacteria will make aptamers that trap the lead for excretion.
+
+“The goal in pursuing this new research is to find a way to intervene in a public health emergency.”
+  — Natalie Farny, Associate Professor, Department of Biology and Biotechnology
+
+At the same time, Dmitry Korkin, the Harold L. Jurist ’61 and Heather E. Jurist Dean’s Professor of Computer Science, will use artificial intelligence (AI) methods to identify existing genetic code in E. coli Nissle that could be rearranged to bind with lead. The aim is to adapt E. coli Nissle without adding new genetic code to the bacterium.
+
+“AI can be trained to sort through large amounts of genetic data to find patterns and use them as informational anchors in designing efficient biomolecules,” Korkin said. “The AI predictions can then be tested in laboratory experiments, and this iterative discovery loop can be repeated multiple time until the most efficient biomolecule is found.”
+
+Lead represents a significant public health hazard for children and can leach into water supplies from old pipes. Chelation therapy, which uses agents that bind with lead in the body for excretion, is typically reserved for patients with dangerous levels of metal poisoning. Yet when consumed, even small amounts of lead can cause permanent neurological damage.
+
+Farny’s project is built upon years of research in her lab, including multiple student projects, that was supported by early-stage funding from civil engineer Robert F. Ferrari, a WPI alumnus and president of Northeast Water Solutions Inc., a Rhode Island water systems engineering company.
+
+“It has been a pleasure to observe and support basic science research in the Farny lab,” Ferrari said. “Natalie Farny shares my interest in public health, and the work that she and her students are doing is expanding understanding about significant problems.”
+
+Farny is a synthetic biologist whose research has focused on environmental challenges. She received a prestigious CAREER Award in 2024 from the National Science Foundation to determine how a biological process regulates genes in a soil bacteria that is used in industrial and environmental engineering, and she is a co-inventor on four patent applications concerning aptamers.
+
+“The goal in pursuing this new research is to find a way to intervene in a public health emergency,” Farny said. “When communities are facing a lead crisis, they can try to determine the source and remove it. But that can take time, and it may not be possible to completely avoid lead if the source is environmental. For families that are worried about their children, a probiotic may represent a helpful solution.”
+
+This research was supported by the National Institute of Environmental Health Sciences of the National Institutes of Health under award number R21ES038018.
+https://www.wpi.edu/news/fighting-lead-poisoning-probiotic-bacteria`,
+    tags: ['Probiotics', 'SyntheticBiology', 'NIH', 'WPI', 'Aptamers', 'LeadPoisoning', 'MedicalInterventions', 'EColiNissle', 'CElegans'],
+    communities: ['ICEarth Global', 'Medical Interventions'],
+    vaultHash: '0xWPI_NIH_PROBIOTIC_LEAD_R21ES038018_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Researcher',
+    imageUrl: 'probiotic_lead_intervention',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'STORYBOOK-EDUCATIONAL-RELEASE-2026',
     contentType: 'Book',
@@ -1413,6 +1477,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('Probiotics') || article.tags?.includes('MedicalInterventions') || article.id.includes('PROBIOTIC') || article.id.includes('WPI')) && (
+                      <button
+                        onClick={() => onNavigateTab('medical_interventions')}
+                        className="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Globe size={14} className="text-stone-950" />
+                        <span>🧪 Launch Medical Interventions Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('Storybook') || article.id.includes('STORYBOOK')) && (
                       <button
                         onClick={() => onNavigateTab('storybook')}

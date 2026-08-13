@@ -59,10 +59,18 @@ import mittal720Img from '../assets/images/Mittal720.JPG';
 import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
+import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('probiotic') ||
+    u.includes('1786650125640') ||
+    u.includes('wpi')
+  ) {
+    return probioticGraphicImg;
+  }
   if (
     u.includes('pica') ||
     u.includes('geophagy') ||
@@ -231,6 +239,27 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-WPI-NIH-PROBIOTIC-LEAD-2026',
+      title: 'Fighting Lead Poisoning with Probiotic Bacteria (WPI / NIH R21ES038018 Breakthrough)',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: probioticGraphicImg,
+      summary: 'New NIH grant funding supports research by Dr. Natalie Farny and Dr. Dmitry Korkin at Worcester Polytechnic Institute showing how harmless probiotic E. coli Nissle bacteria can be genetically adapted or AI-designed to produce nucleic acid aptamers in the gastrointestinal tract, trapping lead ions for excretion before intestinal absorption occurs.',
+      fullText: `Fighting Lead Poisoning with Probiotic Bacteria
+Worcester Polytechnic Institute (WPI) Press Release • August 13, 2026
+Media Contact: Colleen Wamback, Director Public Relations, media@wpi.edu, +1 (508) 831-5000 x6775
+NIH NIEHS Award Number: R21ES038018 ($400,753)
+ICEarth Medical Interventions Engine: https://icearth.org/?tab=medical_interventions
+
+SUMMARY:
+• Dr. Natalie Farny (WPI Biology) & Dr. Dmitry Korkin (WPI Computer Science) receive $400,753 NIH grant to test E. coli Nissle probiotic aptamer lead trapping in C. elegans nematodes.
+• AI algorithms rearrange genetic code in E. coli Nissle to produce nucleic acid aptamers that sequester lead (Pb2+) in the GI tract.
+• Trapped lead-aptamer complexes pass harmlessly through feces, preventing blood-brain barrier transport and organ toxicity.`,
+      tags: ['Probiotics', 'SyntheticBiology', 'NIH', 'WPI', 'Aptamers', 'LeadPoisoning', 'MedicalInterventions', 'ICEarth'],
+      linkHash: '0xWPI_NIH_PROBIOTIC_LEAD_2026',
+      publishedUrl: 'https://www.wpi.edu/news/fighting-lead-poisoning-probiotic-bacteria'
+    },
     {
       id: 'MAG-STORYBOOK-RELEASE-2026',
       title: 'ICEarth Sovereign Graphical Storybook Edition: The Story of Earth\'s Soil & Human Brains',
