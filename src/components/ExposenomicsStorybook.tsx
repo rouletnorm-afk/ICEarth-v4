@@ -320,7 +320,7 @@ export const ExposenomicsStorybook: React.FC<ExposenomicsStorybookProps> = ({
                 <div className="flex items-center justify-between border-b border-emerald-500/20 pb-2">
                   <div className="flex items-center gap-2 text-emerald-400 font-bold">
                     <CheckCircle2 size={16} />
-                    <span>AI Voice Heteronym Fix Engine: /lɛd/ Pronunciation Active</span>
+                    <span>AI Voice Heteronym Fix Engine: /lɛd/ & Roulet ("Roo-lay") Active</span>
                   </div>
                   <span className="text-[10px] text-stone-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">
                     Browser TTS Preprocessor
@@ -334,7 +334,7 @@ export const ExposenomicsStorybook: React.FC<ExposenomicsStorybookProps> = ({
                       "{readingLevel === 'kids' ? page.kidsStory : page.advancedStory}"
                     </p>
                     <span className="text-[10px] text-stone-500 block pt-1">
-                      ⚠️ Default TTS engines read "lead" as verb /liːd/ ("leed").
+                      ⚠️ Standard TTS mispronounces "lead" as verb /liːd/ ("leed") and "Roulet" with audible 't'.
                     </span>
                   </div>
 
@@ -344,7 +344,7 @@ export const ExposenomicsStorybook: React.FC<ExposenomicsStorybookProps> = ({
                       "{phoneticallyFixLeadForTTS(readingLevel === 'kids' ? page.kidsStory : page.advancedStory)}"
                     </p>
                     <span className="text-[10px] text-emerald-400/80 block pt-1">
-                      ✅ Forces browser SpeechSynthesis to pronounce element /lɛd/ ("led").
+                      ✅ Forces element /lɛd/ ("led") and French surname "Roulet" → /ruːˈleɪ/ ("Roo-lay").
                     </span>
                   </div>
                 </div>

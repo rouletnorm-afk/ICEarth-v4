@@ -20,13 +20,21 @@ export interface SpeechOptions {
 }
 
 /**
- * Phonetically transforms exposenomics text so AI TTS voices pronounce
- * the chemical element lead (Pb) correctly as /lɛd/ ("led").
+ * Phonetically transforms exposenomics text so AI TTS voices pronounce:
+ * 1. The chemical element lead (Pb) correctly as /lɛd/ ("led").
+ * 2. The surname Roulet correctly with silent 't' as /ruːˈleɪ/ ("Roo-lay").
  */
 export function phoneticallyFixLeadForTTS(text: string): string {
   if (!text) return '';
 
   let processed = text;
+
+  // 0. Name Pronunciation: Roulet -> "Roolay" (French silent 't', pronounced Rou-lay)
+  processed = processed.replace(/\bRoulet's\b/g, "Roolay's");
+  processed = processed.replace(/\broulet's\b/g, "roolay's");
+  processed = processed.replace(/\bRoulet\b/g, 'Roolay');
+  processed = processed.replace(/\broulet\b/g, 'roolay');
+  processed = processed.replace(/\bROULET\b/g, 'ROOLAY');
 
   // 1. Compound phrases & common heavy metal terminology
   const compoundReplacements: [RegExp, string][] = [

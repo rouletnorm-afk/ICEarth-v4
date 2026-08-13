@@ -310,14 +310,14 @@ export const AnimatedDocumentaryStage: React.FC<AnimatedDocumentaryStageProps> =
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
                 <CheckCircle2 size={16} />
-                <span>AI Voice Heteronym Engine: /lɛd/ Active</span>
+                <span>AI Voice Heteronym & Name Engine Active</span>
               </div>
               <span className="text-[10px] text-emerald-300 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">
-                Automatic Fix
+                /lɛd/ & "Roo-lay"
               </span>
             </div>
             <p className="text-stone-300 text-xs leading-relaxed font-sans">
-              The narrator voice stream automatically normalizes instances of heavy metal element <em>"lead"</em> into phonetic <em>"led"</em> (/lɛd/), preventing standard TTS engines from mispronouncing it as verb <em>"to lead"</em> (/liːd/).
+              The narrator voice stream normalizes heavy metal element <em>"lead"</em> into phonetic <em>"led"</em> (/lɛd/) and French surname <em>"Roulet"</em> into phonetic <em>"Roolay"</em> (/ruːˈleɪ/, silent 't').
             </p>
           </div>
         </div>
