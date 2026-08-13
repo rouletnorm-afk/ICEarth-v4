@@ -857,6 +857,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.0001 Homo sapiens Evolutionary Canary (Nature 2026) */}
+                <button
+                  onClick={() => setActiveTab('evolutionary_canary' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'evolutionary_canary' || (activeTab as string) === 'canary' || (activeTab as string) === 'evolutionary'
+                      ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-900 border-amber-400/50 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Dna size={16} className={activeTab === 'evolutionary_canary' ? 'text-stone-950' : 'text-amber-700'} />
+                  <span className="flex-1 font-bold">🐤 H. sapiens Evolutionary Canary</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    NATURE 2026
+                  </span>
+                </button>
+
                 {/* 0.001 AI Testimonial & Cognition: AI as the New Pb */}
                 <button
                   onClick={() => setActiveTab('ai_testimonial' as any)}

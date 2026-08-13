@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import {
   Flame,
   Globe,
@@ -22,7 +24,10 @@ import {
   Sparkles,
   Zap,
   BarChart2,
-  Filter
+  Filter,
+  Image as ImageIcon,
+  X,
+  Maximize2
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -50,6 +55,7 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
   const isLight = siteTheme === 'light';
   const [activeEpoch, setActiveEpoch] = useState<string>('paleolithic');
   const [activeDataTab, setActiveDataTab] = useState<'evolution' | 'nature_study' | 'roulets_law'>('evolution');
+  const [selectedGraphicModal, setSelectedGraphicModal] = useState<{ src: string; title: string; subtitle: string; hash: string } | null>(null);
 
   // Evolutionary Epochs Data
   const epochs = [
@@ -242,6 +248,167 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
             <ShieldAlert size={14} />
             <span>3. Roulet's Law Proof & Zero-Threshold Axiom</span>
           </button>
+        </div>
+      </div>
+
+      {/* FEATURED GRAPHICAL JOURNAL SERIES: CAVE TO CLEVELAND CANARY PROGRESSION */}
+      <div className="p-6 sm:p-8 rounded-3xl bg-stone-900 text-stone-100 border-2 border-amber-500/40 shadow-2xl space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 font-mono text-xs text-amber-400 font-bold uppercase tracking-wider">
+              <Sparkles size={15} />
+              <span>ICEarth Sovereign Graphical Journal • Canary Series Plate #01 & #02</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-white">
+              H. sapiens Exposome Progression: From Cave Hearths to Cleveland Mittal Steel
+            </h2>
+          </div>
+          {onNavigateTab && (
+            <button
+              onClick={() => onNavigateTab('norm_roulet_home')}
+              className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-2 cursor-pointer hover:scale-105"
+            >
+              <ImageIcon size={15} />
+              <span>📸 Explore Creative Photography Gallery</span>
+              <ArrowRight size={14} />
+            </button>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* PLATE #01: Evolutionary Canary & Nature 2026 Soil Study */}
+          <div className="bg-stone-950 rounded-2xl border border-stone-800 p-4 space-y-4 flex flex-col justify-between group hover:border-amber-500/50 transition-all shadow-xl">
+            <div className="space-y-3">
+              <div 
+                className="relative aspect-video bg-stone-900 rounded-xl overflow-hidden border border-stone-800 cursor-pointer"
+                onClick={() => setSelectedGraphicModal({
+                  src: natureSoilCanaryImg,
+                  title: 'Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model',
+                  subtitle: 'Dual-chart visual synthesis co-created by Norm Roulet & Gemini AI linking 1,000,000 years of hominin lead exposure with the peer-reviewed Stratton et al. (Nature 2026) East Trenton study.',
+                  hash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
+                })}
+              >
+                <img
+                  src={natureSoilCanaryImg}
+                  alt="H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-amber-500 text-stone-950 font-mono font-black text-[10px] uppercase px-2.5 py-1 rounded-lg shadow-md border border-amber-300">
+                  Plate #01 • Evolutionary Canary
+                </div>
+                <div className="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="px-3 py-1.5 bg-amber-500 text-stone-950 font-mono font-extrabold text-xs rounded-xl shadow-lg flex items-center gap-1.5">
+                    <Maximize2 size={14} />
+                    <span>Expand High-Res Artwork</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-amber-300 font-serif">
+                  Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model
+                </h3>
+                <p className="text-xs text-stone-300 leading-relaxed font-sans">
+                  Dual-chart synthesis co-created by Norman Roulet & Gemini AI. Synthesizes 1,000,000 years of hominin lead exposure (cave hearths, Roman aqueducts, lead petrol) with the peer-reviewed Stratton et al. (Nature 2026) study proving 80% of floor dust hazards in paint-free homes stem from tracked exterior soil.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <span className="text-[10px] text-stone-400">0xEVOLUTIONARY_CANARY_NATURE_2026</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setSelectedGraphicModal({
+                    src: natureSoilCanaryImg,
+                    title: 'Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model',
+                    subtitle: 'Dual-chart visual synthesis co-created by Norm Roulet & Gemini AI linking 1,000,000 years of hominin lead exposure with the peer-reviewed Stratton et al. (Nature 2026) East Trenton study.',
+                    hash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
+                  })}
+                  className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer"
+                >
+                  <Maximize2 size={13} />
+                  <span>View High-Res</span>
+                </button>
+                {onNavigateTab && (
+                  <button
+                    onClick={() => onNavigateTab('norm_roulet_home')}
+                    className="px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-bold rounded-xl border border-amber-500/30 flex items-center gap-1 transition-all cursor-pointer"
+                  >
+                    <ImageIcon size={13} />
+                    <span>Vault Gallery</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* PLATE #02: Cleveland Industrial Canary in the Coal Mine */}
+          <div className="bg-stone-950 rounded-2xl border border-stone-800 p-4 space-y-4 flex flex-col justify-between group hover:border-amber-500/50 transition-all shadow-xl">
+            <div className="space-y-3">
+              <div 
+                className="relative aspect-video bg-stone-900 rounded-xl overflow-hidden border border-stone-800 cursor-pointer"
+                onClick={() => setSelectedGraphicModal({
+                  src: mittalCanaryLogoImg,
+                  title: 'Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)',
+                  subtitle: 'Historical industrial baseline photograph capturing Mittal Steel smoke plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
+                  hash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
+                })}
+              >
+                <img
+                  src={mittalCanaryLogoImg}
+                  alt="Cleveland Industrial Canary in the Coal Mine"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-stone-900/90 text-amber-400 font-mono font-black text-[10px] uppercase px-2.5 py-1 rounded-lg shadow-md border border-amber-500/40">
+                  Plate #02 • Cleveland Baseline
+                </div>
+                <div className="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="px-3 py-1.5 bg-amber-500 text-stone-950 font-mono font-extrabold text-xs rounded-xl shadow-lg flex items-center gap-1.5">
+                    <Maximize2 size={14} />
+                    <span>Expand High-Res Artwork</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-amber-300 font-serif">
+                  Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)
+                </h3>
+                <p className="text-xs text-stone-300 leading-relaxed font-sans">
+                  The original Cleveland industrial benchmark photograph capturing heavy metal smoke plumes over the Cuyahoga River Valley and Mittal Steel. Establishes the real-world urban exposenomics baseline showing how modern industrial emissions overlay geological background levels.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <span className="text-[10px] text-stone-400">0xCLEVELAND_MITTAL_CANARY_PLATE_02</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setSelectedGraphicModal({
+                    src: mittalCanaryLogoImg,
+                    title: 'Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)',
+                    subtitle: 'Historical industrial baseline photograph capturing Mittal Steel smoke plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
+                    hash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
+                  })}
+                  className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer"
+                >
+                  <Maximize2 size={13} />
+                  <span>View High-Res</span>
+                </button>
+                {onNavigateTab && (
+                  <button
+                    onClick={() => onNavigateTab('norm_roulet_home')}
+                    className="px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-bold rounded-xl border border-amber-500/30 flex items-center gap-1 transition-all cursor-pointer"
+                  >
+                    <ImageIcon size={13} />
+                    <span>Vault Gallery</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -590,7 +757,7 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
             <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-stone-200 dark:border-stone-800">
               <button
                 onClick={() => onNavigateTab && onNavigateTab('norm_roulet_home')}
-                className="px-5 py-2.5 rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 text-xs font-semibold hover:bg-stone-800 transition-colors flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 text-xs font-semibold hover:bg-stone-800 transition-colors flex items-center gap-2 cursor-pointer"
               >
                 <span>Return to Home Page Proofs</span>
                 <ArrowRight size={14} />
@@ -598,11 +765,75 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 
               <button
                 onClick={() => onNavigateTab && onNavigateTab('sovereign_portal')}
-                className="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition-colors flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition-colors flex items-center gap-2 cursor-pointer"
               >
                 <span>View Sovereign Directory</span>
                 <ChevronRight size={14} />
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* HIGH-RES GRAPHIC MODAL VIEWER */}
+      {selectedGraphicModal && (
+        <div className="fixed inset-0 z-50 bg-stone-950/90 backdrop-blur-md p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center animate-in fade-in duration-200">
+          <div className="relative w-full max-w-5xl bg-stone-900 border-2 border-amber-500/50 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+            <div className="p-4 sm:p-5 bg-stone-950 border-b border-stone-800 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <Sparkles size={18} className="text-amber-400" />
+                <div>
+                  <h3 className="text-sm sm:text-base font-bold text-white font-serif">
+                    {selectedGraphicModal.title}
+                  </h3>
+                  <p className="text-[10px] font-mono text-amber-400">
+                    Sovereign Hash: {selectedGraphicModal.hash}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setSelectedGraphicModal(null)}
+                className="p-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white transition-colors cursor-pointer"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="p-4 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-stone-950">
+              <img
+                src={selectedGraphicModal.src}
+                alt={selectedGraphicModal.title}
+                referrerPolicy="no-referrer"
+                className="max-h-[65vh] w-auto object-contain rounded-2xl border border-stone-800 shadow-2xl"
+              />
+              <p className="mt-4 text-xs text-stone-300 max-w-3xl text-center leading-relaxed font-sans bg-stone-900/80 p-3 rounded-xl border border-stone-800">
+                {selectedGraphicModal.subtitle}
+              </p>
+            </div>
+
+            <div className="p-4 bg-stone-950 border-t border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+              <span className="text-stone-400">ICEarth Sovereign Graphical Journal • Co-Created Asset</span>
+              <div className="flex items-center gap-2">
+                {onNavigateTab && (
+                  <button
+                    onClick={() => {
+                      setSelectedGraphicModal(null);
+                      onNavigateTab('norm_roulet_home');
+                    }}
+                    className="px-4 py-2 bg-amber-500 text-stone-950 font-bold rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <ImageIcon size={14} />
+                    <span>Open Creative Photography Gallery</span>
+                  </button>
+                )}
+                <button
+                  onClick={() => setSelectedGraphicModal(null)}
+                  className="px-4 py-2 bg-stone-800 text-stone-200 font-bold rounded-xl hover:bg-stone-700 transition-colors cursor-pointer"
+                >
+                  Close Artwork
+                </button>
+              </div>
             </div>
           </div>
         </div>

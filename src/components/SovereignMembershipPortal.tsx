@@ -5,6 +5,7 @@ import scatterplotImg from '../assets/images/Scatterplot.jpg';
 import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
 import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import {
   Shield,
   UserCheck,
@@ -138,12 +139,21 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
       id: 'IP-000',
-      title: 'H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Tracking Study',
+      title: 'H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Tracking Study (Plate #01)',
       type: 'Peer-Reviewed Source Study & Evolutionary Model',
       imageSrc: natureSoilCanaryImg,
       link: 'evolutionary_canary',
       description: 'Landmark Nature 2026 publication (Stratton et al.) proving 80% of floor dust samples in paint-free homes exceed EPA safety limits due to exterior soil tracking. Integrated into Roulet\'s Law H. sapiens Evolutionary Canary Proof.',
       sovereignHash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
+    },
+    {
+      id: 'IP-000B',
+      title: 'Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes & Heavy Metal Footprint - Plate #02)',
+      type: 'Industrial Exposenomics Baseline Graphic',
+      imageSrc: mittalCanaryLogoImg,
+      link: 'evolutionary_canary',
+      description: 'Historical industrial baseline image capturing Mittal Steel plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
+      sovereignHash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
     },
     {
       id: 'IP-001',
