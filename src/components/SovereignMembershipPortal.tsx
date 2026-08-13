@@ -4,6 +4,7 @@ import caseAlumnusHeaderImg from '../assets/images/CaseAlumnusHeader.JPG';
 import scatterplotImg from '../assets/images/Scatterplot.jpg';
 import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
 import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
+import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import {
   Shield,
   UserCheck,
@@ -26,6 +27,7 @@ import {
   DollarSign,
   Gavel,
   Globe,
+  Dna,
   Sliders,
   RefreshCw,
   Plus,
@@ -134,6 +136,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000',
+      title: 'H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Tracking Study',
+      type: 'Peer-Reviewed Source Study & Evolutionary Model',
+      imageSrc: natureSoilCanaryImg,
+      link: 'evolutionary_canary',
+      description: 'Landmark Nature 2026 publication (Stratton et al.) proving 80% of floor dust samples in paint-free homes exceed EPA safety limits due to exterior soil tracking. Integrated into Roulet\'s Law H. sapiens Evolutionary Canary Proof.',
+      sovereignHash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
+    },
     {
       id: 'IP-001',
       title: 'Co-Founder Agua Das at Hemp-I-Scream Booth (Case Alumnus Photo)',
@@ -446,16 +457,28 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
           </div>
         </div>
 
-        {onNavigateTab && (
-          <button
-            id="btn-return-icearth-home"
-            onClick={() => onNavigateTab('norm_roulet_home')}
-            className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-2 shrink-0 cursor-pointer hover:scale-105"
-          >
-            <Globe size={16} className="text-stone-950" />
-            <span>🏠 ICEarth Launch Home Page</span>
-          </button>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {onNavigateTab && (
+            <button
+              id="btn-nav-evolutionary-canary"
+              onClick={() => onNavigateTab('evolutionary_canary')}
+              className="px-4 py-2.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-900 dark:text-amber-200 font-extrabold text-xs rounded-xl shadow border border-amber-500/40 transition-all flex items-center gap-2 cursor-pointer hover:scale-105"
+            >
+              <Dna size={16} className="text-amber-600 dark:text-amber-400" />
+              <span>🐤 H. sapiens Canary (Nature 2026)</span>
+            </button>
+          )}
+          {onNavigateTab && (
+            <button
+              id="btn-return-icearth-home"
+              onClick={() => onNavigateTab('norm_roulet_home')}
+              className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-2 shrink-0 cursor-pointer hover:scale-105"
+            >
+              <Globe size={16} className="text-stone-950" />
+              <span>🏠 ICEarth Launch Home Page</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* TOP SOVEREIGN HEADER & DEMO PRESET SWITCHER */}

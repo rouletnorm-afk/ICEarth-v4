@@ -97,15 +97,16 @@ import LeadTerrorismProofs from './components/LeadTerrorismProofs';
 import { SovereignMembershipPortal } from './components/SovereignMembershipPortal';
 import { AITestimonialCognition } from './components/AITestimonialCognition';
 import { SovereignAnalyticsDashboard } from './components/SovereignAnalyticsDashboard';
+import { EvolutionaryCanaryProof } from './components/EvolutionaryCanaryProof';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3 } from 'lucide-react';
+import { Brain, BarChart3, Dna } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -182,9 +183,11 @@ export default function App() {
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
     } else if (tabParam) {
-      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study', 'ai_testimonial', 'ai_cognition', 'ai_lead', 'ai_truth', 'analytics', 'analytics_dashboard', 'metrics', 'stats'];
+      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study', 'ai_testimonial', 'ai_cognition', 'ai_lead', 'ai_truth', 'analytics', 'analytics_dashboard', 'metrics', 'stats', 'evolutionary_canary', 'canary', 'evolutionary'];
       if (tabParam === 'flint_audit' || tabParam === 'flint_case_study') {
         setActiveTab('flint');
+      } else if (tabParam === 'canary' || tabParam === 'evolutionary') {
+        setActiveTab('evolutionary_canary' as any);
       } else if (tabParam === 'ai_cognition' || tabParam === 'ai_lead' || tabParam === 'ai_truth') {
         setActiveTab('ai_testimonial' as any);
       } else if (tabParam === 'analytics_dashboard' || tabParam === 'metrics' || tabParam === 'stats') {
@@ -1453,6 +1456,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   
                   {[
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
+                    { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
                     { id: 'ai_testimonial', icon: Brain, label: '🤖 AI Testimonial & Cognition', badge: 'AI/Pb', color: 'amber' },
                     { id: 'analytics', icon: BarChart3, label: '📊 Visitor Analytics & Metrics', badge: 'Stats', color: 'emerald' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
@@ -2933,6 +2937,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-stone-100">
               <SovereignAnalyticsDashboard 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.003: H. SAPIENS EVOLUTIONARY CANARY & NATURE 2026 SOIL STUDY PROOF */}
+          {activeTab === 'evolutionary_canary' && (
+            <div className="flex-1 overflow-y-auto">
+              <EvolutionaryCanaryProof 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
               />
             </div>
           )}
