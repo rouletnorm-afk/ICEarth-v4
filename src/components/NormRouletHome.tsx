@@ -232,6 +232,49 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-STORYBOOK-RELEASE-2026',
+      title: 'ICEarth Sovereign Graphical Storybook Edition: The Story of Earth\'s Soil & Human Brains',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: natureSoilCanaryImg,
+      summary: 'A standalone graphical storybook designed for early learners, schools, and families. Features page-by-page visual illustrations, dual reading levels (Kids vs. Advanced Research), web speech narration, and narrative plates covering Paleolithic cave hearth fires to modern topsoil lead tracking.',
+      fullText: `ICEarth Sovereign Graphical Storybook Edition
+
+Published: 13 August 2026
+Source: ICEarth Sovereign Cognition Lab & Public Health Education
+URL: https://icearth.org/?tab=storybook
+
+KEY FEATURES:
+• Early Learner & Advanced Research Dual Reading Toggles
+• Automated Narrator Voiceover Speech Synthesizer
+• Plates covering Paleolithic cave fires, industrial steel plumes, Nature 2026 soil tracking, and Pica disorder.`,
+      tags: ['Storybook', 'EarlyLearners', 'PublicHealth', 'Pica', 'SoilLead', 'ICEarth'],
+      linkHash: '0xICEARTH_GRAPHICAL_STORYBOOK_2026',
+      publishedUrl: 'https://icearth.org/?tab=storybook'
+    },
+    {
+      id: 'MAG-DOCUMENTARY-STAGE-2026',
+      title: 'Animated Documentary Stage: The Hominin Exposome (1,000,000 Years of Soil & Lead)',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: picaGeophagyImg,
+      summary: 'Cinematic animated documentary stage tracing hominin lead exposure across 1 million years. Features auto-advancing scene playback, timeline scrubber, narrator voiceover, and director\'s commentary by Norm Roulet & Gemini AI.',
+      fullText: `The Hominin Exposome Animated Documentary Stage
+
+Published: 13 August 2026
+Source: ICEarth Film & Cognition Studio
+URL: https://icearth.org/?tab=documentary
+
+DOCUMENTARY SCENES:
+• Scene 01: 1,000,000 BCE — Paleolithic Discovery of Fire & Cave Hearths
+• Scene 02: 20th Century — Cleveland Mittal Steel Plumes
+• Scene 03: July 2026 — Nature Peer-Reviewed Soil-to-Dust Study
+• Scene 04: August 2026 — Maternal Pica, Sweet Lead Paint Chips, and 800 Million Children`,
+      tags: ['Documentary', 'AnimatedFilm', 'HomininEvolution', 'SoilLead', 'Pica', 'ICEarth'],
+      linkHash: '0xICEARTH_DOCUMENTARY_STAGE_2026',
+      publishedUrl: 'https://icearth.org/?tab=documentary'
+    },
+    {
       id: 'MAG-PICA-GEOPHAGY-LEAD-2026',
       title: 'Pica Disorder & Gestational Anemia (12 August 2026): Why Pregnant Women Crave Dirt & The Toxic Heavy Metal Soil Legacy',
       category: 'Exposenomics',
@@ -465,6 +508,28 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000F',
+      title: 'Graphical Storybook Plate #01: The Canary in the Coal Mine — Gemini AI & Norm Roulet Educational Edition',
+      category: 'Exposenomics & Storybook',
+      imageSrc: natureSoilCanaryImg,
+      location: 'ICEarth Sovereign Cognition Lab & Public Health Education',
+      date: '2026-08-13',
+      description: 'Origins: Standalone educational storybook plate for early learners and families, illustrating how hominin cave fires and exterior soil lead connect to modern children\'s health.',
+      vaultHash: '0xGRAPHICAL_STORYBOOK_PLATE_01_2026',
+      tags: ['Storybook', 'EarlyLearners', 'PublicHealth', 'SoilLead', 'GeminiAI', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000G',
+      title: 'Animated Documentary Stage Scene #04: Maternal Pica & Geophagy — Gemini AI & Norm Roulet Film Stage',
+      category: 'Exposenomics & Documentary',
+      imageSrc: picaGeophagyImg,
+      location: 'ICEarth Film & Cognition Studio',
+      date: '2026-08-13',
+      description: 'Origins: Cinematic documentary stage scene visualizing maternal geophagy, sweet lead paint chips, and global prefrontal cortex neurotoxicity in 800 million children.',
+      vaultHash: '0xANIMATED_DOCUMENTARY_SCENE_04_2026',
+      tags: ['Documentary', 'AnimatedFilm', 'Pica', 'SoilLead', 'GeminiAI', 'ICEarth']
+    },
     {
       id: 'PHOTO-000E',
       title: 'Pica Disorder, Maternal Geophagy & Sweet Lead Paint Chips Infographic — Gemini AI & Norm Roulet Co-Created Asset',

@@ -99,8 +99,10 @@ import { AITestimonialCognition } from './components/AITestimonialCognition';
 import { SovereignAnalyticsDashboard } from './components/SovereignAnalyticsDashboard';
 import { EvolutionaryCanaryProof } from './components/EvolutionaryCanaryProof';
 import { PicaExposenomics } from './components/PicaExposenomics';
+import { ExposenomicsStorybook } from './components/ExposenomicsStorybook';
+import { AnimatedDocumentaryStage } from './components/AnimatedDocumentaryStage';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
@@ -890,6 +892,38 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.0003 Graphical Storybook */}
+                <button
+                  onClick={() => setActiveTab('storybook' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    (activeTab as string) === 'storybook'
+                      ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-900 border-amber-400/50 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <BookOpen size={16} className={(activeTab as string) === 'storybook' ? 'text-stone-950' : 'text-amber-800'} />
+                  <span className="flex-1 font-bold">📖 Graphical Storybook (Early Learners)</span>
+                  <span className="px-1.5 py-0.2 bg-amber-700 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    STORYBOOK
+                  </span>
+                </button>
+
+                {/* 0.0004 Animated Documentary Stage */}
+                <button
+                  onClick={() => setActiveTab('documentary' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    (activeTab as string) === 'documentary'
+                      ? 'bg-stone-950 text-amber-300 border-amber-500 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-900 border-amber-400/50 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Film size={16} className={(activeTab as string) === 'documentary' ? 'text-amber-400' : 'text-amber-800'} />
+                  <span className="flex-1 font-bold">🎬 Animated Documentary Stage</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    FILM STAGE
+                  </span>
+                </button>
+
                 {/* 0.001 AI Testimonial & Cognition: AI as the New Pb */}
                 <button
                   onClick={() => setActiveTab('ai_testimonial' as any)}
@@ -1491,6 +1525,8 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
+                    { id: 'storybook', icon: BookOpen, label: '📖 Graphical Storybook (Early Learners)', badge: 'Storybook', color: 'amber' },
+                    { id: 'documentary', icon: Film, label: '🎬 Animated Documentary Stage', badge: 'Film', color: 'amber' },
                     { id: 'ai_testimonial', icon: Brain, label: '🤖 AI Testimonial & Cognition', badge: 'AI/Pb', color: 'amber' },
                     { id: 'analytics', icon: BarChart3, label: '📊 Visitor Analytics & Metrics', badge: 'Stats', color: 'emerald' },
                     { id: 'sovereign_portal', icon: Users, label: '🪶 Sovereign Member Portal', badge: 'Portal', color: 'amber' },
@@ -2989,6 +3025,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'pica_exposenomics' || (activeTab as string) === 'pica' || (activeTab as string) === 'geophagy') && (
             <div className="flex-1 overflow-y-auto">
               <PicaExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.005: GRAPHICAL STORYBOOK MODE */}
+          {((activeTab as string) === 'storybook' || (activeTab as string) === 'story') && (
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8">
+              <ExposenomicsStorybook 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.006: ANIMATED DOCUMENTARY STAGE */}
+          {((activeTab as string) === 'documentary' || (activeTab as string) === 'film' || (activeTab as string) === 'video') && (
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8">
+              <AnimatedDocumentaryStage 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

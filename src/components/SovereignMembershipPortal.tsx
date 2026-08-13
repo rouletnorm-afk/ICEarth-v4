@@ -166,6 +166,24 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       sovereignHash: '0xPICA_GEOPHAGY_GESTATIONAL_ANEMIA_LEAD_2026'
     },
     {
+      id: 'IP-000D',
+      title: 'Graphical Storybook Edition: The Story of Earth\'s Soil & Human Brains',
+      type: 'Public Health & Early Learner Educational Media',
+      imageSrc: natureSoilCanaryImg,
+      link: 'storybook',
+      description: 'Standalone educational storybook platform for early learners and families, converting peer-reviewed exposenomics into accessible visual narratives.',
+      sovereignHash: '0xICEARTH_GRAPHICAL_STORYBOOK_IP_2026'
+    },
+    {
+      id: 'IP-000E',
+      title: 'Animated Documentary Stage: The Hominin Exposome (1,000,000 Years)',
+      type: 'Cinematic Animated Film & Video Production Stage',
+      imageSrc: picaGeophagyImg,
+      link: 'documentary',
+      description: 'Interactive documentary presentation stage tracing 1,000,000 years of hominin lead exposure from cave hearths to industrial steel and Pica disorder.',
+      sovereignHash: '0xICEARTH_ANIMATED_DOCUMENTARY_STAGE_IP_2026'
+    },
+    {
       id: 'IP-001',
       title: 'Co-Founder Agua Das at Hemp-I-Scream Booth (Case Alumnus Photo)',
       type: 'Historical Photography',

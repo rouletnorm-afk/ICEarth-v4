@@ -144,6 +144,67 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'STORYBOOK-EDUCATIONAL-RELEASE-2026',
+    contentType: 'Book',
+    title: 'ICEarth Sovereign Graphical Storybook: The Story of Earth\'s Soil & Human Brains',
+    subtitle: 'Standalone Educational Storybook for Early Learners, Schools & Public Health Education',
+    sourceUrl: 'https://icearth.org/?tab=storybook',
+    sourceName: 'ICEarth Sovereign Cognition Lab',
+    publishDate: '2026-08-13',
+    author: 'Norm Roulet & Gemini AI',
+    authorName: 'Norm Roulet & Gemini AI Co-Created Educational Series',
+    abstract: 'A standalone graphical storybook created for early learners, families, and schools worldwide. Features page-by-page visual illustrations, dual reading levels (Early Learner vs. Advanced Research), web speech narration, and narrative plates covering Paleolithic cave fires, Cleveland industrial steel plumes, Nature 2026 soil-to-dust tracking, and Pica disorder.',
+    editorCommentary: 'Norm Roulet Synthesis: To educate humanity on heavy metal toxicity, we must reach early learners with clean, accessible storytelling and visual metaphors. This graphical storybook translates complex peer-reviewed exposenomics into an engaging story that empowers parents, educators, and children to recognize clean soil and lead-free environments.',
+    fullExcerpt: `ICEarth Sovereign Graphical Storybook Edition • Release Date: 13 August 2026
+URL: https://icearth.org/?tab=storybook
+
+PLATES & CHAPTERS INCLUDED:
+• Plate #01: The Canary in the Coal Mine — Earth's Million-Year Soil Secret & Nature 2026 East Trenton Study
+• Plate #02: The Industrial Giant — Cleveland Mittal Steel Plumes & Roulet's Law
+• Plate #03: The Mystery of Pica — Maternal Geophagy, Anemia, and Protecting Toddlers from Sweet Lead Paint Chips
+
+FEATURES:
+• Interactive Dual Reading Level Toggle (Kids vs. Advanced Research)
+• Automated Voiceover Speech Narrator with SpeechSynthesis
+• High-Resolution Artwork Zoom and Provenance Hash Audits`,
+    tags: ['Storybook', 'EarlyLearners', 'PublicHealth', 'Pica', 'Geophagy', 'SoilLead', 'RouletsLaw', 'ICEarth'],
+    communities: ['ICEarth Global', 'Public Health Education'],
+    vaultHash: '0xICEARTH_GRAPHICAL_STORYBOOK_RELEASE_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Researcher',
+  },
+  {
+    id: 'DOCUMENTARY-ANIMATED-STAGE-2026',
+    contentType: 'Video',
+    title: 'Animated Documentary Stage: The Hominin Exposome (1,000,000 Years of Soil & Lead)',
+    subtitle: 'Cinematic Animated Presentation & Video Stage Tracing Hominin Lead Evolution',
+    sourceUrl: 'https://icearth.org/?tab=documentary',
+    sourceName: 'ICEarth Sovereign Film & Cognition Studio',
+    publishDate: '2026-08-13',
+    author: 'Norm Roulet & Gemini AI',
+    authorName: 'Norm Roulet & Gemini AI Co-Production',
+    abstract: 'An interactive animated documentary presentation tracing 1,000,000 years of hominin lead exposure. Follows Scene 01 (Paleolithic Cave Hearths), Scene 02 (20th Century Cleveland Mittal Steel Plumes), Scene 03 (Nature 2026 Soil-to-Dust Tracking), and Scene 04 (Maternal Pica & 800 Million Children). Includes auto-advancing scene stage, timeline scrubber, narrator voiceover, and director\'s commentary notes.',
+    editorCommentary: 'Norm Roulet Synthesis: Presenting evolution from a new exposenomics framework requires dynamic visual storytelling. This animated documentary stage provides the blueprint for full-scale animated video productions, illustrating how hominins transitioned from paleolithic hearth smoke to industrial steel emissions and global topsoil dust.',
+    fullExcerpt: `ICEarth Animated Documentary Stage • Release Date: 13 August 2026
+URL: https://icearth.org/?tab=documentary
+
+DOCUMENTARY SCENES:
+• Scene 01: 1,000,000 BCE — Paleolithic Discovery of Fire & Cave Hearths
+• Scene 02: 20th Century — Cleveland Mittal Steel Plumes & Cuyahoga Valley Deposition
+• Scene 03: July 2026 — Nature Peer-Reviewed Study (80% Indoor Dust Starts as Exterior Soil)
+• Scene 04: August 2026 — Maternal Pica, Sweet Lead Paint Chips, and 800 Million Poisoned Children
+
+FEATURES:
+• Interactive Cinematic Theater Stage with Scrubber & Scene Jump
+• Automated Narrator Voiceover & Director's Notes
+• Scientific Citations & Cryptographic Provenance Hashes`,
+    tags: ['Documentary', 'AnimatedFilm', 'HomininEvolution', 'PaleolithicFire', 'SoilLead', 'Pica', 'Exposenomics'],
+    communities: ['ICEarth Global', 'Documentary Film Studio'],
+    vaultHash: '0xICEARTH_ANIMATED_DOCUMENTARY_STAGE_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Researcher',
+  },
+  {
     id: 'PICA-GEOPHAGY-LEAD-2026',
     contentType: 'Article',
     title: 'Pica Disorder & Gestational Anemia (12 August 2026): Why Pregnant Women Crave Dirt & The Toxic Heavy Metal Soil Legacy',
@@ -1352,6 +1413,28 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('Storybook') || article.id.includes('STORYBOOK')) && (
+                      <button
+                        onClick={() => onNavigateTab('storybook')}
+                        className="px-4 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <BookOpen size={14} className="text-stone-950" />
+                        <span>📖 Open Graphical Storybook</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('Documentary') || article.id.includes('DOCUMENTARY')) && (
+                      <button
+                        onClick={() => onNavigateTab('documentary')}
+                        className="px-4 py-1.5 bg-stone-950 hover:bg-stone-900 text-amber-300 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-500/50 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Tv size={14} className="text-amber-400" />
+                        <span>🎬 Launch Animated Documentary Stage</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('Geophagy')) && (
                       <button
                         onClick={() => onNavigateTab('pica_exposenomics')}
