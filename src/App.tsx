@@ -109,7 +109,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'storybook' | 'documentary' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -181,35 +181,79 @@ export default function App() {
     const params = new URLSearchParams(window.location.search);
     const tabParam = params.get('tab');
     const farmParam = params.get('farm');
-    const chapterParam = params.get('chapter') || params.get('id') || window.location.hash.replace('#', '');
+    const explicitChapterParam = params.get('chapter') || params.get('id');
+    const rawHash = window.location.hash ? window.location.hash.replace('#', '') : null;
 
     if (farmParam === 'taos_kush_institute' || farmParam === 'taoskushinstitute' || farmParam === 'tki' || window.location.pathname.toLowerCase().includes('taoskushinstitute')) {
       setActiveTab('ucanx');
-    } else if (tabParam) {
-      const allowedTabs = ['news', 'news_repository', 'repository', 'icetaos', 'taos', 'icetaos_hub', 'member_matrix', 'matrix', 'norm_roulet', 'normroulet', 'norm_roulet_home', 'norm', 'sovereign_portal', 'swiss_school', 'exposenomics', 'ucanx', 'nanospire_nanocanx', 'nanocanx', 'nanospire_nanocannx', 'nanospire', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint', 'flint_audit', 'flint_case_study', 'ai_testimonial', 'ai_cognition', 'ai_lead', 'ai_truth', 'analytics', 'analytics_dashboard', 'metrics', 'stats', 'evolutionary_canary', 'canary', 'evolutionary'];
-      if (tabParam === 'flint_audit' || tabParam === 'flint_case_study') {
+      return;
+    }
+
+    // Determine target tab from ?tab= query param or #hash (if hash isn't a manuscript chapter)
+    const rawTabTarget = tabParam || (rawHash && !rawHash.startsWith('chapter-') && !rawHash.startsWith('pfas-') ? rawHash : null);
+
+    if (rawTabTarget) {
+      const lower = rawTabTarget.toLowerCase().trim();
+      if (lower === 'storybook' || lower === 'story') {
+        setActiveTab('storybook');
+      } else if (lower === 'documentary' || lower === 'film' || lower === 'video') {
+        setActiveTab('documentary');
+      } else if (
+        lower === 'pica' ||
+        lower === 'geophagy' ||
+        lower === 'pica_exposenomics' ||
+        lower === 'pica_disorder' ||
+        lower === 'maternal_geophagy' ||
+        lower === 'pica_geophagy' ||
+        lower === 'pica-disorder' ||
+        lower === 'maternal-geophagy' ||
+        lower === 'pica-geophagy' ||
+        lower.includes('pica') ||
+        lower.includes('geophagy')
+      ) {
+        setActiveTab('pica_exposenomics');
+      } else if (lower === 'canary' || lower === 'evolutionary' || lower === 'evolutionary_canary') {
+        setActiveTab('evolutionary_canary');
+      } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
+        setActiveTab('reports');
+      } else if (lower === 'sovereign_portal' || lower === 'sovereign' || lower === 'home' || lower === 'portal') {
+        setActiveTab('sovereign_portal');
+      } else if (lower === 'swiss_school' || lower === 'exposenomics') {
+        setActiveTab('swiss_school');
+      } else if (lower === 'norm_roulet' || lower === 'normroulet' || lower === 'norm_roulet_home' || lower === 'norm') {
+        setActiveTab('norm_roulet');
+      } else if (lower === 'member_matrix' || lower === 'matrix') {
+        setActiveTab('member_matrix');
+      } else if (lower === 'icetaos' || lower === 'taos' || lower === 'icetaos_hub') {
+        setActiveTab('icetaos');
+      } else if (lower === 'nanospire_nanocanx' || lower === 'nanocanx' || lower === 'nanospire_nanocannx' || lower === 'nanospire') {
+        setActiveTab('nanospire_nanocanx');
+      } else if (lower === 'ai_testimonial' || lower === 'ai_cognition' || lower === 'ai_lead' || lower === 'ai_truth') {
+        setActiveTab('ai_testimonial');
+      } else if (lower === 'analytics' || lower === 'analytics_dashboard' || lower === 'metrics' || lower === 'stats') {
+        setActiveTab('analytics');
+      } else if (lower === 'flint' || lower === 'flint_audit' || lower === 'flint_case_study') {
         setActiveTab('flint');
-      } else if (tabParam === 'canary' || tabParam === 'evolutionary') {
-        setActiveTab('evolutionary_canary' as any);
-      } else if (tabParam === 'ai_cognition' || tabParam === 'ai_lead' || tabParam === 'ai_truth') {
-        setActiveTab('ai_testimonial' as any);
-      } else if (tabParam === 'analytics_dashboard' || tabParam === 'metrics' || tabParam === 'stats') {
-        setActiveTab('analytics' as any);
-      } else if (allowedTabs.includes(tabParam)) {
-        setActiveTab(tabParam as any);
+      } else {
+        const knownTabs = ['ucanx', 'profiler', 'manuscript', 'simulator', 'nodes', 'chat', 'benchmarking', 'odisse', 'buffalo', 'cleveland', 'chicago', 'reports', 'milwaukee', 'bihar', 'litigation', 'indigenous', 'genocost', 'proofs', 'terrorism_proofs', 'cleveland_strategy', 'nobel_nomination', 'who_action_plan', 'toledo', 'flint'];
+        if (knownTabs.includes(lower)) {
+          setActiveTab(lower as any);
+        }
       }
     }
 
-    if (chapterParam) {
-      if (chapterParam.startsWith('pfas-')) {
+    // Handle manuscript chapter deep-linking
+    const chapterIdTarget = explicitChapterParam || (rawHash && (rawHash.startsWith('chapter-') || rawHash.startsWith('pfas-')) ? rawHash : null);
+    if (chapterIdTarget) {
+      if (chapterIdTarget.startsWith('pfas-')) {
         setRemediationTrack('pfas');
         lastTrackRef.current = 'pfas';
-        setSelectedChapterId(chapterParam);
+        setSelectedChapterId(chapterIdTarget);
         setActiveTab('manuscript');
       } else {
         setRemediationTrack('lead');
         lastTrackRef.current = 'lead';
-        setSelectedChapterId(chapterParam);
+        setSelectedChapterId(chapterIdTarget);
         setActiveTab('manuscript');
       }
     }
