@@ -93,41 +93,96 @@ export const AnimatedDocumentaryStage: React.FC<AnimatedDocumentaryStageProps> =
 
   const currentScene = scenes[activeSceneIndex];
 
-  // Auto-play timer for documentary animation
+  // Controlled auto-play & speech synchronization with /lɛd/ & "Roo-lay" Phonetic Engine
   useEffect(() => {
-    let interval: any = null;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setProgressPercent(prev => {
-          if (prev >= 100) {
-            if (activeSceneIndex < scenes.length - 1) {
-              setActiveSceneIndex(s => s + 1);
-              return 0;
-            } else {
-              setIsPlaying(false);
-              return 100;
-            }
-          }
-          return prev + 2;
-        });
-      }, 300);
-    } else {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying, activeSceneIndex, scenes.length]);
+    let progressTimer: any = null;
+    let sceneTransitionTimeout: any = null;
 
-  // Speech synth narration trigger on scene change when playing with /lɛd/ Phonetic Engine
-  useEffect(() => {
     stopExposenomicsSpeech();
-    if (isPlaying && isAudioEnabled) {
+
+    if (!isPlaying) {
+      return () => {
+        if (progressTimer) clearInterval(progressTimer);
+        if (sceneTransitionTimeout) clearTimeout(sceneTransitionTimeout);
+        stopExposenomicsSpeech();
+      };
+    }
+
+    // Function to handle advancing to the next scene after narration finishes
+    const handleSceneCompletion = () => {
+      setProgressPercent(100);
+      // Brief 1.5 second pause after narration ends before switching scenes
+      sceneTransitionTimeout = setTimeout(() => {
+        if (activeSceneIndex < scenes.length - 1) {
+          setActiveSceneIndex(prev => prev + 1);
+          setProgressPercent(0);
+        } else {
+          setIsPlaying(false);
+          setProgressPercent(100);
+        }
+      }, 1500);
+    };
+
+    const wordCount = currentScene.narration.trim().split(/\s+/).length;
+    // Estimated speech duration in seconds (average ~2.2 words per sec at rate 0.93)
+    const estimatedSpeechSec = Math.max(12, Math.ceil(wordCount / 2.2) + 2);
+
+    if (isAudioEnabled) {
+      // 1. Audio Voiceover Mode: Speech completion strictly controls scene advance
+      let isSpeechFinished = false;
+
       speakExposenomicsText(currentScene.narration, {
         rate: 0.93,
         pitch: 0.95,
-        usePhoneticFix: true
+        usePhoneticFix: true,
+        onEnd: () => {
+          isSpeechFinished = true;
+          handleSceneCompletion();
+        },
+        onError: () => {
+          // Fallback if SpeechSynthesis API fails or is blocked
+          if (!isSpeechFinished) {
+            handleSceneCompletion();
+          }
+        }
       });
+
+      // Smooth progress bar increment capped at 95% while speech is active
+      const stepMs = 250;
+      const totalSteps = (estimatedSpeechSec * 1000) / stepMs;
+      const stepIncrement = 95 / totalSteps;
+
+      progressTimer = setInterval(() => {
+        setProgressPercent(prev => {
+          if (isSpeechFinished) return 100;
+          return Math.min(95, prev + stepIncrement);
+        });
+      }, stepMs);
+
+    } else {
+      // 2. Muted Mode: Time-based progression derived from estimated reading duration
+      const totalDurationSec = estimatedSpeechSec + 4; // Add reading buffer
+      const stepMs = 200;
+      const stepIncrement = 100 / ((totalDurationSec * 1000) / stepMs);
+
+      progressTimer = setInterval(() => {
+        setProgressPercent(prev => {
+          if (prev >= 100) {
+            clearInterval(progressTimer);
+            handleSceneCompletion();
+            return 100;
+          }
+          return Math.min(100, prev + stepIncrement);
+        });
+      }, stepMs);
     }
-  }, [activeSceneIndex, isPlaying, isAudioEnabled]);
+
+    return () => {
+      if (progressTimer) clearInterval(progressTimer);
+      if (sceneTransitionTimeout) clearTimeout(sceneTransitionTimeout);
+      stopExposenomicsSpeech();
+    };
+  }, [isPlaying, activeSceneIndex, isAudioEnabled, scenes.length, currentScene.narration]);
 
   const togglePlay = () => {
     if (isPlaying) {
