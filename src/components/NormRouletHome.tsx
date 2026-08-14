@@ -41,7 +41,8 @@ import {
   ArrowRight,
   Gavel,
   Scale,
-  Flame
+  Flame,
+  Pill
 } from 'lucide-react';
 
 // Import local image assets
@@ -71,10 +72,22 @@ import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocrac
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
+import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('edta') ||
+    u.includes('chelation') ||
+    u.includes('calcium_disodium') ||
+    u.includes('versenate') ||
+    u.includes('acibadem') ||
+    u.includes('1786717879144') ||
+    u.includes('1786720100000')
+  ) {
+    return edtaChelationImg;
+  }
   if (
     u.includes('wildfire') ||
     u.includes('pyro') ||
@@ -323,6 +336,30 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-EDTA-CHELATION-EVIDENCE-2026',
+      title: 'Calcium Disodium EDTA — Explained by Medical Evidence, Not Myths',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: edtaChelationImg,
+      summary: 'Clinical Toxicology & Treatment Knowledge Base: Calcium disodium EDTA (CaNa₂-EDTA) is an evidence-based chelation therapy primarily used for moderate to severe lead poisoning. It differs critically from dangerous Disodium EDTA (fatal hypocalcemia risk). Not a casual detox, it requires strict renal, hydration, and mineral monitoring.',
+      fullText: `CALCIUM DISODIUM EDTA — EXPLAINED BY MEDICAL EVIDENCE, NOT MYTHS
+
+Published: August 14, 2026
+Source: Acıbadem International Health Library (Clinical Toxicology & Pharmacology)
+Citation: https://acibademinternational.com/health-library/calcium-disodium-edta-explained-by-medical-evidence-not-myths/
+ICEarth Treatment Knowledge Base: https://icearth.org/?tab=medical_interventions
+
+KEY CLINICAL TAKEAWAYS & PHARMACOLOGICAL EVIDENCE:
+• Evidence-Based Lead Chelation: Calcium disodium EDTA is primarily indicated for pediatric patients with blood lead levels ≥ 45 µg/dL and adults with severe symptomatic toxicity or acute occupational poisoning.
+• Fatal Disodium EDTA Distinction: Calcium disodium EDTA (CaNa₂-EDTA) contains pre-bound calcium. Disodium EDTA (Na₂-EDTA) contains NO calcium and rapidly strips ionized calcium from serum, causing tetany and fatal cardiac arrest. The FDA has banned Na₂-EDTA for lead poisoning.
+• Not a Wellness "Detox": Chelation therapy is not a routine spa treatment or anti-aging cleanse. Using it in healthy individuals causes severe renal damage and essential mineral depletion without therapeutic benefit.
+• Mandatory Renal & Mineral Monitoring: Because EDTA is excreted via glomerular filtration, renal function (BUN, creatinine, GFR) and high-volume pre-hydration (urine output > 1-2 mL/kg/hr) are mandatory. EDTA also increases urinary excretion of zinc and copper, requiring supplementation.
+• Clinical Decision Criteria: Doctors evaluate chelation needs based on blood lead levels, clinical neurological/abdominal symptoms, age, and renal status.`,
+      tags: ['CalciumDisodiumEDTA', 'ChelationTherapy', 'MedicalInterventions', 'Toxicology', 'DisodiumEDTAWarning', 'ClinicalEvidence', 'RenalMonitoring', 'PeerReviewed'],
+      linkHash: '0xEDTA_CHELATION_CLINICAL_EVIDENCE_2026',
+      publishedUrl: 'https://acibademinternational.com/health-library/calcium-disodium-edta-explained-by-medical-evidence-not-myths/'
+    },
     {
       id: 'MAG-WILDFIRE-PYRO-EXPOSENOMICS-2026',
       title: 'A False Sense of Security: Residents Return to Undamaged Properties Post-Fires to Find Homes, Window Seals, and Nurseries Contaminated with Lead, Asbestos & Heavy Metals',
@@ -780,6 +817,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000Q',
+      title: 'Calcium Disodium EDTA Chelation Therapy & Hexadentate Coordination Forensic Plate (Plate #10)',
+      category: 'Medical Toxicology & Therapeutics',
+      imageSrc: edtaChelationImg,
+      location: 'Acıbadem Clinical Toxicology & Inpatient Chelation Ward',
+      date: '2026-08-14',
+      description: 'Origins: Landmark clinical pharmacology infographic illustrating Calcium Disodium EDTA (CaNa₂-EDTA) hexadentate claw coordination around toxic Pb²⁺ cations, the crucial FDA safety distinction versus dangerous Disodium EDTA, urine clearance kinetics, and mandatory renal/mineral monitoring protocols.',
+      vaultHash: '0xEDTA_CHELATION_CLINICAL_EVIDENCE_2026',
+      tags: ['CalciumDisodiumEDTA', 'ChelationTherapy', 'MedicalInterventions', 'Toxicology', 'DisodiumEDTAWarning', 'ClinicalEvidence', 'RenalMonitoring', 'PeerReviewed', 'ICEarth']
+    },
     {
       id: 'PHOTO-000P',
       title: 'Wildfire Pyrogenic Heavy Metal Plume & Urban-WUI Aerosol Fallout Forensic Plate (Plate #09)',
@@ -2810,6 +2858,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000Q' || selectedPhoto.tags?.includes('CalciumDisodiumEDTA') || selectedPhoto.tags?.includes('ChelationTherapy')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('medical_interventions');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 text-stone-950 font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400"
+                    >
+                      <Pill size={13} className="text-stone-950" />
+                      <span>💊 Launch Medical Interventions & Chelation Engine</span>
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000P' || selectedPhoto.tags?.includes('WildfirePyroExposenomics') || selectedPhoto.tags?.includes('SpokaneFires')) && (
                     <button
                       onClick={() => {

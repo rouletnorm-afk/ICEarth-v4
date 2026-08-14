@@ -16,6 +16,7 @@ import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocrac
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
+import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import {
   Shield,
   UserCheck,
@@ -147,6 +148,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000Q',
+      title: 'Calcium Disodium EDTA Chelation Therapy & Hexadentate Coordination Forensic Plate (Plate #10)',
+      type: 'Clinical Toxicology & Medical Interventions Evidence Asset',
+      imageSrc: edtaChelationImg,
+      link: 'medical_interventions',
+      description: 'Breakthrough clinical toxicology reference model explaining Calcium Disodium EDTA (CaNa₂-EDTA) hexadentate claw coordination around toxic Pb²⁺ cations, FDA Black Box safety distinction versus lethal Disodium EDTA, urine clearance kinetics, and mandatory renal/mineral monitoring protocols.',
+      sovereignHash: '0xEDTA_CHELATION_CLINICAL_EVIDENCE_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000P',
       title: 'Wildfire Pyrogenic Heavy Metal Plume & Urban-WUI Aerosol Fallout Forensic Plate (Plate #09)',

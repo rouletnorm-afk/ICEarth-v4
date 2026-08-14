@@ -15,6 +15,7 @@ import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocrac
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
+import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -59,7 +60,8 @@ import {
   Gavel,
   Scale,
   Atom,
-  Flame
+  Flame,
+  Pill
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -98,6 +100,17 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('edta') ||
+    u.includes('chelation') ||
+    u.includes('calcium_disodium') ||
+    u.includes('versenate') ||
+    u.includes('acibadem') ||
+    u.includes('1786717879144') ||
+    u.includes('1786720100000')
+  ) {
+    return edtaChelationImg;
+  }
   if (
     u.includes('wildfire') ||
     u.includes('pyro') ||
@@ -237,6 +250,52 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'EDTA-CHELATION-MEDICAL-EVIDENCE-2026',
+    contentType: 'Article',
+    title: 'Calcium Disodium EDTA — Explained by Medical Evidence, Not Myths',
+    subtitle: 'Clinical Toxicology & Pharmacology: Evidence-Based Chelation for Moderate to Severe Lead Poisoning • Critical Differences from Dangerous Disodium EDTA • Strict Renal, Hydration & Mineral Monitoring',
+    sourceUrl: 'https://acibademinternational.com/health-library/calcium-disodium-edta-explained-by-medical-evidence-not-myths/',
+    sourceName: 'Acıbadem International Health Library (Clinical Toxicology & Pharmacology)',
+    publishDate: '2026-08-14',
+    author: 'Acıbadem Health Library Clinical Board & Norman Roulet (ICEarth Medical Interventions Synthesis)',
+    authorName: 'Acıbadem International Health Library',
+    abstract: 'Calcium disodium EDTA (CaNa₂-EDTA) is a rigorously evidence-based clinical chelation therapy primarily indicated for moderate to severe lead poisoning (blood lead levels ≥ 45 µg/dL in children or severe symptomatic toxicity in adults). Working via hexadentate claw ligand coordination, lead ions displace pre-bound calcium with a ten-million-fold higher affinity (log K ≈ 18.0 vs 10.7), forming a stable water-soluble complex that is filtered and excreted through the renal glomerulus. Crucially, calcium disodium EDTA must never be confused with disodium EDTA (Na₂-EDTA), which rapidly chelates serum calcium and causes fatal hypocalcemic cardiac arrest (FDA Black Box warning). Chelation therapy is not a casual "wellness detox" for healthy people; it requires continuous inpatient or clinical monitoring of kidney function, hydration status (urine output > 1-2 mL/kg/hr), and essential trace minerals like zinc and calcium.',
+    editorCommentary: 'As ICEarth builds its comprehensive Sovereign Medical Interventions and Treatment Knowledge Base, distinguishing clinical evidence from commercial wellness myths is paramount. Chelation therapy is a powerful, pharmacologically invasive hospital intervention designed for life-threatening or severe toxic lead burdens—not an over-the-counter anti-aging flush. Understanding the chemistry of hexadentate claw coordination, preventing fatal confusion with Disodium EDTA, and recognizing the necessity of pre-hydration and post-treatment bone rebound surveillance empowers clinicians, patients, and public health advocates with rigorous, life-saving knowledge.',
+    fullExcerpt: `CALCIUM DISODIUM EDTA — EXPLAINED BY MEDICAL EVIDENCE, NOT MYTHS
+
+Source: Acıbadem International Health Library (Clinical Toxicology & Pharmacology)
+Publication Date: August 14, 2026
+Source Link: https://acibademinternational.com/health-library/calcium-disodium-edta-explained-by-medical-evidence-not-myths/
+ICEarth Treatment Knowledge Base: https://icearth.org/?tab=medical_interventions
+
+KEY TAKEAWAYS & CLINICAL EVIDENCE:
+1. Moderate to Severe Lead Poisoning Indication:
+Calcium disodium EDTA is an evidence-based clinical treatment mainly used for moderate to severe lead poisoning (blood lead levels ≥ 45 µg/dL in pediatric patients or symptomatic acute toxicity in adults).
+
+2. Critical Difference from Disodium EDTA (Fatal Hypocalcemia Warning):
+Calcium disodium EDTA (CaNa₂-EDTA) is completely different from disodium EDTA (Na₂-EDTA). Disodium EDTA contains no bound calcium; when infused, it aggressively strips ionized calcium from serum, triggering acute hypocalcemia, tetany, and fatal cardiac arrest. The FDA has withdrawn Disodium EDTA for lead chelation.
+
+3. Not a Routine Wellness "Detox":
+Chelation therapy is not a routine "detox" treatment for healthy people. Administering chelation without documented acute toxicity subjects patients to nephrotoxicity and mineral depletion without medical benefit.
+
+4. Strict Renal, Hydration & Mineral Monitoring:
+Treatment requires rigorous hospital monitoring, especially of kidney function (daily creatinine, BUN, urinalysis), high-volume pre-hydration (brisk urine output > 1–2 mL/kg/hr), and mineral replacement (since EDTA increases urinary zinc and copper loss by 500%).
+
+5. Physician-Directed Clinical Criteria:
+A doctor chooses chelation based on clinical symptoms (e.g., lead colic, encephalopathy), blood lead levels, age, pregnancy status, and overall renal health.
+
+PHARMACOLOGICAL MECHANISM:
+EDTA functions as a hexadentate claw ligand (2 tertiary amine nitrogens and 4 carboxylate oxygens) that forms an octahedral coordination cage around lead cations (Pb²⁺). Because the stability constant for lead (log K ≈ 18.0) is vastly higher than calcium (log K ≈ 10.7), lead displaces calcium. The resulting Lead-EDTA chelate is water-soluble, biologically inert, and rapidly excreted through glomerular filtration in urine within 24 to 48 hours.`,
+    tags: ['CalciumDisodiumEDTA', 'ChelationTherapy', 'MedicalInterventions', 'Toxicology', 'DisodiumEDTAWarning', 'ClinicalEvidence', 'RenalMonitoring', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Sovereign Health', 'Norm Roulet Vault'],
+    vaultHash: '0xEDTA_CHELATION_CLINICAL_EVIDENCE_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Sovereign Exposenomics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: edtaChelationImg
+  },
   {
     id: 'WILDFIRE-PYRO-EXPOSENOMICS-SPOKANE-2026',
     contentType: 'Article',
@@ -1880,6 +1939,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('CalciumDisodiumEDTA') || article.tags?.includes('ChelationTherapy') || article.id.includes('EDTA') || article.tags?.includes('MedicalInterventions')) && (
+                      <button
+                        onClick={() => onNavigateTab('medical_interventions')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Pill size={14} className="text-stone-950" />
+                        <span>💊 Launch Medical Interventions & Chelation Knowledge Base</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('WildfirePyroExposenomics') || article.tags?.includes('SpokaneFires') || article.id.includes('WILDFIRE')) && (
                       <button
                         onClick={() => onNavigateTab('wildfire_pyro')}
