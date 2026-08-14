@@ -9,6 +9,8 @@ import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_17865919414
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
+import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
+import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import {
   Shield,
   UserCheck,
@@ -202,6 +204,24 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: 'flint',
       description: 'Sovereign mathematical proof of Roulet’s Law connecting 50+ years of cumulative lead poisoning (1970s leaded gasoline through water crisis) to prefrontal neurotoxicity, special education, violent crimes/homicides, neighborhood demolitions, and municipal economic collapse.',
       sovereignHash: '0xFLINT_LEAD_CRIME_ROULETS_LAW_IP_2026'
+    },
+    {
+      id: 'IP-000H',
+      title: 'The Global Lead-Crime Hypothesis Proof & 8,000-Year Anthropogenic Timeline Masterwork',
+      type: 'Global Historical Exposenomics & Sovereign Proof Masterwork',
+      imageSrc: globalLeadCrimeProofImg,
+      link: 'global_lead_crime_proof',
+      description: 'Comprehensive global synthesis proving the Lead-Crime Hypothesis from 6000 BCE Anatolia to modern day. Tracing how industrial heavy metals determine prefrontal destruction, global inequality, Flynn effect reversal, and planetary conflict under Roulet’s Law.',
+      sovereignHash: '0xGLOBAL_LEAD_CRIME_PROOF_8000YR_TIMELINE_IP_2026'
+    },
+    {
+      id: 'IP-000I',
+      title: 'Roulet’s Law of Global Chaos & Anthropogenic Lead Relativity Dynamic Equation Model',
+      type: 'Mathematical Proof & Dynamic Chaos Simulation Engine',
+      imageSrc: rouletsLawGlobalChaosImg,
+      link: 'global_lead_crime_proof',
+      description: 'Dynamic equation model visualizing Perturbation (1st Order Pb) × Uncertainty (Climate/Economic) = Chaos (Conflict/Violence) × Relativity (1/3+ of humanity with Pb neurotoxicity).',
+      sovereignHash: '0xROULETS_LAW_GLOBAL_CHAOS_DYNAMIC_EQUATION_IP_2026'
     },
     {
       id: 'IP-001',

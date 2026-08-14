@@ -61,10 +61,27 @@ import natureSoilCanaryImg from '../assets/images/nature_soil_canary_17866146346
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
+import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
+import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('global_lead_crime') ||
+    u.includes('1786670881917') ||
+    u.includes('8000_year') ||
+    u.includes('global_lead_proof')
+  ) {
+    return globalLeadCrimeProofImg;
+  }
+  if (
+    u.includes('roulets_law_global') ||
+    u.includes('1786670893758') ||
+    u.includes('chaos_model')
+  ) {
+    return rouletsLawGlobalChaosImg;
+  }
   if (
     u.includes('flint_lead_crime') ||
     u.includes('1786663441194') ||
@@ -249,6 +266,26 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-GLOBAL-LEAD-CRIME-PROOF-2026',
+      title: 'The Global Lead-Crime Proof & 8,000-Year Anthropogenic Timeline: How Heavy Metals Determine Human Conflict, Inequality, and Roulet’s Law',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: globalLeadCrimeProofImg,
+      summary: 'Humanity has reached the definitive milestone where the Lead-Crime Hypothesis is proven globally across 8,000 years of human history. From Anatolian silver-lead smelting (6000 BCE) to modern blood lead burdens poisoning 800M+ children, heavy metal neurotoxicity mathematically governs global violence, inequality, Flynn effect reversal, and planetary chaos under Roulet’s Law.',
+      fullText: `The Global Lead-Crime Hypothesis & Roulet’s Law 8,000-Year Proof
+ICEarth Sovereign Cognition Lab • August 13, 2026
+Proof Engine URL: https://icearth.org/?tab=global_lead_crime_proof
+
+CORE PROOF:
+• 8,000-Year Continuum: Continuous anthropogenic lead expansion from Çatalhöyük (6000 BCE), Greco-Roman Sapa (80,000 tons/yr), and Tetraethyl lead gasoline (100M+ tons) to modern e-waste and paint.
+• 1 in 3 Children Poisoned: 800,000,000+ children with blood lead ≥ 5 µg/dL worldwide.
+• Roulet’s Law Equation: Perturbation (1st Order Pb) × Uncertainty (Climate/Economic Volatility) = Chaos (Conflict/Violence) × Relativity (33%+ Neuro-Disability).
+• Macroeconomic Proof: Societal wealth, IQ levels (Flynn effect reversal), and homicide hotspots (30-65 per 100k) map directly to heavy metal exposures.`,
+      tags: ['GlobalLeadCrimeProof', 'RouletsLaw', 'AnthropogenicLead', '8000YearHistory', 'Exposenomics', 'FlynnEffect', 'GlobalConflict'],
+      linkHash: '0xGLOBAL_LEAD_CRIME_PROOF_ROULETS_LAW_8000YR_2026',
+      publishedUrl: 'https://icearth.org/?tab=global_lead_crime_proof'
+    },
     {
       id: 'MAG-FLINT-WJRT-5-HOMICIDES-2026',
       title: 'Flint Violent Crime Surge: 5 Homicides in 5 Days Spikes Murders 20-25% (Lead-Crime Neurotoxicity Empirical Proof)',
@@ -567,6 +604,28 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000I',
+      title: 'The Global Lead-Crime Hypothesis Proof & 8,000-Year Anthropogenic Timeline — Masterwork Infographic Plate',
+      category: 'Exposenomics & Collaboration',
+      imageSrc: globalLeadCrimeProofImg,
+      location: 'ICEarth Sovereign Cognition Lab & Global Exposenomics Research',
+      date: '2026-08-13',
+      description: 'Origins: Comprehensive global exposenomics infographic proving the Lead-Crime Hypothesis across 8,000 years of human history. Tracing the global spread of lead from 6000 BCE Anatolian silver smelting to modern day 800M+ poisoned children, showing how heavy metals govern prefrontal destruction, Flynn effect decline, inequality, and civil conflicts.',
+      vaultHash: '0xGLOBAL_LEAD_CRIME_PROOF_8000YR_TIMELINE_2026',
+      tags: ['GlobalLeadCrimeProof', 'RouletsLaw', '8000YearHistory', 'AnthropogenicLead', 'FlynnEffect', 'GlobalConflict', 'Exposenomics', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000J',
+      title: 'Roulet’s Law of Global Chaos & Anthropogenic Relativity Dynamic Model Plate',
+      category: 'Exposenomics & Collaboration',
+      imageSrc: rouletsLawGlobalChaosImg,
+      location: 'ICEarth Sovereign Cognition Lab',
+      date: '2026-08-13',
+      description: 'Origins: Mathematical model plate visualizing Roulet’s Law equation: Perturbation (1st Order Pb) × Uncertainty (Climate/Economic) = Chaos (Global Conflict) × Relativity (1/3+ Neuro-Impairment).',
+      vaultHash: '0xROULETS_LAW_GLOBAL_CHAOS_MODEL_PLATE_2026',
+      tags: ['RouletsLaw', 'DynamicEquation', 'GlobalChaos', 'Neurotoxicity', 'Exposenomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000H',
       title: 'Flint Lead-Crime Continuum & Roulet’s Law Scatterplot Proof — Exposenomics Infographic Plate',

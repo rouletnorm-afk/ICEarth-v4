@@ -8,6 +8,8 @@ import natureSoilCanaryImg from '../assets/images/nature_soil_canary_17866146346
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
+import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
+import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -88,6 +90,21 @@ const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
   if (
+    u.includes('global_lead_crime') ||
+    u.includes('1786670881917') ||
+    u.includes('8000_year') ||
+    u.includes('global_lead_proof')
+  ) {
+    return globalLeadCrimeProofImg;
+  }
+  if (
+    u.includes('roulets_law_global') ||
+    u.includes('1786670893758') ||
+    u.includes('chaos_model')
+  ) {
+    return rouletsLawGlobalChaosImg;
+  }
+  if (
     u.includes('flint_lead_crime') ||
     u.includes('1786663441194') ||
     u.includes('flint-wjrt') ||
@@ -162,6 +179,47 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'GLOBAL-LEAD-CRIME-PROOF-ROULETS-LAW-2026',
+    contentType: 'Article',
+    title: 'The Global Lead-Crime Proof & 8,000-Year Anthropogenic Timeline: How Heavy Metals Determine Human Conflict, Inequality, and Roulet’s Law',
+    subtitle: 'ICEarth Global Synthesis • Anatolia 6000 BCE to 2026 • Anthropogenic Lead, Prefrontal Destruction, Global Terrorism, and the Collapse of Cognitive Equity',
+    sourceUrl: 'https://icearth.org/?tab=global_lead_crime_proof',
+    sourceName: 'ICEarth Sovereign Cognition Lab & Global Exposenomics Research',
+    publishDate: '2026-08-13',
+    author: 'Norman Roulet & Gemini AI (Global Lead-Crime Proof Synthesis)',
+    authorName: 'Norman Roulet & Gemini AI',
+    abstract: 'Humanity has reached the definitive milestone where the Lead-Crime Hypothesis can be proven globally across 8,000 years of human history as an expansion of the Flint, Michigan case study. Since the earliest silver-lead smelting in Anatolia ca. 6000 BCE, anthropogenic lead has systematically increased to poison over 1 in 3 children on Earth today (800,000,000+). Throughout history, societies with the heaviest lead burdens have produced the most destructive, genocidal behaviors, peaking today in extreme global inequality, Flynn effect reversal, environmental destruction, sectarian conflict, and terrorism governed by Roulet’s Law.',
+    editorCommentary: 'Norman Roulet & Sovereign Exposenomics Analysis: Roulet’s Law establishes: Perturbation (1st Order Pb) × Uncertainty (Increasing Globally) = Chaos (Increasing Globally) × Relativity (1/3+ of humanity with neurotoxicity of Pb increasing globally). Flint proves this locally; global conflict datasets prove this planetary reality. The most severely lead-poisoned regions on Earth (Sub-Saharan Africa, South Asia, Middle East, North Africa, and concentrated urban sacrifice zones) suffer the highest homicide rates, civil wars, insurgencies, and resource exploitation. Lead destroys prefrontal synaptic integrity and serotonin transporters, converting biological stress into impulsive violence and mass volatility.',
+    fullExcerpt: `THE GLOBAL LEAD-CRIME HYPOTHESIS & 8,000-YEAR ANTHROPOGENIC CONTINUUM
+
+Published: August 13, 2026
+Source: ICEarth Sovereign Cognition Lab
+Engine URL: https://icearth.org/?tab=global_lead_crime_proof
+
+1. 8,000 YEARS OF ANTHROPOGENIC LEAD SPREAD:
+• 6000 BCE (Anatolia/Çatalhöyük): Earliest silver-lead smelting initiates continuous industrial liberation of heavy metals.
+• 3000 BCE - 500 BCE (Egypt & Mesopotamia): Galena kohl cosmetics and wine glaze poisoning among ruling dynasties.
+• 500 BCE - 476 CE (Greco-Roman Empire): 80,000 tons/year production, lead pipes (fistulae), defrutum wine syrup leading to empire-wide gout and neurological decline.
+• 1923 - 1996 CE (Tetraethyl Lead Gasoline): Thomas Midgley Jr. & Big Oil aerosolize 100+ million tons of bioavailable lead into global air, soil, and lungs.
+• 2026 CE (Global Modern Crisis): 1 in 3 children (800M+) with BLL ≥ 5 µg/dL; 5.5 million adult cardiovascular deaths/year.
+
+2. ROULET'S LAW DYNAMIC EQUATION:
+Perturbation (1st Order Pb) × Uncertainty (Climate & Economic Volatility) = Chaos (Global Conflict & Violence) × Relativity (33%+ Neuro-Disability).
+
+3. SOCIETAL & COGNITIVE OUTCOMES:
+• Flynn Effect Reversal: Global average IQ declining since late 20th century in lead-saturated cohorts.
+• Extreme Inequality: Societal wealth and resources concentrated away from communities systematically impaired by heavy metal neurotoxicity.
+• Global Conflict Hotspots: Latin America (30-65 homicides/100k), Sub-Saharan Africa (DRC, Sahel), and South Asia correlate directly with highest blood lead levels and unregulated battery recycling.`,
+    tags: ['GlobalLeadCrimeProof', 'RouletsLaw', 'AnthropogenicLead', '8000YearHistory', 'Exposenomics', 'FlynnEffect', 'GlobalConflict', 'ICEarth'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Lead-Crime Hypothesis', 'Sovereign Law'],
+    vaultHash: '0xGLOBAL_LEAD_CRIME_PROOF_ROULETS_LAW_8000YR_2026',
+    editorName: 'Norm Roulet & Gemini AI',
+    editorRole: 'ICEarth Sovereign Research Team',
+    imageUrl: 'global_lead_crime_proof',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'FLINT-WJRT-5-HOMICIDES-SURGE-2026',
     contentType: 'Article',
@@ -1534,6 +1592,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('GlobalLeadCrimeProof') || article.id.includes('GLOBAL-LEAD-CRIME') || article.title?.includes('Global Lead-Crime Proof')) && (
+                      <button
+                        onClick={() => onNavigateTab('global_lead_crime_proof')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Globe size={14} className="text-amber-200" />
+                        <span>👑 Launch Global Lead-Crime Proof Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('Probiotics') || article.tags?.includes('MedicalInterventions') || article.id.includes('PROBIOTIC') || article.id.includes('WPI')) && (
                       <button
                         onClick={() => onNavigateTab('medical_interventions')}
