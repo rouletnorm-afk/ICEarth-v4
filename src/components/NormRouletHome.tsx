@@ -58,6 +58,7 @@ import mittalCanaryAiLogoImg from '../assets/images/mittal_canary_logo_178659194
 import mittal720Img from '../assets/images/Mittal720.JPG';
 import aguaDasHempImg from '../assets/images/agua_das_hemp_iscream_1786328814819.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import omahaSuperfundImg from '../assets/images/omaha_superfund_lead_soil_proof_1786683057243.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
@@ -74,6 +75,15 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('global_lead_proof')
   ) {
     return globalLeadCrimeProofImg;
+  }
+  if (
+    u.includes('omaha_superfund') ||
+    u.includes('omaha_lead') ||
+    u.includes('1786683057243') ||
+    u.includes('asarco') ||
+    u.includes('superfund_omaha')
+  ) {
+    return omahaSuperfundImg;
   }
   if (
     u.includes('roulets_law_global') ||
@@ -266,6 +276,27 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-OMAHA-SUPERFUND-2026',
+      title: 'EPA Spent $273M Cleaning Up a Massive Superfund Site in Omaha. Independent Tests Found Toxic Levels of Lead in Many Yards.',
+      category: 'Exposenomics',
+      date: '2026-08-13',
+      imageSrc: omahaSuperfundImg,
+      summary: 'ProPublica investigation reveals that after $273M in EPA Superfund spending across 14,000 yards in Omaha, 1 in 10 remediated yards still contain toxic lead. 200,000 tons of legacy ASARCO smelter dust, arbitrary 400 ppm cleanup cutoffs, and windblown cross-yard recontamination prove Roulet’s Law: “On paper, everything’s wonderful, but at the sites, there’s still chaos.”',
+      fullText: `EPA Spent $273M Cleaning Up a Massive Superfund Site in Omaha
+ProPublica & Omaha News Consortium • August 13, 2026
+ICEarth Proof Engine: https://icearth.org/?tab=evolutionary_canary
+
+KEY INVESTIGATIVE FINDINGS & ROULET'S LAW PROOF:
+• $273 Million Spent: Excavating and backfilling ~14,000 residential yards since 1999 across East Omaha.
+• 1 in 10 "Remediated" Yards Still Toxic: Independent testing of 600+ properties (including 150 EPA-cleaned) showed 10% still qualify for mandatory cleanup.
+• 200,000 Tons ASARCO Smelter Dust: Dumped across residential neighborhoods over a century (1,600+ rail cars).
+• Arbitrary Standard Flaw: Dr. Gabriel Filippelli (Indiana Univ): “A 390 is the same as a 410. It’s the same as a 400.” Neighboring yards left uncleaned resuspend sub-micron dust (1/100th human hair width) during dry winds.
+• Rutgers Study Synthesis (Nature 2026): Outdoor soil contamination is tracked into homes on shoes, causing 80% of paint-free homes to exceed indoor hazard thresholds.`,
+      tags: ['SoilContamination', 'Superfund', 'OmahaLead', 'RouletsLaw', 'Exposenomics', 'SmeltingLegacy', 'Nature2026'],
+      linkHash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026',
+      publishedUrl: 'https://www.propublica.org/article/lead-contamination-epa-superfund-omaha-nebraska-analysis'
+    },
     {
       id: 'MAG-GLOBAL-LEAD-CRIME-PROOF-2026',
       title: 'The Global Lead-Crime Proof & 8,000-Year Anthropogenic Timeline: How Heavy Metals Determine Human Conflict, Inequality, and Roulet’s Law',
@@ -604,6 +635,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000K',
+      title: 'Omaha Superfund Lead Remediation Breakdown & Metallurgy Smelter Legacy — Forensic Plate #03',
+      category: 'Exposenomics & Forensic Audit',
+      imageSrc: omahaSuperfundImg,
+      location: 'East Omaha Superfund Site & ICEarth Forensic Audit Lab',
+      date: '2026-08-13',
+      description: 'Origins: Forensic exposenomics infographic documenting $273M EPA remediation breakdown in East Omaha. Documents 200,000 tons of ASARCO lead smelter dust, the failure of the 400 ppm arbitrary threshold, and windblown cross-property recontamination proving Roulet\'s Law: "On paper, everything’s wonderful, but at the sites, there’s still chaos."',
+      vaultHash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026',
+      tags: ['OmahaSuperfund', 'SoilContamination', 'SmeltingLegacy', 'ASARCO', 'RouletsLaw', 'Nature2026', 'Exposenomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000I',
       title: 'The Global Lead-Crime Hypothesis Proof & 8,000-Year Anthropogenic Timeline — Masterwork Infographic Plate',

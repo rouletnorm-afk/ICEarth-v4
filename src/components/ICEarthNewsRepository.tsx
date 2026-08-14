@@ -5,6 +5,7 @@ import mittal720Img from '../assets/images/Mittal720.JPG';
 import plazaPanImg from '../assets/images/PlazaPan2.JPG';
 import taosKIHeaderImg from '../assets/images/TaosKIHeader100421s_0_0.png';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import omahaSuperfundImg from '../assets/images/omaha_superfund_lead_soil_proof_1786683057243.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
@@ -98,6 +99,15 @@ const resolveImageUrl = (url?: string): string => {
     return globalLeadCrimeProofImg;
   }
   if (
+    u.includes('omaha_superfund') ||
+    u.includes('omaha_lead') ||
+    u.includes('1786683057243') ||
+    u.includes('asarco') ||
+    u.includes('superfund_omaha')
+  ) {
+    return omahaSuperfundImg;
+  }
+  if (
     u.includes('roulets_law_global') ||
     u.includes('1786670893758') ||
     u.includes('chaos_model')
@@ -179,6 +189,44 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'OMAHA-SUPERFUND-LEAD-CLEANUP-FAILURE-2026',
+    contentType: 'Article',
+    title: 'EPA Spent $273M Cleaning Up a Massive Superfund Site in Omaha. Independent Tests Found Toxic Levels of Lead in Many Yards.',
+    subtitle: 'ProPublica & News Organizations Investigation • 14,000 Remediated Yards • Smelting Metallurgy Legacy & Soil Recontamination Proof',
+    sourceUrl: 'https://www.propublica.org/article/lead-contamination-epa-superfund-omaha-nebraska-analysis',
+    sourceName: 'ProPublica & Omaha News Consortium (ICEarth Sovereign Audit)',
+    publishDate: '2026-08-13',
+    author: 'ProPublica Investigative Team & Norman Roulet (Roulet’s Law Exposenomics Audit)',
+    authorName: 'ProPublica & Norman Roulet',
+    abstract: 'Since 1999, the EPA has spent $273 million digging up and backfilling nearly 14,000 yards across East Omaha to address legacy contamination left from ASARCO lead smelting and downtown battery factories. But independent tests of 600+ properties reveal that 1 in 10 yards marked as remediated still have toxic lead levels exceeding cleanup guidelines, with nearly a quarter qualifying for urgent restudy. Arbitrary 400 ppm boundary standards left adjacent 390 ppm yards untouched, allowing dry winds to resuspend sub-micron lead dust and recontaminate remediated properties.',
+    editorCommentary: 'Roulet’s Law Proof: “On paper, everything’s wonderful, but at the sites, there’s still chaos.” Omaha documents the catastrophic degree of harm caused by lead smelting for thousands of years in communities with metallurgy. Environmental regulations are recent, but metallurgical waste distribution has persisted for millennia. As the Rutgers study (Stratton et al., Nature 2026) proved, exterior soil contamination is transported across properties and into living spaces on shoes and wind, exposing children even in paint-free homes. Hewing to arbitrary regulatory cutoffs (400 ppm vs 390 ppm) ignores physical atmospheric transport dynamics.',
+    fullExcerpt: `EPA SPENT MILLIONS CLEANING UP A MASSIVE SUPERFUND SITE. OUR TESTS FOUND TOXIC LEVELS OF LEAD IN MANY YARDS.
+
+Source: ProPublica & Omaha World-Herald Investigation
+Location: East Omaha, Nebraska • ASARCO Superfund Site
+ICEarth Audit: Roulet’s Law Exposenomics Proof
+
+Since 1999, the EPA has spent $273 million digging up and backfilling nearly 14,000 yards across east Omaha to address contamination left from the smelter and other factories downtown. It’s the largest residential lead cleanup in the country. And the agency’s Superfund program has repeatedly heralded it as a success.
+
+But, it turns out, Omaha’s soil might not be as safe as officials have advertised. The news organizations tested soil from more than 600 properties, including 150 that the EPA said had been cleaned up. In those tests, 1 in 10 yards marked as remediated still had enough lead to qualify for cleanup under the original guidelines. And nearly a quarter of the properties we tested in east Omaha could qualify for further study under new guidance released by the administration.
+
+The results suggest the EPA has more work to do, said Howard Mielke, a longtime researcher of lead-contaminated soil who’s considered one of the field’s foremost experts. Not only should the agency clean up the areas that tested above the remediation level, he said, but it also should test other homes. “If you find a couple of high results, chances are many high results will be nearby,” said Mielke, an adjunct professor at the Tulane University School of Medicine.
+
+Some experts and environmental advocates said our findings reflect weaknesses in the EPA’s approach to cleaning up residential lead sites, which can leave a lot of lead behind. Omaha’s lead problem is almost as old as the city itself: The American Smelting and Refining Company (ASARCO) produced lead to make batteries, cover cables and enrich gasoline for more than a century. After the smelter closed in 1997, the EPA estimated the plant and other factories had dumped 200,000 tons of lead dust — enough to fill at least 1,600 rail cars — across Omaha’s east side.
+
+The agency tested nearly every yard in east Omaha and came up with a plan: It would dig up and replace parts of yards that had a concentration of more than 400 parts per million of lead — the equivalent of a marble in a 10-pound bucket of dirt. But that meant that some properties were cleaned up while neighboring ones that had only slightly lower levels of lead were not.
+
+Hewing to that kind of strict standard doesn’t make sense, said Gabriel Filippelli, an Indiana University earth sciences professor and longtime lead researcher. “From a scientific standpoint, a 390 is the same as a 410,” Filippelli said. “It’s the same as a 400. They’re all about the same value.” Failing to clean up neighboring properties can also lead to recontamination over time. When it’s windy and the ground is dry, tiny lead particles in the dirt — generally about one-hundredth the width of a human hair — become airborne and spread, Filippelli said.`,
+    tags: ['SoilContamination', 'Superfund', 'OmahaLead', 'RouletsLaw', 'Exposenomics', 'SmeltingLegacy', 'Nature2026', 'ICEarth'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Soil Remediation', 'Sovereign Law'],
+    vaultHash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026',
+    editorName: 'Norm Roulet & ProPublica',
+    editorRole: 'ICEarth Sovereign Research Team',
+    imageUrl: 'omaha_superfund_lead_soil_proof',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'GLOBAL-LEAD-CRIME-PROOF-ROULETS-LAW-2026',
     contentType: 'Article',
@@ -1592,6 +1640,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('OmahaLead') || article.tags?.includes('Superfund') || article.id.includes('OMAHA')) && (
+                      <button
+                        onClick={() => onNavigateTab('evolutionary_canary')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Building2 size={14} className="text-amber-200" />
+                        <span>🏭 Launch Omaha Superfund & Soil Audit Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('GlobalLeadCrimeProof') || article.id.includes('GLOBAL-LEAD-CRIME') || article.title?.includes('Global Lead-Crime Proof')) && (
                       <button
                         onClick={() => onNavigateTab('global_lead_crime_proof')}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
 import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
+import omahaSuperfundImg from '../assets/images/omaha_superfund_lead_soil_proof_1786683057243.jpg';
 import {
   Flame,
   Globe,
@@ -27,7 +28,8 @@ import {
   Filter,
   Image as ImageIcon,
   X,
-  Maximize2
+  Maximize2,
+  Crown
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -54,7 +56,7 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 }) => {
   const isLight = siteTheme === 'light';
   const [activeEpoch, setActiveEpoch] = useState<string>('paleolithic');
-  const [activeDataTab, setActiveDataTab] = useState<'evolution' | 'nature_study' | 'roulets_law'>('evolution');
+  const [activeDataTab, setActiveDataTab] = useState<'evolution' | 'nature_study' | 'omaha_superfund' | 'roulets_law'>('omaha_superfund');
   const [selectedGraphicModal, setSelectedGraphicModal] = useState<{ src: string; title: string; subtitle: string; hash: string } | null>(null);
 
   // Evolutionary Epochs Data
@@ -215,9 +217,9 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-200 dark:border-stone-800">
           <button
             onClick={() => setActiveDataTab('evolution')}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
               activeDataTab === 'evolution'
-                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm'
+                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm font-bold'
                 : 'bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200'
             }`}
           >
@@ -227,40 +229,55 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 
           <button
             onClick={() => setActiveDataTab('nature_study')}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
               activeDataTab === 'nature_study'
-                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm'
+                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm font-bold'
                 : 'bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200'
             }`}
           >
             <BarChart2 size={14} />
-            <span>2. Nature 2026 Soil-to-Dust Tracking Data</span>
+            <span>2. Nature 2026 Soil-to-Dust Tracking (Rutgers)</span>
+          </button>
+
+          <button
+            onClick={() => setActiveDataTab('omaha_superfund')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer border ${
+              activeDataTab === 'omaha_superfund'
+                ? 'bg-gradient-to-r from-red-600 to-amber-600 text-white border-amber-400 shadow-md font-bold ring-2 ring-amber-400/40'
+                : 'bg-red-500/10 text-red-700 dark:text-red-400 border-red-500/20 hover:bg-red-500/20'
+            }`}
+          >
+            <Building2 size={14} />
+            <span>3. Omaha Superfund & Metallurgy Smelting Legacy</span>
+            <span className="px-1.5 py-0.2 bg-red-600 text-white text-[9px] rounded-full font-mono uppercase font-black">
+              ProPublica 2026
+            </span>
           </button>
 
           <button
             onClick={() => setActiveDataTab('roulets_law')}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
               activeDataTab === 'roulets_law'
-                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm'
+                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm font-bold'
                 : 'bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200'
             }`}
           >
             <ShieldAlert size={14} />
-            <span>3. Roulet's Law Proof & Zero-Threshold Axiom</span>
+            <span>4. Roulet's Law Proof & Zero-Threshold Axiom</span>
           </button>
         </div>
       </div>
 
-      {/* FEATURED GRAPHICAL JOURNAL SERIES: CAVE TO CLEVELAND CANARY PROGRESSION */}
+      {/* FEATURED GRAPHICAL JOURNAL SERIES: CAVE TO CLEVELAND & OMAHA CANARY PROGRESSION */}
       <div className="p-6 sm:p-8 rounded-3xl bg-stone-900 text-stone-100 border-2 border-amber-500/40 shadow-2xl space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2 font-mono text-xs text-amber-400 font-bold uppercase tracking-wider">
               <Sparkles size={15} />
-              <span>ICEarth Sovereign Graphical Journal • Canary Series Plate #01 & #02</span>
+              <span>ICEarth Sovereign Graphical Journal • Canary & Soil Metallurgy Series</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-white">
-              H. sapiens Exposome Progression: From Cave Hearths to Cleveland Mittal Steel
+              H. sapiens Exposome Progression: Cave Fires, Cleveland Mittal Steel & Omaha Superfund Legacy
             </h2>
           </div>
           {onNavigateTab && (
@@ -275,7 +292,7 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* PLATE #01: Evolutionary Canary & Nature 2026 Soil Study */}
           <div className="bg-stone-950 rounded-2xl border border-stone-800 p-4 space-y-4 flex flex-col justify-between group hover:border-amber-500/50 transition-all shadow-xl">
             <div className="space-y-3">
@@ -309,37 +326,26 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
                 <h3 className="text-base font-bold text-amber-300 font-serif">
                   Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model
                 </h3>
-                <p className="text-xs text-stone-300 leading-relaxed font-sans">
-                  Dual-chart synthesis co-created by Norman Roulet & Gemini AI. Synthesizes 1,000,000 years of hominin lead exposure (cave hearths, Roman aqueducts, lead petrol) with the peer-reviewed Stratton et al. (Nature 2026) study proving 80% of floor dust hazards in paint-free homes stem from tracked exterior soil.
+                <p className="text-xs text-stone-300 leading-relaxed font-sans line-clamp-3">
+                  Synthesizes 1,000,000 years of hominin lead exposure with the peer-reviewed Stratton et al. (Nature 2026) study proving 80% of floor dust hazards in paint-free homes stem from tracked exterior soil.
                 </p>
               </div>
             </div>
 
             <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
               <span className="text-[10px] text-stone-400">0xEVOLUTIONARY_CANARY_NATURE_2026</span>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setSelectedGraphicModal({
-                    src: natureSoilCanaryImg,
-                    title: 'Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model',
-                    subtitle: 'Dual-chart visual synthesis co-created by Norm Roulet & Gemini AI linking 1,000,000 years of hominin lead exposure with the peer-reviewed Stratton et al. (Nature 2026) East Trenton study.',
-                    hash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
-                  })}
-                  className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer"
-                >
-                  <Maximize2 size={13} />
-                  <span>View High-Res</span>
-                </button>
-                {onNavigateTab && (
-                  <button
-                    onClick={() => onNavigateTab('norm_roulet_home')}
-                    className="px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-bold rounded-xl border border-amber-500/30 flex items-center gap-1 transition-all cursor-pointer"
-                  >
-                    <ImageIcon size={13} />
-                    <span>Vault Gallery</span>
-                  </button>
-                )}
-              </div>
+              <button
+                onClick={() => setSelectedGraphicModal({
+                  src: natureSoilCanaryImg,
+                  title: 'Plate #01: Homo sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Model',
+                  subtitle: 'Dual-chart visual synthesis co-created by Norm Roulet & Gemini AI linking 1,000,000 years of hominin lead exposure with the peer-reviewed Stratton et al. (Nature 2026) East Trenton study.',
+                  hash: '0xEVOLUTIONARY_CANARY_NATURE_2026_TRENTON_PROOF'
+                })}
+                className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer text-xs"
+              >
+                <Maximize2 size={12} />
+                <span>Inspect</span>
+              </button>
             </div>
           </div>
 
@@ -374,39 +380,84 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 
               <div className="space-y-1.5">
                 <h3 className="text-base font-bold text-amber-300 font-serif">
-                  Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)
+                  Plate #02: Cleveland Industrial Canary (Mittal Steel Plumes)
                 </h3>
-                <p className="text-xs text-stone-300 leading-relaxed font-sans">
-                  The original Cleveland industrial benchmark photograph capturing heavy metal smoke plumes over the Cuyahoga River Valley and Mittal Steel. Establishes the real-world urban exposenomics baseline showing how modern industrial emissions overlay geological background levels.
+                <p className="text-xs text-stone-300 leading-relaxed font-sans line-clamp-3">
+                  Historical industrial benchmark photograph capturing heavy metal smoke plumes over the Cuyahoga River Valley and Mittal Steel, establishing the modern urban exposenomics baseline.
                 </p>
               </div>
             </div>
 
             <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
               <span className="text-[10px] text-stone-400">0xCLEVELAND_MITTAL_CANARY_PLATE_02</span>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setSelectedGraphicModal({
-                    src: mittalCanaryLogoImg,
-                    title: 'Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)',
-                    subtitle: 'Historical industrial baseline photograph capturing Mittal Steel smoke plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
-                    hash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
-                  })}
-                  className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer"
-                >
-                  <Maximize2 size={13} />
-                  <span>View High-Res</span>
-                </button>
-                {onNavigateTab && (
-                  <button
-                    onClick={() => onNavigateTab('norm_roulet_home')}
-                    className="px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-bold rounded-xl border border-amber-500/30 flex items-center gap-1 transition-all cursor-pointer"
-                  >
-                    <ImageIcon size={13} />
-                    <span>Vault Gallery</span>
-                  </button>
-                )}
+              <button
+                onClick={() => setSelectedGraphicModal({
+                  src: mittalCanaryLogoImg,
+                  title: 'Plate #02: Cleveland Industrial Canary in the Coal Mine (Mittal Steel Plumes)',
+                  subtitle: 'Historical industrial baseline photograph capturing Mittal Steel smoke plumes over Cleveland, OH. Establishes the modern urban heavy metal footprint in Roulet\'s Law Canary Series.',
+                  hash: '0xCLEVELAND_MITTAL_CANARY_SERIES_PLATE_02'
+                })}
+                className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold rounded-xl border border-stone-700 flex items-center gap-1 transition-all cursor-pointer text-xs"
+              >
+                <Maximize2 size={12} />
+                <span>Inspect</span>
+              </button>
+            </div>
+          </div>
+
+          {/* PLATE #03: Omaha Lead Superfund & Smelting Metallurgy Failure */}
+          <div className="bg-stone-950 rounded-2xl border border-red-900/50 p-4 space-y-4 flex flex-col justify-between group hover:border-red-500/50 transition-all shadow-xl">
+            <div className="space-y-3">
+              <div 
+                className="relative aspect-video bg-stone-900 rounded-xl overflow-hidden border border-stone-800 cursor-pointer"
+                onClick={() => setSelectedGraphicModal({
+                  src: omahaSuperfundImg,
+                  title: 'Plate #03: Omaha Superfund Lead Cleanup Failure & Smelting Metallurgy Proof',
+                  subtitle: 'Forensic exposenomics infographic documenting $273M EPA remediation failure in East Omaha. Explains 200,000 tons ASARCO smelter dust, arbitrary 400 ppm thresholds, windblown cross-yard recontamination, and Roulet\'s Law: "On paper, everything’s wonderful, but at the sites, there’s still chaos."',
+                  hash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026'
+                })}
+              >
+                <img
+                  src={omahaSuperfundImg}
+                  alt="Omaha Superfund Lead Cleanup Failure & Smelting Metallurgy Proof"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-red-600 text-white font-mono font-black text-[10px] uppercase px-2.5 py-1 rounded-lg shadow-md border border-red-400">
+                  Plate #03 • Omaha Superfund
+                </div>
+                <div className="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="px-3 py-1.5 bg-red-600 text-white font-mono font-extrabold text-xs rounded-xl shadow-lg flex items-center gap-1.5">
+                    <Maximize2 size={14} />
+                    <span>Expand High-Res Artwork</span>
+                  </span>
+                </div>
               </div>
+
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-red-400 font-serif">
+                  Plate #03: Omaha Superfund & Smelting Legacy Failure
+                </h3>
+                <p className="text-xs text-stone-300 leading-relaxed font-sans line-clamp-3">
+                  Forensic proof of $273M EPA cleanup breakdown across 14,000 yards. Shows 1 in 10 remediated yards still toxic due to arbitrary 400 ppm boundaries, windblown dust resuspension, and track-in into living areas.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <span className="text-[10px] text-stone-400">0xOMAHA_SUPERFUND_LEAD_FAILURE</span>
+              <button
+                onClick={() => setSelectedGraphicModal({
+                  src: omahaSuperfundImg,
+                  title: 'Plate #03: Omaha Superfund Lead Cleanup Failure & Smelting Metallurgy Proof',
+                  subtitle: 'Forensic exposenomics infographic documenting $273M EPA remediation failure in East Omaha. Explains 200,000 tons ASARCO smelter dust, arbitrary 400 ppm thresholds, windblown cross-yard recontamination, and Roulet\'s Law: "On paper, everything’s wonderful, but at the sites, there’s still chaos."',
+                  hash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026'
+                })}
+                className="px-3 py-1.5 bg-red-950/80 hover:bg-red-900 text-red-200 font-bold rounded-xl border border-red-800 flex items-center gap-1 transition-all cursor-pointer text-xs"
+              >
+                <Maximize2 size={12} />
+                <span>Inspect</span>
+              </button>
             </div>
           </div>
         </div>
@@ -698,7 +749,202 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
         </div>
       )}
 
-      {/* TAB 3: ROULET'S LAW PROOF SYNTHESIS */}
+      {/* TAB 3: OMAHA SUPERFUND & SMELTING METALLURGY PROOF (PROPUBLICA INVESTIGATION) */}
+      {activeDataTab === 'omaha_superfund' && (
+        <div className="space-y-8 animate-in fade-in duration-300">
+          {/* TOP BANNER WITH ROULET'S LAW AXIOM */}
+          <div className={`p-6 sm:p-8 rounded-3xl border-2 ${isLight ? 'bg-gradient-to-br from-red-50 via-white to-amber-50 border-red-300 shadow-xl' : 'bg-gradient-to-br from-red-950/40 via-stone-900 to-amber-950/30 border-red-800'} space-y-6`}>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-black bg-red-600 text-white shadow-md">
+                <AlertTriangle size={14} />
+                <span>SUPERFUND FORENSIC AUDIT • PROPUBLICA INVESTIGATION</span>
+              </div>
+
+              <a
+                href="https://www.propublica.org/article/lead-contamination-epa-superfund-omaha-nebraska-analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-700 hover:bg-red-800 text-white text-xs font-bold shadow-md transition-colors shrink-0"
+              >
+                <span>Read ProPublica Investigation</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-serif text-stone-900 dark:text-stone-50 tracking-tight">
+                EPA Spent $273M Cleaning Up a Massive Superfund Site. Independent Tests Found Toxic Levels of Lead in Many Yards.
+              </h2>
+              <div className="p-4 rounded-2xl bg-stone-950 text-amber-300 border-2 border-amber-500/60 font-mono text-sm sm:text-base leading-relaxed shadow-lg">
+                <span className="font-black text-white uppercase tracking-wider block text-xs mb-1">
+                  ⚖️ Roulet’s Law Sovereign Superfund Proof:
+                </span>
+                “On paper, everything’s wonderful, but at the sites, there’s still chaos.”
+              </div>
+            </div>
+
+            {/* KEY METRICS GRID */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className={`p-5 rounded-2xl border ${isLight ? 'bg-white border-red-200 shadow-xs' : 'bg-stone-950 border-red-900/60'} space-y-1`}>
+                <div className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400">Total Taxpayer Spend</div>
+                <div className="text-2xl sm:text-3xl font-black text-stone-900 dark:text-stone-100">$273,000,000</div>
+                <p className="text-[11px] text-stone-500 leading-snug">
+                  Spent since 1999 excavating & backfilling ~14,000 residential yards in East Omaha.
+                </p>
+              </div>
+
+              <div className={`p-5 rounded-2xl border ${isLight ? 'bg-white border-red-200 shadow-xs' : 'bg-stone-950 border-red-900/60'} space-y-1`}>
+                <div className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400">Smelter Waste Dumped</div>
+                <div className="text-2xl sm:text-3xl font-black text-red-600 dark:text-red-400">200,000 Tons</div>
+                <p className="text-[11px] text-stone-500 leading-snug">
+                  ASARCO smelter dumped enough lead dust to fill at least 1,600 rail cars across Omaha's east side.
+                </p>
+              </div>
+
+              <div className={`p-5 rounded-2xl border ${isLight ? 'bg-white border-amber-200 shadow-xs' : 'bg-stone-950 border-amber-900/60'} space-y-1`}>
+                <div className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">Remediated Yards Still Toxic</div>
+                <div className="text-2xl sm:text-3xl font-black text-amber-600 dark:text-amber-400">1 in 10 Yards</div>
+                <p className="text-[11px] text-stone-500 leading-snug">
+                  Of 150 EPA-"cleaned" yards tested, 10% still had lead concentrations qualifying for mandatory cleanup.
+                </p>
+              </div>
+
+              <div className={`p-5 rounded-2xl border ${isLight ? 'bg-white border-amber-200 shadow-xs' : 'bg-stone-950 border-amber-900/60'} space-y-1`}>
+                <div className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">Neighborhood Re-study Need</div>
+                <div className="text-2xl sm:text-3xl font-black text-stone-900 dark:text-stone-100">~25% (1 in 4)</div>
+                <p className="text-[11px] text-stone-500 leading-snug">
+                  Nearly a quarter of 600+ tested properties qualify for urgent re-study under updated guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* SCIENTIFIC ANALYSIS & EXPERT TESTIMONY */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* EXPERT QUOTES & SCIENTIFIC FLAWS */}
+            <div className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-200 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-5 flex flex-col justify-between`}>
+              <div className="space-y-4">
+                <div className="border-b border-stone-200 dark:border-stone-800 pb-3 flex items-center gap-2">
+                  <FileText className="text-red-600" size={18} />
+                  <h3 className="text-lg font-bold font-serif text-stone-900 dark:text-stone-100">
+                    Forensic Expert Testimony: The Arbitrary Threshold Flaw
+                  </h3>
+                </div>
+
+                {/* QUOTE 1: HOWARD MIELKE */}
+                <div className={`p-4 rounded-2xl border ${isLight ? 'bg-amber-50/60 border-amber-200' : 'bg-stone-950 border-amber-900/50'} space-y-2`}>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-amber-900 dark:text-amber-300">Dr. Howard Mielke</span>
+                    <span className="text-[10px] font-mono text-stone-500">Tulane University School of Medicine</span>
+                  </div>
+                  <p className="text-xs text-stone-800 dark:text-stone-200 italic leading-relaxed">
+                    “If you find a couple of high results, chances are many high results will be nearby... Not only should the agency clean up the areas that tested above the remediation level, but it also should test other homes.”
+                  </p>
+                </div>
+
+                {/* QUOTE 2: GABRIEL FILIPPELLI */}
+                <div className={`p-4 rounded-2xl border ${isLight ? 'bg-red-50/60 border-red-200' : 'bg-stone-950 border-red-900/50'} space-y-2`}>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-red-900 dark:text-red-300">Dr. Gabriel Filippelli</span>
+                    <span className="text-[10px] font-mono text-stone-500">Indiana University Earth Sciences</span>
+                  </div>
+                  <p className="text-xs text-stone-800 dark:text-stone-200 italic leading-relaxed">
+                    “From a scientific standpoint, a 390 is the same as a 410. It’s the same as a 400. They’re all about the same value. Failing to clean up neighboring properties can also lead to recontamination over time. When it’s windy and the ground is dry, tiny lead particles in the dirt — generally about one-hundredth the width of a human hair — become airborne and spread.”
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-3 bg-stone-950 text-stone-300 rounded-xl text-xs font-mono space-y-1 border border-stone-800">
+                <span className="text-amber-400 font-bold block">🚨 Regulatory Fallacy Identified:</span>
+                The EPA dug up yards with &gt;400 ppm but left neighboring yards at 390 ppm untouched. Dry winds resuspend sub-micron particles, re-contaminating remediated yards and blowing toxic dust directly into children's bedrooms.
+              </div>
+            </div>
+
+            {/* SYNTHESIS WITH RUTGERS & THOUSANDS OF YEARS OF PYROMETALLURGY */}
+            <div className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-200 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-5 flex flex-col justify-between`}>
+              <div className="space-y-4">
+                <div className="border-b border-stone-200 dark:border-stone-800 pb-3 flex items-center gap-2">
+                  <Globe className="text-amber-600" size={18} />
+                  <h3 className="text-lg font-bold font-serif text-stone-900 dark:text-stone-100">
+                    Rutgers Soil Study Synthesis: Cross-Property & Indoor Tracking
+                  </h3>
+                </div>
+
+                <div className="space-y-3 text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-sans">
+                  <p>
+                    <strong>1. Metallurgy Waste Distributed Across Populations:</strong> For thousands of years—from ancient Anatolian and Roman cupellation to modern ASARCO smelting and Mittal Steel plants—metallurgical industries have systematically distributed toxic heavy metal waste across surrounding regions and populations.
+                  </p>
+                  <p>
+                    <strong>2. Regulations Are Recent; Harm is Millennial:</strong> Environmental regulations (Clean Air Act, Superfund) only emerged in the late 20th century. For over a century, ASARCO aerosolized 200,000 tons of lead dust unchecked, creating permanent metallurgical soil sinks.
+                  </p>
+                  <p>
+                    <strong>3. Rutgers Study (Nature 2026) Confirms the Mechanism:</strong> As proven by Stratton, Buckley et al. in East Trenton, NJ, exterior soil lead is continuously transported across property boundaries on footwear and wind, causing <strong>80% of homes built without lead paint</strong> to exceed indoor dust hazard thresholds.
+                  </p>
+                </div>
+              </div>
+
+              {/* ACTION LINK TO CANARY & GLOBAL PROOFS */}
+              <div className="pt-3 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3">
+                <button
+                  onClick={() => onNavigateTab && onNavigateTab('global_lead_crime_proof')}
+                  className="px-4 py-2 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Crown size={14} />
+                  <span>Explore 8,000-Year Global Lead-Crime Proof</span>
+                </button>
+
+                <button
+                  onClick={() => setSelectedGraphicModal({
+                    src: omahaSuperfundImg,
+                    title: 'Plate #03: Omaha Superfund Lead Cleanup Failure & Smelting Metallurgy Proof',
+                    subtitle: 'Forensic exposenomics infographic documenting $273M EPA remediation failure in East Omaha. Explains 200,000 tons ASARCO smelter dust, arbitrary 400 ppm thresholds, windblown cross-yard recontamination, and Roulet\'s Law: "On paper, everything’s wonderful, but at the sites, there’s still chaos."',
+                    hash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026'
+                  })}
+                  className="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-amber-300 font-bold text-xs rounded-xl border border-amber-500/40 transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Maximize2 size={14} />
+                  <span>View Plate #03 Infographic</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* FULL EXCERPT BOX */}
+          <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-stone-50 border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-4`}>
+            <div className="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+              <div className="space-y-1">
+                <span className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400">
+                  Investigative Report Archive
+                </span>
+                <h3 className="text-lg font-bold font-serif text-stone-900 dark:text-stone-100">
+                  ProPublica & News Organizations Investigation: Full Excerpt
+                </h3>
+              </div>
+              <span className="text-xs font-mono text-stone-500">Omaha, Nebraska</span>
+            </div>
+
+            <div className="space-y-3 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed font-sans">
+              <p>
+                Since 1999, the EPA has spent <strong>$273 million</strong> digging up and backfilling nearly <strong>14,000 yards</strong> across east Omaha to address contamination left from the smelter and other factories downtown. It’s the largest residential lead cleanup in the country. And the agency’s Superfund program has repeatedly heralded it as a success.
+              </p>
+              <p>
+                But, it turns out, Omaha’s soil might not be as safe as officials have advertised. The news organizations tested soil from more than <strong>600 properties</strong>, including 150 that the EPA said had been cleaned up. In those tests, <strong>1 in 10 yards marked as remediated still had enough lead to qualify for cleanup</strong> under the original guidelines. And nearly a quarter of the properties tested in east Omaha could qualify for further study under new guidance released by the administration.
+              </p>
+              <p>
+                That’s in part because Omaha’s lead problem is almost as old as the city itself. The American Smelting and Refining Company (ASARCO) produced lead to make batteries, cover cables and enrich gasoline for more than a century. After the smelter closed in 1997, the EPA estimated the plant and other factories had dumped <strong>200,000 tons of lead dust — enough to fill at least 1,600 rail cars</strong> — across Omaha’s east side.
+              </p>
+              <p>
+                The agency tested nearly every yard in east Omaha and came up with a plan: It would dig up and replace parts of yards that had a concentration of more than 400 parts per million of lead — the equivalent of a marble in a 10-pound bucket of dirt. But that meant that some properties were cleaned up while neighboring ones that had only slightly lower levels of lead were not.
+              </p>
+              <p>
+                Hewing to that kind of strict standard doesn’t make sense, said Gabriel Filippelli, an Indiana University earth sciences professor and longtime lead researcher: <em>“From a scientific standpoint, a 390 is the same as a 410. It’s the same as a 400. They’re all about the same value. Failing to clean up neighboring properties can also lead to recontamination over time. When it’s windy and the ground is dry, tiny lead particles in the dirt become airborne and spread.”</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* TAB 4: ROULET'S LAW PROOF SYNTHESIS */}
       {activeDataTab === 'roulets_law' && (
         <div className="space-y-8">
           <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>

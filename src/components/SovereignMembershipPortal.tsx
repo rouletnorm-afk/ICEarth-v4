@@ -5,6 +5,7 @@ import scatterplotImg from '../assets/images/Scatterplot.jpg';
 import nanoSpire20YearsImg from '../assets/images/NanoSpire20Years.jpg';
 import nanoSpireRoadmapImg from '../assets/images/NanoSpireRoadmap.jpg';
 import natureSoilCanaryImg from '../assets/images/nature_soil_canary_1786614634627.jpg';
+import omahaSuperfundImg from '../assets/images/omaha_superfund_lead_soil_proof_1786683057243.jpg';
 import mittalCanaryLogoImg from '../assets/images/mittal_canary_logo_1786591941409.jpg';
 import picaGeophagyImg from '../assets/images/pica_geophagy_lead_1786618000000_1786618338553.jpg';
 import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_1786650125640.jpg';
@@ -204,6 +205,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       link: 'flint',
       description: 'Sovereign mathematical proof of Roulet’s Law connecting 50+ years of cumulative lead poisoning (1970s leaded gasoline through water crisis) to prefrontal neurotoxicity, special education, violent crimes/homicides, neighborhood demolitions, and municipal economic collapse.',
       sovereignHash: '0xFLINT_LEAD_CRIME_ROULETS_LAW_IP_2026'
+    },
+    {
+      id: 'IP-000J',
+      title: 'Omaha Superfund Lead Remediation Breakdown & Metallurgy Smelting Proof IP Asset',
+      type: 'Exposenomics Forensic Audit & Superfund Proof',
+      imageSrc: omahaSuperfundImg,
+      link: 'evolutionary_canary',
+      description: 'Forensic exposenomics audit of $273M EPA Superfund remediation breakdown across 14,000 Omaha yards. Documents 200,000 tons of ASARCO lead dust, the arbitrary 400 ppm boundary flaw, windblown cross-yard recontamination, and Roulet\'s Law: "On paper, everything’s wonderful, but at the sites, there’s still chaos."',
+      sovereignHash: '0xOMAHA_SUPERFUND_LEAD_SOIL_REMEDIATION_FAILURE_2026'
     },
     {
       id: 'IP-000H',
