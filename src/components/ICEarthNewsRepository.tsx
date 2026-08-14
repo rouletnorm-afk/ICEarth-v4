@@ -11,6 +11,7 @@ import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_17
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
+import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -51,7 +52,9 @@ import {
   Sliders,
   Tv,
   Play,
-  Video
+  Video,
+  Gavel,
+  Scale
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -90,6 +93,16 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('ny_lead_litigation') ||
+    u.includes('kakistocracy') ||
+    u.includes('earthjustice') ||
+    u.includes('1786686155359') ||
+    u.includes('1786687000000') ||
+    u.includes('plil')
+  ) {
+    return nyLeadLitigationImg;
+  }
   if (
     u.includes('global_lead_crime') ||
     u.includes('1786670881917') ||
@@ -189,6 +202,51 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NY-LEAD-SAFETY-LOOPHOLES-KAKISTOCRACY-2026',
+    contentType: 'Article',
+    title: 'Environmental Groups Sue New York Regulators Over Loopholes Weakening Lead Safety Rules & Constitutional Environmental Bill of Rights',
+    subtitle: 'Earthjustice Lawsuit Against NY State DOH • Proactive Lead Inspection Law (PLIL) Gutted by Administrative Rules • Constitutional Tort',
+    sourceUrl: 'https://www.jurist.org/news/2026/08/environmental-groups-sue-new-york-regulators-over-loopholes-weakening-lead-safety-rules/',
+    sourceName: 'JURIST Legal News & Earthjustice (ICEarth Sovereign Tort Audit)',
+    publishDate: '2026-08-14',
+    author: 'JURIST News Bureau & Norman Roulet (Sovereign Legal Audit)',
+    authorName: 'JURIST & Norman Roulet',
+    abstract: 'Three environmental advocacy groups, represented by Earthjustice, have filed a petition against the New York State Department of Health (DOH). The lawsuit challenges administrative regulations that gut the landmark Proactive Lead Inspection Law (PLIL) by creating 4 intentional loopholes: skipping soil testing when snow is present, omitting porch inspections where children play, allowing landlords to simply paint over peeling lead, and enforcing outdated scientific standards. The suit asserts these rules violate Article 1, Section 19 of the NY State Constitution (the "Environmental Bill of Rights").',
+    editorCommentary: 'This is the ultimate cause of genocide by lead poisoning: governments intentionally allowing poisoning that they not only know causes irreversible neurological harm, but that directly violates their own laws and regulations. Government is allowed to be criminal and ineffective because it claims democratic legitimacy as the "will of the people"—this is the definition of kakistocracy. Their actual public liability is in the $ trillions globally ($450B in NY State alone), burdening the electorate with special education, chronic healthcare, and violent crime costs. Communities across America—from Omaha failing to remediate chronic Superfund exposures to NY State gutting residential inspections—must deploy sovereign legal actions against their regulatory agencies.',
+    fullExcerpt: `ENVIRONMENTAL GROUPS SUE NEW YORK REGULATORS OVER LOOPHOLES WEAKENING LEAD SAFETY RULES
+
+Source: JURIST Legal News
+Date: August 14, 2026
+Jurisdiction: Supreme Court of the State of New York (Albany County)
+Counsel: Earthjustice (representing Clean NY, Environmental Advocates NY, and WE ACT for Environmental Justice)
+
+Three environmental groups filed a lawsuit on Thursday against the New York State Department of Health (DOH) to challenge regulations under the state’s lead safety law, which was designed to protect young children and tenants from lead poisoning.
+
+The advocacy groups, represented by Earthjustice, filed a petition challenging regulations under Sections 67-2 and 67-5 of the New York Codes, Rules and Regulations (NYCRR), arguing that the rules weaken the Proactive Lead Inspection Law (PLIL), enacted in November 2025. The lawsuit, filed in Albany Supreme Court, accuses the health department of creating loopholes that allow hazardous conditions to go undetected and unaddressed.
+
+The groups claim the DOH’s regulations contain four major flaws that undermine the PLIL’s protections:
+1. Soil Exemption: Skipping soil lead testing when snow is on the ground.
+2. Porch Omission: Omitting open porches where children play from visual inspection and dust wipe sampling requirements.
+3. Superficial Remediation: Allowing landlords to merely paint over peeling paint rather than properly remediate the underlying lead hazard.
+4. Antiquated Standards: Using an outdated, weakened scientific standard to define lead-based paint that is far less protective than New York City's municipal code.
+
+CONSTITUTIONAL CHALLENGE:
+The petition argues that the DOH’s regulations are “arbitrary, capricious, and an abuse of discretion,” and that they violate Article 1, Section 19 of the New York State Constitution, which guarantees that “Each person shall have a right to clean air and water, and a healthful environment.”
+
+ICEARTH KAKISTOCRACY AUDIT & GLOBAL LIABILITY:
+This litigation exposes the exact machinery of government kakistocracy. While claiming democratic authority, administrative bodies systematically codify corporate and landlord exemptions that perpetuate generational neurotoxicity. This transfers trillions of dollars in real-world liabilities onto working-class families and the tax base.
+
+Replication Opportunity: Communities across the nation, from East Omaha (where the EPA’s $273M Superfund cleanup left 1 in 10 yards toxic) to Flint, Cleveland, and Milwaukee, have direct legal cause to audit and sue state and federal regulators for intentional failure to enforce environmental protection statutes.`,
+    tags: ['Litigation', 'Earthjustice', 'Kakistocracy', 'EnvironmentalBillOfRights', 'PLIL', 'RouletsLaw', 'SoilContamination', 'StateTort'],
+    communities: ['ICEarth Global', 'New York State', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xNY_DOH_LEAD_SAFETY_LOOPHOLES_KAKISTOCRACY_TORT_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Founder & Lead Exposenomics Litigator',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg'
+  },
   {
     id: 'OMAHA-SUPERFUND-LEAD-CLEANUP-FAILURE-2026',
     contentType: 'Article',
@@ -1640,6 +1698,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.tags?.includes('Kakistocracy') || article.id.includes('NY-LEAD-SAFETY')) && (
+                      <button
+                        onClick={() => onNavigateTab('litigation')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-purple-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Gavel size={14} className="text-purple-200" />
+                        <span>⚖️ Launch NY Litigation & Restitution Ledger</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('OmahaLead') || article.tags?.includes('Superfund') || article.id.includes('OMAHA')) && (
                       <button
                         onClick={() => onNavigateTab('evolutionary_canary')}

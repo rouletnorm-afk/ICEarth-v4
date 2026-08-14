@@ -64,10 +64,21 @@ import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_17
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
+import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('ny_lead_litigation') ||
+    u.includes('kakistocracy') ||
+    u.includes('earthjustice') ||
+    u.includes('1786686155359') ||
+    u.includes('1786687000000') ||
+    u.includes('plil')
+  ) {
+    return nyLeadLitigationImg;
+  }
   if (
     u.includes('global_lead_crime') ||
     u.includes('1786670881917') ||
@@ -276,6 +287,33 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-NY-LEAD-SAFETY-LOOPHOLES-2026',
+      title: 'Environmental Groups Sue New York Regulators Over Loopholes Weakening Lead Safety Rules & Environmental Bill of Rights',
+      category: 'Sovereign Law',
+      date: '2026-08-14',
+      imageSrc: nyLeadLitigationImg,
+      summary: 'Earthjustice files lawsuit against the NY State Department of Health (DOH) for gutting the landmark Proactive Lead Inspection Law (PLIL) through 4 intentional administrative loopholes. The legal petition challenges the rules under NY Constitution Art. 1 §19 (Environmental Bill of Rights), exposing state kakistocracy where government-sanctioned poisoning burdens the public with trillions in uncompensated damages.',
+      fullText: `ENVIRONMENTAL GROUPS SUE NEW YORK REGULATORS OVER LOOPHOLES WEAKENING LEAD SAFETY RULES
+
+Source: JURIST Legal News & Earthjustice
+Date: August 14, 2026
+Jurisdiction: Albany Supreme Court (New York)
+Counsel: Earthjustice on behalf of Clean NY, Environmental Advocates NY, WE ACT for Environmental Justice
+ICEarth Litigation Engine: https://icearth.org/?tab=litigation
+
+THE 4 REGULATORY LOOPHOLES CHALLENGED:
+1. Soil Exemption: Skipping soil lead testing whenever snow covers the ground.
+2. Porch Omission: Excluding open porches where toddlers play from mandatory dust wipe testing and visual hazard audits.
+3. Superficial Painting: Allowing landlords to apply a coat of paint over loose, peeling lead-based paint instead of true containment or abatement.
+4. Weakened Standards: Enforcing antiquated scientific thresholds that lag behind New York City and modern toxicological consensus.
+
+CONSTITUTIONAL & SOVEREIGN TORT FOUNDATION:
+The lawsuit challenges DOH regulations under Article 1, Section 19 of the NY State Constitution ("Each person shall have a right to clean air and water, and a healthful environment"). This lawsuit serves as a national legal template for communities in Omaha, Flint, Cleveland, and beyond to hold regulatory agencies legally and financially accountable for intentional administrative complicity.`,
+      tags: ['Litigation', 'Earthjustice', 'Kakistocracy', 'EnvironmentalBillOfRights', 'PLIL', 'RouletsLaw', 'SoilContamination', 'SovereignLaw', 'ICEarth'],
+      linkHash: '0xNY_LEAD_SAFETY_LOOPHOLES_EARTHJUSTICE_TORT_2026',
+      publishedUrl: 'https://www.jurist.org/news/2026/08/environmental-groups-sue-new-york-regulators-over-loopholes-weakening-lead-safety-rules/'
+    },
     {
       id: 'MAG-OMAHA-SUPERFUND-2026',
       title: 'EPA Spent $273M Cleaning Up a Massive Superfund Site in Omaha. Independent Tests Found Toxic Levels of Lead in Many Yards.',
@@ -635,6 +673,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000L',
+      title: 'New York Lead Inspection Loopholes & Constitutional Environmental Bill of Rights Forensic Exhibit Plate',
+      category: 'Exposenomics & Forensic Audit',
+      imageSrc: nyLeadLitigationImg,
+      location: 'Albany Supreme Court & ICEarth Sovereign Legal Lab',
+      date: '2026-08-14',
+      description: 'Origins: Forensic legal exposenomics exhibit plate visualizing Earthjustice’s lawsuit against the NY State Department of Health. Details the 4 statutory loopholes gutting the Proactive Lead Inspection Law (PLIL), the constitutional challenge under NY Constitution Article 1 §19 (Environmental Bill of Rights), and the $450B state liability audit exposing regulatory kakistocracy.',
+      vaultHash: '0xNY_DOH_LEAD_SAFETY_LOOPHOLES_KAKISTOCRACY_EXHIBIT_PLATE_2026',
+      tags: ['Litigation', 'Earthjustice', 'Kakistocracy', 'EnvironmentalBillOfRights', 'PLIL', 'RouletsLaw', 'SoilContamination', 'SovereignLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000K',
       title: 'Omaha Superfund Lead Remediation Breakdown & Metallurgy Smelter Legacy — Forensic Plate #03',

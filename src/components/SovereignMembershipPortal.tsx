@@ -12,6 +12,7 @@ import probioticGraphicImg from '../assets/images/probiotic_lead_intervention_17
 import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786663441194.jpg';
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
+import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import {
   Shield,
   UserCheck,
@@ -143,6 +144,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000L',
+      title: 'New York Lead Safety Loopholes & Environmental Bill of Rights Sovereign Tort Audit (Plate #06)',
+      type: 'Constitutional Tort & Regulatory Audit IP Asset',
+      imageSrc: nyLeadLitigationImg,
+      link: 'litigation',
+      description: 'Sovereign legal audit of Earthjustice’s lawsuit against NY State DOH challenging 4 administrative loopholes gutting the Proactive Lead Inspection Law (PLIL) under Article 1 §19. Establishes state kakistocracy liability model ($450B NY damages) for nationwide community replication.',
+      sovereignHash: '0xNY_DOH_LEAD_SAFETY_LOOPHOLES_KAKISTOCRACY_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000',
       title: 'H. sapiens Evolutionary Canary & Nature 2026 Soil-to-Dust Tracking Study (Plate #01)',
