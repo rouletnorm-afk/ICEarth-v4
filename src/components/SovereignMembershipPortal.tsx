@@ -14,6 +14,7 @@ import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_17
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
+import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import {
   Shield,
   UserCheck,
@@ -145,6 +146,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000N',
+      title: 'Denisovan EPAS1 Haplotype, Tibetan Altitude Hypoxia & Heavy Metal Archaic Introgression Forensic Plate (Plate #08)',
+      type: 'Evolutionary Exposenomics & Archaic Reticulate Introgression Asset',
+      imageSrc: denisovanInfographicImg,
+      link: 'denisovan_epas1',
+      description: 'Landmark evolutionary exposenomics plate establishing that cross-breeding with archaic hominins (Denisovans & Neanderthals) provided pre-adapted genetic survival toolkits (EPAS1 hypoxia blunting at 86% in Tibetans). Cross-examined with deep-time heavy metal (lead/Pb) selective pressures that shaped modern human physiological diversity.',
+      sovereignHash: '0xDENISOVAN_EPAS1_ALTITUDE_LEAD_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000M',
       title: 'Suriname Lead Isotope Analysis in Dried Blood Spots & Dual Exposure Source Forensic Plate (Plate #07)',

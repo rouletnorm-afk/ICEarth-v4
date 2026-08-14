@@ -13,6 +13,7 @@ import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_17
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
+import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -95,6 +96,16 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('denisovan') ||
+    u.includes('epas1') ||
+    u.includes('introgression') ||
+    u.includes('1786695776411') ||
+    u.includes('tibetan') ||
+    u.includes('hypoxia')
+  ) {
+    return denisovanInfographicImg;
+  }
   if (
     u.includes('suriname') ||
     u.includes('isotope') ||
@@ -214,6 +225,47 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'DENISOVAN-EPAS1-ALTITUDE-LEAD-EXPOSENOMICS-2026',
+    contentType: 'Article',
+    title: 'Archaic Adaptive Introgression: Denisovan EPAS1 Haplotype Surged to 86% in Tibetans Millennia After Interbreeding as Environmental Hypoxia and Heavy Metal Filters Shaped Modern Genomes',
+    subtitle: 'Life Science and Evolution: Overturning the Linear Tree of H. sapiens • Denisovan-derived EPAS1 Hypoxia Resistance • Deep-Time Environmental Xenobiotic Selection',
+    sourceUrl: 'https://scienceblog.com/t-tibetans-denisovan-epas1-high-altitude-adaptation-80-percent/',
+    sourceName: 'Natural History (Ed. Lachlan Brown) & ICEarth Sovereign Evolutionary Exposenomics Audit',
+    publishDate: '2026-08-14',
+    author: 'Natural History Science Desk & Norman Roulet (ICEarth Evolutionary Exposenomics Synthesis)',
+    authorName: 'Natural History & Norman Roulet',
+    abstract: 'Challenging the linear interpretation of Homo sapiens development beyond the genome to the exposome: cross-breeding among Neanderthals, Denisovans, and modern humans generated genetic variations that out-survived the archaic species themselves. More than 80–86% of Tibetans carry an EPAS1 high-altitude adaptation inherited from Denisovans—an extinct lineage first identified from DNA in a tiny finger bone. Interbreeding tens of thousands of years ago placed this Denisovan-related haplotype into the ancestral modern human gene pool as standing neutral variation. Selection later surged when populations ascended the Tibetan Plateau, preventing dangerous polycythemia and chronic mountain sickness while optimizing microvascular nitric oxide synthesis. Parallel environmental filters, notably heavy metals (lead/Pb, cadmium, arsenic) in paleolithic karst caves and volcanic regions, similarly drove neurodevelopmental and biotransformation divergence.',
+    editorCommentary: 'This landmark research firmly establishes the ICEarth Reticulate Exposenomics Principle: modern human diversity is not the product of an isolated single-lineage march out of Africa, but a dynamic mosaic of archaic genetic toolkits preserved and amplified by extreme ecological exposomes. Just as hypobaric hypoxia in the Himalayas acted as an unforgiving reproductive filter that drove the Denisovan EPAS1 haplotype from ~1% to >85% frequency, natural geogenic heavy metals (such as lead in paleolithic caves and water tables) exerted immense selective pressure on metabolic, blood-brain barrier, and calcium-signaling genes. As human populations now encounter synthetic, industrial-scale chemical and lead burdens, this ancient evolutionary architecture explains divergent susceptibilities and the critical necessity of sovereign exposenomic medicine.',
+    fullExcerpt: `ARCHAIC ADAPTIVE INTROGRESSION: DENISOVAN EPAS1 HAPLOTYPE AND THE RETICULATE EVOLUTIONARY EXPOSOME
+
+Source: ScienceBlog / Natural History
+Editor: Lachlan Brown
+Published: August 14, 2026
+Research Axis: Evolutionary Genomics & Environmental Exposenomics
+ICEarth Forensics Engine: https://icearth.org/?tab=denisovan_epas1
+
+CORE SCIENTIFIC DISCOVERIES:
+1. The Denisovan Finger Bone & Ancient Gene Flow:
+More than 80% to 86% of Tibetans carry a high-altitude hypoxia adaptation inherited from Denisovans—an extinct archaic human lineage first identified from high-coverage DNA extracted from a finger phalanx in Denisova Cave (Altai Mountains). Interbreeding tens of thousands of years ago placed a 32.7-kb Denisovan-related EPAS1 haplotype into the modern human gene pool.
+
+2. Millennia Between Admixture and Natural Selection:
+"The finger bone did not itself contain a Tibetan adaptation, and one gene did not make the plateau habitable. The connection runs through population history. Interbreeding tens of thousands of years ago placed a Denisovan-related haplotype in the modern human gene pool. Selection later changed its fate in thin air, turning one archaic fragment into a common inheritance and preserving a trace of an extinct population in millions of living descendants."
+
+3. The Physiological Mechanism of EPAS1 (HIF-2α):
+In unadapted modern humans, hypoxia triggers runaway erythropoietin (EPO) synthesis, elevating hematocrit (>55%) and causing hyper-viscous blood, pulmonary arterial hypertension, and severe preeclampsia in pregnant mothers. The Denisovan-derived EPAS1 variant blunts this maladaptive erythrocytosis, allowing Tibetans to maintain normal hemoglobin levels (14–16 g/dL) while augmenting endothelial nitric oxide production to dilate microvessels and maximize tissue perfusion.
+
+4. Dual Environmental Selective Pressures (Altitude & Heavy Metals):
+ICEarth's synthesis demonstrates that alongside altitude hypoxia, natural heavy metals (such as lead, arsenic, and mercury) in karst caves, springs, and mineral veins acted as major deep-time xenobiotic filters. Polymorphisms in ALAD, VDR, and divalent metal transporters reflect varied evolutionary exposures that shape modern clinical vulnerabilities today.`,
+    tags: ['DenisovanEPAS1', 'ArchaicIntrogression', 'AltitudeHypoxia', 'TibetanAdaptation', 'LeadExposenomics', 'EvolutionaryGenomics', 'NeanderthalAdmixture', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Indigenous Environmental Sovereignty', 'Cleveland & Cuyahoga County'],
+    vaultHash: '0xDENISOVAN_EPAS1_ALTITUDE_LEAD_INTROGRESSION_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Founder & Lead Exposenomics Litigator',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'denisovan_epas1_altitude_lead_introgression_1786695776411.jpg'
+  },
   {
     id: 'SURINAME-LEAD-ISOTOPE-DBS-REMOTE-BIOMONITORING-2026',
     contentType: 'Article',
@@ -1769,6 +1821,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('DenisovanEPAS1') || article.tags?.includes('ArchaicIntrogression') || article.id.includes('DENISOVAN')) && (
+                      <button
+                        onClick={() => onNavigateTab('denisovan_epas1')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Atom size={14} className="text-amber-200" />
+                        <span>🧬 Launch Denisovan EPAS1 Exposenomics Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) && (
                       <button
                         onClick={() => onNavigateTab('suriname_isotope')}

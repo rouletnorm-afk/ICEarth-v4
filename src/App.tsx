@@ -103,16 +103,17 @@ import { ExposenomicsStorybook } from './components/ExposenomicsStorybook';
 import { AnimatedDocumentaryStage } from './components/AnimatedDocumentaryStage';
 import { MedicalInterventionsTab } from './components/MedicalInterventionsTab';
 import { SurinameIsotopeForensics } from './components/SurinameIsotopeForensics';
+import { DenisovanAltitudeAdaptiveExposenomics } from './components/DenisovanAltitudeAdaptiveExposenomics';
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -997,6 +998,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00028 Denisovan EPAS1 & Altitude/Lead Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('denisovan_epas1' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'denisovan_epas1' || (activeTab as string) === 'denisovan' || (activeTab as string) === 'epas1' || (activeTab as string) === 'altitude'
+                      ? 'bg-amber-600 text-white border-amber-500 shadow-md font-extrabold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-900 border-amber-400/50 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Mountain size={16} className={activeTab === 'denisovan_epas1' ? 'text-white animate-spin' : 'text-amber-800'} />
+                  <span className="flex-1 font-bold">🏔️ Denisovan EPAS1 & Altitude/Pb</span>
+                  <span className="px-1.5 py-0.2 bg-amber-950 text-amber-200 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    EPAS1 86%
+                  </span>
+                </button>
+
                 {/* 0.0003 Graphical Storybook */}
                 <button
                   onClick={() => setActiveTab('storybook' as any)}
@@ -1154,6 +1171,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1">🔬 Suriname Lead Isotope Forensics</span>
                   <span className="px-1.5 py-0.2 bg-emerald-500/20 text-emerald-700 text-[8px] tracking-wide rounded uppercase font-bold border border-emerald-500/30">
                     DBS Proof
+                  </span>
+                </button>
+
+                {/* 0.07 Denisovan EPAS1 & Altitude/Lead Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('denisovan_epas1' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'denisovan_epas1' || (activeTab as string) === 'denisovan' || (activeTab as string) === 'epas1' || (activeTab as string) === 'altitude'
+                      ? 'bg-amber-900 text-amber-50 border-amber-600/50 shadow-sm font-bold'
+                      : 'hover:bg-amber-50/80 text-amber-900 border-amber-200/50 bg-amber-50/20'
+                  }`}
+                >
+                  <Mountain size={16} className={activeTab === 'denisovan_epas1' ? 'text-amber-400' : 'text-amber-600'} />
+                  <span className="flex-1">🏔️ Denisovan EPAS1 & Altitude/Pb</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-700 text-[8px] tracking-wide rounded uppercase font-bold border border-amber-500/30">
+                    EPAS1 Proof
                   </span>
                 </button>
 
@@ -3184,6 +3217,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'suriname_isotope' || (activeTab as string) === 'suriname' || (activeTab as string) === 'isotope' || (activeTab as string) === 'isotopes' || (activeTab as string) === 'dbs') && (
             <div className="flex-1 overflow-y-auto">
               <SurinameIsotopeForensics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0048: DENISOVAN EPAS1 ALTITUDE HYPOXIA & LEAD INTROGRESSION EXPOSENOMICS */}
+          {(activeTab === 'denisovan_epas1' || (activeTab as string) === 'denisovan' || (activeTab as string) === 'epas1' || (activeTab as string) === 'altitude' || (activeTab as string) === 'tibetan' || (activeTab as string) === 'introgression') && (
+            <div className="flex-1 overflow-y-auto">
+              <DenisovanAltitudeAdaptiveExposenomics 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
