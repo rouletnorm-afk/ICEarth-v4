@@ -15,6 +15,7 @@ import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
+import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import {
   Shield,
   UserCheck,
@@ -146,6 +147,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000P',
+      title: 'Wildfire Pyrogenic Heavy Metal Plume & Urban-WUI Aerosol Fallout Forensic Plate (Plate #09)',
+      type: 'Atmospheric Aerosol & Urban Conflagration Exposenomics Model',
+      imageSrc: wildfireInfographicImg,
+      link: 'wildfire_pyro',
+      description: 'Landmark forensic exposenomics plate modeling atmospheric transport of lead (Pb), chromium, copper, and asbestos fibers from 900+ incinerated homes into undamaged suburban properties, nursery window sills, and elementary school playground soils.',
+      sovereignHash: '0xWILDFIRE_PYRO_EXPOSENOMICS_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000N',
       title: 'Denisovan EPAS1 Haplotype, Tibetan Altitude Hypoxia & Heavy Metal Archaic Introgression Forensic Plate (Plate #08)',

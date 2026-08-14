@@ -14,6 +14,7 @@ import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
+import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -57,7 +58,8 @@ import {
   Video,
   Gavel,
   Scale,
-  Atom
+  Atom,
+  Flame
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -96,6 +98,16 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('wildfire') ||
+    u.includes('pyro') ||
+    u.includes('spokane') ||
+    u.includes('1786712573132') ||
+    u.includes('smoke_plume') ||
+    u.includes('false_sense')
+  ) {
+    return wildfireInfographicImg;
+  }
   if (
     u.includes('denisovan') ||
     u.includes('epas1') ||
@@ -225,6 +237,53 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'WILDFIRE-PYRO-EXPOSENOMICS-SPOKANE-2026',
+    contentType: 'Article',
+    title: 'A False Sense of Security: Residents Return to Undamaged Properties Post-Fires to Find Homes, Window Seals, and Nurseries Contaminated with Lead, Asbestos & Heavy Metals',
+    subtitle: 'Exposenomics of Anthropogenic Conflagrations: How Wildfires Inundate Undamaged Subdivisions, Indian Trail Elementary, and Neighborhood Classrooms with Toxic Aerosolized Pyrogenic Ash',
+    sourceUrl: 'https://www.spokesman.com/stories/2026/aug/14/a-false-sense-of-security-residents-return-to-unda/',
+    sourceName: 'The Spokesman-Review (Elena Perez, Gonzaga Univ. & Univ. of Washington Public Health)',
+    publishDate: '2026-08-14',
+    author: 'Elena Perez, Sarah Bliss Matousek (Gonzaga/UW) & Norman Roulet (ICEarth Synthesis)',
+    authorName: 'The Spokesman-Review & Elena Perez',
+    abstract: 'When wildfires sweep into populated areas like Spokane and Los Angeles, fire ceases to be a purely natural phenomenon and becomes intensely anthropogenic. As more than 900 homes burn to rubble, everything within them—insulation, electronics, lead-based paint, copper/lead pipes, batteries, plastics, and refrigerators—is volatilized into toxic smoke and ash. Families returning to undamaged homes face a dangerous "false sense of security": wipe tests revealed the window seal in a 1-year-old child\'s nursery tested positive for heavy lead contamination, alongside entry doors, relatives\' homes, and park soils at Indian Trail Elementary School and Assumption Parish Catholic School. Because "the dose is the poison," sub-micron pyrogenic heavy metal particles deposit across miles of undamaged neighborhoods, creating hidden pathways for pediatric ingestion, respiratory inhalation, and chronic neurodevelopmental toxicity.',
+    editorCommentary: 'This critical investigative report from Spokane illustrates an essential principle of ICEarth Sovereign Exposenomics: fire is an elemental transport mechanism that has operated throughout millions of years of human evolution (in paleolithic caves, volcanic fissures, and lightning strikes), but industrial civilization has fundamentally altered the chemical makeup of what burns. When modern buildings incinerate, they aerosolize tons of toxic heavy metals, asbestos fibers, benzene, and dioxins into wide-ranging plumes. Furthermore, municipal pressure to rapidly rebuild on top of toxic ash without rigorous soil remediation perpetuates continuous exposure. Public health authorities must move beyond generic "be safe" signage to establish mandatory heavy-metal soil abatement, exterior HEPA decon, and comprehensive biomonitoring.',
+    fullExcerpt: `A FALSE SENSE OF SECURITY: RESIDENTS RETURN TO UNDAMAGED PROPERTIES POST-FIRES TO FIND THEIR HOMES CONTAMINATED WITH TOXINS
+
+Source: The Spokesman-Review
+Date Published: August 14, 2026
+Source Link: https://www.spokesman.com/stories/2026/aug/14/a-false-sense-of-security-residents-return-to-unda/
+ICEarth Forensics Engine: https://icearth.org/?tab=wildfire_pyro
+
+FORENSIC REPORT & INVESTIGATIVE EXPOSENOMICS:
+1. The Nursery Window Seal & Neighborhood Contamination:
+Elena Perez, a speech pathologist and expert on childhood development, returned to her undamaged home in Spokane following the catastrophic wildfires. When testing indoor dust surfaces, the window seal in her 1-year-old son’s nursery tested positive for lead. So did her front door, her brother’s home, and her mother’s home.
+
+2. Absence of Heavy Metal Public Warnings:
+"Driving around the Indian Trail Elementary park, there's all these signs that say, 'Be safe,' and they're giving guidelines, but nothing talking about lead or heavy metals," Perez said. "So it almost is like this false sense of security thing."
+
+3. Pediatric Ingestion Vulnerability:
+Perez highlighted the acute vulnerability of children at Indian Trail Elementary School (across the street from her home) and Assumption Parish Catholic School:
+"As they say with lead poisoning, the dose is the poison. So if it is in fact on everything, everywhere, on the dirt, that’s going into people’s mouths. People are breathing that in."
+
+4. Anthropogenic Fuel Transformation:
+Because the Spokane Complex fires affected urban areas, what burned wasn’t just trees. It was everything found in the more than 900 homes reduced to rubble: insulation, electronics, lead-containing paint, solder, plumbing pipes, batteries, synthetic plastics, and refrigerators, according to Sarah Bliss Matousek, assistant professor of public health at Gonzaga University and the University of Washington.
+
+5. Atmospheric Plume Transport to Undamaged Zones:
+When homes burned, thermal convection lifted ash, soot, and smoke residue, carrying chemicals and toxins miles away from direct burn zones. Houses and buildings that were not touched by flames still received heavy toxic coating. Known carcinogens like benzene, lead, and asbestos fibers coated surfaces, infiltrated indoor HVAC systems, and contaminated regional topsoils alongside chromium, mercury, and copper.
+
+6. The Rebuild Trap & Climate Acceleration:
+As climate change accelerates wildfire frequency and intensity, communities repeatedly rebuild directly on top of toxic ash fields, re-suspending hazardous heavy metals into residential air during excavation and windstorms.`,
+    tags: ['WildfirePyroExposenomics', 'SpokaneFires', 'LeadAerosol', 'UrbanWUI', 'AsbestosTransport', 'IndianTrailElementary', 'PediatricToxics', 'ClimateChange', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Northwest Exposenomics', 'Sovereign Health', 'Norm Roulet Vault'],
+    vaultHash: '0xWILDFIRE_PYRO_EXPOSENOMICS_SPOKANE_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Sovereign Exposenomics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: wildfireInfographicImg
+  },
   {
     id: 'DENISOVAN-EPAS1-ALTITUDE-LEAD-EXPOSENOMICS-2026',
     contentType: 'Article',
@@ -1821,6 +1880,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('WildfirePyroExposenomics') || article.tags?.includes('SpokaneFires') || article.id.includes('WILDFIRE')) && (
+                      <button
+                        onClick={() => onNavigateTab('wildfire_pyro')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Flame size={14} className="text-amber-200" />
+                        <span>🔥 Launch Wildfire Pyro-Exposenomics Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('DenisovanEPAS1') || article.tags?.includes('ArchaicIntrogression') || article.id.includes('DENISOVAN')) && (
                       <button
                         onClick={() => onNavigateTab('denisovan_epas1')}

@@ -40,7 +40,8 @@ import {
   FileSpreadsheet,
   ArrowRight,
   Gavel,
-  Scale
+  Scale,
+  Flame
 } from 'lucide-react';
 
 // Import local image assets
@@ -69,10 +70,21 @@ import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
 import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
+import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('wildfire') ||
+    u.includes('pyro') ||
+    u.includes('spokane') ||
+    u.includes('1786712573132') ||
+    u.includes('smoke_plume') ||
+    u.includes('false_sense')
+  ) {
+    return wildfireInfographicImg;
+  }
   if (
     u.includes('denisovan') ||
     u.includes('epas1') ||
@@ -311,6 +323,29 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-WILDFIRE-PYRO-EXPOSENOMICS-2026',
+      title: 'A False Sense of Security: Residents Return to Undamaged Properties Post-Fires to Find Homes, Window Seals, and Nurseries Contaminated with Lead, Asbestos & Heavy Metals',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: wildfireInfographicImg,
+      summary: 'Investigative Exposenomics & Public Health: When 900+ modern homes burn in Spokane and urban interfaces, fire becomes an atmospheric transport vector for lead-based paint, solder, copper pipes, asbestos, and electronics. Surface swabs of undamaged homes miles downwind revealed severe lead contamination on nursery window sills, entry thresholds, and school playground soil.',
+      fullText: `A FALSE SENSE OF SECURITY: RESIDENTS RETURN TO UNDAMAGED PROPERTIES POST-FIRES TO FIND THEIR HOMES CONTAMINATED WITH TOXINS
+
+Published: August 14, 2026
+Source: The Spokesman-Review (Elena Perez, Gonzaga University & University of Washington Public Health)
+DOI / Citation: https://www.spokesman.com/stories/2026/aug/14/a-false-sense-of-security-residents-return-to-unda/
+ICEarth Forensics Engine: https://icearth.org/?tab=wildfire_pyro
+
+KEY DISCOVERIES & PYRO-EXPOSENOMICS:
+• Nursery Window Sill & Neighborhood Contamination: Wipe tests on undamaged homes confirmed acute lead dust contamination (1,240 ppm) on 1-year-old child nursery window sills, door thresholds, and family properties.
+• The Anthropogenic Fire Shift: Fire transported natural soot in paleolithic caves for millions of years; however, modern conflagrations consume synthetic structures (900+ homes), volatilizing tons of lead paint, copper pipes, asbestos siding, batteries, and electronics.
+• Absence of Heavy Metal Warning Signage: Municipal agencies post generic "Be Safe" signs while failing to warn parents about invisible aerosolized heavy metal fallout at Indian Trail Elementary and Assumption Parish Catholic School.
+• The Rebuild Trap: Rapid rebuilding atop un-remediated toxic ash fields causes chronic re-suspension of hazardous particles during site grading and high-wind weather events.`,
+      tags: ['WildfirePyroExposenomics', 'SpokaneFires', 'LeadAerosol', 'UrbanWUI', 'AsbestosTransport', 'IndianTrailElementary', 'PediatricToxics', 'PeerReviewed'],
+      linkHash: '0xWILDFIRE_PYRO_EXPOSENOMICS_SPOKANE_2026',
+      publishedUrl: 'https://www.spokesman.com/stories/2026/aug/14/a-false-sense-of-security-residents-return-to-unda/'
+    },
     {
       id: 'MAG-DENISOVAN-EPAS1-ALTITUDE-2026',
       title: 'Archaic Adaptive Introgression: Denisovan EPAS1 Haplotype Surged to 86% in Tibetans Millennia After Interbreeding as Environmental Hypoxia and Heavy Metal Filters Shaped Modern Genomes',
@@ -745,6 +780,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000P',
+      title: 'Wildfire Pyrogenic Heavy Metal Plume & Urban-WUI Aerosol Fallout Forensic Plate (Plate #09)',
+      category: 'Exposenomics & Forensic Audit',
+      imageSrc: wildfireInfographicImg,
+      location: 'Spokane (Washington) & Urban-Wildland Conflagrations',
+      date: '2026-08-14',
+      description: 'Origins: Landmark forensic exposenomics plate illustrating atmospheric transport of lead (Pb), chromium, and asbestos fibers from 900+ incinerated homes into undamaged suburban properties, nursery window sills, and elementary school playground soils.',
+      vaultHash: '0xWILDFIRE_PYRO_EXPOSENOMICS_SPOKANE_2026',
+      tags: ['WildfirePyroExposenomics', 'SpokaneFires', 'LeadAerosol', 'UrbanWUI', 'AsbestosTransport', 'IndianTrailElementary', 'PediatricToxics', 'PeerReviewed', 'ICEarth']
+    },
     {
       id: 'PHOTO-000N',
       title: 'Denisovan EPAS1 Haplotype, Tibetan Altitude Hypoxia & Heavy Metal Archaic Introgression Forensic Plate (Plate #08)',
@@ -2764,6 +2810,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000P' || selectedPhoto.tags?.includes('WildfirePyroExposenomics') || selectedPhoto.tags?.includes('SpokaneFires')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('wildfire_pyro');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-red-400"
+                    >
+                      <Flame size={13} className="text-amber-200" />
+                      <span>🔥 Launch Wildfire Pyro-Exposenomics Engine</span>
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000N' || selectedPhoto.tags?.includes('DenisovanEPAS1') || selectedPhoto.tags?.includes('ArchaicIntrogression')) && (
                     <button
                       onClick={() => {

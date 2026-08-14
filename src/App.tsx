@@ -104,16 +104,17 @@ import { AnimatedDocumentaryStage } from './components/AnimatedDocumentaryStage'
 import { MedicalInterventionsTab } from './components/MedicalInterventionsTab';
 import { SurinameIsotopeForensics } from './components/SurinameIsotopeForensics';
 import { DenisovanAltitudeAdaptiveExposenomics } from './components/DenisovanAltitudeAdaptiveExposenomics';
+import { WildfirePyroExposenomics } from './components/WildfirePyroExposenomics';
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1014,6 +1015,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00029 Wildfire Pyro-Exposenomics & Heavy Metal Plume */}
+                <button
+                  onClick={() => setActiveTab('wildfire_pyro' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'wildfire_pyro' || (activeTab as string) === 'wildfire' || (activeTab as string) === 'pyro' || (activeTab as string) === 'spokane'
+                      ? 'bg-red-600 text-white border-red-500 shadow-md font-extrabold ring-1 ring-red-400/50'
+                      : 'hover:bg-red-500/20 text-red-950 border-red-300/50 bg-red-50/90 font-bold'
+                  }`}
+                >
+                  <Flame size={16} className={activeTab === 'wildfire_pyro' ? 'text-white animate-pulse' : 'text-red-600'} />
+                  <span className="flex-1 font-bold">🔥 Wildfire Pyro-Exposenomics</span>
+                  <span className="px-1.5 py-0.2 bg-red-950 text-red-200 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    PLUME PROOF
+                  </span>
+                </button>
+
                 {/* 0.0003 Graphical Storybook */}
                 <button
                   onClick={() => setActiveTab('storybook' as any)}
@@ -1187,6 +1204,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1">🏔️ Denisovan EPAS1 & Altitude/Pb</span>
                   <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-700 text-[8px] tracking-wide rounded uppercase font-bold border border-amber-500/30">
                     EPAS1 Proof
+                  </span>
+                </button>
+
+                {/* 0.08 Wildfire Heavy Metal Plume & Urban-WUI Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('wildfire_pyro' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'wildfire_pyro' || (activeTab as string) === 'wildfire' || (activeTab as string) === 'pyro' || (activeTab as string) === 'spokane'
+                      ? 'bg-red-900 text-red-50 border-red-600/50 shadow-sm font-bold'
+                      : 'hover:bg-red-50/80 text-red-900 border-red-200/50 bg-red-50/20'
+                  }`}
+                >
+                  <Flame size={16} className={activeTab === 'wildfire_pyro' ? 'text-red-400' : 'text-red-600'} />
+                  <span className="flex-1">🔥 Wildfire Pyro-Exposenomics</span>
+                  <span className="px-1.5 py-0.2 bg-red-500/20 text-red-700 text-[8px] tracking-wide rounded uppercase font-bold border border-red-500/30">
+                    Plume Proof
                   </span>
                 </button>
 
@@ -3227,6 +3260,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'denisovan_epas1' || (activeTab as string) === 'denisovan' || (activeTab as string) === 'epas1' || (activeTab as string) === 'altitude' || (activeTab as string) === 'tibetan' || (activeTab as string) === 'introgression') && (
             <div className="flex-1 overflow-y-auto">
               <DenisovanAltitudeAdaptiveExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0049: WILDFIRE PYRO-EXPOSENOMICS & HEAVY METAL PLUMES */}
+          {(activeTab === 'wildfire_pyro' || (activeTab as string) === 'wildfire' || (activeTab as string) === 'pyro' || (activeTab as string) === 'spokane' || (activeTab as string) === 'plume' || (activeTab as string) === 'ash') && (
+            <div className="flex-1 overflow-y-auto">
+              <WildfirePyroExposenomics 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
