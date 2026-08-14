@@ -798,6 +798,77 @@ export const LitigationLedger: React.FC<LitigationLedgerProps> = ({ onNavigateTa
                       </div>
                     </div>
 
+                    {/* ENFORCEMENT GAPS: REMEDIATION COST MULTIPLIER & FUNDING DRAIN MATRIX */}
+                    <div className="p-4 bg-black/50 border border-amber-500/40 rounded-lg space-y-3">
+                      <div className="flex items-center gap-2 text-amber-300 font-bold uppercase text-xs">
+                        <TrendingUp size={16} className="text-amber-400" />
+                        <span>Litigation Profiler: How Enforcement Gaps Multiply Costs & Destroy Regulation</span>
+                      </div>
+                      <p className="text-stone-300 text-xs leading-relaxed font-sans">
+                        When regulatory agencies create loopholes or fail to proactively enforce environmental standards, they trigger a catastrophic economic domino effect:
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1 text-xs">
+                        <div className="p-3 bg-neutral-900 rounded-lg border border-amber-500/30 space-y-1.5">
+                          <span className="text-amber-400 font-bold font-mono text-[11px] block">
+                            1. Remediation Costs Explode (10x-50x)
+                          </span>
+                          <p className="text-stone-300 text-[11px] leading-relaxed">
+                            Skipping soil audits and allowing superficial paint-over causes friction dust to pulverize and disperse into living spaces. What could have been fixed with early $1,500 window/porch stabilization turns into emergency $45,000 hazardous gutting and lifetime medical chelation.
+                          </p>
+                        </div>
+                        <div className="p-3 bg-neutral-900 rounded-lg border border-amber-500/30 space-y-1.5">
+                          <span className="text-amber-400 font-bold font-mono text-[11px] block">
+                            2. Public Funding Is Starved & Misallocated
+                          </span>
+                          <p className="text-stone-300 text-[11px] leading-relaxed">
+                            Loophole certifications falsely mark poisoned properties as "lead safe." This blocks municipalities and families from qualifying for federal HUD and EPA remediation grants while letting wealthy polluters and landlords evade mandatory capital escrow deposits.
+                          </p>
+                        </div>
+                        <div className="p-3 bg-neutral-900 rounded-lg border border-amber-500/30 space-y-1.5">
+                          <span className="text-amber-400 font-bold font-mono text-[11px] block">
+                            3. Regulations Rendered Ineffective on Paper
+                          </span>
+                          <p className="text-stone-300 text-[11px] leading-relaxed">
+                            Proving Roulet's Law: "On paper everything is wonderful, but at the sites there's still chaos." Landmark statutes like PLIL are hollowed out by administrative code, creating an illusion of compliance while pediatric poisoning continues uninterrupted.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* UPCOMING LITIGATION & APPELLATE DECISIONS IN THE PROFILER PIPELINE */}
+                    <div className="p-4 bg-purple-950/40 border border-purple-500/40 rounded-lg space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-purple-200 font-bold uppercase text-xs">
+                          <Gavel size={15} className="text-purple-300" />
+                          <span>Litigation Profiler Pipeline: Upcoming Enforcement Gap Case Audits</span>
+                        </div>
+                        <span className="text-[10px] font-mono text-purple-300 bg-purple-900/60 px-2 py-0.5 rounded border border-purple-500/30">
+                          Active Research & Filing Queue
+                        </span>
+                      </div>
+                      <p className="text-stone-300 text-xs leading-relaxed font-sans">
+                        ICEarth's legal exposenomics team is systematically profiling court decisions, consent decrees, and administrative petitions that reveal systemic enforcement gaps:
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] font-mono">
+                        <div className="p-2.5 bg-black/40 rounded border border-purple-800/40 space-y-1">
+                          <span className="text-purple-300 font-bold block">• East Omaha Superfund ASARCO Soil Tort</span>
+                          <p className="text-stone-400 text-[10px]">EPA $273M remediation omitted 1 in 10 yards; cross-property recontamination audit.</p>
+                        </div>
+                        <div className="p-2.5 bg-black/40 rounded border border-purple-800/40 space-y-1">
+                          <span className="text-purple-300 font-bold block">• Cleveland Lead Safe Housing Ordinance Audit</span>
+                          <p className="text-stone-400 text-[10px]">Enforcement rate &lt;25%, landlord loopholes delaying certification & public disclosure.</p>
+                        </div>
+                        <div className="p-2.5 bg-black/40 rounded border border-purple-800/40 space-y-1">
+                          <span className="text-purple-300 font-bold block">• Milwaukee Childhood Lead Order Backlog</span>
+                          <p className="text-stone-400 text-[10px]">Multi-year administrative delay in abatement orders resulting in chronic infant re-poisoning.</p>
+                        </div>
+                        <div className="p-2.5 bg-black/40 rounded border border-purple-800/40 space-y-1">
+                          <span className="text-purple-300 font-bold block">• Flint Water Federal Settlement & Fund Depletion</span>
+                          <p className="text-stone-400 text-[10px]">Failure of corrosion enforcement multiplied infrastructure costs 8x with minimal restitution.</p>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* CROSS-COMMUNITY LEGAL BLUEPRINT */}
                     <div className="space-y-2 pt-2 border-t border-purple-800/40">
                       <div className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">

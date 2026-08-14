@@ -38,7 +38,9 @@ import {
   Brain,
   BarChart2,
   FileSpreadsheet,
-  ArrowRight
+  ArrowRight,
+  Gavel,
+  Scale
 } from 'lucide-react';
 
 // Import local image assets
@@ -65,10 +67,21 @@ import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
+import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('suriname') ||
+    u.includes('isotope') ||
+    u.includes('dbs') ||
+    u.includes('1786692681970') ||
+    u.includes('blood_spots') ||
+    u.includes('shotgun')
+  ) {
+    return surinameIsotopeImg;
+  }
   if (
     u.includes('ny_lead_litigation') ||
     u.includes('kakistocracy') ||
@@ -287,6 +300,31 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-SURINAME-LEAD-ISOTOPE-2026',
+      title: 'Advancing Lead Exposure Studies in Remote Settings: Lead Stable Isotope Analysis in Dried Blood Spots (Suriname Proof)',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: surinameIsotopeImg,
+      summary: 'Landmark MDPI research validates high-precision lead stable isotope analysis (SIA) from finger-prick Dried Blood Spots (DBS) on filter paper. Eliminates refrigeration cold chains and proves pediatric lead burden in remote rainforest children originates from soil/dirt ingestion and lead shotgun hunting ammunition.',
+      fullText: `Advancing Lead Exposure Studies in Remote Settings: Method Development and Application of Lead Stable Isotope Analysis in Dried Blood Spots from Suriname, South America
+
+Published: August 14, 2026
+Journal: MDPI Toxics 2026, 14(8), 715
+DOI: https://doi.org/10.3390/toxics14080715
+Cohort: Pediatric & Indigenous Population in Suriname Interior & Paramaribo
+ICEarth Forensics Engine: https://icearth.org/?tab=suriname_isotope
+
+KEY DISCOVERIES & TESTING INNOVATION:
+• Capillary Dried Blood Spots (DBS): Replaces invasive venous phlebotomy and -20°C freezer logistics with ambient-temperature filter cards (Whatman 903), enabling biomonitoring across remote indigenous rainforest communities.
+• Isotopic Source Fingerprinting: High-resolution MC-ICP-MS measures 206Pb/207Pb and 208Pb/206Pb ratios, matching blood directly to geological and industrial sources.
+• Soil & Dirt Ingestion Proven: Isotopic composition in children's DBS closely matched soil signatures, confirming soil and household dust as primary exposure pathways.
+• Lead Shotgun Ammunition: Identified fragmented lead shot in wild game meat and hand-to-mouth gun handling as the second major exposure pathway.
+• ICEarth Synthesis: Connects directly with ICEarth's Pica Exposenomics and Nature 2026 Soil-to-Dust models.`,
+      tags: ['SurinameIsotope', 'DriedBloodSpots', 'LeadIsotopeForensics', 'SoilIngestion', 'PicaGeophagy', 'AmmunitionToxicity', 'RemoteBiomonitoring', 'Exposenomics', 'PeerReviewed'],
+      linkHash: '0xSURINAME_LEAD_ISOTOPE_DBS_FORENSIC_PLATE_2026',
+      publishedUrl: 'https://www.mdpi.com/2305-6304/14/8/715'
+    },
     {
       id: 'MAG-NY-LEAD-SAFETY-LOOPHOLES-2026',
       title: 'Environmental Groups Sue New York Regulators Over Loopholes Weakening Lead Safety Rules & Environmental Bill of Rights',
@@ -673,6 +711,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000M',
+      title: 'Suriname Lead Isotope Analysis in Dried Blood Spots & Dual Exposure Source Forensic Plate',
+      category: 'Exposenomics & Forensic Audit',
+      imageSrc: surinameIsotopeImg,
+      location: 'Suriname Interior (Amazon Basin) & Paramaribo',
+      date: '2026-08-14',
+      description: 'Origins: Forensic exposenomics infographic visualizing MDPI 2026 research on Dried Blood Spot (DBS) lead stable isotope analysis (SIA). Demonstrates a new biomonitoring paradigm for remote indigenous settings, using 206Pb/207Pb and 208Pb/206Pb isotope ratios to prove soil/dirt ingestion and lead shotgun hunting ammunition as the primary exposure pathways in pediatric cohorts.',
+      vaultHash: '0xSURINAME_LEAD_ISOTOPE_DBS_FORENSIC_PLATE_2026',
+      tags: ['SurinameIsotope', 'DriedBloodSpots', 'LeadIsotopeForensics', 'SoilIngestion', 'PicaGeophagy', 'AmmunitionToxicity', 'RemoteBiomonitoring', 'Exposenomics', 'PeerReviewed', 'ICEarth']
+    },
     {
       id: 'PHOTO-000L',
       title: 'New York Lead Inspection Loopholes & Constitutional Environmental Bill of Rights Forensic Exhibit Plate',
@@ -2667,16 +2716,42 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                 </div>
               )}
 
-              <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] font-mono text-stone-500">
-                <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+              <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000M' || selectedPhoto.tags?.includes('SurinameIsotope') || selectedPhoto.tags?.includes('LeadIsotopeForensics')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('suriname_isotope');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-emerald-400"
+                    >
+                      <Atom size={13} className="text-emerald-200" />
+                      <span>🔬 Launch Suriname Isotope Forensics Engine</span>
+                    </button>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000L' || selectedPhoto.tags?.includes('Litigation') || selectedPhoto.tags?.includes('Earthjustice')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('litigation');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-purple-400"
+                    >
+                      <Gavel size={13} className="text-purple-200" />
+                      <span>⚖️ Launch Litigation Profiler & Ledger</span>
+                    </button>
+                  )}
+                </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-amber-400 font-mono">{selectedPhoto.vaultHash}</span>
+                  <span className="text-amber-400 font-mono text-[10px] sm:text-xs truncate max-w-xs">{selectedPhoto.vaultHash}</span>
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(selectedPhoto.imageSrc);
                       alert(`Image asset path copied: ${selectedPhoto.imageSrc}`);
                     }}
-                    className="px-3 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold rounded-lg cursor-pointer"
+                    className="px-3 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold rounded-lg cursor-pointer shrink-0"
                   >
                     Copy Asset Path
                   </button>

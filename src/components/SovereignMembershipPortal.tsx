@@ -13,6 +13,7 @@ import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
+import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import {
   Shield,
   UserCheck,
@@ -144,6 +145,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000M',
+      title: 'Suriname Lead Isotope Analysis in Dried Blood Spots & Dual Exposure Source Forensic Plate (Plate #07)',
+      type: 'Forensic Isotope Biomonitoring & Environmental Matrix Model',
+      imageSrc: surinameIsotopeImg,
+      link: 'suriname_isotope',
+      description: 'Breakthrough biomonitoring paradigm using capillary Dried Blood Spots (DBS) on filter paper with MC-ICP-MS lead stable isotope analysis (SIA). Fingerprints pediatric lead burdens in remote Amazonian rainforest settings directly to soil/dirt ingestion and lead shotgun hunting ammunition without cold-chain refrigeration.',
+      sovereignHash: '0xSURINAME_LEAD_ISOTOPE_DBS_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000L',
       title: 'New York Lead Safety Loopholes & Environmental Bill of Rights Sovereign Tort Audit (Plate #06)',

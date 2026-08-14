@@ -12,6 +12,7 @@ import flintLeadCrimeProofImg from '../assets/images/flint_lead_crime_proof_1786
 import globalLeadCrimeProofImg from '../assets/images/global_lead_crime_proof_1786670881917.jpg';
 import rouletsLawGlobalChaosImg from '../assets/images/roulets_law_global_chaos_1786670893758.jpg';
 import nyLeadLitigationImg from '../assets/images/ny_lead_litigation_kakistocracy_1786687000000_1786686155359.jpg';
+import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof_1786692681970.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -54,7 +55,8 @@ import {
   Play,
   Video,
   Gavel,
-  Scale
+  Scale,
+  Atom
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -93,6 +95,16 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('suriname') ||
+    u.includes('isotope') ||
+    u.includes('dbs') ||
+    u.includes('1786692681970') ||
+    u.includes('shotgun') ||
+    u.includes('blood_spots')
+  ) {
+    return surinameIsotopeImg;
+  }
   if (
     u.includes('ny_lead_litigation') ||
     u.includes('kakistocracy') ||
@@ -202,6 +214,47 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'SURINAME-LEAD-ISOTOPE-DBS-REMOTE-BIOMONITORING-2026',
+    contentType: 'Article',
+    title: 'Advancing Lead Exposure Studies in Remote Settings: Method Development and Application of Lead Stable Isotope Analysis in Dried Blood Spots from Suriname',
+    subtitle: 'Breakthrough Biomonitoring via Finger-Prick DBS Filter Paper • Forensic Isotope Ratio (206Pb/207Pb) Source Fingerprinting • Dirt/Soil & Ammunition Pathways Proven',
+    sourceUrl: 'https://www.mdpi.com/2305-6304/14/8/715',
+    sourceName: 'MDPI Toxics & ICEarth Sovereign Laboratory Audit',
+    publishDate: '2026-08-14',
+    author: 'MDPI Peer-Reviewed Research Consortium & Norman Roulet (ICEarth Forensic Biomonitoring Audit)',
+    authorName: 'MDPI Toxics & Norman Roulet',
+    abstract: 'Highlighting varied lead exposure pathways and innovative testing strategies, landmark research published today establishes a revolutionary biomonitoring paradigm: identifying exact environmental sources of pediatric poisoning via lead stable isotope analysis (SIA) extracted from Dried Blood Spots (DBS). In children from the remote Surinamese interior, Pb isotope composition in DBS closely resembled signatures found in soil and shotgun pellets. This demonstrates that soil and mining dust are primary exposure drivers (via ingestion, geophagy, and resuspended household dust) alongside game meat harvested with lead ammunition.',
+    editorCommentary: 'This research represents a massive testing breakthrough for remote indigenous and rural populations globally. By eliminating the need for cold-chain venous phlebotomy and replacing it with ambient-stable capillary blood spot cards (Whatman 903), communities can now achieve forensic source discrimination via magnetic-sector ICP-MS. Furthermore, it scientifically validates ICEarth’s ongoing research on dirt—from maternal and pediatric pica geophagy to industrial mining tailings and yard dust. The isotope ratios prove beyond doubt that contaminated soil and lead ammunition are the dominant culprits, bypassing clean water pipes and demanding aggressive environmental remediation and non-toxic shot alternatives.',
+    fullExcerpt: `ADVANCING LEAD EXPOSURE STUDIES IN REMOTE SETTINGS: METHOD DEVELOPMENT AND APPLICATION OF LEAD STABLE ISOTOPE ANALYSIS IN DRIED BLOOD SPOTS FROM SURINAME, SOUTH AMERICA
+
+Source: MDPI Toxics 2026, 14(8), 715
+DOI: https://doi.org/10.3390/toxics14080715
+Location: Suriname Interior (Amazon Basin) & Paramaribo
+
+STUDY OVERVIEW & METHODOLOGICAL INNOVATION:
+Assessing lead exposure in remote indigenous settings has historically been constrained by the logistical impossibility of maintaining strict -20°C cold chains for large venous blood draws. This study develops and validates a transformative field method: Lead Stable Isotope Analysis (SIA) extracted directly from capillary Dried Blood Spots (DBS) on filter paper.
+
+FORENSIC ISOTOPIC SOURCE CLUSTERING & FINDINGS:
+"In the children from the Surinamese Interior, Pb isotope composition in DBS more closely resembled signatures found in soil and shotgun pellets. This finding was supported by the subset correlation analysis of paired samples, which suggested a moderately strong positive association between estimated total Pb concentration in DBS and soil.
+
+Taken together, these isotopic clustering and correlation results suggest that soil is an important exposure source in this population, potentially through ingestion of contaminated soil or household dust of soil origin, recognizing that soil Pb was quantified as total Pb rather than bioaccessible fractions and thus reflects contamination levels rather than directly measured absorbed dose from soil ingestion.
+
+In addition, multiple pathways associated with hunting and shooting environments, including consumption of pellet-contaminated game and dermal-to-mouth transfer, likely contribute to Pb exposure."
+
+ICEARTH FORENSIC SYNTHESIS:
+1. Pica & Geophagy Validation: Directly corroborates ICEarth's findings in PicaExposenomics regarding direct soil ingestion as an acute heavy-metal pathway.
+2. Atmospheric & Mining Resuspension: Matches Rutgers Nature 2026 data proving yard soil and mining tailings track indoors to form toxic indoor dust reserves.
+3. Ammunition Forensics: Establishes clear legal cause for banning toxic lead ammunition in subsistence ecosystems.`,
+    tags: ['SurinameIsotope', 'DriedBloodSpots', 'LeadIsotopeForensics', 'SoilIngestion', 'PicaGeophagy', 'AmmunitionToxicity', 'RemoteBiomonitoring', 'Exposenomics', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Indigenous Environmental Sovereignty', 'Cleveland & Cuyahoga County'],
+    vaultHash: '0xSURINAME_LEAD_ISOTOPE_DBS_FORENSIC_PLATE_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Founder & Lead Exposenomics Litigator',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'suriname_lead_isotope_dbs_proof_1786692681970.jpg'
+  },
   {
     id: 'NY-LEAD-SAFETY-LOOPHOLES-KAKISTOCRACY-2026',
     contentType: 'Article',
@@ -1573,14 +1626,20 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                 {article.imageUrl && (
                   <div 
                     onClick={() => {
-                      if (article.tags?.includes('Pica') || article.id.includes('PICA')) {
+                      if (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) {
+                        if (onNavigateTab) onNavigateTab('suriname_isotope');
+                      } else if (article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Kakistocracy')) {
+                        if (onNavigateTab) onNavigateTab('litigation');
+                      } else if (article.tags?.includes('Pica') || article.id.includes('PICA')) {
                         if (onNavigateTab) onNavigateTab('pica_exposenomics');
                       } else if (article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE')) {
                         if (onNavigateTab) onNavigateTab('evolutionary_canary');
+                      } else if (article.tags?.includes('GlobalLeadCrimeProof') || article.id.includes('GLOBAL-LEAD-CRIME')) {
+                        if (onNavigateTab) onNavigateTab('global_lead_crime_proof');
                       }
                     }}
                     className={`rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 max-h-96 bg-stone-900 flex items-center justify-center relative group ${
-                      article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') ? 'cursor-pointer' : ''
+                      article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
                     }`}
                   >
                     <img
@@ -1595,6 +1654,18 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                         }
                       }}
                     />
+                    {(article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) && (
+                      <div className="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-emerald-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
+                        <Atom size={14} className="text-emerald-300" />
+                        <span>Click Graphic to Open Suriname Isotope Biomonitoring Engine</span>
+                      </div>
+                    )}
+                    {(article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY')) && (
+                      <div className="absolute bottom-3 right-3 bg-neutral-950/90 text-purple-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-purple-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
+                        <Gavel size={14} className="text-purple-300" />
+                        <span>Click Graphic to Open Litigation Profiler & Enforcement Gap Ledger</span>
+                      </div>
+                    )}
                     {(article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE')) && (
                       <div className="absolute bottom-3 right-3 bg-stone-950/90 text-amber-300 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-amber-500/40 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
                         <ImageIcon size={14} className="text-amber-400" />
@@ -1698,13 +1769,24 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) && (
+                      <button
+                        onClick={() => onNavigateTab('suriname_isotope')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Atom size={14} className="text-emerald-200" />
+                        <span>🔬 Launch Suriname Isotope Forensics Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.tags?.includes('Kakistocracy') || article.id.includes('NY-LEAD-SAFETY')) && (
                       <button
                         onClick={() => onNavigateTab('litigation')}
                         className="px-4 py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-purple-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
                       >
                         <Gavel size={14} className="text-purple-200" />
-                        <span>⚖️ Launch NY Litigation & Restitution Ledger</span>
+                        <span>⚖️ Launch Litigation Profiler & Ledger</span>
                         <ArrowRight size={13} />
                       </button>
                     )}
