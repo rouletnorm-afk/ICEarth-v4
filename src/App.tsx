@@ -106,6 +106,7 @@ import { SurinameIsotopeForensics } from './components/SurinameIsotopeForensics'
 import { DenisovanAltitudeAdaptiveExposenomics } from './components/DenisovanAltitudeAdaptiveExposenomics';
 import { WildfirePyroExposenomics } from './components/WildfirePyroExposenomics';
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
+import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngine';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame } from 'lucide-react';
 
@@ -114,7 +115,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -251,6 +252,18 @@ export default function App() {
         setActiveTab('sovereign_portal');
       } else if (lower === 'swiss_school' || lower === 'exposenomics') {
         setActiveTab('swiss_school');
+      } else if (
+        lower === 'abm_simulator' ||
+        lower === 'abm' ||
+        lower === 'agent_based_modelling' ||
+        lower === 'agent_based_modeling' ||
+        lower === 'matsim' ||
+        lower === 'agent_modelling' ||
+        lower === 'agent_modeling' ||
+        lower.includes('agent_based') ||
+        lower.includes('abm')
+      ) {
+        setActiveTab('abm_simulator');
       } else if (lower === 'norm_roulet' || lower === 'normroulet' || lower === 'norm_roulet_home' || lower === 'norm') {
         setActiveTab('norm_roulet');
       } else if (lower === 'member_matrix' || lower === 'matrix') {
@@ -1175,6 +1188,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.055 Agent-Based Modelling (ABM) Exposenomics Engine */}
+                <button
+                  onClick={() => setActiveTab('abm_simulator' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'abm_simulator' || (activeTab as string) === 'abm'
+                      ? 'bg-indigo-950 text-white border-indigo-500 shadow-md font-extrabold ring-1 ring-indigo-400/50'
+                      : 'hover:bg-indigo-500/20 text-indigo-950 border-indigo-400/50 bg-indigo-50/90 font-bold'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'abm_simulator' ? 'text-indigo-400 animate-pulse' : 'text-indigo-700'} />
+                  <span className="flex-1 font-bold">🤖 Agent-Based Modelling (ABM)</span>
+                  <span className="px-1.5 py-0.2 bg-indigo-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    ABM ENGINE
+                  </span>
+                </button>
+
                 {/* 0.06 Suriname Lead Isotope Forensics (DBS Testing) */}
                 <button
                   onClick={() => setActiveTab('suriname_isotope' as any)}
@@ -1725,6 +1754,8 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-2">Primary Modules</h2>
                   
                   {[
+                    { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
+                    { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'global_lead_crime_proof', icon: Crown, label: '👑 Global Lead-Crime Proof (8k Yr)', badge: 'Proof', color: 'red' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
@@ -3146,7 +3177,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
 
           {/* TAB 2.5: EXPOSENOMICS COMPETITIVE BENCHMARKING ENGINE */}
           {activeTab === 'benchmarking' && (
-            <BenchmarkingEngine />
+            <BenchmarkingEngine onNavigateTab={(tab) => setActiveTab(tab as any)} />
           )}
 
           {/* TAB 2.7: ODISSE PUBLIC HEALTH DATAVIZ CHALLENGE */}
@@ -3319,6 +3350,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'swiss_school' || (activeTab as string) === 'exposenomics') && (
             <div className="flex-1 overflow-y-auto">
               <SwissSchoolOfExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.055: AGENT-BASED MODELLING (ABM) EXPOSENOMICS ENGINE */}
+          {(activeTab === 'abm_simulator' || (activeTab as string) === 'abm') && (
+            <div className="flex-1 overflow-y-auto">
+              <AgentBasedModellingEngine 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

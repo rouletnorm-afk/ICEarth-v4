@@ -520,6 +520,54 @@ This study proves that the human exposome is an active, spatio-temporal equation
               </div>
             </div>
 
+            {/* NEW: Agent-Based Modelling (ABM) Framework & Swiss TPH Research Spotlight */}
+            <div className={`p-6 sm:p-8 rounded-3xl border shadow-md relative overflow-hidden ${
+              isLight ? 'bg-gradient-to-br from-indigo-50 via-white to-blue-50 border-indigo-200' : 'bg-gradient-to-br from-indigo-950/40 via-stone-900 to-stone-950 border-indigo-800/40'
+            }`}>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div className="lg:col-span-8 space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="px-2.5 py-0.5 bg-indigo-600 text-white font-mono text-[10px] font-bold rounded-md uppercase tracking-wider">
+                      🤖 Core Platform Engine
+                    </span>
+                    <span className="px-2.5 py-0.5 bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono text-[10px] font-bold rounded-md border border-amber-500/30">
+                      Swiss School of Exposenomics
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">
+                    Agent-Based Modelling (ABM) for Dynamic Exposomics
+                  </h3>
+                  <p className="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-serif">
+                    Static residential address measurements misclassify population toxin exposures by ignoring human mobility and time-activity patterns. ICEarth empowers members to input historical home/work addresses to reconstruct complete lifecourse trajectories via high-resolution synthetic agent simulations.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-stone-500 dark:text-stone-400 pt-1">
+                    <span className="flex items-center gap-1">📍 Multi-Address Trajectories</span>
+                    <span className="flex items-center gap-1">🔬 Micro-Environment Sensors</span>
+                    <span className="flex items-center gap-1">🛡️ ZKP Genomic Privacy</span>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-center gap-3">
+                  {onNavigateTab && (
+                    <button
+                      onClick={() => onNavigateTab('abm_simulator')}
+                      className="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-mono text-xs font-bold rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      <Sparkles size={16} />
+                      <span>Launch ABM Simulation Engine →</span>
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setActiveSubTab('repository')}
+                    className="w-full sm:w-auto px-4 py-2 bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 font-mono text-[11px] rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    <BookOpen size={13} />
+                    <span>View Swiss TPH 2026 Paper</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* Sole Practitioner & Thought Leadership Callout */}
             <div className={`p-6 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-6 ${
               isLight ? 'bg-stone-100 border-stone-300' : 'bg-stone-900 border-stone-800'

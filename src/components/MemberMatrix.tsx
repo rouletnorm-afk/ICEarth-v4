@@ -164,6 +164,7 @@ export const MemberMatrix: React.FC<MemberMatrixProps> = ({
       description: 'International syndicate of environmental economists, epidemiologists, and legal scholars deploying the Human Equation.',
       projects: [
         { name: 'Exposenomics Repository', tab: 'swiss_school' },
+        { name: 'Agent-Based Exposure Modeling', tab: 'abm_simulator' },
         { name: "Roulet's Law Legal Proofs", tab: 'litigation' }
       ],
       vaultHash: '0xGUILD_SWISS_EXPOSENOMICS',
@@ -171,6 +172,27 @@ export const MemberMatrix: React.FC<MemberMatrixProps> = ({
       navLabel: 'Explore Swiss Vault',
       badgeText: 'Research Guild',
       tags: ['Exposenomics', 'Swiss Vault', 'Human Equation', 'Legal Tort']
+    },
+    {
+      id: 'SERV-ABM-001',
+      name: 'Agent-Based Modelling (ABM) Exposenomics Engine',
+      userRole: 'Sovereign Core Computing Service',
+      title: 'Dynamic Spatio-Temporal Population & Trajectory Exposure Service',
+      location: 'Swiss TPH / ICEarth Distributed Nodes',
+      type: 'Project',
+      avatarInitials: 'ABM',
+      avatarColor: 'bg-indigo-700 text-white',
+      description: 'Decentralized multi-agent simulation mapping personal time-activity patterns, commute trajectories, and micro-environmental toxicant burdens to eliminate static address misclassification.',
+      projects: [
+        { name: 'Live Multi-Agent Canvas Simulator', tab: 'abm_simulator' },
+        { name: 'Personal Microenvironment Trajectory', tab: 'abm_simulator' },
+        { name: 'MATSim & EXPANSE Benchmarking', tab: 'benchmarking' }
+      ],
+      vaultHash: '0xSERVICE_AGENT_BASED_MODELLING_EXPOSENOMICS',
+      navTab: 'abm_simulator',
+      navLabel: 'Launch ABM Exposenomics Engine',
+      badgeText: 'Core AI Service',
+      tags: ['Agent-Based Modelling', 'ABM', 'MATSim', 'Mobility', 'Swiss TPH', 'Microenvironments']
     },
     {
       id: 'PROJ-001',

@@ -229,7 +229,11 @@ Demographics: 100% South Asian. Low local gun/homicide indicators (2.6 per 100k)
   }
 ];
 
-export default function BenchmarkingEngine() {
+interface BenchmarkingEngineProps {
+  onNavigateTab?: (tab: string) => void;
+}
+
+export default function BenchmarkingEngine({ onNavigateTab }: BenchmarkingEngineProps = {}) {
   const [spreadsheetData, setSpreadsheetData] = useState<BenchmarkRecord[]>(INITIAL_SPREADSHEET_DATA);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSourceFilter, setSelectedSourceFilter] = useState<string>('all');
@@ -844,6 +848,16 @@ ${pastedReport}`
           >
             <Sparkles size={11} /> Personal Exposome Profiler
           </button>
+          {onNavigateTab && (
+            <button
+              type="button"
+              onClick={() => onNavigateTab('abm_simulator')}
+              className="px-3.5 py-1.5 rounded-md text-[10px] font-mono font-bold uppercase transition-all flex items-center gap-1.5 cursor-pointer bg-indigo-900 text-indigo-100 hover:bg-indigo-950 border border-indigo-700 shadow-xs"
+              title="Launch Agent-Based Modelling (ABM) Exposenomics Engine"
+            >
+              🤖 Launch ABM Engine →
+            </button>
+          )}
         </div>
       </div>
 
