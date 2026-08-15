@@ -18,6 +18,7 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -103,6 +104,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('predictive_child_welfare') ||
+    u.includes('child_welfare') ||
+    u.includes('childwelfare') ||
+    u.includes('nebraska') ||
+    u.includes('track') ||
+    u.includes('1786797166579') ||
+    u.includes('predictive_analytics') ||
+    u.includes('dhhs.ne.gov')
+  ) {
+    return predictiveChildWelfareAbmImg;
+  }
   if (
     u.includes('water_lead') ||
     u.includes('waterlead') ||
@@ -278,6 +291,76 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NEBRASKA-DHHS-PREDICTIVE-ANALYTICS-CHILD-WELFARE-2026',
+    contentType: 'Article',
+    title: 'Nebraska Selected for Federal Grant to Advance Predictive Analytics in Child Welfare: AI-Driven Prevention of Pediatric Toxicant Ingestion & Family Crisis Mitigation',
+    subtitle: 'For Immediate Release: 8/14/2026 • Nebraska DHHS Division of Children and Family Services • Right Home, Right Time on TRACK (Timely Review, Analytics, and Coordination for Kids) • 3-Year Children\'s Bureau Demonstration Grant • Integrating Environmental Exposomics to Prevent 100% Preventable Lead Poisoning',
+    sourceUrl: 'https://dhhs.ne.gov/Pages/Nebraska-Selected-for-Federal-Grant-to-Advance-Predictive-Analytics-in-Child-Welfare.aspx',
+    sourceName: 'Nebraska Department of Health and Human Services (DHHS Press Release, August 14, 2026)',
+    publishDate: '2026-08-14',
+    author: 'Gillian Daniel, Media Contact & Dr. Alyssa Bish (DCFS Director) • Synthesis by Norm Roulet (ICEarth Sovereign Lab)',
+    authorName: 'Nebraska DHHS & ICEarth Public Health AI Board',
+    abstract: 'Nebraska is one of 10 jurisdictions nationwide selected to receive a federal Children\'s Bureau grant to test predictive analytics in child welfare. Nebraska DHHS will develop "Right Home, Right Time on TRACK" (Timely Review, Analytics, and Coordination for Kids), a statewide predictive analytics initiative designed to strengthen child welfare decision-making, identify risk earlier, deliver preventative family services, and prevent unnecessary foster care placements. From the ICEarth public health and Agent-Based Modelling (ABM) perspective, this federal pilot establishes an urgent blueprint: integrating environmental exposomics—specifically modeling the early, sub-clinical neurotoxic impacts of 100% preventable lead poisoning from paint, water, and soil—into child welfare predictive matrices. Sub-clinical lead exposure damages executive function, emotional regulation, and impulse control, triggering behavioral crises that lead to unnecessary child removals. By predicting and remediating toxicant exposures early, predictive analytics protects child neurobiology and keeps families safely intact.',
+    editorCommentary: 'This federal grant awarded to Nebraska DHHS is a landmark validation of the value of AI and Agent-Based Modelling for child welfare. Lead poisoning is 100% PREVENTABLE, yet un-remediated toxic housing stock across the Midwest (from Omaha\'s ASARCO smelter dust to legacy lead service pipes) silently damages pediatric prefrontal cortex development. When children suffer from unrecognized heavy metal toxicity, the resulting ADHD, emotional volatility, and school struggles place enormous strain on families, frequently precipitating crisis interventions and foster care entries. Developing TRACK internally ensures ethical governance and transparent algorithms, providing the perfect vehicle to integrate environmental exposomics, water pipe testing, and proactive lead abatement into child welfare decision-support.',
+    fullExcerpt: `NEBRASKA SELECTED FOR FEDERAL GRANT TO ADVANCE PREDICTIVE ANALYTICS IN CHILD WELFARE
+
+FOR IMMEDIATE RELEASE: 8/14/2026
+
+MEDIA CONTACT:
+Gillian Daniel, (402) 471-6585, gillian.daniel@nebraska.gov
+Nebraska Department of Health and Human Services (DHHS)
+Division of Children and Family Services (DCFS)
+Lincoln, NE – Published August 14, 2026
+
+OFFICIAL PRESS RELEASE:
+Lincoln, NE – Nebraska is one of 10 jurisdictions selected nationwide to receive a federal grant to test predictive analytics in child welfare, providing the Nebraska Department of Health and Human Services (DHHS) Division of Children and Family Services with an opportunity to strengthen how data is used to support children, families, and child welfare professionals.
+
+“The safety and well-being of Nebraska's children will always be our top priority," said Governor Jim Pillen. “This grant gives Nebraska an important opportunity to strengthen our child welfare system by using data to inform decisions, improve outcomes, and help ensure children receive support when they need it most."
+
+Through the three-year Children's Bureau Predictive Analytics in Child Welfare Demonstration Grant, Nebraska DHHS will develop Right Home, Right Time on TRACK (Timely Review, Analytics, and Coordination for Kids), a statewide predictive analytics initiative designed to strengthen child welfare decision-making and improve permanency outcomes based on the following frameworks:
+
+1. Identify risk earlier: Use data from multiple sources to identify children and families who may be at a higher risk of abuse or neglect before a crisis occurs.
+2. Deliver vital services to families: Connect families with the preventative resources they need before challenges escalate.
+3. Prevent unnecessary entries into foster care: Identify opportunities for early intervention and support that can safely keep children with their families.
+4. Improve decision-making and outcomes: Give caseworkers better information to support decisions about intervention, placement, reunification, and ongoing services.
+5. Achieve permanency sooner: Help children attain stable, permanent homes as soon and safely as possible.
+
+“Predictive analytics will better equip caseworkers to make difficult decisions with more complete information so they can ensure the best outcomes for children," said ACF Assistant Secretary Alex J. Adams. “ACF is grateful for Nebraska's leadership and willingness to pilot this new technology that we believe can help every state achieve A Home for Every Child."
+
+INTERNAL DEVELOPMENT & ETHICAL AI GOVERNANCE:
+Nebraska DHHS will develop a predictive analytics platform that uses patterns in administrative data to support child welfare decision-making. The platform will include predictive models and other decision-support tools to help child welfare professionals prioritize cases, identify opportunities for earlier intervention, and allocate resources more effectively. The project will also establish a governance framework for ethical and responsible use of predictive analytics, provide workforce training, and evaluate implementation and outcomes.
+
+Importantly, Nebraska plans to develop and maintain TRACK internally rather than relying on an external vendor or proprietary system. This approach will allow DHHS to build long-term analytical expertise within the agency while emphasizing transparency, accountability, and responsible use of predictive analytics.
+
+“Right Home, Right Time on TRACK gives Nebraska an opportunity to lead the nation in the responsible use of predictive analytics to help us make smarter, more informed decisions for children and families," said Division of Children and Family Services Director Dr. Alyssa Bish. “By using the data we already have to better understand where resources and support can make the greatest difference, we can be better stewards of taxpayer dollars while working toward the best possible outcomes for Nebraska's children."
+
+The project will build a sustainable analytical capability within DHHS that extends beyond the grant period, allowing Nebraska to continue strengthening data-informed practice, improving permanency and child well-being outcomes, and responsibly exploring new ways to use data to better support children and families.
+
+============================================================
+ICEARTH SOVEREIGN EXPOSOMICS & AGENT-BASED MODELLING SYNTHESIS:
+Why Environmental Prediction is Essential for Child Welfare & Lead Poisoning Prevention:
+
+1. LEAD POISONING IS 100% PREVENTABLE:
+Unlike genetic disorders or unexpected trauma, pediatric toxicant exposure (lead paint, tap water lead from pipes, and smelter soil dust) is completely preventable through physical remediation, NSF-53 certified point-of-use filtration, and soil capping.
+
+2. TOXICANTS TRIGGER BEHAVIORAL CRISES:
+Sub-clinical lead levels (<5 μg/dL and even <1 ppb in water) selectively destroy prefrontal executive function, working memory, and impulse control. Children with unrecognized lead poisoning present with severe impulsivity, aggression, hyperactivity, and learning disabilities. In under-resourced households, this stress can overwhelm parents, escalating risk and leading to unwarranted foster care removals.
+
+3. AGENT-BASED MODELLING (ABM) AS DECISION-SUPPORT:
+By integrating housing age, historical industrial deposition (such as the 200,000 tons of ASARCO smelter dust in East Omaha), tap water lead infrastructure, and socio-environmental stressors into predictive models, caseworkers can identify high-hazard environments BEFORE a child ingests toxic dust or water.
+
+4. PREVENTATIVE REMEDIATION SAVES FAMILIES & TAXPAYERS:
+Providing a $40 certified lead water filter, clean soil cover, or home lead remediation costs a few hundred dollars—compared to $45,000+ per year for foster care placement and millions in lifetime cognitive loss. Predictive analytics empowers agencies to deliver targeted preventative aid, preserving family unity.`,
+    tags: ['NebraskaDHHS', 'PredictiveAnalytics', 'ChildWelfare', 'TRACKFramework', 'PreventableLeadPoisoning', 'AgentBasedModelling', 'EthicalAI', 'Exposenomics', 'PublicHealth', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Nebraska & Midwest Health', 'Child Welfare AI', 'Forensic Exposenomics'],
+    vaultHash: '0xNEBRASKA_DHHS_PREDICTIVE_ANALYTICS_CHILD_WELFARE_TRACK_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Sovereign Exposenomics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: predictiveChildWelfareAbmImg
+  },
   {
     id: 'NATURE-WATER-LEAD-CHILDCARE-2026',
     contentType: 'Article',
@@ -1920,6 +2003,8 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                     onClick={() => {
                       if (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) {
                         if (onNavigateTab) onNavigateTab('suriname_isotope');
+                      } else if (article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) {
+                        if (onNavigateTab) onNavigateTab('abm_simulator');
                       } else if (article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Kakistocracy')) {
                         if (onNavigateTab) onNavigateTab('litigation');
                       } else if (article.tags?.includes('Pica') || article.id.includes('PICA')) {
@@ -1946,6 +2031,12 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                         }
                       }}
                     />
+                    {(article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) && (
+                      <div className="absolute bottom-3 right-3 bg-blue-950/90 text-blue-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-blue-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
+                        <Cpu size={14} className="text-blue-300" />
+                        <span>Click Graphic to Open Child Welfare Predictive Analytics Engine</span>
+                      </div>
+                    )}
                     {(article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) && (
                       <div className="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-emerald-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
                         <Atom size={14} className="text-emerald-300" />
@@ -2061,6 +2152,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) && (
+                      <button
+                        onClick={() => onNavigateTab('abm_simulator')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-blue-700 via-indigo-700 to-sky-600 hover:from-blue-600 hover:to-sky-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-blue-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Cpu size={14} className="text-sky-200" />
+                        <span>🏛️ Launch Child Welfare Predictive Analytics & ABM Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('AgentBasedModelling') || article.tags?.includes('WaterLeadExposure') || article.tags?.includes('LeadPipes') || article.id.includes('ABM') || article.id.includes('WATER-LEAD-CHILDCARE')) && (
                       <button
                         onClick={() => onNavigateTab('abm_simulator')}

@@ -75,10 +75,23 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('predictive_child_welfare') ||
+    u.includes('child_welfare') ||
+    u.includes('childwelfare') ||
+    u.includes('nebraska') ||
+    u.includes('track') ||
+    u.includes('1786797166579') ||
+    u.includes('predictive_analytics') ||
+    u.includes('dhhs.ne.gov')
+  ) {
+    return predictiveChildWelfareAbmImg;
+  }
   if (
     u.includes('water_lead') ||
     u.includes('waterlead') ||
@@ -363,6 +376,35 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-NEBRASKA-DHHS-PREDICTIVE-ANALYTICS-2026',
+      title: 'Nebraska Selected for Federal Grant to Advance Predictive Analytics in Child Welfare: AI-Driven Prevention of Pediatric Toxicants & 100% Preventable Lead Poisoning',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: predictiveChildWelfareAbmImg,
+      summary: 'For Immediate Release (August 14, 2026): Nebraska DHHS receives federal Children’s Bureau grant to develop Right Home, Right Time on TRACK (Timely Review, Analytics, and Coordination for Kids). The predictive platform uses internal AI modeling to identify early family vulnerability, prevent crises, and prevent unnecessary foster care placements. ICEarth analysis demonstrates how integrating environmental exposomics—specifically modeling and abating 100% preventable lead poisoning from paint, water pipes, and smelter soils—directly eliminates the neurodevelopmental drivers of pediatric behavioral dysregulation and family distress.',
+      fullText: `NEBRASKA SELECTED FOR FEDERAL GRANT TO ADVANCE PREDICTIVE ANALYTICS IN CHILD WELFARE
+
+Published: August 14, 2026
+Source: Nebraska Department of Health and Human Services (DHHS) Division of Children and Family Services
+Media Contact: Gillian Daniel, (402) 471-6585, gillian.daniel@nebraska.gov
+Official Portal: https://dhhs.ne.gov/Pages/Nebraska-Selected-for-Federal-Grant-to-Advance-Predictive-Analytics-in-Child-Welfare.aspx
+ICEarth Child Welfare ABM Simulator: https://icearth.org/?tab=abm_simulator
+
+PRESS RELEASE HIGHLIGHTS:
+• Selected as 1 of 10 Jurisdictions: Testing predictive analytics to strengthen child welfare decision-making and family support.
+• Right Home, Right Time on TRACK: 3-Year Children's Bureau Demonstration Grant developing Timely Review, Analytics, and Coordination for Kids.
+• Core Frameworks: Identify risk earlier, deliver vital preventative services, prevent unnecessary foster care entries, improve caseworker decision-support, and achieve permanency sooner.
+• Internal Agency Development: Built internally by DHHS rather than relying on external black-box vendors to ensure transparency, accountability, and ethical governance.
+
+ICEARTH PUBLIC HEALTH & AGENT-BASED MODELLING (ABM) SYNTHESIS:
+• Lead Poisoning is 100% Preventable: Unlike non-modifiable risks, heavy metal exposure from legacy pipes, lead paint, and soil dust is entirely remediable with point-of-use filtration, paint abatement, and clean soil cover.
+• Neurobiology of Family Crisis: Sub-clinical lead poisoning selectively damages the prefrontal cortex, impairing impulse control and executive function. The resulting severe behavioral symptoms frequently trigger family crises and unwarranted foster care entries.
+• The Preventative ROI: Providing a $40 lead water filter or home repair costs a fraction of the $45,000/yr cost of foster care placement while preserving lifetime cognitive integrity.`,
+      tags: ['NebraskaDHHS', 'PredictiveAnalytics', 'ChildWelfare', 'TRACKFramework', 'PreventableLeadPoisoning', 'AgentBasedModelling', 'EthicalAI', 'Exposenomics', 'PeerReviewed'],
+      linkHash: '0xNEBRASKA_DHHS_PREDICTIVE_ANALYTICS_CHILD_WELFARE_2026',
+      publishedUrl: 'https://dhhs.ne.gov/Pages/Nebraska-Selected-for-Federal-Grant-to-Advance-Predictive-Analytics-in-Child-Welfare.aspx'
+    },
     {
       id: 'MAG-NATURE-2026-WATER-LEAD-CHILDCARE',
       title: 'Metals in Tap Water Across Child Care & Home Environments: Association Between Lead and Early Childhood Executive Function',
@@ -893,6 +935,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000T',
+      title: 'Predictive Analytics For Child Welfare & Environmental Exposomics: Nebraska DHHS TRACK Demonstration & Preventable Lead Poisoning (Plate #13)',
+      category: 'Child Welfare Predictive AI & Environmental Lead Prevention ABM',
+      imageSrc: predictiveChildWelfareAbmImg,
+      location: 'Nebraska DHHS (Lincoln & Omaha, NE) & National Child Welfare Jurisdictions',
+      date: '2026-08-14',
+      description: 'Origins: Landmark forensic plate celebrating Nebraska\'s selection for the federal Children\'s Bureau grant to advance predictive analytics in child welfare via Right Home, Right Time on TRACK (Timely Review, Analytics, and Coordination for Kids). Synthesizes internal agency AI architecture with ICEarth Agent-Based Modelling (ABM) to model and eliminate 100% preventable environmental lead poisoning. Sub-clinical heavy metal toxicity destroys pediatric prefrontal executive function, causing behavioral crises that trigger unnecessary foster care entries. Early environmental prediction and remediation preserves family unity and saves millions in lifetime public health and social costs.',
+      vaultHash: '0xNEBRASKA_DHHS_PREDICTIVE_ANALYTICS_CHILD_WELFARE_TRACK_2026',
+      tags: ['PredictiveAnalytics', 'ChildWelfare', 'NebraskaDHHS', 'TRACKFramework', 'PreventableLeadPoisoning', 'AgentBasedModelling', 'Exposenomics', 'PublicHealth', 'EthicalAI', 'ICEarth']
+    },
     {
       id: 'PHOTO-000S',
       title: 'Metals in Tap Water, Child Care & Home Environments: Lead Service Line Infrastructure & ABM Lifetime Harm Forensic Plate (Plate #12)',

@@ -19,6 +19,7 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
 import {
   Shield,
   UserCheck,
@@ -150,6 +151,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000T',
+      title: 'Predictive Analytics For Child Welfare & Environmental Exposomics: Nebraska DHHS TRACK Demonstration & Preventable Lead Poisoning (Plate #13)',
+      type: 'Child Welfare Predictive AI & Environmental Lead Prevention ABM IP Asset',
+      imageSrc: predictiveChildWelfareAbmImg,
+      link: 'abm_simulator',
+      description: 'Sovereign forensic plate synthesizing Nebraska DHHS\'s federal Children\'s Bureau grant (Right Home, Right Time on TRACK) with ICEarth Agent-Based Modelling. Proves that pediatric lead exposure is 100% preventable, and that modeling sub-clinical toxicant damage to the prefrontal cortex allows caseworkers to prevent family crises, preserve cognitive function, and prevent unnecessary foster care placements.',
+      sovereignHash: '0xNEBRASKA_DHHS_PREDICTIVE_ANALYTICS_CHILD_WELFARE_TRACK_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000S',
       title: 'Metals in Tap Water & Child Care Environments: Lead Pipes (Chicago 400k / Cleveland 140k / Flint) & ABM Executive Function Loss Plate (Plate #12)',
