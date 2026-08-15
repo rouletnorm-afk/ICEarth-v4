@@ -18,6 +18,7 @@ import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_l
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
+import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import {
   Shield,
   UserCheck,
@@ -149,6 +150,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000S',
+      title: 'Metals in Tap Water & Child Care Environments: Lead Pipes (Chicago 400k / Cleveland 140k / Flint) & ABM Executive Function Loss Plate (Plate #12)',
+      type: 'Water Toxicology, Lead Infrastructure & Agent-Based Modeling IP Asset',
+      imageSrc: waterLeadPipesAbmImg,
+      link: 'abm_simulator',
+      description: 'Breakthrough forensic exposenomics plate (Nature JESEE August 14, 2026) documenting lead in 67% of child care kitchens and 57% of homes, causing sub-clinical executive function loss. Maps 400,000 lead pipes in Chicago, 140,000 in Cleveland, and Flint water chemistry into autonomous Agent-Based lifetime harm modeling.',
+      sovereignHash: '0xNATURE_WATER_LEAD_PIPES_ABM_EXECUTIVE_FUNCTION_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000R',
       title: 'Swiss School of Exposenomics: Agent-Based Modelling & Mobility-Integrated Exposure Plate (Plate #11)',

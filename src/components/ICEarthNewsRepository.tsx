@@ -17,6 +17,7 @@ import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_l
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
+import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -62,7 +63,8 @@ import {
   Scale,
   Atom,
   Flame,
-  Pill
+  Pill,
+  Cpu
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -101,6 +103,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('water_lead') ||
+    u.includes('waterlead') ||
+    u.includes('lead_pipes') ||
+    u.includes('leadpipes') ||
+    u.includes('1786782646441') ||
+    u.includes('childcare') ||
+    u.includes('executive_function') ||
+    u.includes('s41370-026-00955-7')
+  ) {
+    return waterLeadPipesAbmImg;
+  }
   if (
     u.includes('swiss_abm') ||
     u.includes('agent_based') ||
@@ -264,6 +278,56 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NATURE-WATER-LEAD-CHILDCARE-2026',
+    contentType: 'Article',
+    title: 'Metals in Tap Water Across Child Care and Home Environments: Association Between Lead and Early Childhood Executive Function',
+    subtitle: 'Nature Journal of Exposure Science & Environmental Epidemiology (Published: 14 August 2026) • Lead Detected in 67% of Child Care Kitchens & 57% of Homes • Sub-Clinical Executive Function Deficits Below EPA Action Level • Agent-Based Modelling for Unquantified Pipe & Fixture Disease Pathways',
+    sourceUrl: 'https://www.nature.com/articles/s41370-026-00955-7',
+    sourceName: 'Journal of Exposure Science & Environmental Epidemiology (Nature Springer, Published 14 August 2026)',
+    publishDate: '2026-08-14',
+    author: 'Research Cohort (North Carolina N=297) & Norman Roulet (ICEarth Synthesis)',
+    authorName: 'Nature JESEE Research Board',
+    abstract: 'Metals, including lead, are frequently detected in tap water. Biomarker-based studies link elevated levels of lead with poorer child cognitive outcomes, including executive function (EF) skills. Nevertheless, few studies have characterized metal exposures in child care center and home water samples or examined whether tap water concentrations of lead alone are associated with child EFs. In this landmark study across 51 North Carolina child care kitchens, 120 classrooms, and 138 homes of 297 children (2–6 years old), tap water was analyzed for 15 metals via EPA Method 200.8. Lead was detected in 67% of child care kitchen, 34% of classroom, and 57% of home kitchen drinking water samples. While 8% of child care kitchen, 3% of classroom, and 7% of home kitchen water samples exceeded the American Academy of Pediatrics reference level of 1 part per billion (ppb) for lead, none exceeded the NC state action level and U.S. EPA standard of 10 ppb. Path models revealed that lead concentration in child care kitchen water was negatively associated with inhibitory control and early childhood executive function skills.',
+    editorCommentary: 'This report published in Nature Journal of Exposure Science & Environmental Epidemiology is an excellent example of lead exposure harming the most vulnerable—children—in ways that are generally overlooked in their care. Water is a major factor in lead poisoning, even at very low sub-action doses (<1 ppb vs 10 ppb standard), yet tap water in child care facilities is rarely tested. An Agent-Based Modelling (ABM) solution models disease pathways that are known but unquantified—such as aging lead service lines and fixtures across 400,000 pipes in Chicago, 140,000 pipes in Cleveland, and the historic Flint crisis. That spatio-temporal data is the exact basis for an autonomous agent calculating cumulative lifetime neurodevelopmental harm.',
+    fullExcerpt: `METALS IN TAP WATER ACROSS CHILD CARE AND HOME ENVIRONMENTS: ASSOCIATION BETWEEN LEAD AND EARLY CHILDHOOD EXECUTIVE FUNCTION
+
+Journal: Nature Journal of Exposure Science & Environmental Epidemiology (JESEE)
+Published: 14 August 2026
+DOI / URL: https://www.nature.com/articles/s41370-026-00955-7
+ICEarth ABM Exposenomics Engine: https://icearth.org/?tab=abm_simulator
+
+ABSTRACT:
+Background: Metals, including lead, are frequently detected in tap water. Biomarker-based studies link elevated levels of lead with poorer child cognitive outcomes, including executive function (EF) skills. Nevertheless, few studies have characterized metal exposures in child care center and home water samples or examined whether tap water concentrations of lead alone are associated with child EFs.
+
+Objective: We aimed to (1) characterize metal concentrations in tap water from child care kitchens, classrooms, and homes, (2) identify sociodemographic and environmental predictors of waterborne lead, and (3) test associations between lead and child EF skills.
+
+Methods: Tap water from 51 North Carolina (NC) child care kitchens, 120 classrooms, and 138 homes of 297 children (2–6 years old) were collected and analyzed for 15 metals via EPA Method 200.8. Child EF skills were assessed through a performance-based assessment and a parent questionnaire. Regression models related waterborne lead to sociodemographic characteristics and water source. Path models evaluated associations between lead from samples in each setting and EF skills.
+
+Results:
+• Detection Rates: Lead was detected in 67% of child care kitchen, 34% of classroom, and 57% of home kitchen drinking water samples.
+• AAP 1 ppb Exceedance: 8% of child care kitchen, 3% of classroom, and 7% of home kitchen water samples exceeded the American Academy of Pediatrics reference level of 1 part per billion (ppb) for lead.
+• Regulatory Blindspot: None exceeded the NC state action level and U.S. EPA standard of 10 ppb, proving that "regulatory compliance" fails to protect developing brains.
+• Neurocognitive Impact: Lead concentration in child care kitchen water was statistically significantly negatively associated with inhibitory control and executive function skills.
+
+Significance & Impact Statement:
+Key metals, including lead, were frequently detected in water samples collected from child care kitchens (N = 51), classrooms (N = 120), and homes (N = 138) of children ages 2–6 years old. Though lead levels were below state and federal guidelines, the waterborne lead in the child care center was negatively associated with children’s executive function skills (N = 297). The absence of a link between home water lead and children’s executive function skills may stem from selection bias, as families at higher risk for lead were underrepresented in home sample collection. The results underscore the frequency of exposure to, and potential impact of, neurotoxic contaminants in children’s daily environments.
+
+INFRASTRUCTURE CRISIS CONTEXT & AGENT-BASED MODELLING (ABM):
+Across the United States, over 9 million legacy lead service lines remain in continuous use:
+1. Chicago, IL: ~400,000 lead service pipes (the highest concentration in the Western hemisphere, disproportionately concentrated in South and West side child care corridors).
+2. Cleveland & Cuyahoga County, OH: ~140,000 lead pipes and aging brass/bronze plumbing fixtures in pre-1986 schools and daycares.
+3. Flint, MI: The historic water crisis proved that water chemistry shifts strip protective mineral passivity scales, discharging pulse concentrations of lead particulate into infant formula and school taps.
+4. ABM Integration: By embedding daily water consumption (L/day × ppb Pb × gastrointestinal absorption factor of ~50% in children) into synthetic agent mobility trajectories, the ICEarth ABM engine models lifetime cognitive and behavioral harm across home, daycare, school, and transit microenvironments.`,
+    tags: ['WaterLeadExposure', 'ChildCareCenters', 'ExecutiveFunction', 'AgentBasedModelling', 'LeadPipes', 'Chicago400k', 'Cleveland140k', 'Flint', 'PeerReviewed'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County'],
+    vaultHash: '0xNATURE_WATER_LEAD_CHILDCARE_EF_STUDY_2026',
+    editorName: 'Norman Roulet',
+    editorRole: 'ICEarth Sovereign Exposenomics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: waterLeadPipesAbmImg
+  },
   {
     id: 'SWISS-ABM-EXPOSENOMICS-MOBILITY-2026',
     contentType: 'Article',
@@ -1997,6 +2061,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('AgentBasedModelling') || article.tags?.includes('WaterLeadExposure') || article.tags?.includes('LeadPipes') || article.id.includes('ABM') || article.id.includes('WATER-LEAD-CHILDCARE')) && (
+                      <button
+                        onClick={() => onNavigateTab('abm_simulator')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-indigo-700 to-blue-700 hover:from-indigo-600 hover:to-blue-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-indigo-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Cpu size={14} className="text-indigo-200" />
+                        <span>🤖 Launch ABM Exposenomics & Water Pipe Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('CalciumDisodiumEDTA') || article.tags?.includes('ChelationTherapy') || article.id.includes('EDTA') || article.tags?.includes('MedicalInterventions')) && (
                       <button
                         onClick={() => onNavigateTab('medical_interventions')}

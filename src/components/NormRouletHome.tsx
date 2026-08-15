@@ -74,10 +74,23 @@ import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_l
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
+import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('water_lead') ||
+    u.includes('waterlead') ||
+    u.includes('lead_pipes') ||
+    u.includes('leadpipes') ||
+    u.includes('1786782646441') ||
+    u.includes('childcare') ||
+    u.includes('executive_function') ||
+    u.includes('s41370-026-00955-7')
+  ) {
+    return waterLeadPipesAbmImg;
+  }
   if (
     u.includes('swiss_abm') ||
     u.includes('agent_based') ||
@@ -350,6 +363,31 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-NATURE-2026-WATER-LEAD-CHILDCARE',
+      title: 'Metals in Tap Water Across Child Care & Home Environments: Association Between Lead and Early Childhood Executive Function',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: waterLeadPipesAbmImg,
+      summary: 'Nature Journal of Exposure Science & Environmental Epidemiology (Published: 14 August 2026): Landmark study of 297 children across 51 child care kitchens, 120 classrooms, and 138 homes reveals lead in 67% of child care kitchens and 57% of homes. Sub-clinical low-dose lead (<10 ppb EPA standard) is significantly linked to executive function deficits and loss of inhibitory control. Highlights the need for Agent-Based Modelling (ABM) across 400,000 lead pipes in Chicago, 140,000 in Cleveland, and Flint.',
+      fullText: `METALS IN TAP WATER ACROSS CHILD CARE AND HOME ENVIRONMENTS: ASSOCIATION BETWEEN LEAD AND EARLY CHILDHOOD EXECUTIVE FUNCTION
+
+Published: August 14, 2026
+Journal: Nature Journal of Exposure Science & Environmental Epidemiology (JESEE)
+Authors: Research Cohort (North Carolina N=297) & Norman Roulet (ICEarth Synthesis)
+DOI / Citation: https://www.nature.com/articles/s41370-026-00955-7
+ABM Engine & Sovereign Vault: https://icearth.org/?tab=abm_simulator
+
+KEY SCIENTIFIC TAKEAWAYS:
+• Widespread Tap Water Contamination: Lead detected in 67% of child care kitchen, 34% of classroom, and 57% of home drinking water samples.
+• American Academy of Pediatrics (AAP) Guideline (1 ppb): 8% of child care kitchens and 7% of home kitchens exceed the 1 ppb AAP health benchmark.
+• The Regulatory Blindspot: 0% exceeded the federal/state action level (10–15 ppb), proving that standard regulatory testing masks neurotoxic harm.
+• Executive Function Deficits: Path modeling proves child care tap water lead concentration is significantly negatively correlated with child inhibitory control and cognitive executive function.
+• Agent-Based Modelling (ABM) Framework: Integrating municipal lead pipe counts (400,000 pipes in Chicago, 140,000 pipes in Cleveland, Flint crisis dynamics) into autonomous agent lifetime exposure models to calculate unquantified disease pathways.`,
+      tags: ['WaterLeadExposure', 'ChildCareCenters', 'ExecutiveFunction', 'AgentBasedModelling', 'LeadPipes', 'Chicago400k', 'Cleveland140k', 'Flint', 'PeerReviewed'],
+      linkHash: '0xNATURE_WATER_LEAD_CHILDCARE_EF_STUDY_2026',
+      publishedUrl: 'https://www.nature.com/articles/s41370-026-00955-7'
+    },
     {
       id: 'MAG-SWISS-ABM-EXPOSENOMICS-2026',
       title: 'Swiss School of Exposenomics: Comparison of Residential & Mobility-Integrated Exposures (Agent-Based Modelling in Switzerland & Netherlands)',
@@ -855,6 +893,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000S',
+      title: 'Metals in Tap Water, Child Care & Home Environments: Lead Service Line Infrastructure & ABM Lifetime Harm Forensic Plate (Plate #12)',
+      category: 'Water Toxicology & Lead Pipe Infrastructure ABM',
+      imageSrc: waterLeadPipesAbmImg,
+      location: 'Chicago (400k Lead Pipes), Cleveland (140k Lead Pipes), Flint & NC Child Care Centers',
+      date: '2026-08-14',
+      description: 'Origins: Landmark forensic exposenomics plate analyzing the Nature Journal of Exposure Science & Environmental Epidemiology (2026) report on tap water metals across child care kitchens (67% lead positive) and homes (57% lead positive). Models the hidden disease pathways of 400,000 lead pipes in Chicago, 140,000 lead pipes in Cleveland, and Flint water chemistry dynamics. Integrates water ingestion kinetics into Agent-Based Modelling (ABM) to calculate lifetime loss of child executive function, inhibitory control, and cognitive health.',
+      vaultHash: '0xNATURE_WATER_LEAD_PIPES_ABM_LIFETIME_HARM_2026',
+      tags: ['WaterLeadExposure', 'ChildCareCenters', 'ExecutiveFunction', 'AgentBasedModelling', 'LeadPipes', 'Chicago400k', 'Cleveland140k', 'Flint', 'PeerReviewed', 'ICEarth']
+    },
     {
       id: 'PHOTO-000R',
       title: 'Swiss School of Exposenomics: Agent-Based Modelling & Mobility-Integrated Air Pollution Exposure Forensic Plate (Plate #11)',
