@@ -17,6 +17,7 @@ import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
+import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import {
   Shield,
   UserCheck,
@@ -148,6 +149,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000R',
+      title: 'Swiss School of Exposenomics: Agent-Based Modelling & Mobility-Integrated Exposure Plate (Plate #11)',
+      type: 'Agent-Based Modeling & Dynamic Exposome Mobility Research IP Asset',
+      imageSrc: swissAbmExposenomicsImg,
+      link: 'swiss_school',
+      description: 'Landmark peer-reviewed research plate (Journal of Exposure Science & Environmental Epidemiology 2026) comparing residential vs mobility-integrated air pollution exposures using Agent-Based Modelling (ABM) in Switzerland and the Netherlands. Demonstrates how dynamic spatio-temporal tracking eliminates epidemiological misclassification.',
+      sovereignHash: '0xSWISS_ABM_EXPOSENOMICS_MOBILITY_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000Q',
       title: 'Calcium Disodium EDTA Chelation Therapy & Hexadentate Coordination Forensic Plate (Plate #10)',

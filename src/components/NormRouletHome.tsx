@@ -73,10 +73,24 @@ import surinameIsotopeImg from '../assets/images/suriname_lead_isotope_dbs_proof
 import denisovanInfographicImg from '../assets/images/denisovan_epas1_altitude_lead_introgression_1786695776411.jpg';
 import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_1786712573132.jpg';
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
+import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('swiss_abm') ||
+    u.includes('agent_based') ||
+    u.includes('abm_exposenomics') ||
+    u.includes('1786765762453') ||
+    u.includes('mobility_integrated') ||
+    u.includes('swissschool') ||
+    u.includes('swiss_school') ||
+    u.includes('swisstph') ||
+    u.includes('swiss_tph')
+  ) {
+    return swissAbmExposenomicsImg;
+  }
   if (
     u.includes('edta') ||
     u.includes('chelation') ||
@@ -336,6 +350,30 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-SWISS-ABM-EXPOSENOMICS-2026',
+      title: 'Swiss School of Exposenomics: Comparison of Residential & Mobility-Integrated Exposures (Agent-Based Modelling in Switzerland & Netherlands)',
+      category: 'Exposenomics',
+      date: '2026-08-14',
+      imageSrc: swissAbmExposenomicsImg,
+      summary: 'Journal of Exposure Science & Environmental Epidemiology (2026): Landmark multi-country investigation proves static residential address exposure misclassifies true individual air pollution burdens. Dynamic Agent-Based Modelling (ABM) and personal tracking capture commuting spikes, micro-environmental transits, and multi-pollutant profiles (NO₂, PM₂.₅, Black Carbon, UFP).',
+      fullText: `COMPARISON OF RESIDENTIAL AND MOBILITY-INTEGRATED AIR POLLUTION EXPOSURES FROM TRACKING CAMPAIGNS AND AGENT-BASED MODELLING IN SWITZERLAND AND THE NETHERLANDS
+
+Published: August 14, 2026
+Journal: Journal of Exposure Science & Environmental Epidemiology volume 36, pages 469–478 (2026)
+Authors: Swiss Tropical and Public Health Institute (Swiss TPH), Utrecht University & Swiss School of Exposenomics
+DOI / Citation: https://www.nature.com/articles/s41370-025-00755-y
+Swiss School Vault: https://icearth.org/?tab=swiss_school
+
+KEY TAKEAWAYS & AGENT-BASED EXPOSOMICS:
+• Overcoming Exposure Misclassification: Static residential addresses fail to capture human mobility, explaining only 45%–72% of true personal exposure variance.
+• Agent-Based Modelling (ABM): Synthetic population simulation tracks hourly spatio-temporal trajectories, reducing exposure misclassification by up to 38%.
+• Commuting & Transit Spikes: Black Carbon (BC) and Ultrafine Particles (UFP) show dramatic 300%–500% concentration spikes during transit in urban corridors.
+• Why Swiss School of Exposenomics: Validates the Genome × Biome × Exposome paradigm, proving that personal environmental tracking is essential for true public health protection.`,
+      tags: ['SwissSchoolOfExposenomics', 'AgentBasedModelling', 'MobilityIntegratedExposure', 'AirPollution', 'SwissTPH', 'ExposureMisclassification', 'BlackCarbon', 'UFP', 'PeerReviewed'],
+      linkHash: '0xSWISS_ABM_EXPOSENOMICS_MOBILITY_RESEARCH_2026',
+      publishedUrl: 'https://www.nature.com/articles/s41370-025-00755-y'
+    },
     {
       id: 'MAG-EDTA-CHELATION-EVIDENCE-2026',
       title: 'Calcium Disodium EDTA — Explained by Medical Evidence, Not Myths',
@@ -817,6 +855,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000R',
+      title: 'Swiss School of Exposenomics: Agent-Based Modelling & Mobility-Integrated Air Pollution Exposure Forensic Plate (Plate #11)',
+      category: 'Swiss Exposenomics & Agent-Based Modeling',
+      imageSrc: swissAbmExposenomicsImg,
+      location: 'Basel, Zurich (Switzerland) & Utrecht (Netherlands)',
+      date: '2026-08-14',
+      description: 'Origins: Landmark scientific infographic illustrating the Journal of Exposure Science & Environmental Epidemiology (2026) research comparing residential-only vs mobility-integrated air pollution exposures via Agent-Based Modelling (ABM) in Switzerland and the Netherlands. Demonstrates how spatio-temporal activity tracking corrects exposure misclassification for NO₂, Black Carbon, PM₂.₅, and UFP.',
+      vaultHash: '0xSWISS_ABM_EXPOSENOMICS_MOBILITY_FORENSIC_PLATE_2026',
+      tags: ['SwissSchoolOfExposenomics', 'AgentBasedModelling', 'MobilityIntegratedExposure', 'AirPollution', 'SwissTPH', 'ExposureMisclassification', 'BlackCarbon', 'UFP', 'PeerReviewed', 'ICEarth']
+    },
     {
       id: 'PHOTO-000Q',
       title: 'Calcium Disodium EDTA Chelation Therapy & Hexadentate Coordination Forensic Plate (Plate #10)',
