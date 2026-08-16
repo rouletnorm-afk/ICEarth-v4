@@ -19,7 +19,8 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
-import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
+import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 import {
   Shield,
   UserCheck,
@@ -151,6 +152,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000U',
+      title: 'Google Personal Health Agent (PHA) × ICEarth Exposomics ABM: Multi-Agent Collaborative Architecture (Plate #14)',
+      type: 'Multi-Agent Health AI & Ambient Exposomics ABM Research IP Asset',
+      imageSrc: googlePhaAbmImg,
+      link: 'abm_simulator',
+      description: 'Landmark collaborative forensic architecture plate uniting Google Research\'s Personal Health Agent (PHA) framework with ICEarth\'s Agent-Based Modelling (ABM) exposomics engine. Demonstrates the orchestration of Gemini 2.0 specialized agents: Large Sensor Model (LSM) decoding 100Hz photoplethysmography and accelerometry, Data Science Agent running sandboxed Python time-series regressions, Domain Expert Agent grounding medical and toxicological literature, Health Coach Agent synthesizing empathetic behavioral routines, and the ICEarth Spatial ABM Agent integrating real-world ambient exposomics (thermal inversions, lead pipe GIS, and smelter fallout). Standardized via Model Context Protocol (MCP) and HL7 FHIR.',
+      sovereignHash: '0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000T',
       title: 'Predictive Analytics For Child Welfare & Environmental Exposomics: Nebraska DHHS TRACK Demonstration & Preventable Lead Poisoning (Plate #13)',

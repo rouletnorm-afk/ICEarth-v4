@@ -74,7 +74,9 @@ import {
 
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
-import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
+import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
+import { GooglePhaMultiAgentConsole } from './GooglePhaMultiAgentConsole';
 
 interface AgentBasedModellingEngineProps {
   onNavigateTab?: (tab: string) => void;
@@ -145,7 +147,7 @@ export const AgentBasedModellingEngine: React.FC<AgentBasedModellingEngineProps>
   const isLight = siteTheme === 'light';
 
   // Active Sub-Tab
-  const [activeSection, setActiveSection] = useState<'simulator' | 'child_welfare_predictive_ai' | 'water_lead_pipes' | 'trajectory_builder' | 'static_vs_abm' | 'global_benchmarks' | 'synthetic_cohorts' | 'ai_orchestrator'>('simulator');
+  const [activeSection, setActiveSection] = useState<'simulator' | 'google_pha_multi_agent' | 'child_welfare_predictive_ai' | 'water_lead_pipes' | 'trajectory_builder' | 'static_vs_abm' | 'global_benchmarks' | 'synthetic_cohorts' | 'ai_orchestrator'>('simulator');
 
   // Simulation Running State
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
@@ -921,6 +923,18 @@ export const AgentBasedModellingEngine: React.FC<AgentBasedModellingEngineProps>
             >
               <Activity size={14} />
               Live Multi-Agent Simulator
+            </button>
+
+            <button
+              onClick={() => setActiveSection('google_pha_multi_agent')}
+              className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all flex items-center gap-2 cursor-pointer shrink-0 ${
+                activeSection === 'google_pha_multi_agent'
+                  ? 'bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white shadow-sm font-bold ring-2 ring-indigo-400'
+                  : 'text-indigo-600 dark:text-indigo-400 bg-indigo-50/50 dark:bg-indigo-950/40 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-semibold'
+              }`}
+            >
+              <Sparkles size={14} className={activeSection === 'google_pha_multi_agent' ? 'text-amber-300' : 'text-indigo-500'} />
+              <span>🤖 Google Personal Health Agent (PHA) × ICEarth Exposomics</span>
             </button>
 
             <button
@@ -2862,6 +2876,14 @@ export const AgentBasedModellingEngine: React.FC<AgentBasedModellingEngineProps>
             </div>
 
           </div>
+        )}
+
+        {/* GOOGLE PERSONAL HEALTH AGENT (PHA) MULTI-AGENT ARCHITECTURE PROPOSAL */}
+        {activeSection === 'google_pha_multi_agent' && (
+          <GooglePhaMultiAgentConsole
+            onNavigateTab={onNavigateTab}
+            siteTheme={siteTheme}
+          />
         )}
 
       </div>

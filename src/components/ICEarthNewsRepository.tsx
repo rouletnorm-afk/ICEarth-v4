@@ -18,7 +18,8 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
-import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
+import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -104,6 +105,17 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('google_pha') ||
+    u.includes('personal_health_agent') ||
+    u.includes('large_sensor_model') ||
+    u.includes('lsm') ||
+    u.includes('1786862883107') ||
+    u.includes('multi_agent_health') ||
+    u.includes('pha_icearth')
+  ) {
+    return googlePhaAbmImg;
+  }
   if (
     u.includes('predictive_child_welfare') ||
     u.includes('child_welfare') ||
@@ -291,6 +303,47 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'GOOGLE-PHA-ICEARTH-EXPOSOMICS-ABM-2026',
+    contentType: 'Article',
+    title: 'Google Personal Health Agent (PHA) × ICEarth Exposomics: Collaborative Multi-Agent Architecture for Wearable Biometrics & Ambient Exposure Trajectories',
+    subtitle: 'Executive Proposal & Technical Blueprint • Google Research Personal Health Agent (PHA) Framework × Gemini 2.0 Flash • Deconstructing Monolithic Health Apps into Specialized Roles: Data Science Agent, Domain Expert Agent, Health Coach Agent & ICEarth Spatial ABM Agent • Model Context Protocol (MCP) & HL7 FHIR Interoperability',
+    sourceUrl: 'https://icearth.org/?tab=abm_simulator',
+    sourceName: 'Google Research & ICEarth Sovereign Exposenomics Collaborative Board',
+    publishDate: '2026-08-15',
+    author: 'Norman Roulet (ICEarth Founder) & Sovereign AI Architecture Lab',
+    authorName: 'Google PHA & ICEarth Public Health Multi-Agent Board',
+    abstract: 'Standard health applications suffer from monolithic limitations: they fail to link continuous wearable biometric fluctuations (Fitbit PPG heart rate variability, accelerometry, and nocturnal micro-arousals) with dynamic external environmental exposomics (ambient PM2.5 thermal inversions, municipal lead service line drinking water kinetics, and industrial smelter dust). This collaborative proposal integrates Google Research’s Personal Health Agent (PHA) multi-agent framework with ICEarth’s Agent-Based Modelling (ABM) engine. By decomposing queries across specialized Gemini 2.0 roles—a Large Sensor Model (LSM), a Data Science Agent running sandboxed Python code, a Domain Expert Agent grounding medical literature, a Health Coach Agent formulating non-clinical habits, and the ICEarth Spatial ABM Agent calculating real-world toxicant dispersion—the framework establishes causal physiological-environmental feedback loops in private zero-knowledge enclaves.',
+    editorCommentary: 'This collaborative proposal represents the ultimate synthesis of Google’s frontier multi-agent AI architecture with ICEarth’s 30-year exposenomics foundation. By providing a secure, sandboxed execution environment where specialized agents collaborate via Model Context Protocol (MCP) and FHIR standards, individuals gain deep causal insights into how their immediate physical surroundings dictate cardiovascular recovery, neurodevelopmental health, and sleep architecture.',
+    fullExcerpt: `GOOGLE PERSONAL HEALTH AGENT (PHA) × ICEARTH EXPOSOMICS: COLLABORATIVE MULTI-AGENT ARCHITECTURE
+
+Published: August 15, 2026
+Research Attribution: Google Research Personal Health Agent (PHA) Framework & ICEarth Sovereign Exposenomics
+Proposal Document: https://icearth.org/?tab=abm_simulator
+Cryptographic Provenance Hash: 0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_2026
+
+1. ARCHITECTURAL OVERVIEW:
+Monolithic health applications present a single interface attempting to perform statistical inference, clinical reasoning, and coaching simultaneously. Google Research\'s breakthrough Personal Health Agent (PHA) deconstructs these capabilities into autonomous, cooperative agent roles orchestrated by Gemini 2.0:
+• Orchestrator (Gemini 2.0 Flash): Decomposes natural language queries, coordinates tool usage, and synthesizes outputs.
+• Large Sensor Model (LSM): Tokenizes 50Hz–100Hz raw photoplethysmography (PPG) waveforms and accelerometry to extract discrete HRV RMSSD, pulse transit time, and nocturnal micro-arousals.
+• Data Science Agent: Formulates and executes sandboxed Python code (NumPy, SciPy, Pandas) for lagged cross-correlations and statistical regressions.
+• ICEarth Spatial ABM Agent: Computes spatio-temporal microenvironment exposure matrices (100m grid thermal inversion trapping, lead service pipe GIS layers, and industrial plume trajectories).
+• Domain Expert Agent: Grounds findings in peer-reviewed medical, toxicological, and epidemiological literature.
+• Health Coach Agent: Translates complex analytical findings into empathetic, actionable, non-clinical daily routines.
+
+2. STANDARD PROTOCOLS & PRIVACY:
+• Model Context Protocol (MCP): Standardized multi-agent tool execution and context transfer.
+• HL7 FHIR R4: Standardized observation data structures ensuring health interoperability.
+• Zero-Knowledge Biometric Sovereignty: User data is processed locally without third-party tracking.`,
+    tags: ['GooglePHA', 'PersonalHealthAgent', 'MultiAgentArchitecture', 'LargeSensorModel', 'Fitbit', 'AgentBasedModelling', 'Exposenomics', 'Gemini2', 'ModelContextProtocol', 'FHIR'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'ICETaos'],
+    vaultHash: '0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'google_pha_abm_1786862883107.jpg'
+  },
   {
     id: 'NEBRASKA-DHHS-PREDICTIVE-ANALYTICS-CHILD-WELFARE-2026',
     contentType: 'Article',

@@ -75,11 +75,23 @@ import wildfireInfographicImg from '../assets/images/wildfire_pyro_exposenomics_
 import edtaChelationImg from '../assets/images/edta_chelation_medical_evidence_1786720100000_1786717879144.jpg';
 import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_1786765762453.jpg';
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
-import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786797166579.jpg';
+import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
+import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('google_pha') ||
+    u.includes('personal_health_agent') ||
+    u.includes('large_sensor_model') ||
+    u.includes('lsm') ||
+    u.includes('1786862883107') ||
+    u.includes('multi_agent_health') ||
+    u.includes('pha_icearth')
+  ) {
+    return googlePhaAbmImg;
+  }
   if (
     u.includes('predictive_child_welfare') ||
     u.includes('child_welfare') ||
@@ -87,6 +99,7 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('nebraska') ||
     u.includes('track') ||
     u.includes('1786797166579') ||
+    u.includes('1786815282419') ||
     u.includes('predictive_analytics') ||
     u.includes('dhhs.ne.gov')
   ) {
@@ -376,6 +389,38 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-GOOGLE-PHA-ICEARTH-EXPOSOMICS-2026',
+      title: 'Google Personal Health Agent (PHA) × ICEarth Exposomics: Collaborative Multi-Agent Architecture for Personalized Wearable Biometrics & Real-World Environmental Trajectories',
+      category: 'Exposenomics',
+      date: '2026-08-15',
+      imageSrc: googlePhaAbmImg,
+      summary: 'Executive Proposal & Collaborative Blueprint (August 15, 2026): Merging Google Research\'s breakthrough Personal Health Agent (PHA) framework with ICEarth’s Agent-Based Modelling (ABM) exposomics engine. Deconstructs monolithic health apps into specialized Gemini roles: Data Science Agent executing sandboxed Python code over wearable time-series (Fitbit PPG/accelerometry), Domain Expert Agent grounding medical and toxicological literature, Health Coach Agent synthesizing empathetic behavioral protocols, and the ICEarth Spatial ABM Agent providing real-world microenvironment exposure matrices (thermal inversions, lead pipe GIS, and smelter soils).',
+      fullText: `GOOGLE PERSONAL HEALTH AGENT (PHA) × ICEARTH EXPOSOMICS: COLLABORATIVE MULTI-AGENT ARCHITECTURE
+
+Published: August 15, 2026
+Research Attribution: Google Research Personal Health Agent (PHA) Framework & ICEarth Sovereign Exposenomics
+Authors: Norman Roulet (ICEarth Founder) & Sovereign Research Lab
+Collaborative Proposal: https://icearth.org/?tab=abm_simulator&section=google_pha_multi_agent
+Cryptographic Vault Hash: 0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_2026
+
+EXECUTIVE RESEARCH SUMMARY:
+Monolithic health applications struggle to simultaneously parse high-frequency wearable sensor telemetry and dynamic environmental realities. Google Research\'s breakthrough Personal Health Agent (PHA) solves this by orchestrating specialized multi-agent sub-modules. By coupling Google PHA with the ICEarth Agent-Based Modelling (ABM) Exposomics engine, the missing causal link between external environmental toxicants and internal autonomic physiology is solved.
+
+THE 6 COLLABORATIVE AGENT ROLES:
+1. Orchestrator (Gemini 2.0 Flash): Deconstructs multimodal health queries and routes sub-tasks dynamically.
+2. Large Sensor Model (LSM): Tokenizes raw 50Hz–100Hz photoplethysmography (PPG) waveforms and accelerometry to extract discrete HRV RMSSD intervals, pulse transit times, and micro-arousals.
+3. Data Science Agent: Iteratively formulates and executes sandboxed Python code (NumPy, SciPy, Pandas) to calculate lagged regressions and non-linear dose-response curves over biometrics.
+4. ICEarth Spatial ABM Agent: Computes high-resolution (100m) ambient exposome matrices (thermal inversion particulate trapping, municipal lead service line GIS, and diesel exhaust plumes).
+5. Domain Expert Agent: Grounds findings in peer-reviewed clinical and toxicological literature (Lanphear 2005, Nature JESEE 2026, AHA Particulate Matter Statements).
+6. Health Coach Agent: Formulates empathetic, actionable, non-clinical daily protocols (smart home HEPA filter automation, greenway commute routing, and dietary DMT1 competitive inhibitors).
+
+SOVEREIGN DATA PRIVACY & FHIR INTEROPERABILITY:
+Utilizes the Model Context Protocol (MCP) and HL7 FHIR R4 Observations to run in local zero-knowledge enclaves, ensuring user biometric sovereignty without centralized cloud tracking.`,
+      tags: ['GooglePHA', 'PersonalHealthAgent', 'MultiAgentFramework', 'LargeSensorModel', 'FitbitHealthConnect', 'AgentBasedModelling', 'Exposenomics', 'Gemini2', 'ModelContextProtocol', 'FHIR'],
+      linkHash: '0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_2026',
+      publishedUrl: 'https://icearth.org/?tab=abm_simulator'
+    },
     {
       id: 'MAG-NEBRASKA-DHHS-PREDICTIVE-ANALYTICS-2026',
       title: 'Nebraska Selected for Federal Grant to Advance Predictive Analytics in Child Welfare: AI-Driven Prevention of Pediatric Toxicants & 100% Preventable Lead Poisoning',
@@ -936,6 +981,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
+      id: 'PHOTO-000U',
+      title: 'Google Personal Health Agent (PHA) × ICEarth Exposomics ABM: Multi-Agent Collaborative Architecture (Plate #14)',
+      category: 'Multi-Agent Health AI & Ambient Exposomics ABM',
+      imageSrc: googlePhaAbmImg,
+      location: 'Google Research, Fitbit Health Connect & ICEarth Sovereign Exposenomics Lab',
+      date: '2026-08-15',
+      description: 'Origins: Landmark collaborative forensic architecture plate uniting Google Research\'s Personal Health Agent (PHA) framework with ICEarth\'s Agent-Based Modelling (ABM) exposomics engine. Demonstrates the orchestration of Gemini 2.0 specialized agents: Large Sensor Model (LSM) decoding 100Hz photoplethysmography and accelerometry, Data Science Agent running sandboxed Python time-series regressions, Domain Expert Agent grounding medical and toxicological literature, Health Coach Agent synthesizing empathetic behavioral routines, and the ICEarth Spatial ABM Agent integrating real-world ambient exposomics (thermal inversions, lead pipe GIS, and smelter fallout). Standardized via Model Context Protocol (MCP) and HL7 FHIR.',
+      vaultHash: '0xGOOGLE_RESEARCH_PHA_GEMINI_EXPOSOMICS_ABM_2026',
+      tags: ['GooglePHA', 'PersonalHealthAgent', 'MultiAgentFramework', 'LargeSensorModel', 'Fitbit', 'AgentBasedModelling', 'Exposenomics', 'Gemini2', 'ModelContextProtocol', 'FHIR', 'ICEarth']
+    },
+    {
       id: 'PHOTO-000T',
       title: 'Predictive Analytics For Child Welfare & Environmental Exposomics: Nebraska DHHS TRACK Demonstration & Preventable Lead Poisoning (Plate #13)',
       category: 'Child Welfare Predictive AI & Environmental Lead Prevention ABM',
@@ -1475,6 +1531,99 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
       {/* MAIN CONTENT CONTAINERS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        {/* GOOGLE PERSONAL HEALTH AGENT (PHA) × ICEARTH EXPOSOMICS MULTI-AGENT ARCHITECTURE PROPOSAL */}
+        {(activeSection === 'all' || activeSection === 'highlights' || activeSection === 'magazine') && (
+          <section className="space-y-4">
+            <div className="w-full rounded-3xl bg-gradient-to-br from-stone-950 via-indigo-950/80 to-stone-900 border-2 border-indigo-500/60 p-6 sm:p-8 text-white space-y-6 shadow-2xl relative overflow-hidden">
+              
+              {/* Background ambient lighting */}
+              <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Header Badges & Source Attribution */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-indigo-800/60 pb-4 relative z-10">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3.5 py-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-mono text-xs font-black uppercase tracking-wider rounded-xl shadow-lg flex items-center gap-2">
+                    <Sparkles size={15} />
+                    <span>GOOGLE RESEARCH PROPOSAL & BLUEPRINT</span>
+                  </span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 font-mono text-xs font-bold rounded-xl flex items-center gap-1.5">
+                    <ShieldCheck size={15} className="text-amber-400" />
+                    <span>Gemini 2.0 Multi-Agent Framework × Fitbit Health Connect</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-mono text-stone-300 font-bold">
+                  <Calendar size={14} className="text-indigo-400" />
+                  <span>August 15, 2026 • Sovereign Architecture</span>
+                </div>
+              </div>
+
+              {/* Title & Narrative */}
+              <div className="space-y-3 relative z-10">
+                <h2 className="text-2xl sm:text-4xl font-serif font-black text-stone-100 leading-tight">
+                  Google Personal Health Agent (PHA) × ICEarth Exposomics: Collaborative Multi-Agent Architecture for Wearable Biometrics & Ambient Trajectories
+                </h2>
+                <p className="text-sm sm:text-base text-stone-300 font-sans leading-relaxed">
+                  A breakthrough proposal to Google Research: deconstructing monolithic health applications into specialized autonomous Gemini agent roles: a <strong className="text-sky-300">Data Science Agent</strong> executing sandboxed Python regressions over wearable time-series, a <strong className="text-purple-300">Domain Expert Agent</strong> grounding medical and toxicological literature, a <strong className="text-pink-300">Health Coach Agent</strong> generating empathetic daily habits, and the <strong className="text-emerald-300">ICEarth Spatial ABM Agent</strong> integrating real-world ambient exposomics (thermal inversions, lead pipe GIS, and smelter fallout).
+                </p>
+              </div>
+
+              {/* Visual Infographic Feature & Interactive Launcher */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+                <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-indigo-500/40 shadow-xl bg-black">
+                  <img
+                    src={googlePhaAbmImg}
+                    alt="Google Personal Health Agent (PHA) Multi-Agent Architecture Infographic"
+                    className="w-full h-auto object-cover hover:scale-102 transition-transform duration-500 cursor-pointer"
+                    onClick={() => {
+                      setSelectedPhoto(basePhotographyGallery[0]);
+                    }}
+                  />
+                </div>
+
+                <div className="lg:col-span-6 space-y-4">
+                  <div className="p-5 rounded-2xl bg-stone-900/90 border border-indigo-900/70 space-y-3 text-xs font-mono text-stone-300">
+                    <div className="flex items-center justify-between text-indigo-400 font-bold border-b border-stone-800 pb-2">
+                      <span>THE 6 SPECIALIZED AGENT ROLES</span>
+                      <span>1,815ms Sync</span>
+                    </div>
+                    <ul className="space-y-2 text-[11px] leading-relaxed">
+                      <li>• <strong className="text-amber-400">Orchestrator:</strong> Multimodal query decomposition (Gemini 2.0 Flash)</li>
+                      <li>• <strong className="text-rose-400">Large Sensor Model (LSM):</strong> 100Hz raw PPG waveform & HRV tokenization</li>
+                      <li>• <strong className="text-sky-400">Data Science Agent:</strong> Sandboxed Python time-series regressions (NumPy/Pandas)</li>
+                      <li>• <strong className="text-emerald-400">ICEarth Spatial ABM:</strong> Microenvironment inversions & lead pipe GIS</li>
+                      <li>• <strong className="text-purple-400">Domain Expert:</strong> Medical literature grounding (Lanphear / Nature 2026)</li>
+                      <li>• <strong className="text-pink-400">Health Coach:</strong> Actionable non-clinical habits & smart home HEPA filters</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-3">
+                    <button
+                      onClick={() => onNavigateTab?.('abm_simulator')}
+                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-mono text-xs font-black shadow-lg hover:shadow-indigo-500/25 transition-all flex items-center gap-2 cursor-pointer"
+                    >
+                      <Sparkles size={15} />
+                      <span>Launch Google PHA Multi-Agent Console in ABM Simulator &rarr;</span>
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(basePhotographyGallery[0]);
+                      }}
+                      className="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-mono text-xs font-bold transition-all flex items-center gap-2 cursor-pointer"
+                    >
+                      <Camera size={14} />
+                      <span>View Forensic Plate #14</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        )}
 
         {/* BREAKING NEWS: FLINT SHOOTINGS ACTIVISTS LINK YOUTH GUN VIOLENCE TO LEAD POISONING - ROULET'S LAW VALIDATION */}
         {(activeSection === 'all' || activeSection === 'featured_video' || activeSection === 'magazine') && (
