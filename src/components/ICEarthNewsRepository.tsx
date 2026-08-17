@@ -26,6 +26,7 @@ import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahe
 import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
+import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -72,7 +73,8 @@ import {
   Atom,
   Flame,
   Pill,
-  Cpu
+  Cpu,
+  Droplets
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video';
@@ -100,6 +102,12 @@ export interface NewsArticle {
   imageUrl?: string;
   eventDate?: string;
   bookChapter?: string;
+  editorialWeight?: number;
+  thumbnailUrl?: string;
+  mediaType?: string;
+  originState?: string;
+  provenanceHash?: string;
+  vaultRef?: string;
 }
 
 interface ICEarthNewsRepositoryProps {
@@ -111,6 +119,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('twin_cities') ||
+    u.includes('minneapolis') ||
+    u.includes('st_paul') ||
+    u.includes('stpaul') ||
+    u.includes('minnpost') ||
+    u.includes('1786999331078') ||
+    u.includes('1787000288036') ||
+    u.includes('green_zone') ||
+    u.includes('greenzone')
+  ) {
+    return twinCitiesImg;
+  }
   if (
     u.includes('academia') ||
     u.includes('crystallized') ||
@@ -372,6 +393,75 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'MINNPOST-TWIN-CITIES-LEAD-SERVICE-LINES-2026',
+    contentType: 'Article',
+    title: 'With Funding Set to Dry Up, Minneapolis & St. Paul Face Tough Choices on Lead Pipe Removal',
+    subtitle: 'MinnPost Investigation by Claire Carlson (Mississippi River Basin Ag & Water Desk / Report for America) • 125-Year-Old Corroded Pipes, 37,000 Private Lines in Minneapolis vs. 17,000 in St. Paul, Green Zone Prioritization (Hawthorne, McKinley, Phillips, Frogtown), and the $235M Minnesota 2026 Bonding Deficit',
+    sourceUrl: 'https://www.minnpost.com/drinking-water/2026/08/with-funding-set-to-dry-up-minneapolis-faces-tough-choices-on-lead-pipe-removal/',
+    sourceName: 'MinnPost / Mississippi River Basin Ag & Water Desk',
+    publishDate: '2026-08-17',
+    author: 'Claire Carlson (Report for America)',
+    authorName: 'Claire Carlson • Editorial Commentary by Norman Roulet (GCLAC Co-Chair)',
+    abstract: 'A cloud of dust drifts behind a compact track loader as it carries dirt and asphalt from a giant hole five feet wide. About eight feet below ground, a utility worker in a hard hat dislodges a 125-year-old corroded lead pipe that connected a home to Minneapolis’s main water line. In North Minneapolis neighborhoods like Hawthorne and McKinley, crews are replacing toxic lines free of charge for homeowners, funded by state and federal grants. However, with federal infrastructure dollars and state grants set to dry up at the end of 2027—and the 2026 Minnesota bonding bill providing only $15 Million of a requested $250 Million—Minneapolis and St. Paul face excruciating choices. Minneapolis has 37,000 lead lines that are 100% privately owned, legally barring the city from using ratepayer utility funds. St. Paul owns half of its 17,000 lines, enabling ratepayer cost-sharing (4,500 lines replaced since 2022). Without renewed appropriations, Minnesota’s 2033 lead-free mandate will collapse, extending neurodevelopmental risks across disenfranchised communities for decades.',
+    editorCommentary: 'Claire Carlson’s MinnPost investigation cuts to the structural core of urban environmental injustice and municipal finance. In Minneapolis, the 100% private ownership of lead service lines creates an insurmountable legal barrier against using utility water bill revenues, rendering the city entirely hostage to state bonding politics. As we established in our Cleveland, Chicago, and Flint audits, every year of delay imposes irreversible neurocognitive, executive function, and behavioral burdens on children in high-vulnerability Green Zones.',
+    fullExcerpt: `WITH FUNDING SET TO DRY UP, MINNEAPOLIS FACES TOUGH CHOICES ON LEAD PIPE REMOVAL
+INVESTIGATIVE REPORT & MUNICIPAL EXPOSOMICS AUDIT
+
+Author: Claire Carlson (Report for America / Mississippi River Basin Ag & Water Desk)
+Publication: MinnPost (https://www.minnpost.com/drinking-water/2026/08/with-funding-set-to-dry-up-minneapolis-faces-tough-choices-on-lead-pipe-removal/)
+Date: August 17, 2026
+Sovereign Archive Hash: 0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17
+Interactive Engine: https://icearth.org/?tab=twin_cities_lead
+
+1. INFRASTRUCTURE & MUNICIPAL PROFILE:
+• Minneapolis Lead Service Lines: 37,000 (100% privately owned from street main to basement meter).
+• St. Paul Lead Service Lines: 17,000 (50% public / 50% private split; 4,500 replaced since 2022).
+• Minnesota Known Statewide Total: 87,000+ known lead lines (>100,000 estimated).
+• Water Main Relining Coordination: 1,000 miles of water mains & streets across Minneapolis to coordinate excavations.
+• Priority Targets: 100% of licensed daycares & childcare centers targeted by end of 2026; Green Zones (Northside Hawthorne & McKinley, Southside Phillips, St. Paul Frogtown).
+
+2. THE 2027 FUNDING CLIFF & BONDING DEFICIT:
+• Bipartisan Infrastructure Law (IIJA) & state grants expire at the end of 2027.
+• 2026 Minnesota State Bonding Bill Allocation: $15 Million statewide ($235M deficit vs. $250M requested).
+• Funding Shortfall Impact: Pushes zero-lead completion date from statutory 2033 goal past 2038–2045.
+• Ratepayer Restriction: Minneapolis City Charter & MN statute prohibit spending utility water bill revenues on private pipes.
+
+3. EXPOSENOMICS & TOXICOLOGY VECTOR:
+• Water Chemistry: Orthophosphate corrosion inhibitor passivation forms a delicate protective scale; water main vibration and freezing ground can shatter scale, releasing particulate lead spikes.
+• Paint & Solder Vectors: 1,000,000 Minnesota homes contain lead-based paint; pre-1986 homes carry 50/50 lead-tin solder.
+• Pediatric Vulnerability: Impaired prefrontal synaptic pruning, sensorineural auditory loss, microcytic anemia, ADHD, and diminished executive function.`,
+    tags: [
+      'MinneapolisLead',
+      'StPaulLead',
+      'TwinCities',
+      'LeadPipes',
+      'EnvironmentalJustice',
+      'GreenZones',
+      'WaterInfrastructure',
+      'Exposomics',
+      'FundingCliff',
+      'MunicipalLaw',
+      'ChildHealth'
+    ],
+    communities: [
+      'ICEarth Public Health',
+      'Twin Cities Clean Water Co-op',
+      'Environmental Justice Network',
+      'Great Lakes Water Basin',
+      'Sovereign Exposomics Guild'
+    ],
+    editorName: 'Norman Roulet (GCLAC Co-Chair)',
+    editorRole: 'ICEarth Founder & Former Co-Chair for Infrastructure, Greater Cleveland Lead Advisory Council',
+    vaultHash: '0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17',
+    editorialWeight: 100,
+    promotedToHomePage: true,
+    thumbnailUrl: 'twin_cities_lead_service_lines_v2_1787000288036.jpg',
+    mediaType: 'Article',
+    originState: 'Minnesota',
+    provenanceHash: '0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17',
+    vaultRef: 'VAULT-TWIN-CITIES-PB-001'
+  },
   {
     id: 'NANOSPIRE-LECLAIR-CRYSTALLIZED-CAVITATION-PAPER-2026',
     contentType: 'Article',
@@ -2493,6 +2583,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('TwinCities') || article.tags?.includes('MinneapolisLead') || article.id.includes('MINNPOST-TWIN-CITIES') || article.id.includes('TWIN-CITIES')) && (
+                      <button
+                        onClick={() => onNavigateTab('twin_cities_lead')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-sky-700 via-teal-700 to-emerald-700 hover:from-sky-600 hover:to-emerald-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-sky-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Droplets size={14} className="text-sky-200" />
+                        <span>🚰 Launch Minneapolis & St. Paul Lead Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) && (
                       <button
                         onClick={() => onNavigateTab('artisanal_mining')}

@@ -83,10 +83,23 @@ import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahe
 import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
+import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('twin_cities') ||
+    u.includes('minneapolis') ||
+    u.includes('st_paul') ||
+    u.includes('stpaul') ||
+    u.includes('minnpost') ||
+    u.includes('1786999331078') ||
+    u.includes('1787000288036') ||
+    u.includes('green_zone')
+  ) {
+    return twinCitiesImg;
+  }
   if (
     u.includes('academia') ||
     u.includes('crystallized') ||
@@ -461,6 +474,42 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-TWIN-CITIES-LEAD-SERVICE-LINES-2026',
+      title: 'With Funding Set to Dry Up, Minneapolis & St. Paul Face Tough Choices on Lead Pipe Removal',
+      category: 'Exposenomics',
+      date: '2026-08-17',
+      imageSrc: twinCitiesImg,
+      summary: 'MinnPost Investigative Report (August 17, 2026) by Claire Carlson: In North Minneapolis neighborhoods like Hawthorne and McKinley, crews are replacing 125-year-old corroded lead pipes. But with federal IIJA and state grant allocations set to expire at the end of 2027—and the 2026 Minnesota bonding bill providing just $15M of a requested $250M (94% shortfall)—the Twin Cities face severe financial barriers. Minneapolis has 37,000 lead lines that are 100% privately owned, legally barring the use of ratepayer utility funds, while St. Paul owns 50% of its 17,000 lines (4,500 replaced since 2022).',
+      fullText: `WITH FUNDING SET TO DRY UP, MINNEAPOLIS & ST. PAUL FACE TOUGH CHOICES ON LEAD PIPE REMOVAL
+INVESTIGATIVE REPORT & MUNICIPAL EXPOSOMICS AUDIT
+
+Published: August 17, 2026
+Source: MinnPost / Mississippi River Basin Ag & Water Desk
+Author: Claire Carlson (Report for America)
+Editor Commentary: Norman Roulet (GCLAC Co-Chair)
+Provenance Vault Hash: 0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17
+Interactive Engine: https://icearth.org/?tab=twin_cities_lead
+
+EXECUTIVE SUMMARY & CRITICAL VECTORS:
+1. The 100% Private Ownership Barrier:
+   All 37,000 lead service lines in Minneapolis are privately owned from the street main connection to the home basement. Under Minnesota municipal jurisprudence, ratepayer water utility revenue cannot be spent on private real estate. Minneapolis is therefore completely dependent on state bonding appropriations and federal grants.
+   
+2. St. Paul's 50/50 Shared Ownership Model:
+   St. Paul owns the public half of its 17,000 lead lines (from the street main to the sidewalk curb stop). This legal structure allowed St. Paul Regional Water Services to utilize ratepayer revenue to replace 4,500 lines since 2022, primarily in Frogtown.
+
+3. The 2027 Funding Cliff:
+   Federal Bipartisan Infrastructure Law (IIJA) and state grants expire at the end of 2027. The 2026 Minnesota bonding bill allocated only $15 Million statewide against a $250 Million request by water advocates. This deficit threatens to derail Minnesota's statutory 2033 lead-free mandate, extending pediatric neurodevelopmental hazards past 2038.
+
+4. 1,000 Miles of Water Main Coordination:
+   Minneapolis Public Works Director Annika Bankston highlights the immense logistical challenge of coordinating lead service line excavations with cast-iron water main relining and street repaving across 1,000 miles of city streets.
+
+5. Environmental Justice & Green Zones:
+   Minneapolis prioritizes the Northside Green Zone (Hawthorne, McKinley) and Southside Green Zone (Phillips West, Midtown Phillips, East Phillips), alongside a mandate to achieve 100% lead pipe replacement for all licensed daycares and childcares by the end of 2026.`,
+      tags: ['MinneapolisLead', 'StPaulLead', 'TwinCities', 'LeadPipes', 'EnvironmentalJustice', 'GreenZones', 'WaterInfrastructure', 'FundingCliff', 'Exposomics', 'ICEarth'],
+      linkHash: '0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17',
+      publishedUrl: 'https://www.minnpost.com/drinking-water/2026/08/with-funding-set-to-dry-up-minneapolis-faces-tough-choices-on-lead-pipe-removal/'
+    },
     {
       id: 'MAG-LECLAIR-CRYSTALLIZED-CAVITATION-PAPER-2026',
       title: 'Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Diamond-Structure Water Crystals: Mark LeClair Research Paper & Empirical Physical Proofs',
@@ -1191,6 +1240,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AB',
+      title: 'Minneapolis & St. Paul Lead Service Line Removal & 2027 Funding Cliff Forensic Plate (Plate #21)',
+      category: 'Water Toxicology & Municipal Infrastructure Exposomics',
+      imageSrc: twinCitiesImg,
+      location: 'Minneapolis (Hawthorne, McKinley, Phillips) & St. Paul (Frogtown), Minnesota',
+      date: '2026-08-17',
+      description: 'Origins: Landmark municipal infrastructure plate illustrating Claire Carlson’s MinnPost investigation ("With funding set to dry up, Minneapolis faces tough choices on lead pipe removal"). Features 125-year-old corroded lead pipe excavations, contrasts Minneapolis’s 37,000 100% privately owned lines with St. Paul’s 17,000 50/50 public-private split, models the 2027 federal/state funding cliff ($15M bonding vs. $250M needed), highlights Green Zone environmental justice prioritization, and details 1,000 miles of water main relining logistics.',
+      vaultHash: '0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_2026_08_17',
+      tags: ['MinneapolisLead', 'StPaulLead', 'TwinCities', 'LeadPipes', 'EnvironmentalJustice', 'GreenZones', 'WaterInfrastructure', 'FundingCliff', 'Exposomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AA',
       title: 'Mark LeClair Academia Research Paper: Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Water Crystals (Plate #20)',

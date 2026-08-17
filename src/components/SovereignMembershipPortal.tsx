@@ -27,6 +27,7 @@ import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahe
 import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
+import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
 import {
   Shield,
   UserCheck,
@@ -158,6 +159,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AB',
+      title: 'Minneapolis & St. Paul Lead Service Line Removal & 2027 Funding Cliff Forensic Plate (Plate #21)',
+      type: 'Water Infrastructure, Municipal Law & Exposomics Sovereign IP Asset',
+      imageSrc: twinCitiesImg,
+      link: 'twin_cities_lead',
+      description: 'Origins: Landmark municipal infrastructure asset based on MinnPost investigation by Claire Carlson. Models 37,000 100% private lead lines in Minneapolis vs. 17,000 lines in St. Paul (50/50 public-private split), the 2027 federal/state funding cliff ($15M bonding vs. $250M needed), Green Zone environmental justice prioritization, and 1,000 miles of water main relining logistics.',
+      sovereignHash: '0xTWIN_CITIES_LEAD_EXPOSOMICS_MINNPOST_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000AA',
       title: 'Mark LeClair Academia Research Paper: Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Water Crystals (Plate #20)',

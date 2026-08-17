@@ -108,6 +108,7 @@ import { WildfirePyroExposenomics } from './components/WildfirePyroExposenomics'
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngine';
 import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposenomics';
+import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe } from 'lucide-react';
 
@@ -116,7 +117,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1473,6 +1474,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Minneapolis & St. Paul Lead Audit & 2027 Funding Cliff */}
+                <button
+                  onClick={() => setActiveTab('twin_cities_lead')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities'
+                      ? 'bg-amber-950 text-amber-200 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-300/80 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Droplets size={16} className={activeTab === 'twin_cities_lead' ? 'text-amber-300' : 'text-amber-700'} />
+                  <span className="flex-1">💧 Minneapolis & St. Paul Lead Audit</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    612/651
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -1909,6 +1926,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'bihar' && '🇮🇳 Bihar Audit'}
               {activeTab === 'toledo' && '⚓ Toledo Audit'}
               {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
+              {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && '💧 Minneapolis & St. Paul Lead Audit'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3495,6 +3513,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {activeTab === 'milwaukee' && (
             <div className="flex-1 p-8 overflow-y-auto bg-gray-50/50">
               <MilwaukeeLeadAudit />
+            </div>
+          )}
+
+          {/* TAB 2.115: MINNEAPOLIS & ST. PAUL LEAD AUDIT & 2027 FUNDING CLIFF FORENSIC ENGINE */}
+          {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && (
+            <div className="flex-1 overflow-y-auto">
+              <TwinCitiesLeadExposomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
             </div>
           )}
 
