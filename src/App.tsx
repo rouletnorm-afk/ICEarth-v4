@@ -107,15 +107,16 @@ import { DenisovanAltitudeAdaptiveExposenomics } from './components/DenisovanAlt
 import { WildfirePyroExposenomics } from './components/WildfirePyroExposenomics';
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngine';
+import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposenomics';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -244,6 +245,16 @@ export default function App() {
         lower.includes('geophagy')
       ) {
         setActiveTab('pica_exposenomics');
+      } else if (
+        lower === 'artisanal_mining' ||
+        lower === 'artisanal' ||
+        lower === 'mining' ||
+        lower === 'nigeria_mining' ||
+        lower === 'artisanal-mining' ||
+        lower.includes('artisanal') ||
+        lower.includes('mining')
+      ) {
+        setActiveTab('artisanal_mining');
       } else if (lower === 'canary' || lower === 'evolutionary' || lower === 'evolutionary_canary') {
         setActiveTab('evolutionary_canary');
       } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
@@ -1252,6 +1263,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.09 Artisanal Mining, Lead Poisoning & Illicit Pits Exposenomics */}
+                <button
+                  onClick={() => setActiveTab('artisanal_mining' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'artisanal_mining' || (activeTab as string) === 'artisanal' || (activeTab as string) === 'mining'
+                      ? 'bg-amber-950 text-amber-50 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-50/80 text-amber-900 border-amber-200/50 bg-amber-50/20'
+                  }`}
+                >
+                  <Pickaxe size={16} className={activeTab === 'artisanal_mining' ? 'text-amber-400' : 'text-amber-600'} />
+                  <span className="flex-1 font-semibold">⛏️ Artisanal Mining & Illicit Pits</span>
+                  <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-800 text-[8px] tracking-wide rounded uppercase font-extrabold border border-amber-500/30">
+                    Mining Proof
+                  </span>
+                </button>
+
                 {/* 0.1 UCANX Commodities Exchange */}
                 <button
                   onClick={() => setActiveTab('ucanx')}
@@ -1771,6 +1798,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'manuscript', icon: BookOpen, label: "📖 ICEarth Owners' Manual", badge: 'Docs', color: 'amber' },
                     { id: 'proofs', icon: TrendingUp, label: '🧠 Lead-Crime Hypotheses Proofs', badge: 'Core', color: 'red' },
                     { id: 'terrorism_proofs', icon: ShieldAlert, label: '🔥 Lead-Terrorism Proof', badge: 'Threat', color: 'rose' },
+                    { id: 'artisanal_mining', icon: Pickaxe, label: '⛏️ Artisanal Mining & Terrorism', badge: 'Mining', color: 'amber' },
                     { id: 'genocost', icon: ShieldAlert, label: '🇨🇩 DRC Genocost & Lead Genocide', badge: 'Genocost', color: 'amber' },
                     { id: 'litigation', icon: Scale, label: '⚖️ Environmental Litigation Profiler', badge: 'Active', color: 'purple' },
                     { id: 'reports', icon: Newspaper, label: '📰 News and Reports Hub', badge: 'Social', color: 'cyan' },
@@ -1852,6 +1880,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'manuscript' && "📖 ICEarth Owners' Manual"}
               {activeTab === 'proofs' && '🧠 Lead-Crime Proofs'}
               {activeTab === 'terrorism_proofs' && '🔥 Lead-Terrorism Proof'}
+              {activeTab === 'artisanal_mining' && '⛏️ Artisanal Mining & Terrorism'}
               {activeTab === 'genocost' && '🇨🇩 DRC Genocost'}
               {activeTab === 'litigation' && '⚖️ Environmental Litigation'}
               {activeTab === 'reports' && '📰 News and Reports'}
@@ -3301,6 +3330,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'wildfire_pyro' || (activeTab as string) === 'wildfire' || (activeTab as string) === 'pyro' || (activeTab as string) === 'spokane' || (activeTab as string) === 'plume' || (activeTab as string) === 'ash') && (
             <div className="flex-1 overflow-y-auto">
               <WildfirePyroExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.00495: ARTISANAL MINING, ANTHROPOGENIC WAR ORIGINS & EXPOSENOMICS OF TERRORISM */}
+          {(activeTab === 'artisanal_mining' || (activeTab as string) === 'artisanal' || (activeTab as string) === 'mining' || (activeTab as string) === 'nigeria_mining') && (
+            <div className="flex-1 overflow-y-auto">
+              <ArtisanalMiningExposenomics 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

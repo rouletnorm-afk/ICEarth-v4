@@ -20,6 +20,7 @@ import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_178
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
+import artisanalMiningImg from '../assets/images/artisanal_mining_terrorism_nigeria_1786937796982.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -105,6 +106,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('artisanal_mining') ||
+    u.includes('artisanal') ||
+    u.includes('terrorism_nigeria') ||
+    u.includes('1786937796982') ||
+    u.includes('barkin_ladi') ||
+    u.includes('dele_alake') ||
+    u.includes('zamfara') ||
+    u.includes('abandoned_pits')
+  ) {
+    return artisanalMiningImg;
+  }
   if (
     u.includes('google_pha') ||
     u.includes('personal_health_agent') ||
@@ -303,6 +316,52 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NIGERIA-ARTISANAL-MINING-TERRORISM-2026',
+    contentType: 'Article',
+    title: 'FG Warns Illegal Miners, Seeks Investors for 4,000+ Abandoned Pits: Artisanal Extraction, Boko Haram Terrorist Financing & The Exposenomics of Deep-Time Savagery',
+    subtitle: 'Radio Nigeria Dispatch (August 16, 2026) • Minister Dele Alake Address Following Plateau (Barkin Ladi / Kassa) Mine Collapse Disaster • 4,000+ Unregulated Hazardous Pits • The Exposenomics of Terrorism & Roulet\'s Law: How Illegal Gold & Tin Mining Sustains Lowest-Subsistence Labor While Laundering Billions for Extremist Syndicates',
+    sourceUrl: 'https://radionigeria.gov.ng/2026/08/16/fg-warns-illegal-miners-seeks-investors-for-abandoned-pits/',
+    sourceName: 'Radio Nigeria & Federal Ministry of Solid Minerals Development',
+    publishDate: '2026-08-16',
+    author: 'Lara Owoeye-Wise & Minister Dele Alake • Exposenomics Synthesis by Norm Roulet',
+    authorName: 'Radio Nigeria / Federal Ministry of Solid Minerals & ICEarth Sovereign Lab',
+    abstract: 'Following the tragic collapse of an abandoned tin mine pit in Kassa, Barkin Ladi Local Government Area of Plateau State which claimed the lives of seven artisanal miners, the Minister of Solid Minerals Development, Dele Alake, has issued a stern warning against illegal mining while calling for urgent public-private investment to rehabilitate over 4,000 hazardous abandoned mine pits spread across Nigeria. The Minister emphasized that this loss was preventable had the miners formed cooperatives and obtained formal permits. Under the ICEarth exposenomics framework, artisanal mining is identified as the oldest human industry after fire, marking the primordial origins of tool-making, stone weaponry, and anthropogenic savagery. In modern West and Central Africa, unregulated artisanal gold and tin mining represents the worst economics in human history: millions of subsistence miners scavenge toxic tailings and pulverize lead- and arsenic-rich ores within family compounds, destroying clean water aquifers and inducing acute pediatric lead encephalopathy (as demonstrated by the 400+ child deaths in Zamfara), while generating billions in illicit shadow cash flows directly hijacked by Boko Haram, ISWAP, and armed bandit syndicates. The Federal Government\'s 2026 strategy enforces cooperative formation, satellite GIS tracking, and economic conversion into green energy, tourism, and aquaculture.',
+    editorCommentary: 'This Radio Nigeria report and Federal Ministry declaration expose the profound intersection between deep-time geological exploitation, anthropogenic toxicant exposure, and modern asymmetric warfare. Artisanal mining began with primates knapping flint for fire and defense, evolving into fortified mineral monopolies that institutionalized violence. In Nigeria today, unregulated tailings scavenging around abandoned colonial and commercial pits funds armed kidnapping and terrorism while poisoning future generations with astronomical blood lead levels (Roulet\'s Law). The Federal Government\'s initiative to organize miners into licensed cooperatives, deploy AI and satellite surveillance, and convert toxic death pits into sustainable community infrastructure is a crucial exposenomics breakthrough.',
+    fullExcerpt: `FG WARNS ILLEGAL MINERS, SEEKS INVESTORS FOR 4,000+ ABANDONED PITS
+RADIO NIGERIA OFFICIAL DISPATCH & EXPOSENOMICS ANALYSIS
+
+Date: August 16, 2026
+Source: Radio Nigeria (https://radionigeria.gov.ng/2026/08/16/fg-warns-illegal-miners-seeks-investors-for-abandoned-pits/)
+Attribution: Minister of Solid Minerals Development, Dele Alake (via Lara Owoeye-Wise, Special Assistant on Media)
+Exposenomics Synthesis: Norman Roulet (ICEarth Founder & GCLAC Co-Chair)
+Cryptographic Provenance Hash: 0xICEARTH_ARTISANAL_MINING_TERRORISM_NIGERIA_2026
+
+1. THE PLATEAU DISASTER & THE 4,000 PIT THREAT:
+The Minister of Solid Minerals Development, Dele Alake, expressed deep sorrow over the tragic death of seven artisanal miners at an abandoned mining pit in Kassa, Barkin Ladi Local Government Area of Plateau State. Emphasizing that the tragedy was completely avoidable, the Minister reiterated that over 4,000 abandoned mine pits across the federation constitute active environmental, toxicological, and physical hazards.
+
+2. THE EXPOSENOMICS OF TERRORISM (ROULET\'S LAW):
+Artisanal mining is the oldest industry in hominid history after fire. When early primates sought flint, obsidian, and mineral ores for sparking flame and fashioning spears, they exposed themselves to toxic geology and initiated the arms race of territorial warfare. 
+
+In modern Nigeria (spanning Plateau, Zamfara, Niger, Kaduna, and Kogi states), artisanal gold and tin extraction operates in the shadows of abandoned commercial concessions. This represents the worst economics in human history:
+• Lowest-Subsistence Labor: Impoverished families work hazardous pits without shoring, ventilation, or personal protective equipment for fractions of market mineral prices.
+• Extreme Pediatric Toxicity: In Zamfara (2010–present), crushing lead-rich gold ore (galena) inside domestic compounds poisoned thousands and killed over 400 children with blood lead levels exceeding 100 µg/dL.
+• Terrorist & Bandit Financing: The billions generated in unregulated gold and tin flows provide direct liquidity to Boko Haram, ISWAP, and regional kidnapping cartels, who exchange illegal minerals for military-grade weapons and ammunition.
+
+3. THE 2026 FEDERAL REMEDIATION & CO-OP BLUEPRINT:
+The Federal Government is implementing a transformative remediation framework:
+• Mandatory Cooperative Organization: Miners are required to form registered cooperatives, enabling formal licensing, technical safety training, and fair pricing through the Ministry\'s Artisanal Mining Department.
+• Satellite GIS & AI Cataloging: Deploying high-resolution Earth observation and AI models to detect illicit mining clusters and catalog all 4,000+ hazardous pits.
+• Green Reclamation & National Pit Fund: Reclaiming 59 initial legacy sites and converting abandoned excavations into solar/hydro energy facilities, aquaculture fish farming reservoirs, and ecotourism parks—transforming "potential pits of death into centres of joyful prosperity."`,
+    tags: ['ArtisanalMining', 'TerrorismExposenomics', 'NigeriaMining', 'BokoHaram', 'PlateauState', 'ZamfaraLeadCrisis', 'AbandonedPits', 'DeleAlake', 'RouletsLaw', 'RadioNigeria'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'ICETaos'],
+    vaultHash: '0xICEARTH_ARTISANAL_MINING_TERRORISM_NIGERIA_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'artisanal_mining_terrorism_nigeria_1786937796982.jpg'
+  },
   {
     id: 'GOOGLE-PHA-ICEARTH-EXPOSOMICS-ABM-2026',
     contentType: 'Article',
@@ -2054,7 +2113,9 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                 {article.imageUrl && (
                   <div 
                     onClick={() => {
-                      if (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) {
+                      if (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) {
+                        if (onNavigateTab) onNavigateTab('artisanal_mining');
+                      } else if (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) {
                         if (onNavigateTab) onNavigateTab('suriname_isotope');
                       } else if (article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) {
                         if (onNavigateTab) onNavigateTab('abm_simulator');
@@ -2069,7 +2130,7 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                       }
                     }}
                     className={`rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 max-h-96 bg-stone-900 flex items-center justify-center relative group ${
-                      article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
+                      article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING') || article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
                     }`}
                   >
                     <img
@@ -2084,6 +2145,12 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                         }
                       }}
                     />
+                    {(article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) && (
+                      <div className="absolute bottom-3 right-3 bg-amber-950/90 text-amber-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-amber-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
+                        <Flame size={14} className="text-amber-400" />
+                        <span>Click Graphic to Open Artisanal Mining & Exposenomics of Terrorism Engine</span>
+                      </div>
+                    )}
                     {(article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) && (
                       <div className="absolute bottom-3 right-3 bg-blue-950/90 text-blue-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-blue-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
                         <Cpu size={14} className="text-blue-300" />
@@ -2205,6 +2272,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) && (
+                      <button
+                        onClick={() => onNavigateTab('artisanal_mining')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-700 via-red-700 to-amber-600 hover:from-amber-600 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Flame size={14} className="text-amber-200" />
+                        <span>⛏️ Launch Artisanal Mining & Exposenomics of Terrorism Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('NebraskaDHHS') || article.tags?.includes('PredictiveAnalytics') || article.id.includes('NEBRASKA')) && (
                       <button
                         onClick={() => onNavigateTab('abm_simulator')}
