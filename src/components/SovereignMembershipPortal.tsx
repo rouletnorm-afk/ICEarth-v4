@@ -24,6 +24,9 @@ import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_17868628831
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
 import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
+import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
+import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
+import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 import {
   Shield,
   UserCheck,
@@ -155,6 +158,33 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AA',
+      title: 'Mark LeClair Academia Research Paper: Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Water Crystals (Plate #20)',
+      type: 'Solid-State Condensed Matter Water Crystal Physics Sovereign IP Asset',
+      imageSrc: leclairPaperImg,
+      link: 'nanospire_nanocanx',
+      description: 'Origins: Landmark physics research plate illustrating Mark L. LeClair’s seminal research paper published on Academia.edu ("Macrocationic, crystallized cavitation reentrant jets"). Documents the formation of SP3 hybridized water crystal lattices formed under 100,000 atmospheres of cavitation collapse pressure. Details 7 key physical pillars: equilateral triangle crystal subunits, instant pH=0 litmus colorimetric verification, Euler sinusoidal buckling patterns revealing mechanical stiffness 10x greater than tungsten, continuous micro-machining trenches on target substrates, and structural geometry analogous to prebiotic DNA supercoiling.',
+      sovereignHash: '0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_IP_2026'
+    },
+    {
+      id: 'IP-000Y',
+      title: 'NanoSpire Patented Cavitation Physics & Supersonic Reentrant Micro-Jet Machine Tools (Plate #18)',
+      type: 'Cavitation Nanotechnology & Fluid Dynamics Sovereign IP Asset',
+      imageSrc: nanospireCavitationImg,
+      link: 'nanospire_nanocanx',
+      description: 'Origins: Landmark physics and fluid dynamics infographic illustrating Rayleigh-Plesset asymmetrical bubble collapse generating supersonic liquid reentrant micro-jets at 1,000–2,000 m/s with 100,000 atmospheres (10 GPa) of stagnation pressure and localized plasma temperatures (5,000 K–20,000 K). Compares 5 industrial cavitation methods (Ultrasonic, Orifice/Venturi, Rotor-Stator, Laser, and NanoSpire Patented Reentrant Tools under US Patents 7,517,430 and 7,297,288). Documents sub-50nm botanical oil nano-emulsification, nanocellulose shearing, and zero-chemical PFAS destruction.',
+      sovereignHash: '0xNANOSPIRE_PATENTED_CAVITATION_PHYSICS_100K_ATM_IP_2026'
+    },
+    {
+      id: 'IP-000Z',
+      title: 'The LeClair Effect, Zero-Point Energy & Cavitation LENR Transmutation Proof Plate (Plate #19)',
+      type: 'Quantum Zero-Point Energy & Cavitation Nuclear Reactions Sovereign IP Asset',
+      imageSrc: leclairEffectLenrImg,
+      link: 'nanospire_nanocanx',
+      description: 'Origins: High-resolution scientific proof plate and forensic dossier illustrating the LeClair Effect (Mark LeClair & Serge Lebid / NanoSpire) and Cavitation Zero-Point Energy Low Energy Nuclear Reactions (LENR). Details the formation of coherent high-density water crystal bow shocks at 100,000 atmospheres, quantum vacuum zero-point energy reservoir extraction, scanning electron microscopy (SEM) transmutation pit assays (Carbon, Oxygen, Calcium, and Iron emergence in target plates), and the historic Forbes investigation by Mark Gibbs ("The State of the Cold Fusion Market", 2012).',
+      sovereignHash: '0xLECLAIR_EFFECT_LENR_QUANTUM_ZPE_FUSION_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000X',
       title: "Roulet's Law: Dynastic State Capture, Private Equity Conglomerates & The Extreme Relativity of African Gold Wealth (Plate #17)",

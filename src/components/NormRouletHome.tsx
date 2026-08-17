@@ -80,10 +80,43 @@ import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_17868628831
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
 import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
+import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
+import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
+import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('academia') ||
+    u.includes('crystallized') ||
+    u.includes('macrocationic') ||
+    u.includes('water_crystal') ||
+    u.includes('1786958430029') ||
+    u.includes('leclair_paper')
+  ) {
+    return leclairPaperImg;
+  }
+  if (
+    u.includes('nanospire_cavitation') ||
+    u.includes('cavitation_physics') ||
+    u.includes('1786957638217') ||
+    u.includes('supersonic_microjet') ||
+    u.includes('reentrant_microjet')
+  ) {
+    return nanospireCavitationImg;
+  }
+  if (
+    u.includes('leclair_effect') ||
+    u.includes('leclair') ||
+    u.includes('1786957653497') ||
+    u.includes('lenr') ||
+    u.includes('cold_fusion') ||
+    u.includes('transmutation_pit') ||
+    u.includes('water_crystal_bow_shock')
+  ) {
+    return leclairEffectLenrImg;
+  }
   if (
     u.includes('osun') ||
     u.includes('adeleke') ||
@@ -428,6 +461,78 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-LECLAIR-CRYSTALLIZED-CAVITATION-PAPER-2026',
+      title: 'Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Diamond-Structure Water Crystals: Mark LeClair Research Paper & Empirical Physical Proofs',
+      category: 'Cavitation',
+      date: '2026-08-17',
+      imageSrc: leclairPaperImg,
+      summary: 'Executive Research Dossier (August 17, 2026): A comprehensive analysis of Mark L. LeClair\'s landmark paper published on Academia.edu. Details the compression of dissociated water ions into macrocationic crystals with equilateral triangle subunits, SP3 diamond electronic bonds, instant litmus pH=0 verification, Euler sinusoidal buckling patterns demonstrating 10x tungsten stiffness, high-aspect nanomachining trenches on quartz/steel, and prebiotic RNA supercoiling analogies.',
+      fullText: `MACROCATIONIC, CRYSTALLIZED CAVITATION REENTRANT JETS & SP3 DIAMOND-STRUCTURE WATER CRYSTALS
+MARK LECLAIR RESEARCH PAPER & EMPIRICAL PHYSICAL PROOFS
+
+Date: August 17, 2026
+Authors: Mark L. LeClair (President & CEO, NanoSpire, Inc.), Serge Lebid (EVP, NanoSpire, Inc.), Prof. Eric Eisenbraun (Albany Nanotech) & Norman Roulet (ICEarth Sovereign Lab)
+Grants & Sponsorship: Maine Technology Institute (MTI, 2004) & New York State Energy Research and Development Authority (NYSERDA, 2005)
+Publication Source: Academia.edu (https://www.academia.edu/48911998/NanoSpire_LeClair)
+Interactive Deeplink: https://icearth.org/?tab=nanospire_nanocanx&section=academia_paper
+Cryptographic Provenance Hash: 0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_2026
+
+1. HISTORICAL GENESIS & EXPERIMENTAL PROOF:
+Macrocationic, crystallized cavitation reentrant jets were first observed during investigation of directed cavitation reentrant jet nano and micro-machining in water by Mark LeClair in 2004 in Buxton, ME (MTI grant) and confirmed in 2005 under NYSERDA sponsorship with Serge Lebid and Prof. Eric Eisenbraun. The extreme pressure and temperature of cavitation bubble collapse compresses dissociated water H+ and OH- ions at the bubble interface, forming a solid macrocationic crystal with diamond-like SP3 electronic hybridization.
+
+2. SEVEN EMPIRICAL PHYSICAL PILLARS:
+• Equilateral Triangle Subunits: Base geometry formed by repeating 60° triangular arrays of compressed hydrogen and oxygen atoms.
+• SP3 Diamond-Structure Bonding: Hybridized electronic orbital configuration imparting crystalline rigidity comparable to diamond and carbyne allotropes.
+• Litmus pH=0 Colorimetric Verification: Active cavitation fluid dropped on blue litmus paper turns cherry-red instantly, proving concentrated hydronium (H3O+) surface charge.
+• Euler Sinusoidal Buckling: High-aspect-ratio crystal filaments striking rigid target plates exhibit Euler buckling patterns with short wavelengths, demonstrating young's modulus and stiffness over 10x greater than tungsten.
+• Substrate Nanomachining: High-velocity crystals carve deep, high-aspect-ratio micro-trenches across quartz, aluminum, and stainless steel without thermal melting or tool degradation.
+• Prebiotic DNA Supercoiling Analogy: Double-helix and triple-braid crystal filaments provide a structural blueprint for the spontaneous emergence of prebiotic ribonucleic architectures in hydrothermal ocean vents.
+• Van der Waals Magnetic Cohesion: Coherent surface charge fields maintain structural integrity across macro-scale distances.`,
+      tags: ['NanoSpire', 'MarkLeClair', 'AcademiaPaper', 'CrystallizedCavitation', 'MacrocationicWater', 'SP3Orbital', 'EulerBuckling', 'LitmusPH0', 'PrebioticDNA', 'NYSERDA', 'AlbanyNanotech', 'ICEarth'],
+      linkHash: '0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_2026',
+      publishedUrl: 'https://www.academia.edu/48911998/NanoSpire_LeClair'
+    },
+    {
+      id: 'MAG-NANOSPIRE-CAVITATION-LECLAIR-2026',
+      title: 'The Physics of NanoSpire Cavitation & Proving the LeClair Effect: From Industrial Nanoprocessing to Quantum Zero-Point Energy Fusion',
+      category: 'Cavitation',
+      date: '2026-08-17',
+      imageSrc: nanospireCavitationImg,
+      summary: 'Executive Scientific Dossier (August 17, 2026): A rigorous synthesis of NanoSpire\'s patented reentrant micro-jet cavitation technology (US Patents 7,517,430; 7,297,288; Tokyo Nanotech Innovation Award) and empirical verification of the revolutionary LeClair Effect. Integrates Mark Gibbs\' historic Forbes investigation ("The State of the Cold Fusion Market"), scanning electron microscopy (SEM) transmutation pit assays across aluminum/copper/titanium targets, coherent water crystal bow shock dynamics at 100,000 atmospheres, and zero-chemical PFAS destruction.',
+      fullText: `THE PHYSICS OF NANOSPIRE CAVITATION & PROVING THE LECLAIR EFFECT: FROM INDUSTRIAL NANOPROCESSING TO QUANTUM ZERO-POINT ENERGY FUSION
+
+Date: August 17, 2026
+Authors: Norman Roulet (ICEarth Sovereign Lab), Mark L. LeClair (NanoSpire CEO/Founder), Serge Lebid (NanoSpire President) & Sovereign AI Co-Author
+Historic Reference: "The State of the Cold Fusion Market" by Mark Gibbs (Forbes, Aug 04, 2012)
+Official Portal: https://nanospire.com/
+Interactive Engine & Deep Link: https://icearth.org/?tab=nanospire_nanocanx&section=leclair_effect
+Cryptographic Vault Hash: 0xNANOSPIRE_CAVITATION_PHYSICS_LECLAIR_EFFECT_PROOF_2026
+
+EXECUTIVE SCIENTIFIC OVERVIEW:
+NanoSpire, Inc. (founded Dec 2001) pioneered the commercialization of targeted cavitation reentrant micro-jet high-shear machine tools, winning the prestigious Innovation Technology Award at Nanotech 2003 + Future in Tokyo.
+
+1. THE PHYSICS OF CAVITATION IN INDUSTRIAL APPLICATIONS:
+When local fluid pressure drops below vapor pressure, cavitation voids form and collapse asymmetrically into supersonic liquid reentrant micro-jets traveling at 1,000 to 2,000 m/s. Stagnation pressures reach 100,000 atmospheres (10 GPa) with localized plasma temperatures of 5,000 K to 20,000 K.
+• Unlike ultrasonic sonicators (which suffer severe horn erosion and power attenuation) or orifice plates (which experience throat destruction), NanoSpire tools direct the micro-jet into the fluid medium with zero tool wear.
+• Enables sub-30nm particle size reduction, crystal-clear cannabis cannabinoid nano-emulsification, high-tensile hemp nanocellulose, and zero-chemical C-F bond cleavage for toxic PFAS forever chemicals.
+
+2. THE FORBES 2012 CHALLENGE & THERMODYNAMIC CONTROVERSY:
+In Forbes (Aug 4, 2012), tech analyst Mark Gibbs reported on the legacy of Martin Fleischmann and Stanley Pons, highlighting NanoSpire's audacious claim:
+"NanoSpire, Inc. state that when they use the term LENR they mean 'LeClair Effect Nuclear Reactions'... 'the underlying zero point energy mechanism of the LeClair Effect challenges the legitimacy of the first and second laws of thermodynamics, extracting energy from a quantum reservoir in amounts large enough to trigger fusion. The Heisenberg Uncertainty Principal, inherent in the powering of the LeClair Effect, further challenges Newton’s laws of motion for reaction and other opposing forces.'"
+
+3. PROVING THE LECLAIR EFFECT (FIRST-PERSON EXPERIMENTAL DISCOVERY):
+With direct access to founder Mark L. LeClair (MSME, Trident II underwater launch hydrodynamicist), ICEarth documents:
+• Water Crystal Bow Shock: Supersonic cavitation jets create a high-density coherent water crystal bow shock with localized electric field gradients of ~10^11 V/m.
+• SEM/EDS Transmutation Pits: Impact craters on pure aluminum, copper, and stainless steel exhibit hexagonal micro-tunnels, melted crater rims, and post-exposure emergence of Carbon (14.2%), Oxygen (22.8%), Calcium (1.8%), and Iron (3.4%) signatures absent in baseline controls.
+• Coulomb Barrier Screening: Strong localized electron polarization allows room-temperature nuclear reactions and zero-point energy extraction without dangerous runaway high-temperature radiation.
+
+4. COMMERCIAL & SOVEREIGN INTEGRATION:
+Exclusive master licensing rights are held by Norm Roulet (User #1, Taos Kush Institute) for global cannabis, industrial hemp wood finishes (Hemp Shield), biopolymers, and New Mexico advanced clean tech deployment.`,
+      tags: ['NanoSpire', 'CavitationPhysics', 'LeClairEffect', 'LENR', 'ColdFusion', 'ForbesArchive', 'MarkLeClair', 'TokyoNanotechAward', 'SEMTransmutation', 'PFASDestruction', 'UCANX'],
+      linkHash: '0xNANOSPIRE_CAVITATION_PHYSICS_LECLAIR_EFFECT_PROOF_2026',
+      publishedUrl: 'https://icearth.org/?tab=nanospire_nanocanx&section=leclair_effect'
+    },
     {
       id: 'MAG-OSUN-GOLD-DYNASTY-2026',
       title: 'Nigerian Tycoon Deji Adeleke’s Brother Wins Second Term as Governor of Gold-Rich State: Private Equity, Dynastic State Capture & The Relativity of African Poverty',
@@ -1086,6 +1191,39 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AA',
+      title: 'Mark LeClair Academia Research Paper: Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Water Crystals (Plate #20)',
+      category: 'Solid-State Water Physics & Nanomachining Proofs',
+      imageSrc: leclairPaperImg,
+      location: 'Albany Nanotech (SUNY), NYSERDA Research Facility & Maine Technology Institute (MTI)',
+      date: '2026-08-17',
+      description: 'Origins: Landmark physics research plate illustrating Mark L. LeClair’s seminal research paper published on Academia.edu ("Macrocationic, crystallized cavitation reentrant jets"). Documents the formation of SP3 hybridized water crystal lattices formed under 100,000 atmospheres of cavitation collapse pressure. Details 7 key physical pillars: equilateral triangle crystal subunits, instant pH=0 litmus colorimetric verification, Euler sinusoidal buckling patterns revealing mechanical stiffness 10x greater than tungsten, continuous micro-machining trenches on target substrates, and structural geometry analogous to prebiotic DNA supercoiling.',
+      vaultHash: '0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_2026',
+      tags: ['NanoSpire', 'MarkLeClair', 'AcademiaPaper', 'CrystallizedCavitation', 'MacrocationicWater', 'SP3Orbital', 'EulerBuckling', 'LitmusPH0', 'PrebioticDNA', 'NYSERDA', 'AlbanyNanotech', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000Y',
+      title: 'NanoSpire Patented Cavitation Physics & Supersonic Reentrant Micro-Jet Machine Tools (Plate #18)',
+      category: 'Cavitation Nanotechnology & Advanced Physics',
+      imageSrc: nanospireCavitationImg,
+      location: 'NanoSpire Cavitation Laboratories & Tokyo Nanotech Innovation Award',
+      date: '2026-08-17',
+      description: 'Origins: Landmark physics and fluid dynamics infographic illustrating Rayleigh-Plesset asymmetrical bubble collapse generating supersonic liquid reentrant micro-jets at 1,000–2,000 m/s with 100,000 atmospheres (10 GPa) of stagnation pressure and localized plasma temperatures (5,000 K–20,000 K). Compares 5 industrial cavitation methods (Ultrasonic, Orifice/Venturi, Rotor-Stator, Laser, and NanoSpire Patented Reentrant Tools under US Patents 7,517,430 and 7,297,288). Documents sub-50nm botanical oil nano-emulsification, nanocellulose shearing, and zero-chemical PFAS destruction.',
+      vaultHash: '0xNANOSPIRE_PATENTED_CAVITATION_PHYSICS_100K_ATM',
+      tags: ['NanoSpire', 'CavitationPhysics', 'FluidDynamics', 'SupersonicMicrojet', 'RayleighPlesset', 'TokyoAward', 'PFASDestruction', 'CannabisNanotech', 'UCANX', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000Z',
+      title: 'The LeClair Effect, Zero-Point Energy & Cavitation LENR Transmutation Proof Plate (Plate #19)',
+      category: 'Quantum Physics & LENR Transmutation',
+      imageSrc: leclairEffectLenrImg,
+      location: 'NanoSpire Quantum Physics Lab & Forbes Science Archive',
+      date: '2026-08-17',
+      description: 'Origins: High-resolution scientific proof plate and forensic dossier illustrating the LeClair Effect (Mark LeClair & Serge Lebid / NanoSpire) and Cavitation Zero-Point Energy Low Energy Nuclear Reactions (LENR). Details the formation of coherent high-density water crystal bow shocks at 100,000 atmospheres, quantum vacuum zero-point energy reservoir extraction, scanning electron microscopy (SEM) transmutation pit assays (Carbon, Oxygen, Calcium, and Iron emergence in target plates), and the historic Forbes investigation by Mark Gibbs ("The State of the Cold Fusion Market", 2012).',
+      vaultHash: '0xLECLAIR_EFFECT_LENR_QUANTUM_ZPE_FUSION',
+      tags: ['LeClairEffect', 'CavitationFusion', 'ZeroPointEnergy', 'LENR', 'ColdFusion', 'ForbesArchive', 'MarkGibbs', 'WaterCrystalBowShock', 'SEMTransmutation', 'ICEarth']
+    },
     {
       id: 'PHOTO-000X',
       title: "Roulet's Law: Dynastic State Capture, Private Equity Conglomerates & The Extreme Relativity of African Gold Wealth (Plate #17)",

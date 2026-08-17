@@ -281,7 +281,25 @@ export default function App() {
         setActiveTab('member_matrix');
       } else if (lower === 'icetaos' || lower === 'taos' || lower === 'icetaos_hub') {
         setActiveTab('icetaos');
-      } else if (lower === 'nanospire_nanocanx' || lower === 'nanocanx' || lower === 'nanospire_nanocannx' || lower === 'nanospire') {
+      } else if (
+        lower === 'nanospire_nanocanx' || 
+        lower === 'nanocanx' || 
+        lower === 'nanospire_nanocannx' || 
+        lower === 'nanospire' ||
+        lower === 'leclair_effect' ||
+        lower === 'leclair' ||
+        lower === 'leclaireffect' ||
+        lower === 'leclair_paper' ||
+        lower === 'academia_paper' ||
+        lower === 'crystallized_cavitation' ||
+        lower === 'macrocationic' ||
+        lower === 'water_crystal' ||
+        lower === 'cavitation' ||
+        lower === 'nanospire_cavitation' ||
+        lower === 'cavitation_physics' ||
+        lower === 'forbes_challenge' ||
+        lower === 'cold_fusion'
+      ) {
         setActiveTab('nanospire_nanocanx');
       } else if (lower === 'ai_testimonial' || lower === 'ai_cognition' || lower === 'ai_lead' || lower === 'ai_truth') {
         setActiveTab('ai_testimonial');
@@ -3416,12 +3434,13 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             </div>
           )}
 
-          {/* TAB 0.2: NANOSPIRE NANOCANX PROCESSING TECHNOLOGY COMPANY */}
-          {(activeTab === 'nanospire_nanocanx' || (activeTab as string) === 'nanocanx' || activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire') && (
+          {/* TAB 0.2: NANOSPIRE NANOCANX PROCESSING TECHNOLOGY COMPANY & LECLAIR EFFECT */}
+          {(activeTab === 'nanospire_nanocanx' || (activeTab as string) === 'nanocanx' || activeTab === 'nanospire_nanocannx' || (activeTab as string) === 'nanospire' || (activeTab as string) === 'leclair_effect' || (activeTab as string) === 'cavitation' || (activeTab as string) === 'nanospire_cavitation' || (activeTab as string) === 'leclair_paper' || (activeTab as string) === 'academia_paper' || (activeTab as string) === 'crystallized_cavitation') && (
             <div className="flex-1 overflow-y-auto">
               <NanoSpireNanoCanX 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
+                initialSubSection={new URLSearchParams(window.location.search).get('section') || ((activeTab as string) === 'leclair_paper' || (activeTab as string) === 'academia_paper' || (activeTab as string) === 'crystallized_cavitation' ? 'academia_paper' : activeTab === 'leclair_effect' ? 'leclair_effect' : activeTab === 'cavitation' || activeTab === 'nanospire_cavitation' ? 'cavitation_physics' : undefined)}
               />
             </div>
           )}

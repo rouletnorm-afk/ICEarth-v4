@@ -23,6 +23,9 @@ import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_17868628831
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
 import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
+import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physics_1786957638217.jpg';
+import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
+import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -108,6 +111,33 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('academia') ||
+    u.includes('crystallized') ||
+    u.includes('macrocationic') ||
+    u.includes('water_crystal') ||
+    u.includes('1786958430029') ||
+    u.includes('leclair_paper')
+  ) {
+    return leclairPaperImg;
+  }
+  if (
+    u.includes('lenr') ||
+    u.includes('cold_fusion') ||
+    u.includes('forbes') ||
+    u.includes('1786957653497') ||
+    u.includes('leclair_effect')
+  ) {
+    return leclairEffectLenrImg;
+  }
+  if (
+    u.includes('cavitation_physics') ||
+    u.includes('1786957638217') ||
+    u.includes('nanospire_cavitation') ||
+    u.includes('reentrant_microjet')
+  ) {
+    return nanospireCavitationImg;
+  }
   if (
     u.includes('osun') ||
     u.includes('adeleke') ||
@@ -342,6 +372,65 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'NANOSPIRE-LECLAIR-CRYSTALLIZED-CAVITATION-PAPER-2026',
+    contentType: 'Article',
+    title: 'Macrocationic, Crystallized Cavitation Reentrant Jets & SP3 Diamond-Structure Water Crystals: Mark LeClair Research Paper & Empirical Physical Proofs',
+    subtitle: 'Academia.edu Research Dossier & NanoSpire Archive • Mark L. LeClair, Serge Lebid & Prof. Eric Eisenbraun (Albany Nanotech / NYSERDA / MTI): 100,000 Atmospheres Compression, pH=0 Litmus Colorimetric Verification, Euler Buckling & Room-Temperature Superconductivity Precursors',
+    sourceUrl: 'https://www.academia.edu/48911998/NanoSpire_LeClair',
+    sourceName: 'Academia.edu / NanoSpire Scientific Research Archive',
+    publishDate: '2026-08-17',
+    author: 'Mark L. LeClair (Founder & CEO, NanoSpire, Inc.) • Foreword by Serge Lebid & Prof. Eric Eisenbraun',
+    authorName: 'Mark L. LeClair & ICEarth Sovereign Physics Lab',
+    abstract: 'Macrocationic, crystallized cavitation reentrant jets were first observed during investigation of directed cavitation reentrant jet nano and micro-machining in water by Mark LeClair in 2004 in Buxton, ME, under Maine Technology Institute (MTI) grants, and replicated in 2005 under New York State Energy Research and Development Authority (NYSERDA) funding with Serge Lebid (EVP NanoSpire) and Prof. Eric Eisenbraun (Albany Nanotech). The extreme pressure and temperature of cavitation bubble collapse compresses dissociated water H+ and OH- ions at the bubble interface into an ordered, macrocationic crystal with equilateral triangle subunits and SP3 diamond-structure valence bonds. These macroscopic water crystals exhibit extraordinary physical properties: extreme mechanical stiffness exceeding tungsten by 10x (Euler sinusoidal buckling wavelengths), net positive surface charge confirmed by instant litmus turning cherry-red (pH=0), high electrical conductivity, van der Waals magnetic attraction carving continuous helical trenches on target substrates, and structural geometry analogous to prebiotic DNA supercoiling. This landmark paper synthesizes 20+ years of empirical cavitation physics and solid-state water dynamics.',
+    editorCommentary: 'Mark LeClair’s seminal presentation and research paper, published on Academia.edu, represents one of the most remarkable empirical breakthroughs in modern fluid dynamics and solid-state condensed matter physics. By compressing dissociated water ions under extreme cavitation collapse pressures into an ordered SP3 diamond lattice, the LeClair crystal provides an unassailable physical foundation for zero-chemical nanomachining, botanical homogenization, and clean energy transmutation.',
+    fullExcerpt: `MACROCATIONIC, CRYSTALLIZED CAVITATION REENTRANT JETS
+RESEARCH DOSSIER & EXPERIMENTAL SUMMARY
+
+Author: Mark L. LeClair (President & CEO, NanoSpire, Inc.)
+Co-Investigators: Serge Lebid (EVP, NanoSpire, Inc.), Prof. Eric Eisenbraun (Albany Nanotech, SUNY)
+Funding Grants: Maine Technology Institute (MTI, 2004) & New York State Energy Research and Development Authority (NYSERDA, 2005)
+Publication Source: Academia.edu (https://www.academia.edu/48911998/NanoSpire_LeClair)
+Cryptographic Provenance Hash: 0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_2026
+Interactive Physics Explorer: https://icearth.org/?tab=nanospire_nanocanx&section=academia_paper
+
+1. ABSTRACT & HISTORICAL ORIGINS:
+Macrocationic, crystallized cavitation reentrant jets were first observed during investigation of directed cavitation reentrant jet nano and micro-machining in water by the author in 2004 in Buxton, ME, on grants funded by the Maine Technology Institute. Observed again in 2005 on work funded by the New York State Energy Research and Development Authority as PI, with co-investigators Serge Lebid, EVP NanoSpire, Inc., Prof. Eric Eisenbraun of Albany Nanotech, and others. The extreme pressure and temperature of cavitation bubble collapse compresses dissociated water H+ and OH- ions at the bubble interface, forming a solid, macrocationic crystal that acts as a supersonic cutting tool.
+
+2. CORE PHYSICAL PROPERTIES & EXPERIMENTAL EVIDENCE:
+• Equilateral Triangle Subunits: Base crystal geometry formed by compressed hydrogen and oxygen atoms forming repeating 60° triangular arrays.
+• SP3 Diamond-Structure Bonding: Hybridized electronic orbital configuration imparting crystalline rigidity comparable to diamond and carbyne allotropes.
+• Litmus pH=0 Colorimetric Proof: When water containing active cavitation crystals is dropped onto blue litmus paper, it turns bright cherry-red instantly, verifying concentrated free hydronium (H3O+) lattice surface charge.
+• Euler Sinusoidal Buckling: High-aspect-ratio crystal filaments striking rigid target plates exhibit Euler buckling patterns with short wavelengths, demonstrating young's modulus and stiffness over 10x greater than tungsten.
+• Substrate Nanomachining: High-velocity crystals carve deep, high-aspect-ratio micro-trenches across quartz, aluminum, and stainless steel without thermal melting or tool degradation.
+• Prebiotic DNA Supercoiling Analogy: Double-helix and triple-braid crystal filaments provide a structural blueprint for the spontaneous emergence of prebiotic ribonucleic architectures in hydrothermal ocean vents.
+
+3. INDUSTRIAL & COMMERCIAL IMPLICATIONS:
+• Zero-Chemical Micro-Machining: Surface patterning and nano-polishing at sub-micron tolerances using pure water.
+• UCANX Botanical Homogenization: Instant cell-wall lysis of cannabis, hemp, and medicinal botanicals for 98%+ bioavailability without synthetic solvents.
+• High-Efficiency Clean Energy: Transmutation and excess heat generation pathways under the LeClair Effect for decentralized power grids.`,
+    tags: [
+      'NanoSpire',
+      'Mark LeClair',
+      'Academia Paper',
+      'Crystallized Cavitation',
+      'Macrocationic Water',
+      'SP3 Orbital',
+      'Euler Buckling',
+      'Litmus pH=0',
+      'Prebiotic DNA',
+      'NYSERDA',
+      'Albany Nanotech',
+      'UCANX'
+    ],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'ICETaos', 'Cleveland & Cuyahoga County'],
+    vaultHash: '0xLECLAIR_CRYSTALLIZED_CAVITATION_PAPER_ACADEMIA_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'leclair_crystallized_cavitation_paper_1786958430029.jpg'
+  },
   {
     id: 'OSUN-GOLD-DYNASTY-PRIVATE-EQUITY-2026',
     contentType: 'Article',
