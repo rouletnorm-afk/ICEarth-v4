@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
+import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
 import {
   Pickaxe,
   Flame,
@@ -46,7 +47,12 @@ import {
   BatteryCharging,
   Car,
   HeartCrack,
-  Network
+  Network,
+  Crown,
+  Building2,
+  Briefcase,
+  TrendingUp,
+  Percent
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -77,12 +83,12 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
 }) => {
   const isLight = siteTheme === 'light';
   const [activeSubTab, setActiveSubTab] = useState<
-    'deep_history' | 'sahel_lithium' | 'illicit_flows' | 'toxic_pathways' | 'forensic_audit' | 'regional_gis' | 'coop_transition' | 'simulation'
+    'deep_history' | 'sahel_lithium' | 'dynastic_relativity' | 'illicit_flows' | 'toxic_pathways' | 'forensic_audit' | 'regional_gis' | 'coop_transition' | 'simulation'
   >('deep_history');
   
   const [showArtworkModal, setShowArtworkModal] = useState<boolean>(false);
-  const [modalArtworkView, setModalArtworkView] = useState<'sahel_four_variables' | 'deep_time_plate'>('sahel_four_variables');
-  const [modalTab, setModalTab] = useState<'provenance' | 'history' | 'sahel_lithium' | 'flows' | 'toxicology' | 'forensics'>('provenance');
+  const [modalArtworkView, setModalArtworkView] = useState<'sahel_four_variables' | 'deep_time_plate' | 'osun_dynasty_plate'>('sahel_four_variables');
+  const [modalTab, setModalTab] = useState<'provenance' | 'history' | 'sahel_lithium' | 'dynastic_relativity' | 'flows' | 'toxicology' | 'forensics'>('provenance');
 
   // Simulation Sliders for Tailings / Domestic Ore Processing Exposure
   const [oreGrindingLocation, setOreGrindingLocation] = useState<'domestic_compound' | 'village_perimeter' | 'contained_coop'>('domestic_compound');
@@ -154,6 +160,22 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
     { year: '2026', tonnesMined: 40000, insurgentSkimUsdM: 65 },
     { year: '2028 (Est.)', tonnesMined: 220000, insurgentSkimUsdM: 320 },
     { year: '2030 (Proj.)', tonnesMined: 500000, insurgentSkimUsdM: 750 }
+  ];
+
+  // Osun State Dynastic Private Equity & Gold Relativity (Business Insider Africa August 17, 2026)
+  const osunGoldProductionShare = [
+    { name: 'Osun State (Ilesha Schist Belt)', sharePct: 42.56, keyMine: 'Segilola Gold Mine (91,910 oz/yr)', primaryHolder: 'Private Equity & State Shareholding' },
+    { name: 'Niger State', sharePct: 27.80, keyMine: 'Shiroro & Gurara Gold Pits', primaryHolder: 'Artisanal & Informal Diggers' },
+    { name: 'Kebbi / Zamfara', sharePct: 18.20, keyMine: 'Anka & Maru Gold Fields', primaryHolder: 'High-Lead Galena Domestic Panning' },
+    { name: 'Kaduna / Others', sharePct: 11.44, keyMine: 'Birnin Gwari Gold Belts', primaryHolder: 'Conflict & Bandit Infiltrated Pits' }
+  ];
+
+  const wealthInequityMetrics = [
+    { metric: 'Pacific Energy Infrastructure Portfolio', dynasticValue: '$3.4 Billion ($1.4B Omotosho/Olorunsogo + $2B Ajebamidele)', groundLevelArtisanal: '$0.85 – $2.10 daily subsistence wage per informal miner' },
+    { metric: 'Power Generation Assets Controlled', dynasticValue: '1,920 Megawatts (335MW + 335MW + 1,250MW)', groundLevelArtisanal: '0 MW (Rural mining camps rely on firewood & toxic kerosene smoke)' },
+    { metric: 'Annual Segilola Commercial Gold Yield', dynasticValue: '91,910 Ounces (~$230M USD annual gross output)', groundLevelArtisanal: '<0.05 oz/year retained by artisanal miners after cartel deductions' },
+    { metric: 'Political Executive & Judicial Authority', dynasticValue: 'Direct State Governorship (Osun State Re-Election 50.8% Vote)', groundLevelArtisanal: 'Zero legal representation, criminalized informal status & eviction risk' },
+    { metric: 'Higher Education & Private Assets', dynasticValue: 'Adeleke University & Springtime Development Foundation', groundLevelArtisanal: '74% pediatric school dropout rate in toxic gold panning districts' }
   ];
 
   return (
@@ -261,6 +283,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
             {[
               { id: 'deep_history', label: '🏛️ Deep History & Metallurgy', icon: Pickaxe },
               { id: 'sahel_lithium', label: '⚡ Sahel Lithium & Roulet\'s Law', icon: BatteryCharging },
+              { id: 'dynastic_relativity', label: '👑 Dynastic State Capture & Wealth Relativity', icon: Crown },
               { id: 'illicit_flows', label: '💸 Illicit Financial Flows', icon: DollarSign },
               { id: 'toxic_pathways', label: '☠️ Toxic Exposure Pathways', icon: Skull },
               { id: 'forensic_audit', label: '🔍 Forensic Investigation', icon: Search },
@@ -819,6 +842,311 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                   <div className="text-xs font-mono font-bold text-amber-400">3. Domestic Value-Add Processing</div>
                   <p className="text-xs text-stone-300 leading-relaxed">
                     Mandate domestic refining and battery component manufacturing within origin nations rather than exporting raw rock, retaining wealth and building robust institutional governance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB: DYNASTIC STATE CAPTURE & WEALTH RELATIVITY */}
+        {/* ========================================================================= */}
+        {activeSubTab === 'dynastic_relativity' && (
+          <div className="space-y-8 animate-fade-in">
+
+            {/* Top Study Citation Card */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-stone-950 via-amber-950/80 to-stone-900 border-2 border-amber-500/40 text-stone-100 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-amber-500/30 pb-4">
+                  <div className="flex items-center gap-2">
+                    <Crown size={22} className="text-amber-400 animate-pulse" />
+                    <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+                      Resource & Governance Relativity • Business Insider Africa (August 17, 2026)
+                    </span>
+                  </div>
+                  <a
+                    href="https://africa.businessinsider.com/local/lifestyle/nigerian-tycoon-deji-adelekes-brother-also-davidos-uncle-wins-second-term-as-governor/hgcnf25"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono px-3 py-1 bg-amber-900/40 hover:bg-amber-800/60 border border-amber-500/40 text-amber-200 rounded-full flex items-center gap-1.5 transition-all"
+                  >
+                    <span>Read Investigation on Business Insider Africa</span>
+                    <ExternalLink size={12} />
+                  </a>
+                </div>
+
+                <div className="space-y-3">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-black text-white leading-snug">
+                    Private Equity, Dynastic State Capture & The Extreme Relativity of African Resource Wealth
+                  </h2>
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans max-w-4xl">
+                    In Osun State—home to Nigeria's largest recorded gold production (42.56% of national output) and the multi-million-dollar Segilola commercial gold mine—the victory of incumbent Governor Ademola Adeleke reinforces the Adeleke family's multifaceted empire spanning private equity (Pacific Holdings / Pacific Energy's $3.4B+ power portfolio), higher education (Adeleke University), and global entertainment (Davido). While billionaire family conglomerates control executive government power at the source of mineral concessions, millions of surrounding citizens and subsistence artisanal miners live in extreme multi-dimensional poverty.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Visual Plate Hero: Dynastic State Capture & Extreme Wealth Relativity */}
+            <div className="rounded-2xl overflow-hidden border border-amber-700/30 bg-black shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+              <div 
+                className="lg:col-span-7 relative group cursor-pointer overflow-hidden min-h-[300px] sm:min-h-[400px]"
+                onClick={() => {
+                  setModalArtworkView('osun_dynasty_plate');
+                  setShowArtworkModal(true);
+                }}
+              >
+                <img
+                  src={osunGoldDynastyImg}
+                  alt="Osun Gold Dynasty & Resource Inequity Plate"
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent flex flex-col justify-end p-6">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-widest bg-black/70 px-2 py-0.5 rounded border border-amber-500/30">
+                      ROULET'S LAW • VARIABLE R (RELATIVITY OF RESOURCE CONTROL)
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-white font-serif">
+                      The Asymmetry of Source Extraction: Dynastic Conglomerates vs. Ground-Level Poverty
+                    </h3>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-black/80 text-white p-2 rounded-lg border border-neutral-700 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Maximize2 size={16} />
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 p-6 sm:p-8 bg-stone-950 text-stone-200 flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-stone-800 pb-3">
+                    <span className="text-xs font-mono font-bold text-amber-400 uppercase">Resource Inequity Index</span>
+                    <span className="text-[10px] font-mono text-stone-400">Osun State / Segilola Belt</span>
+                  </div>
+
+                  <p className="text-xs leading-relaxed text-stone-300 font-sans">
+                    <strong>Roulet's Law Relativity Thesis:</strong> The deepest structural trap of exposenomics is not simply chemical toxicity, but the extreme moral and economic relativity of wealth distribution. Private equity conglomerates wield direct political sovereignty and grid-level infrastructure, while the origin extraction workforce is left with environmental degradation, chronic lead exposure, and acute survival poverty.
+                  </p>
+
+                  <div className="p-3.5 rounded-xl bg-stone-900/90 border border-stone-800 space-y-1.5 text-xs">
+                    <div className="font-mono text-amber-400 font-semibold flex items-center gap-1.5">
+                      <Building2 size={14} />
+                      <span>The Tripartite Power Matrix:</span>
+                    </div>
+                    <p className="text-stone-300 text-[11px] leading-relaxed">
+                      <strong>1. Capital:</strong> Billionaire Deji Adeleke's Pacific Holdings & 1,920MW Pacific Energy.<br />
+                      <strong>2. Governance:</strong> Governor Ademola Adeleke's executive control over gold concessions & Segilola shares.<br />
+                      <strong>3. Cultural Influence:</strong> Davido's global celebrity apparatus swaying electoral mobilization.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-stone-800 flex flex-wrap gap-2">
+                  <button
+                    onClick={() => {
+                      setModalArtworkView('osun_dynasty_plate');
+                      setShowArtworkModal(true);
+                    }}
+                    className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs font-bold font-mono transition-all cursor-pointer flex items-center gap-1.5"
+                  >
+                    <span>Inspect Dynasty Relativity Plate</span>
+                    <Eye size={13} />
+                  </button>
+                  <button
+                    onClick={() => setActiveSubTab('sahel_lithium')}
+                    className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-sky-300 rounded-xl text-xs font-bold font-mono transition-all border border-stone-700 cursor-pointer"
+                  >
+                    Sahel Lithium 4 Variables &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Core Inequity Metrics & Structural Disparity Cards */}
+            <div className="space-y-4">
+              <div className="border-b border-stone-300 dark:border-stone-800 pb-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 font-bold block">
+                  RESOURCE ASYMMETRY BREAKDOWN
+                </span>
+                <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-white">
+                  Osun State Gold Belt: Dynastic Private Equity vs. Ground-Level Realities
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                {/* Metric 1: Gold Concentration */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold">
+                    <Coins size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-amber-600 dark:text-amber-400 font-bold">National Gold Epicentre</span>
+                    <h4 className="text-2xl font-serif font-black text-stone-900 dark:text-white">42.56%</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Nigeria's Recorded Gold Yield</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Osun accounts for Nigeria's largest share of recorded gold production, anchored by the Ilesha Schist Belt and the commercial Segilola Mine (91,910 oz in 2025).
+                  </p>
+                </div>
+
+                {/* Metric 2: Private Energy Valuations */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold">
+                    <Zap size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-sky-600 dark:text-sky-400 font-bold">Private Energy Assets</span>
+                    <h4 className="text-2xl font-serif font-black text-stone-900 dark:text-white">$3.4B+</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Pacific Energy Infrastructure</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Omotosho (335MW), Olorunsogo (335MW) valued at $1.4B, plus the $2B 1,250MW Ajebamidele mega-power station in Ondo State.
+                  </p>
+                </div>
+
+                {/* Metric 3: State GDP vs Dynastic Wealth */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold">
+                    <Landmark size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold">State Economy Scale</span>
+                    <h4 className="text-2xl font-serif font-black text-stone-900 dark:text-white">$5.7B</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Osun State GDP (₦2.3T)</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Despite massive mineral reserves, Osun ranks among Nigeria's smaller state economies, with a single private family conglomerate rivaling the entire public budget.
+                  </p>
+                </div>
+
+                {/* Metric 4: Subsistence Miner Share */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold">
+                    <HeartCrack size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-red-600 dark:text-red-400 font-bold">Ground-Level Wage</span>
+                    <h4 className="text-2xl font-serif font-black text-stone-900 dark:text-white">&lt;$2.00</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Daily Artisanal Income</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Subsistence artisanal miners digging without protective gear earn less than $2/day, bearing heavy metal toxicity while wealth is siphoned upwards.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Deep Comparative Matrix: Dynastic Asset Control vs Artisanal Reality */}
+            <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <span className="text-[10px] font-mono text-amber-500 uppercase tracking-widest font-bold block">
+                    THE STRUCTURAL EXPOSENOMICS ASYMMETRY
+                  </span>
+                  <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-white">
+                    Dynastic Conglomerate Control vs. Ground-Level Extraction Realities
+                  </h3>
+                </div>
+                <div className="text-xs font-mono text-stone-500">
+                  Pacific Holdings • Segilola Belt • Osun State Governance
+                </div>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left">
+                  <thead className="bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-mono uppercase text-[10px]">
+                    <tr>
+                      <th className="p-3">Sovereign Domain</th>
+                      <th className="p-3">Dynastic Private Equity Concentration</th>
+                      <th className="p-3">Ground-Level Subsistence Artisanal Reality</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-stone-200 dark:divide-stone-800 text-stone-600 dark:text-stone-300">
+                    {wealthInequityMetrics.map((row, idx) => (
+                      <tr key={idx} className="hover:bg-stone-50 dark:hover:bg-stone-800/50">
+                        <td className="p-3 font-bold font-serif text-stone-900 dark:text-white">
+                          {row.metric}
+                        </td>
+                        <td className="p-3 font-mono text-amber-600 dark:text-amber-400 font-semibold">
+                          {row.dynasticValue}
+                        </td>
+                        <td className="p-3 font-sans text-stone-600 dark:text-stone-300">
+                          {row.groundLevelArtisanal}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Chart: Nigeria Gold Production Distribution by State */}
+              <div className="pt-4 border-t border-stone-200 dark:border-stone-800 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-stone-700 dark:text-stone-300">
+                    Nigerian Recorded Gold Production by State (%) & Key Concessions
+                  </span>
+                  <span className="text-[10px] font-mono text-stone-400">National Mining Registry</span>
+                </div>
+                <div className="h-64 w-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={osunGoldProductionShare} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#444" opacity={0.2} />
+                      <XAxis dataKey="name" stroke="#888" fontSize={11} />
+                      <YAxis stroke="#888" fontSize={11} unit="%" />
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: '#1c1917',
+                          borderColor: '#d97706',
+                          borderRadius: '12px',
+                          color: '#fff',
+                          fontSize: '12px'
+                        }}
+                      />
+                      <Legend />
+                      <Bar dataKey="sharePct" name="Share of National Gold Production (%)" fill="#d97706" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Exposenomics Deep Policy Critique */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-stone-900 text-stone-100 border border-amber-600/30 space-y-6">
+              <div className="border-b border-stone-800 pb-3 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest font-bold block">
+                    THE RELATIVITY PRINCIPLE IN AFRICAN EXPOSENOMICS
+                  </span>
+                  <h3 className="text-lg font-serif font-bold text-white">
+                    Why Source Wealth Fails to Alleviate Earth's Worst Multi-Dimensional Poverty
+                  </h3>
+                </div>
+                <Scale size={24} className="text-amber-400 shrink-0" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-amber-400">1. State-Conglomerate Fusion</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    When private equity conglomerates and political families merge with state executive authority, mineral licensing approvals are expedited for elite interests while community royalty frameworks and healthcare oversight are neglected.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-sky-400">2. Enclave Resource Economies</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Industrial concessions like Segilola operate as high-security capital enclaves exporting unrefined bullion abroad, generating minimal domestic multiplier effects for the surrounding agrarian communities.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-red-400">3. Externalized Toxic Burdens</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Informal artisanal diggers who cannot access formal concessions work abandoned tailings and high-lead galena veins, absorbing the heavy metal body burdens, organ damage, and pediatric neurotoxicity of the resource extraction curse.
                   </p>
                 </div>
               </div>
@@ -1471,6 +1799,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                 {[
                   { id: 'provenance', label: '🖼️ Image & Provenance' },
                   { id: 'sahel_lithium', label: '⚡ Sahel Lithium & 4 Variables' },
+                  { id: 'dynastic_relativity', label: '👑 Dynastic State Capture' },
                   { id: 'history', label: '🏛️ Deep History' },
                   { id: 'flows', label: '💸 Illicit Financial Flows' },
                   { id: 'toxicology', label: '☠️ Toxic Pathways' },
@@ -1492,6 +1821,16 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
 
               {/* Artwork Plate Toggle */}
               <div className="flex items-center gap-1 bg-stone-900 p-1 rounded-lg border border-stone-800">
+                <button
+                  onClick={() => setModalArtworkView('osun_dynasty_plate')}
+                  className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors cursor-pointer ${
+                    modalArtworkView === 'osun_dynasty_plate'
+                      ? 'bg-amber-600 text-white font-bold'
+                      : 'text-stone-400 hover:text-white'
+                  }`}
+                >
+                  Dynasty Relativity
+                </button>
                 <button
                   onClick={() => setModalArtworkView('sahel_four_variables')}
                   className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors cursor-pointer ${
@@ -1520,7 +1859,13 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
               {modalTab === 'provenance' && (
                 <div className="flex flex-col items-center justify-center space-y-4">
                   <img
-                    src={modalArtworkView === 'sahel_four_variables' ? rouletsLawSahelImg : rouletsLawMiningImg}
+                    src={
+                      modalArtworkView === 'osun_dynasty_plate'
+                        ? osunGoldDynastyImg
+                        : modalArtworkView === 'sahel_four_variables'
+                        ? rouletsLawSahelImg
+                        : rouletsLawMiningImg
+                    }
                     alt="Roulet's Law Artisanal Mining & Exposenomics Artwork"
                     className="max-h-[50vh] w-auto max-w-full object-contain rounded-xl border border-stone-800 shadow-2xl"
                   />
@@ -1529,14 +1874,31 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                       Roulet's Law: Perturbation × Uncertainty = Chaos × Relativity
                     </p>
                     <p className="text-xs text-stone-300 font-serif">
-                      {modalArtworkView === 'sahel_four_variables'
+                      {modalArtworkView === 'osun_dynasty_plate'
+                        ? "Dynastic state capture & resource relativity plate: contrasting multi-billion-dollar private equity power conglomerates (Pacific Energy) and political executive control with subsistence artisanal gold panning in the Ilesha Schist Belt and Segilola basin."
+                        : modalArtworkView === 'sahel_four_variables'
                         ? "Comprehensive 4-variable exposenomics plate: Perturbation (deep-time lithic knapping & modern lithium extraction), Uncertainty (governance voids & 4,000+ pits), Chaos (toxic encephalopathy, disease & Boko Haram cash pipelines), and Relativity (Global North clean EV demand vs. Sahelian conflict)."
                         : "High-resolution visual forensic plate illustrating the cross-generational continuum from Stone Age flint knapping and Chalcolithic lead smelting to modern unregulated artisanal mining in Zamfara, pediatric encephalopathy, and global conflict financing."}
                     </p>
                     <p className="text-[10px] text-stone-500 font-mono">
-                      Cryptographic Vault Verification: 0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026
+                      Cryptographic Vault Verification: {modalArtworkView === 'osun_dynasty_plate' ? '0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026' : '0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026'}
                     </p>
                   </div>
+                </div>
+              )}
+
+              {modalTab === 'dynastic_relativity' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-amber-400">Dynastic State Capture & The Relativity of African Poverty</h4>
+                  <p>
+                    Published in <em>Business Insider Africa</em> (August 17, 2026), investigation into the Osun State gubernatorial race demonstrates the consolidation of private equity conglomerates directly ruling government at the source of mineral concessions.
+                  </p>
+                  <p>
+                    The Adeleke family's business empire—spanning Pacific Holdings, Pacific Energy ($3.4B+ in 1,920MW power generation), higher education (Adeleke University), and global entertainment (Davido)—exercises direct executive oversight over the Ilesha Schist Belt and the Segilola commercial gold mine (91,910 oz/yr, representing 42.56% of national gold output).
+                  </p>
+                  <p>
+                    While state leadership courts international mining capital at the Mining Indaba in Cape Town, the surrounding rural population remains trapped in severe multi-dimensional poverty, and informal artisanal miners absorb the acute toxic risks of unmonitored extraction without public safety nets.
+                  </p>
                 </div>
               )}
 

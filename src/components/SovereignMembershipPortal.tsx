@@ -22,6 +22,8 @@ import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_17867826
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
+import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
+import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
 import {
   Shield,
   UserCheck,
@@ -153,6 +155,24 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000X',
+      title: "Roulet's Law: Dynastic State Capture, Private Equity Conglomerates & The Extreme Relativity of African Gold Wealth (Plate #17)",
+      type: "Resource Relativity, Dynastic Private Equity & Mining Governance Sovereign IP Asset",
+      imageSrc: osunGoldDynastyImg,
+      link: 'artisanal_mining',
+      description: "Origins: Landmark forensic concept plate illustrating the extreme wealth relativity in mineral-rich Africa under Roulet's Law: Variable R (Relativity of Resource Control). Contrasts the multi-billion-dollar private equity power grid empire of Pacific Holdings / Pacific Energy ($3.4B in 1,920MW power generation) and executive state governance with subsistence artisanal miners digging with bare hands in the Ilesha Schist Belt for under $2/day under acute lead and mercury exposure.",
+      sovereignHash: '0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_SOVEREIGN_IP_2026'
+    },
+    {
+      id: 'IP-000W',
+      title: "Roulet's Law: The 4 Variables of Sahelian Lithium Scramble & Armed Insurgent Exploitation (Plate #16)",
+      type: 'Critical Minerals & Geopolitical Exposenomics Sovereign IP Asset',
+      imageSrc: rouletsLawSahelImg,
+      link: 'artisanal_mining',
+      description: "Origins: Visual synthesis of The Conversation (August 16, 2026) research mapping the 500,000-tonne African lithium boom across the four variables of Roulet's Law: Perturbation (deep-time lithic knapping to open-pit lithium blasting), Uncertainty (regulatory voids & 4,000+ unmonitored pits), Chaos (toxic encephalopathy, disease, and Boko Haram / ISWAP shadow financing), and Relativity (Global North zero-emission EV adoption vs. Sahelian blood-mineral conflict).",
+      sovereignHash: '0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000V',
       title: "Roulet's Law: Deep-Time Artisanal Mining, Chalcolithic Smelting, Zamfara Lead Crisis & Terrorism Exposenomics (Plate #15)",

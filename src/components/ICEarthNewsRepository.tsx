@@ -22,6 +22,7 @@ import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welf
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
+import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -107,6 +108,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('osun') ||
+    u.includes('adeleke') ||
+    u.includes('davido') ||
+    u.includes('1786948468266') ||
+    u.includes('segilola') ||
+    u.includes('pacific_holdings') ||
+    u.includes('dynasty') ||
+    u.includes('private_equity')
+  ) {
+    return osunGoldDynastyImg;
+  }
   if (
     u.includes('roulets_law_sahel') ||
     u.includes('1786946853842') ||
@@ -329,6 +342,62 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'OSUN-GOLD-DYNASTY-PRIVATE-EQUITY-2026',
+    contentType: 'Article',
+    title: 'Nigerian Tycoon Deji Adeleke’s Brother, Also Davido’s Uncle, Wins Second Term as Governor of Gold-Rich State: Private Equity, Dynastic State Capture & The Exposenomics of Extreme African Resource Inequity',
+    subtitle: 'Business Insider Africa (August 17, 2026) by Olamilekan Okebiorun • Segilola Commercial Gold (91,910 oz), Pacific Energy $3.4B Portfolio, and Roulet\'s Law Relativity: How Dynastic Oligarchies Rule Government at the Source of Africa\'s Deepest Poverty',
+    sourceUrl: 'https://africa.businessinsider.com/local/lifestyle/nigerian-tycoon-deji-adelekes-brother-also-davidos-uncle-wins-second-term-as-governor/hgcnf25',
+    sourceName: 'Business Insider Africa (Mining & Geopolitics Edition)',
+    publishDate: '2026-08-17',
+    author: 'Olamilekan Okebiorun • Exposenomics Synthesis by Norm Roulet',
+    authorName: 'Business Insider Africa & ICEarth Sovereign Exposenomics Lab',
+    abstract: 'Nigeria’s wealthy Adeleke family has reinforced its political and economic influence in Osun State in western Nigeria after incumbent Governor Ademola Adeleke secured a second term, defeating the candidate from the ruling national All Progressives Congress (APC). Osun State lies at the heart of Nigeria’s mineral wealth within the Ilesha Schist Belt, hosting the Segilola commercial gold mine (which produced 91,910 ounces in 2025) and accounting for 42.56% of Nigeria\'s recorded gold output. At the centre of the family’s business empire is billionaire tycoon Adedeji "Deji" Adeleke, chairman of Pacific Holdings Limited—operating the $1.4B Omotosho (335MW) and Olorunsogo (335MW) power stations and the $2.0B 1,250MW Ajebamidele mega-plant through Pacific Energy—alongside Adeleke University and the cultural influence of Afrobeats superstar Davido. Under the ICEarth exposenomics framework and Roulet\'s Law Relativity Variable (R), this case study exposes the deep structural paradox of African mineral governance: private equity conglomerates and dynastic oligarchies exercise executive government control directly at the source of mineral extraction, while the state\'s $5.7B economy and impoverished artisanal miners remain trapped in severe multi-dimensional poverty, bearing the toxic burdens of lead and mercury without basic public infrastructure.',
+    editorCommentary: 'This investigation by Business Insider Africa highlights the critical Variable R (Relativity) in Roulet\'s Law: Perturbation × Uncertainty = Chaos × Relativity. While billionaire private equity conglomerates control executive government offices and command multi-billion-dollar energy grids at the source of national gold production, ground-level artisanal diggers earn subsistence wages under hazardous, toxic conditions. True sovereign justice requires restructuring resource distribution so mineral wealth directly builds resilient public health and cooperative prosperity.',
+    fullExcerpt: `NIGERIAN TYCOON DEJI ADELEKE’S BROTHER, ALSO DAVIDO’S UNCLE, WINS SECOND TERM AS GOVERNOR OF A GOLD-RICH STATE AFTER DEFEATING NIGERIA’S RULING PARTY
+BUSINESS INSIDER AFRICA INVESTIGATION & SOVEREIGN EXPOSENOMICS SYNTHESIS
+
+Author: Olamilekan Okebiorun
+Published: 17 August 2026 06:00 AM
+Source: Business Insider Africa (https://africa.businessinsider.com/local/lifestyle/nigerian-tycoon-deji-adelekes-brother-also-davidos-uncle-wins-second-term-as-governor/hgcnf25)
+Synthesis: Norman Roulet (ICEarth Sovereign Lab)
+Cryptographic Provenance Hash: 0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026
+
+KEY INVESTIGATIVE FINDINGS:
+• Incumbent Governor Ademola Adeleke won re-election in Osun State, securing 511,067 votes (50.8% of ballots cast), defeating the ruling national APC candidate Bola Oyebamiji (444,815 votes).
+• Osun State hosts the Ilesha Schist Belt and Segilola, Nigeria's premier large-scale commercial gold mine, producing 91,910 ounces in 2025.
+• Official data showed Osun accounted for 42.56% of Nigeria's recorded gold production, leading the nation ahead of Niger State (27.8%).
+• The Adeleke family business empire is anchored by billionaire Deji Adeleke, chairman of Pacific Holdings Limited (founded 1983).
+• Pacific Energy operates the 335MW Omotosho and 335MW Olorunsogo power plants (valued at ~$1.4B) and completed a $2.0B, 1,250MW power project at Ajebamidele in Ondo State.
+• The family founded Adeleke University in 2011 through the Springtime Development Foundation, while Afrobeats superstar David Adeleke (Davido) mobilized massive youth and celebrity backing.
+
+ROULET'S LAW & VARIABLE R (RELATIVITY OF RESOURCE CONTROL):
+1. STATE CAPTURE AT THE SOURCE:
+Private equity dynasties consolidate direct control over state executive licensing, infrastructure concessions, and mineral shareholding negotiations.
+2. THE WEALTH DISTRIBUTION PARADOX:
+Osun's total state GDP is estimated at ₦2.3 trillion (~$5.7 billion), placing it among Nigeria's smaller state economies. The wealth of a single family conglomerate matches or exceeds state public infrastructure budgets.
+3. GROUND-LEVEL EXPOSENOMICS & POVERTY:
+While commercial bullion from Segilola is exported to global vaults, informal artisanal miners in the surrounding belt dig with bare hands, earning under $2/day while inhaling toxic dust and suffering chronic neurological impairments.`,
+    tags: [
+      'Osun State Gold',
+      'Adeleke Dynasty',
+      'Private Equity',
+      'Segilola Gold Mine',
+      'Ilesha Schist Belt',
+      'Pacific Holdings',
+      'Roulet\'s Law Relativity',
+      'Exposenomics of Inequity',
+      'Davido',
+      'Resource Distribution'
+    ],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'ICETaos'],
+    vaultHash: '0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'osun_gold_dynasty_inequity_sahel_1786948468266.jpg'
+  },
   {
     id: 'SAHEL-LITHIUM-CRITICAL-MINERALS-CONFLICT-2026',
     contentType: 'Article',

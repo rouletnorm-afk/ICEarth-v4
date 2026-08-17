@@ -78,10 +78,34 @@ import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_17867826
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
 import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
+import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
+import osunGoldDynastyImg from '../assets/images/osun_gold_dynasty_inequity_sahel_1786948468266.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('osun') ||
+    u.includes('adeleke') ||
+    u.includes('davido') ||
+    u.includes('1786948468266') ||
+    u.includes('segilola') ||
+    u.includes('pacific_holdings') ||
+    u.includes('dynasty') ||
+    u.includes('private_equity')
+  ) {
+    return osunGoldDynastyImg;
+  }
+  if (
+    u.includes('roulets_law_sahel') ||
+    u.includes('1786946853842') ||
+    u.includes('sahel_lithium') ||
+    u.includes('sahel') ||
+    u.includes('lithium') ||
+    u.includes('four_variables')
+  ) {
+    return rouletsLawSahelImg;
+  }
   if (
     u.includes('roulets_law_mining') ||
     u.includes('1786944208391') ||
@@ -404,6 +428,32 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-OSUN-GOLD-DYNASTY-2026',
+      title: 'Nigerian Tycoon Deji Adeleke’s Brother Wins Second Term as Governor of Gold-Rich State: Private Equity, Dynastic State Capture & The Relativity of African Poverty',
+      category: 'Exposenomics',
+      date: '2026-08-17',
+      imageSrc: osunGoldDynastyImg,
+      summary: 'Business Insider Africa (August 17, 2026): Incumbent Governor Ademola Adeleke secures re-election in gold-rich Osun State (Ilesha Schist Belt, Segilola commercial mine generating 91,910 oz/yr, 42.56% of national gold production). Demonstrates Roulet\'s Law Variable R (Relativity of Resource Control): billionaire private equity conglomerates (Pacific Holdings & $3.4B Pacific Energy) exercise executive state power at the source of mineral wealth while surrounding subsistence artisanal diggers earn under $2/day trapped in severe poverty and toxic exposure.',
+      fullText: `NIGERIAN TYCOON DEJI ADELEKE’S BROTHER, ALSO DAVIDO’S UNCLE, WINS SECOND TERM AS GOVERNOR OF GOLD-RICH OSUN STATE
+BUSINESS INSIDER AFRICA & SOVEREIGN EXPOSENOMICS INVESTIGATION
+
+Date: August 17, 2026
+Source: Business Insider Africa (https://africa.businessinsider.com/local/lifestyle/nigerian-tycoon-deji-adelekes-brother-also-davidos-uncle-wins-second-term-as-governor/hgcnf25)
+Author: Olamilekan Okebiorun
+Exposenomics Synthesis: Norman Roulet (ICEarth Sovereign Lab)
+Interactive Engine: https://icearth.org/?tab=artisanal_mining&section=dynastic_relativity
+Cryptographic Vault Hash: 0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026
+
+EXPOSENOMICS & ROULET'S LAW RELATIVITY (R) SUMMARY:
+• Osun State anchors 42.56% of Nigeria's recorded gold yield and hosts the Segilola commercial gold mine (91,910 ounces produced in 2025).
+• The Adeleke dynasty commands private equity giant Pacific Holdings, operating the $1.4B Omotosho (335MW) and Olorunsogo (335MW) power plants plus the $2.0B 1,250MW Ajebamidele station through Pacific Energy.
+• Governor Ademola Adeleke's 50.8% re-election preserves direct dynastic executive control over state mining approvals, infrastructure, and Segilola shareholding arrangements.
+• The Global Relativity Paradox: A single family conglomerate commands billions in energy assets and political rule at the origin source, while local agrarian communities and informal artisanal diggers endure severe multi-dimensional poverty, toxic dust exposure, and zero social safety nets.`,
+      tags: ['OsunStateGold', 'AdelekeDynasty', 'PrivateEquity', 'SegilolaMine', 'PacificHoldings', 'RouletsLawRelativity', 'ResourceInequity', 'Davido', 'MiningGovernance'],
+      linkHash: '0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026',
+      publishedUrl: 'https://africa.businessinsider.com/local/lifestyle/nigerian-tycoon-deji-adelekes-brother-also-davidos-uncle-wins-second-term-as-governor/hgcnf25'
+    },
     {
       id: 'MAG-NIGERIA-ARTISANAL-MINING-TERRORISM-2026',
       title: 'FG Warns Illegal Miners, Seeks Investors for 4,000+ Abandoned Pits: Roulet\'s Law, Artisanal Extraction & Boko Haram Terrorist Financing',
@@ -1036,6 +1086,28 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000X',
+      title: "Roulet's Law: Dynastic State Capture, Private Equity Conglomerates & The Extreme Relativity of African Gold Wealth (Plate #17)",
+      category: 'Resource Relativity & Dynastic Exposenomics',
+      imageSrc: osunGoldDynastyImg,
+      location: 'Osun State (Ilesha Schist Belt, Segilola Gold Mine), Pacific Holdings & Ondo Energy Belt (Nigeria)',
+      date: '2026-08-17',
+      description: "Origins: Landmark forensic concept plate illustrating the extreme wealth relativity in mineral-rich Africa under Roulet's Law: Variable R (Relativity of Resource Control). Contrasts the multi-billion-dollar private equity power grid empire of Pacific Holdings / Pacific Energy ($3.4B in 1,920MW power generation) and executive state governance with subsistence artisanal miners digging with bare hands in the Ilesha Schist Belt for under $2/day under acute lead and mercury exposure.",
+      vaultHash: '0xICEARTH_OSUN_GOLD_DYNASTY_INEQUITY_2026',
+      tags: ['RouletsLaw', 'OsunStateGold', 'AdelekeDynasty', 'PrivateEquity', 'SegilolaMine', 'PacificHoldings', 'Relativity', 'ResourceInequity', 'Davido', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000W',
+      title: "Roulet's Law: The 4 Variables of Sahelian Lithium Scramble & Armed Insurgent Exploitation (Plate #16)",
+      category: 'Critical Minerals & Geopolitical Exposenomics',
+      imageSrc: rouletsLawSahelImg,
+      location: 'Sahel Lithium Belt (Nigeria, Mali, Burkina Faso, Niger, Chad)',
+      date: '2026-08-16',
+      description: "Origins: Visual synthesis of The Conversation (August 16, 2026) research mapping the 500,000-tonne African lithium boom across the four variables of Roulet's Law: Perturbation (deep-time lithic knapping to open-pit lithium blasting), Uncertainty (regulatory voids & 4,000+ unmonitored pits), Chaos (toxic encephalopathy, disease, and Boko Haram / ISWAP shadow financing), and Relativity (Global North zero-emission EV adoption vs. Sahelian blood-mineral conflict).",
+      vaultHash: '0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026',
+      tags: ['RouletsLaw', 'SahelLithium', 'CriticalMinerals', 'BokoHaram', 'ISWAP', 'TheConversation', 'FourVariables', 'EVBatteries', 'ICEarth']
+    },
     {
       id: 'PHOTO-000V',
       title: "Roulet's Law: Deep-Time Artisanal Mining, Chalcolithic Smelting, Zamfara Lead Crisis & The Exposenomics of Terrorism (Plate #15)",
