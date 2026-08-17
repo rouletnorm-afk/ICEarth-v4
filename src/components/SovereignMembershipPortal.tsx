@@ -21,7 +21,7 @@ import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_178
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
-import artisanalMiningImg from '../assets/images/artisanal_mining_terrorism_nigeria_1786937796982.jpg';
+import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 import {
   Shield,
   UserCheck,
@@ -155,12 +155,12 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
       id: 'IP-000V',
-      title: 'Artisanal Mining & The Exposenomics of Terrorism: Deep-Time Savagery, 4,000+ Abandoned Pits, Zamfara Lead Genocide & Boko Haram Laundering (Plate #15)',
-      type: 'Artisanal Mining Toxicology, Terrorism Finance & Deep-Time Exposenomics Asset',
-      imageSrc: artisanalMiningImg,
+      title: "Roulet's Law: Deep-Time Artisanal Mining, Chalcolithic Smelting, Zamfara Lead Crisis & Terrorism Exposenomics (Plate #15)",
+      type: "Roulet's Law, Artisanal Mining Toxicology & Terrorism Finance Sovereign IP Asset",
+      imageSrc: rouletsLawMiningImg,
       link: 'artisanal_mining',
-      description: 'Origins: Landmark forensic exposenomics asset documenting Radio Nigeria\'s August 16, 2026 report on the Barkin Ladi mine collapse, Minister Dele Alake\'s declaration on 4,000+ hazardous abandoned pits across Nigeria, and the exposenomics synthesis by Norman Roulet. Connects humanity\'s oldest industry after fire with modern terrorist financing, pediatric lead encephalopathy in Zamfara, and the 2026 cooperative remediation blueprint.',
-      sovereignHash: '0xICEARTH_ARTISANAL_MINING_TERRORISM_SOVEREIGN_IP_2026'
+      description: "Origins: Landmark forensic exposenomics asset based on Roulet's Law: Perturbation (since stone age artisanal mining, lead mining and smelting during the Chalcolithic Copper Age, and artisanal mining in Zamfara) × Uncertainty (government regulatory void) = Chaos (mass poisoning, terrorism and corruption) × Relativity (global conflict, inequity, and environmental disaster). Documents Radio Nigeria's August 16, 2026 report on the Barkin Ladi mine collapse, Minister Dele Alake's declaration on 4,000+ hazardous abandoned pits across Nigeria, and the exposenomics synthesis by Norman Roulet. Connects deep-time lithic knapping and weapons genesis with pediatric lead encephalopathy in Zamfara, Boko Haram laundering, and the 2026 cooperative remediation blueprint.",
+      sovereignHash: '0xICEARTH_ROULETS_LAW_ARTISANAL_MINING_TERRORISM_IP_2026'
     },
     {
       id: 'IP-000U',

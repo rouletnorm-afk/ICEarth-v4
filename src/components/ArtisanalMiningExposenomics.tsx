@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import artisanalMiningImg from '../assets/images/artisanal_mining_terrorism_nigeria_1786937796982.jpg';
+import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
+import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
 import {
   Pickaxe,
   Flame,
@@ -33,7 +34,19 @@ import {
   Globe,
   Sprout,
   ShieldCheck,
-  CheckCircle2
+  CheckCircle2,
+  BookOpen,
+  DollarSign,
+  Droplets,
+  Atom,
+  AlertOctagon,
+  ArrowRight,
+  Download,
+  Share2,
+  BatteryCharging,
+  Car,
+  HeartCrack,
+  Network
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -63,8 +76,13 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
   siteTheme = 'light'
 }) => {
   const isLight = siteTheme === 'light';
-  const [activeSubTab, setActiveSubTab] = useState<'overview' | 'regional_gis' | 'coop_transition' | 'simulation'>('overview');
+  const [activeSubTab, setActiveSubTab] = useState<
+    'deep_history' | 'sahel_lithium' | 'illicit_flows' | 'toxic_pathways' | 'forensic_audit' | 'regional_gis' | 'coop_transition' | 'simulation'
+  >('deep_history');
+  
   const [showArtworkModal, setShowArtworkModal] = useState<boolean>(false);
+  const [modalArtworkView, setModalArtworkView] = useState<'sahel_four_variables' | 'deep_time_plate'>('sahel_four_variables');
+  const [modalTab, setModalTab] = useState<'provenance' | 'history' | 'sahel_lithium' | 'flows' | 'toxicology' | 'forensics'>('provenance');
 
   // Simulation Sliders for Tailings / Domestic Ore Processing Exposure
   const [oreGrindingLocation, setOreGrindingLocation] = useState<'domestic_compound' | 'village_perimeter' | 'contained_coop'>('domestic_compound');
@@ -121,6 +139,23 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
     { subject: 'Conflict & Extremist Choke', illegalCartel: 10, licensedCoop: 88, fullMark: 100 }
   ];
 
+  // Sahel Lithium & Armed Group Exploitation Matrix (The Conversation 2026 Study)
+  const sahelCountriesData = [
+    { country: 'Burkina Faso', lithiumRisk: 95, informalPct: 90, insurgentInfluence: 92, govOversight: 18, keyThreats: 'Jihadist networks tax informal extraction directly to fund military assaults & weapons' },
+    { country: 'Mali', lithiumRisk: 92, informalPct: 80, insurgentInfluence: 90, govOversight: 25, keyThreats: 'Armed groups embedded in gold trade adapted extortion models to lithium concessions' },
+    { country: 'Nigeria', lithiumRisk: 88, informalPct: 85, insurgentInfluence: 78, govOversight: 30, keyThreats: 'Boko Haram & ISWAP transit corridor taxation; criminal gang protection rackets' },
+    { country: 'Niger', lithiumRisk: 82, informalPct: 75, insurgentInfluence: 70, govOversight: 32, keyThreats: 'Post-2023 coup border breakdown; gold/arms trafficking corridors repurposed for lithium' },
+    { country: 'Chad', lithiumRisk: 76, informalPct: 70, insurgentInfluence: 65, govOversight: 28, keyThreats: 'Systemic corruption & trans-Saharan smuggling networks moving unrefined rock' }
+  ];
+
+  const sahelGrowthProjection = [
+    { year: '2022', tonnesMined: 15000, insurgentSkimUsdM: 18 },
+    { year: '2024', tonnesMined: 32000, insurgentSkimUsdM: 45 },
+    { year: '2026', tonnesMined: 40000, insurgentSkimUsdM: 65 },
+    { year: '2028 (Est.)', tonnesMined: 220000, insurgentSkimUsdM: 320 },
+    { year: '2030 (Proj.)', tonnesMined: 500000, insurgentSkimUsdM: 750 }
+  ];
+
   return (
     <div className={`min-h-screen ${isLight ? 'bg-[#F9F7F1] text-stone-900' : 'bg-[#0E0D0B] text-stone-100'} font-sans transition-colors duration-200`}>
       
@@ -144,7 +179,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
             </span>
             <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-bold uppercase tracking-wider flex items-center gap-1.5">
               <ShieldCheck size={13} className="text-emerald-400" />
-              Ministry of Solid Minerals Co-op Strategy
+              Federal Ministry of Solid Minerals 2026 Strategy
             </span>
             <span className="px-3 py-1 bg-stone-800 text-stone-300 border border-stone-700 rounded-full font-mono text-[11px]">
               Roulet's Law Deep-Time Exposenomics
@@ -153,11 +188,15 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
 
           {/* Main Title & Thesis */}
           <div className="space-y-3">
+            <div className="flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
+              <Sparkles size={14} />
+              <span>Sovereign Media IP • Forensic Plate #15</span>
+            </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight text-white">
               Artisanal Mining & The Exposenomics of Terrorism
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-stone-300 max-w-5xl leading-relaxed font-sans font-light">
-              From the primordial primate search for stones and weaponry to unregulated pits worldwide: How illegal artisanal gold and tin mining represents the <strong className="text-amber-300 font-semibold">worst economics in human history</strong>—poisoning water, food supplies, and families while generating billions in shadow revenues that fund <strong className="text-red-400 font-semibold">Boko Haram and extremist banditry</strong> in Nigeria, and the 2026 Federal Strategy to license co-ops and reclaim 4,000+ abandoned pits.
+              From primordial primate stone selection and the dawn of anthropogenic weaponry to unregulated excavations worldwide: How illegal artisanal gold and tin mining represents the <strong className="text-amber-300 font-semibold">worst economics in human history</strong>—poisoning drinking water, food supplies, and families while generating billions in shadow revenues that fund <strong className="text-red-400 font-semibold">Boko Haram, ISWAP, and regional banditry</strong> in Nigeria, alongside the 2026 Federal Strategy to license cooperatives and reclaim 4,000+ abandoned death pits.
             </p>
           </div>
 
@@ -167,7 +206,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
               <div className="flex items-center gap-2">
                 <Landmark size={16} className="text-amber-400 shrink-0" />
                 <span className="font-bold text-amber-200">Official Federal Government Statement:</span>
-                <span className="text-stone-300">Minister of Solid Minerals Development, <strong>Dele Alake</strong> (via Lara Owoeye-Wise)</span>
+                <span className="text-stone-300">Minister of Solid Minerals Development, <strong>Dele Alake</strong> (via Lara Owoeye-Wise, Special Assistant on Media)</span>
               </div>
               <a
                 href="https://radionigeria.gov.ng/2026/08/16/fg-warns-illegal-miners-seeks-investors-for-abandoned-pits/"
@@ -188,11 +227,11 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
           {/* Core Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-2">
             {[
-              { label: 'Abandoned Mine Pits', val: '4,000+', desc: 'Legacy hazardous death pits in Nigeria', icon: AlertTriangle, color: 'text-amber-400' },
-              { label: 'Barkin Ladi Casualties', val: '7 Dead', desc: 'Kassa tin pit collapse (Aug 2026)', icon: Skull, color: 'text-red-400' },
-              { label: 'Zamfara Pediatric Baseline', val: '400+ Dead', desc: 'Children killed in Pb-gold crisis', icon: Skull, color: 'text-rose-400' },
+              { label: 'Abandoned Mine Pits', val: '4,000+', desc: 'Legacy hazardous death pits across Nigeria', icon: AlertTriangle, color: 'text-amber-400' },
+              { label: 'Barkin Ladi Casualties', val: '7 Dead', desc: 'Kassa tin pit collapse (August 2026)', icon: Skull, color: 'text-red-400' },
+              { label: 'Zamfara Pediatric Toll', val: '400+ Dead', desc: 'Children killed by lead-gold ore dust', icon: Skull, color: 'text-rose-400' },
               { label: 'Pits Rehabilitated', val: '59 Sites', desc: 'GIS satellite & AI mapping active', icon: Sprout, color: 'text-emerald-400' },
-              { label: 'Illicit Mineral Shadow Economy', val: '$3.5B+ / yr', desc: 'Funding Boko Haram & banditry', icon: Coins, color: 'text-amber-300' },
+              { label: 'Illicit Mineral Shadow Trade', val: '$3.5B+ / yr', desc: 'Funding Boko Haram & banditry', icon: Coins, color: 'text-amber-300' },
               { label: 'Homo Sapiens 0 Target', val: '0.016 μg/dL', desc: 'Pre-industrial pristine baseline', icon: ShieldCheck, color: 'text-sky-400' }
             ].map((m, idx) => {
               const Icon = m.icon;
@@ -220,10 +259,14 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
           
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             {[
-              { id: 'overview', label: '📖 Primates to Terrorism Thesis', icon: Flame },
-              { id: 'regional_gis', label: '🗺️ 4,000+ Abandoned Pits GIS', icon: MapPin },
+              { id: 'deep_history', label: '🏛️ Deep History & Metallurgy', icon: Pickaxe },
+              { id: 'sahel_lithium', label: '⚡ Sahel Lithium & Roulet\'s Law', icon: BatteryCharging },
+              { id: 'illicit_flows', label: '💸 Illicit Financial Flows', icon: DollarSign },
+              { id: 'toxic_pathways', label: '☠️ Toxic Exposure Pathways', icon: Skull },
+              { id: 'forensic_audit', label: '🔍 Forensic Investigation', icon: Search },
+              { id: 'regional_gis', label: '🗺️ 4,000+ Pits GIS Map', icon: MapPin },
               { id: 'coop_transition', label: '⚖️ Cartel vs. Licensed Co-op', icon: Scale },
-              { id: 'simulation', label: '🔬 Live Ore Exposure Simulator', icon: Cpu }
+              { id: 'simulation', label: '🧪 Live Ore Exposure Simulator', icon: Cpu }
             ].map((tab) => {
               const Icon = tab.icon;
               const isActive = activeSubTab === tab.id;
@@ -231,7 +274,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                 <button
                   key={tab.id}
                   onClick={() => setActiveSubTab(tab.id as any)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 sm:gap-2 transition-all cursor-pointer ${
                     isActive
                       ? 'bg-amber-600 text-white shadow-md font-bold'
                       : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 border border-stone-200 dark:border-stone-700'
@@ -261,10 +304,110 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
       <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
         
         {/* ========================================================================= */}
-        {/* TAB 1: PRIMATES TO TERRORISM THESIS */}
+        {/* TAB 1: DEEP HISTORY & PRIMATE WEAPONRY GENESIS */}
         {/* ========================================================================= */}
-        {activeSubTab === 'overview' && (
+        {activeSubTab === 'deep_history' && (
           <div className="space-y-8 animate-fade-in">
+
+            {/* ROULET'S LAW FORENSIC FORMULA HERO CARD */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950/80 border-2 border-amber-500/40 text-stone-100 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+              
+              <div className="relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-amber-500/30 pb-4">
+                  <div className="flex items-center gap-2">
+                    <Atom size={20} className="text-amber-400 animate-spin" style={{ animationDuration: '12s' }} />
+                    <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+                      Fundamental Exposenomics Equation • Roulet's Law
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono px-3 py-1 bg-amber-900/40 border border-amber-500/40 text-amber-200 rounded-full">
+                    Anthropogenic Extraction Entropy
+                  </span>
+                </div>
+
+                {/* The Core Mathematical Formulation */}
+                <div className="p-6 rounded-2xl bg-black/80 border border-amber-600/50 text-center space-y-3 shadow-inner">
+                  <div className="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">
+                    The Universal Law of Extraction & Societal Collapse
+                  </div>
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-black text-amber-300 tracking-wide flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-2">
+                    <span className="text-amber-300 bg-amber-950/60 px-3 py-1 rounded-xl border border-amber-500/40">Perturbation</span>
+                    <span className="text-stone-400">×</span>
+                    <span className="text-orange-300 bg-orange-950/60 px-3 py-1 rounded-xl border border-orange-500/40">Uncertainty</span>
+                    <span className="text-amber-400 font-sans text-2xl sm:text-3xl">=</span>
+                    <span className="text-red-400 bg-red-950/60 px-3 py-1 rounded-xl border border-red-500/40">Chaos</span>
+                    <span className="text-stone-400">×</span>
+                    <span className="text-rose-400 bg-rose-950/60 px-3 py-1 rounded-xl border border-rose-500/40">Relativity</span>
+                  </div>
+                  <div className="text-xs sm:text-sm font-mono text-stone-300">
+                    <strong className="text-white">P</strong> (Deep-Time Environmental Shock) × <strong className="text-white">U</strong> (Government Regulatory Void) = <strong className="text-white">C</strong> (Mass Poisoning & Terrorism) × <strong className="text-white">R</strong> (Global Conflict & Inequity)
+                  </div>
+                </div>
+
+                {/* 4 Interactive Variable Pillars */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+                  
+                  {/* P: Perturbation */}
+                  <div className="p-4 rounded-2xl bg-amber-950/30 border border-amber-600/40 space-y-2">
+                    <div className="flex items-center justify-between text-amber-400">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider">P • Perturbation</span>
+                      <Pickaxe size={16} />
+                    </div>
+                    <div className="text-xs font-bold text-amber-200 font-serif">
+                      Since Stone Age to Zamfara
+                    </div>
+                    <p className="text-[11px] text-stone-300 leading-relaxed">
+                      Deep-time human extraction shock: Lower Paleolithic flint/obsidian knapping for projectile weapons, Chalcolithic (Copper Age) lead/copper roasting, and modern uncontrolled gold/tin pit excavations.
+                    </p>
+                  </div>
+
+                  {/* U: Uncertainty */}
+                  <div className="p-4 rounded-2xl bg-orange-950/30 border border-orange-600/40 space-y-2">
+                    <div className="flex items-center justify-between text-orange-400">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider">U • Uncertainty</span>
+                      <Landmark size={16} />
+                    </div>
+                    <div className="text-xs font-bold text-orange-200 font-serif">
+                      Government & Policy Void
+                    </div>
+                    <p className="text-[11px] text-stone-300 leading-relaxed">
+                      4,000+ unmonitored abandoned death pits, absent safety regulation, corruption, lack of legal cooperative formalization, and failure to safeguard vulnerable artisanal mining communities.
+                    </p>
+                  </div>
+
+                  {/* C: Chaos */}
+                  <div className="p-4 rounded-2xl bg-red-950/30 border border-red-600/40 space-y-2">
+                    <div className="flex items-center justify-between text-red-400">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider">C • Chaos</span>
+                      <Skull size={16} />
+                    </div>
+                    <div className="text-xs font-bold text-red-200 font-serif">
+                      Mass Poisoning & Terrorism
+                    </div>
+                    <p className="text-[11px] text-stone-300 leading-relaxed">
+                      Acute pediatric lead encephalopathy (400+ infant deaths in Zamfara), catastrophic pit collapses (Barkin Ladi), armed banditry, and shadow mineral laundering funding Boko Haram and ISWAP.
+                    </p>
+                  </div>
+
+                  {/* R: Relativity */}
+                  <div className="p-4 rounded-2xl bg-rose-950/30 border border-rose-600/40 space-y-2">
+                    <div className="flex items-center justify-between text-rose-400">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider">R • Relativity</span>
+                      <Globe size={16} />
+                    </div>
+                    <div className="text-xs font-bold text-rose-200 font-serif">
+                      Global Conflict & Inequity
+                    </div>
+                    <p className="text-[11px] text-stone-300 leading-relaxed">
+                      Interconnected international commodities markets where wealthy consumer nations benefit from clean tech and jewelry while upstream origin nations suffer ecocide, poverty, and armed instability.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
             
             {/* Visual Plate Hero Preview Banner */}
             <div className="rounded-2xl overflow-hidden border border-amber-700/30 bg-black shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
@@ -273,7 +416,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                 onClick={() => setShowArtworkModal(true)}
               >
                 <img
-                  src={artisanalMiningImg}
+                  src={rouletsLawMiningImg}
                   alt="Artisanal Mining & Exposenomics of Terrorism Infographic Plate"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
@@ -283,7 +426,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                       FORENSIC PLATE #15 • CRYPTOGRAPHIC PROVENANCE
                     </span>
                     <h3 className="text-lg font-bold text-white font-serif">
-                      Artisanal Mining & The Exposenomics of Terrorism
+                      Roulet's Law: Deep-Time Artisanal Mining & The Exposenomics of Terrorism
                     </h3>
                   </div>
                 </div>
@@ -295,29 +438,30 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
               <div className="lg:col-span-5 p-6 sm:p-8 bg-stone-950 text-stone-200 flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between border-b border-stone-800 pb-3">
-                    <span className="text-xs font-mono font-bold text-amber-400 uppercase">Core Exposenomics Principles</span>
-                    <span className="text-[10px] font-mono text-stone-400">Roulet's Law § 14.8</span>
+                    <span className="text-xs font-mono font-bold text-amber-400 uppercase">Deep History & Anthropogenic Genesis</span>
+                    <span className="text-[10px] font-mono text-stone-400">Roulet's Law Formulation</span>
                   </div>
 
                   <p className="text-xs leading-relaxed text-stone-300 font-sans">
-                    <strong>1. The Oldest Anthropogenic Industry After Fire:</strong> Artisanal mining began when primates selected stones with specific hardness and fracturing properties (flint, obsidian, basalt) for fire and weapons, institutionalizing physical aggression and early mineral toxicity.
+                    <strong>1. The Oldest Anthropogenic Industry After Fire:</strong> Artisanal mining began during the Lower Paleolithic when early hominids selected stones with specific conchoidal fracturing properties (flint, obsidian, quartzite, basalt) to ignite fire, scrape hides, and fashion projectile spearheads. This extraction of geological materials initiated physical territorial aggression and early mineral toxicity.
                   </p>
 
                   <p className="text-xs leading-relaxed text-stone-300 font-sans">
-                    <strong>2. The Worst Economics in Human History:</strong> Subsistence miners in unregulated pits trade their family health, clean water aquifers, and child neurobiology for tiny survival wages, while violent cartels skim 80%+ of the mineral value.
+                    <strong>2. The Chalcolithic & Toxic Metallurgy:</strong> As hominids graduated from stone knapping to smelting copper and roasting heavy sulfide ores during the Copper Age—galena (lead sulfide), cinnabar (mercury sulfide), and chalcopyrite—smelting pits became centers of acute neurotoxin volatilization, territorial fortification, chattel slavery, and warfare over mineral outcrops.
                   </p>
 
                   <p className="text-xs leading-relaxed text-stone-300 font-sans">
-                    <strong>3. Direct Funding of Extremism & Terrorism:</strong> In Zamfara, Niger, and Plateau states, illicit artisanal gold and tin pits generate billions in unrecorded cash that directly equips Boko Haram, ISWAP, and armed kidnapping cartels.
+                    <strong>3. The Modern Savagery Loop:</strong> In contemporary West Africa (Zamfara and Barkin Ladi), unregulated artisanal scavenging replicates this deep-time brutality: subsistence diggers risk life and limb for starvation earnings while armed insurgencies monopolize the mineral trade to purchase military weaponry.
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-stone-800 flex flex-wrap gap-2">
                   <button
-                    onClick={() => setActiveSubTab('coop_transition')}
-                    className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs font-bold font-mono transition-all cursor-pointer"
+                    onClick={() => setActiveSubTab('illicit_flows')}
+                    className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs font-bold font-mono transition-all cursor-pointer flex items-center gap-1.5"
                   >
-                    Inspect 2026 Federal Solution &rarr;
+                    <span>Inspect Illicit Financial Flows</span>
+                    <ArrowRight size={13} />
                   </button>
                   <button
                     onClick={() => onNavigateTab?.('genocost')}
@@ -329,7 +473,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
               </div>
             </div>
 
-            {/* Deep Historical & Scientific Narrative Grid */}
+            {/* Deep History Evolutionary Timeline Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
@@ -337,22 +481,22 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                   <Pickaxe size={20} />
                 </div>
                 <h3 className="text-base font-serif font-bold text-stone-900 dark:text-white">
-                  1. Primates, Weaponry & The Dawn of Savagery
+                  1. Primates, Lithic Knapping & Weapons
                 </h3>
                 <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-                  Long before agriculture, early hominids mapped geology to seek stones for specific utilities: flint for sparking fire, quartzite for butchering tools, and dense ores for clubs and projectile points. As hominids graduated to galena (lead sulfide), cinnabar (mercury sulfide), and chalcopyrite (copper), extraction sites became fortified, birthplaces of territorial warfare, human chattel slavery, and heavy metal perturbation.
+                  Long before the advent of agriculture, early hominids mapped geographic formations to seek stones with precise mechanical properties: flint for sparking fire, quartzite for butchering tools, and dense chert for clubs and projectile points. Mineral selection was humanity's very first industrial specialization—and the foundational spark of lethal intra-species combat.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
                 <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 dark:text-red-400 flex items-center justify-center font-bold">
-                  <Skull size={20} />
+                  <Flame size={20} />
                 </div>
                 <h3 className="text-base font-serif font-bold text-stone-900 dark:text-white">
-                  2. The Zamfara Disaster & Abandoned Pit Collapse
+                  2. Metallurgical Warfare & Smelting Fallout
                 </h3>
                 <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-                  In 2010, the Zamfara crisis revealed the extreme peril of artisanal gold mining: flour mills used inside family homes crushed lead-rich gold ore, scattering dust with &gt;100,000 ppm lead. Over 400 infants died from acute lead encephalopathy, and thousands suffered irreversible prefrontal brain damage. Today, the collapse of abandoned tin pits in Kassa (Barkin Ladi) killing 7 miners proves that 4,000+ un-reclaimed pits remain active death traps.
+                  The Bronze and Iron Ages accelerated mineral exploitation into systemic warfare. Extraction of copper, tin, lead, and iron required deep underground excavations, timber deforestation for charcoal, and toxic smelting furnaces. Armies that controlled ore deposits conquered neighboring tribes, establishing an unbroken link between mineral monopolization and militarized conquest.
                 </p>
               </div>
 
@@ -361,10 +505,10 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
                   <ShieldCheck size={20} />
                 </div>
                 <h3 className="text-base font-serif font-bold text-stone-900 dark:text-white">
-                  3. The 2026 Strategy: From Death Pits to Prosperity
+                  3. The 2026 Cooperative Reclamation Horizon
                 </h3>
                 <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-                  As announced by Minister Dele Alake on August 16, 2026, the Federal Government is enforcing cooperative formation, artisanal licensing, and safety protocols. By deploying GIS satellite tracking, AI pit discovery, and the National Rehabilitation Fund, 59 pits have already been reclaimed into renewable energy parks, tourism destinations, and aquaculture fisheries—choking off illegal funding to extremist syndicates.
+                  Breaking this deep-time cycle requires replacing unregulated shadow extraction with sovereign, registered cooperatives. As formulated in the Federal Ministry of Solid Minerals 2026 blueprint, formalization provides miners with safe technical equipment, fair pricing, and environmental controls, ending millennia of exploitation and violent conflict.
                 </p>
               </div>
 
@@ -374,7 +518,576 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
         )}
 
         {/* ========================================================================= */}
-        {/* TAB 2: 4,000+ ABANDONED PITS GIS & HEAVY METAL DATA */}
+        {/* TAB: SAHEL LITHIUM & ROULET'S LAW FOUR VARIABLES */}
+        {/* ========================================================================= */}
+        {activeSubTab === 'sahel_lithium' && (
+          <div className="space-y-8 animate-fade-in">
+
+            {/* Top Study Citation Card */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-stone-950 via-stone-900 to-sky-950/70 border-2 border-sky-500/40 text-stone-100 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative z-10 space-y-6">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-sky-500/30 pb-4">
+                  <div className="flex items-center gap-2">
+                    <BatteryCharging size={22} className="text-sky-400 animate-pulse" />
+                    <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-widest">
+                      Geopolitical Exposenomics Study • The Conversation (August 16, 2026)
+                    </span>
+                  </div>
+                  <a
+                    href="https://theconversation.com/lithium-in-the-sahel-how-armed-groups-are-exploiting-the-global-scramble-for-the-critical-mineral-287526"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono px-3 py-1 bg-sky-900/40 hover:bg-sky-800/60 border border-sky-500/40 text-sky-200 rounded-full flex items-center gap-1.5 transition-all"
+                  >
+                    <span>Read Study on The Conversation</span>
+                    <ExternalLink size={12} />
+                  </a>
+                </div>
+
+                <div className="space-y-3">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-black text-white leading-snug">
+                    Lithium in the Sahel: How Armed Groups Are Exploiting the Global Scramble for the Critical Mineral
+                  </h2>
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans max-w-4xl">
+                    Every electric vehicle, smartphone, and laptop battery begins with lithium—the critical mineral at the centre of the global transition to clean energy. Over <strong>40,000 tonnes</strong> are mined from African rock annually for international consumers, surging toward an estimated <strong>500,000 tonnes by 2030</strong>. Across the Sahel (Nigeria, Mali, Burkina Faso, Niger, and Chad), armed insurgent groups, Boko Haram, and ISWAP are hijacking this critical mineral boom through shadow taxation, protection rackets, and cross-border weapons trades enabled by weak state oversight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Visual Plate Hero: Four Variables of Roulet's Law */}
+            <div className="rounded-2xl overflow-hidden border border-sky-700/30 bg-black shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+              <div 
+                className="lg:col-span-7 relative group cursor-pointer overflow-hidden min-h-[300px] sm:min-h-[380px]"
+                onClick={() => {
+                  setModalArtworkView('sahel_four_variables');
+                  setShowArtworkModal(true);
+                }}
+              >
+                <img
+                  src={rouletsLawSahelImg}
+                  alt="Roulet's Law Four Variables & Sahel Lithium Visual"
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-mono font-bold text-sky-400 uppercase tracking-widest bg-black/70 px-2 py-0.5 rounded border border-sky-500/30">
+                      ROULET'S LAW • 4-VARIABLE UNIFIED EXPOSENOMICS EQUATION
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-white font-serif">
+                      Perturbation × Uncertainty = Chaos × Relativity
+                    </h3>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-black/80 text-white p-2 rounded-lg border border-neutral-700 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Maximize2 size={16} />
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 p-6 sm:p-8 bg-stone-950 text-stone-200 flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-stone-800 pb-3">
+                    <span className="text-xs font-mono font-bold text-sky-400 uppercase">Beyond Physical Toxicity</span>
+                    <span className="text-[10px] font-mono text-stone-400">Total Systemic Harm</span>
+                  </div>
+
+                  <p className="text-xs leading-relaxed text-stone-300 font-sans">
+                    <strong>The Extended Exposenomics Harm:</strong> Beyond the cellular perturbation of toxic heavy metals, Roulet's Law encompasses the holistic trauma inflicted upon humanity: systemic economic exploitation, chronic developmental disease, deep geopolitical inequity, and violent societal collapse.
+                  </p>
+
+                  <div className="p-3.5 rounded-xl bg-stone-900/90 border border-stone-800 space-y-1.5 text-xs">
+                    <div className="font-mono text-amber-400 font-semibold flex items-center gap-1.5">
+                      <Scale size={14} />
+                      <span>The Clean Tech Paradox:</span>
+                    </div>
+                    <p className="text-stone-300 text-[11px] leading-relaxed">
+                      Zero-emission electric vehicles and smartphones consumed in the Global North indirectly finance the weapons arsenals of Africa's deadliest terror syndicates when critical mineral supply chains lack sovereign cooperative protections.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-stone-800 flex flex-wrap gap-2">
+                  <button
+                    onClick={() => {
+                      setModalArtworkView('sahel_four_variables');
+                      setShowArtworkModal(true);
+                    }}
+                    className="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-xl text-xs font-bold font-mono transition-all cursor-pointer flex items-center gap-1.5"
+                  >
+                    <span>Inspect 4-Variable High-Res Plate</span>
+                    <Eye size={13} />
+                  </button>
+                  <button
+                    onClick={() => setActiveSubTab('illicit_flows')}
+                    className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-amber-300 rounded-xl text-xs font-bold font-mono transition-all border border-stone-700 cursor-pointer"
+                  >
+                    Terrorist Flow Analysis &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Deep Breakdown of the Four Roulet's Law Variables */}
+            <div className="space-y-4">
+              <div className="border-b border-stone-300 dark:border-stone-800 pb-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 font-bold block">
+                  MATHEMATICAL & GEOPOLITICAL DECOMPOSITION
+                </span>
+                <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-white">
+                  The Four Variables of Roulet's Law Applied to Sahel Critical Minerals
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                {/* P: Perturbation */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border-2 border-amber-500/40 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold">
+                    <Pickaxe size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-amber-600 dark:text-amber-400 font-bold">Variable 1</span>
+                    <h4 className="text-base font-serif font-bold text-stone-900 dark:text-white">P • Perturbation</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Deep-Time Extraction Shocks</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Physical, cellular, and environmental trauma: from Lower Paleolithic flint knapping and Chalcolithic lead/copper smelting to domestic galena pulverization in Zamfara and open-trench artisanal lithium extraction.
+                  </p>
+                </div>
+
+                {/* U: Uncertainty */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border-2 border-orange-500/40 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold">
+                    <Landmark size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-orange-600 dark:text-orange-400 font-bold">Variable 2</span>
+                    <h4 className="text-base font-serif font-bold text-stone-900 dark:text-white">U • Uncertainty</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Weak Governance & Policy Voids</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Institutional breakdown, 4,000+ unmonitored abandoned death pits, absent formal cooperative registration, porous borders post-coup (Niger), and lack of state security in remote extraction territories.
+                  </p>
+                </div>
+
+                {/* C: Chaos */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border-2 border-red-500/40 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold">
+                    <Skull size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-red-600 dark:text-red-400 font-bold">Variable 3</span>
+                    <h4 className="text-base font-serif font-bold text-stone-900 dark:text-white">C • Chaos</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Mass Poisoning, Terror & Disease</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Pediatric encephalopathy (&gt;400 child deaths in Zamfara), catastrophic pit collapses (Barkin Ladi), chronic neurotoxic impairment, and shadow mineral taxation generating liquid cash for Boko Haram and ISWAP.
+                  </p>
+                </div>
+
+                {/* R: Relativity */}
+                <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border-2 border-sky-500/40 shadow-sm space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold">
+                    <Globe size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-sky-600 dark:text-sky-400 font-bold">Variable 4</span>
+                    <h4 className="text-base font-serif font-bold text-stone-900 dark:text-white">R • Relativity</h4>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500 dark:text-stone-400">Global Inequity & Social Collapse</div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Extreme global disparity: wealthy consumer nations driving renewable transition and battery demand while upstream origin communities in the Sahel bear the severe burden of environmental ecocide and civil conflict.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Sahel Countries Comparative Table & Vulnerability Risk */}
+            <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest font-bold block">
+                    COUNTRY-BY-COUNTRY VULNERABILITY AUDIT (THE CONVERSATION 2026)
+                  </span>
+                  <h3 className="text-lg font-serif font-bold text-stone-900 dark:text-white">
+                    Sahelian Lithium Exploitation & Terror Infiltration Risk
+                  </h3>
+                </div>
+                <div className="text-xs font-mono text-stone-500">
+                  Mali • Niger • Burkina Faso • Chad • Nigeria
+                </div>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left">
+                  <thead className="bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-mono uppercase text-[10px]">
+                    <tr>
+                      <th className="p-3">Country</th>
+                      <th className="p-3">Lithium Threat Index</th>
+                      <th className="p-3">Informal Mining Share</th>
+                      <th className="p-3">Insurgent Control Risk</th>
+                      <th className="p-3">Gov Oversight</th>
+                      <th className="p-3">Primary Exploitation Vector</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-stone-200 dark:divide-stone-800 text-stone-600 dark:text-stone-300">
+                    {sahelCountriesData.map((row, idx) => (
+                      <tr key={idx} className="hover:bg-stone-50 dark:hover:bg-stone-800/50">
+                        <td className="p-3 font-bold font-serif text-stone-900 dark:text-white">
+                          {row.country}
+                        </td>
+                        <td className="p-3 font-mono">
+                          <span className="px-2 py-0.5 rounded bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 font-bold">
+                            {row.lithiumRisk}/100
+                          </span>
+                        </td>
+                        <td className="p-3 font-mono">{row.informalPct}%</td>
+                        <td className="p-3 font-mono text-red-500 font-semibold">{row.insurgentInfluence}/100</td>
+                        <td className="p-3 font-mono text-stone-400">{row.govOversight}%</td>
+                        <td className="p-3 font-sans text-stone-500 dark:text-stone-400 max-w-xs">{row.keyThreats}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Chart: Africa Lithium Extraction & Insurgent Skim Projections */}
+              <div className="pt-4 border-t border-stone-200 dark:border-stone-800 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-stone-700 dark:text-stone-300">
+                    African Rock Lithium Production (Tonnes) vs. Estimated Insurgent Shadow Revenue ($M USD)
+                  </span>
+                  <span className="text-[10px] font-mono text-stone-400">2022–2030 Growth Surge</span>
+                </div>
+                <div className="h-64 w-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={sahelGrowthProjection} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#444" opacity={0.2} />
+                      <XAxis dataKey="year" stroke="#888" fontSize={11} />
+                      <YAxis stroke="#888" fontSize={11} />
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: '#1c1917',
+                          borderColor: '#78350f',
+                          borderRadius: '12px',
+                          color: '#fff',
+                          fontSize: '12px'
+                        }}
+                      />
+                      <Legend />
+                      <Bar dataKey="tonnesMined" name="Lithium Mined from Rock (Tonnes)" fill="#38bdf8" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="insurgentSkimUsdM" name="Insurgent & Bandit Skim ($M USD)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Three-Pillar Sovereign Governance Solution */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-stone-900 text-stone-100 border border-amber-600/30 space-y-6">
+              <div className="border-b border-stone-800 pb-3 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest font-bold block">
+                    POLICY RECOMMENDATIONS
+                  </span>
+                  <h3 className="text-lg font-serif font-bold text-white">
+                    The 3 Pillars to Prevent Lithium Becoming the Next Blood Mineral
+                  </h3>
+                </div>
+                <ShieldCheck size={24} className="text-emerald-400 shrink-0" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-emerald-400">1. Formalize Artisanal Mining</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Bring small-scale miners into registered cooperatives with legal protections, transparent pricing, fair contracts, and restored state authority over extraction perimeters.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-sky-400">2. Cross-Border Mineral Tracking</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Sahelian regional intelligence sharing to track mineral transport routes across porous corridors and interdict shadow mineral-for-weapons swaps.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                  <div className="text-xs font-mono font-bold text-amber-400">3. Domestic Value-Add Processing</div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Mandate domestic refining and battery component manufacturing within origin nations rather than exporting raw rock, retaining wealth and building robust institutional governance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB 2: ILLICIT FINANCIAL FLOWS */}
+        {/* ========================================================================= */}
+        {activeSubTab === 'illicit_flows' && (
+          <div className="space-y-8 animate-fade-in">
+            
+            <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <span className="text-[10px] font-mono text-amber-500 uppercase tracking-widest font-bold block">FINANCIAL EXPOSENOMICS & ASYMMETRIC WARFARE</span>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-white flex items-center gap-2">
+                    <DollarSign className="text-amber-500" size={22} />
+                    Illicit Financial Flows: Shadow Mining to Terrorist Weapon Pipelines
+                  </h3>
+                </div>
+                <div className="text-xs font-mono text-stone-500 bg-stone-100 dark:bg-stone-800 px-3 py-1.5 rounded-lg">
+                  Est. Annual Shadow Value: $3.5B+ USD
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed max-w-4xl">
+                Unregulated artisanal gold, tin, and coltan extraction operates outside formal banking systems through informal value transfer networks (Hawala), physical couriers, and cross-border smuggling corridors. This shadow cash liquidity directly finances insurgent factions, armed bandits, and extremist terror networks across West Africa.
+              </p>
+
+              {/* Step-by-Step Flow Pipeline */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-2">
+                
+                <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 space-y-2">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    01
+                  </div>
+                  <h4 className="text-xs font-bold text-amber-900 dark:text-amber-200 font-mono uppercase">Subsistence Scavenging</h4>
+                  <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-tight">
+                    Impoverished miners manually dig artisanal pits, receiving less than 10%–15% of spot market value in cash or food rations from local buyers.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900/50 space-y-2">
+                  <div className="w-8 h-8 rounded-lg bg-red-500 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    02
+                  </div>
+                  <h4 className="text-xs font-bold text-red-900 dark:text-red-200 font-mono uppercase">Bandit Warlord Taxation</h4>
+                  <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-tight">
+                    Armed bandit syndicates and militia cartels levy extortion taxes on mining pits, demanding access fees and confiscating high-grade ore at gunpoint.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/50 space-y-2">
+                  <div className="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    03
+                  </div>
+                  <h4 className="text-xs font-bold text-rose-900 dark:text-rose-200 font-mono uppercase">Laundering & Arms Trade</h4>
+                  <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-tight">
+                    Illicit gold and cassiterite are smuggled through regional porous borders (Niger, Chad, Cameroon, Benin) and swapped for military rifles, RPGs, and ammunition.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-stone-100 dark:bg-stone-800 border border-stone-300 dark:border-stone-700 space-y-2">
+                  <div className="w-8 h-8 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    04
+                  </div>
+                  <h4 className="text-xs font-bold text-stone-900 dark:text-stone-100 font-mono uppercase">International Smelters</h4>
+                  <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-tight">
+                    Unrefined gold is consolidated into international refineries, mixed with certified supplies, and laundered into global consumer electronics and jewelry markets.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Economic Disparity Box */}
+              <div className="p-5 rounded-2xl bg-stone-900 text-stone-200 border border-amber-600/30 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between border-b border-stone-800 pb-2 text-amber-400 font-bold">
+                  <span>EXPOSENOMICS VALUE DISPARITY ANALYSIS (1 KG GOLD EQUIVALENT)</span>
+                  <span>SPOT PRICE: ~$65,000 USD / KG</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[11px]">
+                  <div>
+                    <span className="text-stone-400 block">Subsistence Miner Share:</span>
+                    <strong className="text-rose-400 text-sm">$6,500 – $9,750 (10%–15%)</strong>
+                    <p className="text-[10px] text-stone-500 mt-0.5">Absorbs 100% of toxic lead/mercury burden & physical mortality risk.</p>
+                  </div>
+                  <div>
+                    <span className="text-stone-400 block">Armed Cartel / Terrorist Skim:</span>
+                    <strong className="text-red-400 text-sm">$32,500 – $48,750 (50%–75%)</strong>
+                    <p className="text-[10px] text-stone-500 mt-0.5">Purchases Kalashnikov rifles, rocket-propelled grenades, and night-vision optics.</p>
+                  </div>
+                  <div>
+                    <span className="text-stone-400 block">International Smuggling Middlemen:</span>
+                    <strong className="text-amber-300 text-sm">$9,750 – $19,500 (15%–30%)</strong>
+                    <p className="text-[10px] text-stone-500 mt-0.5">Launders mineral provenance across international commodities hubs.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB 3: TOXIC EXPOSURE PATHWAYS */}
+        {/* ========================================================================= */}
+        {activeSubTab === 'toxic_pathways' && (
+          <div className="space-y-8 animate-fade-in">
+            
+            <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <span className="text-[10px] font-mono text-rose-500 uppercase tracking-widest font-bold block">CLINICAL TOXICOLOGY & BIO-PERSISTENCE</span>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-white flex items-center gap-2">
+                    <Skull className="text-rose-500" size={22} />
+                    Toxic Exposure Pathways: Heavy Metal Ingestion & Neurological Atrophy
+                  </h3>
+                </div>
+                <div className="text-xs font-mono text-stone-500 bg-stone-100 dark:bg-stone-800 px-3 py-1.5 rounded-lg">
+                  Critical Toxicants: Galena (PbS), Mercury (Hg), Arsenic (As), Tin (Sn)
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                {/* Pathway 1: Domestic Ore Crushing */}
+                <div className="p-5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-3">
+                  <div className="w-8 h-8 rounded-lg bg-rose-500 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    01
+                  </div>
+                  <h4 className="text-sm font-bold text-stone-900 dark:text-white font-serif">
+                    Domestic Flour Mill Ore Pulverization
+                  </h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    In the Zamfara crisis, gold-bearing quartz contained up to 10%–20% galena (lead sulfide). When artisanal miners brought rocks into residential family compounds and pulverized them in commercial flour mills, fine breathable dust contaminated sleeping mats, cooking pots, and soil with &gt;100,000 ppm lead.
+                  </p>
+                </div>
+
+                {/* Pathway 2: Pediatric Hand-to-Mouth Ingestion */}
+                <div className="p-5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-3">
+                  <div className="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    02
+                  </div>
+                  <h4 className="text-sm font-bold text-stone-900 dark:text-white font-serif">
+                    Pediatric Hand-to-Mouth Ingestion
+                  </h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Infants and toddlers crawling on lead-dusted dirt floors absorb up to 50% of ingested lead (compared to 10% in adults) due to active calcium transport mechanisms. Blood lead levels (BLL) rapidly exceeded 100 μg/dL, causing acute cerebral edema, status epilepticus convulsions, and fatal encephalopathy in over 400 infants.
+                  </p>
+                </div>
+
+                {/* Pathway 3: Mercury Amalgamation & Water Pollution */}
+                <div className="p-5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-3">
+                  <div className="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs font-mono">
+                    03
+                  </div>
+                  <h4 className="text-sm font-bold text-stone-900 dark:text-white font-serif">
+                    Mercury Vapor & Acid Mine Drainage
+                  </h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Liquid elemental mercury (Hg) is mixed with crushed ore to create gold amalgams, then burned with blowtorches without retorts, releasing neurotoxic methylmercury vapors directly into maternal and infant respiratory systems. Unremediated pit tailings generate acid mine drainage, leaching lead and arsenic into local drinking wells.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Roulet's Law Neurological Perturbation Note */}
+              <div className="p-5 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 space-y-2">
+                <div className="flex items-center gap-2 text-rose-700 dark:text-rose-300 font-bold text-xs font-mono uppercase">
+                  <AlertOctagon size={16} />
+                  <span>Roulet's Law: The Biological Acceleration of Impulsive Violence</span>
+                </div>
+                <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">
+                  Lead (Pb²⁺) mimics calcium (Ca²⁺) across the blood-brain barrier, selectively degrading the prefrontal cortex and anterior cingulate cortex. Children who survive sublethal lead poisoning suffer permanent loss of executive impulse control, elevated aggression, and diminished cognitive inhibition. When whole cohorts of youth in artisanal mining zones grow up with severe lead encephalopathy, the neurochemical threshold for recruitment into violent banditry and insurgent militias drops drastically.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB 4: FORENSIC INVESTIGATION & RADIO NIGERIA AUDIT */}
+        {/* ========================================================================= */}
+        {activeSubTab === 'forensic_audit' && (
+          <div className="space-y-8 animate-fade-in">
+            
+            <div className="p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest font-bold block">OFFICIAL FORENSIC DISPATCH</span>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-white flex items-center gap-2">
+                    <Search className="text-emerald-500" size={22} />
+                    Forensic Investigation: Radio Nigeria Audit & Federal Reclamation Strategy
+                  </h3>
+                </div>
+                <div className="text-xs font-mono text-stone-500 bg-stone-100 dark:bg-stone-800 px-3 py-1.5 rounded-lg">
+                  Published: August 16, 2026
+                </div>
+              </div>
+
+              {/* Investigation Brief Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div className="p-5 rounded-2xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-3">
+                  <div className="flex items-center gap-2 text-stone-900 dark:text-white font-bold text-sm font-serif">
+                    <Skull className="text-red-500" size={16} />
+                    <span>The Kassa (Barkin Ladi) Mine Pit Collapse Audit</span>
+                  </div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    On August 16, 2026, seven artisanal miners were killed instantly when an unsupported abandoned tin mine pit collapsed in Kassa, Barkin Ladi Local Government Area of Plateau State. Forensic analysis revealed zero geotechnical shoring, zero atmospheric gas monitoring, and extensive undercut waterlogging from seasonal rains. Minister Dele Alake confirmed the disaster was 100% preventable.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-3">
+                  <div className="flex items-center gap-2 text-stone-900 dark:text-white font-bold text-sm font-serif">
+                    <MapPin className="text-amber-500" size={16} />
+                    <span>The 4,000+ Abandoned Pit Forensic Catalog</span>
+                  </div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Nigeria possesses over 4,000 un-reclaimed legacy pits spanning colonial tin excavations on the Jos Plateau to recent gold pits in Zamfara, Niger, and Kaduna. These excavations act as physical death traps for livestock and humans, breeding grounds for malaria vectors, and unsupervised access portals for illegal armed mining syndicates.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* 2026 Federal 3-Pillar Solution */}
+              <div className="p-6 rounded-2xl bg-stone-900 text-stone-200 border border-emerald-500/30 space-y-4">
+                <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  <ShieldCheck size={16} />
+                  <span>The 2026 Federal Government 3-Pillar Solution Architecture</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                  <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-1.5">
+                    <strong className="text-emerald-300 block font-mono">Pillar 1: Mandatory Cooperatives</strong>
+                    <p className="text-stone-400 text-[11px] leading-tight">
+                      Miners must organize into registered cooperatives to access legal mineral titles, protective equipment, and direct market off-takers.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-1.5">
+                    <strong className="text-amber-300 block font-mono">Pillar 2: AI & Satellite Surveillance</strong>
+                    <p className="text-stone-400 text-[11px] leading-tight">
+                      Deploying GIS Earth observation and machine learning models to detect illegal ground disturbances and real-time excavation clusters.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-1.5">
+                    <strong className="text-sky-300 block font-mono">Pillar 3: National Mine Pit Reclamation</strong>
+                    <p className="text-stone-400 text-[11px] leading-tight">
+                      Funding the engineering conversion of dangerous pits into solar energy fields, municipal water reservoirs, and commercial aquaculture fisheries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB 5: 4,000+ ABANDONED PITS GIS & HEAVY METAL DATA */}
         {/* ========================================================================= */}
         {activeSubTab === 'regional_gis' && (
           <div className="space-y-8 animate-fade-in">
@@ -440,7 +1153,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
         )}
 
         {/* ========================================================================= */}
-        {/* TAB 3: CARTEL VS. LICENSED COOPERATIVE MODEL */}
+        {/* TAB 6: CARTEL VS. LICENSED COOPERATIVE MODEL */}
         {/* ========================================================================= */}
         {activeSubTab === 'coop_transition' && (
           <div className="space-y-8 animate-fade-in">
@@ -509,7 +1222,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
         )}
 
         {/* ========================================================================= */}
-        {/* TAB 4: LIVE ORE EXPOSURE & TERRORISM FINANCING SIMULATOR */}
+        {/* TAB 7: LIVE ORE EXPOSURE & TERRORISM FINANCING SIMULATOR */}
         {/* ========================================================================= */}
         {activeSubTab === 'simulation' && (
           <div className="space-y-8 animate-fade-in">
@@ -730,7 +1443,7 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
           onClick={() => setShowArtworkModal(false)}
         >
           <div 
-            className="relative bg-stone-950 border border-amber-600/40 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl"
+            className="relative bg-stone-950 border border-amber-600/40 rounded-3xl max-w-5xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -752,13 +1465,140 @@ export const ArtisanalMiningExposenomics: React.FC<ArtisanalMiningExposenomicsPr
               </button>
             </div>
 
-            {/* Modal Image Body */}
-            <div className="flex-1 overflow-auto p-4 sm:p-6 flex items-center justify-center bg-black">
-              <img
-                src={artisanalMiningImg}
-                alt="Artisanal Mining & Exposenomics of Terrorism Infographic Plate"
-                className="max-h-[60vh] w-auto max-w-full object-contain rounded-xl border border-stone-800 shadow-2xl"
-              />
+            {/* Modal Sub-Tabs */}
+            <div className="px-4 py-2 border-b border-stone-800 bg-stone-950 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <div className="flex flex-wrap items-center gap-1.5">
+                {[
+                  { id: 'provenance', label: '🖼️ Image & Provenance' },
+                  { id: 'sahel_lithium', label: '⚡ Sahel Lithium & 4 Variables' },
+                  { id: 'history', label: '🏛️ Deep History' },
+                  { id: 'flows', label: '💸 Illicit Financial Flows' },
+                  { id: 'toxicology', label: '☠️ Toxic Pathways' },
+                  { id: 'forensics', label: '🔍 Forensic Audit' }
+                ].map((mTab) => (
+                  <button
+                    key={mTab.id}
+                    onClick={() => setModalTab(mTab.id as any)}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      modalTab === mTab.id
+                        ? 'bg-amber-600 text-white font-bold'
+                        : 'bg-stone-900 text-stone-400 hover:text-white hover:bg-stone-800'
+                    }`}
+                  >
+                    {mTab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Artwork Plate Toggle */}
+              <div className="flex items-center gap-1 bg-stone-900 p-1 rounded-lg border border-stone-800">
+                <button
+                  onClick={() => setModalArtworkView('sahel_four_variables')}
+                  className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors cursor-pointer ${
+                    modalArtworkView === 'sahel_four_variables'
+                      ? 'bg-sky-600 text-white font-bold'
+                      : 'text-stone-400 hover:text-white'
+                  }`}
+                >
+                  4 Variables Plate
+                </button>
+                <button
+                  onClick={() => setModalArtworkView('deep_time_plate')}
+                  className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors cursor-pointer ${
+                    modalArtworkView === 'deep_time_plate'
+                      ? 'bg-amber-600 text-white font-bold'
+                      : 'text-stone-400 hover:text-white'
+                  }`}
+                >
+                  Deep History Plate
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Content Body */}
+            <div className="flex-1 overflow-auto p-4 sm:p-6 bg-black text-stone-200">
+              {modalTab === 'provenance' && (
+                <div className="flex flex-col items-center justify-center space-y-4">
+                  <img
+                    src={modalArtworkView === 'sahel_four_variables' ? rouletsLawSahelImg : rouletsLawMiningImg}
+                    alt="Roulet's Law Artisanal Mining & Exposenomics Artwork"
+                    className="max-h-[50vh] w-auto max-w-full object-contain rounded-xl border border-stone-800 shadow-2xl"
+                  />
+                  <div className="text-center max-w-2xl space-y-1">
+                    <p className="text-xs text-amber-300 font-serif font-bold">
+                      Roulet's Law: Perturbation × Uncertainty = Chaos × Relativity
+                    </p>
+                    <p className="text-xs text-stone-300 font-serif">
+                      {modalArtworkView === 'sahel_four_variables'
+                        ? "Comprehensive 4-variable exposenomics plate: Perturbation (deep-time lithic knapping & modern lithium extraction), Uncertainty (governance voids & 4,000+ pits), Chaos (toxic encephalopathy, disease & Boko Haram cash pipelines), and Relativity (Global North clean EV demand vs. Sahelian conflict)."
+                        : "High-resolution visual forensic plate illustrating the cross-generational continuum from Stone Age flint knapping and Chalcolithic lead smelting to modern unregulated artisanal mining in Zamfara, pediatric encephalopathy, and global conflict financing."}
+                    </p>
+                    <p className="text-[10px] text-stone-500 font-mono">
+                      Cryptographic Vault Verification: 0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {modalTab === 'sahel_lithium' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-sky-400">Sahel Lithium Scramble & Geopolitical Entanglement</h4>
+                  <p>
+                    Published in <em>The Conversation</em> (August 16, 2026), research across Nigeria, Mali, Burkina Faso, Niger, and Chad demonstrates that the global green transition (scaling African lithium extraction from 40,000 to 500,000 tonnes by 2030) is being rapidly captured by armed insurgencies including Boko Haram and ISWAP.
+                  </p>
+                  <p>
+                    Where governance and regulatory oversight are weak, insurgent groups tax miners, control transit routes, and provide shadow "security," converting green energy demand into military weapons pipelines while local populations suffer environmental degradation, acute heavy metal toxicity, and chronic poverty.
+                  </p>
+                </div>
+              )}
+
+              {modalTab === 'history' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-amber-400">Deep History & Evolutionary Metallurgy</h4>
+                  <p>
+                    Artisanal mining represents humanity's oldest industrial activity after fire. Originating in the Lower Paleolithic when primates selected stones with specialized conchoidal fracturing properties (flint, obsidian, quartzite) for defense and tool-making, mineral extraction initiated the arms race of territorial warfare.
+                  </p>
+                  <p>
+                    With the Bronze and Iron Ages, early civilizations transitioned from stone knapping to smelting galena (lead sulfide) and chalcopyrite (copper), creating the first large-scale occupational heavy metal poisonings and institutionalizing slave labor in subterranean mines.
+                  </p>
+                </div>
+              )}
+
+              {modalTab === 'flows' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-amber-400">Illicit Financial Flows & Terrorist Laundering</h4>
+                  <p>
+                    Unregulated artisanal gold and tin mining represents the worst economics in human history: subsistence diggers receive pennies on the dollar while violent syndicates (Boko Haram, ISWAP, regional bandit cartels) skim 70%–85% of the mineral value.
+                  </p>
+                  <p>
+                    Over $3.5 billion in shadow minerals is laundered annually through regional porous borders and international smelting centers, directly procuring military rifles, rockets, and heavy munitions.
+                  </p>
+                </div>
+              )}
+
+              {modalTab === 'toxicology' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-amber-400">Toxic Exposure Pathways & Clinical Neuropathy</h4>
+                  <p>
+                    Grinding lead-rich gold ore (galena) in household flour mills causes extreme aerosolization, saturating residential compounds with &gt;100,000 ppm lead dust.
+                  </p>
+                  <p>
+                    Infants crawling on dirt floors ingest toxic dust, suffering blood lead levels exceeding 100 μg/dL, acute encephalopathy, intractable seizures, and severe prefrontal cortex atrophy (Roulet's Law).
+                  </p>
+                </div>
+              )}
+
+              {modalTab === 'forensics' && (
+                <div className="space-y-4 max-w-3xl mx-auto text-xs leading-relaxed font-sans">
+                  <h4 className="text-sm font-serif font-bold text-amber-400">Forensic Investigation & 2026 Strategy</h4>
+                  <p>
+                    Following the Kassa (Barkin Ladi) tin mine pit collapse on August 16, 2026, which claimed seven lives, Minister Dele Alake confirmed that 4,000+ abandoned pits across Nigeria pose catastrophic safety and toxicological hazards.
+                  </p>
+                  <p>
+                    The Federal Government's 2026 strategy enforces cooperative registration, AI satellite tracking, and conversion of hazardous pits into renewable energy parks and aquaculture fish farms.
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Modal Footer Provenance */}

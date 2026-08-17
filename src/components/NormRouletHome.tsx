@@ -77,12 +77,14 @@ import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_178
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
-import artisanalMiningImg from '../assets/images/artisanal_mining_terrorism_nigeria_1786937796982.jpg';
+import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
   if (
+    u.includes('roulets_law_mining') ||
+    u.includes('1786944208391') ||
     u.includes('artisanal_mining') ||
     u.includes('artisanal') ||
     u.includes('terrorism_nigeria') ||
@@ -92,7 +94,7 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('zamfara') ||
     u.includes('abandoned_pits')
   ) {
-    return artisanalMiningImg;
+    return rouletsLawMiningImg;
   }
   if (
     u.includes('google_pha') ||
@@ -404,11 +406,11 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   const magazineArticles: ArticleFeedItem[] = [
     {
       id: 'MAG-NIGERIA-ARTISANAL-MINING-TERRORISM-2026',
-      title: 'FG Warns Illegal Miners, Seeks Investors for 4,000+ Abandoned Pits: Artisanal Extraction, Boko Haram Terrorist Financing & The Exposenomics of Deep-Time Savagery',
+      title: 'FG Warns Illegal Miners, Seeks Investors for 4,000+ Abandoned Pits: Roulet\'s Law, Artisanal Extraction & Boko Haram Terrorist Financing',
       category: 'Exposenomics',
       date: '2026-08-16',
-      imageSrc: artisanalMiningImg,
-      summary: 'Radio Nigeria Dispatch (August 16, 2026): Minister Dele Alake issues urgent warning following the Barkin Ladi (Plateau State) mine collapse that claimed seven lives. With 4,000+ hazardous abandoned pits across Nigeria, ICEarth exposenomics reveals artisanal mining as humanity\'s oldest industry after fire—the genesis of stone weaponry and anthropogenic savagery. In modern West Africa, unregulated artisanal gold and tin scavenging supports millions of lowest-subsistence laborers while poisoning water tables, causing horrific pediatric lead encephalopathy (400+ child deaths in Zamfara), and generating billions in illicit shadow cash flows laundered directly to Boko Haram and ISWAP for military arms.',
+      imageSrc: rouletsLawMiningImg,
+      summary: 'Radio Nigeria Dispatch (August 16, 2026): Minister Dele Alake issues urgent warning following the Barkin Ladi (Plateau State) mine collapse that claimed seven lives. Guided by Roulet\'s Law—Perturbation (since Stone Age flint knapping, Chalcolithic smelting, and Zamfara pits) × Uncertainty (Government regulatory voids) = Chaos (Mass poisoning, terrorism & corruption) × Relativity (Global conflict & inequity)—ICEarth synthesizes the exposenomics of deep-time savagery and the 2026 cooperative remediation pathway.',
       fullText: `FG WARNS ILLEGAL MINERS, SEEKS INVESTORS FOR 4,000+ ABANDONED PITS
 RADIO NIGERIA OFFICIAL DISPATCH & EXPOSENOMICS ANALYSIS
 
@@ -419,13 +421,20 @@ Exposenomics Synthesis: Norman Roulet (ICEarth Founder & GCLAC Co-Chair)
 Interactive Engine: https://icearth.org/?tab=artisanal_mining
 Cryptographic Vault Hash: 0xICEARTH_ARTISANAL_MINING_TERRORISM_NIGERIA_2026
 
+ROULET'S LAW FORMULATION:
+Perturbation (since Stone Age tool extraction, Chalcolithic lead/copper smelting, and Zamfara artisanal mining)
+× Uncertainty (Government regulatory voids and unmonitored abandoned pits)
+= Chaos (Mass acute pediatric encephalopathy, pit collapses, armed banditry, Boko Haram / ISWAP financing, and institutional corruption)
+× Relativity (Global commodities conflict, supply chain laundering, and environmental ecocide)
+
 1. THE PLATEAU MINE COLLAPSE & THE 4,000 PIT THREAT:
 Minister of Solid Minerals Development Dele Alake expressed sorrow over the death of seven artisanal miners in an abandoned pit collapse in Kassa, Barkin Ladi LGA, Plateau State. Over 4,000 unregulated pits across Nigeria remain hazardous legacies of past exploitation.
 
-2. THE EXPOSENOMICS OF TERRORISM (ROULET'S LAW):
+2. THE EXPOSENOMICS OF TERRORISM:
 Artisanal mining is the oldest industry in hominid history after fire. When early primates sought flint and mineral ores for spears and fire, they triggered anthropogenic savagery. In modern Nigeria, unregulated artisanal extraction represents the worst economics in human history:
 • Lowest Subsistence Labor: Impoverished families work hazardous pits without shoring or PPE for pennies on the dollar.
 • Pediatric Lead Encephalopathy: In Zamfara, crushing lead-bearing gold ore (galena) inside homes poisoned thousands and killed 400+ children (blood lead > 100 µg/dL).
+• Terrorist Weapon Pipelines: Illicit gold and cassiterite flow through shadow smuggling corridors, funding Boko Haram, ISWAP, and regional kidnap-for-ransom militias.
 • Terrorist & Bandit Financing: Billions in illicit mineral shadow flows provide liquid cash for Boko Haram, ISWAP, and kidnapping cartels.
 
 3. THE 2026 REMEDIATION & COOPERATIVE REFORMATION BLUEPRINT:
@@ -1029,14 +1038,14 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
       id: 'PHOTO-000V',
-      title: 'Artisanal Mining & The Exposenomics of Terrorism: Deep-Time Savagery, 4,000+ Abandoned Pits, Zamfara Lead Crisis & Boko Haram Financing (Plate #15)',
+      title: "Roulet's Law: Deep-Time Artisanal Mining, Chalcolithic Smelting, Zamfara Lead Crisis & The Exposenomics of Terrorism (Plate #15)",
       category: 'Artisanal Mining Toxicology & Terrorism Exposenomics',
-      imageSrc: artisanalMiningImg,
+      imageSrc: rouletsLawMiningImg,
       location: 'Plateau State (Barkin Ladi / Kassa), Zamfara Gold Fields & Federal Ministry of Solid Minerals (Nigeria)',
       date: '2026-08-16',
-      description: 'Origins: Landmark forensic exposenomics plate documenting Radio Nigeria\'s August 16, 2026 report on the Barkin Ladi mine collapse, Minister Dele Alake\'s declaration on 4,000+ hazardous abandoned pits across Nigeria, and the exposenomics synthesis by Norman Roulet. Analyzes artisanal mining as humanity\'s oldest industry after fire—the primordial genesis of tool-making, stone weaponry, and anthropogenic savagery. Details how unregulated artisanal mining represents the worst economics in human history: impoverished subsistence miners pulverizing toxic galena inside homes, destroying clean aquifers, causing catastrophic pediatric lead encephalopathy (400+ child deaths in Zamfara), while generating billions in illicit shadow cash flows laundered to Boko Haram, ISWAP, and kidnapping syndicates.',
+      description: "Origins: Landmark forensic exposenomics plate and concept visual based on Roulet's Law: Perturbation (since stone age artisanal mining, lead mining and smelting during the Chalcolithic Copper Age, and artisanal mining in Zamfara) × Uncertainty (government regulatory void) = Chaos (mass poisoning, terrorism and corruption) × Relativity (global conflict, inequity, and environmental disaster). Documents Radio Nigeria's August 16, 2026 report on the Barkin Ladi mine collapse, Minister Dele Alake's declaration on 4,000+ hazardous abandoned pits across Nigeria, and the exposenomics synthesis by Norman Roulet. Connects deep-time lithic knapping and weapons genesis with pediatric lead encephalopathy in Zamfara and shadow mineral laundering to Boko Haram.",
       vaultHash: '0xICEARTH_ARTISANAL_MINING_TERRORISM_NIGERIA_2026',
-      tags: ['ArtisanalMining', 'TerrorismExposenomics', 'NigeriaMining', 'BokoHaram', 'PlateauState', 'BarkinLadi', 'ZamfaraLeadCrisis', 'AbandonedPits', 'DeleAlake', 'RouletsLaw', 'RadioNigeria', 'ICEarth']
+      tags: ['RouletsLaw', 'ArtisanalMining', 'TerrorismExposenomics', 'NigeriaMining', 'BokoHaram', 'PlateauState', 'BarkinLadi', 'ZamfaraLeadCrisis', 'AbandonedPits', 'DeleAlake', 'RadioNigeria', 'ICEarth']
     },
     {
       id: 'PHOTO-000U',

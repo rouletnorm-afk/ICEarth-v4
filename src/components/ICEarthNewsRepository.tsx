@@ -20,7 +20,8 @@ import swissAbmExposenomicsImg from '../assets/images/swiss_abm_exposenomics_178
 import waterLeadPipesAbmImg from '../assets/images/water_lead_pipes_abm_1786782646441.jpg';
 import predictiveChildWelfareAbmImg from '../assets/images/predictive_child_welfare_abm_1786815282419.jpg';
 import googlePhaAbmImg from '../assets/images/google_pha_icearth_abm_1786862883107.jpg';
-import artisanalMiningImg from '../assets/images/artisanal_mining_terrorism_nigeria_1786937796982.jpg';
+import rouletsLawMiningImg from '../assets/images/roulets_law_mining_1786944208391.jpg';
+import rouletsLawSahelImg from '../assets/images/roulets_law_four_variables_sahel_lithium_1786946853842.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -107,6 +108,18 @@ const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
   if (
+    u.includes('roulets_law_sahel') ||
+    u.includes('1786946853842') ||
+    u.includes('sahel_lithium') ||
+    u.includes('sahel') ||
+    u.includes('lithium') ||
+    u.includes('four_variables')
+  ) {
+    return rouletsLawSahelImg;
+  }
+  if (
+    u.includes('roulets_law_mining') ||
+    u.includes('1786944208391') ||
     u.includes('artisanal_mining') ||
     u.includes('artisanal') ||
     u.includes('terrorism_nigeria') ||
@@ -116,7 +129,7 @@ const resolveImageUrl = (url?: string): string => {
     u.includes('zamfara') ||
     u.includes('abandoned_pits')
   ) {
-    return artisanalMiningImg;
+    return rouletsLawMiningImg;
   }
   if (
     u.includes('google_pha') ||
@@ -316,6 +329,56 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'SAHEL-LITHIUM-CRITICAL-MINERALS-CONFLICT-2026',
+    contentType: 'Article',
+    title: 'Lithium in the Sahel: How Armed Groups Are Exploiting the Global Scramble for the Critical Mineral',
+    subtitle: 'The Conversation (August 16, 2026) • Clean Energy Transition Geopolitics & Roulet\'s Law: Why the 500,000-Tonne African Lithium Boom Is Hijacked by Terrorist Syndicates, Shadow Taxation & Asymmetric Violence Across West Africa',
+    sourceUrl: 'https://theconversation.com/lithium-in-the-sahel-how-armed-groups-are-exploiting-the-global-scramble-for-the-critical-mineral-287526',
+    sourceName: 'The Conversation (Africa & Geopolitics Edition)',
+    publishDate: '2026-08-16',
+    author: 'Research Scholars in Sahel Security & Natural Resources • Exposenomics Synthesis by Norm Roulet',
+    authorName: 'The Conversation & ICEarth Sovereign Exposenomics Lab',
+    abstract: 'Every electric vehicle, smartphone, and laptop battery begins with one essential ingredient: lithium. The critical mineral sits at the centre of the global transition to cleaner energy, with over 40,000 tonnes mined from African rock annually and projections surging toward 500,000 tonnes by 2030. However, in the fragile Sahel region—spanning Nigeria, Mali, Burkina Faso, Niger, and Chad—this clean energy boom is being hijacked by armed groups, jihadist networks (Boko Haram, ISWAP), and criminal gangs. Weak governance, absent state authority, and porous borders allow non-state armed actors to extract protection taxes from artisanal miners, control transport corridors, and swap unprocessed lithium rock for high-grade weaponry. Under the ICEarth exposenomics framework and Roulet\'s Law (Perturbation × Uncertainty = Chaos × Relativity), the physical disruption of toxic mineral extraction combined with government uncertainty generates social chaos, while the relativity of global clean-tech consumption masks severe local exploitation, chronic disease, and systemic societal collapse. Solving this crisis requires formalizing artisanal miners into sovereign cooperatives, tracking regional supply lines, and mandating domestic mineral refining.',
+    editorCommentary: 'This seminal dispatch from The Conversation illustrates the full scope of Roulet\'s Law: Perturbation × Uncertainty = Chaos × Relativity. While global markets celebrate zero-emission clean technology, the unmonitored extraction of lithium across the Sahel fuels violent insurgencies, mass lead/heavy-metal toxicity, and severe human rights abuses. True sustainability demands verifiable cryptographic provenance and sovereign cooperative formalization to decouple clean energy supply chains from terror financing.',
+    fullExcerpt: `LITHIUM IN THE SAHEL: HOW ARMED GROUPS ARE EXPLOITING THE GLOBAL SCRAMBLE FOR THE CRITICAL MINERAL
+THE CONVERSATION GLOBAL EXPOSENOMICS DISPATCH
+
+Published: August 16, 2026
+Source: The Conversation (https://theconversation.com/lithium-in-the-sahel-how-armed-groups-are-exploiting-the-global-scramble-for-the-critical-mineral-287526)
+Synthesis: Norman Roulet (ICEarth Sovereign Lab)
+Cryptographic Provenance Hash: 0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026
+
+1. THE CLEAN TECH SCRAMBLE & AFRICAN DEPOSITS:
+Every electric vehicle, smartphone, and laptop battery begins with lithium. Africa produces over 40,000 tonnes of lithium mined from hard rock annually, but international market demand is projected to drive this figure past 500,000 tonnes by 2030. In West Africa and the Sahel, rich deposits across Nigeria, Mali, Burkina Faso, Niger, and Chad have triggered an unprecedented rush.
+
+2. THE UNCERTAINTY & CHAOS OF ARMED EXTRACTION:
+Across conflict-affected regions where state authority is fragile or absent:
+• Extortion & Protection Taxes: Armed groups levy daily fees on thousands of informal artisanal diggers.
+• Transportation Route Taxation: Checkpoints operated by militant syndicates extort transit vehicles carrying raw lithium ore to border ports.
+• Arms & Weaponry Swaps: High-grade lithium ore is traded directly across illicit trans-Saharan routes for automatic weapons, rocket-propelled grenades, and ammunition.
+• Criminal Gang Infiltration: In Nigeria's North-West and North-Central regions, armed bandits who previously engaged in rural cattle rustling and kidnapping have pivoted into controlling illicit lithium pits.
+
+3. ROULET'S LAW: BEYOND PHYSICAL TOXICITY:
+Under Roulet's Law:
+• Perturbation (P): The physical trauma of unmonitored blast excavation, cellular heavy-metal contamination, and aquifer destruction.
+• Uncertainty (U): Complete absence of regulatory enforcement, weak central governance, and post-coup border instability.
+• Chaos (C): Epidemics of pediatric lead/lithium poisoning, lethal mine collapses, and violent terror assaults funded by shadow mineral cash.
+• Relativity (R): The moral contradiction between Global North environmental righteousness (EV adoption) and the profound exploitation, chronic illness, and social destruction suffered by origin extraction communities.
+
+4. THREE PILLARS TO HALT BLOOD LITHIUM:
+• Cooperative Formalization: Organizing informal artisanal miners into state-recognized cooperatives equipped with safety gear, medical monitoring, and direct fair-price purchasing.
+• Regional Tracing Architecture: Unified cross-border satellite tracking and cryptographic ledger verification to eliminate black-market trade.
+• Domestic Value Addition: Restricting the export of unprocessed raw ore in favor of local processing facilities that build national infrastructure and industrial resilience.`,
+    tags: ['SahelLithium', 'CriticalMinerals', 'RouletsLaw', 'CleanEnergyParadox', 'BokoHaram', 'ISWAP', 'TheConversation', 'ArtisanalMining', 'MaliMining', 'BurkinaFaso'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'ICETaos'],
+    vaultHash: '0xICEARTH_ROULETS_LAW_SAHEL_LITHIUM_TERRORISM_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'roulets_law_four_variables_sahel_lithium_1786946853842.jpg'
+  },
   {
     id: 'NIGERIA-ARTISANAL-MINING-TERRORISM-2026',
     contentType: 'Article',
