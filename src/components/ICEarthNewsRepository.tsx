@@ -27,6 +27,8 @@ import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physic
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
+import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
+import clevelandScandalImg from '../assets/images/cleveland_cuyahoga_lead_scandal_1787170024323.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -36,6 +38,7 @@ import {
   ExternalLink,
   Share2,
   Bookmark,
+  Shield,
   ShieldCheck,
   CheckCircle2,
   Sparkles,
@@ -108,6 +111,8 @@ export interface NewsArticle {
   originState?: string;
   provenanceHash?: string;
   vaultRef?: string;
+  sourceType?: string;
+  viewCount?: number;
 }
 
 interface ICEarthNewsRepositoryProps {
@@ -119,6 +124,27 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('cleveland_cuyahoga') ||
+    u.includes('cuyahoga_lead') ||
+    u.includes('1787170024323') ||
+    u.includes('cleveland_scandal') ||
+    u.includes('unspent_lead') ||
+    u.includes('1.2_million') ||
+    u.includes('cleveland_unspent')
+  ) {
+    return clevelandScandalImg;
+  }
+  if (
+    u.includes('bangladesh') ||
+    u.includes('lead_free_2035') ||
+    u.includes('bssnews') ||
+    u.includes('1787002995679') ||
+    u.includes('dhaka') ||
+    u.includes('moefcc')
+  ) {
+    return bangladeshGraphicImg;
+  }
   if (
     u.includes('twin_cities') ||
     u.includes('minneapolis') ||
@@ -393,6 +419,151 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'CLEVELAND-COM-CUYAHOGA-UNSPENT-LEAD-FUNDS-2026',
+    contentType: 'Article',
+    title: '‘We just ran out of time’: $1.2 Million for Lead Removal Goes Unspent in Cuyahoga County',
+    subtitle: 'Cleveland.com Investigation by Kaitlin Durbin • $639,000 Forfeited by CHN Housing & $530,000 by Enterprise/Lead Safe Cleveland Coalition Following $3.3M Previously Forfeited by City of Cleveland; In Contrast, $140M+ Given in Tax Subsidies to Sherwin-Williams as 12% to 25% of Children Suffer Toxic Lead Levels',
+    sourceUrl: 'https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html',
+    sourceName: 'cleveland.com / The Plain Dealer',
+    publishDate: '2026-08-19',
+    author: 'Kaitlin Durbin (cleveland.com)',
+    authorName: 'Kaitlin Durbin • Exposenomics Forensic Commentary by Norman Roulet (GCLAC Co-Chair)',
+    abstract: 'CLEVELAND, Ohio (Aug. 19, 2026) — Nearly $1.2 million that Cuyahoga County received to remove dangerous lead from homes is being returned to the state after two of the four organizations contracted by the county failed to spend their allocations before the deadline. CHN Housing Partners left $639,000 unused, while Enterprise Community Partners (administering funds on behalf of the Lead Safe Cleveland Coalition) left $530,000 unspent. The lapse comes in a county where 80% to over 90% of housing stock was built before 1978 and 12% to 13% of city youth (up to 25% in specific inner-city census tracts) suffer elevated blood lead levels—the worst in the United States. This failure follows Cleveland previously having to forfeit $3.3 million in lead grants. In stark contrast, Ohio, Cuyahoga County, and Cleveland awarded over $140 million in public tax subsidies and abatements to Sherwin-Williams for its new downtown headquarters and research facility.',
+    editorCommentary: 'This report documents the absolute, genocidal failure of local government in Cleveland and Cuyahoga County. As former Co-Chair of the Greater Cleveland Lead Advisory Council (GCLAC), I brought the landmark lead poisoning litigation by Motley Rice against Sherwin-Williams to Ohio with East Cleveland Mayor Eric Brewer—who was brutally gay-bashed from office in political retaliation. Cleveland and Cuyahoga County politicians refused to support the litigation, sabotaging it while California won over $300 million for its children. Decades later, local government gives Sherwin-Williams $140M+ in corporate tax subsidies while repeatedly forfeiting millions in lead abatement grants due to bureaucratic incompetence ("we just ran out of time"). This deliberate poisoning of disproportionately Black children is why I refuse to coexist with my family and home community, and forms the empirical bedrock for Roulet’s Law and why ICEarth exists.',
+    fullExcerpt: `‘WE JUST RAN OUT OF TIME’: $1.2 MILLION FOR LEAD REMOVAL GOES UNSPENT IN CUYAHOGA COUNTY
+INVESTIGATIVE REPORT & MUNICIPAL KAKISTOCRACY AUDIT
+
+Published: Aug. 19, 2026, 1:12 p.m.
+Author: Kaitlin Durbin, cleveland.com
+Source: https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html
+Sovereign Provenance Hash: 0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_2026_08_19
+Interactive Engine: https://icearth.org/?tab=cleveland
+
+1. THE AUGUST 2026 GRANT LAPSE & FORFEITURE:
+• Unspent Funds Returned: Nearly $1.2 Million returned to Ohio state budget office after failing to meet the July 31 deadline.
+• CHN Housing Partners: Left $639,000 unspent ("There were more homes in need. We just ran out of time" — Laura Boustani).
+• Enterprise Community Partners / Lead Safe Cleveland Coalition: Left $530,000 unspent due to complex income verification roadblocks and tenant document refusal.
+• Successful Entities: Cuyahoga County Board of Health ($4.1M allocated, 148 units + 42 stacked projects) and City of Cleveland Heights ($1.8M total, 58 units + 2 child care centers).
+• Cumulative Forfeitures: Follows $3.3 Million previously forfeited by the City of Cleveland.
+
+2. THE CORPORATE WELFARE CONTRAST:
+• Sherwin-Williams Subsidies: $140+ Million in state, county, and municipal tax abatements, infrastructure giveaways, and public bonding awarded for its new downtown Cleveland headquarters and Brecksville R&D center.
+• Corporate Immunity: Local government protected Sherwin-Williams from liability while poisoning generations of children.
+
+3. HISTORICAL LITIGATION SABOTAGE & MAYOR ERIC BREWER RETALIATION:
+• Motley Rice Litigation: Brought to Ohio by GCLAC Co-Chair Norman Roulet and East Cleveland Mayor Eric Brewer to hold Sherwin-Williams accountable for public nuisance.
+• Political Retaliation: Mayor Eric Brewer was brutally gay-bashed from office in organized political retaliation.
+• California vs. Ohio: Identical Motley Rice litigation won $305+ Million for 10 California cities/counties. Ohio politicians and AG Richard Cordray betrayed their constituents by killing the litigation.
+
+4. PEDIATRIC CRISIS & AGING HOUSING REALITY:
+• Housing Stock: 80% to 90%+ of Cuyahoga County homes were built before 1978 (hundreds of thousands of toxic structures).
+• Pediatric Blood Lead: 12% to 13% of Cleveland children have elevated blood lead levels (surging to 25% in Glenville, Hough, and East Cleveland)—the highest rate in the United States.
+• Disproportionate Impact: Disproportionately poisons Black infants and children, destroying prefrontal impulse control and creating generational trauma under Roulet's Law.`,
+    tags: [
+      'ClevelandLead',
+      'CuyahogaCounty',
+      'ClevelandCom',
+      'PlainDealer',
+      'SherwinWilliams',
+      'EricBrewer',
+      'MotleyRice',
+      'GCLAC',
+      'RouletsLaw',
+      'EnvironmentalGenocide',
+      'LeadSafeCleveland',
+      'CHNHousing'
+    ],
+    communities: [
+      'Greater Cleveland Lead Advisory Council (GCLAC)',
+      'ICEarth Global Public Health',
+      'Cleveland Clean Water & Soil Co-op',
+      'Maternal & Pediatric Toxicology Guild',
+      'Sovereign Exposomics Guild'
+    ],
+    editorName: 'Norman Roulet (GCLAC Co-Chair)',
+    editorRole: 'ICEarth Founder & Former Co-Chair for Infrastructure, Greater Cleveland Lead Advisory Council',
+    vaultHash: '0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_2026_08_19',
+    editorialWeight: 100,
+    imageUrl: 'cleveland_cuyahoga_lead_scandal_1787170024323.jpg',
+    sourceType: 'Investigative News / Exposenomics',
+    promotedToHomePage: true,
+    viewCount: 1890
+  },
+  {
+    id: 'BANGLADESH-LEAD-FREE-2035-ACTION-PLAN-2026',
+    contentType: 'Article',
+    title: 'Cabinet Approves Draft Strategy, Action Plan for Lead-Free Bangladesh by 2035',
+    subtitle: 'BSS News Official Dispatch & MoEFCC Statutory Master Plan • 38.34% National Pediatric Blood Lead Burden (4th Highest Globally), 65.2% in Dhaka, icddr,b 98% Cohort Exposure, Inter-Ministerial Ban on Informal Battery Smelting, Turmeric Lead Chromate Adulteration & Lead-Glazed Cookware',
+    sourceUrl: 'https://www.bssnews.net/news/415591',
+    sourceName: 'Bangladesh Sangbad Sangstha (BSS) / Ministry of Environment, Forest & Climate Change',
+    publishDate: '2026-08-17',
+    author: 'BSS News (National News Agency of Bangladesh)',
+    authorName: 'BSS News • Policy Synthesis & Exposenomics Commentary by Norman Roulet',
+    abstract: 'DHAKA, Aug 17, 2026 (BSS) – The Cabinet today approved the draft of the "National Strategy and Multi-Year Action Plan for a Lead-Free Bangladesh (2026-2035)" aimed at eliminating heavy metal exposure across the country. Chaired by the Prime Minister at the Prime Minister’s Office (PMO), the Cabinet endorsed this landmark 10-year statutory framework. According to the 2025 Multiple Indicator Cluster Survey (MICS), 38.34 percent of children aged 12-59 months in Bangladesh suffer from elevated blood lead levels (≥ 5 µg/dL), with urban Dhaka reaching an alarming 65.2 percent. Furthermore, an icddr,b clinical cohort of 500 children across four districts detected lead in 98 percent of subjects. The action plan sets statutory milestones: slashing lead exposure by 50 percent by 2030 and eliminating it by 95 percent to achieve full Lead-Free nation status by 2035. The strategy mobilizes cross-ministerial crackdowns on informal used lead-acid battery (ULAB) smelters, criminalizes turmeric lead chromate polishing, certifies lead-safe cookware, and enforces 90 ppm paint standards, preventing an annual $15.9 Billion (3.6% of GDP) cognitive and economic loss.',
+    editorCommentary: 'This statutory cabinet approval represents a monumental inflection point in global environmental health and public governance. When we revealed that 1 in 3 children on Earth harbor toxic blood lead burdens—with Bangladesh ranking 4th globally—it exposed the catastrophic nexus of informal battery recycling, industrial food adulteration (turmeric lead chromate), and contaminated cookware. Under Roulet’s Law, heavy metal neurotoxicity drives societal cognitive deficits, loss of impulse control, and generational poverty ($15.9B annual loss in Bangladesh alone). Bangladesh’s 2026-2035 Action Plan serves as an exemplary sovereign blueprint for developing nations worldwide to systematically dismantle toxic vectors.',
+    fullExcerpt: `CABINET APPROVES DRAFT STRATEGY, ACTION PLAN FOR LEAD-FREE BANGLADESH BY 2035
+OFFICIAL STATUTORY DISPATCH & EXPOSENOMICS ACTION BLUEPRINT
+
+Source: Bangladesh Sangbad Sangstha (BSS) — National News Agency of Bangladesh
+Official URL: https://www.bssnews.net/news/415591
+Date of Cabinet Approval: August 17, 2026
+Lead Agency: Ministry of Environment, Forest and Climate Change (MoEFCC)
+Sovereign Provenance Hash: 0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_2026
+Interactive Engine: https://icearth.org/?tab=bangladesh_lead_free
+
+1. EXECUTIVE SUMMARY & STATUTORY MANDATE:
+DHAKA, Aug 17, 2026 (BSS) – The Cabinet today approved the draft of the "National Strategy and Multi-Year Action Plan for a Lead-Free Bangladesh (2026-2035)" aimed at eliminating heavy metal exposure across the country.
+
+Briefing reporters after the meeting at the Prime Minister's Office (PMO), Cabinet Secretary Mahbub Hossain stated that the draft was approved on condition of vetting by the Legislative and Parliamentary Affairs Division.
+
+"The main objective of the strategy is to eliminate heavy metal exposure across the country and protect the public health, especially of children and pregnant women," said the Cabinet Secretary.
+
+2. EPIDEMIOLOGICAL EVIDENCE & PEDIATRIC CRISIS:
+• MICS 2025 National Survey: 38.34% of children aged 12-59 months nationwide possess blood lead levels (BLL) ≥ 5 µg/dL.
+• Dhaka Urban Epicenter: 65.2% of children in Dhaka district have elevated BLLs, driven by high density informal battery recycling and urban particulate matter.
+• icddr,b & Stanford Clinical Cohort: Biomonitoring of 500 children across 4 districts (Dhaka, Tangail, Munshiganj, Gazipur) revealed lead contamination in 98.0% of participants, with many exceeding 20 µg/dL.
+• Global Exposure Context: Bangladesh carries the 4th highest pediatric lead burden globally, with over 35.8 million children affected.
+• Economic & Cognitive Drain: Lead toxicity destroys an estimated 28.5 million IQ points annually, costing Bangladesh $15.9 Billion per year (3.6% of National GDP).
+
+3. STATUTORY TARGETS & 10-YEAR TIMELINE:
+• Phase 1 Milestone (2026-2030): Reduce national blood lead prevalence by 50% through rapid closure of informal ULAB smelters, eradication of turmeric lead chromate, and deployment of point-of-care capillary screening in rural clinics.
+• Phase 2 Milestone (2031-2035): Reduce national blood lead prevalence by 95% from baseline, achieving statutory "Lead-Free Nation" status by December 31, 2035.
+
+4. THE SIX CORE INTER-MINISTERIAL STRATEGIC PILLARS:
+• Pillar 1: Informal ULAB Battery Recycling & Smelting Ban (MoEFCC & Ministry of Industries) — Shutting down all illegal backyard battery breakers, formalizing closed-loop industrial recycling.
+• Pillar 2: Turmeric Lead Chromate Adulteration Elimination (Ministry of Food & BFSA) — Criminal penalties and mobile XRF screening across spice wholesale markets to eradicate lead chromate root polishing.
+• Pillar 3: Lead-Safe Cookware & Glazed Utensils (BSTI & Ministry of Commerce) — Banning lead-contaminated scrap aluminum in cast cookware and eliminating lead-based glazes.
+• Pillar 4: Industrial Paint, Consumer Products & Toys (BSTI & Customs) — Enforcing the 90 ppm lead limit for paints and mandatory border screening for imported toys and kajal/surma cosmetics.
+• Pillar 5: Nationwide Biomonitoring & Clinical Chelation (DGHS / MOHFW) — Integrating capillary DBS testing into maternal/child clinics and provisioning EDTA/DMSA chelation in tertiary hospitals.
+• Pillar 6: Multi-Sectoral Governance & Public Education (Inter-Ministerial Committee) — Cabinet oversight, GIS toxic exposure tracking, and nationwide awareness for pregnant mothers regarding pica geophagy and neurotoxicity risks.`,
+    tags: [
+      'BangladeshLeadFree',
+      'BSSNews',
+      'LeadExposenomics',
+      'BatteryRecycling',
+      'TurmericAdulteration',
+      'icddrb',
+      'PublicHealth',
+      'RouletsLaw',
+      'WHOActionPlan'
+    ],
+    communities: [
+      'ICEarth Global Public Health',
+      'South Asia Exposenomics Network',
+      'Bangladesh Lead Elimination Taskforce',
+      'Maternal & Pediatric Toxicology Guild',
+      'Sovereign Exposomics Guild'
+    ],
+    editorName: 'Norman Roulet (GCLAC Co-Chair)',
+    editorRole: 'ICEarth Founder & Former Co-Chair for Infrastructure, Greater Cleveland Lead Advisory Council',
+    vaultHash: '0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_2026',
+    editorialWeight: 100,
+    imageUrl: 'bangladesh_lead_free_2035_action_plan_1787002995679.jpg',
+    sourceType: 'Government / Public Health',
+    promotedToHomePage: true,
+    viewCount: 1420
+  },
   {
     id: 'MINNPOST-TWIN-CITIES-LEAD-SERVICE-LINES-2026',
     contentType: 'Article',
@@ -2583,6 +2754,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('BangladeshLeadFree') || article.tags?.includes('BSSNews') || article.id.includes('BANGLADESH-LEAD-FREE') || article.id.includes('BANGLADESH')) && (
+                      <button
+                        onClick={() => onNavigateTab('bangladesh_lead_free')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-800 via-teal-700 to-emerald-600 hover:from-emerald-700 hover:to-teal-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-emerald-200" />
+                        <span>🇧🇩 Launch Bangladesh Lead-Free 2035 Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('TwinCities') || article.tags?.includes('MinneapolisLead') || article.id.includes('MINNPOST-TWIN-CITIES') || article.id.includes('TWIN-CITIES')) && (
                       <button
                         onClick={() => onNavigateTab('twin_cities_lead')}

@@ -109,6 +109,7 @@ import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngine';
 import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposenomics';
 import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics';
+import { BangladeshLeadFreeStrategy } from './components/BangladeshLeadFreeStrategy';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe } from 'lucide-react';
 
@@ -117,7 +118,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1490,6 +1491,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Bangladesh Lead-Free 2026-2035 National Strategy */}
+                <button
+                  onClick={() => setActiveTab('bangladesh_lead_free')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035'
+                      ? 'bg-emerald-950 text-emerald-100 border-emerald-500 shadow-md font-bold ring-1 ring-emerald-400/50'
+                      : 'hover:bg-emerald-500/20 text-emerald-950 border-emerald-400/60 bg-emerald-50/90 font-bold'
+                  }`}
+                >
+                  <Globe size={16} className={activeTab === 'bangladesh_lead_free' ? 'text-emerald-300' : 'text-emerald-700'} />
+                  <span className="flex-1 font-semibold">🇧🇩 Bangladesh Lead-Free 2035</span>
+                  <span className="px-1.5 py-0.2 bg-emerald-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Cabinet
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -1844,6 +1861,8 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'bihar', icon: Building2, label: '🇮🇳 Bihar Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'toledo', icon: Building2, label: '⚓ Toledo Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'flint', icon: Building2, label: '☣️ Flint Lead Audit & Scatterplots', badge: 'Audit', color: 'red' },
+                    { id: 'twin_cities_lead', icon: Droplets, label: '💧 Minneapolis & St. Paul Lead Audit', badge: '612/651', color: 'amber' },
+                    { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -1927,6 +1946,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'toledo' && '⚓ Toledo Audit'}
               {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
               {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && '💧 Minneapolis & St. Paul Lead Audit'}
+              {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && '🇧🇩 Bangladesh Lead-Free 2035 Plan'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3520,6 +3540,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && (
             <div className="flex-1 overflow-y-auto">
               <TwinCitiesLeadExposomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.116: BANGLADESH LEAD-FREE STRATEGY & MULTI-YEAR ACTION PLAN (2026-2035) */}
+          {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && (
+            <div className="flex-1 overflow-y-auto">
+              <BangladeshLeadFreeStrategy 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

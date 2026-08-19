@@ -26,8 +26,19 @@ import {
   Newspaper,
   Compass,
   Headphones,
-  ExternalLink
+  ExternalLink,
+  Maximize2,
+  Eye,
+  X,
+  Shield,
+  DollarSign,
+  AlertCircle,
+  Gavel,
+  FileText,
+  Layers,
+  ShieldCheck
 } from 'lucide-react';
+import clevelandScandalImg from '../assets/images/cleveland_cuyahoga_lead_scandal_1787170024323.jpg';
 import { 
   ResponsiveContainer, 
   PieChart, 
@@ -142,7 +153,8 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
   // LIA Letter Interactive Annotation State
   const [selectedLetterAnnotation, setSelectedLetterAnnotation] = useState<string | null>("annotation-1");
   const [selectedMalpracticeTopic, setSelectedMalpracticeTopic] = useState<'government' | 'scientific' | 'legal' | 'environmental' | 'advertising'>('government');
-  const [activeDossierTab, setActiveDossierTab] = useState<'letter' | 'timeline' | 'pillars' | 'quinn_part3' | 'quinn_part4' | 'quinn_part5' | 'quinn_podcast' | 'quinn_epilogue' | 'axios_critique' | 'horner_letter' | 'sw_dispute' | 'fed_legislation' | 'moulthrop_kelsey_letter'>('letter');
+  const [activeDossierTab, setActiveDossierTab] = useState<'unspent_scandal' | 'letter' | 'timeline' | 'pillars' | 'quinn_part3' | 'quinn_part4' | 'quinn_part5' | 'quinn_podcast' | 'quinn_epilogue' | 'axios_critique' | 'horner_letter' | 'sw_dispute' | 'fed_legislation' | 'moulthrop_kelsey_letter'>('letter');
+  const [showScandalModal, setShowScandalModal] = useState<boolean>(false);
 
   // Dispatch Simulator State
   const [selectedEmailTemplate, setSelectedEmailTemplate] = useState<'july15_quinn' | 'ccoal_fiscal' | 'nobel_endorsement'>('july15_quinn');
@@ -574,7 +586,26 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
               <p className="text-xs text-emerald-900 font-sans leading-relaxed">
                 The Cleveland Lead Audit & Confession system seamlessly integrates GCLAC's historical advocacy, key partners, and Chris Quinn's concluding vision into a single, cohesive interface. Use this index to locate and explore each major module:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-sans">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-xs font-sans">
+                <div className="p-3 bg-red-50/90 rounded-xl border border-red-200 flex flex-col justify-between shadow-xs hover:border-red-400 transition-colors">
+                  <div className="space-y-1">
+                    <span className="font-mono text-[9px] text-red-700 font-bold tracking-wider uppercase block">🚨 Module S • Breaking Scandal</span>
+                    <strong className="text-red-950 font-serif block text-xs">$1.2M Unspent Funds Returned</strong>
+                    <p className="text-[10.5px] text-neutral-700 leading-relaxed mt-1">
+                      Cleveland.com investigation: $1.2M unspent by CHN & Enterprise returned to state while $140M+ given to Sherwin-Williams.
+                    </p>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      setActiveDossierTab('unspent_scandal');
+                      scrollToSection('exhibit-c0-unspent-scandal');
+                    }}
+                    className="text-[9px] font-mono text-red-700 font-bold text-left mt-2 underline hover:text-red-900 cursor-pointer"
+                  >
+                    View $1.2M Scandal Audit &rarr;
+                  </button>
+                </div>
+
                 <div className="p-3 bg-white rounded-xl border border-emerald-100 flex flex-col justify-between">
                   <div className="space-y-1">
                     <span className="font-mono text-[9px] text-emerald-600 font-bold tracking-wider uppercase block">Module A • Local Statistics</span>
@@ -648,6 +679,200 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
                     Go directly to Nobel Nomination &rarr;
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* EXHIBIT C-0: AUGUST 19, 2026 CUYAHOGA COUNTY $1.2M UNSPENT LEAD FUNDS SCANDAL & CORPORATE WELFARE KAKISTOCRACY */}
+            <div id="exhibit-c0-unspent-scandal" className="p-6 md:p-8 bg-linear-to-br from-red-950/20 via-neutral-900/90 to-neutral-950 border-2 border-red-500/40 rounded-2xl shadow-xl space-y-6 text-white">
+              {/* Header Badge */}
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-red-500/30">
+                <div className="space-y-1.5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="px-3 py-1 bg-red-600/90 text-white font-mono text-[10px] uppercase font-bold tracking-widest rounded-full flex items-center gap-1.5 shadow-xs">
+                      <AlertTriangle size={12} className="animate-pulse" />
+                      BREAKING INVESTIGATION • AUGUST 19, 2026 • cleveland.com / PLAIN DEALER
+                    </span>
+                    <span className="text-[10px] font-mono text-red-400 bg-red-950/60 px-2.5 py-1 rounded border border-red-800/60">
+                      [EXHIBIT C-0: MUNICIPAL KAKISTOCRACY & GENOCIDAL REALITY]
+                    </span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-white leading-snug">
+                    ‘We just ran out of time’: $1.2 Million for Lead Removal Goes Unspent in Cuyahoga County
+                  </h3>
+                  <p className="text-xs text-neutral-300 font-sans leading-relaxed max-w-4xl">
+                    Kaitlin Durbin's investigative report exposes the unconscionable surrender of lead abatement funds back to the state by county contractors, contrasted with $140M+ in tax subsidies gifted to Sherwin-Williams and the political sabotage of the GCLAC Motley Rice litigation.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 shrink-0">
+                  <a
+                    href="https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-red-700 hover:bg-red-600 text-white font-sans text-xs font-bold rounded-xl transition-colors shadow-sm"
+                  >
+                    <ExternalLink size={13} />
+                    <span>cleveland.com Article</span>
+                  </a>
+                  <button
+                    onClick={() => setShowScandalModal(true)}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-sans text-xs font-bold rounded-xl border border-neutral-700 transition-colors cursor-pointer"
+                  >
+                    <Maximize2 size={13} />
+                    <span>Enlarge Infographic</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Side-by-Side Graphic & Key Metrics */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                {/* Left: Graphic Poster View */}
+                <div className="lg:col-span-5 space-y-3">
+                  <div 
+                    onClick={() => setShowScandalModal(true)}
+                    className="relative group rounded-xl overflow-hidden border border-red-500/40 bg-neutral-950 cursor-pointer shadow-lg hover:border-red-400 transition-all"
+                  >
+                    <img 
+                      src={clevelandScandalImg} 
+                      alt="Cuyahoga County & Cleveland Unspent Lead Funds Scandal Infographic" 
+                      className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="px-4 py-2 bg-red-600/90 text-white font-sans text-xs font-bold rounded-lg shadow-lg flex items-center gap-1.5">
+                        <Maximize2 size={14} /> Click to Inspect Full-Resolution Plate
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between text-[9px] font-mono text-neutral-400 px-1">
+                    <span>Provenance: 0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL</span>
+                    <span className="text-red-400 font-bold">Plate #23 • Forensic Dossier</span>
+                  </div>
+                </div>
+
+                {/* Right: 4-Quadrant Comparative Matrix */}
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    {/* Stat 1: Unspent Funds */}
+                    <div className="p-4 bg-red-950/40 border border-red-500/30 rounded-xl space-y-1.5">
+                      <span className="text-[10px] font-mono text-red-400 uppercase tracking-wider block font-bold">
+                        Unspent Grants Forfeited
+                      </span>
+                      <div className="text-2xl font-serif font-bold text-red-300">
+                        $1,169,000
+                      </div>
+                      <p className="text-[11px] text-neutral-300 leading-snug">
+                        Returned to Ohio state budget: $639,000 by CHN Housing Partners + $530,000 by Enterprise / Lead Safe Coalition. Preceded by <strong>$3.3M</strong> previously forfeited by City of Cleveland.
+                      </p>
+                    </div>
+
+                    {/* Stat 2: SW Subsidies */}
+                    <div className="p-4 bg-amber-950/40 border border-amber-500/30 rounded-xl space-y-1.5">
+                      <span className="text-[10px] font-mono text-amber-400 uppercase tracking-wider block font-bold">
+                        Sherwin-Williams Subsidies
+                      </span>
+                      <div className="text-2xl font-serif font-bold text-amber-300">
+                        $140M+
+                      </div>
+                      <p className="text-[11px] text-neutral-300 leading-snug">
+                        Gifted in state, county, and city tax abatements, infrastructure funds, and bonding for its downtown HQ & R&D center while government claims "administrative fatigue" to remediate homes.
+                      </p>
+                    </div>
+
+                    {/* Stat 3: Child Poisoning Rate */}
+                    <div className="p-4 bg-purple-950/40 border border-purple-500/30 rounded-xl space-y-1.5">
+                      <span className="text-[10px] font-mono text-purple-400 uppercase tracking-wider block font-bold">
+                        Pediatric Lead Crisis
+                      </span>
+                      <div className="text-2xl font-serif font-bold text-purple-300">
+                        12% – 25%
+                      </div>
+                      <p className="text-[11px] text-neutral-300 leading-snug">
+                        Highest blood lead levels in the United States (Case Western Reserve study). Disproportionately poisons Black children in Glenville, Hough, and East Cleveland.
+                      </p>
+                    </div>
+
+                    {/* Stat 4: Pre-1978 Housing Reality */}
+                    <div className="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl space-y-1.5">
+                      <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block font-bold">
+                        Pre-1978 Housing Toxic Burden
+                      </span>
+                      <div className="text-2xl font-serif font-bold text-emerald-300">
+                        80% – 90%+
+                      </div>
+                      <p className="text-[11px] text-neutral-300 leading-snug">
+                        Hundreds of thousands of toxic homes in Cuyahoga County. Total county ARPA program abated only <strong>189 homes</strong> across 15 communities before returning money.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* High Impact Pull Quote from Co-Chair Norm Roulet */}
+                  <div className="p-4 bg-neutral-900/90 border-l-4 border-red-500 rounded-r-xl space-y-1.5">
+                    <span className="text-[9px] font-mono text-red-400 uppercase tracking-widest font-bold block">
+                      STATEMENT BY GCLAC CO-CHAIR NORMAN ROULET
+                    </span>
+                    <p className="text-xs text-neutral-200 italic font-serif leading-relaxed">
+                      "The failure to save disproportionately Black children from lead poisoning is entirely the fault of local governments. While gifting $140M+ to Sherwin-Williams and returning $1.2M in unspent lead removal funds claiming 'we just ran out of time,' local politicians poisoned generations of children and gay-bashed East Cleveland Mayor Eric Brewer from office for daring to sue Sherwin-Williams. This moral collapse is why I refuse to coexist with my family and home community, and forms the empirical foundation for Roulet’s Law and ICEarth."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 4 In-Depth Forensic Indictments */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-2">
+                  <h5 className="text-xs font-mono font-bold text-red-400 uppercase flex items-center gap-1.5">
+                    <ShieldAlert size={14} className="text-red-400" />
+                    1. Bureaucratic Malaise & "Ran Out of Time"
+                  </h5>
+                  <p className="text-[11px] text-neutral-300 leading-relaxed font-sans">
+                    CHN Housing Partners left $639,000 unspent across only 46 completed units (Laura Boustani: "There were more homes in need. We just ran out of time"). Enterprise Community Partners left $530,000 unspent due to complex income verification roadblocks and tenant document refusal. Contrast this with the Cuyahoga County Board of Health ($4.1M, 148 units) and Cleveland Heights ($1.8M, 58 units) who fulfilled their contracts.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-2">
+                  <h5 className="text-xs font-mono font-bold text-amber-400 uppercase flex items-center gap-1.5">
+                    <Coins size={14} className="text-amber-400" />
+                    2. Corporate Welfare vs. Pediatric Poisoning
+                  </h5>
+                  <p className="text-[11px] text-neutral-300 leading-relaxed font-sans">
+                    While county and municipal contractors plead administrative exhaustion to abate a few dozen homes, the State of Ohio, Cuyahoga County, and City of Cleveland orchestrated a $140+ Million corporate subsidy package for Sherwin-Williams' new 36-story downtown headquarters and Brecksville R&D center. Corporate profits are protected with public billions while children suffer irreversible prefrontal cortex damage.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-2">
+                  <h5 className="text-xs font-mono font-bold text-purple-400 uppercase flex items-center gap-1.5">
+                    <Scale size={14} className="text-purple-400" />
+                    3. Motley Rice Litigation Betrayal & Mayor Brewer Retaliation
+                  </h5>
+                  <p className="text-[11px] text-neutral-300 leading-relaxed font-sans">
+                    In 2006, Norman Roulet (Co-Chair of GCLAC) and East Cleveland Mayor Eric Brewer brought the historic public nuisance litigation by Motley Rice against Sherwin-Williams. In vicious political retaliation, Mayor Eric Brewer was brutally gay-bashed from office. Cleveland politicians and Attorney General Richard Cordray sabotaged and abandoned the litigation—while the identical Motley Rice lawsuit won $305+ Million for 10 California municipalities.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-2">
+                  <h5 className="text-xs font-mono font-bold text-emerald-400 uppercase flex items-center gap-1.5">
+                    <Activity size={14} className="text-emerald-400" />
+                    4. Roulet's Law: The Biological & Social Cost
+                  </h5>
+                  <p className="text-[11px] text-neutral-300 leading-relaxed font-sans">
+                    Under Roulet's Law: Perturbation × UNCERTAINTY = Chaos × Relativity. Heavy metal neurotoxicity destroys executive impulse control, directly fueling homicide rates (e.g. 74 per 100k in 44108/44112) and educational failure. The willful refusal of local government to protect children, paired with historical concealment, proves Norman Roulet's 1980 Tulane Ethics thesis: <strong>"Nazis Believe Nazis Are Saints."</strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Action Bar */}
+              <div className="pt-3 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                <span className="text-neutral-400 font-mono text-[10px]">
+                  Archived into ICEarth Global Newsfeed & Sovereign Photographic IP Registry
+                </span>
+                <button
+                  onClick={() => {
+                    setActiveDossierTab('unspent_scandal');
+                    scrollToSection('exhibit-c4c-sw-coverup');
+                  }}
+                  className="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-sans font-bold rounded-xl transition-colors shadow-md flex items-center gap-2 cursor-pointer uppercase tracking-wider text-[11px]"
+                >
+                  <span>Open Full Scandal Dossier in Archive &rarr;</span>
+                </button>
               </div>
             </div>
 
@@ -1579,6 +1804,17 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
           {/* Core Navigation Tabs */}
           <div className="flex border-b border-neutral-900 gap-1 relative z-10 overflow-x-auto scrollbar-thin">
             <button
+              onClick={() => setActiveDossierTab('unspent_scandal')}
+              className={`px-5 py-3 font-sans text-xs font-bold uppercase tracking-wider transition-all border-b-2 cursor-pointer flex items-center gap-1.5 shrink-0 ${
+                activeDossierTab === 'unspent_scandal'
+                  ? 'border-red-500 text-red-300 bg-red-950/30'
+                  : 'border-transparent text-red-400/90 hover:text-red-300 hover:bg-red-950/10'
+              }`}
+            >
+              <AlertTriangle size={13} className="text-red-500 animate-pulse" />
+              <span>🚨 $1.2M Unspent Funds Scandal (Aug 19, 2026)</span>
+            </button>
+            <button
               onClick={() => setActiveDossierTab('letter')}
               className={`px-5 py-3 font-sans text-xs font-bold uppercase tracking-wider transition-all border-b-2 cursor-pointer ${
                 activeDossierTab === 'letter'
@@ -1712,6 +1948,306 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
 
           {/* Dossier Views */}
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            {activeDossierTab === 'unspent_scandal' && (
+              <div className="lg:col-span-12 space-y-6 animate-fade-in text-neutral-200 font-sans">
+                {/* Header Banner */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-4 border-b border-red-800/60">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="px-2.5 py-0.5 bg-red-600/20 text-red-400 font-mono text-[9px] uppercase font-bold rounded-full border border-red-500/40 flex items-center gap-1">
+                        <AlertTriangle size={10} className="animate-pulse" />
+                        Forensic Dossier ID: CUYAHOGA-2026-UNSPENT-LEAD-FUNDS
+                      </span>
+                      <span className="text-[10px] font-mono text-neutral-400">
+                        Published August 19, 2026
+                      </span>
+                    </div>
+                    <h4 className="text-xl font-serif font-bold text-neutral-100">
+                      Cuyahoga County Lead Funds Scandal & Corporate Welfare Kakistocracy
+                    </h4>
+                    <p className="text-xs text-neutral-400 max-w-4xl leading-relaxed">
+                      Investigative audit of cleveland.com's report on $1.2M unspent lead funds returned to the state, analyzed in context of $140M+ Sherwin-Williams corporate tax subsidies, GCLAC Co-Chair Norman Roulet's sabotage, and East Cleveland Mayor Eric Brewer's retaliation.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <a 
+                      href="https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-4 py-2 bg-red-700 hover:bg-red-600 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors"
+                    >
+                      <ExternalLink size={13} />
+                      <span>cleveland.com Article ↗</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Two-Column Dossier Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  
+                  {/* Left Column: Full Investigation Narrative (7 cols) */}
+                  <div className="lg:col-span-7 space-y-6">
+                    
+                    {/* Chronicle 1: The Lapsed Funds */}
+                    <div className="p-6 bg-neutral-900/90 border border-neutral-800 rounded-2xl space-y-4">
+                      <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
+                        <span className="text-[10px] font-mono font-bold text-red-400 uppercase tracking-wider flex items-center gap-1.5">
+                          <DollarSign size={14} className="text-red-400" />
+                          Exhibit 1: The $1.2M Grant Forfeiture Breakdown
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400">ARPA County Lead Allocation</span>
+                      </div>
+                      <p className="text-xs text-neutral-300 leading-relaxed">
+                        On August 19, 2026, <em>cleveland.com</em> and <em>The Plain Dealer</em> (reporter Kaitlin Durbin) published a major investigation revealing that nearly <strong>$1.2 million</strong> in American Rescue Plan Act (ARPA) lead removal funding awarded to Cuyahoga County is being surrendered back to the Ohio state budget after county-contracted non-profits failed to execute:
+                      </p>
+                      <div className="space-y-3 font-mono text-xs">
+                        <div className="p-3 bg-red-950/30 border border-red-800/40 rounded-xl space-y-1">
+                          <div className="flex justify-between font-bold text-red-300">
+                            <span>CHN Housing Partners:</span>
+                            <span>$639,000 Forfeited (Only 46 units completed)</span>
+                          </div>
+                          <p className="text-[11px] font-sans text-neutral-400">
+                            Laura Boustani (CHN Spokesperson): <em>"There were more homes in need. We just ran out of time."</em> The contract was awarded in October 2024 with a strict June 2026 state deadline.
+                          </p>
+                        </div>
+                        <div className="p-3 bg-amber-950/30 border border-amber-800/40 rounded-xl space-y-1">
+                          <div className="flex justify-between font-bold text-amber-300">
+                            <span>Enterprise Community Partners / Lead Safe Coalition:</span>
+                            <span>$530,000 Forfeited</span>
+                          </div>
+                          <p className="text-[11px] font-sans text-neutral-400">
+                            Enterprise blamed complex income-verification burdens and landlord/tenant resistance to document turnover, citing bureaucratic intake friction.
+                          </p>
+                        </div>
+                        <div className="p-3 bg-emerald-950/30 border border-emerald-800/40 rounded-xl space-y-1">
+                          <div className="flex justify-between font-bold text-emerald-300">
+                            <span>Contrast: CCBH & Cleveland Heights:</span>
+                            <span>100% Expended ($5.9M Delivered)</span>
+                          </div>
+                          <p className="text-[11px] font-sans text-neutral-400">
+                            Cuyahoga County Board of Health completed 148 homes ($4.1M) and Cleveland Heights completed 58 homes ($1.8M), proving that municipal commitment can deliver remediation when bureaucratic indifference is removed.
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-xs text-neutral-300 leading-relaxed pt-2">
+                        This is not an isolated occurrence: the City of Cleveland previously forfeited <strong>$3.3 million</strong> in federal lead abatement grants due to administrative paralysis, establishing a systematic, multi-decade pattern of local municipal abandonment.
+                      </p>
+                    </div>
+
+                    {/* Chronicle 2: Corporate Welfare Contrast */}
+                    <div className="p-6 bg-neutral-900/90 border border-neutral-800 rounded-2xl space-y-4">
+                      <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
+                        <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                          <Building2 size={14} className="text-amber-400" />
+                          Exhibit 2: The $140M+ Sherwin-Williams Corporate Welfare Contrast
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400">Subsidizing the Polluter</span>
+                      </div>
+                      <p className="text-xs text-neutral-300 leading-relaxed">
+                        While local agencies claim they "ran out of time" to protect poisoned infants from deteriorating lead paint and lead dust in pre-1978 rental properties, the State of Ohio, Cuyahoga County, and the City of Cleveland rallied together to grant <strong>over $140 million</strong> in public subsidies, property tax abatements, infrastructure bonding, and grant packages to <strong>Sherwin-Williams</strong> for its new 36-story downtown headquarters tower and Brecksville R&D center.
+                      </p>
+                      <div className="p-4 bg-neutral-950 rounded-xl border border-neutral-800 text-xs space-y-2">
+                        <div className="text-amber-300 font-bold font-mono text-[11px]">
+                          THE MUNICIPAL PARADOX OF CLEVELAND:
+                        </div>
+                        <ul className="list-disc list-inside space-y-1 text-neutral-400 text-[11.5px] leading-relaxed">
+                          <li><strong>For Corporate Lead Manufacturers:</strong> $140M+ in public incentives, tax holidays, and state-level legislative immunity passed to eliminate legal liability.</li>
+                          <li><strong>For Poisoned Children:</strong> $1.2M in unspent lead removal funds returned to the state, $3.3M in lapsed federal grants, and endless bureaucratic red tape.</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Chronicle 3: GCLAC Sabotage & Mayor Eric Brewer's Retaliation */}
+                    <div className="p-6 bg-neutral-900/90 border border-neutral-800 rounded-2xl space-y-4">
+                      <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
+                        <span className="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider flex items-center gap-1.5">
+                          <Gavel size={14} className="text-purple-400" />
+                          Exhibit 3: Motley Rice Lawsuit Sabotage & Political Retaliation
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400">The 20-Year Suppression</span>
+                      </div>
+                      <p className="text-xs text-neutral-300 leading-relaxed">
+                        In 2006, <strong>Norman Roulet</strong> served as Co-Chair of the <strong>Greater Cleveland Lead Advisory Council (GCLAC)</strong> alongside East Cleveland Mayor <strong>Eric Brewer</strong>. Together, they partnered with world-renowned tort firm <strong>Motley Rice</strong> to bring a comprehensive public nuisance lawsuit against Sherwin-Williams and other lead paint manufacturers to force them to fund universal home abatement across Cuyahoga County.
+                      </p>
+                      <div className="p-4 bg-purple-950/30 border border-purple-800/40 rounded-xl space-y-2 text-xs text-neutral-300">
+                        <strong className="text-purple-300 font-mono text-[11px] block">
+                          THE SIDEROCLASTIC CRACKDOWN:
+                        </strong>
+                        <p className="text-[11.5px] leading-relaxed">
+                          Instead of joining the lawsuit, Cleveland’s Mayor, City Council, and Cuyahoga County government actively refused to support GCLAC and sabotaged the litigation. In vicious political retaliation, Mayor Eric Brewer was brutally gay-bashed from office. Ohio Attorney General Richard Cordray subsequently dropped Ohio’s public nuisance claims, and the state legislature enacted statutory bans on municipal lead paint litigation.
+                        </p>
+                        <p className="text-[11.5px] leading-relaxed">
+                          <strong>The California Contrast:</strong> In California, where municipal governments backed Motley Rice's public nuisance litigation to verdict, the court ordered Sherwin-Williams, NL Industries, and ConAgra to pay <strong>$305 Million</strong> into a government lead abatement fund for 10 cities and counties (including Los Angeles, San Francisco, and Oakland). Cuyahoga County received $0 and forfeited its children to cognitive degradation.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Chronicle 4: Roulet's Law & Why ICEarth Exists */}
+                    <div className="p-6 bg-linear-to-br from-neutral-900 to-red-950/30 border border-red-500/30 rounded-2xl space-y-4">
+                      <div className="flex items-center justify-between border-b border-red-500/20 pb-3">
+                        <span className="text-[10px] font-mono font-bold text-red-400 uppercase tracking-wider flex items-center gap-1.5">
+                          <Activity size={14} className="text-red-400" />
+                          Exhibit 4: Roulet's Law, "Why Nazis," & ICEarth Sovereignty
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400">Philosophical & Empirical Origin</span>
+                      </div>
+                      <p className="text-xs text-neutral-300 leading-relaxed font-serif italic">
+                        "The deliberate poisoning of Black children in Cleveland is not an administrative mistake; it is an active manifestation of institutional kakistocracy. When local leaders prioritize corporate prestige over pediatric brain baselines, they prove Norman Roulet’s 1980 Tulane Ethics thesis: <strong>'Nazis Believe Nazis Are Saints.'</strong> This complete betrayal of civic duty is the exact reason I refuse coexistence with my local institutions, and why ICEarth was founded as a sovereign, cryptographically verified alternative to government failure."
+                      </p>
+                      <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-red-300">
+                        <ShieldCheck size={14} className="text-red-400" />
+                        <span>Empirical Baseline for Roulet's Law: Perturbation × UNCERTAINTY = Chaos × Relativity</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Right Column: Visual Poster & Forensic Data Matrix (5 cols) */}
+                  <div className="lg:col-span-5 space-y-6">
+                    
+                    {/* Visual Poster Card */}
+                    <div className="p-5 bg-neutral-950 border border-neutral-800 rounded-2xl space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono font-bold text-red-400 uppercase tracking-wider">
+                          Forensic Infographic Plate #23
+                        </span>
+                        <button
+                          onClick={() => setShowScandalModal(true)}
+                          className="text-[10px] font-mono text-neutral-400 hover:text-white flex items-center gap-1 cursor-pointer"
+                        >
+                          <Maximize2 size={12} />
+                          <span>Full Screen</span>
+                        </button>
+                      </div>
+
+                      <div 
+                        onClick={() => setShowScandalModal(true)}
+                        className="relative group rounded-xl overflow-hidden border border-neutral-800 cursor-pointer shadow-md"
+                      >
+                        <img 
+                          src={clevelandScandalImg} 
+                          alt="Cuyahoga County & Cleveland Unspent Lead Funds Scandal" 
+                          className="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <span className="px-3 py-1.5 bg-red-600 text-white font-mono text-[10px] font-bold rounded-lg shadow-lg flex items-center gap-1">
+                            <Eye size={12} /> Inspect Plate
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5 text-[10px] font-mono text-neutral-400 pt-2 border-t border-neutral-900">
+                        <div className="flex justify-between">
+                          <span>Provenance Vault ID:</span>
+                          <span className="text-neutral-200">PHOTO-0017</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Sovereign IP Hash:</span>
+                          <span className="text-neutral-200">0xCUYAHOGA_LEAD_UNSPENT_2026</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Subject:</span>
+                          <span className="text-red-400">Cuyahoga Lead Funds Lapsed</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Forensic Metric Comparison */}
+                    <div className="p-5 bg-neutral-950 border border-neutral-800 rounded-2xl space-y-4">
+                      <h5 className="text-xs font-mono font-bold text-neutral-200 uppercase tracking-wider border-b border-neutral-800 pb-2">
+                        Comparative Financial & Biological Ledger
+                      </h5>
+
+                      <div className="space-y-3 text-xs">
+                        <div className="p-3 bg-neutral-900 rounded-xl flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] font-mono text-neutral-400 block">Unspent Funds Returned (2026)</span>
+                            <strong className="text-red-400 text-sm">$1,169,000</strong>
+                          </div>
+                          <span className="text-[9px] font-mono bg-red-950 text-red-300 px-2 py-1 rounded border border-red-800">
+                            FORFEITED
+                          </span>
+                        </div>
+
+                        <div className="p-3 bg-neutral-900 rounded-xl flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] font-mono text-neutral-400 block">Prior Cleveland Lead Forfeiture</span>
+                            <strong className="text-red-400 text-sm">$3,300,000</strong>
+                          </div>
+                          <span className="text-[9px] font-mono bg-red-950 text-red-300 px-2 py-1 rounded border border-red-800">
+                            FORFEITED
+                          </span>
+                        </div>
+
+                        <div className="p-3 bg-neutral-900 rounded-xl flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] font-mono text-neutral-400 block">Sherwin-Williams Tax Subsidies</span>
+                            <strong className="text-amber-400 text-sm">$140,000,000+</strong>
+                          </div>
+                          <span className="text-[9px] font-mono bg-amber-950 text-amber-300 px-2 py-1 rounded border border-amber-800">
+                            GIFTED
+                          </span>
+                        </div>
+
+                        <div className="p-3 bg-neutral-900 rounded-xl flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] font-mono text-neutral-400 block">California Motley Rice Verdict</span>
+                            <strong className="text-emerald-400 text-sm">$305,000,000</strong>
+                          </div>
+                          <span className="text-[9px] font-mono bg-emerald-950 text-emerald-300 px-2 py-1 rounded border border-emerald-800">
+                            WON FOR CITIES
+                          </span>
+                        </div>
+
+                        <div className="p-3 bg-neutral-900 rounded-xl flex justify-between items-center">
+                          <div>
+                            <span className="text-[10px] font-mono text-neutral-400 block">Cleveland Motley Rice Recovery</span>
+                            <strong className="text-rose-400 text-sm">$0</strong>
+                          </div>
+                          <span className="text-[9px] font-mono bg-rose-950 text-rose-300 px-2 py-1 rounded border border-rose-800">
+                            SABOTAGED
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Quick Cross-Nav Buttons */}
+                    <div className="p-4 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-2 text-xs">
+                      <span className="text-[10px] font-mono text-neutral-400 uppercase block font-bold">
+                        Explore Related Exposenomics Modules
+                      </span>
+                      <div className="flex flex-col gap-1.5">
+                        <button
+                          onClick={() => setActiveDossierTab('quinn_part3')}
+                          className="text-left text-[11px] text-rose-400 hover:text-rose-300 underline font-mono cursor-pointer"
+                        >
+                          → Plain Dealer Confession Part 3: "They Knew"
+                        </button>
+                        <button
+                          onClick={() => setActiveDossierTab('pillars')}
+                          className="text-left text-[11px] text-rose-400 hover:text-rose-300 underline font-mono cursor-pointer"
+                        >
+                          → The 5 Malpractice Pillars of Roulet's Law
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (onNavigateTab) {
+                              onNavigateTab('cleveland_strategy');
+                            }
+                          }}
+                          className="text-left text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono cursor-pointer"
+                        >
+                          → Sovereign Cleveland Strategy & 20-Year GCLAC Timeline
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            )}
 
             {activeDossierTab === 'letter' && (
               <>
@@ -3803,6 +4339,74 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
             )}
           </div>
         </div>
+
+        {/* FULL SCREEN MODAL FOR SCANDAL INFOGRAPHIC */}
+        {showScandalModal && (
+          <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8 animate-fade-in">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+              {/* Modal Header */}
+              <div className="p-4 border-b border-neutral-800 flex items-center justify-between bg-neutral-900/80">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 bg-red-600/20 text-red-400 font-mono text-[10px] uppercase font-bold rounded-full border border-red-500/40">
+                    Sovereign Photographic Plate #23
+                  </span>
+                  <h4 className="text-sm font-serif font-bold text-neutral-100">
+                    Cuyahoga County & Cleveland Unspent Lead Funds Scandal
+                  </h4>
+                </div>
+                <button
+                  onClick={() => setShowScandalModal(false)}
+                  className="p-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 transition-colors cursor-pointer"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="p-6 overflow-y-auto space-y-4 flex-1 flex flex-col items-center justify-center bg-black/40">
+                <img 
+                  src={clevelandScandalImg} 
+                  alt="Cuyahoga County & Cleveland Lead Funds Scandal" 
+                  className="max-h-[65vh] w-auto object-contain rounded-xl border border-neutral-800 shadow-2xl"
+                />
+                
+                <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono pt-2">
+                  <div className="p-2.5 bg-neutral-900 rounded-lg border border-neutral-850">
+                    <span className="text-neutral-500 block text-[9px]">ARTICLE SOURCE</span>
+                    <strong className="text-neutral-200 text-[10.5px]">cleveland.com / Plain Dealer (Aug 19, 2026)</strong>
+                  </div>
+                  <div className="p-2.5 bg-neutral-900 rounded-lg border border-neutral-850">
+                    <span className="text-neutral-500 block text-[9px]">AUTHOR / INVESTIGATOR</span>
+                    <strong className="text-neutral-200 text-[10.5px]">Kaitlin Durbin</strong>
+                  </div>
+                  <div className="p-2.5 bg-neutral-900 rounded-lg border border-neutral-850">
+                    <span className="text-neutral-500 block text-[9px]">SOVEREIGN HASH</span>
+                    <strong className="text-red-400 text-[10.5px]">0xCUYAHOGA_LEAD_UNSPENT_2026</strong>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-4 border-t border-neutral-800 bg-neutral-900/80 flex items-center justify-between">
+                <a
+                  href="https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-mono text-red-400 hover:text-red-300 underline flex items-center gap-1.5"
+                >
+                  <ExternalLink size={13} />
+                  <span>Open Full cleveland.com Article</span>
+                </a>
+                <button
+                  onClick={() => setShowScandalModal(false)}
+                  className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white font-sans text-xs font-semibold rounded-xl transition-colors cursor-pointer"
+                >
+                  Close Viewer
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
   );
 };

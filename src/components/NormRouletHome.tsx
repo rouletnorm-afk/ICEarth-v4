@@ -84,10 +84,33 @@ import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physic
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
+import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
+import clevelandScandalImg from '../assets/images/cleveland_cuyahoga_lead_scandal_1787170024323.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('cleveland_cuyahoga') ||
+    u.includes('cuyahoga_lead') ||
+    u.includes('1787170024323') ||
+    u.includes('cleveland_scandal') ||
+    u.includes('unspent_lead') ||
+    u.includes('1.2_million') ||
+    u.includes('cleveland_unspent')
+  ) {
+    return clevelandScandalImg;
+  }
+  if (
+    u.includes('bangladesh') ||
+    u.includes('lead_free_2035') ||
+    u.includes('bssnews') ||
+    u.includes('1787002995679') ||
+    u.includes('dhaka') ||
+    u.includes('moefcc')
+  ) {
+    return bangladeshGraphicImg;
+  }
   if (
     u.includes('twin_cities') ||
     u.includes('minneapolis') ||
@@ -474,6 +497,85 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-CUYAHOGA-UNSPENT-LEAD-FUNDS-2026',
+      title: '‘We just ran out of time’: $1.2 Million for Lead Removal Goes Unspent in Cuyahoga County (Cleveland.com)',
+      category: 'Exposenomics',
+      date: '2026-08-19',
+      imageSrc: clevelandScandalImg,
+      summary: 'Cleveland.com Investigation (August 19, 2026) by Kaitlin Durbin: Nearly $1.2 million that Cuyahoga County received to remediate toxic lead is being returned to the state after CHN Housing Partners ($639,000 unspent) and Enterprise Community Partners / Lead Safe Cleveland Coalition ($530,000 unspent) failed to meet deadlines ("we just ran out of time"). This comes on top of $3.3M previously forfeited by Cleveland, while Ohio, county, and city officials granted $140M+ in tax subsidies to Sherwin-Williams as 12% to 25% of city youth suffer brain-damaging blood lead levels—the worst in America.',
+      fullText: `‘WE JUST RAN OUT OF TIME’: $1.2 MILLION FOR LEAD REMOVAL GOES UNSPENT IN CUYAHOGA COUNTY
+INVESTIGATIVE REPORT & MUNICIPAL KAKISTOCRACY AUDIT
+
+Published: Aug. 19, 2026, 1:12 p.m.
+Author: Kaitlin Durbin, cleveland.com
+Source: https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html
+Sovereign Provenance Hash: 0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_2026_08_19
+Interactive Engine: https://icearth.org/?tab=cleveland
+
+EXECUTIVE SUMMARY & SCANDAL CHRONICLE:
+1. Grant Forfeiture & Unspent Taxpayer Dollars:
+   Nearly $1.2 Million in state/federal ARPA lead removal funds returned to the state budget office after two major county providers failed to meet the July 31 deadline:
+   • CHN Housing Partners: Left $639,000 unspent across only 46 completed units ("There were more homes in need. We just ran out of time" — Laura Boustani).
+   • Enterprise Community Partners / Lead Safe Cleveland Coalition: Left $530,000 unspent due to complex income verification roadblocks and tenant document refusal.
+   • Total Program Abatements: Only 189 homes abated across 15 communities (with 54% in Cleveland and East Cleveland), barely scratching the surface of hundreds of thousands of pre-1978 toxic homes.
+   • Cumulative Forfeiture History: The City of Cleveland previously had to return $3.3 Million in unspent lead grant funding.
+
+2. The Corporate Welfare & Political Betrayal Contrast:
+   While claiming administrative fatigue and bureaucratic hurdles to save poisoned infants, Ohio, Cuyahoga County, and the City of Cleveland awarded Sherwin-Williams over $140 Million in public tax subsidies and abatements for its new downtown global headquarters and Brecksville R&D center.
+
+3. Historical Motley Rice Litigation & Retaliation against Mayor Eric Brewer:
+   As former Co-Chair for Infrastructure of the Greater Cleveland Lead Advisory Council (GCLAC), Norman Roulet brought the landmark lead paint public nuisance litigation by Motley Rice against Sherwin-Williams to Ohio with East Cleveland Mayor Eric Brewer.
+   • Political Retaliation: In direct retaliation for challenging corporate lead immunity, Mayor Eric Brewer was brutally gay-bashed from office.
+   • Municipal Sabotage: Cleveland and Cuyahoga County politicians refused to support the litigation, causing Ohio's effort to fail—while the exact same Motley Rice litigation in California won over $300 Million for 10 cities and counties.
+
+4. The Pediatric Crisis & Roulet's Law Foundation:
+   Case Western Reserve University research documents that 12% to 13% of Cleveland children (up to 25% in Glenville, Hough, and East Cleveland) suffer elevated blood lead levels—the highest in the United States. Under Roulet's Law, this deliberate governmental failure to protect Black children drives prefrontal impulse destruction, chronic societal violence, and systemic breakdown. This moral collapse is the foundational reason ICEarth exists.`,
+      tags: ['ClevelandLead', 'CuyahogaCounty', 'ClevelandCom', 'PlainDealer', 'SherwinWilliams', 'EricBrewer', 'MotleyRice', 'GCLAC', 'RouletsLaw', 'EnvironmentalGenocide', 'LeadSafeCleveland', 'CHNHousing', 'ICEarth'],
+      linkHash: '0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_2026_08_19',
+      publishedUrl: 'https://www.cleveland.com/news/2026/08/we-just-ran-out-of-time-12-million-for-lead-removal-goes-unspent-in-cuyahoga-county.html'
+    },
+    {
+      id: 'MAG-BANGLADESH-LEAD-FREE-2035-2026',
+      title: 'Cabinet Approves Draft Strategy, Multi-Year Action Plan for Lead-Free Bangladesh by 2035',
+      category: 'Exposenomics',
+      date: '2026-08-17',
+      imageSrc: bangladeshGraphicImg,
+      summary: 'BSS News Dispatch & Ministry of Environment, Forest and Climate Change (August 17, 2026): Landmark Cabinet approval for national master plan to eliminate heavy metal exposure by 2035. Bangladesh carries the 4th highest pediatric lead burden globally (38.34% of children aged 12-59 months have elevated BLL ≥ 5 µg/dL, surging to 65.2% in Dhaka; icddr,b detected lead in 98% of 500-child cohort). Plan imposes statutory bans on informal battery recycling (ULAB), criminalizes turmeric lead chromate adulteration, mandates lead-free cookware, and enforces 90 ppm paint standards, preventing an annual $15.9 Billion (3.6% of GDP) loss.',
+      fullText: `CABINET APPROVES DRAFT STRATEGY, ACTION PLAN FOR LEAD-FREE BANGLADESH BY 2035
+OFFICIAL STATUTORY DISPATCH & EXPOSENOMICS ACTION BLUEPRINT
+
+Source: Bangladesh Sangbad Sangstha (BSS) — National News Agency of Bangladesh
+Official URL: https://www.bssnews.net/news/415591
+Date: August 17, 2026
+Lead Ministry: Ministry of Environment, Forest and Climate Change (MoEFCC)
+Sovereign Provenance Hash: 0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_2026
+Interactive Engine: https://icearth.org/?tab=bangladesh_lead_free
+
+EXECUTIVE SUMMARY:
+DHAKA, Aug 17, 2026 (BSS) – The Cabinet today approved the draft of the "National Strategy and Multi-Year Action Plan for a Lead-Free Bangladesh (2026-2035)" aimed at eliminating heavy metal exposure across the country and protecting public health, especially of children and pregnant women.
+
+EPIDEMIOLOGICAL EVIDENCE & PEDIATRIC BURDEN:
+1. 38.34% National Pediatric Burden (MICS 2025):
+   According to the 2025 Multiple Indicator Cluster Survey (MICS), 38.34% of children aged 12-59 months in Bangladesh suffer from elevated blood lead levels (≥ 5 µg/dL).
+2. 65.2% Dhaka Urban Epicenter:
+   Urban Dhaka exhibits the highest concentration at 65.2%, driven by illegal backyard battery smelting, vehicular scrap, and industrial emissions.
+3. 98.0% Exposure in icddr,b Clinical Cohort:
+   Clinical biomonitoring by icddr,b across four districts (Dhaka, Tangail, Munshiganj, Gazipur) detected lead in 98.0% of children tested.
+4. Economic Loss of $15.9 Billion / Year:
+   Lead neurotoxicity destroys 28.5 million IQ points annually in Bangladeshi children, causing an estimated $15.9 Billion annual economic drain (3.6% of national GDP).
+
+SIX CORE STATUTORY PILLARS:
+• Pillar 1: Informal ULAB Battery Recycling & Smelting Ban (MoEFCC & Ministry of Industries)
+• Pillar 2: Turmeric Lead Chromate Adulteration Elimination (Ministry of Food & BFSA)
+• Pillar 3: Lead-Safe Cookware & Glazed Utensils Certification (BSTI)
+• Pillar 4: Industrial Paint, Consumer Products & Toys (BSTI Limit 90 ppm)
+• Pillar 5: Nationwide Biomonitoring & Clinical Chelation Protocols (DGHS / MOHFW)
+• Pillar 6: Multi-Sectoral Governance & Public Education (Inter-Ministerial Steering Committee)`,
+      tags: ['BangladeshLeadFree', 'BSSNews', 'LeadExposenomics', 'BatteryRecycling', 'TurmericAdulteration', 'icddrb', 'PublicHealth', 'RouletsLaw', 'WHOActionPlan', 'ICEarth'],
+      linkHash: '0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_2026',
+      publishedUrl: 'https://www.bssnews.net/news/415591'
+    },
     {
       id: 'MAG-TWIN-CITIES-LEAD-SERVICE-LINES-2026',
       title: 'With Funding Set to Dry Up, Minneapolis & St. Paul Face Tough Choices on Lead Pipe Removal',
@@ -1240,6 +1342,28 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AD',
+      title: 'Cuyahoga County & Cleveland Unspent Lead Funds Scandal & Corporate Welfare Kakistocracy (Plate #23)',
+      category: 'Municipal Governance, Corporate Liability & Environmental Genocide Proofs',
+      imageSrc: clevelandScandalImg,
+      location: 'Cleveland, East Cleveland, Cleveland Heights & Cuyahoga County, Ohio',
+      date: '2026-08-19',
+      description: 'Origins: Forensic investigative plate illustrating Kaitlin Durbin’s Cleveland.com exposé ("‘We just ran out of time’: $1.2 million for lead removal goes unspent in Cuyahoga County"). Exposes CHN Housing Partners ($639,000 unspent) and Enterprise Community Partners / Lead Safe Cleveland Coalition ($530,000 unspent) forfeiting critical lead removal funds back to the state, following $3.3M previously forfeited by Cleveland. Contrasts this failure with $140M+ in tax subsidies gifted to Sherwin-Williams for its downtown HQ, while 12% to 25% of inner-city children suffer toxic blood lead poisoning (highest in America). Documents the historical sabotage of GCLAC Co-Chair Norman Roulet and East Cleveland Mayor Eric Brewer’s Motley Rice litigation against Sherwin-Williams (and Brewer’s retaliatory gay-bashing), establishing the bedrock proof for Roulet’s Law.',
+      vaultHash: '0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_2026_08_19',
+      tags: ['ClevelandLead', 'CuyahogaCounty', 'ClevelandCom', 'PlainDealer', 'SherwinWilliams', 'EricBrewer', 'MotleyRice', 'GCLAC', 'RouletsLaw', 'EnvironmentalGenocide', 'LeadSafeCleveland', 'CHNHousing', 'ICEarth']
+    },
+    {
+      id: 'PHOTO-000AC',
+      title: 'Lead-Free Bangladesh (2026–2035) Cabinet Action Plan & Pediatric Exposenomics (Plate #22)',
+      category: 'Global Pediatric Exposenomics & Sovereign Policy Proofs',
+      imageSrc: bangladeshGraphicImg,
+      location: 'Dhaka, Tangail, Munshiganj, Gazipur, Bangladesh & PMO Cabinet',
+      date: '2026-08-17',
+      description: 'Origins: Landmark sovereign policy plate illustrating the Bangladesh Cabinet approval of the "National Strategy and Multi-Year Action Plan for a Lead-Free Bangladesh (2026-2035)". Illustrates the national 38.34% pediatric blood lead elevation (≥5 µg/dL), 65.2% Dhaka epicenter, icddr,b 98% cohort detection, and annual $15.9 Billion (3.6% of GDP) cognitive drain. Maps the 6 core inter-ministerial pillars: informal battery recycling bans, criminal penalties for turmeric lead chromate adulteration, lead-safe cookware certification, 90 ppm paint standards, and national clinical biomonitoring.',
+      vaultHash: '0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_2026',
+      tags: ['BangladeshLeadFree', 'BSSNews', 'LeadExposenomics', 'BatteryRecycling', 'TurmericAdulteration', 'icddrb', 'PublicHealth', 'RouletsLaw', 'WHOActionPlan', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AB',
       title: 'Minneapolis & St. Paul Lead Service Line Removal & 2027 Funding Cliff Forensic Plate (Plate #21)',

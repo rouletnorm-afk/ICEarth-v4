@@ -28,6 +28,8 @@ import nanospireCavitationImg from '../assets/images/nanospire_cavitation_physic
 import leclairEffectLenrImg from '../assets/images/leclair_effect_lenr_1786957653497.jpg';
 import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_paper_1786958430029.jpg';
 import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
+import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
+import clevelandScandalImg from '../assets/images/cleveland_cuyahoga_lead_scandal_1787170024323.jpg';
 import {
   Shield,
   UserCheck,
@@ -159,6 +161,24 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AD',
+      title: 'Cuyahoga County & Cleveland Unspent Lead Funds Scandal & Corporate Welfare Kakistocracy (Plate #23)',
+      type: 'Municipal Governance, Corporate Liability & Environmental Genocide Sovereign IP Asset',
+      imageSrc: clevelandScandalImg,
+      link: 'cleveland',
+      description: 'Origins: Forensic investigative asset illustrating Kaitlin Durbin’s Cleveland.com exposé ("‘We just ran out of time’: $1.2 million for lead removal goes unspent in Cuyahoga County"). Documents CHN Housing Partners ($639k) and Enterprise Community Partners / Lead Safe Coalition ($530k) forfeiting unspent lead remediation grants, following $3.3M forfeited by Cleveland. Contrasts this with $140M+ in tax subsidies gifted to Sherwin-Williams as 12% to 25% of children suffer lead poisoning (worst in America). Analyzes the historical sabotage of GCLAC Co-Chair Norman Roulet and Mayor Eric Brewer’s Motley Rice lawsuit, Brewer’s retaliatory gay-bashing, and the empirical foundation of Roulet’s Law.',
+      sovereignHash: '0xCUYAHOGA_LEAD_UNSPENT_FUNDS_SCANDAL_CLEVELANDCOM_SOVEREIGN_IP_2026'
+    },
+    {
+      id: 'IP-000AC',
+      title: 'Lead-Free Bangladesh (2026–2035) Cabinet Action Plan & Pediatric Exposenomics (Plate #22)',
+      type: 'Global Pediatric Exposenomics & Sovereign National Strategy IP Asset',
+      imageSrc: bangladeshGraphicImg,
+      link: 'bangladesh_lead_free',
+      description: 'Origins: Landmark sovereign policy asset illustrating the Bangladesh Cabinet approval of the "National Strategy and Multi-Year Action Plan for a Lead-Free Bangladesh (2026-2035)". Synthesizes national pediatric BLL metrics (38.34% national, 65.2% Dhaka epicenter, icddr,b 98% detection), annual $15.9 Billion (3.6% of GDP) loss, and 6 core inter-ministerial enforcement pillars.',
+      sovereignHash: '0xBANGLADESH_LEAD_FREE_2035_ACTION_PLAN_BSS_SOVEREIGN_IP_2026'
+    },
     {
       id: 'IP-000AB',
       title: 'Minneapolis & St. Paul Lead Service Line Removal & 2027 Funding Cliff Forensic Plate (Plate #21)',
