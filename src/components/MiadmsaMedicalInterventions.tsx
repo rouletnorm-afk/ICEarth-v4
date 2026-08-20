@@ -187,6 +187,15 @@ export const MiadmsaMedicalInterventions: React.FC<MiadmsaMedicalInterventionsPr
               </button>
 
               <button
+                onClick={() => onNavigateTab ? onNavigateTab('medical_interventions') : null}
+                className="px-3 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono flex items-center gap-1.5 transition-colors cursor-pointer"
+                title="View All Medical Interventions & Protocols"
+              >
+                <Stethoscope size={14} />
+                <span>Medical Interventions Suite</span>
+              </button>
+
+              <button
                 onClick={() => setShowImageModal(true)}
                 className="px-3 py-1.5 rounded-lg bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/40 text-xs font-mono flex items-center gap-1.5 transition-colors cursor-pointer"
               >

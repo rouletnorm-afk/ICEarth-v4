@@ -60,9 +60,11 @@ import {
   Cell
 } from 'recharts';
 import { MiadmsaMedicalInterventions } from './components/MiadmsaMedicalInterventions';
+import { MedicalInterventionsTab } from './components/MedicalInterventionsTab';
 import { speakExposenomicsText, stopExposenomicsSpeech } from './lib/speechUtils';
 
 export type MainTab =
+  | 'medical_interventions'
   | 'miadmsa_chelation'
   | 'roulets_law'
   | 'exposome_matrix'
@@ -150,6 +152,18 @@ export const App: React.FC = () => {
             {/* Desktop Navigation Tabs */}
             <nav className="hidden md:flex items-center gap-1.5 p-1 rounded-xl bg-stone-900/60 border border-stone-800/80">
               <button
+                onClick={() => setActiveTab('medical_interventions')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
+                  activeTab === 'medical_interventions'
+                    ? 'bg-emerald-600 text-white shadow-md'
+                    : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/60'
+                }`}
+              >
+                <Stethoscope className="w-4 h-4 text-emerald-300" />
+                <span>Medical Interventions</span>
+              </button>
+
+              <button
                 onClick={() => setActiveTab('miadmsa_chelation')}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
                   activeTab === 'miadmsa_chelation'
@@ -177,11 +191,11 @@ export const App: React.FC = () => {
                 onClick={() => setActiveTab('exposome_matrix')}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
                   activeTab === 'exposome_matrix'
-                    ? 'bg-emerald-600 text-white shadow-md'
+                    ? 'bg-teal-600 text-white shadow-md'
                     : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/60'
                 }`}
               >
-                <Activity className="w-4 h-4 text-emerald-300" />
+                <Activity className="w-4 h-4 text-teal-300" />
                 <span>Pre-Industrial Baseline</span>
               </button>
 
@@ -221,11 +235,27 @@ export const App: React.FC = () => {
       {/* ========================================================================= */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
 
+        {/* TAB 0: CLINICAL MEDICAL INTERVENTIONS & CHELATION SUITE */}
+        {activeTab === 'medical_interventions' && (
+          <div className="animate-in fade-in duration-200">
+            <MedicalInterventionsTab
+              onNavigateTab={(tab) => {
+                if (tab === 'miadmsa_chelation') setActiveTab('miadmsa_chelation');
+                if (tab === 'roulets_law') setActiveTab('roulets_law');
+                if (tab === 'simulator') setActiveTab('simulator');
+                if (tab === 'exposome_matrix') setActiveTab('exposome_matrix');
+              }}
+              siteTheme={siteTheme}
+            />
+          </div>
+        )}
+
         {/* TAB 1: MiADMSA MULTI-METAL ONCOLOGY BREAKTHROUGH */}
         {activeTab === 'miadmsa_chelation' && (
           <div className="animate-in fade-in duration-200">
             <MiadmsaMedicalInterventions
               onNavigateTab={(tab) => {
+                if (tab === 'medical_interventions') setActiveTab('medical_interventions');
                 if (tab === 'roulets_law') setActiveTab('roulets_law');
                 if (tab === 'simulator') setActiveTab('simulator');
                 if (tab === 'exposome_matrix') setActiveTab('exposome_matrix');
