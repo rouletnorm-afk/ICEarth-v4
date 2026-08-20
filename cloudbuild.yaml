@@ -1,0 +1,49 @@
+substitutions:
+  _IMAGE_NAME: 'us-east1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/roulet-s-law-book-icearth-platform:${COMMIT_SHA}'
+  _SERVICE_NAME: 'roulet-s-law-book-icearth-platform'
+  _REGION: 'us-east1'
+
+steps:
+  # Step 0: Build Docker container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_IMAGE_NAME'
+      - '.'
+
+  # Step 1: Push container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_IMAGE_NAME'
+
+  # Step 2: Strip stale source annotations and deploy updated container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        set -e
+        echo "Fetching current Cloud Run service specification..."
+        gcloud run services describe $_SERVICE_NAME --region=$_REGION --format=export > service.yaml || true
+
+        if [ -s service.yaml ]; then
+          echo "Cleaning stale source annotations from service spec..."
+          sed -i '/run.googleapis.com\/sources/d' service.yaml
+
+          echo "Updating container image tag in service specification..."
+          sed -i "s|image: .*|image: $_IMAGE_NAME|" service.yaml
+
+          echo "Replacing Cloud Run service configuration..."
+          gcloud run services replace service.yaml --region=$_REGION
+        else
+          echo "Service specification not found, deploying directly..."
+          gcloud run deploy $_SERVICE_NAME --image=$_IMAGE_NAME --region=$_REGION --platform=managed --quiet --allow-unauthenticated
+        fi
+
+images:
+  - '$_IMAGE_NAME'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
