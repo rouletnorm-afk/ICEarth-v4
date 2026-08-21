@@ -162,6 +162,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
 
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
+      id: 'IP-000AE',
+      title: 'Professor Raphael Anakwue: Toxic Shadows & The Heart-Habitat Interface (UNN 249th Inaugural Lecture)',
+      type: 'Cardiovascular Exposenomics, Environmental Pharmacology & African Public Health Sovereign IP Asset',
+      imageSrc: 'https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Professor-Raphael-Anakwue.jpeg',
+      link: 'nigeria_heart_habitat',
+      description: 'Origins: Landmark cardiovascular exposenomics asset featuring Professor Raphael Anakwue’s 249th Inaugural Lecture at the University of Nigeria, Nsukka ("Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface"). Synthesizes the Sub-Saharan African CVD paradox (50% surge in cardiovascular mortality despite low Framingham risks), 22M+ petrol generators emitting cardiotoxic exhaust at 12m proximity, 60M daily plastic water sachets, heavy metal burdens (95% student Cr, 73% Cd, 33% Pb), and the Heart-Healthy City transformation blueprint.',
+      sovereignHash: '0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_SOVEREIGN_IP_2026'
+    },
+    {
       id: 'IP-000AD',
       title: 'Cuyahoga County & Cleveland Unspent Lead Funds Scandal & Corporate Welfare Kakistocracy (Plate #23)',
       type: 'Municipal Governance, Corporate Liability & Environmental Genocide Sovereign IP Asset',

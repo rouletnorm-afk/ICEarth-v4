@@ -500,6 +500,35 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-NIGERIA-HEART-HABITAT-TOXIC-SHADOWS-ANAKWUE-2026',
+      title: 'Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface (UNN 249th Inaugural Lecture)',
+      category: 'Exposenomics',
+      date: '2026-08-20',
+      imageSrc: 'https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Professor-Raphael-Anakwue.jpeg',
+      summary: 'University of Nigeria, Nsukka 249th Inaugural Lecture by Professor Raphael Anakwue (Cardiology & Cardiovascular Pharmacology): Officially establishes the "Toxic Shadows" and "Heart-Habitat Interface" paradigm. Sub-Saharan Africa CVD mortality surged 50% over three decades despite low classical Framingham risks. Professor Anakwue exposes 22M+ petrol generators (emitting CO & PM2.5 causing acute troponin I spikes and myocardial necrosis), 60M daily sachet plastics, heavy metal burdens (95% student chromium, 73% cadmium, 33% lead), market rice contamination, and the Zamfara lead disaster, establishing the 6-pillar Heart-Healthy City framework.',
+      fullText: `BEYOND TRADITIONAL CARDIOVASCULAR RISK FACTORS: TOXIC SHADOWS AND THE HEART-HABITAT INTERFACE
+UNIVERSITY OF NIGERIA, NSUKKA • 249TH INAUGURAL LECTURE
+Delivered: August 20, 2026 | Princess Alexandra Auditorium, UNN
+Author: Professor Raphael Anakwue (Professor of Cardiology and Cardiovascular Pharmacology)
+Sovereign Provenance Hash: 0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_2026
+Full Transcript & Interactive Engine: https://icearth.org/?tab=nigeria_heart_habitat
+
+KEY HIGHLIGHTS & SCIENTIFIC FINDINGS:
+1. The Epidemiological Paradox: Sub-Saharan Africa has experienced a 50% increase in CVD deaths over 30 years despite low prevalence of traditional Framingham risk factors (low smoking rates, lower average cholesterol). Air pollution is now the second-leading contributor to global CVD deaths (8.1 million/yr).
+2. The Concept of "Toxic Shadows": Environmental toxicants operate silently, accumulate across lifetimes, displace burdens onto vulnerable geographies (e-waste, battery recycling), and transmit epigenetic damage across generations.
+3. Nigerian Exposome Vectors:
+   • 22M+ small generators ("I pass my neighbour") flooding living quarters with exhaust; canine studies demonstrate marked troponin I elevation, oxidative stress (MDA), and myocardial coagulative necrosis at 12m.
+   • 60M daily plastic water sachets leaching FTIR-confirmed microplastics into the bloodstream.
+   • University student survey: 95% elevated chromium, 73% cadmium, 33% lead, 25% mercury; cadmium directly predicted dyslipidemia (OR 1.074).
+   • Market rice analysis: Extreme copper, arsenic, and cadmium contamination across commercial dishes.
+   • Zamfara artisanal mining: World's largest lead disaster (mean BLL 119 µg/dL, 735+ child fatalities).
+4. Pathophysiological Mechanisms: Endothelial nitric oxide depletion, systemic inflammation (IL-6, TNF-alpha), mitochondrial energy failure, plaque rupture, calcium channel disruption, and autonomic instability.
+5. The Heart-Healthy City Blueprint: Six pillars for environmental urban transformation, raising gas flaring fines above $2/kscf, stainless steel food mill standards, and creating the medical specialty of Environmental Cardiology.`,
+      tags: ['NigeriaCardiology', 'ToxicShadows', 'HeartHabitat', 'Anakwue', 'UNN249', 'Exposenomics', 'GeneratorFumes', 'Microplastics', 'LeadPoisoning', 'FraminghamParadox'],
+      linkHash: '0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_2026',
+      publishedUrl: 'https://www.thisdaylive.com/2026/08/20/beyond-traditional-cardiovascular-risk-factors-toxic-shadows-and-the-heart-habitat-interface/'
+    },
+    {
       id: 'MAG-LEAD-HISTORIOGRAPHY-SCIENCE-CORRUPTION-2026',
       title: 'The Corruption of Science: Essential Historiography on How the Lead Industry Manufactured Doubt & Paralyzed Regulation',
       category: 'Exposenomics',
@@ -1413,6 +1442,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AE',
+      title: 'Professor Raphael Anakwue: Toxic Shadows & The Heart-Habitat Interface (UNN 249th Inaugural Lecture)',
+      category: 'Cardiovascular Exposenomics, Environmental Pharmacology & African Public Health',
+      imageSrc: 'https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Professor-Raphael-Anakwue.jpeg',
+      location: 'Princess Alexandra Auditorium, University of Nigeria, Nsukka (UNN), Enugu State, Nigeria',
+      date: '2026-08-20',
+      description: 'Origins: Forensic scientific and photographic plate featuring Professor Raphael Anakwue, Professor of Cardiology and Cardiovascular Pharmacology at the College of Medicine, University of Nigeria, delivering the 249th Inaugural Lecture ("Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface"). Features the epidemiological paradox of Sub-Saharan Africa (50% surge in CVD mortality despite low Framingham risks), 22M+ petrol generators emitting cardiotoxic exhaust at 12m proximity, 60M daily plastic water sachets, heavy metal contamination (95% Cr, 73% Cd, 33% Pb), and the blueprint for Heart-Healthy Cities.',
+      vaultHash: '0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_2026',
+      tags: ['NigeriaCardiology', 'ToxicShadows', 'HeartHabitat', 'Anakwue', 'UNN249', 'Exposenomics', 'GeneratorFumes', 'Microplastics', 'LeadPoisoning', 'FraminghamParadox', 'HeartHealthyCity', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AD',
       title: 'Cuyahoga County & Cleveland Unspent Lead Funds Scandal & Corporate Welfare Kakistocracy (Plate #23)',

@@ -423,6 +423,45 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'NIGERIA-HEART-HABITAT-TOXIC-SHADOWS-ANAKWUE-2026',
+    contentType: 'Research',
+    title: 'Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface',
+    subtitle: 'University of Nigeria, Nsukka • 249th Inaugural Lecture (August 20, 2026) • Professor Raphael Anakwue (Cardiology & Cardiovascular Pharmacology) • The Epidemiological Paradox: Sub-Saharan Africa CVD Surges 50% Despite Low Traditional Risk Factors • 22M Generators, 60M Sachet Waters, Artisanal Mining & The 12 Mechanisms of Cardiotoxicity',
+    sourceUrl: 'https://www.thisdaylive.com/2026/08/20/beyond-traditional-cardiovascular-risk-factors-toxic-shadows-and-the-heart-habitat-interface/',
+    sourceName: 'ThisDay Live & University of Nigeria, Nsukka (249th Inaugural Lecture)',
+    publishDate: '2026-08-20',
+    author: 'Professor Raphael Anakwue, MBBS, MSc, FMCP, FWACP, FACC, FNCS',
+    authorName: 'Professor Raphael Anakwue (UNN College of Medicine) • Indexed by ICEarth Sovereign Lab',
+    abstract: 'Delivered at the Princess Alexandra Auditorium, University of Nigeria, Nsukka, Professor Raphael Anakwue—Professor of Cardiology and Cardiovascular Pharmacology—officially presents the groundbreaking paradigm of "Toxic Shadows" and the "Heart-Habitat Interface." While traditional cardiovascular calculators (Framingham 1998 and PREVENT 2023) focus almost exclusively on hypertension, lipids, diabetes, and smoking, cardiovascular mortality in Sub-Saharan Africa has surged 50% over three decades among non-smokers with low cholesterol. Professor Anakwue deconstructs the Nigerian exposome: 22 million+ petrol generators emitting carbon monoxide and PM2.5 at 12m proximity (causing acute troponin I elevation and myocardial necrosis), 60 million daily plastic "pure water" sachets releasing microplastics, toxic heavy metal exposures (95% student chromium, 73% cadmium, 33% lead), market rice contamination (arsenic and copper), and the legacy of the Zamfara lead disaster (mean BLL 119 µg/dL). He outlines the 12 cardiotoxic biological mechanisms and establishes the "Heart-Healthy City" framework.',
+    editorCommentary: 'Professor Raphael Anakwue’s inaugural lecture is one of the most vital scientific declarations of our generation. It bridges clinical cardiology, cardiovascular pharmacology, and environmental exposenomics, proving that the explosion of cardiovascular disease in the Global South is driven by unmeasured environmental toxicants rather than classical lifestyle metrics. At ICEarth, we integrate Professor Anakwue’s complete lecture transcript, experimental canine generator studies, student heavy metal cohorts, and the Heart-Healthy City blueprint into our Sovereign Exposenomics Repository.',
+    fullExcerpt: `BEYOND TRADITIONAL CARDIOVASCULAR RISK FACTORS: TOXIC SHADOWS AND THE HEART-HABITAT INTERFACE
+UNIVERSITY OF NIGERIA, NSUKKA • 249TH INAUGURAL LECTURE
+Delivered: August 20, 2026 | Princess Alexandra Auditorium, UNN
+Author: Professor Raphael Anakwue (Professor of Cardiology and Cardiovascular Pharmacology)
+Sovereign Provenance Hash: 0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_2026
+Full Transcript & Interactive Engine: https://icearth.org/?tab=nigeria_heart_habitat
+
+KEY HIGHLIGHTS & SCIENTIFIC FINDINGS:
+1. The Epidemiological Paradox: Sub-Saharan Africa has experienced a 50% increase in CVD deaths over 30 years despite low prevalence of traditional Framingham risk factors (low smoking rates, lower average cholesterol). Air pollution is now the second-leading contributor to global CVD deaths (8.1 million/yr).
+2. The Concept of "Toxic Shadows": Environmental toxicants operate silently, accumulate across lifetimes, displace burdens onto vulnerable geographies (e-waste, battery recycling), and transmit epigenetic damage across generations.
+3. Nigerian Exposome Vectors:
+   • 22M+ small generators ("I pass my neighbour") flooding living quarters with exhaust; canine studies demonstrate marked troponin I elevation, oxidative stress (MDA), and myocardial coagulative necrosis at 12m.
+   • 60M daily plastic water sachets leaching FTIR-confirmed microplastics into the bloodstream.
+   • University student survey: 95% elevated chromium, 73% cadmium, 33% lead, 25% mercury; cadmium directly predicted dyslipidemia (OR 1.074).
+   • Market rice analysis: Extreme copper, arsenic, and cadmium contamination across commercial dishes.
+   • Zamfara artisanal mining: World's largest lead disaster (mean BLL 119 µg/dL, 735+ child fatalities).
+4. Pathophysiological Mechanisms: Endothelial nitric oxide depletion, systemic inflammation (IL-6, TNF-alpha), mitochondrial energy failure, plaque rupture, calcium channel disruption, and autonomic instability.
+5. The Heart-Healthy City Blueprint: Six pillars for environmental urban transformation, raising gas flaring fines above $2/kscf, stainless steel food mill standards, and creating the medical specialty of Environmental Cardiology.`,
+    tags: ['NigeriaCardiology', 'ToxicShadows', 'HeartHabitat', 'Anakwue', 'UNN249', 'Exposenomics', 'GeneratorFumes', 'Microplastics', 'LeadPoisoning', 'FraminghamParadox'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'ICETaos'],
+    vaultHash: '0xNIGERIA_HEART_HABITAT_TOXIC_SHADOWS_ANAKWUE_UNN249_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Research Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Professor-Raphael-Anakwue.jpeg'
+  },
+  {
     id: 'CORRUPTION-OF-SCIENCE-LEAD-HISTORIOGRAPHY-CANON-2026',
     contentType: 'Research',
     title: 'The Corruption of Science: Essential Historiography on How the Lead Industry Manufactured Doubt',
@@ -478,6 +517,10 @@ THE FOUR ESSENTIAL TEXTS ON CORPORATE SCIENCE CORRUPTION:
 EXPOSENOMICS CONCLUSION:
 The ongoing crisis in cities like Cleveland, where 14.5% to 18% of children test positive for lead and millions in remediation grants lapse unspent, is the direct physical manifestation of these documented institutional strategies. Physical abatement must replace political accommodation.`,
     tags: ['Lead Historiography', 'Markowitz & Rosner', 'Clair Patterson', 'Herbert Needleman', 'David Michaels', 'Toxic Truth', 'Deceit and Denial', 'Lead Wars', 'Roulet’s Law', 'Cleveland Lead Audit'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xLEAD_HISTORIOGRAPHY_SCIENCE_CORRUPTION_CANON_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'GCLAC Co-Chair & Sovereign Research Director',
     imageUrl: clevelandScandalImg,
     readTime: '6 min read'
   },
@@ -529,6 +572,10 @@ EXPOSENOMICS GOVERNANCE AUDIT & THE ACCOUNTABILITY BUFFER:
 3. The Structural Buffer: Municipal and county entities delegate lead prevention to non-profit entities funded by competitive short-term grants, absorbing public dissatisfaction while elected leadership escapes accountability for unspent funds and failed timelines.
 4. The 20-Year Retaliation Continuum: Tracing back to the 2006–2009 GCLAC initiative with Mayor Eric Brewer, local government chose corporate accommodation over aggressive legal enforcement, creating a cycle where children continue to be poisoned while millions in taxpayer grants lapse unspent.`,
     tags: ['Cleveland Lead Audit', 'Spectrum News 1', 'Lead Safe Cleveland Coalition', 'Enterprise Community Partners', 'Environmental Health Watch', 'Roulet’s Law', 'Governance Failure', 'Cuyahoga County'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xSPECTRUM_NEWS1_CLEVELAND_LEAD_EXPOSURE_NGO_BUFFER_2026_08_20',
+    editorName: 'Norm Roulet',
+    editorRole: 'GCLAC Co-Chair & Sovereign Research Director',
     imageUrl: clevelandScandalImg,
     readTime: '4 min read'
   },
@@ -2867,6 +2914,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('NigeriaCardiology') || article.tags?.includes('ToxicShadows') || article.tags?.includes('HeartHabitat') || article.tags?.includes('Anakwue') || article.id.includes('NIGERIA-HEART-HABITAT')) && (
+                      <button
+                        onClick={() => onNavigateTab('nigeria_heart_habitat')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-800 via-teal-700 to-emerald-600 hover:from-emerald-700 hover:to-teal-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-emerald-200" />
+                        <span>🇳🇬 Launch Nigeria Heart-Habitat Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('BangladeshLeadFree') || article.tags?.includes('BSSNews') || article.id.includes('BANGLADESH-LEAD-FREE') || article.id.includes('BANGLADESH')) && (
                       <button
                         onClick={() => onNavigateTab('bangladesh_lead_free')}

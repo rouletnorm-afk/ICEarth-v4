@@ -110,15 +110,16 @@ import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngin
 import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposenomics';
 import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics';
 import { BangladeshLeadFreeStrategy } from './components/BangladeshLeadFreeStrategy';
+import { NigeriaHeartHabitat } from './components/NigeriaHeartHabitat';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -257,6 +258,21 @@ export default function App() {
         lower.includes('mining')
       ) {
         setActiveTab('artisanal_mining');
+      } else if (
+        lower === 'nigeria_heart_habitat' ||
+        lower === 'nigeria_heart' ||
+        lower === 'heart_habitat' ||
+        lower === 'toxic_shadows' ||
+        lower === 'toxic-shadows' ||
+        lower === 'heart-habitat' ||
+        lower === 'anakwue' ||
+        lower === 'nigeria_cvd' ||
+        lower === 'nigeria' ||
+        lower.includes('toxic_shadows') ||
+        lower.includes('heart_habitat') ||
+        lower.includes('anakwue')
+      ) {
+        setActiveTab('nigeria_heart_habitat');
       } else if (lower === 'canary' || lower === 'evolutionary' || lower === 'evolutionary_canary') {
         setActiveTab('evolutionary_canary');
       } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
@@ -1507,6 +1523,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Toxic Shadows And The Heart-Habitat Interface, Nigeria (Prof. Raphael Anakwue) */}
+                <button
+                  onClick={() => setActiveTab('nigeria_heart_habitat')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows'
+                      ? 'bg-rose-950 text-rose-100 border-rose-500 shadow-md font-bold ring-1 ring-rose-400/50'
+                      : 'hover:bg-rose-500/20 text-rose-950 border-rose-400/60 bg-rose-50/90 font-bold'
+                  }`}
+                >
+                  <HeartPulse size={16} className={activeTab === 'nigeria_heart_habitat' ? 'text-rose-300 animate-pulse' : 'text-rose-700'} />
+                  <span className="flex-1 font-semibold">🫀 Toxic Shadows And The Heart-Habitat Interface, Nigeria</span>
+                  <span className="px-1.5 py-0.2 bg-rose-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    UNN 249
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -1863,6 +1895,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'flint', icon: Building2, label: '☣️ Flint Lead Audit & Scatterplots', badge: 'Audit', color: 'red' },
                     { id: 'twin_cities_lead', icon: Droplets, label: '💧 Minneapolis & St. Paul Lead Audit', badge: '612/651', color: 'amber' },
                     { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
+                    { id: 'nigeria_heart_habitat', icon: HeartPulse, label: '🫀 Toxic Shadows: Heart-Habitat Nigeria', badge: 'UNN 249', color: 'rose' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -3550,6 +3583,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && (
             <div className="flex-1 overflow-y-auto">
               <BangladeshLeadFreeStrategy 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117: TOXIC SHADOWS AND THE HEART-HABITAT INTERFACE, NIGERIA (PROFESSOR RAPHAEL ANAKWUE UNN 249TH INAUGURAL LECTURE) */}
+          {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows' || (activeTab as string) === 'anakwue' || (activeTab as string) === 'nigeria_cvd' || (activeTab as string) === 'nigeria') && (
+            <div className="flex-1 overflow-y-auto">
+              <NigeriaHeartHabitat 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
