@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import { 
   Shield, 
   Lock, 
@@ -39,7 +40,20 @@ import {
   ChevronRight,
   ChevronDown,
   Info,
-  Maximize2
+  Maximize2,
+  TrendingUp,
+  TrendingDown,
+  DollarSign,
+  Briefcase,
+  Award,
+  GraduationCap,
+  Scale,
+  HeartHandshake,
+  Calculator,
+  Lightbulb,
+  CheckCircle,
+  BarChart3,
+  Image as ImageIcon
 } from 'lucide-react';
 import { 
   ResponsiveContainer, 
@@ -70,16 +84,22 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
   const isLight = siteTheme === 'light';
 
   // Navigation Sub-tabs
-  const [activeSubTab, setActiveSubTab] = useState<'architecture_diagram' | 'elder_presentation' | 'ouray_muskrat_demo' | 'data_flow_simulator' | 'security_charter'>('architecture_diagram');
+  const [activeSubTab, setActiveSubTab] = useState<'architecture_diagram' | 'elder_presentation' | 'ouray_muskrat_demo' | 'data_flow_simulator' | 'security_charter' | 'business_case'>('architecture_diagram');
 
-  // Graphic View Modes for Plate #24 (New Mexico Map vs Physical Schematic vs Combined)
-  const [graphicViewMode, setGraphicViewMode] = useState<'map' | 'schematic' | 'combined'>('map');
+  // Graphic View Modes for Plate #24 (New Mexico Map vs Physical Schematic vs Forensic Map Graphic vs Combined)
+  const [graphicViewMode, setGraphicViewMode] = useState<'map' | 'schematic' | 'plate_image' | 'combined'>('map');
   const [showPlateModal, setShowPlateModal] = useState<boolean>(false);
   const [showWatershedOverlay, setShowWatershedOverlay] = useState<boolean>(true);
   const [showVpnMeshOverlay, setShowVpnMeshOverlay] = useState<boolean>(true);
   const [showDataDiodeOverlay, setShowDataDiodeOverlay] = useState<boolean>(true);
   const [showOurayOverlay, setShowOurayOverlay] = useState<boolean>(true);
   const [mapHoveredNode, setMapHoveredNode] = useState<string | null>(null);
+
+  // Business Case Calculator State
+  const [populationSize, setPopulationSize] = useState<number>(5000);
+  const [numEnterprises, setNumEnterprises] = useState<number>(6);
+  const [projectionYears, setProjectionYears] = useState<number>(5);
+  const [activeBusinessPillar, setActiveBusinessPillar] = useState<'paradigm_shift' | 'tco_roi' | 'next_gen_careers' | 'frontier_services' | 'intergovernmental'>('paradigm_shift');
 
   // Selected Network Node for Deep Inspection in Diagram
   const [selectedNodeId, setSelectedNodeId] = useState<string>('node-dulce-core');

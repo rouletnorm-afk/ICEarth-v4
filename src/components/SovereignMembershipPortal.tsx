@@ -30,6 +30,7 @@ import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_pa
 import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
 import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
+import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import {
   Shield,
   UserCheck,
@@ -165,9 +166,9 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       id: 'IP-000AF',
       title: 'Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Architecture (Plate #24)',
       type: 'Indigenous Data Sovereignty, Cryptographic Mesh & Sovereign AI IP Asset',
-      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      imageSrc: jicarillaNetworkMapImg,
       link: 'jicarilla_sovereign_it',
-      description: 'Origins: Landmark cryptographic architecture asset establishing the 3-Tier Sovereign Hybrid IT framework for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Formulates on-reservation physical storage with Shamir 3/5 Elder key distribution, air-gapped on-premise Gemini Sovereign AI, a post-quantum treaty-bound S-VPN for Four Corners / San Juan Basin watershed and flaring co-regulation, and a hardware data diode zero-leak public cloud boundary. Features multi-layered demonstration profile of User #2 Ouray Muskrat.',
+      description: 'Origins: Landmark cryptographic architecture asset establishing the 3-Tier Sovereign Hybrid IT framework for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Formulates on-reservation physical storage with Shamir 3/5 Elder key distribution, air-gapped on-premise Gemini Sovereign AI, a post-quantum treaty-bound S-VPN for Four Corners / San Juan Basin watershed and flaring co-regulation, and a hardware data diode zero-leak public cloud boundary. Features multi-layered demonstration profile of User #2 Ouray Muskrat and strategic enterprise business case.',
       sovereignHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026'
     },
     {

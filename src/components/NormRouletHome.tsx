@@ -86,10 +86,24 @@ import leclairPaperImg from '../assets/images/leclair_crystallized_cavitation_pa
 import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_1787000288036.jpg';
 import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
+import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('jicarilla_network_map') ||
+    u.includes('jicarilla_sovereign') ||
+    u.includes('jicarillaapache') ||
+    u.includes('jicarilla-apache') ||
+    u.includes('plate_24') ||
+    u.includes('plate24') ||
+    u.includes('plate #24') ||
+    u.includes('0xjicarilla') ||
+    u.includes('1787291207967')
+  ) {
+    return jicarillaNetworkMapImg;
+  }
   if (
     u.includes('cleveland_cuyahoga') ||
     u.includes('cuyahoga_lead') ||
@@ -501,17 +515,23 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   const magazineArticles: ArticleFeedItem[] = [
     {
       id: 'MAG-JICARILLA-APACHE-SOVEREIGN-HYBRID-IT-AIRGAP-AI-2026',
-      title: 'Indigenous Data Sovereignty: The Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture',
+      title: 'Indigenous Data Sovereignty & Enterprise Paradigm Shift: The Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture',
       category: 'Sovereign Law',
       date: '2026-08-20',
-      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
-      summary: 'A revolutionary technological blueprint engineered for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Establishes a 3-Tier Sovereign Network: Physical on-reservation storage and air-gapped on-premise Gemini AI in Dulce for sacred ceremonies and IHS records; a post-quantum treaty-bound S-VPN for Four Corners watershed co-regulation; and a hardware data diode zero-leak public gateway. Features demonstration sovereign member Ouray Muskrat (User #2).',
-      fullText: `INDIGENOUS DATA SOVEREIGNTY: JICARILLA APACHE HYBRID IT & AIR-GAPPED AI ARCHITECTURE
+      imageSrc: jicarillaNetworkMapImg,
+      summary: 'A revolutionary technological blueprint engineered for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Establishes a 3-Tier Sovereign Network: Physical on-reservation storage and air-gapped on-premise Gemini AI in Dulce for sacred ceremonies and IHS records; a post-quantum treaty-bound S-VPN for Four Corners watershed co-regulation; and a hardware data diode zero-leak public gateway. Delivers lowest-cost state-of-the-art enterprise compute, empowers next-generation tribal youth with frontier AI careers, and eliminates legacy vendor lock-in. Features demonstration sovereign member Ouray Muskrat (User #2).',
+      fullText: `INDIGENOUS DATA SOVEREIGNTY & ENTERPRISE PARADIGM SHIFT: JICARILLA APACHE HYBRID IT & AIR-GAPPED AI ARCHITECTURE
 JICARILLA APACHE NATION (DULCE, NM) • SOVEREIGN IT COUNCIL & ICEARTH LAB
 Published: August 20, 2026
 Authors: Norm Roulet (User #1 Founder) & Ouray Muskrat (User #2 Master Phytoremediator)
 Sovereign Provenance Hash: 0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026
 Interactive Architecture Engine: https://icearth.org/?tab=jicarilla_sovereign_it
+
+THE STRATEGIC BUSINESS CASE & PARADIGM SHIFT:
+• LEAPFROGGING LEGACY VULNERABILITIES: Tribal nations have historically been burdened by legacy client-server systems, predatory proprietary software licensing, and hyperscaler cloud vendors who charge escalating per-seat and egress rents while exposing tribal data to federal/state surveillance and third-party AI scraping.
+• MORE FOR LESS (LOWEST TCO): By combining on-reservation open hardware (AMD EPYC + FIPS 140-3 HSM), post-quantum WireGuard mesh, and localized air-gapped Gemini AI models, tribal governments slash 5-year IT operating costs by over 80% while gaining unprecedented compute power.
+• YOUTH ENGAGEMENT & REVERSING BRAIN DRAIN: For tribal nations to thrive, their youth must have frontier opportunities in high-technology on reservation soil. Sovereign IT establishes high-wage tribal careers in AI engineering, post-quantum network administration, and precision environmental data stewardship, anchoring next-generation talent directly within their communities.
+• UNPARALLELED MEMBER SERVICES: Powers next-generation sovereign services including private precision health tracking, indigenous language AI preservation, real-time watershed legal defense, and zero-fee community micro-settlements.
 
 CORE ARCHITECTURAL TIERS:
 1. TIER 1: PHYSICAL PRIVATE NETWORK (PPN) — ON-RESERVATION AIR-GAP (DULCE, NM):
@@ -1487,12 +1507,12 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
       id: 'PHOTO-000AF',
       title: 'Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Architecture (Plate #24)',
       category: 'Indigenous Data Sovereignty, Cryptographic Mesh & Sovereign AI Proofs',
-      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      imageSrc: jicarillaNetworkMapImg,
       location: 'Dulce (Jicarilla Apache Nation), Taos Pueblo & Window Rock (Navajo Nation), New Mexico',
       date: '2026-08-20',
-      description: 'Origins: Forensic technological and cryptographic blueprint plate establishing the 3-Tier Sovereign Hybrid IT Architecture for the Jicarilla Apache Nation and allied Indigenous sovereignties (Taos Pueblo, Diné, Picuris). Features the Dulce On-Premise Micro-Datacenter (FIPS 140-3 HSM, Shamir 3/5 Elder Key Ceremony, air-gapped Gemini On-Premise AI), the Post-Quantum Treaty-Bound S-VPN Mesh for Four Corners / San Juan Basin watershed and flaring co-regulation, and the Hardware Data Diode Zero-Leak Public DMZ. Details the multi-layered sovereign profile of demonstration member Ouray Muskrat (User #2).',
+      description: 'Origins: Forensic technological and cryptographic blueprint plate establishing the 3-Tier Sovereign Hybrid IT Architecture for the Jicarilla Apache Nation and allied Indigenous sovereignties (Taos Pueblo, Diné, Picuris). Features the Dulce On-Premise Micro-Datacenter (FIPS 140-3 HSM, Shamir 3/5 Elder Key Ceremony, air-gapped Gemini On-Premise AI), the Post-Quantum Treaty-Bound S-VPN Mesh for Four Corners / San Juan Basin watershed and flaring co-regulation, and the Hardware Data Diode Zero-Leak Public DMZ. Details the multi-layered sovereign profile of demonstration member Ouray Muskrat (User #2) and the enterprise business case delivering lowest-cost compute and high-wage AI careers for next generations.',
       vaultHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026',
-      tags: ['JicarillaApache', 'IndigenousIT', 'DataSovereignty', 'OurayMuskrat', 'AirGappedAI', 'SovereignVPN', 'TaosPueblo', 'NavajoNation', 'SanJuanBasin', 'ShamirKeys', 'DataDiode', 'ICEarth']
+      tags: ['JicarillaApache', 'IndigenousIT', 'DataSovereignty', 'OurayMuskrat', 'AirGappedAI', 'SovereignVPN', 'TaosPueblo', 'NavajoNation', 'SanJuanBasin', 'ShamirKeys', 'DataDiode', 'BusinessCase', 'ICEarth']
     },
     {
       id: 'PHOTO-000AE',
