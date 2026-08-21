@@ -111,6 +111,7 @@ import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposen
 import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics';
 import { BangladeshLeadFreeStrategy } from './components/BangladeshLeadFreeStrategy';
 import { NigeriaHeartHabitat } from './components/NigeriaHeartHabitat';
+import { JicarillaSovereignIT } from './components/JicarillaSovereignIT';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse } from 'lucide-react';
 
@@ -119,7 +120,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -258,6 +259,20 @@ export default function App() {
         lower.includes('mining')
       ) {
         setActiveTab('artisanal_mining');
+      } else if (
+        lower === 'jicarilla_sovereign_it' ||
+        lower === 'jicarilla' ||
+        lower === 'jicarilla_it' ||
+        lower === 'indigenous_it' ||
+        lower === 'hybrid_it' ||
+        lower === 'data_sovereignty' ||
+        lower === 'jicarilla-apache' ||
+        lower === 'ouray_muskrat_it' ||
+        lower.includes('jicarilla') ||
+        lower.includes('indigenous_it') ||
+        lower.includes('data_sovereignty')
+      ) {
+        setActiveTab('jicarilla_sovereign_it');
       } else if (
         lower === 'nigeria_heart_habitat' ||
         lower === 'nigeria_heart' ||
@@ -1536,6 +1551,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-semibold">🫀 Toxic Shadows And The Heart-Habitat Interface, Nigeria</span>
                   <span className="px-1.5 py-0.2 bg-rose-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
                     UNN 249
+                  </span>
+                </button>
+
+                {/* Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture */}
+                <button
+                  onClick={() => setActiveTab('jicarilla_sovereign_it')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla' || (activeTab as string) === 'jicarilla_it' || (activeTab as string) === 'indigenous_it'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Feather size={16} className={activeTab === 'jicarilla_sovereign_it' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🪶 Jicarilla Apache Sovereign Hybrid IT</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Air-Gap AI
                   </span>
                 </button>
 
@@ -3593,6 +3624,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows' || (activeTab as string) === 'anakwue' || (activeTab as string) === 'nigeria_cvd' || (activeTab as string) === 'nigeria') && (
             <div className="flex-1 overflow-y-auto">
               <NigeriaHeartHabitat 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.118: JICARILLA APACHE SOVEREIGN HYBRID IT & AIR-GAPPED AI ARCHITECTURE */}
+          {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla' || (activeTab as string) === 'jicarilla_it' || (activeTab as string) === 'indigenous_it' || (activeTab as string) === 'hybrid_it' || (activeTab as string) === 'data_sovereignty') && (
+            <div className="flex-1 overflow-y-auto">
+              <JicarillaSovereignIT 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

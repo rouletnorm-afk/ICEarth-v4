@@ -423,6 +423,57 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'JICARILLA-APACHE-SOVEREIGN-HYBRID-IT-AIRGAP-AI-2026',
+    contentType: 'Research',
+    title: 'Indigenous Data Sovereignty & The 3-Tier Hybrid IT Blueprint for the Jicarilla Apache Nation',
+    subtitle: 'Dulce Sovereign Micro-Datacenter • Air-Gapped On-Premise Gemini Sovereign AI • Post-Quantum Treaty-Bound S-VPN (Taos Pueblo & Navajo Nation) • Hardware Data Diode Zero-Leak Public Cloud Perimeter • Featuring Demonstration Sovereign Member Ouray Muskrat (User #2)',
+    sourceUrl: 'https://icearth.org/?tab=jicarilla_sovereign_it',
+    sourceName: 'ICEarth Sovereign Lab & Jicarilla Apache Nation Sovereign IT Council',
+    publishDate: '2026-08-20',
+    author: 'Norm Roulet (ICEarth Founder) & Ouray Muskrat (User #2 Master Phytoremediator)',
+    authorName: 'Norm Roulet & Ouray Muskrat • Joint Sovereign Blueprint for Jicarilla Elders & NM Government',
+    abstract: 'A comprehensive technological blueprint establishing true Indigenous Data Sovereignty for the Jicarilla Apache Nation (Dulce, NM), allied Pueblos (Taos Pueblo, Picuris), and the Diné (Navajo Nation). Eliminates vulnerability to US Federal, State, and commercial cloud surveillance by establishing a 3-Tier Sovereign IT Architecture: Tier 1 houses physical on-reservation storage and air-gapped on-premise Gemini AI in Dulce for sacred ceremonial recordings, Go-Jii-Ya feast clan genealogies, Indian Health Service (IHS) Electronic Health Records, and member exposome profiles; Tier 2 deploys a post-quantum encrypted Inter-Tribal S-VPN for watershed (San Juan & Rio Grande) co-regulation, oil/gas flaring detection, and UCANX commodity trade; Tier 3 deploys a deterministic hardware data diode to allow outward tribal enterprise commerce and public cloud interaction with 0% data leakage.',
+    editorCommentary: 'Data sovereignty is the technological extension of ancestral land and spiritual sovereignty. Storing sacred ceremonies or tribal health data on commercial cloud providers exposes Indigenous nations to extra-territorial subpoenas, mass surveillance, and unconsented AI harvesting. By deploying physical micro-datacenters on sovereign reservation soil with Shamir Elder key ceremonies and on-premise air-gapped Gemini models, the Jicarilla Apache Nation sets the global standard for Indigenous technological self-determination.',
+    fullExcerpt: `INDIGENOUS DATA SOVEREIGNTY: JICARILLA APACHE HYBRID IT & AIR-GAPPED AI ARCHITECTURE
+JICARILLA APACHE NATION (DULCE, NM) • SOVEREIGN IT COUNCIL & ICEARTH LAB
+Published: August 20, 2026
+Authors: Norm Roulet (User #1 Founder) & Ouray Muskrat (User #2 Master Phytoremediator)
+Sovereign Provenance Hash: 0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026
+Interactive Architecture Engine: https://icearth.org/?tab=jicarilla_sovereign_it
+
+CORE ARCHITECTURAL TIERS:
+1. TIER 1: PHYSICAL PRIVATE NETWORK (PPN) — ON-RESERVATION AIR-GAP (DULCE, NM):
+   • Physical micro-datacenter with AMD EPYC clusters and FIPS 140-3 Level 4 Hardware Security Modules (HSM).
+   • Shamir Secret Sharing (3-of-5 Elder Key Ceremony) ensuring no outside entity can access sacred knowledge.
+   • True Optical Cold Vault (Faraday cage shielded) for ceremonial recordings, oral histories, and creation chants.
+   • Indian Health Service (IHS) Electronic Health Records & toxic heavy metal blood panels (BLL, Cd, Cr, U).
+   • On-Premise Air-Gapped Gemini Sovereign AI: Local inference for Jicarilla Eastern Apache linguistic preservation and clinical diagnostic triage with 0% WAN egress and zero telemetry.
+
+2. TIER 2: SOVEREIGN INTER-TRIBAL VIRTUAL PRIVATE NETWORK (S-VPN):
+   • Post-Quantum WireGuard tunnels (Kyber-1024 / Dilithium) linking Jicarilla Apache with Taos Pueblo, Navajo Nation (Window Rock/Shiprock), and Picuris Pueblo.
+   • Co-regulatory environmental telemetry: Real-time San Juan Basin & Rio Chama water quality sensors, uranium mine runoff detection, oil/gas flaring AI, and migratory eagle/bighorn corridors.
+   • Inter-tribal UCANX commodity exchange for clean organic crops and phytoremediation hemp settlement.
+
+3. TIER 3: PROTECTED PUBLIC GATEWAY & CLOUD DMZ:
+   • Deterministic Hardware Data Diode (physically enforcing one-way outbound data flow).
+   • Public enterprise portals (Apache Nugget Casino, Jicarilla Wildlife & Fisheries hunting licenses).
+   • Outbound sanitized AI search queries with strict Zero-Knowledge anonymization shielding tribal PII.
+
+4. USER #2 DEMONSTRATION PROFILE (OURAY MUSKRAT):
+   • Demonstrates tripartite data partitioning: Sacred ceremonial duties and personal IHS lead tests stored in Tier 1; Four Corners soil phytoremediation and watershed sensors shared across Tier 2; certified UCANX organic trade credentials published to Tier 3.
+
+5. NEW MEXICO STATE COMPACT & FIRST INDIGENOUS GOVERNOR POLICY:
+   • Ready-to-sign intergovernmental digital compact eliminating state cloud liability while empowering joint environmental enforcement across New Mexico.`,
+    tags: ['JicarillaApache', 'IndigenousIT', 'DataSovereignty', 'OurayMuskrat', 'AirGappedAI', 'SovereignVPN', 'TaosPueblo', 'NavajoNation', 'SanJuanBasin', 'Exposenomics'],
+    communities: ['ICEarth Global', 'ICETaos', 'Four Corners Sovereign Basin', 'Swiss Exposenomics'],
+    vaultHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Sovereign Lab Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
     id: 'NIGERIA-HEART-HABITAT-TOXIC-SHADOWS-ANAKWUE-2026',
     contentType: 'Research',
     title: 'Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface',
@@ -2914,6 +2965,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('JicarillaApache') || article.tags?.includes('IndigenousIT') || article.tags?.includes('DataSovereignty') || article.tags?.includes('OurayMuskrat') || article.id.includes('JICARILLA')) && (
+                      <button
+                        onClick={() => onNavigateTab('jicarilla_sovereign_it')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-800 via-stone-800 to-emerald-800 hover:from-amber-700 hover:to-emerald-700 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-amber-200" />
+                        <span>🪶 Launch Jicarilla Sovereign IT Blueprint</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('NigeriaCardiology') || article.tags?.includes('ToxicShadows') || article.tags?.includes('HeartHabitat') || article.tags?.includes('Anakwue') || article.id.includes('NIGERIA-HEART-HABITAT')) && (
                       <button
                         onClick={() => onNavigateTab('nigeria_heart_habitat')}

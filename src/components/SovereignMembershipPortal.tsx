@@ -162,6 +162,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
 
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
+      id: 'IP-000AF',
+      title: 'Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Architecture (Plate #24)',
+      type: 'Indigenous Data Sovereignty, Cryptographic Mesh & Sovereign AI IP Asset',
+      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      link: 'jicarilla_sovereign_it',
+      description: 'Origins: Landmark cryptographic architecture asset establishing the 3-Tier Sovereign Hybrid IT framework for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Formulates on-reservation physical storage with Shamir 3/5 Elder key distribution, air-gapped on-premise Gemini Sovereign AI, a post-quantum treaty-bound S-VPN for Four Corners / San Juan Basin watershed and flaring co-regulation, and a hardware data diode zero-leak public cloud boundary. Features multi-layered demonstration profile of User #2 Ouray Muskrat.',
+      sovereignHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026'
+    },
+    {
       id: 'IP-000AE',
       title: 'Professor Raphael Anakwue: Toxic Shadows & The Heart-Habitat Interface (UNN 249th Inaugural Lecture)',
       type: 'Cardiovascular Exposenomics, Environmental Pharmacology & African Public Health Sovereign IP Asset',

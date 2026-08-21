@@ -500,6 +500,47 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-JICARILLA-APACHE-SOVEREIGN-HYBRID-IT-AIRGAP-AI-2026',
+      title: 'Indigenous Data Sovereignty: The Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture',
+      category: 'Sovereign Law',
+      date: '2026-08-20',
+      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      summary: 'A revolutionary technological blueprint engineered for the Jicarilla Apache Nation (Dulce, NM), Taos Pueblo, and the Navajo Nation. Establishes a 3-Tier Sovereign Network: Physical on-reservation storage and air-gapped on-premise Gemini AI in Dulce for sacred ceremonies and IHS records; a post-quantum treaty-bound S-VPN for Four Corners watershed co-regulation; and a hardware data diode zero-leak public gateway. Features demonstration sovereign member Ouray Muskrat (User #2).',
+      fullText: `INDIGENOUS DATA SOVEREIGNTY: JICARILLA APACHE HYBRID IT & AIR-GAPPED AI ARCHITECTURE
+JICARILLA APACHE NATION (DULCE, NM) • SOVEREIGN IT COUNCIL & ICEARTH LAB
+Published: August 20, 2026
+Authors: Norm Roulet (User #1 Founder) & Ouray Muskrat (User #2 Master Phytoremediator)
+Sovereign Provenance Hash: 0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026
+Interactive Architecture Engine: https://icearth.org/?tab=jicarilla_sovereign_it
+
+CORE ARCHITECTURAL TIERS:
+1. TIER 1: PHYSICAL PRIVATE NETWORK (PPN) — ON-RESERVATION AIR-GAP (DULCE, NM):
+   • Physical micro-datacenter with AMD EPYC clusters and FIPS 140-3 Level 4 Hardware Security Modules (HSM).
+   • Shamir Secret Sharing (3-of-5 Elder Key Ceremony) ensuring no outside entity can access sacred knowledge.
+   • True Optical Cold Vault (Faraday cage shielded) for ceremonial recordings, oral histories, and creation chants.
+   • Indian Health Service (IHS) Electronic Health Records & toxic heavy metal blood panels (BLL, Cd, Cr, U).
+   • On-Premise Air-Gapped Gemini Sovereign AI: Local inference for Jicarilla Eastern Apache linguistic preservation and clinical diagnostic triage with 0% WAN egress and zero telemetry.
+
+2. TIER 2: SOVEREIGN INTER-TRIBAL VIRTUAL PRIVATE NETWORK (S-VPN):
+   • Post-Quantum WireGuard tunnels (Kyber-1024 / Dilithium) linking Jicarilla Apache with Taos Pueblo, Navajo Nation (Window Rock/Shiprock), and Picuris Pueblo.
+   • Co-regulatory environmental telemetry: Real-time San Juan Basin & Rio Chama water quality sensors, uranium mine runoff detection, oil/gas flaring AI, and migratory eagle/bighorn corridors.
+   • Inter-tribal UCANX commodity exchange for clean organic crops and phytoremediation hemp settlement.
+
+3. TIER 3: PROTECTED PUBLIC GATEWAY & CLOUD DMZ:
+   • Deterministic Hardware Data Diode (physically enforcing one-way outbound data flow).
+   • Public enterprise portals (Apache Nugget Casino, Jicarilla Wildlife & Fisheries hunting licenses).
+   • Outbound sanitized AI search queries with strict Zero-Knowledge anonymization shielding tribal PII.
+
+4. USER #2 DEMONSTRATION PROFILE (OURAY MUSKRAT):
+   • Demonstrates tripartite data partitioning: Sacred ceremonial duties and personal IHS lead tests stored in Tier 1; Four Corners soil phytoremediation and watershed sensors shared across Tier 2; certified UCANX organic trade credentials published to Tier 3.
+
+5. NEW MEXICO STATE COMPACT & FIRST INDIGENOUS GOVERNOR POLICY:
+   • Ready-to-sign intergovernmental digital compact eliminating state cloud liability while empowering joint environmental enforcement across New Mexico.`,
+      tags: ['JicarillaApache', 'IndigenousIT', 'DataSovereignty', 'OurayMuskrat', 'AirGappedAI', 'SovereignVPN', 'TaosPueblo', 'NavajoNation', 'SanJuanBasin', 'ICEarth'],
+      linkHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026',
+      publishedUrl: 'https://icearth.org/?tab=jicarilla_sovereign_it'
+    },
+    {
       id: 'MAG-NIGERIA-HEART-HABITAT-TOXIC-SHADOWS-ANAKWUE-2026',
       title: 'Beyond Traditional Cardiovascular Risk Factors: Toxic Shadows and the Heart-Habitat Interface (UNN 249th Inaugural Lecture)',
       category: 'Exposenomics',
@@ -1442,6 +1483,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AF',
+      title: 'Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Architecture (Plate #24)',
+      category: 'Indigenous Data Sovereignty, Cryptographic Mesh & Sovereign AI Proofs',
+      imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+      location: 'Dulce (Jicarilla Apache Nation), Taos Pueblo & Window Rock (Navajo Nation), New Mexico',
+      date: '2026-08-20',
+      description: 'Origins: Forensic technological and cryptographic blueprint plate establishing the 3-Tier Sovereign Hybrid IT Architecture for the Jicarilla Apache Nation and allied Indigenous sovereignties (Taos Pueblo, Diné, Picuris). Features the Dulce On-Premise Micro-Datacenter (FIPS 140-3 HSM, Shamir 3/5 Elder Key Ceremony, air-gapped Gemini On-Premise AI), the Post-Quantum Treaty-Bound S-VPN Mesh for Four Corners / San Juan Basin watershed and flaring co-regulation, and the Hardware Data Diode Zero-Leak Public DMZ. Details the multi-layered sovereign profile of demonstration member Ouray Muskrat (User #2).',
+      vaultHash: '0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026',
+      tags: ['JicarillaApache', 'IndigenousIT', 'DataSovereignty', 'OurayMuskrat', 'AirGappedAI', 'SovereignVPN', 'TaosPueblo', 'NavajoNation', 'SanJuanBasin', 'ShamirKeys', 'DataDiode', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AE',
       title: 'Professor Raphael Anakwue: Toxic Shadows & The Heart-Habitat Interface (UNN 249th Inaugural Lecture)',

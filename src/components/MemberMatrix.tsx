@@ -97,18 +97,19 @@ export const MemberMatrix: React.FC<MemberMatrixProps> = ({
       type: 'Member',
       avatarInitials: 'OM',
       avatarColor: 'bg-emerald-600 text-white',
-      description: 'Indigenous community leader pioneering botanical soil heavy metal extraction, hemp biopolymers, and watershed protection across Four Corners.',
+      description: 'Indigenous community leader pioneering botanical soil heavy metal extraction, hemp biopolymers, watershed protection, and Indigenous hybrid IT data sovereignty across Four Corners.',
       projects: [
+        { name: 'Jicarilla Sovereign IT Architecture', tab: 'jicarilla_sovereign_it' },
         { name: 'Agua Das Hydro-Remediation', tab: 'manuscript' },
         { name: 'Indigenous Hemp Guild', tab: 'indigenous' },
         { name: 'Four Corners Basin Trust', tab: 'sovereign_portal' }
       ],
       vaultHash: '0xUSER_002_OURAY_MUSKRAT_VAULT',
       featured: true,
-      navTab: 'sovereign_portal',
-      navLabel: 'View Ouray Muskrat Sovereign Vault',
+      navTab: 'jicarilla_sovereign_it',
+      navLabel: 'View Jicarilla Sovereign IT Blueprint',
       badgeText: 'User #2 Member',
-      tags: ['Indigenous', 'Phytoremediation', 'Four Corners', 'Agua Das', 'Bio-Materials']
+      tags: ['Indigenous', 'JicarillaApache', 'DataSovereignty', 'Phytoremediation', 'Four Corners', 'Agua Das', 'AirGappedAI']
     },
     {
       id: 'AI-AGENT-001',
