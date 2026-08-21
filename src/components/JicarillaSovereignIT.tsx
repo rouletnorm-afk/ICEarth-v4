@@ -517,6 +517,19 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
           <Shield size={16} />
           <span>Sovereign Security & Legal Charter</span>
         </button>
+
+        <button
+          onClick={() => setActiveSubTab('business_case')}
+          className={`px-4 py-2.5 rounded-xl font-mono text-xs font-bold transition-all flex items-center gap-2 cursor-pointer border ${
+            activeSubTab === 'business_case'
+              ? 'bg-emerald-600 border-emerald-500 text-white shadow-lg'
+              : 'bg-emerald-950/20 dark:bg-emerald-950/40 border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/60'
+          }`}
+        >
+          <TrendingUp size={16} className="text-emerald-400" />
+          <span>Enterprise Business Case & Paradigm Shift</span>
+          <span className="px-1.5 py-0.5 bg-emerald-500/30 text-emerald-300 text-[10px] rounded font-mono uppercase">ROI & Careers</span>
+        </button>
       </div>
 
       {/* SUBTAB 1: PHYSICAL & LOGICAL NETWORK TOPOLOGY */}
@@ -559,7 +572,18 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
                     }`}
                   >
                     <Compass size={14} />
-                    <span>🗺️ NM Geographic Mesh</span>
+                    <span>🗺️ Interactive Vector Map</span>
+                  </button>
+                  <button
+                    onClick={() => setGraphicViewMode('plate_image')}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                      graphicViewMode === 'plate_image'
+                        ? 'bg-amber-600 text-white shadow'
+                        : 'text-stone-400 hover:text-stone-200'
+                    }`}
+                  >
+                    <ImageIcon size={14} />
+                    <span>🖼️ Forensic Plate Graphic</span>
                   </button>
                   <button
                     onClick={() => setGraphicViewMode('schematic')}
@@ -581,7 +605,7 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
                     }`}
                   >
                     <Layers size={14} />
-                    <span>🔀 Dual Blueprint</span>
+                    <span>🔀 Combined View</span>
                   </button>
                 </div>
 
@@ -1238,6 +1262,47 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
                       <div className="p-2 bg-cyan-950/60 border border-cyan-500/40 rounded-xl text-[10px] font-mono text-cyan-200">
                         ⚡ Zero-Leak Guarantee: Reverse packet injection physically impossible.
                       </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* MODE: FORENSIC NETWORK MAP PLATE IMAGE */}
+              {graphicViewMode === 'plate_image' && (
+                <div className="bg-stone-950 border-2 border-amber-500/60 rounded-2xl p-4 sm:p-6 space-y-4 relative overflow-hidden">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-800 pb-3">
+                    <div>
+                      <span className="text-[11px] font-mono uppercase text-amber-400 font-bold tracking-wider block">
+                        Forensic Photographic Blueprint • High-Resolution Artwork
+                      </span>
+                      <h4 className="text-lg font-bold font-serif text-white flex items-center gap-2">
+                        <span>🖼️ Plate #24: Sovereign Hybrid IT Network Map & Air-Gapped Topology</span>
+                      </h4>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setShowPlateModal(true)}
+                        className="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-mono font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+                      >
+                        <Maximize2 size={14} />
+                        <span>Inspect Full-Screen</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="relative rounded-xl overflow-hidden border border-stone-800 bg-stone-900 group">
+                    <img
+                      src={jicarillaNetworkMapImg}
+                      alt="Plate #24 - Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Map"
+                      className="w-full h-auto max-h-[640px] object-contain mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+                    />
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent p-4 text-xs font-mono text-stone-300 flex flex-wrap items-center justify-between gap-2">
+                      <span className="text-amber-300 font-bold">
+                        Plate #24 • Dulce Micro-Datacenter, Taos Pueblo & Navajo Nation Treaty S-VPN
+                      </span>
+                      <span className="text-[11px] text-stone-400">
+                        Cryptographic Hash: 0xJICARILLA_SOVEREIGN_HYBRID_IT_AIRGAP_AI_2026
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2099,6 +2164,683 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
         </div>
       )}
 
+      {/* SUBTAB 6: ENTERPRISE BUSINESS CASE & PARADIGM SHIFT */}
+      {activeSubTab === 'business_case' && (
+        <div className="space-y-8 animate-in fade-in duration-300">
+          {/* HERO BANNER: THE PARADIGM SHIFT IN ENTERPRISE COMPUTING */}
+          <div className="bg-gradient-to-br from-stone-950 via-emerald-950/40 to-stone-950 text-stone-100 rounded-3xl p-6 sm:p-8 border-2 border-emerald-500/50 shadow-2xl space-y-6">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-stone-800 pb-5">
+              <div className="space-y-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3 py-1 bg-emerald-500/30 text-emerald-300 border border-emerald-400/60 rounded-lg text-xs font-mono font-black uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
+                    <TrendingUp size={14} className="text-emerald-300" />
+                    STRATEGIC ENTERPRISE BUSINESS CASE
+                  </span>
+                  <span className="px-2.5 py-1 bg-amber-950/80 text-amber-300 border border-amber-500/40 rounded-lg text-xs font-mono font-bold">
+                    84.6% 5-Yr TCO Reduction
+                  </span>
+                  <span className="px-2.5 py-1 bg-purple-950/80 text-purple-300 border border-purple-500/40 rounded-lg text-xs font-mono font-bold">
+                    Zero-Rent On-Prem AI
+                  </span>
+                  <span className="px-2.5 py-1 bg-cyan-950/80 text-cyan-300 border border-cyan-500/40 rounded-lg text-xs font-mono font-bold">
+                    Next-Gen Youth Careers
+                  </span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white flex items-center gap-2.5">
+                  <Award className="text-emerald-400 shrink-0" size={28} />
+                  <span>The Indigenous IT Paradigm Shift: More For Less & Frontier Capabilities</span>
+                </h2>
+                <p className="text-xs sm:text-sm text-stone-300 font-sans max-w-4xl leading-relaxed">
+                  As artificial intelligence transforms enterprise computing and IT architecture, Tribal Nations face a historic inflection point. By leapfrogging vulnerable legacy databases and predatory cloud SaaS rents directly to sovereign, decentralized, air-gapped on-premise compute, the <strong>Jicarilla Apache Nation</strong> delivers unprecedented capabilities to its members at the lowest total cost of ownership while anchoring high-wage technological careers on reservation soil for generations to come.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-2 shrink-0">
+                <button
+                  onClick={() => setShowPlateModal(true)}
+                  className="px-4 py-2.5 bg-stone-900 hover:bg-stone-800 border border-emerald-500/40 text-emerald-300 rounded-xl text-xs font-mono font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Maximize2 size={14} />
+                  <span>View Plate #24 Blueprint</span>
+                </button>
+                <a
+                  href="#tco-calculator"
+                  className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-mono font-bold transition-all flex items-center justify-center gap-2 shadow-md"
+                >
+                  <Calculator size={14} />
+                  <span>Launch TCO Calculator</span>
+                </a>
+              </div>
+            </div>
+
+            {/* KEY METRICS RIBBON */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs font-mono">
+              <div className="p-3.5 bg-stone-900/90 border border-emerald-500/30 rounded-2xl space-y-1">
+                <div className="text-stone-400 flex items-center justify-between">
+                  <span>5-Year IT Cost Savings</span>
+                  <TrendingDown size={14} className="text-emerald-400" />
+                </div>
+                <div className="text-2xl font-bold text-emerald-300 font-sans">84.6%</div>
+                <div className="text-[10px] text-stone-400">vs Legacy SaaS & Cloud Lock-in</div>
+              </div>
+
+              <div className="p-3.5 bg-stone-900/90 border border-purple-500/30 rounded-2xl space-y-1">
+                <div className="text-stone-400 flex items-center justify-between">
+                  <span>AI Inference Token Cost</span>
+                  <DollarSign size={14} className="text-purple-400" />
+                </div>
+                <div className="text-2xl font-bold text-purple-300 font-sans">$0.00 / mo</div>
+                <div className="text-[10px] text-stone-400">Fixed CapEx On-Premise Silicon</div>
+              </div>
+
+              <div className="p-3.5 bg-stone-900/90 border border-amber-500/30 rounded-2xl space-y-1">
+                <div className="text-stone-400 flex items-center justify-between">
+                  <span>Sovereign Tech Careers</span>
+                  <GraduationCap size={14} className="text-amber-400" />
+                </div>
+                <div className="text-2xl font-bold text-amber-300 font-sans">45+ High-Wage</div>
+                <div className="text-[10px] text-stone-400">Local Tribal Youth Retention</div>
+              </div>
+
+              <div className="p-3.5 bg-stone-900/90 border border-cyan-500/30 rounded-2xl space-y-1">
+                <div className="text-stone-400 flex items-center justify-between">
+                  <span>Extraterritorial Immunity</span>
+                  <ShieldCheck size={14} className="text-cyan-400" />
+                </div>
+                <div className="text-2xl font-bold text-cyan-300 font-sans">100% Air-Gap</div>
+                <div className="text-[10px] text-stone-400">Physical Subpoena Resistance</div>
+              </div>
+            </div>
+          </div>
+
+          {/* PILLARS NAVIGATION CONTROLS */}
+          <div className="flex flex-wrap gap-2 border-b border-stone-200 dark:border-stone-800 pb-3">
+            {[
+              { id: 'paradigm_shift', label: '1. The Paradigm Shift', icon: Lightbulb },
+              { id: 'tco_roi', label: '2. "More For Less" TCO Model', icon: Calculator },
+              { id: 'next_gen_careers', label: '3. Next-Gen Youth Careers', icon: Briefcase },
+              { id: 'frontier_services', label: '4. Frontier Member Services', icon: HeartHandshake },
+              { id: 'intergovernmental', label: '5. Intergovernmental Compact', icon: Scale }
+            ].map(p => {
+              const Icon = p.icon;
+              const active = activeBusinessPillar === p.id;
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => setActiveBusinessPillar(p.id as any)}
+                  className={`px-4 py-2 rounded-xl font-mono text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                    active
+                      ? 'bg-emerald-600 text-white shadow-md'
+                      : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700'
+                  }`}
+                >
+                  <Icon size={14} />
+                  <span>{p.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* PILLAR 1: THE ENTERPRISE PARADIGM SHIFT */}
+          {activeBusinessPillar === 'paradigm_shift' && (
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div className="space-y-2">
+                  <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold tracking-widest block">
+                    Macro Technological Transformation
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100">
+                    Why Tribal Nations Must Leapfrog Legacy IT Directly to Sovereign Decentralized Compute
+                  </h3>
+                  <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-sans">
+                    For three decades, municipal and tribal governments were forced into proprietary software ecosystems. These systems imposed escalating per-seat SaaS subscription taxes, unpredictable cloud egress billing, and vendor lock-in, all while housing sensitive community records on centralized servers vulnerable to federal subpoenas, data breaches, and unconsented commercial AI harvesting.
+                  </p>
+                </div>
+
+                {/* ARCHITECTURAL COMPARISON: LEGACY VS SOVEREIGN ICEARTH */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* LEGACY SYSTEM VULNERABILITIES */}
+                  <div className="bg-rose-950/10 dark:bg-rose-950/20 border-2 border-rose-500/30 rounded-2xl p-5 space-y-4">
+                    <div className="flex items-center justify-between border-b border-rose-500/20 pb-3">
+                      <span className="font-bold text-rose-700 dark:text-rose-400 font-serif flex items-center gap-2">
+                        <TrendingDown size={18} />
+                        The Legacy IT Trap (Vulnerable & Costly)
+                      </span>
+                      <span className="px-2 py-0.5 bg-rose-500/20 text-rose-600 dark:text-rose-300 text-[10px] font-mono rounded font-bold">
+                        OBSOLETE
+                      </span>
+                    </div>
+
+                    <ul className="space-y-2.5 text-xs text-stone-700 dark:text-stone-300 font-sans">
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-500 font-bold">✕</span>
+                        <div>
+                          <strong>Escalating SaaS Tax:</strong> Per-user monthly licensing for tribal government, housing authority, and school district workers drains millions annually out of local communities.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-500 font-bold">✕</span>
+                        <div>
+                          <strong>Data Ingestion Vulnerability:</strong> Sensitive ceremonial audio, Go-Jii-Ya feast lineages, and patient IHS data are stored in commercial cloud regions subject to third-party scraping and AI model pretraining.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-500 font-bold">✕</span>
+                        <div>
+                          <strong>Cloud Egress & API Extortion:</strong> As tribes try to adopt AI tools, hyperscalers charge metered token fees for every query and data transfer, rendering deep analytics unaffordable.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-500 font-bold">✕</span>
+                        <div>
+                          <strong>Brain Drain to Urban Centers:</strong> Because tribal IT was limited to basic desktop maintenance, talented young tribal members were forced to relocate to Seattle or Austin for frontier tech careers.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* SOVEREIGN ICEARTH IT ARCHITECTURE */}
+                  <div className="bg-emerald-950/10 dark:bg-emerald-950/20 border-2 border-emerald-500/40 rounded-2xl p-5 space-y-4 shadow-sm">
+                    <div className="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+                      <span className="font-bold text-emerald-700 dark:text-emerald-400 font-serif flex items-center gap-2">
+                        <TrendingUp size={18} />
+                        The Sovereign ICEarth Architecture (State of the Art)
+                      </span>
+                      <span className="px-2 py-0.5 bg-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-[10px] font-mono rounded font-bold">
+                        FUTURE OF IT
+                      </span>
+                    </div>
+
+                    <ul className="space-y-2.5 text-xs text-stone-700 dark:text-stone-300 font-sans">
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-500 font-bold">✓</span>
+                        <div>
+                          <strong>"More for Less" Lowest TCO:</strong> Fixed one-time silicon CapEx and open-source infrastructure eliminates recurring software rents, saving over 80% over 5 years.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-500 font-bold">✓</span>
+                        <div>
+                          <strong>Air-Gapped Sovereign AI in Dulce:</strong> High-throughput on-premise Gemini inference runs completely isolated within reservation borders with zero external data leakage.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-500 font-bold">✓</span>
+                        <div>
+                          <strong>Post-Quantum Inter-Tribal Mesh:</strong> Encrypted microsecond communication across New Mexico with Taos Pueblo and Navajo Nation for joint watershed & natural resource defense.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-500 font-bold">✓</span>
+                        <div>
+                          <strong>Anchoring High-Wage Careers:</strong> Establishes tribal youth as AI engineers, cryptographic network custodians, and precision biosensor analysts right at home in Dulce.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PILLAR 2: TCO & ROI ECONOMIC CALCULATOR */}
+          {activeBusinessPillar === 'tco_roi' && (
+            <div id="tco-calculator" className="space-y-6">
+              <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                  <div className="space-y-1">
+                    <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold tracking-widest block">
+                      Financial Engineering & Budgetary Sovereignty
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100">
+                      Interactive Total Cost of Ownership (TCO) & ROI Model
+                    </h3>
+                  </div>
+                  <div className="text-xs font-mono text-stone-500">
+                    Formula: <span className="text-emerald-600 font-bold">CapEx + Local Maintenance &lt; 0.16 × Legacy SaaS</span>
+                  </div>
+                </div>
+
+                {/* CALCULATOR INTERACTIVE SLIDERS */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-stone-50 dark:bg-stone-950/60 rounded-2xl border border-stone-200 dark:border-stone-800">
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs font-mono">
+                      <span className="text-stone-600 dark:text-stone-400">Tribal Population:</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400">{populationSize.toLocaleString()}</span>
+                    </div>
+                    <input
+                      type="range"
+                      min={1000}
+                      max={25000}
+                      step={500}
+                      value={populationSize}
+                      onChange={e => setPopulationSize(Number(e.target.value))}
+                      className="w-full accent-emerald-600 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] text-stone-400 font-mono">
+                      <span>1,000</span>
+                      <span>12,500</span>
+                      <span>25,000</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs font-mono">
+                      <span className="text-stone-600 dark:text-stone-400">Tribal Enterprises & Entities:</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400">{numEnterprises} Departments</span>
+                    </div>
+                    <input
+                      type="range"
+                      min={2}
+                      max={15}
+                      step={1}
+                      value={numEnterprises}
+                      onChange={e => setNumEnterprises(Number(e.target.value))}
+                      className="w-full accent-emerald-600 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] text-stone-400 font-mono">
+                      <span>2</span>
+                      <span>8</span>
+                      <span>15</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs font-mono">
+                      <span className="text-stone-600 dark:text-stone-400">Projection Horizon:</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400">{projectionYears} Years</span>
+                    </div>
+                    <div className="flex gap-2 pt-1">
+                      {[3, 5, 10].map(yr => (
+                        <button
+                          key={yr}
+                          onClick={() => setProjectionYears(yr)}
+                          className={`flex-1 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
+                            projectionYears === yr
+                              ? 'bg-emerald-600 text-white shadow'
+                              : 'bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300'
+                          }`}
+                        >
+                          {yr} Yrs
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* CALCULATED FINANCIAL SUMMARY */}
+                {(() => {
+                  const seats = Math.round(populationSize * 0.12);
+                  const legacyAnnualLicensing = seats * 1200;
+                  const legacyAnnualCloudStorage = seats * 350;
+                  const legacyAnnualVendorConsulting = numEnterprises * 45000;
+                  const legacyAnnualAiTokens = seats * 250;
+                  const legacyTotalAnnual = legacyAnnualLicensing + legacyAnnualCloudStorage + legacyAnnualVendorConsulting + legacyAnnualAiTokens;
+                  const legacyCumulative = legacyTotalAnnual * projectionYears;
+
+                  const sovereignCapExOneTime = 480000 + (numEnterprises * 25000);
+                  const sovereignAnnualHardwareMaint = 45000 + (numEnterprises * 4000);
+                  const sovereignAnnualLocalStaffSalaries = 240000;
+                  const sovereignTotalAnnual = sovereignAnnualHardwareMaint + sovereignAnnualLocalStaffSalaries;
+                  const sovereignCumulative = sovereignCapExOneTime + (sovereignTotalAnnual * projectionYears);
+
+                  const netSavings = legacyCumulative - sovereignCumulative;
+                  const savingsPct = Math.round((netSavings / legacyCumulative) * 100);
+
+                  const chartData = Array.from({ length: projectionYears }, (_, i) => {
+                    const yr = i + 1;
+                    const leg = Math.round((legacyTotalAnnual * yr) / 1000);
+                    const sov = Math.round((sovereignCapExOneTime + (sovereignTotalAnnual * yr)) / 1000);
+                    return {
+                      year: `Year ${yr}`,
+                      'Legacy Cloud & SaaS ($k)': leg,
+                      'Sovereign IT ($k)': sov,
+                      savings: leg - sov
+                    };
+                  });
+
+                  return (
+                    <div className="space-y-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="p-4 bg-rose-950/20 border border-rose-500/40 rounded-2xl">
+                          <span className="text-[11px] font-mono uppercase text-rose-400 font-bold block">
+                            Cumulative Legacy IT Cost ({projectionYears} Yrs)
+                          </span>
+                          <div className="text-2xl font-bold font-mono text-rose-300 mt-1">
+                            ${(legacyCumulative / 1000000).toFixed(2)} Million
+                          </div>
+                          <div className="text-[11px] text-stone-400 font-sans mt-1">
+                            Recurring SaaS rents flowing outside the reservation.
+                          </div>
+                        </div>
+
+                        <div className="p-4 bg-emerald-950/20 border border-emerald-500/40 rounded-2xl">
+                          <span className="text-[11px] font-mono uppercase text-emerald-400 font-bold block">
+                            Cumulative Sovereign IT Cost ({projectionYears} Yrs)
+                          </span>
+                          <div className="text-2xl font-bold font-mono text-emerald-300 mt-1">
+                            ${(sovereignCumulative / 1000000).toFixed(2)} Million
+                          </div>
+                          <div className="text-[11px] text-stone-400 font-sans mt-1">
+                            Includes 100% on-premise hardware + 3 local tribal engineer salaries.
+                          </div>
+                        </div>
+
+                        <div className="p-4 bg-amber-950/20 border border-amber-500/40 rounded-2xl">
+                          <span className="text-[11px] font-mono uppercase text-amber-400 font-bold block">
+                            Direct Tribal Capital Retained
+                          </span>
+                          <div className="text-2xl font-bold font-mono text-amber-300 mt-1">
+                            ${(netSavings / 1000000).toFixed(2)}M ({savingsPct}%)
+                          </div>
+                          <div className="text-[11px] text-stone-400 font-sans mt-1">
+                            Retained for tribal healthcare, language immersion & microgrids.
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* RECHARTS FINANCIAL TRAJECTORY GRAPH */}
+                      <div className="p-5 bg-stone-950 rounded-2xl border border-stone-800 space-y-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                          <span className="text-stone-300 font-bold flex items-center gap-1.5">
+                            <BarChart3 size={14} className="text-emerald-400" />
+                            Cumulative Expenditure Trajectory ($ Thousands)
+                          </span>
+                          <div className="flex items-center gap-4 text-[11px]">
+                            <span className="flex items-center gap-1.5 text-rose-400">
+                              <span className="w-2.5 h-2.5 rounded bg-rose-500"></span> Legacy Cloud SaaS
+                            </span>
+                            <span className="flex items-center gap-1.5 text-emerald-400">
+                              <span className="w-2.5 h-2.5 rounded bg-emerald-500"></span> Sovereign On-Premise
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full h-64">
+                          <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={chartData} margin={{ top: 10, right: 20, left: 10, bottom: 5 }}>
+                              <CartesianGrid strokeDasharray="3 3" stroke="#292524" />
+                              <XAxis dataKey="year" stroke="#a8a29e" fontSize={11} fontFamily="monospace" />
+                              <YAxis stroke="#a8a29e" fontSize={11} fontFamily="monospace" tickFormatter={v => `$${v}k`} />
+                              <Tooltip
+                                contentStyle={{ backgroundColor: '#1c1917', borderColor: '#44403c', borderRadius: '12px', fontSize: '12px', fontFamily: 'monospace' }}
+                                formatter={(value: any) => [`$${Number(value).toLocaleString()}k`, '']}
+                              />
+                              <Bar dataKey="Legacy Cloud & SaaS ($k)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
+                              <Bar dataKey="Sovereign IT ($k)" fill="#10b981" radius={[4, 4, 0, 0]} />
+                            </BarChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          )}
+
+          {/* PILLAR 3: NEXT-GEN YOUTH OPPORTUNITIES & REVERSING BRAIN DRAIN */}
+          {activeBusinessPillar === 'next_gen_careers' && (
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div className="space-y-2">
+                  <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold tracking-widest block">
+                    Human Capital & Intergenerational Continuity
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 flex items-center gap-2">
+                    <GraduationCap className="text-amber-500" size={26} />
+                    <span>Reversing Brain Drain: High-Wage Frontier Tech Careers on Reservation Soil</span>
+                  </h3>
+                  <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-sans">
+                    For tribal nations to endure and thrive, their youth must see a path to leadership in the world's most advanced industries without having to leave their families, ceremonies, and homelands. The Sovereign IT Architecture transforms Dulce and Taos into premier technological innovation hubs, creating lifelong, high-paying engineering careers that serve tribal self-determination.
+                  </p>
+                </div>
+
+                {/* CAREER PATHWAYS GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs font-sans">
+                  <div className="p-4 bg-emerald-950/10 dark:bg-emerald-950/20 border border-emerald-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-emerald-700 dark:text-emerald-300 font-mono text-sm">
+                        1. Sovereign AI Model Engineer
+                      </span>
+                      <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 text-[10px] font-mono rounded font-bold">
+                        $125k - $155k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Maintains on-reservation AMD EPYC AI clusters, fine-tunes localized Gemini models on sovereign environmental telemetry, and designs dialect-preserving linguistic translation pipelines for Apache youth.
+                    </p>
+                    <div className="pt-2 border-t border-emerald-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: PyTorch, Gemini Fine-Tuning, Low-Rank Adaptation (LoRA), Linux Kernel
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-purple-950/10 dark:bg-purple-950/20 border border-purple-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-purple-700 dark:text-purple-300 font-mono text-sm">
+                        2. Post-Quantum Mesh Architect
+                      </span>
+                      <span className="px-2 py-0.5 bg-purple-500/20 text-purple-600 dark:text-purple-300 text-[10px] font-mono rounded font-bold">
+                        $115k - $145k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Administers the treaty-bound S-VPN microwave and fiber links connecting Jicarilla Apache with Taos Pueblo and Navajo Nation, implementing Kyber-1024 quantum-resistant key exchanges.
+                    </p>
+                    <div className="pt-2 border-t border-purple-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: WireGuard, PQC Algorithms, Microwave Backhaul, BGP Routing
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-blue-950/10 dark:bg-blue-950/20 border border-blue-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-blue-700 dark:text-blue-300 font-mono text-sm">
+                        3. Watershed & IoT Telemetry Lead
+                      </span>
+                      <span className="px-2 py-0.5 bg-blue-500/20 text-blue-600 dark:text-blue-300 text-[10px] font-mono rounded font-bold">
+                        $95k - $125k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Deploys solar-powered water and atmospheric sensors across the San Juan and Rio Chama basins, operating real-time flaring detection models for tribal natural resource defense.
+                    </p>
+                    <div className="pt-2 border-t border-blue-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: LoRaWAN, Sensor Calibration, Geospatial GIS, Microgrid SCADA
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-amber-950/10 dark:bg-amber-950/20 border border-amber-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-amber-700 dark:text-amber-300 font-mono text-sm">
+                        4. IHS Exposomic Health Custodian
+                      </span>
+                      <span className="px-2 py-0.5 bg-amber-500/20 text-amber-600 dark:text-amber-300 text-[10px] font-mono rounded font-bold">
+                        $105k - $135k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Operates the local air-gapped EHR environment, cross-referencing individual biometric exposome metrics (such as heavy metals and microplastics) with environmental contamination patterns.
+                    </p>
+                    <div className="pt-2 border-t border-amber-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: Bio-Informatics, HIPAA Compliance, Local Vector DBs, Exposomics
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-cyan-950/10 dark:bg-cyan-950/20 border border-cyan-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-cyan-700 dark:text-cyan-300 font-mono text-sm">
+                        5. Shamir Elder Ceremony Custodian
+                      </span>
+                      <span className="px-2 py-0.5 bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 text-[10px] font-mono rounded font-bold">
+                        $90k - $120k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Facilitates the cryptographic quorum key ceremonies with tribal elders, managing FIPS 140-3 HSM root backups, optical ceramic M-DISC archives, and ceremonial access authorizations.
+                    </p>
+                    <div className="pt-2 border-t border-cyan-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: Shamir Secret Sharing, HSM Firmware, Optical Storage, Tribal Protocol
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-rose-950/10 dark:bg-rose-950/20 border border-rose-500/30 rounded-2xl space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-rose-700 dark:text-rose-300 font-mono text-sm">
+                        6. UCANX Commodity Trader
+                      </span>
+                      <span className="px-2 py-0.5 bg-rose-500/20 text-rose-600 dark:text-rose-300 text-[10px] font-mono rounded font-bold">
+                        $95k - $130k
+                      </span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Manages sovereign cryptographic settlement contracts for tribal agricultural harvests, carbon-sequestration hemp, and excess microgrid energy sold to municipal utilities.
+                    </p>
+                    <div className="pt-2 border-t border-rose-500/20 font-mono text-[10px] text-stone-500">
+                      Skills: Decentralized Ledgers, Smart Contracts, Energy Markets, Agriculture
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELDER-YOUTH INTERGENERATIONAL CO-DESIGN PIPELINE */}
+                <div className="p-5 bg-gradient-to-r from-amber-500/10 via-stone-100 dark:via-stone-800 to-emerald-500/10 rounded-2xl border border-amber-500/30 flex flex-col sm:flex-row items-center gap-4 text-xs">
+                  <div className="p-3 bg-amber-500/20 rounded-xl text-amber-700 dark:text-amber-300 shrink-0 font-mono font-bold text-sm">
+                    🪶 Intergenerational Co-Design
+                  </div>
+                  <p className="text-stone-700 dark:text-stone-300 leading-relaxed font-sans">
+                    <strong>The Elder-Youth Sovereign Tech Fellowship:</strong> Every young tribal technologist is paired with a traditional clan elder. While youth master server silicon, cryptographic protocols, and neural architectures, elders impart the sacred customary laws, seasonal feast schedules, and ethical guardrails that guide how sovereign technology serves the nation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PILLAR 4: UNLOCKING FRONTIER MEMBER SERVICES */}
+          {activeBusinessPillar === 'frontier_services' && (
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div className="space-y-2">
+                  <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold tracking-widest block">
+                    Direct Member Impact & Daily Life
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100">
+                    Frontier Capabilities Only Possible in the Sovereign Future of IT
+                  </h3>
+                  <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-sans">
+                    Sovereign IT is not merely an infrastructure upgrade—it transforms what tribal government can deliver to every family, student, elder, and entrepreneur across the reservation.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-sans">
+                  <div className="p-5 bg-stone-50 dark:bg-stone-950/60 rounded-2xl border border-stone-200 dark:border-stone-800 space-y-2">
+                    <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold font-mono text-sm">
+                      <HeartHandshake size={18} />
+                      <span>Precision Personalized Exposomic Healthcare</span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Every member (like demonstration user Ouray Muskrat) possesses an encrypted, sovereign biometric vault. On-premise AI cross-references heavy metal soil tests from home plots with personal EHR data, recommending customized herbal phytochelators and clean water protocols with 100% HIPAA and tribal privacy.
+                    </p>
+                  </div>
+
+                  <div className="p-5 bg-stone-50 dark:bg-stone-950/60 rounded-2xl border border-stone-200 dark:border-stone-800 space-y-2">
+                    <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-bold font-mono text-sm">
+                      <BookOpen size={18} />
+                      <span>Dialect-Preserving Linguistic AI Engines</span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Using audio exclusively stored on the Dulce air-gap, localized voice models generate interactive language-learning apps for Dulce Elementary and High School youth, ensuring the Eastern Apache dialect is spoken fluently by future generations without external corporate harvesting.
+                    </p>
+                  </div>
+
+                  <div className="p-5 bg-stone-50 dark:bg-stone-950/60 rounded-2xl border border-stone-200 dark:border-stone-800 space-y-2">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold font-mono text-sm">
+                      <Shield size={18} />
+                      <span>Autonomous Real-Time Water Rights Defense</span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      Automated sensor meshes along the Navajo River and San Juan basin instantly detect upstream toxic releases or unpermitted diversion, mathematically generating cryptographic affidavits admissible in federal court before pollutants reach tribal irrigation canals.
+                    </p>
+                  </div>
+
+                  <div className="p-5 bg-stone-50 dark:bg-stone-950/60 rounded-2xl border border-stone-200 dark:border-stone-800 space-y-2">
+                    <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold font-mono text-sm">
+                      <DollarSign size={18} />
+                      <span>Zero-Fee Community Micro-Settlements</span>
+                    </div>
+                    <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+                      The UCANX ledger allows local artisans, wild game hunters, and organic growers to transact instantly with zero credit card processing fees, keeping 100% of economic velocity circulating inside the Jicarilla Apache Nation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PILLAR 5: INTERGOVERNMENTAL COMPACT & STATE LEADERSHIP */}
+          {activeBusinessPillar === 'intergovernmental' && (
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div className="space-y-2">
+                  <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold tracking-widest block">
+                    Sovereign Intergovernmental Diplomacy
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 flex items-center gap-2">
+                    <Scale className="text-amber-500" size={26} />
+                    <span>The New Mexico State Intergovernmental Digital Sovereignty Compact</span>
+                  </h3>
+                  <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-sans">
+                    With New Mexico having elected its first Indigenous Governor, the state and sovereign tribal nations can establish a landmark multilateral compact that serves as the global gold standard for state-tribal digital cooperation.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-amber-500/10 border-l-4 border-amber-600 dark:border-amber-400 rounded-r-2xl space-y-3 font-mono text-xs text-amber-950 dark:text-amber-200">
+                  <div className="font-bold text-sm uppercase">Key Principles of the State-Tribal Digital Compact:</div>
+                  <ul className="space-y-2 list-disc list-inside">
+                    <li>
+                      <strong>Mutual Non-Infiltration:</strong> New Mexico State agencies explicitly recognize the air-gapped Dulce datacenter and treaty S-VPN as immune from state administrative search warrants.
+                    </li>
+                    <li>
+                      <strong>Voluntary Environmental Telemetry Peering:</strong> Jicarilla Apache and Taos Pueblo stream verified, non-PII water quality and flaring emissions telemetry to the New Mexico Environment Department (NMED) via the Santa Fe DMZ node.
+                    </li>
+                    <li>
+                      <strong>State Cloud Liability Relief:</strong> By maintaining sovereign physical custody of tribal data, the State of New Mexico is completely shielded from compliance liability and federal subpoena exposure.
+                    </li>
+                    <li>
+                      <strong>Joint STEM & AI Workforce Grants:</strong> Collaborative funding between the New Mexico Higher Education Department and Tribal Colleges to sponsor Sovereign IT Fellowships.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* CALL TO ACTION FOOTER FOR TRIBAL LEADERS */}
+          <div className="p-6 bg-stone-950 border-2 border-emerald-500/50 rounded-3xl text-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
+            <div className="flex items-center gap-3">
+              <ShieldCheck size={24} className="text-emerald-400 shrink-0" />
+              <div>
+                <div className="font-bold text-sm text-white">Ready for Tribal Council Resolution & Execution</div>
+                <div className="text-stone-400">Complete architectural blueprints, hardware BoM, and legal charters are ratified.</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => setActiveSubTab('architecture_diagram')}
+                className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-xl transition-all cursor-pointer font-bold"
+              >
+                Inspect Network Topology
+              </button>
+              <button
+                onClick={() => setActiveSubTab('ouray_muskrat_demo')}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg transition-all cursor-pointer font-bold"
+              >
+                Launch Ouray Muskrat Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* FOOTER NAVIGATION BAR */}
       <div className="bg-stone-100 dark:bg-stone-900/90 border border-stone-200 dark:border-stone-800 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-stone-600 dark:text-stone-400">
         <div className="flex items-center gap-2">
@@ -2151,6 +2893,15 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
 
             {/* Modal Body */}
             <div className="p-6 overflow-y-auto space-y-6 text-stone-200 font-sans">
+              {/* HIGH RESOLUTION MAP IMAGE */}
+              <div className="rounded-2xl overflow-hidden border-2 border-amber-500/50 bg-stone-950 shadow-2xl">
+                <img
+                  src={jicarillaNetworkMapImg}
+                  alt="Plate #24 - Jicarilla Apache Sovereign Hybrid IT Network Map"
+                  className="w-full h-auto max-h-[560px] object-contain mx-auto"
+                />
+              </div>
+
               <div className="p-4 bg-stone-950/80 rounded-2xl border border-stone-800 space-y-2">
                 <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider block">
                   Verbatim Forensic Specification & Cryptographic Provenance
