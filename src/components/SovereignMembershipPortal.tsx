@@ -32,6 +32,7 @@ import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_act
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
+import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import {
   Shield,
   UserCheck,
@@ -163,6 +164,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AH',
+      title: 'Primal Origins of Artisanal Metallurgy, Modern Galamsey & The Global Exposenome (Plate #26)',
+      type: 'Deep-Time Metallurgy, Galamsey Case Study & Exposenomics Sovereign IP Asset',
+      imageSrc: goldGreedGravesImg,
+      link: 'artisanal_metallurgy',
+      description: 'Origins: Landmark visual masterwork and forensic dossier illustrating the deep-time continuum of metallurgy—from early primates collecting lustrous pyrites/galena and throwing them into cave hearth fires, through Chalcolithic smelting, Greco-Roman lead aristocracy, and Potosí mercury amalgamation, to modern heavy excavators churning mercury into Ghana rivers (Galamsey) and lead-milling in Nigeria (Zamfara). Details the biological lifecycle of H. sapiens evolving with trace metal balance without lead, cellular 8-OHdG DNA strand breaks via zinc-finger enzyme knockout, and the tragic colonization of the least lead-poisoned biome and genome on Earth—Indigenous Communities Earth America. Governed by Roulet\'s Law.',
+      sovereignHash: '0xGOLD_GREED_GRAVES_PRIMAL_METALLURGY_GHANA_NIGERIA_2026'
+    },
     {
       id: 'IP-000AG',
       title: 'Effects of Occupational Lead Exposure on Oxidative Stress & Essential Metal Homeostasis (Plate #25)',

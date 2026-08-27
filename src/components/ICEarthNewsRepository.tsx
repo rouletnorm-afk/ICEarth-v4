@@ -31,6 +31,7 @@ import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_act
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
+import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -127,6 +128,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gold_greed_graves') ||
+    u.includes('primal_mining') ||
+    u.includes('artisanal_metallurgy') ||
+    u.includes('1787869660769') ||
+    u.includes('galamsey') ||
+    u.includes('plate_26') ||
+    u.includes('plate26') ||
+    u.includes('plate #26') ||
+    u.includes('0xgold_greed_graves')
+  ) {
+    return goldGreedGravesImg;
+  }
   if (
     u.includes('lead_homeostasis') ||
     u.includes('occupational_lead') ||
@@ -450,6 +464,55 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'GOLD-GREED-GRAVES-ILLEGAL-MINING-GHANA-NIGERIA-2026',
+    contentType: 'Article',
+    title: 'Gold, Greed and Graves: Illegal Mining’s Growing Threat to Public Life; A Ghana-Nigeria Case Study',
+    subtitle: 'ModernGhana Investigative Feature by Mustapha Bature Sallama • Deep-AI Dive into the Exposenomics of Artisanal Metallurgy Across Human History: From Primal Fire-Hearth Smelting & DNA Strand Breaks (8-OHdG) to the Colonization of Indigenous America & West African Galamsey Destruction • Governed by Roulet’s Law',
+    sourceUrl: 'https://www.modernghana.com/news/1522829/gold-greed-and-graves-illegal-minings-growing.html',
+    sourceName: 'ModernGhana Investigative Journalism & Research Desk',
+    publishDate: '2026-08-20',
+    author: 'Mustapha Bature Sallama (sallamamustapha73@gmail.com)',
+    authorName: 'Mustapha Bature Sallama • Exposenomics Synthesis by Norman Roulet',
+    abstract: 'Across West Africa’s gold belt, a quiet emergency is unfolding beneath the roar of excavators and the churn of mercury-laced water. In Ghana and Nigeria, illegal artisanal mining—known locally in Ghana as "Galamsey" and characterized across Nigeria by over 4,000 abandoned, waterlogged death pits—has evolved from small-scale subsistence into industrial-scale environmental devastation. Heavy machinery operated by powerful political and commercial syndicates tears through prime cocoa farmlands, forest reserves, and sacred rivers (Pra, Ankobra, Birim), leaving behind cratered landscapes of cyanide and mercury. In Nigeria, the 2010 Zamfara lead catastrophe—where grinding lead-bearing gold ore (galena) inside residential compounds killed over 400 infants from acute encephalopathy—stands as an apocalyptic warning. This investigative synthesis connects modern West African extraction to the unbroken multi-million-year continuum of hominid metallurgy, cellular 8-OHdG DNA strand breaks, and the violent colonial destruction of the pristine Indigenous Americas.',
+    editorCommentary: 'Mustapha Bature Sallama’s courageous ModernGhana investigation captures the modern apex of Roulet’s Law: Perturbation (since early primates discarded lustrous ores into hearths, leading to toxic Chalcolithic smelting, Roman plumbism, and modern Galamsey excavators) × Uncertainty (institutional corruption, regulatory voids, and cross-border gold smuggling) = Chaos (mass pediatric lead encephalopathy, river ecocide, pit cave-ins, and armed banditry) × Relativity (global gold bullion reserves in Zurich and Dubai vs. severe multi-dimensional toxic poverty in West Africa). We also prove the evolutionary biology of lead: primates evolved with essential trace minerals but zero lead; when anthropogenic lead displaces zinc in DNA repair enzymes, direct 8-OHdG strand breaks occur. Colonization of the Americas was the forceful imposition of this toxic paradigm upon the least lead-poisoned human population on Earth.',
+    fullExcerpt: `GOLD, GREED AND GRAVES: ILLEGAL MINING’S GROWING THREAT TO PUBLIC LIFE; A GHANA-NIGERIA CASE STUDY
+MODERNGHANA INVESTIGATIVE DOSSIER & DEEP-TIME EXPOSENOMICS SYNTHESIS
+
+Source: ModernGhana (https://www.modernghana.com/news/1522829/gold-greed-and-graves-illegal-minings-growing.html)
+Investigative Author: Mustapha Bature Sallama (sallamamustapha73@gmail.com)
+Deep-AI Dive & Historical Exposenomics: Norman Roulet (ICEarth Sovereign Lab)
+Cryptographic Provenance Vault: 0xGOLD_GREED_GRAVES_GHANA_NIGERIA_MODERNGHANA_2026
+Interactive Research Engine: https://icearth.org/?tab=artisanal_metallurgy
+
+1. THE WEST AFRICAN CASUALTY GROUND:
+• Ghana Galamsey Crisis: Unregulated alluvial gold mining along the Pra, Ankobra, and Birim rivers has turned crystal water bodies into turbid, yellow-brown mercury slurries. Heavy machinery operated by political-commercial syndicates destroys cocoa farmlands, timber reserves, and municipal water intakes, driving treatment costs up 300%+.
+• Nigeria Artisanal Disaster: Over 4,000 abandoned, waterlogged pits dot Niger, Zamfara, Kogi, and Plateau States. In Zamfara, grinding lead-rich gold ore (galena) inside residential compounds killed over 400 infants from acute encephalopathy (blood lead levels > 100 µg/dL). Pits frequently collapse, burying artisanal youth and fueling banditry.
+• Transnational Syndicates & Smuggling: Porous ECOWAS borders allow illicit gold to flow unchecked into shadow bullion refineries in the UAE and Switzerland, laundering billions while externalizing public health wreckage onto local communities.
+
+2. THE PRIMAL ORIGINS OF ARTISANAL METALLURGY (THE DEEP-TIME CONTINUUM):
+• The Shiny Rock Threshold: Millions of years ago, early hominids collected lustrous pyrites, galena, and malachite. When discarded into cave hearths, rudimentary metallurgy began.
+• The Unchanged Cycle: The transition from Stone Age knapping to Chalcolithic smelting, Roman lead piping, Spanish colonial Potosí mercury amalgamation, and modern West African Galamsey follows the exact same economic trap: short-term mineral extraction at the expense of irreversible biological destruction.
+
+3. EVOLUTIONARY BIOLOGY & DNA DAMAGE (8-OHdG):
+• Non-Pb Primates: Primates evolved into Homo sapiens in environments containing balanced trace metals (Zn, Fe, Cu, Mn, Se, Ca, Mg), but virtually ZERO lead (Pb).
+• Genotoxic Cleavage: Anthropogenic lead displaces zinc in essential DNA repair enzymes (OGG1, PARP-1, Zinc Finger Transcription Factors), paralyzing base excision repair. Hydroxyl radical cascades trigger direct double-stranded DNA cleavage and mutagenic 8-hydroxy-2'-deoxyguanosine (8-OHdG) accumulation.
+
+4. COLONIZATION OF INDIGENOUS COMMUNITIES EARTH AMERICA:
+• Baseline Purity: Indigenous peoples of the Americas inhabited the least lead-poisoned biome, genome, and exposome in recorded human history.
+• Colonial Exposome Influx: European colonization violently imposed lead ammunition, copper/lead smelting, industrial emissions, and toxic paint, forcibly degrading the pristine metabolic integrity of indigenous populations.
+
+5. ROULET'S LAW FORMULATION:
+Perturbation (Primal hearth smelting to heavy Galamsey excavators) × Uncertainty (Regulatory voids and bribery syndicates) = Chaos (Mass pediatric death, water collapse & 8-OHdG mutations) × Relativity (Global gold bullion wealth vs. West African toxic poverty).`,
+    imageUrl: 'gold_greed_graves_primal_mining_1787869660769.jpg',
+    tags: ['ArtisanalMetallurgy', 'GoldGreedGraves', 'ModernGhana', 'MustaphaBatureSallama', 'Galamsey', 'GhanaGold', 'NigeriaMining', 'ZamfaraLead', '8OHdG', 'DNABreaks', 'IndigenousAmericas', 'RouletsLaw', 'Exposenomics', 'ICEarth'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Four Corners Indigenous'],
+    vaultHash: '0xGOLD_GREED_GRAVES_GHANA_NIGERIA_MODERNGHANA_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Exposenomics Architect',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'LEAD-OXIDATIVE-STRESS-ESSENTIAL-METALS-SCOPING-REVIEW-2026',
     contentType: 'Research',
@@ -2883,7 +2946,9 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                 {article.imageUrl && (
                   <div 
                     onClick={() => {
-                      if (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) {
+                      if (article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) {
+                        if (onNavigateTab) onNavigateTab('artisanal_metallurgy');
+                      } else if (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) {
                         if (onNavigateTab) onNavigateTab('artisanal_mining');
                       } else if (article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME')) {
                         if (onNavigateTab) onNavigateTab('suriname_isotope');
@@ -2900,7 +2965,7 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                       }
                     }}
                     className={`rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 max-h-96 bg-stone-900 flex items-center justify-center relative group ${
-                      article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING') || article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
+                      article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES') || article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING') || article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
                     }`}
                   >
                     <img
@@ -2915,6 +2980,12 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                         }
                       }}
                     />
+                    {(article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) && (
+                      <div className="absolute bottom-3 right-3 bg-amber-950/90 text-amber-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-amber-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
+                        <Flame size={14} className="text-amber-400" />
+                        <span>Click Graphic to Open Deep-AI Dive: Artisanal Metallurgy & Exposenomics Engine</span>
+                      </div>
+                    )}
                     {(article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) && (
                       <div className="absolute bottom-3 right-3 bg-amber-950/90 text-amber-200 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-amber-500/50 shadow-xl flex items-center gap-1.5 backdrop-blur-sm group-hover:scale-105 transition-all">
                         <Flame size={14} className="text-amber-400" />
@@ -3042,6 +3113,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) && (
+                      <button
+                        onClick={() => onNavigateTab('artisanal_metallurgy')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-900 via-orange-800 to-amber-700 hover:from-amber-800 hover:to-orange-700 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Flame size={14} className="text-amber-200" />
+                        <span>👑 Launch Artisanal Metallurgy & Exposenomics Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('OccupationalLead') || article.tags?.includes('OxidativeStress') || article.tags?.includes('EssentialMetals') || article.id.includes('LEAD-OXIDATIVE-STRESS')) && (
                       <button
                         onClick={() => onNavigateTab('occupational_lead_review')}

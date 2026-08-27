@@ -88,10 +88,24 @@ import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_act
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
+import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gold_greed_graves') ||
+    u.includes('primal_mining') ||
+    u.includes('artisanal_metallurgy') ||
+    u.includes('1787869660769') ||
+    u.includes('galamsey') ||
+    u.includes('plate_26') ||
+    u.includes('plate26') ||
+    u.includes('plate #26') ||
+    u.includes('0xgold_greed_graves')
+  ) {
+    return goldGreedGravesImg;
+  }
   if (
     u.includes('lead_homeostasis') ||
     u.includes('occupational_lead') ||
@@ -527,6 +541,46 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-GOLD-GREED-GRAVES-GHANA-NIGERIA-2026',
+      title: 'Gold, Greed and Graves: Illegal Mining’s Growing Threat to Public Life; A Ghana-Nigeria Case Study',
+      category: 'Exposenomics',
+      date: '2026-08-20',
+      imageSrc: goldGreedGravesImg,
+      summary: 'ModernGhana Investigative Feature (August 20, 2026) by Mustapha Bature Sallama: Across West Africa’s gold belt (Ghana Pra/Ankobra basins & Nigeria Zamfara/Niger/Kogi belts), illegal artisanal mining (Galamsey) has escalated into an acute environmental and public health catastrophe. Heavy excavators tear through prime cocoa farmlands and forested reserves while mercury and lead churn into drinking water networks. Synthesized with ICEarth deep-time exposenomics—from primal hominid fire-hearth metallurgy and cellular 8-OHdG DNA strand breaks to the tragic colonization of the pristine Indigenous Americas—under Roulet’s Law: Perturbation × Uncertainty = Chaos × Relativity.',
+      fullText: `GOLD, GREED AND GRAVES: ILLEGAL MINING’S GROWING THREAT TO PUBLIC LIFE; A GHANA-NIGERIA CASE STUDY
+MODERNGHANA INVESTIGATIVE REPORT & DEEP-TIME EXPOSENOMICS SYNTHESIS
+
+Published: August 20, 2026
+Source: ModernGhana (https://www.modernghana.com/news/1522829/gold-greed-and-graves-illegal-minings-growing.html)
+Author: Mustapha Bature Sallama (sallamamustapha73@gmail.com)
+Deep-AI Dive & Exposenomics Architecture: Norman Roulet (ICEarth Sovereign Lab / GCLAC Co-Chair)
+Sovereign Vault Hash: 0xGOLD_GREED_GRAVES_GHANA_NIGERIA_MODERNGHANA_2026
+Interactive Research Engine: https://icearth.org/?tab=artisanal_metallurgy
+
+1. THE MODERNGHANA INVESTIGATIVE DOSSIER:
+• Ghana Galamsey Crisis: Unregulated alluvial gold mining along the Pra, Ankobra, and Birim rivers has turned crystal water bodies into turbid, yellow-brown mercury slurries. Heavy machinery (excavators and bulldozers) operated by political-commercial syndicates destroy cocoa farmlands, timber reserves, and municipal water intakes, driving treatment costs up 300%+.
+• Nigeria Artisanal Disaster: Over 4,000 abandoned, waterlogged pits dot Niger, Zamfara, Kogi, and Plateau States. In Zamfara, grinding lead-rich gold ore (galena) inside residential compounds killed over 400 infants from acute encephalopathy (blood lead levels > 100 µg/dL). Pits frequently collapse, burying artisanal youth and fueling banditry.
+• Transnational Syndicates & Smuggling: Porous ECOWAS borders allow illicit gold to flow unchecked into shadow bullion refineries in the UAE and Switzerland, laundering billions while externalizing public health wreckage onto local communities.
+
+2. THE PRIMAL ORIGINS OF ARTISANAL METALLURGY (THE DEEP-TIME CONTINUUM):
+• The Shiny Rock Threshold: Millions of years ago, early hominids collected lustrous pyrites, galena, and malachite. When discarded into cave hearths, rudimentary metallurgy began.
+• The Unchanged Cycle: The transition from Stone Age knapping to Chalcolithic smelting, Roman lead piping, Spanish colonial Potosí mercury amalgamation, and modern West African Galamsey follows the exact same economic trap: short-term mineral extraction at the expense of irreversible biological destruction.
+
+3. EVOLUTIONARY BIOLOGY & DNA DAMAGE (8-OHdG):
+• Non-Pb Primates: Primates evolved into Homo sapiens in environments containing balanced trace metals (Zn, Fe, Cu, Mn, Se, Ca, Mg), but virtually ZERO lead (Pb).
+• Genotoxic Cleavage: Anthropogenic lead displaces zinc in essential DNA repair enzymes (OGG1, PARP-1, Zinc Finger Transcription Factors), paralyzing base excision repair. Hydroxyl radical cascades trigger direct double-stranded DNA cleavage and mutagenic 8-hydroxy-2'-deoxyguanosine (8-OHdG) accumulation.
+
+4. COLONIZATION OF INDIGENOUS COMMUNITIES EARTH AMERICA:
+• Baseline Purity: Indigenous peoples of the Americas inhabited the least lead-poisoned biome, genome, and exposome in recorded human history.
+• Colonial Exposome Influx: European colonization violently imposed lead ammunition, copper/lead smelting, industrial emissions, and toxic paint, forcibly degrading the pristine metabolic integrity of indigenous populations.
+
+5. ROULET'S LAW FORMULATION:
+Perturbation (Primal hearth smelting to heavy Galamsey excavators) × Uncertainty (Regulatory voids and bribery syndicates) = Chaos (Mass pediatric death, water collapse & 8-OHdG mutations) × Relativity (Global gold bullion wealth vs. West African toxic poverty).`,
+      tags: ['ArtisanalMetallurgy', 'GoldGreedGraves', 'ModernGhana', 'MustaphaBatureSallama', 'Galamsey', 'GhanaGold', 'NigeriaMining', 'ZamfaraLead', '8OHdG', 'DNABreaks', 'IndigenousAmericas', 'RouletsLaw', 'Exposenomics', 'ICEarth'],
+      linkHash: '0xGOLD_GREED_GRAVES_GHANA_NIGERIA_MODERNGHANA_2026',
+      publishedUrl: 'https://www.modernghana.com/news/1522829/gold-greed-and-graves-illegal-minings-growing.html'
+    },
     {
       id: 'MAG-LEAD-OXIDATIVE-STRESS-ESSENTIAL-METALS-2026',
       title: 'Effects of Occupational Lead Exposure on Oxidative Stress and Essential Metal Homeostasis in Humans: A Scoping Review',
@@ -1550,6 +1604,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AH',
+      title: 'Primal Origins of Artisanal Metallurgy, Modern Galamsey & The Global Exposenome (Plate #26)',
+      category: 'Deep-Time Metallurgy, Galamsey Case Study & Exposenomics Proofs',
+      imageSrc: goldGreedGravesImg,
+      location: 'Pra & Ankobra Basins (Ghana), Zamfara & Niger Belts (Nigeria) & Global Hominid Exposenome',
+      date: '2026-08-20',
+      description: 'Origins: Landmark visual masterwork and forensic dossier illustrating the deep-time continuum of metallurgy—from early primates collecting lustrous pyrites/galena and throwing them into cave hearth fires, through Chalcolithic smelting, Greco-Roman lead aristocracy, and Potosí mercury amalgamation, to modern heavy excavators churning mercury into Ghana rivers (Galamsey) and lead-milling in Nigeria (Zamfara). Details the biological lifecycle of H. sapiens evolving with trace metal balance without lead, cellular 8-OHdG DNA strand breaks via zinc-finger enzyme knockout, and the tragic colonization of the least lead-poisoned biome and genome on Earth—Indigenous Communities Earth America. Governed by Roulet\'s Law.',
+      vaultHash: '0xGOLD_GREED_GRAVES_PRIMAL_METALLURGY_GHANA_NIGERIA_2026',
+      tags: ['ArtisanalMetallurgy', 'GoldGreedGraves', 'ModernGhana', 'MustaphaBatureSallama', 'Galamsey', 'GhanaGold', 'NigeriaMining', 'ZamfaraLead', '8OHdG', 'DNABreaks', 'IndigenousAmericas', 'RouletsLaw', 'Exposenomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AG',
       title: 'Effects of Occupational Lead Exposure on Oxidative Stress & Essential Metal Homeostasis (Plate #25)',
