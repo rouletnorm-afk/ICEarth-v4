@@ -112,6 +112,7 @@ import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics'
 import { BangladeshLeadFreeStrategy } from './components/BangladeshLeadFreeStrategy';
 import { NigeriaHeartHabitat } from './components/NigeriaHeartHabitat';
 import { JicarillaSovereignIT } from './components/JicarillaSovereignIT';
+import { OccupationalLeadHomeostasis } from './components/OccupationalLeadHomeostasis';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse } from 'lucide-react';
 
@@ -120,7 +121,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -273,6 +274,21 @@ export default function App() {
         lower.includes('data_sovereignty')
       ) {
         setActiveTab('jicarilla_sovereign_it');
+      } else if (
+        lower === 'occupational_lead_review' ||
+        lower === 'occupational_lead' ||
+        lower === 'occupational_lead_homeostasis' ||
+        lower === 'lead_homeostasis' ||
+        lower === 'lead_review' ||
+        lower === 'oxidative_stress' ||
+        lower === 'metal_homeostasis' ||
+        lower === 'lead_homeostasis_review' ||
+        lower.includes('occupational_lead') ||
+        lower.includes('lead_homeostasis') ||
+        lower.includes('scoping_review') ||
+        lower.includes('metal_homeostasis')
+      ) {
+        setActiveTab('occupational_lead_review');
       } else if (
         lower === 'nigeria_heart_habitat' ||
         lower === 'nigeria_heart' ||
@@ -1564,9 +1580,25 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   }`}
                 >
                   <Feather size={16} className={activeTab === 'jicarilla_sovereign_it' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
-                  <span className="flex-1 font-semibold">🪶 Jicarilla Apache Sovereign Hybrid IT</span>
+                  <span className="flex-1 font-semibold">🪶 Jicarilla Apache Sovereign IT</span>
                   <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
                     Air-Gap AI
+                  </span>
+                </button>
+
+                {/* Occupational Lead, Oxidative Stress & Essential Metal Homeostasis Review */}
+                <button
+                  onClick={() => setActiveTab('occupational_lead_review' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis' || (activeTab as string) === 'lead_review'
+                      ? 'bg-cyan-950 text-cyan-100 border-cyan-500 shadow-md font-bold ring-1 ring-cyan-400/50'
+                      : 'hover:bg-cyan-500/20 text-cyan-950 border-cyan-400/60 bg-cyan-50/90 font-bold'
+                  }`}
+                >
+                  <Microscope size={16} className={activeTab === 'occupational_lead_review' ? 'text-cyan-300 animate-pulse' : 'text-cyan-700'} />
+                  <span className="flex-1 font-semibold">🧬 Lead & Essential Metal Homeostasis</span>
+                  <span className="px-1.5 py-0.2 bg-cyan-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    7.3k Review
                   </span>
                 </button>
 
@@ -1927,6 +1959,8 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'twin_cities_lead', icon: Droplets, label: '💧 Minneapolis & St. Paul Lead Audit', badge: '612/651', color: 'amber' },
                     { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
                     { id: 'nigeria_heart_habitat', icon: HeartPulse, label: '🫀 Toxic Shadows: Heart-Habitat Nigeria', badge: 'UNN 249', color: 'rose' },
+                    { id: 'jicarilla_sovereign_it', icon: Feather, label: '🪶 Jicarilla Sovereign IT', badge: 'Air-Gap', color: 'amber' },
+                    { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -2011,6 +2045,9 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
               {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && '💧 Minneapolis & St. Paul Lead Audit'}
               {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && '🇧🇩 Bangladesh Lead-Free 2035 Plan'}
+              {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
+              {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla') && '🪶 Jicarilla Apache Sovereign IT'}
+              {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3634,6 +3671,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla' || (activeTab as string) === 'jicarilla_it' || (activeTab as string) === 'indigenous_it' || (activeTab as string) === 'hybrid_it' || (activeTab as string) === 'data_sovereignty') && (
             <div className="flex-1 overflow-y-auto">
               <JicarillaSovereignIT 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.119: OCCUPATIONAL LEAD EXPOSURE, OXIDATIVE STRESS & ESSENTIAL METAL HOMEOSTASIS SCOPING REVIEW */}
+          {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'occupational_lead_homeostasis' || (activeTab as string) === 'lead_homeostasis' || (activeTab as string) === 'lead_review' || (activeTab as string) === 'oxidative_stress') && (
+            <div className="flex-1 overflow-y-auto">
+              <OccupationalLeadHomeostasis 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

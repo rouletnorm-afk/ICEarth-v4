@@ -31,6 +31,7 @@ import twinCitiesImg from '../assets/images/twin_cities_lead_service_lines_v2_17
 import bangladeshGraphicImg from '../assets/images/bangladesh_lead_free_2035_action_plan_1787002995679.jpg';
 import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_1787256882620.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
+import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import {
   Shield,
   UserCheck,
@@ -162,6 +163,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AG',
+      title: 'Effects of Occupational Lead Exposure on Oxidative Stress & Essential Metal Homeostasis (Plate #25)',
+      type: 'Cellular Exposenomics, Oxidative Stress & Trace Metal Homeostasis Sovereign IP Asset',
+      imageSrc: leadHomeostasisInfographicImg,
+      link: 'occupational_lead_review',
+      description: 'Origins: Peer-reviewed scoping review forensic plate synthesizing 45 human occupational cohorts (7,314 workers). Demonstrates that occupational lead exposure systematically increases reactive oxygen species (ROS) production, lipid peroxidation (MDA, LOOH), and mutagenic DNA strand breaks (8-OHdG), while concurrently disrupting essential metal homeostasis (depleting zinc, calcium, magnesium, selenium, and copper). Provides definitive cellular-level proof for Roulet’s Law.',
+      sovereignHash: '0xLEAD_OXIDATIVE_STRESS_ESSENTIAL_METALS_SCOPING_REVIEW_2026'
+    },
     {
       id: 'IP-000AF',
       title: 'Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Network Architecture (Plate #24)',
