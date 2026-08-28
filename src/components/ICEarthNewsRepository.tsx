@@ -32,6 +32,7 @@ import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_178
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
+import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -128,6 +129,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('eighteenmile') ||
+    u.includes('superfund') ||
+    u.includes('lockport') ||
+    u.includes('1787872310662') ||
+    u.includes('flintkote') ||
+    u.includes('plate_27') ||
+    u.includes('plate27') ||
+    u.includes('plate #27') ||
+    u.includes('0xeighteenmile')
+  ) {
+    return superfundImg;
+  }
   if (
     u.includes('gold_greed_graves') ||
     u.includes('primal_mining') ||
@@ -464,6 +478,54 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'EIGHTEENMILE-CREEK-SUPERFUND-FINE-LINE-2026',
+    contentType: 'Article',
+    title: 'Superfund Test Results Divide Residential Remediations by a Fine Line: The Eighteenmile Creek Crisis',
+    subtitle: 'Lockport Journal Investigative Feature by Heidi Truschel-Light • Deep-AI Dive into the Exposenomics of Superfund Residential Remediation, Arbitrary 400/200 ppm Grid Cutoffs, Composite Averaging Dilution, and the Unfound Infinite Boundary of Airborne Lead Plumes • Governed by Roulet’s Law',
+    sourceUrl: 'https://www.lockportjournal.com/news/local_news/superfund-test-results-divide-residential-remediations-by-a-fine-line/article_6a1a0071-96d7-43d1-aa1f-54e031ccc3af.html',
+    sourceName: 'Lockport Journal Investigative News Desk',
+    publishDate: '2026-08-27',
+    author: 'Heidi Truschel-Light (heidi.truschel-light@lockportjournal.com)',
+    authorName: 'Heidi Truschel-Light • Exposenomics Synthesis by Norman Roulet',
+    abstract: 'Along the 15-mile Eighteenmile Creek Superfund corridor flowing from Lockport north into Lake Ontario (today named Lake America), EPA decisions on where and how to remediate residential contamination have divided neighbors by an arbitrary bureaucratic razor. Soil test results don’t mean residents will receive the same cleanup as their neighbors—if any. Out of 168 residential properties sampled across Mill, Porter, Chapel, North Adam, Butler, Dayton, and Frost streets, 33 have been stripped and resodded, 42 are pending, and 13 have been rejected. Contamination originated from airborne lead particulates emitted by the former Flintkote plant. Remedial project managers Kelly Gaffney and Pete Mannino admitted: "We haven\'t found the boundary yet... It\'s not a fixed boundary." Meanwhile, at the Head Start center on Clinton and North Adam streets, cleanup was restricted to front entrance asphalt and a small sod corner, excluding the active children\'s playground from soil replacement. Mark Cuzzacrea (190 N. Adam St) was denied cleanup after his yard tested just below the limit, warned that retesting would dilute his composite average further. Concludes under Roulet\'s Law asking: what isn\'t a Superfund site when contaminated by Pb?',
+    editorCommentary: 'Heidi Truschel-Light’s investigative exposé for the Lockport Journal unveils the fundamental structural contradiction between absolute medical science and government remediation policy. Toxicological reality is absolute: lead has NO safe biological dose (CDC/WHO = 0.0 µg/dL), and aerosolized smokestack plumes do not halt at legal parcel boundaries. Yet under CERCLA Superfund budgeting, the EPA enforces arbitrary 400 ppm hotspot and 200 ppm property composite thresholds that mathematically exclude contaminated yards via deep-core dilution averaging. When the state draws a line separating excavated lawns from un-remediated dirt where children play, it creates a dangerous illusion of safety. Under Roulet’s Law: Perturbation (Flintkote industrial output) × Uncertainty (arbitrary grid cutoffs) = Chaos (patchwork remediation & lifelong pediatric exposure) × Relativity (federal fiscal rationing vs. permanent neurological loss).',
+    fullExcerpt: `SUPERFUND TEST RESULTS DIVIDE RESIDENTIAL REMEDIATIONS BY A FINE LINE: THE EIGHTEENMILE CREEK CRISIS
+LOCKPORT JOURNAL INVESTIGATIVE DOSSIER & DEEP-TIME EXPOSENOMICS SYNTHESIS
+
+Source: Lockport Journal (https://www.lockportjournal.com/news/local_news/superfund-test-results-divide-residential-remediations-by-a-fine-line/article_6a1a0071-96d7-43d1-aa1f-54e031ccc3af.html)
+Investigative Reporter: Heidi Truschel-Light (heidi.truschel-light@lockportjournal.com)
+Deep-AI Dive & Exposenomics Architecture: Norman Roulet (ICEarth Sovereign Lab / GCLAC Co-Chair)
+Cryptographic Provenance Vault: 0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026
+Interactive Research Engine: https://icearth.org/?tab=eighteenmile_creek
+
+1. THE EIGHTEENMILE CREEK SUPERFUND SITE:
+• 15-Mile Contaminated Corridor: Flows from Lockport north into Lake Ontario (Lake America). Primary contaminants of concern identified along the creek corridor are lead and PCBs.
+• Residential Testing Reality: 168 residential properties sampled across Mill, Porter, Chapel, North Adam, Butler, Dayton, and Frost streets. 33 completed with new topsoil and sod, 42 pending, and 13 disqualified as "not meeting criteria."
+• The Flintkote Origin: Contamination is the legacy of operations at the former Flintkote felt and insulation plant, where lead particles became airborne from smokestacks and deposited across Lockport residential neighborhoods according to prevailing wind direction.
+
+2. THE "FINE LINE" & CONFIDENTIAL COMPOSITE DILUTION:
+• Arbitrary Action Triggers: Remediation is only triggered if a single soil sample exceeds 400 ppm, or if a whole-property composite average exceeds 200 ppm.
+• The Mark Cuzzacrea Case (190 N. Adam St): While next-door neighbors received full excavation, Cuzzacrea’s yard tested just below the limit and was denied cleanup. When he requested retests in two backyard spots, EPA officials warned that lower peripheral results would dilute his average further, cementing his denial.
+• The Head Start Schoolyard Demarcation: At Clinton and North Adam streets, soil testing triggered removal along the front building entrance while the active children's playground was excluded from soil replacement.
+
+3. SCIENCE (ABSOLUTE) VS. GOVERNMENT (COMPROMISE):
+• Absolute Scientific Truth: There is NO safe biological dose of lead in humans (CDC/WHO threshold = 0.0 µg/dL). Low-dose exposure (0-100 ppm soil lead) inflicts the steepest non-linear rate of pediatric synaptic loss and cognitive deficit.
+• The Policy Fiasco: EPA grid lines and CERCLA budget caps create an illusion that toxicity stops at survey stakes.
+
+4. ROULET'S LAW SYNTHESIS:
+Perturbation (Flintkote industrial emissions) × Uncertainty (Arbitrary 400/200 ppm cutoffs & dilution formulas) = Chaos (Patchwork residential remediation & un-remediated child playgrounds) × Relativity (Federal Superfund fiscal caps vs. permanent pediatric neurological harm).
+
+CONCLUDING QUESTION: If lead has no safe biological threshold and aerosol plumes have no fixed boundary, WHAT ISN'T A SUPERFUND SITE?`,
+    imageUrl: 'eighteenmile_creek_superfund_fiasco_1787872310662.jpg',
+    tags: ['Superfund', 'EighteenmileCreek', 'LockportJournal', 'HeidiTruschelLight', 'PeteMannino', 'KellyGaffney', 'Flintkote', 'LakeOntario', 'LakeAmerica', 'RouletsLaw', 'Exposenomics', 'MarkCuzzacrea', 'HeadStart', 'ICEarth'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Great Lakes Corridor'],
+    vaultHash: '0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Exposenomics Architect',
+    featured: true,
+    promotedToHomePage: true
+  },
   {
     id: 'GOLD-GREED-GRAVES-ILLEGAL-MINING-GHANA-NIGERIA-2026',
     contentType: 'Article',
@@ -2946,7 +3008,9 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                 {article.imageUrl && (
                   <div 
                     onClick={() => {
-                      if (article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) {
+                      if (article.tags?.includes('EighteenmileCreek') || article.tags?.includes('Superfund') || article.id.includes('EIGHTEENMILE')) {
+                        if (onNavigateTab) onNavigateTab('eighteenmile_creek');
+                      } else if (article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) {
                         if (onNavigateTab) onNavigateTab('artisanal_metallurgy');
                       } else if (article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING')) {
                         if (onNavigateTab) onNavigateTab('artisanal_mining');
@@ -2965,7 +3029,7 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                       }
                     }}
                     className={`rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 max-h-96 bg-stone-900 flex items-center justify-center relative group ${
-                      article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES') || article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING') || article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
+                      article.tags?.includes('EighteenmileCreek') || article.tags?.includes('Superfund') || article.id.includes('EIGHTEENMILE') || article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES') || article.tags?.includes('ArtisanalMining') || article.tags?.includes('TerrorismExposenomics') || article.id.includes('NIGERIA-ARTISANAL-MINING') || article.tags?.includes('SurinameIsotope') || article.tags?.includes('LeadIsotopeForensics') || article.id.includes('SURINAME') || article.tags?.includes('Litigation') || article.tags?.includes('Earthjustice') || article.id.includes('NY-LEAD-SAFETY') || article.tags?.includes('Pica') || article.id.includes('PICA') || article.tags?.includes('EvolutionaryCanary') || article.id.includes('NATURE') || article.tags?.includes('GlobalLeadCrimeProof') ? 'cursor-pointer' : ''
                     }`}
                   >
                     <img
@@ -3113,6 +3177,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('EighteenmileCreek') || article.tags?.includes('Superfund') || article.id.includes('EIGHTEENMILE')) && (
+                      <button
+                        onClick={() => onNavigateTab('eighteenmile_creek')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-900 via-stone-800 to-amber-700 hover:from-amber-800 hover:to-amber-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Flame size={14} className="text-amber-200" />
+                        <span>👑 Launch Eighteenmile Creek Superfund Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('ArtisanalMetallurgy') || article.tags?.includes('GoldGreedGraves') || article.id.includes('GOLD-GREED-GRAVES')) && (
                       <button
                         onClick={() => onNavigateTab('artisanal_metallurgy')}

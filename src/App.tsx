@@ -114,15 +114,16 @@ import { NigeriaHeartHabitat } from './components/NigeriaHeartHabitat';
 import { JicarillaSovereignIT } from './components/JicarillaSovereignIT';
 import { OccupationalLeadHomeostasis } from './components/OccupationalLeadHomeostasis';
 import { ArtisanalMetallurgyExposenomics } from './components/ArtisanalMetallurgyExposenomics';
+import { EighteenmileCreekSuperfund } from './components/EighteenmileCreekSuperfund';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -251,6 +252,21 @@ export default function App() {
         lower.includes('geophagy')
       ) {
         setActiveTab('pica_exposenomics');
+      } else if (
+        lower === 'eighteenmile_creek' ||
+        lower === 'eighteenmile' ||
+        lower === 'eighteen_mile_creek' ||
+        lower === 'eighteenmile-creek' ||
+        lower === 'superfund' ||
+        lower === 'superfund_remediation' ||
+        lower === 'lockport' ||
+        lower === 'flintkote' ||
+        lower === 'cuzzacrea' ||
+        lower === 'lake_america' ||
+        lower.includes('eighteenmile') ||
+        lower.includes('superfund')
+      ) {
+        setActiveTab('eighteenmile_creek');
       } else if (
         lower === 'artisanal_metallurgy' ||
         lower === 'artisanal-metallurgy' ||
@@ -1634,6 +1650,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Eighteenmile Creek Superfund & Fine-Line Remediation (Deep-AI Dive) */}
+                <button
+                  onClick={() => setActiveTab('eighteenmile_creek')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund' || (activeTab as string) === 'superfund_remediation'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Building size={16} className={activeTab === 'eighteenmile_creek' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">👑 Eighteenmile Creek Superfund</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Deep-AI Dive
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -1994,6 +2026,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'jicarilla_sovereign_it', icon: Feather, label: '🪶 Jicarilla Sovereign IT', badge: 'Air-Gap', color: 'amber' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
+                    { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -2082,6 +2115,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla') && '🪶 Jicarilla Apache Sovereign IT'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
+              {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3725,6 +3759,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey' || (activeTab as string) === 'primal_mining' || (activeTab as string) === 'primal_metallurgy' || (activeTab as string) === 'modernghana') && (
             <div className="flex-1 overflow-y-auto">
               <ArtisanalMetallurgyExposenomics 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.121: EIGHTEENMILE CREEK SUPERFUND & FINE-LINE RESIDENTIAL REMEDIATIONS (DEEP-AI DIVE) */}
+          {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund' || (activeTab as string) === 'superfund_remediation' || (activeTab as string) === 'lockport' || (activeTab as string) === 'flintkote' || (activeTab as string) === 'cuzzacrea') && (
+            <div className="flex-1 overflow-y-auto">
+              <EighteenmileCreekSuperfund 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

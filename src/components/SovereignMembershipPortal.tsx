@@ -33,6 +33,7 @@ import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_178
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
+import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import {
   Shield,
   UserCheck,
@@ -164,6 +165,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AI',
+      title: 'Eighteenmile Creek Superfund: Fine-Line Residential Remediations & EPA Grid Fiasco (Plate #27)',
+      type: 'Superfund Remediation, Bureaucratic Dilution & Exposenomics Sovereign IP Asset',
+      imageSrc: superfundImg,
+      link: 'eighteenmile_creek',
+      description: 'Origins: Landmark investigative plate and exposenomics dossier analyzing the Eighteenmile Creek Superfund Site in Lockport, Niagara County, NY (flowing north into Lake Ontario / Lake America). Documents the bureaucratic fine line dividing residential properties by arbitrary 400/200 ppm lead thresholds, composite averaging dilution traps that deny remediation to contaminated households (e.g. Mark Cuzzacrea), and excluding active Head Start school playgrounds while cleaning entrance sidewalks. Concludes under Roulet\'s Law: when lead has no safe biological dose, what isn\'t a Superfund site?',
+      sovereignHash: '0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026'
+    },
     {
       id: 'IP-000AH',
       title: 'Primal Origins of Artisanal Metallurgy, Modern Galamsey & The Global Exposenome (Plate #26)',

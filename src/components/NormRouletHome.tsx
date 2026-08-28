@@ -89,10 +89,24 @@ import clevelandScandalImg from '../assets/images/cleveland_lead_audit_plate_178
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
+import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('eighteenmile') ||
+    u.includes('superfund') ||
+    u.includes('lockport') ||
+    u.includes('1787872310662') ||
+    u.includes('flintkote') ||
+    u.includes('plate_27') ||
+    u.includes('plate27') ||
+    u.includes('plate #27') ||
+    u.includes('0xeighteenmile')
+  ) {
+    return superfundImg;
+  }
   if (
     u.includes('gold_greed_graves') ||
     u.includes('primal_mining') ||
@@ -541,6 +555,44 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-EIGHTEENMILE-CREEK-SUPERFUND-LOCKPORT-2026',
+      title: 'Superfund Test Results Divide Residential Remediations by a Fine Line: The Eighteenmile Creek Crisis',
+      category: 'Exposenomics',
+      date: '2026-08-27',
+      imageSrc: superfundImg,
+      summary: 'Lockport Journal Investigative Report by Heidi Truschel-Light: Along the 15-mile Eighteenmile Creek Superfund corridor flowing from Lockport, NY into Lake Ontario (Lake America), EPA decisions on where to excavate residential yards have created a bizarre neighborhood divide. Neighbors with identical airborne lead exposures from the former Flintkote plant face opposite realities—one yard is completely dug up and resodded, while the next-door neighbor is denied cleanup because composite averaging diluted soil levels below the arbitrary 400/200 ppm threshold. Pete Mannino (EPA) and Kelly Gaffney admit: "We haven\'t found the boundary yet... It\'s not a fixed boundary." Concludes under Roulet\'s Law: what isn\'t a Superfund site when contaminated by Pb?',
+      fullText: `SUPERFUND TEST RESULTS DIVIDE RESIDENTIAL REMEDIATIONS BY A FINE LINE: THE EIGHTEENMILE CREEK CRISIS
+LOCKPORT JOURNAL INVESTIGATIVE REPORT & EXPOSENOMICS SYNTHESIS
+
+Source: Lockport Journal (https://www.lockportjournal.com/news/local_news/superfund-test-results-divide-residential-remediations-by-a-fine-line/article_6a1a0071-96d7-43d1-aa1f-54e031ccc3af.html)
+Investigative Reporter: Heidi Truschel-Light (heidi.truschel-light@lockportjournal.com)
+Deep-AI Dive & Exposenomics Architecture: Norman Roulet (ICEarth Sovereign Lab / GCLAC Co-Chair)
+Sovereign Vault Hash: 0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026
+Interactive Research Engine: https://icearth.org/?tab=eighteenmile_creek
+
+1. THE EIGHTEENMILE CREEK SUPERFUND SITE:
+• 15-Mile Contaminated Corridor: Flows from Lockport north into Lake Ontario (Lake America). Primary contaminants of concern identified along the creek corridor are lead and PCBs.
+• Residential Testing Reality: 168 residential properties sampled across Mill, Porter, Chapel, North Adam, Butler, Dayton, and Frost streets. 33 completed with new topsoil and sod, 42 pending, and 13 disqualified as "not meeting criteria."
+• The Flintkote Origin: Contamination is the legacy of operations at the former Flintkote felt and insulation plant, where lead particles became airborne from smokestacks and deposited across Lockport residential neighborhoods according to prevailing wind direction.
+
+2. THE "FINE LINE" & CONFIDENTIAL COMPOSITE DILUTION:
+• Arbitrary Action Triggers: Remediation is only triggered if a single soil sample exceeds 400 ppm, or if a whole-property composite average exceeds 200 ppm.
+• The Mark Cuzzacrea Case (190 N. Adam St): While next-door neighbors received full excavation, Cuzzacrea’s yard tested just below the limit and was denied cleanup. When he requested retests in two backyard spots, EPA officials warned that lower peripheral results would dilute his average further, cementing his denial.
+• The Head Start Schoolyard Demarcation: At Clinton and North Adam streets, soil testing triggered removal along the front building entrance while the active children's playground was excluded from soil replacement.
+
+3. SCIENCE (ABSOLUTE) VS. GOVERNMENT (COMPROMISE):
+• Absolute Scientific Truth: There is NO safe biological dose of lead in humans (CDC/WHO threshold = 0.0 µg/dL). Low-dose exposure (0-100 ppm soil lead) inflicts the steepest non-linear rate of pediatric synaptic loss and cognitive deficit.
+• The Policy Fiasco: EPA grid lines and CERCLA budget caps create an illusion that toxicity stops at survey stakes.
+
+4. ROULET'S LAW SYNTHESIS:
+Perturbation (Flintkote industrial emissions) × Uncertainty (Arbitrary 400/200 ppm cutoffs & dilution formulas) = Chaos (Patchwork residential remediation & un-remediated child playgrounds) × Relativity (Federal Superfund fiscal caps vs. permanent pediatric neurological harm).
+
+CONCLUDING QUESTION: If lead has no safe biological threshold and aerosol plumes have no fixed boundary, WHAT ISN'T A SUPERFUND SITE?`,
+      tags: ['Superfund', 'EighteenmileCreek', 'LockportJournal', 'HeidiTruschelLight', 'PeteMannino', 'KellyGaffney', 'Flintkote', 'LakeOntario', 'LakeAmerica', 'RouletsLaw', 'Exposenomics', 'MarkCuzzacrea', 'HeadStart', 'ICEarth'],
+      linkHash: '0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026',
+      publishedUrl: 'https://www.lockportjournal.com/news/local_news/superfund-test-results-divide-residential-remediations-by-a-fine-line/article_6a1a0071-96d7-43d1-aa1f-54e031ccc3af.html'
+    },
     {
       id: 'MAG-GOLD-GREED-GRAVES-GHANA-NIGERIA-2026',
       title: 'Gold, Greed and Graves: Illegal Mining’s Growing Threat to Public Life; A Ghana-Nigeria Case Study',
@@ -1604,6 +1656,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AI',
+      title: 'Eighteenmile Creek Superfund: Fine-Line Residential Remediations & EPA Grid Fiasco (Plate #27)',
+      category: 'Superfund Remediation, Bureaucratic Dilution & Exposenomics Proofs',
+      imageSrc: superfundImg,
+      location: 'Eighteenmile Creek Corridor, Lockport & Niagara County, NY → Lake Ontario (Lake America)',
+      date: '2026-08-27',
+      description: 'Origins: Landmark investigative plate and exposenomics dossier analyzing the Eighteenmile Creek Superfund Site in Lockport, Niagara County, NY (flowing north into Lake Ontario / Lake America). Documents the bureaucratic fine line dividing residential properties by arbitrary 400/200 ppm lead thresholds, composite averaging dilution traps that deny remediation to contaminated households (e.g. Mark Cuzzacrea), and excluding active Head Start school playgrounds while cleaning entrance sidewalks. Concludes under Roulet\'s Law: when lead has no safe biological dose, what isn\'t a Superfund site?',
+      vaultHash: '0xEIGHTEENMILE_CREEK_SUPERFUND_EPA_FIASCO_2026',
+      tags: ['Superfund', 'EighteenmileCreek', 'LockportJournal', 'HeidiTruschelLight', 'PeteMannino', 'KellyGaffney', 'Flintkote', 'LakeOntario', 'LakeAmerica', 'RouletsLaw', 'Exposenomics', 'MarkCuzzacrea', 'HeadStart', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AH',
       title: 'Primal Origins of Artisanal Metallurgy, Modern Galamsey & The Global Exposenome (Plate #26)',
