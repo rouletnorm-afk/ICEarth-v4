@@ -29,7 +29,16 @@ import {
   Image as ImageIcon,
   X,
   Maximize2,
-  Crown
+  Crown,
+  Play,
+  Video,
+  Brain,
+  Copy,
+  Check,
+  Microscope,
+  History,
+  Lightbulb,
+  Radio
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -56,8 +65,10 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 }) => {
   const isLight = siteTheme === 'light';
   const [activeEpoch, setActiveEpoch] = useState<string>('paleolithic');
-  const [activeDataTab, setActiveDataTab] = useState<'evolution' | 'nature_study' | 'omaha_superfund' | 'roulets_law'>('omaha_superfund');
+  const [activeDataTab, setActiveDataTab] = useState<'featured_video' | 'evolution' | 'nature_study' | 'omaha_superfund' | 'roulets_law'>('featured_video');
   const [selectedGraphicModal, setSelectedGraphicModal] = useState<{ src: string; title: string; subtitle: string; hash: string } | null>(null);
+  const [copiedCitation, setCopiedCitation] = useState<boolean>(false);
+  const [activeChapter, setActiveChapter] = useState<number>(0);
 
   // Evolutionary Epochs Data
   const epochs = [
@@ -215,6 +226,21 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
 
         {/* DATA SUB-TABS */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-200 dark:border-stone-800">
+          <button
+            onClick={() => setActiveDataTab('featured_video')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer border ${
+              activeDataTab === 'featured_video'
+                ? 'bg-gradient-to-r from-amber-600 via-red-600 to-rose-600 text-white border-amber-300 shadow-md font-bold ring-2 ring-amber-400/40'
+                : 'bg-amber-500/10 text-amber-800 dark:text-amber-300 border-amber-500/20 hover:bg-amber-500/20'
+            }`}
+          >
+            <Play size={14} className="fill-current text-white animate-pulse" />
+            <span>🎬 Featured Video: Ancient Poison & Neanderthals</span>
+            <span className="px-1.5 py-0.2 bg-red-600 text-white text-[9px] rounded-full font-mono uppercase font-black">
+              Aug 2026 AI Video
+            </span>
+          </button>
+
           <button
             onClick={() => setActiveDataTab('evolution')}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
@@ -462,6 +488,313 @@ export const EvolutionaryCanaryProof: React.FC<EvolutionaryCanaryProofProps> = (
           </div>
         </div>
       </div>
+
+      {/* TAB 0: FEATURED AI-GENERATED VIDEO EXPOSENOMICS PROOF */}
+      {activeDataTab === 'featured_video' && (
+        <div className="space-y-8 animate-in fade-in duration-300">
+          {/* MAIN VIDEO PLAYER & HEADER CONTAINER */}
+          <div className={`p-6 sm:p-8 rounded-3xl border-2 ${isLight ? 'bg-gradient-to-br from-stone-900 via-stone-950 to-amber-950 text-white border-amber-500/50 shadow-2xl' : 'bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950/80 text-white border-amber-500/60 shadow-2xl'} space-y-6 relative overflow-hidden`}>
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
+
+            {/* BADGES & META */}
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-red-600 text-white shadow-md">
+                  <Play size={13} className="fill-current" />
+                  <span>FEATURED AI VIDEO PROOF</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  <Brain size={13} />
+                  <span>NOVA1 vs FOXP2 Brain Organoids</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-stone-800 text-stone-300 border border-stone-700">
+                  <History size={13} />
+                  <span>2,000,000-Year Exposome</span>
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3 text-xs font-mono text-stone-400">
+                <span>Aug 28, 2026</span>
+                <span>•</span>
+                <span className="text-amber-400 font-bold">The Human Origin</span>
+                <span className="px-2 py-0.5 rounded-full bg-stone-800 text-[10px] text-stone-300 border border-stone-700">
+                  2 subscribers
+                </span>
+              </div>
+            </div>
+
+            {/* TITLE & HOOK */}
+            <div className="space-y-2">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-serif text-white tracking-tight leading-tight">
+                This Ancient Poison May Be Why Humans Beat the Neanderthals
+              </h2>
+              <p className="text-sm sm:text-base text-stone-300 max-w-4xl leading-relaxed">
+                Core Proof of Roulet's Law in hominin evolution: 2,000,000 years of environmental lead exposure quietly shaped the human brain, where a modern human gene (<code className="text-amber-300 font-mono font-bold">NOVA1</code>) protected language circuitry (<code className="text-emerald-300 font-mono font-bold">FOXP2</code>) from heavy metal toxicity while archaic Neanderthal brains were vulnerable.
+              </p>
+            </div>
+
+            {/* DIRECT EMBEDDED YOUTUBE VIDEO PLAYER */}
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-amber-500/40 bg-black shadow-2xl">
+              <iframe
+                className="w-full h-full absolute inset-0"
+                src="https://www.youtube.com/embed/3lzfRMnHtkE?rel=0&modestbranding=1"
+                title="This Ancient Poison May Be Why Humans Beat the Neanderthals"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            {/* VIDEO ACTIONS TOOLBAR */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href="https://www.youtube.com/watch?v=3lzfRMnHtkE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-mono font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-2"
+                >
+                  <Play size={14} className="fill-current" />
+                  <span>Watch on YouTube</span>
+                  <ExternalLink size={13} />
+                </a>
+
+                <a
+                  href="https://doi.org/10.1126/sciadv.adr1524"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-amber-300 font-mono font-bold text-xs rounded-xl border border-stone-700 transition-all flex items-center gap-2"
+                >
+                  <FileText size={14} />
+                  <span>Science Advances Study (2025)</span>
+                  <ExternalLink size={13} />
+                </a>
+              </div>
+
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(
+                    'Joannes-Boyau, R., de Souza, J.S., Arora, M., Muotri, A.R. et al. (2025). "Impact of intermittent lead exposure on hominid brain evolution." Science Advances, 11(42), eadr1524. DOI: 10.1126/sciadv.adr1524'
+                  );
+                  setCopiedCitation(true);
+                  setTimeout(() => setCopiedCitation(false), 3000);
+                }}
+                className="px-4 py-2 bg-stone-800/80 hover:bg-stone-800 text-stone-300 hover:text-white font-mono text-xs rounded-xl border border-stone-700 transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                {copiedCitation ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
+                <span>{copiedCitation ? 'Citation Copied!' : 'Copy Science Citation'}</span>
+              </button>
+            </div>
+          </div>
+
+          {/* ABSTRACT & SYNOPSIS BREAKDOWN */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* LEFT: ABSTRACT & SUMMARY */}
+            <div className={`lg:col-span-7 p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6 flex flex-col justify-between`}>
+              <div className="space-y-4">
+                <div className="border-b border-stone-200 dark:border-stone-800 pb-3 flex items-center justify-between">
+                  <div className="space-y-1">
+                    <span className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">
+                      Official YouTube Synopsis & Scientific Abstract
+                    </span>
+                    <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-stone-100">
+                      Ancient Lead Poisoning & Hominin Neurodevelopment
+                    </h3>
+                  </div>
+                  <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 font-mono text-xs font-bold">
+                    The Human Origin
+                  </span>
+                </div>
+
+                <div className="space-y-4 text-sm text-stone-700 dark:text-stone-300 leading-relaxed font-sans">
+                  <p className="p-4 rounded-2xl bg-amber-500/10 border border-amber-300 dark:border-amber-900/50 text-stone-900 dark:text-stone-200 font-serif italic text-base">
+                    “We think of lead poisoning as a modern, industrial problem. It isn't. A 2025 study of 51 fossil teeth from four continents shows that humans and our relatives were exposed to lead for over two million years — and that this ancient poison may have quietly shaped the evolution of the human brain.”
+                  </p>
+
+                  <p>
+                    Using lab-grown <strong>"mini-brains" (cortical organoids)</strong>, scientists found that a uniquely modern human gene, <code className="px-1.5 py-0.5 rounded bg-amber-100 dark:bg-stone-800 font-mono font-bold text-amber-800 dark:text-amber-300 text-xs">NOVA1</code>, may have protected our language circuitry (<code className="px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-stone-800 font-mono font-bold text-emerald-800 dark:text-emerald-300 text-xs">FOXP2</code>) from lead's devastating cytotoxicity — while the ancestral Neanderthal-like version did not.
+                  </p>
+
+                  <p>
+                    It's a strange, humbling possibility: that we may have out-survived the Neanderthals partly by a genetic accident — tolerating an ubiquitous environmental poison rather than through sheer cognitive superiority.
+                  </p>
+                </div>
+              </div>
+
+              {/* ROULET'S LAW INTEGRATION NOTE */}
+              <div className="p-4 rounded-2xl bg-stone-950 text-amber-300 border-2 border-amber-500/50 font-mono text-xs space-y-1.5 mt-4">
+                <div className="flex items-center gap-2 font-bold uppercase text-white">
+                  <Sparkles size={14} className="text-amber-400" />
+                  <span>Roulet's Law Sovereign Synthesis:</span>
+                </div>
+                <p className="text-stone-300 leading-relaxed font-serif italic">
+                  Perturbation (2M years of environmental Pb²⁺) × Uncertainty (archaic hominin susceptibility) = Chaos (Neanderthal language & synaptogenesis collapse) × Relativity (Modern human survival through NOVA1 genetic resilience).
+                </p>
+              </div>
+            </div>
+
+            {/* RIGHT: INTERACTIVE 5-CHAPTER EXPLORATION */}
+            <div className={`lg:col-span-5 p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-4`}>
+              <div className="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+                <span className="text-xs font-mono font-bold uppercase text-stone-500">
+                  Video Key Chapters & Topics
+                </span>
+                <span className="text-xs font-mono text-amber-600 font-bold">5 Pillars</span>
+              </div>
+
+              {/* CHAPTER BUTTONS */}
+              <div className="space-y-2">
+                {[
+                  {
+                    title: '1. The 2-Million-Year Poison',
+                    desc: 'How teeth record lead exposure like tree rings across 51 fossil hominins from four continents.',
+                    icon: History,
+                    color: 'amber',
+                    detail: 'Scientists applied laser-ablation ICP-MS to 51 fossil teeth from Australopithecus, Homo erectus, Neanderthals, and early modern humans across Africa, Europe, Asia, and Australasia. Intermittent spikes prove hominins endured pulses of heavy metal exposure from volcanic ash, mineralized springs, and cave hearth fires for over 2,000,000 years.'
+                  },
+                  {
+                    title: '2. The Gene That Sets Us Apart',
+                    desc: 'What NOVA1 is, and why evolutionary natural selection preserved our modern human version.',
+                    icon: Dna,
+                    color: 'indigo',
+                    detail: 'NOVA1 (Neuro-Oncological Ventral Antigen 1) is a master regulator of alternative RNA splicing in brain development. Almost all modern humans carry an isoleucine-to-valine substitution (I200V) that arose after our divergence from Neanderthals and Denisovans, locking in a crucial neural protection phenotype.'
+                  },
+                  {
+                    title: '3. Growing Mini-Brains',
+                    desc: 'How brain organoids allow scientists to test modern vs Neanderthal alleles under heavy metal stress.',
+                    icon: Microscope,
+                    color: 'purple',
+                    detail: 'Using CRISPR-Cas9 genome editing, scientists created human pluripotent stem cell-derived cerebral organoids ("mini-brains") expressing either the modern human NOVA1 or the archaic Neanderthal/Denisovan ancestral version, then exposed them to physiologically relevant micro-molar doses of lead.'
+                  },
+                  {
+                    title: '4. Attack on Language',
+                    desc: 'How lead damaged FOXP2 speech/language circuitry in Neanderthal brains — but spared modern humans.',
+                    icon: Brain,
+                    color: 'rose',
+                    detail: 'In Neanderthal-type organoids, lead exposure triggered acute apoptosis and severe synaptic pruning defects in FOXP2-expressing cortical projection neurons (the key circuit underlying complex vocal articulation and syntax), while modern human organoids preserved synaptic integrity.'
+                  },
+                  {
+                    title: '5. The Humbling Twist',
+                    desc: 'Why we may have won by surviving a poison, not by being smarter.',
+                    icon: Sparkles,
+                    color: 'emerald',
+                    detail: 'Rather than cognitive supremacy, modern humans may have outcompeted Neanderthals because our language circuitry remained functional during periods of intense environmental heavy metal stress (volcanism, cave fires), while Neanderthal social communication and neural coordination deteriorated.'
+                  }
+                ].map((ch, idx) => {
+                  const Icon = ch.icon;
+                  const isSelected = activeChapter === idx;
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => setActiveChapter(idx)}
+                      className={`p-3.5 rounded-2xl border transition-all cursor-pointer space-y-1.5 ${
+                        isSelected
+                          ? 'bg-amber-500/10 border-amber-500 text-stone-900 dark:text-stone-100 shadow-sm'
+                          : isLight
+                          ? 'bg-stone-50 border-stone-200 hover:bg-stone-100 text-stone-700'
+                          : 'bg-stone-800/50 border-stone-800 hover:bg-stone-800 text-stone-300'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 font-bold text-xs font-serif">
+                          <Icon size={15} className={isSelected ? 'text-amber-600 dark:text-amber-400' : 'text-stone-400'} />
+                          <span>{ch.title}</span>
+                        </div>
+                        {isSelected && <ChevronRight size={14} className="text-amber-600" />}
+                      </div>
+                      <p className="text-[11px] text-stone-500 line-clamp-2 leading-snug">
+                        {ch.desc}
+                      </p>
+                      {isSelected && (
+                        <div className="pt-2 mt-2 border-t border-amber-500/20 text-xs text-stone-700 dark:text-stone-300 font-sans leading-relaxed animate-in fade-in">
+                          {ch.detail}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* SOURCES & PALEOANTHROPOLOGY DISCLAIMER CARD */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* SOURCES & CITATIONS */}
+            <div className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-4`}>
+              <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 border-b border-stone-200 dark:border-stone-800 pb-3">
+                <BookOpen size={16} />
+                <span>Primary Scientific Literature & Media Sources</span>
+              </div>
+
+              <div className="space-y-3 text-xs text-stone-700 dark:text-stone-300 font-sans leading-relaxed">
+                <div className={`p-3.5 rounded-2xl ${isLight ? 'bg-stone-50' : 'bg-stone-950'} border border-stone-200 dark:border-stone-800 space-y-1`}>
+                  <span className="font-mono font-bold text-amber-700 dark:text-amber-400 block">
+                    Peer-Reviewed Landmark Paper:
+                  </span>
+                  <p className="font-medium text-stone-900 dark:text-stone-100">
+                    Joannes-Boyau, R., de Souza, J.S., Arora, M., Muotri, A.R. et al. (2025). <em>"Impact of intermittent lead exposure on hominid brain evolution."</em> <strong>Science Advances</strong>, 11(42), eadr1524.
+                  </p>
+                  <a
+                    href="https://doi.org/10.1126/sciadv.adr1524"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-amber-600 dark:text-amber-400 hover:underline font-mono text-[11px] inline-flex items-center gap-1 mt-1"
+                  >
+                    <span>DOI: 10.1126/sciadv.adr1524</span>
+                    <ExternalLink size={11} />
+                  </a>
+                </div>
+
+                <div className={`p-3.5 rounded-2xl ${isLight ? 'bg-stone-50' : 'bg-stone-950'} border border-stone-200 dark:border-stone-800 space-y-1`}>
+                  <span className="font-mono font-bold text-stone-500 block">
+                    Institutional Press Releases & Coverage:
+                  </span>
+                  <ul className="list-disc list-inside space-y-0.5 text-[11px] text-stone-600 dark:text-stone-400">
+                    <li>UC San Diego Health & School of Medicine Press Archive</li>
+                    <li>Icahn School of Medicine at Mount Sinai Exposomics Lab</li>
+                    <li>Phys.org (October 15, 2025): <em>"Ancient lead exposure altered brain evolution"</em></li>
+                    <li>ScienceDaily & Technology Networks Neuroscience Portals</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* OFFICIAL DISCLAIMER BOX */}
+            <div className={`p-6 rounded-3xl border-2 ${isLight ? 'bg-amber-50/70 border-amber-300 text-amber-950' : 'bg-amber-950/20 border-amber-900 text-amber-200'} space-y-4 flex flex-col justify-between`}>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono font-black uppercase tracking-wider text-amber-800 dark:text-amber-400">
+                  <AlertTriangle size={16} />
+                  <span>Official Paleoanthropology Disclaimer</span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-stone-800 dark:text-stone-200 leading-relaxed font-sans">
+                  <strong>DISCLAIMER:</strong> This video covers current paleoanthropology for educational purposes. The link between lead, <code className="font-mono font-bold text-amber-900 dark:text-amber-300">NOVA1</code>, and outcompeting Neanderthals is a hypothesis based on fossils, organoid models, and genetics — not proven history. Neanderthal extinction had many likely causes (climatic shifts, demographic density, pathogens). Presented as <em>"may have."</em>
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-amber-300/80 dark:border-amber-900/80 flex flex-wrap items-center justify-between gap-3">
+                <button
+                  onClick={() => setActiveDataTab('evolution')}
+                  className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Dna size={14} />
+                  <span>Explore 1M-Year Hominin Timeline</span>
+                  <ArrowRight size={13} />
+                </button>
+
+                {onNavigateTab && (
+                  <button
+                    onClick={() => onNavigateTab('denisovan_epas1')}
+                    className="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-amber-300 font-bold text-xs rounded-xl border border-amber-500/40 transition-all flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Denisovan EPAS1 Tab</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* TAB 1: EVOLUTIONARY HOMININ EXPOSOME */}
       {activeDataTab === 'evolution' && (

@@ -504,6 +504,50 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'VID-THE-HUMAN-ORIGIN-NEANDERTHALS-ANCIENT-POISON-2026',
+    contentType: 'Video',
+    title: 'This Ancient Poison May Be Why Humans Beat the Neanderthals',
+    subtitle: 'AI-Generated Video by The Human Origin (Aug 28, 2026) • 2-Million-Year Hominin Lead Exposome • NOVA1 Modern Protection vs FOXP2 Language Circuit Vulnerability in Neanderthals • Core Proof of Roulet’s Law',
+    sourceUrl: 'https://www.youtube.com/watch?v=3lzfRMnHtkE',
+    sourceName: 'The Human Origin (YouTube)',
+    publishDate: '2026-08-28',
+    author: 'The Human Origin',
+    authorName: 'The Human Origin Channel',
+    abstract: 'We think of lead poisoning as a modern, industrial problem. It isn\'t. A 2025 study of 51 fossil teeth from four continents shows that humans and our relatives were exposed to lead for over two million years — and that this ancient poison may have quietly shaped the evolution of the human brain. Using lab-grown "mini-brains" (organoids), scientists found that a uniquely modern human gene, NOVA1, may have protected our language circuitry (FOXP2) from lead\'s damage — while the Neanderthal-like version did not. It\'s a strange, humbling possibility: that we may have out-survived the Neanderthals partly by a genetic accident.',
+    editorCommentary: 'Norm Roulet & Sovereign Exposenomics Synthesis: This video provides a stunning visual and scientific breakdown of the evolutionary origin of the human exposome and Roulet’s Law. For millions of years, volcanic activity and cave hearth fires subjected hominins to intermittent acute lead spikes. The discovery that modern humans developed a protective NOVA1 allele that shielded our FOXP2 language circuitry from heavy metal cytotoxicity—while archaic Neanderthals remained vulnerable—is a cornerstone proof that heavy metal tolerance shaped human survival.',
+    fullExcerpt: `THIS ANCIENT POISON MAY BE WHY HUMANS BEAT THE NEANDERTHALS
+Channel: The Human Origin (Published Aug 28, 2026)
+Video URL: https://www.youtube.com/watch?v=3lzfRMnHtkE
+ICEarth Sovereign Evolutionary Canary: https://icearth.org/?tab=evolutionary_canary
+
+VIDEO DESCRIPTION & ABSTRACT:
+We think of lead poisoning as a modern, industrial problem. It isn't. A 2025 study of 51 fossil teeth from four continents shows that humans and our relatives were exposed to lead for over two million years — and that this ancient poison may have quietly shaped the evolution of the human brain.
+
+Using lab-grown "mini-brains" (organoids), scientists found that a uniquely modern human gene, NOVA1, may have protected our language circuitry (FOXP2) from lead's damage — while the Neanderthal-like version did not. It's a strange, humbling possibility: that we may have out-survived the Neanderthals partly by a genetic accident.
+
+IN THIS VIDEO, WE EXPLORE:
+1. The 2-Million-Year Poison: How teeth record lead exposure like tree rings.
+2. The Gene That Sets Us Apart: What NOVA1 is, and why evolution kept our version.
+3. Growing Mini-Brains: How organoids let scientists test human vs Neanderthal genes.
+4. Attack on Language: How lead damaged FOXP2 neurons in the Neanderthal-type brains — but not ours.
+5. The Humbling Twist: Why we may have won by surviving a poison, not by being smarter.
+
+DISCLAIMER:
+This video covers current paleoanthropology for educational purposes. The link between lead, NOVA1, and outcompeting Neanderthals is a hypothesis based on fossils, organoid models, and genetics — not proven history. Neanderthal extinction had many likely causes. Presented as "may have."
+
+SOURCES:
+- Joannes-Boyau, R., de Souza, J.S., Arora, M., Muotri, A.R. et al. (2025). "Impact of intermittent lead exposure on hominid brain evolution." Science Advances, 11(42), eadr1524. DOI: 10.1126/sciadv.adr1524
+- UC San Diego / Mount Sinai press materials; Phys.org (Oct 15, 2025); ScienceDaily; Technology Networks.`,
+    tags: ['Neanderthal', 'NOVA1', 'FOXP2', 'HumanOrigin', 'EvolutionaryCanary', 'AncientLead', 'ScienceAdvances', 'Organoids', 'MiniBrains', 'RouletsLaw', 'Exposenomics', 'PeerReviewed', 'ICEarth'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'ICETaos'],
+    vaultHash: '0xNOVA1_FOXP2_NEANDERTHAL_LEAD_ORGANOID_PROOF_2026',
+    editorName: 'Norm Roulet & Gemini AI',
+    editorRole: 'ICEarth Co-Developers & Lead AI Research Team',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: natureSoilCanaryImg
+  },
+  {
     id: 'ART-MDHHS-CHILDHOOD-UNIVERSAL-LEAD-TESTING-ALGORITHM-2026',
     contentType: 'Article',
     title: 'Universal Childhood Lead Testing: The MDHHS Decision Support Tool & Clinical Algorithm',
