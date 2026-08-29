@@ -34,6 +34,7 @@ import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_17872
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
+import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 import {
   Shield,
   UserCheck,
@@ -165,6 +166,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AJ',
+      title: 'Lead Pollution in Nigeria: Recent Trends, Distribution & Remediation Strategies (Plate #28)',
+      type: 'African Exposenomics, Multi-Vector Heavy Metal Pollution & Soil Remediation IP Asset',
+      imageSrc: nigeriaLeadReviewImg,
+      link: 'nigeria_lead_review',
+      description: 'Origins: Landmark forensic exposenomics plate and scoping review dossier synthesizing 4,536 peer-reviewed studies (2000–2024) across Nigeria’s 200M+ population. Details multi-pathway contamination routes (artisanal gold milling with galena reaching 18,500 ppm soil lead, maternal calabash chalk/Nzu ingestion with up to 100,000 ppm lead, informal ULAB smelting, Alaba e-waste open combustion, auto-mechanic spent oil, and architectural enamel paints), pediatric neurotoxicity, adult cardiovascular crisis, and five scalable remediation tracks (phytoremediation, biochar adsorption, bioremediation, soil washing, and immobilization). Governed by Roulet’s Law.',
+      sovereignHash: '0xNIGERIA_LEAD_POLLUTION_REVIEW_2026_EXPOSENOMICS'
+    },
     {
       id: 'IP-000AI',
       title: 'Eighteenmile Creek Superfund: Fine-Line Residential Remediations & EPA Grid Fiasco (Plate #27)',

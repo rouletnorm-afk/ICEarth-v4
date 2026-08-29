@@ -90,10 +90,22 @@ import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_17872
 import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_review_1787820570934.jpg';
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
+import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('nigeria_lead') ||
+    u.includes('nigeria_lead_pollution') ||
+    u.includes('1787983202387') ||
+    u.includes('plate_28') ||
+    u.includes('plate28') ||
+    u.includes('plate #28') ||
+    u.includes('0xnigeria_lead_pollution')
+  ) {
+    return nigeriaLeadReviewImg;
+  }
   if (
     u.includes('eighteenmile') ||
     u.includes('superfund') ||
@@ -555,6 +567,43 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-NIGERIA-LEAD-POLLUTION-REVIEW-2026',
+      title: 'Lead Pollution in Nigeria: Recent Trends, Distribution, and Remediation Strategies (ScienceDirect Scoping Review)',
+      category: 'Exposenomics',
+      date: '2026-08-28',
+      imageSrc: nigeriaLeadReviewImg,
+      summary: 'ScienceDirect Comprehensive Scoping Review: Synthesizing 4,536 publications (2000–2024) on the heavy metal crisis across Nigeria’s 200M+ population. Highlights multi-vector exposure routes including artisanal gold ore grinding (galena), spent engine oil dumping in auto-mechanic villages, open-air ULAB battery smelting, Alaba e-waste combustion, enamel architectural paints, and widespread maternal geophagy/pica (calabash chalk / Nzu containing up to 100,000 ppm lead). Synthesizes five core scalable remediation technologies (phytoremediation, biochar adsorption, bioremediation, soil washing, and immobilization) and policy interventions under Roulet’s Law.',
+      fullText: `LEAD POLLUTION IN NIGERIA: RECENT TRENDS, DISTRIBUTION, AND REMEDIATION STRATEGIES
+SCIDENCEDIRECT SCOPING REVIEW & EXPOSENOMICS SYNTHESIS
+
+Source: ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S3050475926005919)
+Journal: Journal of Hazardous Materials / Environmental Pollution Advances (Elsevier, 2026)
+DOI: 10.1016/j.envpol.2026.005919
+Deep-AI Dive & Exposenomics Architecture: Norman Roulet (ICEarth Sovereign Lab / GCLAC Co-Chair)
+Sovereign Vault Hash: 0xNIGERIA_LEAD_POLLUTION_REVIEW_2026_EXPOSENOMICS
+Interactive Research Engine: https://icearth.org/?tab=nigeria_lead_review
+
+HIGHLIGHTS:
+• Research trends and exposure pathways on lead contamination in Nigeria reviewed across 4,536 studies (2000–2024).
+• Health impacts (fatal acute pediatric encephalopathy, subclinical IQ losses, cardiovascular collapse, transplacental mobilization) accentuated.
+• Environmental, health, and policy perspectives integrated with five core remediation tracks (Phytoremediation, Biochar Cation-Exchange, Bioremediation, Soil Washing, Pyromorphite Immobilization).
+• Population at risk exceeds 200 million people, positioning Nigeria as the planetary epicenter of anthropogenic lead exposure.
+
+EXPOSURE PATHWAYS:
+1. Artisanal Gold Ore Milling: Dry pulverization of lead-rich galena ore in residential compounds (Zamfara, Niger, Kaduna). Soil lead exceeds 18,500 ppm (46x WHO limits).
+2. Maternal Geophagy & Pica: 45%–65% of pregnant women consume calabash chalk (Nzu/Ndok) with lead contents reaching 100,000 ppm, inducing direct fetal neurotoxicity.
+3. Informal ULAB Battery Smelting: Open-air cauldron smelting and acid dumping in Lagos, Ogun, and Kano.
+4. Electronic Waste Combustion: Alaba International Market open-burning of circuit board solders.
+5. Mechanic Village Spent Engine Oil: Persistent soil saturation across municipal mechanic hubs.
+6. Enamel Paints: Over 70% of solvent-based architectural paints contain lead chromate exceeding 90 ppm.
+
+ROULET'S LAW SYNTHESIS:
+Perturbation (18,500 ppm ore dust, 100,000 ppm Nzu chalk, ULAB emissions) × Uncertainty (Informal bushland operations, lack of universal BLL testing) = Chaos (Pediatric mortality, cognitive loss, adult hypertension, armed mining banditry) × Relativity (Global commodity value vs. 100% localized Nigerian health destruction).`,
+      tags: ['NigeriaLead', 'ScienceDirect', 'Exposenomics', 'Zamfara', 'CalabashChalk', 'Nzu', 'Geophagy', 'ULAB', 'AlabaMarket', 'MechanicVillage', 'NESREA', 'Phytoremediation', 'Biochar', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xNIGERIA_LEAD_POLLUTION_REVIEW_2026_EXPOSENOMICS',
+      publishedUrl: 'https://www.sciencedirect.com/science/article/abs/pii/S3050475926005919'
+    },
     {
       id: 'MAG-EIGHTEENMILE-CREEK-SUPERFUND-LOCKPORT-2026',
       title: 'Superfund Test Results Divide Residential Remediations by a Fine Line: The Eighteenmile Creek Crisis',
@@ -1656,6 +1705,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AJ',
+      title: 'Lead Pollution in Nigeria: Recent Trends, Distribution & Remediation Strategies (Plate #28)',
+      category: 'African Exposenomics, Multi-Vector Heavy Metal Pollution & Soil Remediation Proofs',
+      imageSrc: nigeriaLeadReviewImg,
+      location: '6 Geopolitical Zones of Nigeria (Zamfara, Niger, Lagos, Enugu, Rivers, Kano) • ScienceDirect',
+      date: '2026-08-28',
+      description: 'Origins: Landmark forensic exposenomics plate and scoping review dossier synthesizing 4,536 peer-reviewed studies (2000–2024) across Nigeria’s 200M+ population. Details multi-pathway contamination routes (artisanal gold milling with galena reaching 18,500 ppm soil lead, maternal calabash chalk/Nzu ingestion with up to 100,000 ppm lead, informal ULAB smelting, Alaba e-waste open combustion, auto-mechanic spent oil, and architectural enamel paints), pediatric neurotoxicity, adult cardiovascular crisis, and five scalable remediation tracks (phytoremediation, biochar adsorption, bioremediation, soil washing, and immobilization). Governed by Roulet’s Law.',
+      vaultHash: '0xNIGERIA_LEAD_POLLUTION_REVIEW_2026_EXPOSENOMICS',
+      tags: ['NigeriaLead', 'ScienceDirect', 'Exposenomics', 'Zamfara', 'CalabashChalk', 'Nzu', 'Geophagy', 'ULAB', 'AlabaMarket', 'MechanicVillage', 'NESREA', 'Phytoremediation', 'Biochar', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AI',
       title: 'Eighteenmile Creek Superfund: Fine-Line Residential Remediations & EPA Grid Fiasco (Plate #27)',
