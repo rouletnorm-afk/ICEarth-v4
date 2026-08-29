@@ -34,6 +34,7 @@ import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_rev
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
+import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -130,6 +131,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('mdhhs') ||
+    u.includes('childhood_lead') ||
+    u.includes('testing_algorithm') ||
+    u.includes('1787999281654') ||
+    u.includes('plate_29') ||
+    u.includes('plate29') ||
+    u.includes('plate #29') ||
+    u.includes('0xmdhhs')
+  ) {
+    return childhoodAlgorithmImg;
+  }
   if (
     u.includes('nigeria_lead') ||
     u.includes('nigeria_lead_pollution') ||
@@ -490,6 +503,57 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-MDHHS-CHILDHOOD-UNIVERSAL-LEAD-TESTING-ALGORITHM-2026',
+    contentType: 'Article',
+    title: 'Universal Childhood Lead Testing: The MDHHS Decision Support Tool & Clinical Algorithm',
+    subtitle: 'Michigan Department of Health and Human Services (MDHHS) Universal Blood Lead Testing Standard (MCL 333.5474d & Rules R 330.301–330.304) • Point-of-Care Algorithmic Decision Support for Healthcare Providers Across 3 Age Tiers (Birth–29m, 30–59m, 60m–17y) • Holding Clinicians Accountable to Zero Safe Exposure',
+    sourceUrl: 'https://www.michigan.gov/mileadsafe/-/media/Project/Websites/mileadsafe/Healthcare-providers/Algorithm-for-UT-Decision-Support-Tool.pdf',
+    sourceName: 'Michigan Department of Health and Human Services (MDHHS) / MI Lead Safe',
+    publishDate: '2026-08-29',
+    author: 'Michigan Department of Health and Human Services (MDHHS)',
+    authorName: 'MDHHS Division of Environmental Health & Childhood Lead Poisoning Prevention Program',
+    abstract: 'Point-of-care clinical decision support algorithm implementing Michigan’s landmark Universal Blood Lead Testing law (in effect beginning April 2025). With defined decision trees across three developmental age tiers, the tool guides physicians, nurse practitioners, and pediatric clinics to test all children at ~12 months and ~24 months, screen pre-1978 housing cohorts, enforce mandatory age-4 testing in 82 high-risk jurisdictions, and ensure catch-up screening before age 6.',
+    editorCommentary: 'Norm Roulet & Sovereign Exposenomics Synthesis: As medical science has definitively established that there is NO SAFE LEVEL of lead exposure in human biology, the state most associated with catastrophic municipal lead contamination—because of Flint, Michigan—has enacted statutory universal blood lead testing mandates (MCL 333.5474d). Historically, Medicaid compliance hovered below 40%, leaving millions of poisoned children undiagnosed during vital synaptogenesis windows. MDHHS’s three-part clinical algorithm provides a reproducible legal and clinical framework holding healthcare providers accountable to zero safe biological dose under Roulet’s Law.',
+    fullExcerpt: `MDHHS ALGORITHM FOR UNIVERSAL LEAD TESTING DECISION SUPPORT TOOL
+MICHIGAN DEPARTMENT OF HEALTH AND HUMAN SERVICES • DIVISION OF ENVIRONMENTAL HEALTH
+
+Source Document: https://www.michigan.gov/mileadsafe/-/media/Project/Websites/mileadsafe/Healthcare-providers/Algorithm-for-UT-Decision-Support-Tool.pdf
+Statutory Standard: Michigan Compiled Laws (MCL 333.5474d) & Administrative Rules R 330.301–330.304
+Effective Date: Universal Lead Testing Law in effect April 2025
+ICEarth Sovereign Analytics Tab: https://icearth.org/?tab=childhood_lead_testing
+
+INTRODUCTION & CLINICAL DUTY:
+This decision support tool can be used at the point of care to support compliance efforts with the Michigan Universal Blood Lead Testing law (in effect beginning April 2025). With a few simple questions, the tool guides clinicians to determine whether a blood lead test should be ordered for an individual child.
+Clinicians should consider additional lead testing beyond the requirements of the law where clinically indicated, according to professional standards and their medical judgement.
+
+LEAD TESTING LAW AT A GLANCE:
+Physicians must test or offer a test to all children:
+➢ Around 12 months (9 through 17 months).
+➢ Around 24 months (18 through 29 months).
+➢ Anytime there are parent or physician concerns about a new exposure source.
+➢ And again, if living in a home:
+  o Built before 1978.
+  o With other children with elevated blood lead levels (≥3.5 µg/dL).
+  o In designated 82 high-risk jurisdictions at age 4 (48 through 59 months).
+➢ All children must be tested at least once before age 6.
+
+THREE DEVELOPMENTAL ALGORITHM TIERS:
+• Fig 1: Children aged Birth through 29 Months (Page 2) — Universal screening at ~12m and ~24m with recommended 6–12 month spacing.
+• Fig 2: Children aged 30 through 59 Months (Page 3) — Catch-up mandate by age 6, pre-1978 additional screening, and mandatory age-4 testing in 82 designated high-risk communities.
+• Fig 3: Children aged 60 Months through 17 Years (Page 4) — Mandatory catch-up at age 5 before kindergarten and parent/provider risk-based testing for older children.
+
+ROULET'S LAW CLINICAL SYNTHESIS:
+Perturbation (10–100,000 ppm paint dust & water Pb2+) × Uncertainty (Diagnostic gaps in unscreened cohorts) = Chaos (Irreversible oligodendrocyte apoptosis, prefrontal cortex pruning failure, impulsivity, ADHD) × Relativity (A $15 point-of-care capillary test vs. $1.2M lifetime disability deficit per child).`,
+    tags: ['MDHHS', 'ChildhoodLeadTesting', 'MCL333_5474d', 'Flint', 'UniversalTesting', 'Pediatrics', 'LeadCare', 'Exposenomics', 'CDC3_5', 'Pre1978Housing', 'HighRiskJurisdictions', 'RouletsLaw', 'ICEarth'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics', 'ICETaos'],
+    vaultHash: '0xMDHHS_MICHIGAN_UNIVERSAL_LEAD_TESTING_ALGORITHM_MCL333_5474D',
+    editorName: 'Norm Roulet & Gemini AI',
+    editorRole: 'ICEarth Co-Developers & Lead AI Research Team',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: childhoodAlgorithmImg
+  },
   {
     id: 'ART-NIGERIA-LEAD-POLLUTION-REVIEW-2026',
     contentType: 'Article',
@@ -3243,6 +3307,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('ChildhoodLeadTesting') || article.tags?.includes('MDHHS') || article.tags?.includes('UniversalTesting') || article.id.includes('MDHHS-CHILDHOOD') || article.id.includes('CHILDHOOD-LEAD')) && (
+                      <button
+                        onClick={() => onNavigateTab('childhood_lead_testing')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-900 via-teal-800 to-sky-800 hover:from-emerald-800 hover:to-sky-700 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-emerald-200" />
+                        <span>🩺 Launch Childhood Universal Lead Testing Decision Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('NigeriaLead') || article.tags?.includes('CalabashChalk') || article.id.includes('NIGERIA-LEAD-POLLUTION') || article.id.includes('NIGERIA_LEAD')) && (
                       <button
                         onClick={() => onNavigateTab('nigeria_lead_review')}

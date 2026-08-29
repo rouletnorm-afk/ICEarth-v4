@@ -35,6 +35,7 @@ import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_rev
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
+import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import {
   Shield,
   UserCheck,
@@ -166,6 +167,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AK',
+      title: 'Childhood Universal Blood Lead Testing Decision Support Algorithm & Clinical Standards (Plate #29)',
+      type: 'Pediatric Medical Exposenomics, Universal Testing Algorithms & Public Health Mandates',
+      imageSrc: childhoodAlgorithmImg,
+      link: 'childhood_lead_testing',
+      description: 'Origins: Landmark clinical decision support plate and diagnostic flowchart dossier based on Michigan Universal Blood Lead Testing law (MCL 333.5474d) and MDHHS Administrative Rules R 330.301–330.304 (effective April 2025). Formulates point-of-care decision gates for children across three developmental age tiers: Birth to 29 months (mandatory 12m & 24m universal testing gates), 30 to 59 months (catch-up by age 6, pre-1978 housing risk, sibling elevated blood lead levels ≥3.5 µg/dL, and mandatory age-4 testing across 82 high-risk jurisdictions), and 60 months to 17 years (kindergarten screening and clinical risk indications). Governed by Roulet’s Law: holding healthcare providers accountable to zero safe biological exposure.',
+      sovereignHash: '0xMDHHS_MICHIGAN_UNIVERSAL_LEAD_TESTING_ALGORITHM_MCL333_5474D'
+    },
     {
       id: 'IP-000AJ',
       title: 'Lead Pollution in Nigeria: Recent Trends, Distribution & Remediation Strategies (Plate #28)',

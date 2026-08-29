@@ -91,10 +91,23 @@ import leadHomeostasisInfographicImg from '../assets/images/lead_homeostasis_rev
 import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining_1787869660769.jpg';
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
+import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('mdhhs') ||
+    u.includes('childhood_lead') ||
+    u.includes('testing_algorithm') ||
+    u.includes('1787999281654') ||
+    u.includes('plate_29') ||
+    u.includes('plate29') ||
+    u.includes('plate #29') ||
+    u.includes('0xmdhhs')
+  ) {
+    return childhoodAlgorithmImg;
+  }
   if (
     u.includes('nigeria_lead') ||
     u.includes('nigeria_lead_pollution') ||
@@ -567,6 +580,47 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-MDHHS-CHILDHOOD-UNIVERSAL-LEAD-TESTING-ALGORITHM-2026',
+      title: 'Universal Childhood Lead Testing: The MDHHS Decision Support Tool & Clinical Algorithm (MCL 333.5474d)',
+      category: 'Exposenomics',
+      date: '2026-08-29',
+      imageSrc: childhoodAlgorithmImg,
+      summary: 'Clinical Protocol & Decision Support Standard: Implementing Michigan’s landmark Universal Blood Lead Testing law (in effect April 2025). Synthesizes point-of-care algorithms across three distinct pediatric cohorts: Birth through 29 months (mandatory 12m & 24m universal testing gates), 30 through 59 months (catch-up by age 6, pre-1978 housing, and mandatory age-4 testing across Michigan’s 82 high-risk jurisdictions), and 60 months through 17 years (kindergarten screening and clinical risk indications). Governed by Roulet’s Law: holding healthcare providers accountable to zero safe biological exposure.',
+      fullText: `UNIVERSAL CHILDHOOD LEAD TESTING DECISION SUPPORT TOOL & CLINICAL ALGORITHMS
+MICHIGAN DEPARTMENT OF HEALTH AND HUMAN SERVICES (MDHHS) • STATUTORY CLINICAL STANDARD
+
+Source: Michigan Department of Health and Human Services (https://www.michigan.gov/mileadsafe/-/media/Project/Websites/mileadsafe/Healthcare-providers/Algorithm-for-UT-Decision-Support-Tool.pdf)
+Statutory Authority: Michigan Universal Blood Lead Testing Law (MCL 333.5474d) & Administrative Rules R 330.301–330.304
+Exposenomics Framework: Norman Roulet (ICEarth Sovereign Lab / GCLAC Co-Chair)
+Sovereign Vault Hash: 0xMDHHS_MICHIGAN_UNIVERSAL_LEAD_TESTING_ALGORITHM_MCL333_5474D
+Interactive Point-of-Care Engine: https://icearth.org/?tab=childhood_lead_testing
+
+INTRODUCTION & CLINICAL CONTEXT:
+As science has established that there is NO safe level of exposure to lead (Pb), testing of childhood blood lead levels has transitioned from targeted Medicaid-only screening to universal statewide mandates. In response to the historic crisis in Flint, Michigan has established the MDHHS Algorithm for Universal Lead Testing Decision Support Tool (effective April 2025) to hold healthcare providers accountable and eliminate missed pediatric exposures during critical synaptogenesis windows.
+
+LEAD TESTING LAW AT A GLANCE:
+Physicians must test or offer a test to all children:
+➢ Around 12 months (9 through 17 months).
+➢ Around 24 months (18 through 29 months).
+➢ Anytime there are parent or physician concerns about a new exposure source.
+➢ And again, if living in a home:
+  o Built before 1978.
+  o With other children with elevated blood lead levels (≥3.5 µg/dL).
+  o In designated 82 high-risk jurisdictions at age 4 (48 through 59 months).
+➢ Catch-up mandate: All children must be tested at least once before age 6.
+
+THREE-TIER CLINICAL ALGORITHM STRUCTURE:
+1. Fig 1: Birth through 29 Months — Establishes the primary universal gates at ~12m and ~24m, advising a 6–12 month interval to capture mobile toddler hand-to-mouth dust exposures.
+2. Fig 2: 30 through 59 Months — Directs catch-up testing, pre-1978 additional screening, and mandatory age-4 testing in 82 high-risk communities (Flint, Detroit, Grand Rapids, Saginaw, Pontiac, Benton Harbor, etc.).
+3. Fig 3: 60 Months through 17 Years — Directs mandatory final catch-up by age 6 prior to school entry and clinical risk-based testing for older children.
+
+ROULET'S LAW SYNTHESIS:
+Perturbation (Invisible paint dust & water Pb2+) × Uncertainty (Historical clinic non-compliance <40%) = Chaos (Subclinical IQ loss, ADHD, synaptic pruning failure) × Relativity (A $15 point-of-care test vs. $1.2M lifetime disability deficit per child).`,
+      tags: ['MDHHS', 'ChildhoodLeadTesting', 'MCL333_5474d', 'Flint', 'UniversalTesting', 'Pediatrics', 'LeadCare', 'Exposenomics', 'CDC3_5', 'Pre1978Housing', 'HighRiskJurisdictions', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xMDHHS_MICHIGAN_UNIVERSAL_LEAD_TESTING_ALGORITHM_MCL333_5474D',
+      publishedUrl: 'https://www.michigan.gov/mileadsafe/-/media/Project/Websites/mileadsafe/Healthcare-providers/Algorithm-for-UT-Decision-Support-Tool.pdf'
+    },
     {
       id: 'MAG-NIGERIA-LEAD-POLLUTION-REVIEW-2026',
       title: 'Lead Pollution in Nigeria: Recent Trends, Distribution, and Remediation Strategies (ScienceDirect Scoping Review)',
@@ -1705,6 +1759,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AK',
+      title: 'Childhood Universal Blood Lead Testing Decision Support Algorithm & Clinical Standards (Plate #29)',
+      category: 'Pediatric Medical Exposenomics, Universal Testing Algorithms & Public Health Mandates',
+      imageSrc: childhoodAlgorithmImg,
+      location: 'Michigan Statewide Clinical Practice (Flint, Detroit & 82 High-Risk Jurisdictions) • MDHHS',
+      date: '2026-08-29',
+      description: 'Origins: Landmark clinical decision support plate and diagnostic flowchart dossier based on Michigan Universal Blood Lead Testing law (MCL 333.5474d) and MDHHS Administrative Rules R 330.301–330.304 (effective April 2025). Formulates point-of-care decision gates for children across three developmental age tiers: Birth to 29 months (mandatory 12m & 24m universal testing gates), 30 to 59 months (catch-up by age 6, pre-1978 housing risk, sibling elevated blood lead levels ≥3.5 µg/dL, and mandatory age-4 testing across 82 high-risk jurisdictions), and 60 months to 17 years (kindergarten screening and clinical risk indications). Governed by Roulet’s Law: holding healthcare providers accountable to zero safe biological exposure.',
+      vaultHash: '0xMDHHS_MICHIGAN_UNIVERSAL_LEAD_TESTING_ALGORITHM_MCL333_5474D',
+      tags: ['MDHHS', 'ChildhoodLeadTesting', 'MCL333_5474d', 'Flint', 'UniversalTesting', 'Pediatrics', 'LeadCare', 'Exposenomics', 'CDC3_5', 'Pre1978Housing', 'HighRiskJurisdictions', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AJ',
       title: 'Lead Pollution in Nigeria: Recent Trends, Distribution & Remediation Strategies (Plate #28)',
