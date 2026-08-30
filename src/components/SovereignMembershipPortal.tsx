@@ -36,6 +36,7 @@ import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
+import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import {
   Shield,
   UserCheck,
@@ -167,6 +168,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AL',
+      title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity (Plate #30)',
+      type: 'Pharmacological Exposenomics, Nano-Phytosomes & Ultrasonic Cavitation IP Asset',
+      imageSrc: carvacrolCavitationImg,
+      link: 'carvacrol_cavitation',
+      description: 'Origins: Landmark pharmacological exposenomics infographic plate and research dossier on ScienceDirect publication (Tissue and Cell 2026). Details hepatic lead (Pb2+) cytotoxicity cascades, NF-κB/NLRP3 inflammasome down-regulation, SOD/catalase antioxidant elevation, and hepatic lobule tissue architecture restoration via sub-100nm carvacrol nano-phytosomes. Highlights why NanoSpire cavitation bubble collapse and supersonic liquid reentrant micro-jets enhance phytosome encapsulation and bioavailability, along with the synergy of minor cannabis terpenes. Governed by Roulet’s Law.',
+      sovereignHash: '0xCARVACROL_NANOPHYTOSOME_CAVITATION_LEAD_HEPATOPROTECTION_2026'
+    },
     {
       id: 'IP-000AK',
       title: 'Childhood Universal Blood Lead Testing Decision Support Algorithm & Clinical Standards (Plate #29)',

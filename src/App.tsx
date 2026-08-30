@@ -117,6 +117,7 @@ import { ArtisanalMetallurgyExposenomics } from './components/ArtisanalMetallurg
 import { EighteenmileCreekSuperfund } from './components/EighteenmileCreekSuperfund';
 import { NigeriaLeadReview } from './components/NigeriaLeadReview';
 import { ChildhoodLeadTesting } from './components/ChildhoodLeadTesting';
+import { CarvacrolCavitationHepatoprotection } from './components/CarvacrolCavitationHepatoprotection';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building } from 'lucide-react';
 
@@ -125,7 +126,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1700,6 +1701,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Carvacrol Nano-Phytosomes & Ultrasonic Cavitation Hepatoprotection */}
+                <button
+                  onClick={() => setActiveTab('carvacrol_cavitation')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection'
+                      ? 'bg-emerald-950 text-emerald-100 border-emerald-400 shadow-md font-extrabold ring-2 ring-emerald-400/80'
+                      : 'hover:bg-emerald-500/20 text-emerald-950 border-emerald-400/70 bg-emerald-50/90 font-bold'
+                  }`}
+                >
+                  <Pill size={16} className={activeTab === 'carvacrol_cavitation' ? 'text-emerald-300 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-semibold">🧪 Carvacrol Nano-Phytosomes & Cavitation</span>
+                  <span className="px-1.5 py-0.2 bg-emerald-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Cavitation Rx
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -2063,6 +2080,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'nigeria_lead_review', icon: Shield, label: '🇳🇬 Nigeria Lead & Remediation Review', badge: '4.5k Review', color: 'emerald' },
                     { id: 'childhood_lead_testing', icon: Stethoscope, label: '🩺 Childhood Lead Testing Standard', badge: 'MDHHS Law', color: 'emerald' },
+                    { id: 'carvacrol_cavitation', icon: Pill, label: '🧪 Carvacrol Nano-Phytosomes & Cavitation', badge: 'Cavitation Rx', color: 'emerald' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -2153,6 +2171,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
               {(activeTab === 'childhood_lead_testing' || (activeTab as string) === 'childhood_lead' || (activeTab as string) === 'lead_testing' || (activeTab as string) === 'mdhhs_algorithm' || (activeTab as string) === 'mdhhs' || (activeTab as string) === 'universal_lead_testing') && '🩺 MDHHS Universal Childhood Lead Testing Standard'}
+              {(activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection') && '🧪 Carvacrol Nano-Phytosomes & Ultrasonic Cavitation'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3826,6 +3845,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'childhood_lead_testing' || (activeTab as string) === 'childhood_lead' || (activeTab as string) === 'lead_testing' || (activeTab as string) === 'mdhhs_algorithm' || (activeTab as string) === 'mdhhs' || (activeTab as string) === 'universal_lead_testing') && (
             <div className="flex-1 overflow-y-auto">
               <ChildhoodLeadTesting 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.124: CARVACROL NANO-PHYTOSOMES, ULTRASONIC CAVITATION & HEPATOPROTECTION */}
+          {(activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection') && (
+            <div className="flex-1 overflow-y-auto">
+              <CarvacrolCavitationHepatoprotection 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

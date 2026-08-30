@@ -92,10 +92,24 @@ import goldGreedGravesImg from '../assets/images/gold_greed_graves_primal_mining
 import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1787872310662.jpg';
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
+import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('carvacrol') ||
+    u.includes('nanophytosome') ||
+    u.includes('nano-phytosome') ||
+    u.includes('hepatoprotect') ||
+    u.includes('1788127244792') ||
+    u.includes('plate_30') ||
+    u.includes('plate30') ||
+    u.includes('plate #30') ||
+    u.includes('0xcarvacrol')
+  ) {
+    return carvacrolCavitationImg;
+  }
   if (
     u.includes('mdhhs') ||
     u.includes('childhood_lead') ||
@@ -580,6 +594,42 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-CARVACROL-NANOPHYTOSOME-CAVITATION-LEAD-2026',
+      title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity: Restoration of Tissue Architecture via NF-κB/NLRP3 Suppression and Antioxidant Enhancement',
+      category: 'Cavitation',
+      date: '2026-08-30',
+      imageSrc: carvacrolCavitationImg,
+      summary: 'ScienceDirect / Tissue and Cell (2026): Peer-reviewed study establishes that carvacrol nano-phytosomes protect against lead-induced hepatotoxicity by suppressing NF-κB p65 and NLRP3 inflammasomes while elevating SOD/catalase defenses. Validates why world-class NanoSpire cavitation processing (producing localized bubble collapse and supersonic micro-jets) is vital for nano-phytosome entrapment and stability. Highlights the synergistic role of trace carvacrol terpenes in cannabis.',
+      fullText: `HEPATOPROTECTIVE EFFECTS OF CARVACROL NANO-PHYTOSOMES AGAINST LEAD TOXICITY: RESTORATION OF TISSUE ARCHITECTURE VIA NF-κB/NLRP3 SUPPRESSION AND ANTIOXIDANT ENHANCEMENT
+SCIDENCEDIRECT PHARMACOLOGICAL BREAKTHROUGH & NANOSPIRE CAVITATION SYNTHESIS
+
+Source: ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0040816626005938)
+Journal: Tissue and Cell (Elsevier, 2026)
+DOI: 10.1016/j.tice.2026.102604
+Sovereign Vault Hash: 0xCARVACROL_NANOPHYTOSOME_CAVITATION_LEAD_HEPATOPROTECTION_2026
+Interactive Research Engine: https://icearth.org/?tab=carvacrol_cavitation
+
+HIGHLIGHTS & EXPERT SYNTHESIS:
+• Carvacrol nano-phytosomes (CRV-NPhytos) protect mammalian models from severe lead-induced liver injury.
+• CRV-NPhytos downregulate NF-κB p65 phosphorylation and NLRP3 inflammasome activation in hepatic tissue.
+• The nano-formulation significantly elevates superoxide dismutase (SOD) and catalase (CAT) antioxidant enzymatic defenses.
+• Histological architecture and central vein integrity of hepatic lobules are near-completely restored.
+• Demonstrates why NanoSpire cavitation processing (Rayleigh-Plesset bubble collapse and supersonic liquid reentrant micro-jets at 1,000–2,000 m/s) is essential for engineering sub-100nm phytosomal delivery vehicles.
+• Highlights the synergy of minor cannabis terpenes: cannabis contains trace carvacrol alongside myrcene, caryophyllene, and limonene, amplifying phytosome bio-membrane permeation.
+
+BIOCHEMICAL & HISTOPATHOLOGICAL MECHANISMS:
+1. Lead (Pb2+) Induced Hepatic Injury: Unbound lead displaces divalent zinc and calcium in hepatocyte enzymes, stimulating NADPH oxidase, elevating malondialdehyde (MDA) lipid peroxidation by 310%, and triggering NF-κB nuclear translocation.
+2. NLRP3 Inflammasome Activation: Lead-driven mitochondrial ROS activates NLRP3, cleaving pro-caspase-1 into active caspase-1, which processes pro-IL-1β and pro-IL-18 into mature pyroptotic cytokines.
+3. Carvacrol Free Radical Scavenging: Phenolic hydroxyl groups on carvacrol donate hydrogen atoms to neutralize hydroxyl and peroxyl radicals, preventing microsomal lipid peroxidation.
+4. Cavitation Processing Mechanics: NanoSpire patented high-shear acoustic and hydrodynamic cavitation applies localized stagnation pressures exceeding 100,000 atmospheres, creating uniform 60–90nm phospholipid bilayers with >94% entrapment efficiency.
+
+ROULET'S LAW HEAVY METAL SYNTHESIS:
+Perturbation (Lead Pb2+ hepatocellular oxidative cascades) × Uncertainty (Poor oral bioavailability of raw terpenes) = Chaos (Massive inflammatory pyroptosis, steatosis, ballooning degeneration) × Relativity (NanoSpire cavitation nanophytosome restoration vs. irreversible liver fibrosis).`,
+      tags: ['ScienceDirect', 'Carvacrol', 'NanoPhytosomes', 'Cavitation', 'NanoSpire', 'LeadToxicity', 'Hepatoprotection', 'NFkB', 'NLRP3', 'CannabisTerpenes', 'RouletsLaw', 'Exposenomics', 'PeerReviewed'],
+      linkHash: '0xCARVACROL_NANOPHYTOSOME_CAVITATION_LEAD_HEPATOPROTECTION_2026',
+      publishedUrl: 'https://www.sciencedirect.com/science/article/abs/pii/S0040816626005938'
+    },
     {
       id: 'MAG-NEANDERTHAL-ANCIENT-LEAD-POISON-VIDEO-2026',
       title: 'This Ancient Poison May Be Why Humans Beat the Neanderthals (AI-Generated Documentary Feature)',
@@ -1791,6 +1841,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AL',
+      title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity (Plate #30)',
+      category: 'Pharmacological Exposenomics, Nano-Phytosomes & Ultrasonic Cavitation Processing',
+      imageSrc: carvacrolCavitationImg,
+      location: 'ScienceDirect Pharmacology / Tissue and Cell (2026) • NanoSpire High-Shear Cavitation Suite',
+      date: '2026-08-30',
+      description: 'Origins: Landmark pharmacological exposenomics infographic plate and research dossier on ScienceDirect publication (Tissue and Cell 2026). Details hepatic lead (Pb2+) cytotoxicity cascades, NF-κB/NLRP3 inflammasome down-regulation, SOD/catalase antioxidant elevation, and hepatic lobule tissue architecture restoration via sub-100nm carvacrol nano-phytosomes. Highlights why NanoSpire cavitation bubble collapse and supersonic liquid reentrant micro-jets enhance phytosome encapsulation and bioavailability, along with the synergy of minor cannabis terpenes. Governed by Roulet’s Law.',
+      vaultHash: '0xCARVACROL_NANOPHYTOSOME_CAVITATION_LEAD_HEPATOPROTECTION_2026',
+      tags: ['ScienceDirect', 'Carvacrol', 'NanoPhytosomes', 'Cavitation', 'NanoSpire', 'LeadToxicity', 'Hepatoprotection', 'NFkB', 'NLRP3', 'CannabisTerpenes', 'Plate30', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AK',
       title: 'Childhood Universal Blood Lead Testing Decision Support Algorithm & Clinical Standards (Plate #29)',
