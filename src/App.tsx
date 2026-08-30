@@ -118,15 +118,16 @@ import { EighteenmileCreekSuperfund } from './components/EighteenmileCreekSuperf
 import { NigeriaLeadReview } from './components/NigeriaLeadReview';
 import { ChildhoodLeadTesting } from './components/ChildhoodLeadTesting';
 import { CarvacrolCavitationHepatoprotection } from './components/CarvacrolCavitationHepatoprotection';
+import { RedBeetrootNeuroprotection } from './components/RedBeetrootNeuroprotection';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1717,6 +1718,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Red Beetroot Neuroprotection & Anti-Alzheimer Properties */}
+                <button
+                  onClick={() => setActiveTab('red_beetroot_neuroprotection')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'red_beetroot_neuroprotection' || (activeTab as string) === 'red_beetroot' || (activeTab as string) === 'beetroot' || (activeTab as string) === 'drb' || (activeTab as string) === 'anti_alzheimer'
+                      ? 'bg-red-950 text-red-100 border-red-400 shadow-md font-extrabold ring-2 ring-red-400/80'
+                      : 'hover:bg-red-500/20 text-red-950 border-red-400/70 bg-red-50/90 font-bold'
+                  }`}
+                >
+                  <Apple size={16} className={activeTab === 'red_beetroot_neuroprotection' ? 'text-red-300 animate-pulse' : 'text-red-700'} />
+                  <span className="flex-1 font-semibold">🍎 Red Beetroot Lead Neuroprotection</span>
+                  <span className="px-1.5 py-0.2 bg-red-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Anti-Alzheimer
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -2081,6 +2098,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'nigeria_lead_review', icon: Shield, label: '🇳🇬 Nigeria Lead & Remediation Review', badge: '4.5k Review', color: 'emerald' },
                     { id: 'childhood_lead_testing', icon: Stethoscope, label: '🩺 Childhood Lead Testing Standard', badge: 'MDHHS Law', color: 'emerald' },
                     { id: 'carvacrol_cavitation', icon: Pill, label: '🧪 Carvacrol Nano-Phytosomes & Cavitation', badge: 'Cavitation Rx', color: 'emerald' },
+                    { id: 'red_beetroot_neuroprotection', icon: Apple, label: '🍎 Red Beetroot Lead Neuroprotection', badge: 'Anti-Alzheimer', color: 'rose' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -2172,6 +2190,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
               {(activeTab === 'childhood_lead_testing' || (activeTab as string) === 'childhood_lead' || (activeTab as string) === 'lead_testing' || (activeTab as string) === 'mdhhs_algorithm' || (activeTab as string) === 'mdhhs' || (activeTab as string) === 'universal_lead_testing') && '🩺 MDHHS Universal Childhood Lead Testing Standard'}
               {(activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection') && '🧪 Carvacrol Nano-Phytosomes & Ultrasonic Cavitation'}
+              {(activeTab === 'red_beetroot_neuroprotection' || (activeTab as string) === 'red_beetroot' || (activeTab as string) === 'beetroot' || (activeTab as string) === 'drb' || (activeTab as string) === 'anti_alzheimer') && '🍎 Red Beetroot Lead Neuroprotection & Anti-Alzheimer'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3855,6 +3874,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection') && (
             <div className="flex-1 overflow-y-auto">
               <CarvacrolCavitationHepatoprotection 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.125: RED BEETROOT LEAD NEUROPROTECTION & ANTI-ALZHEIMER PROPERTIES */}
+          {(activeTab === 'red_beetroot_neuroprotection' || (activeTab as string) === 'red_beetroot' || (activeTab as string) === 'beetroot' || (activeTab as string) === 'drb' || (activeTab as string) === 'anti_alzheimer') && (
+            <div className="flex-1 overflow-y-auto">
+              <RedBeetrootNeuroprotection 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

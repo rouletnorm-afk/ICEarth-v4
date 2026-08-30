@@ -37,6 +37,7 @@ import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
+import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import {
   Shield,
   UserCheck,
@@ -168,6 +169,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AM',
+      title: 'Neuroprotective & Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Toxicity (Plate #31)',
+      type: 'Nutritional Exposenomics, Functional Foods & Gut-Brain Axis IP Asset',
+      imageSrc: beetrootLeadImg,
+      link: 'red_beetroot_neuroprotection',
+      description: 'Origins: Landmark nutritional and biochemical exposenomics infographic plate and research dossier on the 29 August 2026 EKB publication. Details multi-target dietary protection of Dried Red Beetroot (DRB at 3%, 6%, and 9% levels), showing over 81% brain Pb clearance, amyloid-β42 suppression (-69%), phosphorylated Tau reduction (-71%), BDNF neurotrophin surge (+176%), dopamine/epinephrine restoration, δ-ALAD/heme synthesis recovery, vascular nitric oxide (NO) normalization, and cecal SCFA surge (+180%). Includes formulation parameters for sensory-acceptable strawberry jam, along with nitrate double-edged sword dosing limits and mandatory clean agricultural soil screening (<10 ppm Pb). Governed by Roulet’s Law.',
+      sovereignHash: '0xRED_BEETROOT_NEUROPROTECTION_ANTI_ALZHEIMER_LEAD_2026'
+    },
     {
       id: 'IP-000AL',
       title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity (Plate #30)',

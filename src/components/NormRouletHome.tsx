@@ -93,10 +93,25 @@ import superfundImg from '../assets/images/eighteenmile_creek_superfund_fiasco_1
 import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review_1787983202387.jpg';
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
+import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('beetroot') ||
+    u.includes('drb') ||
+    u.includes('betalain') ||
+    u.includes('anti-alzheimer') ||
+    u.includes('1788128193396') ||
+    u.includes('plate_31') ||
+    u.includes('plate31') ||
+    u.includes('plate #31') ||
+    u.includes('0xred_beetroot') ||
+    u.includes('524858')
+  ) {
+    return beetrootLeadImg;
+  }
   if (
     u.includes('carvacrol') ||
     u.includes('nanophytosome') ||
@@ -594,6 +609,50 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-RED-BEETROOT-NEUROPROTECTION-ALZHEIMER-LEAD-2026',
+      title: 'Neuroprotective and Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Poisoning: Multi-Target Dietary Chelation, Aβ42/P-Tau Suppression, and Gut-Brain SCFA Modulation',
+      category: 'Exposenomics',
+      date: '2026-08-29',
+      imageSrc: beetrootLeadImg,
+      summary: 'Egyptian Knowledge Bank (Published Online 29 August 2026): Landmark study demonstrates that dried red beetroot (DRB at 9% dietary enrichment) exerts multi-target neuroprotection against lead toxicity in rats. Reduces brain Pb and Fe accumulation by over 80%, restores dopamine/epinephrine neurotransmitter balance, suppresses Alzheimer biomarkers (Aβ42 and hyperphosphorylated Tau), elevates BDNF neurotrophin by 176%, rebalances δ-ALAD/heme synthesis, enhances vascular nitric oxide (NO), and surges gut short-chain fatty acids (SCFAs). Proves functional food potential in sensory-approved strawberry jam with crucial nitrate dosage and soil cleanliness calibration.',
+      fullText: `NEUROPROTECTIVE AND ANTI-ALZHEIMER PROPERTIES OF RED BEETROOT AGAINST LEAD POISONING IN RATS
+EGYPTIAN KNOWLEDGE BANK BREAKTHROUGH & ICEARTH SOVEREIGN EXPOSENOMICS DOSSIER
+
+Source: Egyptian Knowledge Bank (https://journals.ekb.eg/article_524858.html)
+Available Online: 29 August 2026
+Sovereign Vault Hash: 0xRED_BEETROOT_NEUROPROTECTION_ANTI_ALZHEIMER_LEAD_2026
+Interactive Research Engine: https://icearth.org/?tab=red_beetroot_neuroprotection
+
+ABSTRACT & CLINICAL HIGHLIGHTS:
+Lead (Pb) exposure is an important issue for environmental health related to its ability to induce oxidative stress, inflammation, metabolic disturbances, and neurological dysfunction, indicating a need for dietary strategies for mitigating its adverse effects. This study investigated the protective effects of dried red beetroot (DRB) against Pb-induced toxicity in rats and assessed its bioactive substances and potential application as a functional food ingredient.
+
+EXPERIMENTAL DESIGN & DOSE-RESPONSE (n=25, 5 groups):
+• Group 1: Normal Control
+• Group 2: Pb-Intoxicated Control (Lead Acetate)
+• Group 3: Pb + DRB 3% Diet Enrichment
+• Group 4: Pb + DRB 6% Diet Enrichment
+• Group 5: Pb + DRB 9% Diet Enrichment (Optimal Therapeutic Window)
+
+KEY MULTI-TARGET OUTCOMES:
+1. Brain Heavy Metal Clearance: 9% DRB reduced brain lead (Pb) burden by 81.9% (from 1.88 down to 0.34 µg/g) and brain iron (Fe) accumulation by 59.4%, reversing growth stunting.
+2. Anti-Alzheimer Biomarkers: Amyloid-β42 (Aβ42) was reduced by 69.0% (148.6 to 46.1 pg/mg), phosphorylated Tau (P-Tau) was suppressed by 70.9%, and Brain-Derived Neurotrophic Factor (BDNF) surged by 176.4% (62.4 to 172.5 pg/mg).
+3. Neurotransmitter Homeostasis: Striatal dopamine and epinephrine levels were fully restored; acetylcholinesterase (AChE) and monoamine oxidase (MAO) activities were rebalanced.
+4. Hematological & δ-ALAD Recovery: Lead-induced δ-ALAD enzyme inhibition was reversed, restoring heme synthesis, erythrocyte count, and hemoglobin levels.
+5. Vascular & Endothelial Regulation: Restored Nitric Oxide (NO, 16.2 to 41.0 µmol/L), normalized Angiotensin-Converting Enzyme (ACE, 68.9 to 30.2 U/L), and normalized serum cholesterol and LDL-C, promoting cerebral blood flow.
+6. Gut-Brain Axis & SCFA Production: Cecal short-chain fatty acids (acetate, propionate, butyrate) increased by 179.9% (34.9 to 97.7 mmol/g), confirming beneficial gut microbiome remodeling.
+7. Phytochemical Fingerprint: DRB contains betalains (betanin, isobetanin, vulgaxanthin), polyphenols, flavonoids, inorganic nitrate (NO3-), dietary pectin fiber, and essential minerals (Fe, Ca) that competitively inhibit lead bioavailability.
+8. Functional Food Translation: DRB-enriched strawberry jam demonstrated high sensory acceptability in organoleptic testing.
+
+SAFETY & AGRONOMIC MANDATE:
+Beetroot can be a double-edged sword due to its high nitrate content, which must be calibrated to avoid nitrosative stress. Furthermore, because Beta vulgaris hyper-accumulates soil minerals, agricultural soil must be strictly screened (<10 ppm Pb) to guarantee non-toxic functional food deployment.
+
+ROULET'S LAW HEAVY METAL SYNTHESIS:
+Perturbation (Lead Pb2+ neurotoxicity & vascular endothelial dysfunction) × Uncertainty (Variable dietary mineral uptake & agricultural soil purity) = Chaos (Alzheimer plaque cascades & metabolic collapse) × Relativity (Nutritional betalain/pectin multi-target chelation vs. irreversible neurodegeneration).`,
+      tags: ['EKB', 'RedBeetroot', 'DRB', 'LeadToxicity', 'Neuroprotection', 'Alzheimers', 'Ab42', 'PTau', 'BDNF', 'Dopamine', 'deltaALAD', 'SCFA', 'GutBrainAxis', 'Pectin', 'Betalains', 'NitrateSafety', 'FunctionalFood', 'RouletsLaw', 'Exposenomics', 'PeerReviewed'],
+      linkHash: '0xRED_BEETROOT_NEUROPROTECTION_ANTI_ALZHEIMER_LEAD_2026',
+      publishedUrl: 'https://journals.ekb.eg/article_524858.html'
+    },
     {
       id: 'MAG-CARVACROL-NANOPHYTOSOME-CAVITATION-LEAD-2026',
       title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity: Restoration of Tissue Architecture via NF-κB/NLRP3 Suppression and Antioxidant Enhancement',
@@ -1841,6 +1900,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AM',
+      title: 'Neuroprotective & Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Toxicity (Plate #31)',
+      category: 'Nutritional Exposenomics, Functional Foods & Gut-Brain Axis Therapeutics',
+      imageSrc: beetrootLeadImg,
+      location: 'Egyptian Knowledge Bank (Published Online 29 August 2026) • ICEarth Botanical Medicine Vault',
+      date: '2026-08-29',
+      description: 'Origins: Landmark nutritional and biochemical exposenomics infographic plate and research dossier on the 29 August 2026 EKB publication. Details multi-target dietary protection of Dried Red Beetroot (DRB at 3%, 6%, and 9% levels), showing over 81% brain Pb clearance, amyloid-β42 suppression (-69%), phosphorylated Tau reduction (-71%), BDNF neurotrophin surge (+176%), dopamine/epinephrine restoration, δ-ALAD/heme synthesis recovery, vascular nitric oxide (NO) normalization, and cecal SCFA surge (+180%). Includes formulation parameters for sensory-acceptable strawberry jam, along with nitrate double-edged sword dosing limits and mandatory clean agricultural soil screening (<10 ppm Pb). Governed by Roulet’s Law.',
+      vaultHash: '0xRED_BEETROOT_NEUROPROTECTION_ANTI_ALZHEIMER_LEAD_2026',
+      tags: ['EKB', 'RedBeetroot', 'DRB', 'AntiAlzheimer', 'Ab42', 'PTau', 'BDNF', 'Dopamine', 'deltaALAD', 'SCFA', 'GutBrainAxis', 'Plate31', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AL',
       title: 'Hepatoprotective Effects of Carvacrol Nano-Phytosomes Against Lead Toxicity (Plate #30)',
