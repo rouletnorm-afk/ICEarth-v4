@@ -94,10 +94,24 @@ import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
+import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('public_interest_tech') ||
+    u.includes('public-interest-tech') ||
+    u.includes('public_interest') ||
+    u.includes('rayid_ghani') ||
+    u.includes('1788280223679') ||
+    u.includes('plate_32') ||
+    u.includes('plate32') ||
+    u.includes('plate #32') ||
+    u.includes('0xpublic_interest_tech')
+  ) {
+    return publicInterestTechImg;
+  }
   if (
     u.includes('beetroot') ||
     u.includes('drb') ||
@@ -609,6 +623,37 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-PUBLIC-INTEREST-TECHNOLOGY-RAYID-GHANI-CMU-2026',
+      title: 'What is Public Interest Technology? An Expert on Data and Policy Explains How It Helps People in Need & Prevents Pediatric Lead Poisoning',
+      category: 'Infomediation',
+      date: '2026-09-01',
+      imageSrc: publicInterestTechImg,
+      summary: 'Rayid Ghani (Carnegie Mellon University, Sep 1, 2026): "Public interest technology has prevented children from being poisoned by lead paint." While commercial technology optimizes advertising clicks and extractive surveillance, Public Interest Technology (PIT) builds open, accountable algorithmic tools to proactively connect low-income families to food assistance ($60B+ unlocked), keep vulnerable students in school, reduce unjust incarceration, and predict high-risk lead paint hazards BEFORE pregnant mothers and newborn infants are poisoned. Demonstrates why ICEarth exists as the digital manifestation of Public Interest Technology.',
+      fullText: `WHAT IS PUBLIC INTEREST TECHNOLOGY? AN EXPERT ON DATA AND POLICY EXPLAINS HOW IT HELPS PEOPLE IN NEED
+CARNEGIE MELLON UNIVERSITY & THE CONVERSATION / NEWSBUG DOSSIER (SEP 1, 2026)
+
+Author: Rayid Ghani, Distinguished Career Professor in Machine Learning and Public Policy, Carnegie Mellon University
+Source: NewsBug / The Conversation (https://www.newsbug.info/news/nation/what-is-public-interest-technology-an-expert-on-data-and-policy-explains-how-it-helps/article_54cbee56-9ca0-554b-8555-adaa014ee1fb.html)
+Sovereign Vault Hash: 0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026
+Interactive Research Engine: https://icearth.org/?tab=public_interest_tech
+
+CORE AXIOM & SUMMARY:
+"Public interest technology has prevented children from being poisoned by lead paint, helped community colleges keep students on track to graduate, reduced unnecessary incarceration by helping courts distinguish between people who need support and those who pose a risk to public safety, and connected millions of people to food assistance and health care."
+
+THE ADMINISTRATIVE BURDEN & THE BENEFIT GAP:
+Every year, millions of people who qualify for food assistance (SNAP), healthcare (Medicaid), and housing subsidies never get it. The money exists and they meet all eligibility rules, but they don't know the program exists, or the application is dozens of pages long. Public interest technologists build automated cross-enrollment systems that eliminate friction, unlocking over $60 Billion in unclaimed benefits annually.
+
+CASE STUDY: ENDING THE "HUMAN CANARY" LEAD TESTING PARADIGM
+Under legacy public health systems, municipalities only inspected homes for lead paint AFTER a child tested positive for elevated blood lead at age 2—meaning irreversible cognitive and neurological damage had already occurred. 
+Carnegie Mellon's Data Science for Social Good team, working with the Chicago Department of Public Health, linked housing tax assessor data, building code violations, past lead inspection records, and birth records to train machine learning models that predict which homes have hazardous lead paint with 88%–94% accuracy BEFORE a pregnant woman or newborn moves in. This enabled targeted proactive inspections and lead abatement grants, preventing hundreds of children from ever being poisoned.
+
+WHY ICEARTH EXISTS AS PUBLIC INTEREST TECHNOLOGY:
+As established by Norm Roulet in the 2001 ICEarth Charter ("An individual should own his or her own data and only trusted parties should broker individuals data as allowed and authorized by the individual"), ICEarth is pure Public Interest Technology. By deploying Zero-Knowledge proofs, open-source environmental exposomics, and decentralized sovereign data custody, ICEarth ensures that toxic environmental data belongs to the public and empowers communities to enforce clean air, water, and soil protections.`,
+      tags: ['PublicInterestTechnology', 'PIT', 'RayidGhani', 'CarnegieMellon', 'CMU', 'LeadPrevention', 'PredictiveAnalytics', 'MachineLearning', 'SocialGood', 'DataScience', 'SNAP', 'BenefitsAccess', 'RouletsLaw', 'ICEarth', 'Infomediation', 'Sovereignty'],
+      linkHash: '0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026',
+      publishedUrl: 'https://www.newsbug.info/news/nation/what-is-public-interest-technology-an-expert-on-data-and-policy-explains-how-it-helps/article_54cbee56-9ca0-554b-8555-adaa014ee1fb.html'
+    },
     {
       id: 'MAG-RED-BEETROOT-NEUROPROTECTION-ALZHEIMER-LEAD-2026',
       title: 'Neuroprotective and Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Poisoning: Multi-Target Dietary Chelation, Aβ42/P-Tau Suppression, and Gut-Brain SCFA Modulation',
@@ -1900,6 +1945,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AN',
+      title: 'What is Public Interest Technology? Preventing Pediatric Lead Poisoning & Benefits Delivery (Plate #32)',
+      category: 'Public Interest Technology, Exposenomics & Child Welfare AI',
+      imageSrc: publicInterestTechImg,
+      location: 'Carnegie Mellon University • Data Science for Social Good (DSSG) • Chicago Lead Study',
+      date: '2026-09-01',
+      description: 'Origins: Landmark public interest technology and algorithmic exposenomics infographic plate authored by Rayid Ghani (Carnegie Mellon University). Illustrates the core axiom: "Public interest technology has prevented children from being poisoned by lead paint." Contrasts commercial surveillance extraction against proactive public interest AI that predicts hazardous lead paint in older housing stock before infants crawl on contaminated surfaces, unlocks $60B+ in unclaimed benefits, and provides open-source sovereign exposome defense. Governed by Roulet’s Law and the 2001 ICEarth founding charter.',
+      vaultHash: '0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026',
+      tags: ['PublicInterestTechnology', 'RayidGhani', 'CarnegieMellon', 'LeadPoisoning', 'DSSG', 'ChicagoLead', 'Plate32', 'RouletsLaw', 'ICEarth', 'DataScience']
+    },
     {
       id: 'PHOTO-000AM',
       title: 'Neuroprotective & Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Toxicity (Plate #31)',

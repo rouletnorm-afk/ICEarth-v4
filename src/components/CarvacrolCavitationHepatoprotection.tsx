@@ -194,14 +194,17 @@ export const CarvacrolCavitationHepatoprotection: React.FC<CarvacrolCavitationPr
         </div>
 
         {/* NORMATIVE COMMENTARY CALLOUT */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-stone-900/90 border border-emerald-500/40 text-xs sm:text-sm font-sans space-y-2 text-stone-200">
+        <div className="p-4 sm:p-5 rounded-2xl bg-stone-900/90 border border-emerald-500/40 text-xs sm:text-sm font-sans space-y-3 text-stone-200">
           <div className="flex items-center gap-2 font-mono font-black text-amber-400 uppercase tracking-wider">
             <Sparkles size={16} />
             <span>Norm Roulet & Sovereign Exposenomics Context:</span>
           </div>
           <p className="leading-relaxed text-stone-300">
-            “Why am I a world expert on NanoSpire cavitation, lead poisoning, and cannabis? Because for 25 years I have pioneered acoustic cavitation physics and heavy metal exposenomics. This landmark study proves that when botanical terpenes (such as carvacrol, a key minor constituent found in cannabis and oregano) are processed through <strong>cavitation—the formation, rapid growth, and violent collapse of microscopic bubbles</strong>—the resulting nano-phytosomes achieve unprecedented sub-80nm encapsulation, penetrate damaged liver sinusoids, and arrest lead-induced inflammasome necrosis where crude formulations fail.”
+            “Why am I a world expert on NanoSpire cavitation, lead poisoning, and cannabis? Because for 25 years I have pioneered cavitation physics and heavy metal exposenomics. This landmark study proves that when botanical terpenes (such as carvacrol, a key minor constituent found in cannabis and oregano) are processed through <strong>cavitation—the formation, rapid growth, and violent collapse of microscopic bubbles</strong>—the resulting nano-phytosomes achieve unprecedented sub-80nm encapsulation, penetrate damaged liver sinusoids, and arrest lead-induced inflammasome necrosis where crude formulations fail.”
           </p>
+          <div className="pt-2 border-t border-emerald-500/30 text-emerald-300 font-mono text-xs leading-relaxed">
+            <span className="font-bold text-amber-300">NanoSpire commentary:</span> Our 20+ years of successful benchmarking and conducting comparative analysis against other methods, including ultrasonic cavitation, confirm our physics-driven disruptive cavitation platform surpasses all other methods.
+          </div>
         </div>
 
         {/* ACTION BUTTONS */}

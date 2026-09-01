@@ -38,6 +38,7 @@ import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
+import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import {
   Shield,
   UserCheck,
@@ -169,6 +170,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AN',
+      title: 'What is Public Interest Technology? Preventing Pediatric Lead Poisoning & Sovereign Exposome Defense (Plate #32)',
+      type: 'Public Interest Technology, Predictive Machine Learning & Exposome Defense IP Asset',
+      imageSrc: publicInterestTechImg,
+      link: 'public_interest_tech',
+      description: 'Origins: Landmark public interest technology dossier and infographic plate synthesizing Rayid Ghani’s (Carnegie Mellon University) Sep 1, 2026 publication. Explains how public interest technology bridges cutting-edge data science, machine learning, and human preservation. Documents how predictive machine learning models linked housing, tax, and birth records to identify lead-hazard buildings before newborn infants and pregnant women move in—preventing childhood lead poisoning rather than treating toddlers as toxic canaries. Connects to Norm Roulet’s 2001 ICEarth founding charter establishing data sovereignty and open public interest exposenomics.',
+      sovereignHash: '0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026'
+    },
     {
       id: 'IP-000AM',
       title: 'Neuroprotective & Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Toxicity (Plate #31)',
@@ -971,6 +981,107 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
                     className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs rounded-lg transition-colors"
                   >
                     ICEarth Owners' Manual
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* FEATURED PUBLIC INTEREST TECHNOLOGY BANNER: WHY ICEARTH EXISTS */}
+        <div className="mt-6 bg-gradient-to-br from-amber-950/80 via-stone-900 to-stone-950 rounded-2xl border-2 border-amber-500/50 p-5 sm:p-6 shadow-2xl space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-amber-500/30 pb-3">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="px-2.5 py-0.5 bg-amber-500 text-stone-950 text-[10px] font-mono font-black uppercase rounded shadow">
+                Core Mission & Purpose
+              </span>
+              <span className="text-xs text-amber-200 font-mono font-bold">Why ICEarth Exists: Pure Public Interest Technology</span>
+              <span className="text-[10px] px-2 py-0.5 bg-stone-800 text-stone-300 rounded font-mono">Plate #32</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://www.newsbug.info/news/nation/what-is-public-interest-technology-an-expert-on-data-and-policy-explains-how-it-helps/article_54cbee56-9ca0-554b-8555-adaa014ee1fb.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 px-2.5 py-1 rounded flex items-center gap-1 transition-colors"
+              >
+                <span>NewsBug / CMU Source</span>
+                <ArrowUpRight size={12} />
+              </a>
+              {onNavigateTab && (
+                <button
+                  onClick={() => onNavigateTab('public_interest_tech')}
+                  className="text-[11px] font-mono bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-3 py-1 rounded flex items-center gap-1 transition-colors shadow"
+                >
+                  <span>Open PIT Dossier & Engine</span>
+                  <ArrowUpRight size={12} />
+                </button>
+              )}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-6 bg-stone-950 rounded-xl p-3 border border-amber-500/40 shadow-2xl group relative overflow-hidden">
+              <div className="w-full aspect-[16/10] bg-stone-900 rounded-lg border border-amber-500/30 flex items-center justify-center overflow-hidden">
+                <img
+                  src={publicInterestTechImg}
+                  alt="What is Public Interest Technology - Rayid Ghani CMU Lead Poisoning Prevention"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
+                />
+              </div>
+              <div className="mt-2.5 flex items-center justify-between px-1 text-[10px] font-mono text-stone-400">
+                <span className="text-amber-300 font-semibold">💡 Rayid Ghani, Carnegie Mellon University (Sep 1, 2026)</span>
+                <span className="text-emerald-400">Vault: 0xPUBLIC_INTEREST_TECH</span>
+              </div>
+            </div>
+
+            <div className="md:col-span-6 space-y-3">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono text-amber-400 tracking-wider uppercase font-bold block">
+                  Public Interest Technology Defined
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif font-black text-stone-100 leading-tight">
+                  “Public interest technology has prevented children from being poisoned by lead paint”
+                </h3>
+              </div>
+
+              <blockquote className="p-3.5 bg-amber-950/40 border-l-4 border-amber-500 rounded-r-xl text-xs sm:text-sm text-stone-200 italic leading-relaxed">
+                “Every year, millions of people who qualify for food assistance never get it... For others, the application is too long and complicated. As a computer scientist and public policy researcher who has spent the last decade working at the intersection of technology and the public good, I see public interest technology as a vital bridge between what technology can do and what people actually need.”
+                <span className="block mt-1 font-mono text-[11px] text-amber-300 not-italic font-bold">
+                  — Rayid Ghani, Carnegie Mellon University
+                </span>
+              </blockquote>
+
+              <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                <strong>Why ICEarth Exists:</strong> In 2001, Norm Roulet founded ICEarth on the axiom that individuals must own their data and that technology must serve human preservation over surveillance capitalism. Legacy public health systems treated children as <em>"human canaries"</em>—waiting for a toddler to suffer irreversible neurological damage before inspecting the home. Public Interest Technology changes the paradigm: predictive data systems identify toxic lead hazards <strong>before</strong> pregnant mothers and infants move in.
+              </p>
+
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <div className="p-2.5 bg-stone-950/80 border border-stone-800 rounded-lg text-[11px]">
+                  <div className="font-bold text-amber-300">🏛️ Reactive Canary Model</div>
+                  <div className="text-stone-400 text-[10px]">Testing kids at age 2 after irreversible cognitive & brain damage has already occurred.</div>
+                </div>
+                <div className="p-2.5 bg-stone-950/80 border border-emerald-500/30 rounded-lg text-[11px]">
+                  <div className="font-bold text-emerald-400">🛡️ Proactive PIT Defense</div>
+                  <div className="text-stone-300 text-[10px]">Machine learning + open data predicting hazardous paint before families move in.</div>
+                </div>
+              </div>
+
+              {onNavigateTab && (
+                <div className="pt-2 flex items-center gap-2">
+                  <button
+                    onClick={() => onNavigateTab('public_interest_tech')}
+                    className="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-black text-xs rounded-xl shadow-lg transition-all flex items-center gap-1.5"
+                  >
+                    <span>Explore Public Interest Tech Dossier</span>
+                    <ArrowUpRight size={14} />
+                  </button>
+                  <button
+                    onClick={() => onNavigateTab('news_repository')}
+                    className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs rounded-xl transition-colors"
+                  >
+                    View in Newsfeed
                   </button>
                 </div>
               )}

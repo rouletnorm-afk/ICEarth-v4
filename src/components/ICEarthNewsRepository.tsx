@@ -37,6 +37,7 @@ import nigeriaLeadReviewImg from '../assets/images/nigeria_lead_pollution_review
 import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing_algorithm_1787999281654.jpg';
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
+import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -133,6 +134,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('public_interest_tech') ||
+    u.includes('public-interest-tech') ||
+    u.includes('public_interest') ||
+    u.includes('rayid_ghani') ||
+    u.includes('1788280223679') ||
+    u.includes('plate_32') ||
+    u.includes('plate32') ||
+    u.includes('plate #32') ||
+    u.includes('0xpublic_interest_tech')
+  ) {
+    return publicInterestTechImg;
+  }
   if (
     u.includes('beetroot') ||
     u.includes('drb') ||
@@ -533,6 +547,47 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'ART-PUBLIC-INTEREST-TECHNOLOGY-RAYID-GHANI-CMU-2026',
+    contentType: 'Article',
+    title: 'What is Public Interest Technology? An Expert on Data and Policy Explains How It Helps People in Need & Prevents Pediatric Lead Poisoning',
+    subtitle: 'Carnegie Mellon University & The Conversation (Sep 1, 2026) • Rayid Ghani on Machine Learning for the Common Good • Ending the Reactive "Human Canary" Lead Testing Paradigm via Pre-Occupancy Housing Risk Models • Unlocking $60B+ in Unclaimed Public Benefits • Why ICEarth Exists as Pure Public Interest Technology',
+    sourceUrl: 'https://www.newsbug.info/news/nation/what-is-public-interest-technology-an-expert-on-data-and-policy-explains-how-it-helps/article_54cbee56-9ca0-554b-8555-adaa014ee1fb.html',
+    sourceName: 'NewsBug / The Conversation / Carnegie Mellon University (Published 1 September 2026)',
+    publishDate: '2026-09-01',
+    author: 'Rayid Ghani, Carnegie Mellon University',
+    authorName: 'Rayid Ghani (Distinguished Career Professor in Machine Learning & Public Policy, CMU) • Sovereign Analysis by Norman Roulet',
+    abstract: 'Every year, millions of people who qualify for food assistance never get it. The money exists and they meet the eligibility rules, but they don’t know that the program exists, or if they qualify. For others, the application is too long and complicated, or they miss a deadline to recertify. The result is that billions of dollars in benefits go unused every year, while families go hungry. This is the kind of problem public interest technology aims to solve. As a computer scientist and public policy researcher who has spent the last decade working at the intersection of technology and the public good, I see public interest technology as a vital bridge between what technology can do and what people actually need. Public interest technology has prevented children from being poisoned by lead paint, helped community colleges keep students on track to graduate, reduced unnecessary incarceration by helping courts distinguish between people who need support and those who pose a risk to public safety, and connected millions of people to food assistance and health care.',
+    editorCommentary: 'Norm Roulet & ICEarth Sovereign Synthesis: Rayid Ghani’s CMU breakthrough provides the exact academic and moral definition for why ICEarth exists. For a century, municipal health systems operated on the grotesque "human canary" model: waiting for a 2-year-old toddler to suffer irreversible neurological damage and test positive for elevated blood lead before sending an inspector to check the paint. By linking birth records, tax assessor datasets, and building violation histories, Ghani’s team trained predictive models to identify high-risk lead homes before pregnant mothers and newborns occupy them, allowing targeted abatement grants to prevent poisoning entirely. This exemplifies the 2001 ICEarth founding axiom: data must be sovereign, transparent, and deployed for human preservation rather than corporate surveillance and ad extraction.',
+    fullExcerpt: `WHAT IS PUBLIC INTEREST TECHNOLOGY? AN EXPERT ON DATA AND POLICY EXPLAINS HOW IT HELPS PEOPLE IN NEED
+CARNEGIE MELLON UNIVERSITY & THE CONVERSATION / NEWSBUG DOSSIER (SEP 1, 2026)
+
+Author: Rayid Ghani, Distinguished Career Professor in Machine Learning and Public Policy, Carnegie Mellon University
+Source: NewsBug / The Conversation (https://www.newsbug.info/news/nation/what-is-public-interest-technology-an-expert-on-data-and-policy-explains-how-it-helps/article_54cbee56-9ca0-554b-8555-adaa014ee1fb.html)
+Sovereign Vault Hash: 0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026
+Interactive Research Engine: https://icearth.org/?tab=public_interest_tech
+
+CORE AXIOM & SUMMARY:
+"Public interest technology has prevented children from being poisoned by lead paint, helped community colleges keep students on track to graduate, reduced unnecessary incarceration by helping courts distinguish between people who need support and those who pose a risk to public safety, and connected millions of people to food assistance and health care."
+
+THE ADMINISTRATIVE BURDEN & THE BENEFIT GAP:
+Every year, millions of people who qualify for food assistance (SNAP), healthcare (Medicaid), and housing subsidies never get it. The money exists and they meet all eligibility rules, but they don't know the program exists, or the application is dozens of pages long. Public interest technologists build automated cross-enrollment systems that eliminate friction, unlocking over $60 Billion in unclaimed benefits annually.
+
+CASE STUDY: ENDING THE "HUMAN CANARY" LEAD TESTING PARADIGM
+Under legacy public health systems, municipalities only inspected homes for lead paint AFTER a child tested positive for elevated blood lead at age 2—meaning irreversible cognitive and neurological damage had already occurred. 
+Carnegie Mellon's Data Science for Social Good team, working with the Chicago Department of Public Health, linked housing tax assessor data, building code violations, past lead inspection records, and birth records to train machine learning models that predict which homes have hazardous lead paint with 88%–94% accuracy BEFORE a pregnant woman or newborn moves in. This enabled targeted proactive inspections and lead abatement grants, preventing hundreds of children from ever being poisoned.
+
+WHY ICEARTH EXISTS AS PUBLIC INTEREST TECHNOLOGY:
+As established by Norm Roulet in the 2001 ICEarth Charter ("An individual should own his or her own data and only trusted parties should broker individuals data as allowed and authorized by the individual"), ICEarth is pure Public Interest Technology. By deploying Zero-Knowledge proofs, open-source environmental exposomics, and decentralized sovereign data custody, ICEarth ensures that toxic environmental data belongs to the public and empowers communities to enforce clean air, water, and soil protections.`,
+    tags: ['PublicInterestTechnology', 'RayidGhani', 'CarnegieMellon', 'LeadPoisoning', 'DSSG', 'ChicagoLead', 'Plate32', 'RouletsLaw', 'ICEarth', 'ChildWelfare'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics'],
+    vaultHash: '0xPUBLIC_INTEREST_TECH_RAYID_GHANI_CMU_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: publicInterestTechImg
+  },
+  {
     id: 'ART-RED-BEETROOT-NEUROPROTECTION-ALZHEIMER-LEAD-2026',
     contentType: 'Article',
     title: 'Neuroprotective and Anti-Alzheimer Properties of Dried Red Beetroot Against Lead Poisoning: Multi-Target Dietary Chelation, Aβ42/P-Tau Suppression, and Gut-Brain SCFA Modulation',
@@ -597,7 +652,7 @@ Perturbation (Lead Pb2+ neurotoxicity & vascular endothelial dysfunction) × Unc
     author: 'ScienceDirect Peer-Reviewed Pharmacology & Toxicological Research Consortium',
     authorName: 'Tissue and Cell (Elsevier) • Exposenomics & NanoSpire Cavitation Synthesis by Norman Roulet',
     abstract: 'Carvacrol nano-phytosomes protect rats from lead-induced liver injury. CRV-NPhytos downregulate NF-κB and NLRP3 inflammatory markers. The nano-formulation significantly elevates SOD and catalase antioxidant defenses. Histological architecture of hepatic lobules is near-completely restored. Validates why world-class cavitation processing (generating microscopic bubble collapse and supersonic micro-jets) enhances nano-phytosome entrapment and stability against heavy metal cellular perturbation. Connects with trace carvacrol terpenes in cannabis plants and NanoSpire high-shear processing.',
-    editorCommentary: 'Norm Roulet & Sovereign Exposenomics Synthesis: This groundbreaking ScienceDirect study provides definitive biochemical proof for why Norman Roulet and NanoSpire have spent over two decades pioneering acoustic and hydrodynamic cavitation technology. Lead (Pb2+) induces severe hepatic cytotoxicity by generating reactive oxygen species, triggering 8-OHdG DNA damage, and activating NF-κB and NLRP3 inflammasome cascades. Carvacrol (a monoterpene phenol found in oregano, thyme, and as a minor terpene in cannabis cultivars) possesses extraordinary antioxidant potential, but suffers from poor aqueous solubility. When formulated into nano-phytosomes using high-shear cavitation processing (supersonic bubble collapse and micro-jets), bioavailability surges, downregulating inflammatory cytokines and restoring hepatic tissue architecture. Under Roulet’s Law: Perturbation (Pb2+ oxidative cytotoxicity) × Uncertainty (Variable intestinal absorption) = Chaos (Hepatic lobule necrosis & pyroptosis) × Relativity (Nanoscale cavitation encapsulation vs. uncontrolled organ failure).',
+    editorCommentary: 'Norm Roulet & Sovereign Exposenomics Synthesis: This groundbreaking ScienceDirect study provides definitive biochemical proof for why Norman Roulet and NanoSpire have spent over two decades pioneering cavitation technology. NanoSpire commentary: Our 20+ years of successful benchmarking and conducting comparative analysis against other methods, including ultrasonic cavitation, confirm our physics-driven disruptive cavitation platform surpasses all other methods. Lead (Pb2+) induces severe hepatic cytotoxicity by generating reactive oxygen species, triggering 8-OHdG DNA damage, and activating NF-κB and NLRP3 inflammasome cascades. Carvacrol (a monoterpene phenol found in oregano, thyme, and as a minor terpene in cannabis cultivars) possesses extraordinary antioxidant potential, but suffers from poor aqueous solubility. When formulated into nano-phytosomes using high-shear cavitation processing (supersonic bubble collapse and micro-jets), bioavailability surges, downregulating inflammatory cytokines and restoring hepatic tissue architecture. Under Roulet’s Law: Perturbation (Pb2+ oxidative cytotoxicity) × Uncertainty (Variable intestinal absorption) = Chaos (Hepatic lobule necrosis & pyroptosis) × Relativity (Nanoscale cavitation encapsulation vs. uncontrolled organ failure).',
     fullExcerpt: `HEPATOPROTECTIVE EFFECTS OF CARVACROL NANO-PHYTOSOMES AGAINST LEAD TOXICITY: RESTORATION OF TISSUE ARCHITECTURE VIA NF-κB/NLRP3 SUPPRESSION AND ANTIOXIDANT ENHANCEMENT
 SCIDENCEDIRECT PHARMACOLOGICAL BREAKTHROUGH & NANOSPIRE CAVITATION SYNTHESIS
 
@@ -3480,6 +3535,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('PublicInterestTechnology') || article.tags?.includes('RayidGhani') || article.tags?.includes('DSSG') || article.id.includes('PUBLIC-INTEREST-TECH') || article.title?.includes('Public Interest Technology')) && (
+                      <button
+                        onClick={() => onNavigateTab('public_interest_tech')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 via-stone-800 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-amber-200" />
+                        <span>💡 Launch Public Interest Tech Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('RedBeetroot') || article.tags?.includes('AntiAlzheimer') || article.tags?.includes('DRB') || article.tags?.includes('Betalains') || article.id.includes('RED-BEETROOT') || article.id.includes('BEETROOT')) && (
                       <button
                         onClick={() => onNavigateTab('red_beetroot_neuroprotection')}
