@@ -46,7 +46,8 @@ import {
   Zap,
   GraduationCap,
   User,
-  Compass
+  Compass,
+  Calendar
 } from 'lucide-react';
 import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
 import { NanoSpireNanoCanX } from './components/NanoSpireNanoCanX';
@@ -120,6 +121,7 @@ import { ChildhoodLeadTesting } from './components/ChildhoodLeadTesting';
 import { CarvacrolCavitationHepatoprotection } from './components/CarvacrolCavitationHepatoprotection';
 import { RedBeetrootNeuroprotection } from './components/RedBeetrootNeuroprotection';
 import { PublicInterestTechnology } from './components/PublicInterestTechnology';
+import { NationalLeadPoisoningPreventionWeek2026 } from './components/NationalLeadPoisoningPreventionWeek2026';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb } from 'lucide-react';
 
@@ -128,7 +130,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -213,7 +215,18 @@ export default function App() {
 
     if (rawTabTarget) {
       const lower = rawTabTarget.toLowerCase().trim();
-      if (lower === 'storybook' || lower === 'story') {
+      if (
+        lower === 'nlppw_2026' ||
+        lower === 'nlppw' ||
+        lower === 'nlppw2026' ||
+        lower === 'lead_poisoning_prevention_week' ||
+        lower === 'lead_prevention_week' ||
+        lower === 'keep_kids_safe' ||
+        lower.includes('nlppw') ||
+        lower.includes('lead_prevention_week')
+      ) {
+        setActiveTab('nlppw_2026');
+      } else if (lower === 'storybook' || lower === 'story') {
         setActiveTab('storybook');
       } else if (lower === 'documentary' || lower === 'film' || lower === 'video') {
         setActiveTab('documentary');
@@ -1047,6 +1060,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <section>
               <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-3">Sovereign Directory</h2>
               <nav className="space-y-1">
+                {/* 0.00000 NATIONAL LEAD POISONING PREVENTION WEEK 2026 (EPA / CDC / HUD) */}
+                <button
+                  onClick={() => setActiveTab('nlppw_2026' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'nlppw_2026' || (activeTab as string) === 'nlppw'
+                      ? 'bg-gradient-to-r from-emerald-600 via-teal-700 to-cyan-700 text-white border-emerald-300 shadow-md font-extrabold ring-2 ring-emerald-400/80'
+                      : 'hover:bg-emerald-500/20 text-emerald-950 border-emerald-500/60 bg-emerald-50/90 font-black ring-1 ring-emerald-400/40'
+                  }`}
+                >
+                  <Calendar size={16} className={activeTab === 'nlppw_2026' ? 'text-emerald-100 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-extrabold">🗓️ Lead Prevention Week 2026</span>
+                  <span className="px-1.5 py-0.2 bg-stone-950 text-emerald-300 text-[8px] tracking-wide rounded uppercase font-black shadow-xs border border-emerald-500/50">
+                    EPA EVENT
+                  </span>
+                </button>
+
                 {/* 0.00 ICEarth Launch Home Page */}
                 <button
                   onClick={() => setActiveTab('norm_roulet_home' as any)}
@@ -2077,6 +2106,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <h2 className="text-[10px] font-bold text-[#999] uppercase tracking-widest mb-2">Primary Modules</h2>
                   
                   {[
+                    { id: 'nlppw_2026', icon: Calendar, label: '🗓️ Lead Poisoning Prevention Week 2026', badge: 'EPA Event', color: 'emerald' },
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
@@ -3913,6 +3943,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech') && (
             <div className="flex-1 overflow-y-auto">
               <PublicInterestTechnology 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.127: NATIONAL LEAD POISONING PREVENTION WEEK 2026 (EPA / CDC / HUD) */}
+          {(activeTab === 'nlppw_2026' || (activeTab as string) === 'nlppw' || (activeTab as string) === 'nlppw2026' || (activeTab as string) === 'lead_poisoning_prevention_week') && (
+            <div className="flex-1 overflow-y-auto">
+              <NationalLeadPoisoningPreventionWeek2026 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

@@ -39,6 +39,7 @@ import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
+import nlppw2026Img from '../assets/images/nlppw_2026_epa_1788386927838.jpg';
 import {
   Shield,
   UserCheck,
@@ -170,6 +171,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AO',
+      title: 'National Lead Poisoning Prevention Week 2026: Keep Kids Safe from Lead (Plate #33)',
+      type: 'Federal Outreach, TSCA Lead Prevention & Pediatric Exposenomics IP Asset',
+      imageSrc: nlppw2026Img,
+      link: 'nlppw_2026',
+      description: 'Origins: Official federal outreach and pediatric exposenomics plate for National Lead Poisoning Prevention Week (NLPPW), observed Oct. 25–31, 2026 under the theme "Keep Kids Safe from Lead". Released jointly by the U.S. EPA, CDC, and HUD on September 1, 2026. Champions three core action tracks: 1. Get the Facts (dangers of lead in pre-1978 paint, water pipes, and soil), 2. Get Your Child Tested (universal blood lead surveillance), and 3. Get Your Home Tested before pediatric exposure occurs. Governed by Roulet’s Law: zero safe biological threshold.',
+      sovereignHash: '0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT'
+    },
     {
       id: 'IP-000AN',
       title: 'What is Public Interest Technology? Preventing Pediatric Lead Poisoning & Sovereign Exposome Defense (Plate #32)',

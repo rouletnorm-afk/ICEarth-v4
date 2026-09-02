@@ -38,6 +38,7 @@ import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
+import nlppw2026Img from '../assets/images/nlppw_2026_epa_1788386927838.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -134,6 +135,21 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('nlppw') ||
+    u.includes('nlppw2026') ||
+    u.includes('nlppw_2026') ||
+    u.includes('1788386927838') ||
+    u.includes('plate_33') ||
+    u.includes('plate33') ||
+    u.includes('plate #33') ||
+    u.includes('keep_kids_safe') ||
+    u.includes('keep kids safe') ||
+    u.includes('lead_poisoning_prevention_week') ||
+    u.includes('0xepa_cdc_hud_nlppw')
+  ) {
+    return nlppw2026Img;
+  }
   if (
     u.includes('public_interest_tech') ||
     u.includes('public-interest-tech') ||
@@ -546,6 +562,53 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-NLPPW-EPA-CDC-HUD-2026-FEATURED-EVENT',
+    contentType: 'Event',
+    title: 'Now Available: National Lead Poisoning Prevention Week 2026 Outreach Materials — "Keep Kids Safe from Lead"',
+    subtitle: 'U.S. EPA, CDC & HUD Inter-Agency Initiative (Released September 1, 2026) • Observance October 25–31, 2026 • Federal Public Awareness Campaign, Customizable Flyers & Toolkits in English and Spanish • The 3 Action Pillars: Get the Facts, Get Your Child Tested, and Get Your Home Tested • Dedicated ICEarth Event Hub & Sovereign Update Dispatch',
+    sourceUrl: 'https://www.epa.gov/chemicals-under-tsca/now-available-national-lead-poisoning-prevention-week-materials-1',
+    sourceName: 'U.S. Environmental Protection Agency / CDC / HUD (Released 1 September 2026)',
+    publishDate: '2026-09-01',
+    author: 'U.S. EPA, CDC, and HUD Inter-Agency Task Force',
+    authorName: 'U.S. EPA, CDC, and HUD Inter-Agency Task Force • Sovereign Commentary by Norman Roulet',
+    abstract: 'U.S. Environmental Protection Agency, Centers for Disease Control and Prevention, and U.S. Department of Housing and Urban Development are releasing outreach materials in preparation for National Lead Poisoning Prevention Week (NLPPW), which will be observed Oct. 25-31, 2026. The customizable flyers, social media package, and other materials are designed to help states, Tribes, communities, and partner organizations raise awareness about lead poisoning prevention. Under the theme "Keep Kids Safe from Lead," the materials highlight three key messages: 1. Get the facts on lead exposure risks, 2. Get your child tested, and 3. Get your home tested.',
+    editorCommentary: 'Norm Roulet & ICEarth Sovereign Analysis: National Lead Poisoning Prevention Week (NLPPW) marks an essential federal moment to confront the legacy of lead in America\'s built environment. As established by Roulet\'s Law, there is no safe biological threshold for lead in the human genome or developing nervous system. While EPA, CDC, and HUD provide outreach toolkits for October 25–31, 2026, ICEarth has activated a dedicated permanent event updates hub. Proactive testing of both homes and children is not merely a recommendation—it is a moral imperative to end the historical practice of utilizing children as environmental canaries.',
+    fullExcerpt: `NOW AVAILABLE: NATIONAL LEAD POISONING PREVENTION WEEK MATERIALS (NLPPW 2026)
+U.S. ENVIRONMENTAL PROTECTION AGENCY, CENTERS FOR DISEASE CONTROL AND PREVENTION, AND U.S. DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT (RELEASED SEPTEMBER 1, 2026)
+
+Official Source: U.S. EPA Chemicals Under TSCA (https://www.epa.gov/chemicals-under-tsca/now-available-national-lead-poisoning-prevention-week-materials-1)
+Observance Dates: October 25–31, 2026
+Theme: "Keep Kids Safe from Lead"
+Sovereign Vault Hash: 0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT
+Interactive Research Engine: https://icearth.org/?tab=nlppw_2026
+
+FEDERAL COLLABORATION SUMMARY:
+The U.S. Environmental Protection Agency (EPA), Centers for Disease Control and Prevention (CDC), and U.S. Department of Housing and Urban Development (HUD) are releasing outreach materials in preparation for National Lead Poisoning Prevention Week (NLPPW), which will be observed Oct. 25-31, 2026. The customizable flyers, social media package, and other materials are designed to help states, Tribes, communities, and partner organizations raise awareness about lead poisoning prevention.
+
+NLPPW is held annually during the last full week of October to encourage individuals, organizations, and state, Tribal, and local governments to work together to reduce childhood lead exposure.
+
+THE THREE CORE PILLARS OF ACTION:
+1. GET THE FACTS:
+Learn about the dangers of lead, common exposure pathways (pre-1978 lead-based paint, lead service lines, contaminated urban soil, imported spices, cookware, and cosmetics), and actionable prevention steps. Approximately 29 million housing units nationwide still contain deteriorated lead paint and elevated levels of lead-contaminated house dust.
+
+2. GET YOUR CHILD TESTED:
+A simple blood lead test is the only reliable way to know if a child has been exposed. Because symptoms of lead poisoning are often invisible until profound neurological damage occurs, universal screening at ages 12 and 24 months—and catch-up screening up to age 6—is essential. CDC reference blood lead value stands at 3.5 µg/dL, while Roulet's Law confirms zero safe exposure level exists.
+
+3. GET YOUR HOME TESTED:
+Before undertaking renovations, repairs, or painting in pre-1978 homes, residents must hire EPA Lead-Safe Certified renovation contractors (RRP rule) and licensed lead risk assessors. Proactive home testing prevents children from acting as the biological canary in their own living space.
+
+COMMUNITY ENGAGEMENT & SUBMISSION:
+Organizations are urged to register local events on the World Health Organization (WHO) and EPA/CDC/HUD International Lead Poisoning Prevention Week campaign maps, conduct community blood lead screening drives, and distribute bilingual toolkits.`,
+    tags: ['NLPPW2026', 'KeepKidsSafeFromLead', 'EPA', 'CDC', 'HUD', 'TSCA', 'LeadPrevention', 'BloodLeadTesting', 'UniversalScreening', 'Pre1978Housing', 'Plate33', 'RouletsLaw', 'ICEarth'],
+    communities: ['ICEarth Global', 'Cleveland & Cuyahoga County', 'Swiss Exposenomics', 'Public Health Education'],
+    vaultHash: '0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: nlppw2026Img
+  },
   {
     id: 'ART-PUBLIC-INTEREST-TECHNOLOGY-RAYID-GHANI-CMU-2026',
     contentType: 'Article',
@@ -3535,6 +3598,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('NLPPW2026') || article.tags?.includes('KeepKidsSafeFromLead') || article.id.includes('NLPPW') || article.title?.includes('National Lead Poisoning Prevention Week')) && (
+                      <button
+                        onClick={() => onNavigateTab('nlppw_2026')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-600 via-teal-700 to-cyan-700 hover:from-emerald-500 hover:to-cyan-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-emerald-200" />
+                        <span>🗓️ Launch NLPPW 2026 Dedicated Event Engine & Live Updates Hub</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('PublicInterestTechnology') || article.tags?.includes('RayidGhani') || article.tags?.includes('DSSG') || article.id.includes('PUBLIC-INTEREST-TECH') || article.title?.includes('Public Interest Technology')) && (
                       <button
                         onClick={() => onNavigateTab('public_interest_tech')}

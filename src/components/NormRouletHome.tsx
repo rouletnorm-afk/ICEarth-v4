@@ -95,10 +95,26 @@ import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
+import nlppw2026Img from '../assets/images/nlppw_2026_epa_1788386927838.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('nlppw') ||
+    u.includes('nlppw2026') ||
+    u.includes('nlppw_2026') ||
+    u.includes('1788386927838') ||
+    u.includes('plate_33') ||
+    u.includes('plate33') ||
+    u.includes('plate #33') ||
+    u.includes('keep_kids_safe') ||
+    u.includes('keep kids safe') ||
+    u.includes('lead_poisoning_prevention_week') ||
+    u.includes('0xepa_cdc_hud_nlppw')
+  ) {
+    return nlppw2026Img;
+  }
   if (
     u.includes('public_interest_tech') ||
     u.includes('public-interest-tech') ||
@@ -623,6 +639,41 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-NLPPW-EPA-2026-FEATURED-EVENT',
+      title: 'Now Available: National Lead Poisoning Prevention Week 2026 Outreach Materials — "Keep Kids Safe from Lead"',
+      category: 'Exposenomics',
+      date: '2026-09-01',
+      imageSrc: nlppw2026Img,
+      summary: 'U.S. EPA, CDC, and HUD Joint Release (September 1, 2026): In preparation for National Lead Poisoning Prevention Week (NLPPW), observed Oct. 25–31, 2026 under the theme "Keep Kids Safe from Lead", federal partner agencies have released comprehensive outreach toolkits, customizable flyers, social media packs, and event planning guides in English and Spanish. Centers on three vital life-saving tracks: 1. Get the Facts on lead hazards across 30M+ pre-1978 homes, 2. Get Your Child Tested (routine blood lead screening by ages 1 & 2), and 3. Get Your Home Tested before pediatric exposure occurs. ICEarth links this national observance to Roulet\'s Law: zero safe biological lead threshold.',
+      fullText: `NOW AVAILABLE: NATIONAL LEAD POISONING PREVENTION WEEK MATERIALS (NLPPW 2026)
+U.S. ENVIRONMENTAL PROTECTION AGENCY, CENTERS FOR DISEASE CONTROL AND PREVENTION, AND U.S. DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT JOINT ANNOUNCEMENT (RELEASED SEPTEMBER 1, 2026)
+
+Official Source: U.S. EPA Chemicals Under TSCA (https://www.epa.gov/chemicals-under-tsca/now-available-national-lead-poisoning-prevention-week-materials-1)
+Observance Dates: October 25–31, 2026
+Theme: "Keep Kids Safe from Lead"
+Sovereign Vault Hash: 0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT
+Interactive Event Hub: https://icearth.org/?tab=nlppw_2026
+
+FEDERAL COLLABORATION SUMMARY:
+The U.S. Environmental Protection Agency (EPA), Centers for Disease Control and Prevention (CDC), and U.S. Department of Housing and Urban Development (HUD) are releasing outreach materials in preparation for National Lead Poisoning Prevention Week (NLPPW), which will be observed Oct. 25-31, 2026. The customizable flyers, social media package, and other materials are designed to help states, Tribes, communities, and partner organizations raise awareness about lead poisoning prevention.
+
+THE THREE CORE PILLARS OF ACTION:
+1. GET THE FACTS:
+Learn about the dangers of lead, common exposure pathways (pre-1978 lead-based paint, lead service lines, contaminated urban soil, imported spices, cookware, and cosmetics), and actionable prevention steps. Approximately 29 million housing units nationwide still contain deteriorated lead paint and elevated levels of lead-contaminated house dust.
+
+2. GET YOUR CHILD TESTED:
+A simple blood lead test is the only reliable way to know if a child has been exposed. Because symptoms of lead poisoning are often invisible until profound neurological damage occurs, universal screening at ages 12 and 24 months—and catch-up screening up to age 6—is essential. CDC reference blood lead value stands at 3.5 µg/dL, while Roulet's Law confirms zero safe exposure level exists.
+
+3. GET YOUR HOME TESTED:
+Before undertaking renovations, repairs, or painting in pre-1978 homes, residents must hire EPA Lead-Safe Certified renovation contractors (RRP rule) and licensed lead risk assessors. Proactive home testing prevents children from acting as the biological canary in their own living space.
+
+COMMUNITY ENGAGEMENT & SUBMISSION:
+Organizations are urged to register local events on the World Health Organization (WHO) and EPA/CDC/HUD International Lead Poisoning Prevention Week campaign maps, conduct community blood lead screening drives, and distribute bilingual toolkits.`,
+      tags: ['NLPPW2026', 'KeepKidsSafeFromLead', 'EPA', 'CDC', 'HUD', 'TSCA', 'LeadPrevention', 'BloodLeadTesting', 'UniversalScreening', 'Pre1978Housing', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT',
+      publishedUrl: 'https://www.epa.gov/chemicals-under-tsca/now-available-national-lead-poisoning-prevention-week-materials-1'
+    },
     {
       id: 'MAG-PUBLIC-INTEREST-TECHNOLOGY-RAYID-GHANI-CMU-2026',
       title: 'What is Public Interest Technology? An Expert on Data and Policy Explains How It Helps People in Need & Prevents Pediatric Lead Poisoning',
@@ -1946,6 +1997,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
+      id: 'PHOTO-000AO',
+      title: 'National Lead Poisoning Prevention Week 2026: Keep Kids Safe from Lead (Plate #33)',
+      category: 'Federal Outreach, TSCA Lead Prevention & Pediatric Exposenomics',
+      imageSrc: nlppw2026Img,
+      location: 'U.S. EPA (Washington, DC), CDC (Atlanta, GA) & HUD • National Observance (Oct 25–31, 2026)',
+      date: '2026-09-01',
+      description: 'Origins: Official federal outreach plate for National Lead Poisoning Prevention Week (NLPPW), observed Oct. 25–31, 2026 under the theme "Keep Kids Safe from Lead". Released jointly by the U.S. EPA, CDC, and HUD on September 1, 2026. Champions three core action tracks: 1. Get the Facts (dangers of lead in pre-1978 paint, water pipes, and soil), 2. Get Your Child Tested (universal blood lead surveillance), and 3. Get Your Home Tested before pediatric exposure occurs. Governed by Roulet’s Law: zero safe biological threshold.',
+      vaultHash: '0xEPA_CDC_HUD_NLPPW_2026_EVENT_VAULT',
+      tags: ['NLPPW2026', 'KeepKidsSafeFromLead', 'EPA', 'CDC', 'HUD', 'TSCA', 'TitleX', 'BloodLeadTesting', 'Pre1978Housing', 'Plate33', 'RouletsLaw', 'ICEarth']
+    },
+    {
       id: 'PHOTO-000AN',
       title: 'What is Public Interest Technology? Preventing Pediatric Lead Poisoning & Benefits Delivery (Plate #32)',
       category: 'Public Interest Technology, Exposenomics & Child Welfare AI',
@@ -2705,6 +2767,148 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
       {/* MAIN CONTENT CONTAINERS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        {/* PROMINENT FEATURED EVENT: NATIONAL LEAD POISONING PREVENTION WEEK 2026 (EPA / CDC / HUD) */}
+        {(activeSection === 'all' || activeSection === 'highlights' || activeSection === 'magazine') && (
+          <section className="space-y-4">
+            <div className="w-full rounded-3xl bg-gradient-to-br from-emerald-950 via-stone-950 to-teal-950 border-2 border-emerald-500/70 p-6 sm:p-8 text-white space-y-6 shadow-2xl relative overflow-hidden ring-2 ring-emerald-500/20">
+              
+              {/* Background ambient lighting */}
+              <div className="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Header Badges & Source Attribution */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-emerald-800/60 pb-4 relative z-10">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-mono text-xs font-black uppercase tracking-wider rounded-xl shadow-lg flex items-center gap-2 animate-pulse">
+                    <Calendar size={15} />
+                    <span>FEATURED NATIONAL EVENT • OCT 25–31, 2026</span>
+                  </span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 font-mono text-xs font-bold rounded-xl flex items-center gap-1.5">
+                    <ShieldCheck size={15} className="text-amber-400" />
+                    <span>U.S. EPA • CDC • HUD Joint Federal Initiative</span>
+                  </span>
+                  <span className="px-3 py-1 bg-emerald-900/60 text-emerald-200 border border-emerald-600/40 font-mono text-xs font-bold rounded-xl">
+                    TSCA & Title X Outreach
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-mono text-stone-300 font-bold">
+                  <Calendar size={14} className="text-emerald-400" />
+                  <span>Released September 1, 2026 • Live Updates Hub Active</span>
+                </div>
+              </div>
+
+              {/* Main Grid: Left Narrative + Right Image Plate */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="inline-block px-3 py-1 bg-emerald-500/10 border border-emerald-400/40 rounded-full text-emerald-300 font-mono text-xs font-bold uppercase tracking-wider">
+                    Official National Theme: "Keep Kids Safe from Lead"
+                  </div>
+                  <h2 className="text-2xl sm:text-4xl font-serif font-black text-white leading-tight">
+                    National Lead Poisoning Prevention Week (NLPPW 2026)
+                  </h2>
+                  <p className="text-sm sm:text-base text-stone-200 leading-relaxed">
+                    The U.S. Environmental Protection Agency (EPA), Centers for Disease Control and Prevention (CDC), and U.S. Department of Housing and Urban Development (HUD) have released comprehensive outreach materials in preparation for NLPPW, observed Oct. 25–31, 2026. Customizable flyers, social media kits, and educational toolkits empower communities to eliminate pediatric lead exposures before irreversible cognitive damage occurs.
+                  </p>
+
+                  {/* The 3 Core Federal Pillars */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div className="p-3 bg-stone-900/90 border border-emerald-600/40 rounded-2xl space-y-1">
+                      <div className="text-emerald-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>1. Get the Facts</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        29M+ homes contain lead paint. Know the exposure pathways in soil, water lines, and dust.
+                      </p>
+                    </div>
+
+                    <div className="p-3 bg-stone-900/90 border border-emerald-600/40 rounded-2xl space-y-1">
+                      <div className="text-emerald-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>2. Test Your Child</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        Blood tests at 12 & 24 months. CDC reference value: 3.5 µg/dL. Roulet's Law: 0 safe level.
+                      </p>
+                    </div>
+
+                    <div className="p-3 bg-stone-900/90 border border-emerald-600/40 rounded-2xl space-y-1">
+                      <div className="text-emerald-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>3. Test Your Home</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        Hire EPA Lead-Safe Certified RRP contractors & licensed assessors before renovations.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Call to Actions */}
+                  <div className="flex flex-wrap gap-3 pt-3">
+                    <button
+                      onClick={() => onNavigateTab?.('nlppw_2026')}
+                      className="px-5 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-stone-950 font-mono font-black text-xs sm:text-sm rounded-xl shadow-xl transition-all flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95 ring-2 ring-emerald-300/60"
+                    >
+                      <Calendar size={16} className="text-stone-950" />
+                      <span>Launch Dedicated Event Page & Post Updates</span>
+                      <ArrowRight size={15} />
+                    </button>
+
+                    <a
+                      href="https://www.epa.gov/chemicals-under-tsca/now-available-national-lead-poisoning-prevention-week-materials-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 bg-stone-900 hover:bg-stone-800 text-emerald-300 border border-emerald-500/40 font-mono text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 hover:border-emerald-400"
+                    >
+                      <span>Official EPA Release</span>
+                      <ExternalLink size={14} />
+                    </a>
+
+                    <button
+                      onClick={() => {
+                        const p = basePhotographyGallery.find(item => item.id === 'PHOTO-000AO');
+                        if (p) setSelectedPhoto(p);
+                      }}
+                      className="px-4 py-3 bg-stone-900/80 hover:bg-stone-800 text-stone-200 border border-stone-700 font-mono text-xs font-bold rounded-xl transition-all flex items-center gap-1.5"
+                    >
+                      <Camera size={14} className="text-amber-400" />
+                      <span>View Gallery Plate #33</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right: Forensic Graphic Plate Preview */}
+                <div className="lg:col-span-5">
+                  <div 
+                    onClick={() => onNavigateTab?.('nlppw_2026')}
+                    className="relative group cursor-pointer rounded-2xl overflow-hidden border-2 border-emerald-500/50 shadow-2xl bg-black"
+                  >
+                    <img
+                      src={nlppw2026Img}
+                      alt="National Lead Poisoning Prevention Week 2026 - Keep Kids Safe from Lead"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                      <div className="flex items-center justify-between text-xs font-mono font-bold text-emerald-300">
+                        <span className="px-2 py-0.5 bg-emerald-950/80 border border-emerald-400/60 rounded">
+                          PLATE #33 • FORENSIC PROMOTION
+                        </span>
+                        <span className="text-amber-300">EPA / CDC / HUD</span>
+                      </div>
+                      <p className="text-xs text-stone-200 mt-1 font-serif italic">
+                        Click to enter the dedicated NLPPW 2026 portal and community dispatch feed
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        )}
 
         {/* GOOGLE PERSONAL HEALTH AGENT (PHA) × ICEARTH EXPOSOMICS MULTI-AGENT ARCHITECTURE PROPOSAL */}
         {(activeSection === 'all' || activeSection === 'highlights' || activeSection === 'magazine') && (
