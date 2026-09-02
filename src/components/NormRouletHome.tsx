@@ -95,7 +95,7 @@ import childhoodAlgorithmImg from '../assets/images/mdhhs_childhood_lead_testing
 import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cavitation_lead_1788127244792.jpg';
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
-import nlppw2026Img from '../assets/images/nlppw_2026_epa_1788386927838.jpg';
+import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
@@ -105,6 +105,8 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('nlppw2026') ||
     u.includes('nlppw_2026') ||
     u.includes('1788386927838') ||
+    u.includes('1788387847458') ||
+    u.includes('nlppw_epa_fixed') ||
     u.includes('plate_33') ||
     u.includes('plate33') ||
     u.includes('plate #33') ||

@@ -66,7 +66,7 @@ import {
   AreaChart,
   Area
 } from 'recharts';
-import nlppw2026Img from '../assets/images/nlppw_2026_epa_1788386927838.jpg';
+import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 
 interface NationalLeadPoisoningPreventionWeek2026Props {
   onNavigateTab?: (tab: string) => void;
