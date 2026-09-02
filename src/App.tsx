@@ -122,15 +122,16 @@ import { CarvacrolCavitationHepatoprotection } from './components/CarvacrolCavit
 import { RedBeetrootNeuroprotection } from './components/RedBeetrootNeuroprotection';
 import { PublicInterestTechnology } from './components/PublicInterestTechnology';
 import { NationalLeadPoisoningPreventionWeek2026 } from './components/NationalLeadPoisoningPreventionWeek2026';
+import { RealTimePollutionTracking } from './components/RealTimePollutionTracking';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -226,6 +227,19 @@ export default function App() {
         lower.includes('lead_prevention_week')
       ) {
         setActiveTab('nlppw_2026');
+      } else if (
+        lower === 'realtime_pollution_tracking' ||
+        lower === 'realtime_pollution' ||
+        lower === 'realtimepollution' ||
+        lower === 'pollution_tracking' ||
+        lower === 'realtime' ||
+        lower === 'climatetrace' ||
+        lower === 'climate_trace' ||
+        lower === 'earthtalk' ||
+        lower === 'plate_34' ||
+        lower === 'plate34'
+      ) {
+        setActiveTab('realtime_pollution_tracking');
       } else if (lower === 'storybook' || lower === 'story') {
         setActiveTab('storybook');
       } else if (lower === 'documentary' || lower === 'film' || lower === 'video') {
@@ -1780,6 +1794,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Real-Time Pollution Tracking: The Sovereign Case for ICEarth */}
+                <button
+                  onClick={() => setActiveTab('realtime_pollution_tracking')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'realtime_pollution_tracking' || (activeTab as string) === 'pollution_tracking' || (activeTab as string) === 'realtime' || (activeTab as string) === 'climatetrace'
+                      ? 'bg-teal-950 text-teal-100 border-teal-400 shadow-md font-extrabold ring-2 ring-teal-400/80'
+                      : 'hover:bg-teal-500/20 text-teal-950 border-teal-400/70 bg-teal-50/90 font-bold'
+                  }`}
+                >
+                  <Radio size={16} className={activeTab === 'realtime_pollution_tracking' ? 'text-teal-300 animate-pulse' : 'text-teal-700'} />
+                  <span className="flex-1 font-semibold">📡 Real-Time Pollution Tracking</span>
+                  <span className="px-1.5 py-0.2 bg-teal-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Aggregator / Portal
+                  </span>
+                </button>
+
                 {/* The ICEarth/GCLAC/CCOAL Solution */}
                 <button
                   onClick={() => setActiveTab('cleveland_strategy')}
@@ -2147,6 +2177,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'carvacrol_cavitation', icon: Pill, label: '🧪 Carvacrol Nano-Phytosomes & Cavitation', badge: 'Cavitation Rx', color: 'emerald' },
                     { id: 'red_beetroot_neuroprotection', icon: Apple, label: '🍎 Red Beetroot Lead Neuroprotection', badge: 'Anti-Alzheimer', color: 'rose' },
                     { id: 'public_interest_tech', icon: Lightbulb, label: '💡 What is Public Interest Tech?', badge: 'PIT / Lead', color: 'cyan' },
+                    { id: 'realtime_pollution_tracking', icon: Radio, label: '📡 Real-Time Pollution Tracking', badge: 'Aggregator', color: 'teal' },
                     { id: 'simulator', icon: Sliders, label: remediationTrack === 'lead' ? '📊 Roulet\'s Law Simulator' : '📊 Cavitation Simulator', badge: 'Tool', color: 'neutral' },
                     { id: 'benchmarking', icon: FileSpreadsheet, label: remediationTrack === 'lead' ? '📈 Exposenomics Benchmarking' : '📈 Advanced Benchmarking', badge: 'Engine', color: 'neutral' },
                     { id: 'odisse', icon: Activity, label: '🇫🇷 Odissé Dataviz Challenge', badge: 'Data', color: 'cyan' },
@@ -2240,6 +2271,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'carvacrol_cavitation' || (activeTab as string) === 'carvacrol' || (activeTab as string) === 'hepatoprotection' || (activeTab as string) === 'phytosomes' || (activeTab as string) === 'cavitation_hepatoprotection') && '🧪 Carvacrol Nano-Phytosomes & Ultrasonic Cavitation'}
               {(activeTab === 'red_beetroot_neuroprotection' || (activeTab as string) === 'red_beetroot' || (activeTab as string) === 'beetroot' || (activeTab as string) === 'drb' || (activeTab as string) === 'anti_alzheimer') && '🍎 Red Beetroot Lead Neuroprotection & Anti-Alzheimer'}
               {(activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech') && '💡 Public Interest Technology & Lead Paint'}
+              {(activeTab === 'realtime_pollution_tracking' || (activeTab as string) === 'pollution_tracking' || (activeTab as string) === 'realtime' || (activeTab as string) === 'climatetrace') && '📡 Real-Time Pollution Tracking: Sovereign Portal'}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -3943,6 +3975,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech') && (
             <div className="flex-1 overflow-y-auto">
               <PublicInterestTechnology 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.126B: REAL-TIME POLLUTION TRACKING: THE SOVEREIGN CASE FOR ICEARTH */}
+          {(activeTab === 'realtime_pollution_tracking' || (activeTab as string) === 'pollution_tracking' || (activeTab as string) === 'realtime' || (activeTab as string) === 'climatetrace') && (
+            <div className="flex-1 overflow-y-auto">
+              <RealTimePollutionTracking 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

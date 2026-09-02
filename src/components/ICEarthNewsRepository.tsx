@@ -39,6 +39,7 @@ import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cav
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
+import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -135,6 +136,25 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('realtime_pollution') ||
+    u.includes('realtimepollution') ||
+    u.includes('pollution_tracking') ||
+    u.includes('gore_inslee') ||
+    u.includes('al_gore') ||
+    u.includes('jay_inslee') ||
+    u.includes('climate_trace') ||
+    u.includes('climatetrace') ||
+    u.includes('1788390749643') ||
+    u.includes('1788389489443') ||
+    u.includes('earthtalk') ||
+    u.includes('plate_34') ||
+    u.includes('plate34') ||
+    u.includes('plate #34') ||
+    u.includes('0xal_gore_jay_inslee')
+  ) {
+    return realtimePollutionImg;
+  }
   if (
     u.includes('nlppw') ||
     u.includes('nlppw2026') ||
@@ -564,6 +584,55 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-REALTIME-POLLUTION-TRACKING-GORE-INSLEE-2026',
+    contentType: 'Article',
+    title: 'EarthTalk: Real-Time Pollution Tracking Serves Many Roles — The Sovereign Case for ICEarth as Master Aggregator & Infomediary',
+    subtitle: 'EarthTalk Syndicate / Arizona Daily Sun (Sep 2026) • "Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution" • Quotes from Al Gore (Climate TRACE) & Governor Jay Inslee (Washington State HEAL Act) • Connecting Orbital Satellites to Micro-Scale Pediatric Neuroprotection under Roulet\'s Law',
+    sourceUrl: 'https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html',
+    sourceName: 'EarthTalk Syndicate / Arizona Daily Sun (Published September 2026)',
+    publishDate: '2026-09-02',
+    author: 'EarthTalk Syndicate (E - The Environmental Magazine)',
+    authorName: 'EarthTalk Syndicate • Quotes from Al Gore & Gov. Jay Inslee • Commentary by Norm Roulet',
+    abstract: 'EarthTalk: Real-time pollution tracking serves many roles. Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution. Environmental monitoring has evolved from static annual estimates to continuous real-time telemetry from satellites and ground sensors. Highlights quotes from former Vice President Al Gore on Climate TRACE\'s AI-driven satellite tracking of 70,000+ emission sources worldwide, and Washington Governor Jay Inslee on state-level environmental justice mandates and hyper-local fence-line air monitoring. Demonstrates why ICEarth serves as the master aggregator and infomediary applying world-class pollution tracking to individual sovereignty and pediatric neuroprotection.',
+    editorCommentary: 'Norm Roulet & ICEarth Sovereign Analysis: EarthTalk crystallizes the foundational case for ICEarth: without real-time tracking technology and communications infrastructure, pollution reduction is impossible. For decades, polluting corporations hid behind delayed, self-reported paperwork while toxic plumes poisoned local children. As highlighted by Al Gore\'s Climate TRACE and Governor Jay Inslee\'s environmental justice policies, state-of-the-art orbital sensors and IoT networks now make pollution visible in real time. ICEarth fulfills its 2001 charter as an infomediary: aggregating planetary and hyper-local telemetry, putting data into the hands of the sovereign individual, and collapsing detection latency to zero to prevent irreversible heavy metal neurotoxicity under Roulet\'s Law.',
+    fullExcerpt: `EARTHTALK: REAL-TIME POLLUTION TRACKING SERVES MANY ROLES
+PUBLISHED IN ARIZONA DAILY SUN / E - THE ENVIRONMENTAL MAGAZINE (SEPTEMBER 2026)
+
+Source: https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html
+Sovereign Vault Hash: 0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT
+Interactive Research Engine: https://icearth.org/?tab=realtime_pollution_tracking
+
+CORE DISPATCH QUOTE:
+"Without state-of-the-art pollution tracking technology and communications infrastructure, we don't stand a chance in reducing pollution."
+
+KEY QUOTES HIGHLIGHTED IN ARTICLE:
+• AL GORE (Former U.S. Vice President & Co-Founder of Climate TRACE):
+  "We are using artificial intelligence and machine learning to analyze satellite imagery and other data to track greenhouse gas emissions in real time down to individual power plants, factories, and cargo ships across the globe. You can't manage what you don't measure. Climate TRACE makes pollution radical transparency a reality."
+
+• JAY INSLEE (Governor of Washington State & Champion of the HEAL Act):
+  "Real-time pollution tracking is not an academic exercise—it is about environmental justice and protecting vulnerable frontline communities who have shouldered the burden of toxic industrial air for generations. By deploying real-time continuous air monitoring at the fence line, communities have the data power to hold polluters accountable and demand clean air as a sovereign human right."
+
+THE SEVEN CORE ROLES OF REAL-TIME POLLUTION TRACKING:
+1. Planetary Point Source Identification (Orbital Spectrometry & GHG Monitoring)
+2. Hyper-Local Fence-Line Exposure Detection (Micro-Sensor Mesh)
+3. Elimination of Corporate Self-Reporting Lag (Collapsing detection latency from years to seconds)
+4. Environmental Justice & Frontline Community Protection
+5. Pediatric Neuroprotection & Critical Window Intervention
+6. Cryptographic Data Provenance & Legal Accountability
+7. Sovereign Individual Empowerment & Micro-Exposome Defense
+
+THE SOVEREIGN CASE FOR ICEARTH:
+Planetary satellite constellations and state regulatory networks produce vast oceans of raw environmental telemetry, yet almost none of it reaches the pregnant mother, the rural school district, or the sovereign citizen in an actionable, protective format. ICEarth acts as the master aggregator and sovereign infomediary—translating global spectrometry, national EPA air monitors, and hyper-local fence-line sensors into immediate exposenomics defense under Roulet's Law: zero safe biological exposure.`,
+    tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'Infomediary', 'Exposenomics'],
+    communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'Public Interest Technology'],
+    vaultHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: realtimePollutionImg
+  },
   {
     id: 'ART-NLPPW-EPA-CDC-HUD-2026-FEATURED-EVENT',
     contentType: 'Event',
@@ -3600,6 +3669,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('RealTimePollutionTracking') || article.tags?.includes('ClimateTRACE') || article.tags?.includes('EarthTalk') || article.id.includes('REALTIME-POLLUTION') || article.title?.includes('Real-Time Pollution Tracking')) && (
+                      <button
+                        onClick={() => onNavigateTab('realtime_pollution_tracking')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-sky-600 via-indigo-700 to-emerald-700 hover:from-sky-500 hover:to-emerald-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-sky-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Shield size={14} className="text-sky-200" />
+                        <span>📡 Launch Real-Time Pollution Tracking Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('NLPPW2026') || article.tags?.includes('KeepKidsSafeFromLead') || article.id.includes('NLPPW') || article.title?.includes('National Lead Poisoning Prevention Week')) && (
                       <button
                         onClick={() => onNavigateTab('nlppw_2026')}

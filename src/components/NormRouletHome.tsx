@@ -42,7 +42,12 @@ import {
   Gavel,
   Scale,
   Flame,
-  Pill
+  Pill,
+  Radio,
+  Award,
+  Clock,
+  Activity,
+  Maximize2
 } from 'lucide-react';
 
 // Import local image assets
@@ -96,10 +101,30 @@ import carvacrolCavitationImg from '../assets/images/carvacrol_nanophytosome_cav
 import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_1788128193396.jpg';
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
+import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('realtime_pollution') ||
+    u.includes('realtimepollution') ||
+    u.includes('pollution_tracking') ||
+    u.includes('gore_inslee') ||
+    u.includes('al_gore') ||
+    u.includes('jay_inslee') ||
+    u.includes('climate_trace') ||
+    u.includes('climatetrace') ||
+    u.includes('1788390749643') ||
+    u.includes('1788389489443') ||
+    u.includes('earthtalk') ||
+    u.includes('plate_34') ||
+    u.includes('plate34') ||
+    u.includes('plate #34') ||
+    u.includes('0xal_gore_jay_inslee')
+  ) {
+    return realtimePollutionImg;
+  }
   if (
     u.includes('nlppw') ||
     u.includes('nlppw2026') ||
@@ -641,6 +666,46 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-REALTIME-POLLUTION-TRACKING-GORE-INSLEE-2026',
+      title: 'EarthTalk: Real-Time Pollution Tracking Serves Many Roles — The Sovereign Case for ICEarth as Master Aggregator & Infomediary',
+      category: 'Infomediation',
+      date: '2026-09-02',
+      imageSrc: realtimePollutionImg,
+      summary: "EarthTalk Syndicate / Arizona Daily Sun (Sep 2026): 'Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution.' Highlighting quotes from Al Gore (Climate TRACE: orbital satellite and AI sensor fusion tracking 70,000+ individual global industrial facilities in real-time) and Washington Governor Jay Inslee (HEAL Act and community fence-line sensor networks). Demonstrates why ICEarth exists: acting as the master aggregator and infomediary applying world-class pollution tracking technology to the individual and their sovereignty, collapsing detection latency to protect against pediatric neurotoxicity under Roulet's Law.",
+      fullText: `EARTHTALK: REAL-TIME POLLUTION TRACKING SERVES MANY ROLES
+THE SOVEREIGN CASE FOR ICEARTH FEATURING AL GORE & JAY INSLEE
+
+Source: EarthTalk Syndicate / Arizona Daily Sun (https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html)
+Date: September 2, 2026
+Featured Leaders: Al Gore (Co-Founder, Climate TRACE) & Governor Jay Inslee (Washington State)
+Sovereign Vault Hash: 0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT
+Interactive Engine: https://icearth.org/?tab=realtime_pollution_tracking
+
+CORE AXIOM & OPENING DISPATCH:
+"Without state-of-the-art pollution tracking technology and communications infrastructure, we don't stand a chance in reducing pollution."
+
+THE SEVEN ESSENTIAL ROLES OF REAL-TIME POLLUTION TRACKING:
+1. TRACKING TRENDS & INSTANT SOURCE ATTRIBUTION: Eliminating the corporate "honor system" and self-reported estimations by measuring plumes at the stack and fenceline in real time.
+2. INFORMING PUBLIC HEALTH & ADVANCE ALERTS: Dispatches emergency shelter and filtration advisories to schools, hospitals, and parents before toxic heavy metals and particulates accumulate in lung and brain tissue.
+3. GUIDING ENVIRONMENTAL POLICY & PERMITTING: Providing verifiable empirical proof for regulators, city planners, and environmental justice boards to restrict industrial expansion in overburdened corridors.
+4. ENSURING MANDATORY REGULATORY COMPLIANCE: Continuous stack spectrometry (CEMS) and satellite spectrometers verify whether facilities abide by clean air and water thresholds 24/7/365.
+5. ADVANCING SCIENTIFIC UNDERSTANDING: Merging orbital observations (Sentinel, TROPOMI, Climate TRACE) with ground-level IoT mesh networks across local microclimates.
+6. SUPPORTING SUSTAINABLE CIVIC DEVELOPMENT: Incentivizing low-emission manufacturing while penalizing unmonitored fugitive super-emitters.
+7. EMPOWERING COMMUNITY TORT & TORT STANDING: Cryptographically pinning pollution streams to the public blockchain, giving frontline communities unassailable legal evidence.
+
+AL GORE & CLIMATE TRACE:
+Al Gore's Climate TRACE coalition has deployed artificial intelligence and satellite imagery to track direct emissions from over 70,000 individual assets worldwide—including power plants, steel mills, oil fields, and cargo vessels. Gore underscores: "We cannot manage what we do not measure. With real-time satellite observation, there is nowhere left to hide greenhouse gases or toxic plumes."
+
+GOVERNOR JAY INSLEE & WASHINGTON STATE:
+Governor Jay Inslee enacted the Climate Commitment Act (CCA) and the HEAL Act (Healthy Environment for All), mandating hyper-local community air quality monitoring networks across vulnerable freight corridors and port districts. Inslee demonstrates that state-level executive authority transforms planetary data into immediate community protection.
+
+ROULET'S LAW BIOLOGICAL IMPERATIVE:
+Under Roulet's Law, Perturbation (H') × Biological Exposure (t) = Biological Chaos (C). When detection latency spans months or years, irreversible neurotoxic damage occurs in children. Real-time telemetry drives latency to near zero, collapsing the damage integral and protecting human life.`,
+      tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'Infomediation', 'Exposenomics'],
+      linkHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
+      publishedUrl: 'https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html'
+    },
     {
       id: 'MAG-NLPPW-EPA-2026-FEATURED-EVENT',
       title: 'Now Available: National Lead Poisoning Prevention Week 2026 Outreach Materials — "Keep Kids Safe from Lead"',
@@ -1999,6 +2064,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
+      id: 'PHOTO-000AP',
+      title: 'Real-Time Pollution Tracking: The Sovereign Case for ICEarth (Plate #34)',
+      category: 'Earth Observation, Real-Time Sensor Telemetry, Climate TRACE & Exposenomics',
+      imageSrc: realtimePollutionImg,
+      location: 'Climate TRACE (Global Satellite Orbit), Washington State (Olympia, WA) & ICEarth Sovereign Sensor Mesh',
+      date: '2026-09-02',
+      description: "Origins: Forensic environmental observation and planetary accountability plate featuring ICEarth as the aggregator and infomediary of world-class pollution tracking technology applied to the individual and their sovereignty, highlighting quotes from former Vice President Al Gore (co-founder of Climate TRACE) and Washington Governor Jay Inslee (pioneer of the HEAL Act). Grounded in the EarthTalk / Arizona Daily Sun dispatch: 'Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution.' Synthesizes orbital spectrometry tracking 70,000+ individual global industrial point sources with hyper-local fence-line IoT sensor mesh. Establishes why ICEarth is indispensable: bridging planetary observation with micro-scale pediatric neuroprotection under Roulet's Law, driving detection latency to near zero.",
+      vaultHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
+      tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'AirQuality', 'Infomediary']
+    },
+    {
       id: 'PHOTO-000AO',
       title: 'National Lead Poisoning Prevention Week 2026: Keep Kids Safe from Lead (Plate #33)',
       category: 'Federal Outreach, TSCA Lead Prevention & Pediatric Exposenomics',
@@ -2769,6 +2845,150 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
       {/* MAIN CONTENT CONTAINERS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        {/* PROMINENT FEATURED RESEARCH: REAL-TIME POLLUTION TRACKING (THE CASE FOR ICEARTH FEATURING AL GORE & JAY INSLEE) */}
+        {(activeSection === 'all' || activeSection === 'highlights' || activeSection === 'magazine') && (
+          <section className="space-y-4">
+            <div className="w-full rounded-3xl bg-gradient-to-br from-slate-950 via-teal-950 to-emerald-950 border-2 border-cyan-500/70 p-6 sm:p-8 text-white space-y-6 shadow-2xl relative overflow-hidden ring-2 ring-cyan-500/20">
+              
+              {/* Background ambient glow */}
+              <div className="absolute -top-32 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Header Badges & Source Attribution */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-cyan-800/60 pb-4 relative z-10">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3.5 py-1.5 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-mono text-xs font-black uppercase tracking-wider rounded-xl shadow-lg flex items-center gap-2 animate-pulse">
+                    <Radio size={15} />
+                    <span>SPECIAL INVESTIGATIVE DISPATCH • EARTHTALK SYNDICATE</span>
+                  </span>
+                  <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono text-xs font-bold rounded-xl flex items-center gap-1.5">
+                    <Award size={15} className="text-emerald-400" />
+                    <span>Feat. Al Gore (Climate TRACE) & Gov. Jay Inslee (WA)</span>
+                  </span>
+                  <span className="px-3 py-1 bg-cyan-900/60 text-cyan-200 border border-cyan-600/40 font-mono text-xs font-bold rounded-xl">
+                    The Case for ICEarth
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-mono text-stone-300 font-bold">
+                  <Clock size={14} className="text-cyan-400" />
+                  <span>Real-Time Sensor Fusion • Zero-Latency Preemption</span>
+                </div>
+              </div>
+
+              {/* Main Grid: Left Narrative + Right Image Plate */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-400/40 rounded-full text-cyan-300 font-mono text-xs font-bold uppercase tracking-wider">
+                    "Without state-of-the-art pollution tracking technology, we don't stand a chance"
+                  </div>
+                  <h2 className="text-2xl sm:text-4xl font-serif font-black text-white leading-tight">
+                    Real-Time Pollution Tracking: The Sovereign Case for ICEarth
+                  </h2>
+                  <p className="text-sm sm:text-base text-stone-200 leading-relaxed">
+                    EarthTalk’s syndicated investigation establishes that real-time monitoring plays seven essential roles in climate accountability, public health preemption, and industrial compliance. Championed by former Vice President <strong>Al Gore</strong> (tracking 70,000+ facilities via Climate TRACE satellites and AI) and Washington Governor <strong>Jay Inslee</strong> (HEAL Act community monitoring), this infrastructure ends the corporate "honor system." Governed by <strong>Roulet's Law</strong>, collapsing detection latency from 18 months to minutes is humanity's sole defense against toxic bioaccumulation.
+                  </p>
+
+                  {/* 3 Core Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div className="p-3 bg-stone-900/90 border border-cyan-600/40 rounded-2xl space-y-1">
+                      <div className="text-cyan-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>1. 70,000+ Assets</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        Satellites + AI pinpoint specific power plants, smelters, and flares worldwide in real time.
+                      </p>
+                    </div>
+
+                    <div className="p-3 bg-stone-900/90 border border-cyan-600/40 rounded-2xl space-y-1">
+                      <div className="text-cyan-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>2. Preemptive Alerts</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        Dispatches instant alerts to schools and parents before toxic plumes penetrate indoor living spaces.
+                      </p>
+                    </div>
+
+                    <div className="p-3 bg-stone-900/90 border border-cyan-600/40 rounded-2xl space-y-1">
+                      <div className="text-cyan-400 font-mono font-black text-xs uppercase flex items-center gap-1.5">
+                        <CheckCircle2 size={13} />
+                        <span>3. Roulet's Law Proof</span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 leading-normal">
+                        Zero-latency telemetry collapses the biological harm integral before irreversible pediatric injury.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Call to Actions */}
+                  <div className="flex flex-wrap gap-3 pt-3">
+                    <button
+                      onClick={() => onNavigateTab?.('realtime_pollution_tracking')}
+                      className="px-5 py-3 bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-stone-950 font-mono font-black text-xs sm:text-sm rounded-xl shadow-xl transition-all flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95 ring-2 ring-cyan-300/60"
+                    >
+                      <Activity size={16} className="text-stone-950" />
+                      <span>Launch Real-Time Pollution Tracking Engine</span>
+                      <ArrowRight size={15} />
+                    </button>
+
+                    <a
+                      href="https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 bg-stone-900 hover:bg-stone-800 text-cyan-300 border border-cyan-500/40 font-mono text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 hover:border-cyan-400"
+                    >
+                      <span>Arizona Daily Sun Report</span>
+                      <ExternalLink size={14} />
+                    </a>
+
+                    <button
+                      onClick={() => {
+                        const p = basePhotographyGallery.find(item => item.id === 'PHOTO-000AP');
+                        if (p) setSelectedPhoto(p);
+                      }}
+                      className="px-4 py-3 bg-stone-900/80 hover:bg-stone-800 text-stone-200 border border-stone-700 font-mono text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <Camera size={14} className="text-amber-400" />
+                      <span>View Gallery Plate #34</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right: Forensic Graphic Plate Preview */}
+                <div className="lg:col-span-5">
+                  <div 
+                    onClick={() => onNavigateTab?.('realtime_pollution_tracking')}
+                    className="relative group cursor-pointer rounded-2xl overflow-hidden border-2 border-cyan-500/50 shadow-2xl bg-black"
+                  >
+                    <img
+                      src={realtimePollutionImg}
+                      alt="Real-Time Pollution Tracking - The Case for ICEarth featuring Al Gore and Jay Inslee"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                      <div className="flex items-center justify-between text-xs font-mono font-bold text-cyan-300">
+                        <span className="px-2 py-0.5 bg-cyan-950/80 border border-cyan-400/60 rounded">
+                          PLATE #34 • FORENSIC PROVENANCE
+                        </span>
+                        <span className="flex items-center gap-1 text-white">
+                          <Maximize2 size={13} /> Click to Open
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-stone-300 font-mono mt-1">
+                        Feat. Al Gore (Climate TRACE) & Gov. Jay Inslee • EarthTalk
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        )}
 
         {/* PROMINENT FEATURED EVENT: NATIONAL LEAD POISONING PREVENTION WEEK 2026 (EPA / CDC / HUD) */}
         {(activeSection === 'all' || activeSection === 'highlights' || activeSection === 'magazine') && (
