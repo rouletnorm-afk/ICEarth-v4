@@ -335,7 +335,7 @@ export const RealTimePollutionTracking: React.FC<RealTimePollutionTrackingProps>
               <div className="relative group cursor-pointer" onClick={() => setIsModalOpen(true)}>
                 <img
                   src={realtimeImg}
-                  alt="Real-Time Pollution Tracking - The Case for ICEarth featuring Al Gore and Jay Inslee"
+                  alt="Real-Time Pollution Tracking - The Case for ICEarth"
                   className="w-full h-80 lg:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80" />
@@ -354,7 +354,7 @@ export const RealTimePollutionTracking: React.FC<RealTimePollutionTrackingProps>
               <div className="p-5 text-xs font-mono space-y-2 text-stone-300 border-t border-stone-800 bg-stone-900/90">
                 <div className="flex justify-between items-center text-[11px]">
                   <span className="text-stone-400">Cryptographic Hash:</span>
-                  <span className="text-cyan-400 truncate max-w-[200px]">0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT</span>
+                  <span className="text-cyan-400 truncate max-w-[200px]">0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT</span>
                 </div>
                 <div className="flex justify-between items-center text-[11px]">
                   <span className="text-stone-400">Earth Observation Sensor Fusion:</span>
@@ -1073,7 +1073,7 @@ export const RealTimePollutionTracking: React.FC<RealTimePollutionTrackingProps>
                   </h3>
                 </div>
                 <p className="text-xs font-mono text-stone-400 mt-0.5">
-                  State-of-the-Art Tracking & Communications Infrastructure • Feat. Quotes from Al Gore (Climate TRACE) & Gov. Jay Inslee
+                  State-of-the-Art Tracking & Communications Infrastructure
                 </p>
               </div>
 
@@ -1108,16 +1108,12 @@ export const RealTimePollutionTracking: React.FC<RealTimePollutionTrackingProps>
                 <div className="flex items-center justify-between">
                   <span className="text-stone-400">Provenance Hash:</span>
                   <button
-                    onClick={() => copyHash('0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT')}
+                    onClick={() => copyHash('0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT')}
                     className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
                   >
-                    <span className="truncate max-w-[280px]">0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT</span>
+                    <span className="truncate max-w-[280px]">0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT</span>
                     {copiedHash ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   </button>
-                </div>
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-stone-400">Featured Quotes:</span>
-                  <span className="text-white">Al Gore (Climate TRACE) & Gov. Jay Inslee (Washington State)</span>
                 </div>
                 <div className="flex items-center justify-between text-[11px]">
                   <span className="text-stone-400">Sovereign Architecture:</span>

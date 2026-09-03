@@ -145,6 +145,8 @@ const resolveImageUrl = (url?: string): string => {
     u.includes('jay_inslee') ||
     u.includes('climate_trace') ||
     u.includes('climatetrace') ||
+    u.includes('1788427837728') ||
+    u.includes('1788392554784') ||
     u.includes('1788390749643') ||
     u.includes('1788389489443') ||
     u.includes('earthtalk') ||
@@ -600,7 +602,7 @@ const DEFAULT_ARTICLES: NewsArticle[] = [
 PUBLISHED IN ARIZONA DAILY SUN / E - THE ENVIRONMENTAL MAGAZINE (SEPTEMBER 2026)
 
 Source: https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html
-Sovereign Vault Hash: 0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT
+Sovereign Vault Hash: 0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT
 Interactive Research Engine: https://icearth.org/?tab=realtime_pollution_tracking
 
 CORE DISPATCH QUOTE:
@@ -624,9 +626,9 @@ THE SEVEN CORE ROLES OF REAL-TIME POLLUTION TRACKING:
 
 THE SOVEREIGN CASE FOR ICEARTH:
 Planetary satellite constellations and state regulatory networks produce vast oceans of raw environmental telemetry, yet almost none of it reaches the pregnant mother, the rural school district, or the sovereign citizen in an actionable, protective format. ICEarth acts as the master aggregator and sovereign infomediary—translating global spectrometry, national EPA air monitors, and hyper-local fence-line sensors into immediate exposenomics defense under Roulet's Law: zero safe biological exposure.`,
-    tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'Infomediary', 'Exposenomics'],
+    tags: ['RealTimePollutionTracking', 'EarthTalk', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'Infomediary', 'Exposenomics'],
     communities: ['ICEarth Global', 'Swiss Exposenomics', 'Cleveland & Cuyahoga County', 'Public Interest Technology'],
-    vaultHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
+    vaultHash: '0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT',
     editorName: 'Norm Roulet',
     editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
     featured: true,

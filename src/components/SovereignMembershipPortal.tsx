@@ -179,7 +179,7 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
       imageSrc: realtimePollutionImg,
       link: 'realtime_pollution_tracking',
       description: "Origins: Forensic environmental observation and planetary accountability asset featuring ICEarth as the aggregator and infomediary of world-class pollution tracking technology applied to the individual and their sovereignty, highlighting quotes from former Vice President Al Gore (Climate TRACE) and Washington Governor Jay Inslee (HEAL Act). Grounded in the EarthTalk / Arizona Daily Sun dispatch: 'Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution.' Synthesizes orbital spectrometry tracking 70,000+ individual global industrial point sources with hyper-local fence-line IoT sensor mesh. Establishes why ICEarth is indispensable: bridging planetary observation with micro-scale pediatric neuroprotection under Roulet's Law, driving detection latency to near zero.",
-      sovereignHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT'
+      sovereignHash: '0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT'
     },
     {
       id: 'IP-000AO',

@@ -115,6 +115,8 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('jay_inslee') ||
     u.includes('climate_trace') ||
     u.includes('climatetrace') ||
+    u.includes('1788427837728') ||
+    u.includes('1788392554784') ||
     u.includes('1788390749643') ||
     u.includes('1788389489443') ||
     u.includes('earthtalk') ||
@@ -679,7 +681,7 @@ THE SOVEREIGN CASE FOR ICEARTH FEATURING AL GORE & JAY INSLEE
 Source: EarthTalk Syndicate / Arizona Daily Sun (https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html)
 Date: September 2, 2026
 Featured Leaders: Al Gore (Co-Founder, Climate TRACE) & Governor Jay Inslee (Washington State)
-Sovereign Vault Hash: 0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT
+Sovereign Vault Hash: 0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT
 Interactive Engine: https://icearth.org/?tab=realtime_pollution_tracking
 
 CORE AXIOM & OPENING DISPATCH:
@@ -703,7 +705,7 @@ Governor Jay Inslee enacted the Climate Commitment Act (CCA) and the HEAL Act (H
 ROULET'S LAW BIOLOGICAL IMPERATIVE:
 Under Roulet's Law, Perturbation (H') × Biological Exposure (t) = Biological Chaos (C). When detection latency spans months or years, irreversible neurotoxic damage occurs in children. Real-time telemetry drives latency to near zero, collapsing the damage integral and protecting human life.`,
       tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'Infomediation', 'Exposenomics'],
-      linkHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
+      linkHash: '0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT',
       publishedUrl: 'https://azdailysun.com/opinion/columnists/earthtalk-real-time-pollution-tracking-serves-many-roles/article_d0142102-34ce-4eeb-b4d6-98113b260c11.html'
     },
     {
@@ -2071,8 +2073,8 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
       location: 'Climate TRACE (Global Satellite Orbit), Washington State (Olympia, WA) & ICEarth Sovereign Sensor Mesh',
       date: '2026-09-02',
       description: "Origins: Forensic environmental observation and planetary accountability plate featuring ICEarth as the aggregator and infomediary of world-class pollution tracking technology applied to the individual and their sovereignty, highlighting quotes from former Vice President Al Gore (co-founder of Climate TRACE) and Washington Governor Jay Inslee (pioneer of the HEAL Act). Grounded in the EarthTalk / Arizona Daily Sun dispatch: 'Without state-of-the-art pollution tracking technology and communications infrastructure, we don\'t stand a chance in reducing pollution.' Synthesizes orbital spectrometry tracking 70,000+ individual global industrial point sources with hyper-local fence-line IoT sensor mesh. Establishes why ICEarth is indispensable: bridging planetary observation with micro-scale pediatric neuroprotection under Roulet's Law, driving detection latency to near zero.",
-      vaultHash: '0xAL_GORE_JAY_INSLEE_REALTIME_POLLUTION_TRACKING_VAULT',
-      tags: ['RealTimePollutionTracking', 'EarthTalk', 'AlGore', 'ClimateTRACE', 'JayInslee', 'WashingtonState', 'HEALAct', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'AirQuality', 'Infomediary']
+      vaultHash: '0xICEARTH_REALTIME_POLLUTION_TRACKING_SOVEREIGN_VAULT',
+      tags: ['RealTimePollutionTracking', 'EarthTalk', 'Plate34', 'Sensors', 'Satellites', 'RouletsLaw', 'ICEarth', 'AirQuality', 'Infomediary']
     },
     {
       id: 'PHOTO-000AO',
