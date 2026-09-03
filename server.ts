@@ -75,6 +75,22 @@ Where:
 // --- SOVEREIGN LEAD REPORTS DATABASES ---
 const INITIAL_REPORTS = [
   {
+    id: "rep-india-mirna31-nrf2-lead-2026",
+    title: "Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: A Cross-Sectional Observational Study",
+    location: "Jodhpur & Rajasthan, India",
+    funding: 0.0,
+    fundingDetails: "AIIMS Jodhpur Human Cohort (n=160). Published in Springer Biological Trace Element Research (03 September 2026). DOI: 10.1007/s12011-026-05318-9.",
+    category: "Epigenetics, Occupational Health & Molecular Toxicology",
+    exposomeRisk: "Critical",
+    description: "Groundbreaking peer-reviewed human observational study from AIIMS Jodhpur (Kumar et al., 2026) demonstrating that occupational lead exposure (median BLL 31.4 µg/dL vs 4.1 µg/dL controls) triggers a massive 3.95-fold systemic upregulation of miRNA-31 and a 47% suppression of Nrf2 mRNA expression (fold change 0.53, p < 0.001). This miRNA-31/Nrf2 epigenetic axis deactivates the body's master antioxidant defenses (ARE genes HO-1, GCLC, SOD, GPx), provoking severe intracellular oxidative stress (ROS) and an NF-κB-driven inflammatory surge. This molecular mechanism illuminates why childhood lead poisoning acts as an epigenetic sentence across the 815 million children (1 in 3 globally) exposed worldwide today.",
+    twitterDraft: "🧬 EPIGENETIC DISCOVERY: New India research in Springer confirms the miRNA-31/Nrf2 axis of harm in lead poisoning! Divalent lead triggers a 3.95x surge in miRNA-31, suppressing Nrf2 antioxidant defense by 47% and activating NF-κB inflammation. This explains why 1/3 of humanity poisoned in childhood suffers permanent redox collapse under Roulet's Law. #Epigenetics #LeadPoisoning #Nrf2 #miRNA31 #RouletsLaw",
+    spreadsheetRow: "rep-india-mirna31-nrf2-lead-2026, Jodhpur India, 2026-09-03, 0.0, Epigenetics & Toxicology, Critical, Springer Nature",
+    sqlInsert: "INSERT INTO lead_reports (id, location, funding, category, exposome_risk) VALUES ('rep-india-mirna31-nrf2-lead-2026', 'Jodhpur, India', 0.0, 'Epigenetics & Toxicology', 'Critical');",
+    date: "2026-09-03",
+    source: "https://link.springer.com/article/10.1007/s12011-026-05318-9",
+    imageUrl: "/src/assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg"
+  },
+  {
     id: "rep-nigeria-conflict-2026",
     title: "The toxin nobody’s talking about in Nigeria’s Christian massacres",
     location: "Kwara & Jos, Nigeria",

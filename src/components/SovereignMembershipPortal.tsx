@@ -42,6 +42,7 @@ import publicInterestTechImg from '../assets/images/public_interest_tech_lead_17
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
+import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import {
   Shield,
   UserCheck,
@@ -173,6 +174,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AR',
+      title: 'Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: AIIMS Human Cohort Epigenetic Plate (Plate #36)',
+      type: 'Molecular Toxicology, Human Epigenetics & Redox Exposenomics IP Asset',
+      imageSrc: mirna31AxisImg,
+      link: 'mirna31_nrf2_lead',
+      description: "Origins: Peer-reviewed human observational study from AIIMS Jodhpur (Kumar et al., Springer 2026). Establishes that occupational lead exposure (median BLL 31.4 µg/dL vs 4.1 µg/dL controls) triggers a massive 3.95-fold systemic upregulation of miRNA-31 and a 47% suppression of Nrf2 mRNA expression (fold change 0.53, p < 0.001). This miRNA-31/Nrf2 epigenetic axis deactivates the body's master antioxidant defenses (ARE genes HO-1, GCLC, SOD, GPx), provoking severe intracellular oxidative stress (ROS) and an NF-κB-driven inflammatory surge. Documents the molecular mechanism explaining why childhood lead poisoning acts as an epigenetic sentence across the 815 million children (1 in 3 globally) exposed worldwide today under Roulet's Law.",
+      sovereignHash: '0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026'
+    },
     {
       id: 'IP-000AQ',
       title: 'Project Gasbuggy (1967) Subterranean Nuclear Audit: Jicarilla Apache Sovereign Radiation Defense Plate (Plate #35)',

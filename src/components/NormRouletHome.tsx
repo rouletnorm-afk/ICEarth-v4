@@ -103,10 +103,24 @@ import publicInterestTechImg from '../assets/images/public_interest_tech_lead_17
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
+import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('mirna31') ||
+    u.includes('mirna-31') ||
+    u.includes('nrf2') ||
+    u.includes('1788454916540') ||
+    u.includes('plate_36') ||
+    u.includes('plate36') ||
+    u.includes('plate #36') ||
+    u.includes('0xmirna31') ||
+    u.includes('epigenetic_axis')
+  ) {
+    return mirna31AxisImg;
+  }
   if (
     u.includes('gasbuggy') ||
     u.includes('1788431807620') ||
@@ -680,6 +694,52 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-INDIA-MIRNA31-NRF2-LEAD-EPIGENETICS-2026',
+      title: 'Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: AIIMS Human Cohort Unveils the Epigenetic Axis of Harm',
+      category: 'Exposenomics',
+      date: '2026-09-03',
+      imageSrc: mirna31AxisImg,
+      summary: "Springer Biological Trace Element Research (Sep 3, 2026): Landmark observational study of 160 individuals at AIIMS Jodhpur demonstrates that occupational lead exposure triggers a 3.95-fold surge in miRNA-31 and a 47% suppression of Nrf2 mRNA expression (p < 0.001). This molecular axis of harm deactivates master antioxidant defenses (GCLC, HO-1, SOD) and ignites runaway NF-κB inflammation. Explains why childhood lead exposure acts as an irreversible epigenetic sentence across the 815 million children (1 in 3 globally) exposed worldwide today under Roulet's Law.",
+      fullText: `ASSOCIATION OF miRNA-31 & miRNA 192 WITH Nrf2/NF-κB BIOMARKERS IN OCCUPATIONAL LEAD TOXICITY: A CROSS-SECTIONAL OBSERVATIONAL STUDY
+SPRINGER NATURE / BIOLOGICAL TRACE ELEMENT RESEARCH (PUBLISHED SEPTEMBER 03, 2026)
+
+DOI: https://doi.org/10.1007/s12011-026-05318-9
+Direct Study Link: https://link.springer.com/article/10.1007/s12011-026-05318-9
+Location: AIIMS Jodhpur (Rajasthan, India)
+Sovereign Vault Hash: 0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026
+Interactive Exposenomics Engine: https://icearth.org/?tab=mirna31_nrf2_lead
+Plate #36 Infographic Archive: PHOTO-000AR / IP-000AR
+
+AUTHORS & INSTITUTIONAL AFFILIATIONS:
+Kanishka Kumar, Sudha Anjali, Shailja Sharma, Shweta Rana, Purvi Purohit, Mithu Banerjee, Dharmveer Yadav & Praveen Sharma
+Department of Biochemistry, All India Institute of Medical Sciences (AIIMS Jodhpur), Jodhpur, Rajasthan, India.
+
+THE MOLECULAR MECHANISM (THE AXIS OF HARM):
+When lead exposure triggers systemic miRNA-31 induction and reduced Nrf2 expression, it deactivates the body’s systemic antioxidant defenses, leading to elevated oxidative stress, cellular inflammation, and heightened heavy metal toxicity. This specific molecular interaction is known as the miRNA-31/Nrf2 axis, an important epigenetic and redox framework that dictates how the body responds to lead poisoning.
+
+THE COHORT (n=160):
+• 80 occupationally lead-exposed industrial workers (median BLL: 31.4 µg/dL).
+• 80 age- and sex-matched healthy controls (median BLL: 4.1 µg/dL).
+• Analyzed via GFAAS (Graphite Furnace Atomic Absorption Spectrometry), RT-PCR, and sandwich ELISA.
+
+CRITICAL EXPERIMENTAL FINDINGS:
+1. miRNA-31 Surge: 3.95-fold increase in lead-exposed workers compared to controls (p < 0.001).
+2. Nrf2 Suppression: Nrf2 mRNA expression reduced to 0.53-fold (47% drop, p < 0.001).
+3. Serum Nrf2 Depletion: Circulating Nrf2 protein dropped from 3.92 ng/mL to 1.84 ng/mL (53.1% loss).
+4. NF-κB Activation: Relative NF-κB transcript levels jumped 2.38-fold (+138%), driving systemic neuro- and vascular inflammation.
+5. Multivariable Regression: Confirmed blood lead levels (BLL) as the primary upstream catalyst driving Nrf2 shutdown.
+
+THE 1/3 HUMANITY CRISIS:
+Over 815 million children globally—one-third of all children on Earth—have blood lead levels exceeding 5 µg/dL. The Kumar et al. study reveals that lead toxicity is not just an acute poisoning event; it is an epigenetic reprogrammer. By triggering chronic miRNA-31 upregulation, lead permanently disables the body's internal antioxidant shield, multiplying cellular damage from all subsequent environmental toxins.
+
+UNDER ROULET'S LAW:
+Perturbation (H') × Biological Exposure (t) = Biological Chaos (C)
+When Nrf2 is silenced, the cellular defense capacity collapses, accelerating biological chaos and neurodegeneration across the entire lifespan.`,
+      tags: ['miRNA-31', 'Nrf2', 'NF-kB', 'LeadToxicity', 'Epigenetics', 'OccupationalHealth', 'IndiaResearch', 'Springer2026', 'AIIMS', 'Plate36', 'OneThirdHumanity', 'PediatricLead', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026',
+      publishedUrl: 'https://link.springer.com/article/10.1007/s12011-026-05318-9'
+    },
     {
       id: 'MAG-JICARILLA-GASBUGGY-1967-SOVEREIGN-AUDIT',
       title: 'In 1967, the US Detonated a 29-Kiloton Subterranean Nuclear Device 12 Miles from the Jicarilla Apache Nation: The Urgent Sovereign Case for ICE-Jicarilla',
@@ -2120,6 +2180,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AR',
+      title: 'miRNA-31/Nrf2 Epigenetic Axis of Harm in Lead Toxicity: AIIMS Human Cohort Molecular Plate (Plate #36)',
+      category: 'Molecular Toxicology, Human Epigenetics & Redox Exposenomics',
+      imageSrc: mirna31AxisImg,
+      location: 'Department of Biochemistry, All India Institute of Medical Sciences (AIIMS Jodhpur), Rajasthan, India',
+      date: '2026-09-03',
+      description: "Origins: Landmark peer-reviewed human observational study from AIIMS Jodhpur (Kumar et al., Springer Nature 2026). Proves that occupational lead exposure triggers a massive 3.95-fold systemic upregulation of miRNA-31 and a 47% suppression of Nrf2 mRNA expression (fold change 0.53, p < 0.001). This miRNA-31/Nrf2 epigenetic axis deactivates the body's master antioxidant defenses (ARE genes HO-1, GCLC, SOD, GPx), provoking severe intracellular oxidative stress (ROS) and an NF-κB-driven inflammatory surge. Documents the molecular mechanism explaining why childhood lead poisoning acts as an epigenetic sentence across the 815 million children (1 in 3 globally) exposed worldwide today under Roulet's Law.",
+      vaultHash: '0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026',
+      tags: ['miRNA-31', 'Nrf2', 'NF-kB', 'LeadToxicity', 'Epigenetics', 'OccupationalHealth', 'IndiaResearch', 'Springer2026', 'Plate36', 'OneThirdHumanity', 'PediatricLead', 'RouletsLaw', 'ICEarth', 'AIIMS']
+    },
     {
       id: 'PHOTO-000AQ',
       title: 'Project Gasbuggy (1967) Subterranean Nuclear Audit: Jicarilla Apache Sovereign Radiation Defense Plate (Plate #35)',
@@ -4826,6 +4897,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AR' || selectedPhoto.tags?.includes('miRNA-31') || selectedPhoto.tags?.includes('Nrf2')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('mirna31_nrf2_lead');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-rose-400"
+                    >
+                      <Atom size={13} className="text-rose-200" />
+                      <span>🧬 Launch miRNA-31 / Nrf2 Epigenetic Engine</span>
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000Q' || selectedPhoto.tags?.includes('CalciumDisodiumEDTA') || selectedPhoto.tags?.includes('ChelationTherapy')) && (
                     <button
                       onClick={() => {

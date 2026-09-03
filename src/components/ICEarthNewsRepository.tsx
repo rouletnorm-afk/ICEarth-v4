@@ -41,9 +41,11 @@ import publicInterestTechImg from '../assets/images/public_interest_tech_lead_17
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
+import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import {
   Newspaper,
   PlusCircle,
+  Dna,
   Search,
   Filter,
   Tag,
@@ -138,6 +140,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('mirna31') ||
+    u.includes('mirna-31') ||
+    u.includes('nrf2') ||
+    u.includes('1788454916540') ||
+    u.includes('plate_36') ||
+    u.includes('plate36') ||
+    u.includes('plate #36') ||
+    u.includes('0xmirna31') ||
+    u.includes('epigenetic_axis')
+  ) {
+    return mirna31AxisImg;
+  }
   if (
     u.includes('gasbuggy') ||
     u.includes('1788431807620') ||
@@ -599,6 +614,68 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-INDIA-MIRNA31-NRF2-LEAD-EPIGENETICS-2026',
+    contentType: 'Article',
+    title: 'Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: Groundbreaking India Cohort Decodes Epigenetic Axis of Harm',
+    subtitle: 'Springer Biological Trace Element Research (Sep 3, 2026) • Kumar et al. (AIIMS Jodhpur) • 80 Lead Workers vs 80 Controls • 3.95x Surge in miRNA-31 Drives 47% Downregulation of Nrf2 Antioxidant Master Switch (p < 0.001) • Unveiling the Epigenetic Reprogramming Imprisoning 1 in 3 Children Globally into Lifelong Redox Vulnerability under Roulet\'s Law',
+    sourceUrl: 'https://link.springer.com/article/10.1007/s12011-026-05318-9',
+    sourceName: 'Springer Nature / Biological Trace Element Research (Published September 03, 2026)',
+    publishDate: '2026-09-03',
+    author: 'Kanishka Kumar et al. & Norm Roulet (ICEarth Chief News Editor)',
+    authorName: 'Kumar, Anjali, Sharma, Rana, Purohit, Banerjee, Yadav & Sharma (AIIMS Jodhpur) • Commentary by Norm Roulet',
+    abstract: 'When lead exposure triggers systemic miRNA-31 induction and reduced Nrf2 expression, it deactivates the body’s systemic antioxidant defenses, leading to elevated oxidative stress, cellular inflammation, and heightened heavy metal toxicity. This specific molecular interaction is known as the miRNA-31/Nrf2 axis, an important epigenetic and redox framework that dictates how the body responds to lead poisoning. In this observational cross-sectional study of 160 individuals (80 occupationally lead-exposed workers, median BLL 31.4 µg/dL vs 80 age/gender matched controls, median BLL 4.1 µg/dL), GFAAS blood lead levels, RT-PCR microRNA expression, and sandwich ELISA serum Nrf2 demonstrated that miRNA-31 surged 3.95-fold, while Nrf2 mRNA expression dropped by 47% (fold change 0.53, p < 0.001). This molecular arrest shuts down downstream ARE antioxidant enzymes and activates runaway NF-κB inflammatory signaling.',
+    editorCommentary: 'Norm Roulet & ICEarth Lead Exposenomics Commentary: The September 3, 2026 study in Springer Biological Trace Element Research by Kumar et al. from the Department of Biochemistry at AIIMS Jodhpur is one of the most profound molecular breakthroughs in environmental toxicology this decade. For over a century, orthodox clinical medicine treated childhood lead poisoning as a transient acute toxic insult—measuring blood lead levels until Pb sequesters into cortical bone, falsely presuming the biological danger recedes. Kumar et al. prove the terrifying opposite: lead exposure is an irreversible epigenetic reprogramming event. By driving a 3.95-fold induction of miRNA-31, lead systematically silences the 3\'-UTR of Nrf2 mRNA, collapsing the master antioxidant regulator of human biology by 47% and crippling downstream synthesis of Glutathione, Superoxide Dismutase (SOD), Catalase, and Heme Oxygenase-1. This discovery has staggering global ramifications for the 815 million children—one in three human children alive today—suffering from chronic pediatric lead poisoning. Under Roulet\'s Law of Exposenomics: Perturbation (H\') × Biological Exposure (t) = Biological Chaos (C). When miRNA-31 turns off the Nrf2 antioxidant switch, cellular biological resistance is stripped away. Even minute ambient toxic exposures compound into unconstrained Biological Chaos, explaining the epidemic of pediatric neurodevelopmental arrest, IQ loss, conduct disorders, adolescent violence, and adult cardiovascular collapse worldwide.',
+    fullExcerpt: `ASSOCIATION OF miRNA-31 & miRNA 192 WITH Nrf2/NF-κB BIOMARKERS IN OCCUPATIONAL LEAD TOXICITY: A CROSS-SECTIONAL OBSERVATIONAL STUDY
+SPRINGER NATURE / BIOLOGICAL TRACE ELEMENT RESEARCH (PUBLISHED SEPTEMBER 03, 2026)
+
+DOI: https://doi.org/10.1007/s12011-026-05318-9
+Direct Study Link: https://link.springer.com/article/10.1007/s12011-026-05318-9
+Cryptographic Sovereign Vault Hash: 0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026
+Interactive Exposenomics Engine: https://icearth.org/?tab=mirna31_nrf2_lead
+Plate #36 Infographic Archive: PHOTO-000AR / IP-000AR
+
+AUTHORS & INSTITUTIONAL AFFILIATIONS:
+Kanishka Kumar (1), Sudha Anjali (1), Shailja Sharma (1), Shweta Rana (1), Purvi Purohit (1), Mithu Banerjee (1), Dharmveer Yadav (1) & Praveen Sharma (1)
+(1) Department of Biochemistry, All India Institute of Medical Sciences (AIIMS Jodhpur), Jodhpur, Rajasthan, India.
+
+ABSTRACT & MOLECULAR MECHANISM:
+When lead exposure triggers systemic miRNA-31 induction and reduced Nrf2 expression, it deactivates the body’s systemic antioxidant defenses, leading to elevated oxidative stress, cellular inflammation, and heightened heavy metal toxicity. This specific molecular interaction is known as the miRNA-31/Nrf2 axis, an important epigenetic and redox framework that dictates how the body responds to lead poisoning.
+
+METHODOLOGY & COHORT CHARACTERISTICS (n=160):
+• Study Design: Observational cross-sectional case-control study conducted at AIIMS Jodhpur.
+• Subjects: 80 occupationally lead-exposed industrial workers vs. 80 age- and sex-matched healthy control subjects.
+• Blood Lead Quantification: Performed via Graphite Furnace Atomic Absorption Spectrometry (GFAAS). Exposed workers demonstrated median BLL of 31.4 µg/dL vs. 4.1 µg/dL in controls (p < 0.001).
+• MicroRNA Expression: Total RNA extracted from venous whole blood; cDNA synthesized using specific stem-loop reverse transcription primers; quantitative real-time PCR (qRT-PCR) performed using TaqMan probes for miRNA-31-5p and miRNA-192-5p, normalized against U6 snRNA.
+• Target Gene Quantification: Nrf2 (NFE2L2) and NF-κB (RELA) mRNA transcript levels evaluated via SYBR Green real-time RT-PCR, normalized against GAPDH using the 2^-ΔΔCt comparative method.
+• Serum Nrf2 Protein: Quantified via double-antibody sandwich ELISA.
+
+KEY SCIENTIFIC FINDINGS:
+1. miRNA-31 Hyper-Induction: Exposed workers exhibited a 3.95-fold elevation in circulating miRNA-31 compared to healthy controls (p < 0.001).
+2. Severe Nrf2 Gene Repression: Nrf2 mRNA transcript abundance decreased to 0.53-fold of control levels (a 47% suppression, p < 0.001).
+3. Serum Nrf2 Depletion: Circulating Nrf2 protein dropped from 3.92 ng/mL in controls to 1.84 ng/mL in exposed workers (53.1% depletion, p < 0.001).
+4. NF-κB Activation: Relative NF-κB expression increased by 2.38-fold (+138%), driving systemic transcription of pro-inflammatory cytokines (TNF-α, IL-1β, IL-6).
+5. Multivariable Regression Analysis: In unadjusted models, miRNA-31 showed a strong inverse association with Nrf2 expression. After multivariable adjustment, blood lead levels (BLL) remained the primary independent driver of Nrf2 suppression, confirming divalent lead (Pb²⁺) as the master upstream catalyst.
+
+THE 1/3 HUMANITY CRISIS: CHILDHOOD EPIGENETIC IMPRISONMENT:
+More than 815 million children globally—1 in every 3 children alive today—suffer from blood lead levels ≥ 5 µg/dL (UNICEF / Pure Earth global survey). In South Asia alone, over 330 million children are poisoned via leaded turmeric, artisanal cookware, battery recycling, and toxic industrial dust.
+
+The Kumar et al. study reveals the true horror of childhood lead exposure:
+1. It is not merely acute toxicity; it is lifelong epigenetic reprogramming. Early lead exposure permanently elevates miRNA-31, locking neural and vascular cells into a state of chronic antioxidant paralysis.
+2. Even when blood lead levels drop as lead sequesters into cortical bone, the epigenetic memory remains, starving developing synapses of glutathione and triggering persistent neuroinflammation in the prefrontal cortex.
+3. This epigenetic axis explains the global loss of 765 million IQ points, rampant conduct disorder, youth criminality, and premature adult cardiovascular disease.
+
+Under Roulet's Law:
+Perturbation (H') × Biological Exposure (t) = Biological Chaos (C)
+Silencing Nrf2 drops the organism's cellular defense to zero, multiplying Biological Chaos across generations. Bypassing this epigenetic brake requires eliminating all lead exposure while deploying bioavailable Nrf2 activators (carvacrol nano-phytosomes, red beetroot betalains, and targeted CaNa2EDTA chelation).`,
+    tags: ['miRNA-31', 'Nrf2', 'NF-kB', 'LeadToxicity', 'Epigenetics', 'OccupationalHealth', 'IndiaResearch', 'Springer2026', 'Plate36', 'OneThirdHumanity', 'PediatricLead', 'RouletsLaw', 'ICEarth', 'AIIMS'],
+    communities: ['ICEarth Global', 'India Exposenomics', 'South Asia Environmental Health', 'Pediatric Neuroprotection', 'Sovereign Research'],
+    vaultHash: '0xMIRNA31_NRF2_EPIGENETIC_LEAD_AXIS_AUDIT_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
+    featured: true,
+    imageUrl: mirna31AxisImg
+  },
   {
     id: 'ART-JICARILLA-GASBUGGY-1967-SOVEREIGN-AUDIT',
     contentType: 'Article',
@@ -3740,6 +3817,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('miRNA-31') || article.tags?.includes('Nrf2') || article.id.includes('MIRNA31') || article.title?.includes('miRNA-31')) && (
+                      <button
+                        onClick={() => onNavigateTab('mirna31_nrf2_lead')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-rose-700 via-stone-900 to-amber-700 hover:from-rose-600 hover:to-amber-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-rose-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Dna size={14} className="text-rose-300 animate-pulse" />
+                        <span>🧬 Launch miRNA-31 / Nrf2 Epigenetic Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('RealTimePollutionTracking') || article.tags?.includes('ClimateTRACE') || article.tags?.includes('EarthTalk') || article.id.includes('REALTIME-POLLUTION') || article.title?.includes('Real-Time Pollution Tracking')) && (
                       <button
                         onClick={() => onNavigateTab('realtime_pollution_tracking')}

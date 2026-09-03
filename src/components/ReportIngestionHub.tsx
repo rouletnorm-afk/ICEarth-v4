@@ -322,6 +322,18 @@ Pure Earth is honored to have had a place on the TED 2026 stage in Vancouver, an
 Drew McCartor, Pure Earth President Watch the TED Talk at:
 https://www.pureearth.org/ted-talk/#ted-talk`;
 
+  const INDIA_MIRNA31_ARTICLE = `Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: A Cross-Sectional Observational Study
+
+Kanishka Kumar, Sudha Anjali, Shailja Sharma, Shweta Rana, Purvi Purohit, Mithu Banerjee, Dharmveer Yadav & Praveen Sharma
+Biological Trace Element Research (Published: 03 September 2026)
+
+Abstract:
+When lead exposure triggers systemic miRNA-31 induction and reduced Nrf2 expression, it deactivates the body’s systemic antioxidant defenses, leading to elevated oxidative stress, cellular inflammation, and heightened heavy metal toxicity. This specific molecular interaction is known as the miRNA-31/Nrf2 axis, an important epigenetic and redox framework that dictates how the body responds to lead poisoning.
+
+In this observational cross-sectional study (n=160: 80 occupationally lead-exposed workers, median BLL 31.4 µg/dL vs 80 age/gender matched controls, median BLL 4.1 µg/dL), venous blood was analyzed for blood lead via Graphite Furnace Atomic Absorption Spectrometry (GFAAS). Relative expression of microRNAs (miRNA-31, miRNA-192) and target genes (Nrf2, NF-κB) was quantified using quantitative real-time RT-PCR. Serum Nrf2 was measured by sandwich ELISA. Results showed marked 3.95-fold upregulation of miRNA-31 and 47% downregulation of Nrf2 mRNA (fold change 0.53, p < 0.001). Depleted serum Nrf2 directly correlated with elevated NF-κB inflammatory signaling and systemic reactive oxygen species (ROS) proliferation.
+
+https://link.springer.com/article/10.1007/s12011-026-05318-9`;
+
   const NIGERIA_CONFLICT = `The toxin nobody’s talking about in Nigeria’s Christian massacres
 
 By Yona Sperling-Milner
@@ -384,6 +396,8 @@ https://www.washingtonexaminer.com/op-eds/4648159/lead-toxin-nigeria-christian-m
       setSourceUrl('https://www.pureearth.org/ted-talk/#ted-talk');
     } else if (template === NIGERIA_CONFLICT) {
       setSourceUrl('https://www.washingtonexaminer.com/op-eds/4648159/lead-toxin-nigeria-christian-massacres/');
+    } else if (template === INDIA_MIRNA31_ARTICLE) {
+      setSourceUrl('https://link.springer.com/article/10.1007/s12011-026-05318-9');
     }
   };
 
@@ -640,6 +654,21 @@ https://www.washingtonexaminer.com/op-eds/4648159/lead-toxin-nigeria-christian-m
             <div className="p-5 pb-0 space-y-3">
               <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block">Preload Case Study Presets:</span>
               <div className="flex flex-col gap-2">
+                <button
+                  type="button"
+                  onClick={() => handlePreload(INDIA_MIRNA31_ARTICLE)}
+                  className="flex items-center justify-between p-2.5 bg-neutral-900 border border-neutral-800 hover:border-neutral-700 rounded-xl text-left text-xs text-neutral-200 transition-all cursor-pointer group border-rose-500/40 hover:border-rose-500/70"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shadow-sm animate-pulse" />
+                    <div>
+                      <strong className="block font-medium text-rose-300">India: miRNA-31 / Nrf2 Epigenetic Axis</strong>
+                      <span className="text-[10px] text-neutral-400">Springer 2026 / 80 Lead Workers vs 80 Controls (AIIMS)</span>
+                    </div>
+                  </div>
+                  <Plus size={14} className="text-neutral-500 group-hover:text-neutral-300" />
+                </button>
+
                 <button
                   type="button"
                   onClick={() => handlePreload(TROY_ARTICLE)}
