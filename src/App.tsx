@@ -123,15 +123,16 @@ import { RedBeetrootNeuroprotection } from './components/RedBeetrootNeuroprotect
 import { PublicInterestTechnology } from './components/PublicInterestTechnology';
 import { NationalLeadPoisoningPreventionWeek2026 } from './components/NationalLeadPoisoningPreventionWeek2026';
 import { RealTimePollutionTracking } from './components/RealTimePollutionTracking';
+import { ICEJicarillaGasbuggyAudit } from './components/ICEJicarillaGasbuggyAudit';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -324,6 +325,17 @@ export default function App() {
         lower.includes('mining')
       ) {
         setActiveTab('artisanal_mining');
+      } else if (
+        lower === 'jicarilla_gasbuggy_audit' ||
+        lower === 'gasbuggy' ||
+        lower === 'gasbuggy_audit' ||
+        lower === 'jicarilla_audit' ||
+        lower === 'ice_jicarilla' ||
+        lower === 'ice-jicarilla' ||
+        lower === 'jicarilla_gasbuggy' ||
+        lower.includes('gasbuggy')
+      ) {
+        setActiveTab('jicarilla_gasbuggy_audit');
       } else if (
         lower === 'jicarilla_sovereign_it' ||
         lower === 'jicarilla' ||
@@ -1666,6 +1678,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Jicarilla Apache Project Gasbuggy (1967) Subterranean Nuclear Audit */}
+                <button
+                  onClick={() => setActiveTab('jicarilla_gasbuggy_audit')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Radiation size={16} className={activeTab === 'jicarilla_gasbuggy_audit' ? 'text-amber-300 animate-spin' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">☢️ ICE-Jicarilla: Gasbuggy Audit</span>
+                  <span className="px-1.5 py-0.2 bg-red-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    1967 Audit
+                  </span>
+                </button>
+
                 {/* Occupational Lead, Oxidative Stress & Essential Metal Homeostasis Review */}
                 <button
                   onClick={() => setActiveTab('occupational_lead_review' as any)}
@@ -2169,6 +2197,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
                     { id: 'nigeria_heart_habitat', icon: HeartPulse, label: '🫀 Toxic Shadows: Heart-Habitat Nigeria', badge: 'UNN 249', color: 'rose' },
                     { id: 'jicarilla_sovereign_it', icon: Feather, label: '🪶 Jicarilla Sovereign IT', badge: 'Air-Gap', color: 'amber' },
+                    { id: 'jicarilla_gasbuggy_audit', icon: Radiation, label: '☢️ ICE-Jicarilla: Gasbuggy Audit', badge: '1967 Rad', color: 'amber' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
@@ -2264,6 +2293,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && '🇧🇩 Bangladesh Lead-Free 2035 Plan'}
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
               {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla') && '🪶 Jicarilla Apache Sovereign IT'}
+              {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
@@ -3895,6 +3925,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla' || (activeTab as string) === 'jicarilla_it' || (activeTab as string) === 'indigenous_it' || (activeTab as string) === 'hybrid_it' || (activeTab as string) === 'data_sovereignty') && (
             <div className="flex-1 overflow-y-auto">
               <JicarillaSovereignIT 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.118B: JICARILLA APACHE PROJECT GASBUGGY (1967) NUCLEAR DETONATION & ENVIRONMENTAL AUDIT */}
+          {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && (
+            <div className="flex-1 overflow-y-auto">
+              <ICEJicarillaGasbuggyAudit 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

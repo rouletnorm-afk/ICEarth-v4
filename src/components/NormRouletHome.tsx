@@ -102,10 +102,22 @@ import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
+import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gasbuggy') ||
+    u.includes('1788431807620') ||
+    u.includes('jicarilla_gasbuggy') ||
+    u.includes('plate_35') ||
+    u.includes('plate35') ||
+    u.includes('plate #35') ||
+    u.includes('0xjicarilla_gasbuggy')
+  ) {
+    return gasbuggyAuditImg;
+  }
   if (
     u.includes('realtime_pollution') ||
     u.includes('realtimepollution') ||
@@ -668,6 +680,49 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-JICARILLA-GASBUGGY-1967-SOVEREIGN-AUDIT',
+      title: 'In 1967, the US Detonated a 29-Kiloton Subterranean Nuclear Device 12 Miles from the Jicarilla Apache Nation: The Urgent Sovereign Case for ICE-Jicarilla',
+      category: 'Exposenomics',
+      date: '2026-09-02',
+      imageSrc: gasbuggyAuditImg,
+      summary: "Times of India Science Desk (Sep 2, 2026): In 1967, the US detonated a 29-kiloton nuclear device 4,227 feet below New Mexico to unlock natural gas; 5 tests produced 213 million cubic feet, but the gas had measurable radioactivity. Located in Carson National Forest just 12 miles southwest of Dulce, NM—capital of the Jicarilla Apache Nation—Project Gasbuggy created an extreme subterranean radioactive hazard without tribal consent. This historic environmental injustice exemplifies why indigenous nations cannot rely on federal self-reporting and must deploy independent, air-gapped sovereign environmental intelligence via ICEarth.",
+      fullText: `PROJECT GASBUGGY (1967) ENVIRONMENTAL AUDIT: THE SOVEREIGN CASE FOR ICE-JICARILLA
+SUBTERRANEAN NUCLEAR DETONATION 12 MILES FROM DULCE, NM • INDIGENOUS ENVIRONMENTAL JUSTICE
+
+Source: Times of India Science Desk (https://timesofindia.indiatimes.com/science/in-1967-the-us-detonated-a-29-kiloton-nuclear-device-4227-feet-below-new-mexico-to-unlock-natural-gas-5-tests-produced-213-million-cubic-feet-but-the-gas-had-measurable-radioactivity/articleshow/133705011.cms)
+Date: September 2, 2026
+Location: Carson National Forest (G-1 Wellhead), 12 miles SW of Dulce, NM (Jicarilla Apache Nation)
+Sovereign Vault Hash: 0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT
+Interactive Research Engine: https://icearth.org/?tab=jicarilla_gasbuggy_audit
+
+THE 1967 COLD WAR EXPERIMENT:
+On December 10, 1967, under Operation Plowshare, the United States Atomic Energy Commission (AEC) and El Paso Natural Gas detonated a 29-kiloton thermonuclear device 4,227 feet underground in the Lewis Shale formation of northern New Mexico. The objective was to stimulate low-permeability natural gas production through nuclear fracturing.
+
+THE RESULT:
+• 5 post-detonation production tests extracted 213 million cubic feet of natural gas.
+• Every cubic foot was heavily contaminated with radioactive tritium (³H), krypton-85 (⁸⁵Kr), and carbon-14 (¹⁴C).
+• Rendered commercially unusable, the irradiated gas was flared directly into the regional atmosphere over Carson National Forest and neighboring tribal lands.
+• A 335-foot-high collapse rubble chimney and molten silicate melt puddle remains sealed 4,227 feet beneath the earth, directly upstream of deep regional sandstone aquifers (Ojo Alamo Sandstone).
+
+HISTORICAL ENVIRONMENTAL INJUSTICE ON INDIGENOUS LANDS:
+Indigenous sovereign nations across North America have historically served as the unwilling testing grounds and sacrifice zones for nuclear weapons, uranium extraction, and heavy petrochemical pollution:
+1. Jicarilla Apache Nation: Project Gasbuggy detonated 12 miles from Dulce; extensive oil & gas extraction and methane plumes in the San Juan Basin.
+2. Navajo Nation: Over 500 abandoned uranium mines; the catastrophic 1979 Church Rock mill tailings spill; chronic pediatric lead poisoning from subsistence hunting ammunition un-modeled by federal regulators.
+3. Western Shoshone: 928 atmospheric and subterranean nuclear detonations at the Nevada Test Site on unceded treaty lands.
+4. Yakama & Nez Perce: Massive high-level nuclear tank leaks at the Hanford Nuclear Reservation contaminating the Columbia River basin.
+
+THE ROLE OF SOVEREIGNTY & THE PURPOSE OF ICEARTH:
+When external governmental agencies control environmental data, detection latency is weaponized to protect state liabilities while indigenous communities absorb the biological damage. Under Roulet's Law: Perturbation (H') × Exposure (t) = Biological Chaos (C).
+
+ICE-Jicarilla establishes the sovereign antidote:
+• Air-Gapped IoT Radiation Spectrometry nodes along reservation boundaries and municipal water supplies in Dulce.
+• Post-Quantum Encrypted WireGuard telemetry routing directly to Dulce tribal servers with zero cloud egress.
+• On-Premise Air-Gapped AI running localized exposure algorithms to ensure tribal water, game, and human sanctuaries remain uncompromised.`,
+      tags: ['JicarillaApache', 'ProjectGasbuggy', 'NuclearDetonation', 'TimesOfIndia', 'DulceNM', 'EnvironmentalInjustice', 'SovereignIT', 'RadiationAudit', 'RouletsLaw', 'ICEarth', 'IndigenousSovereignty', 'Plate35'],
+      linkHash: '0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT',
+      publishedUrl: 'https://timesofindia.indiatimes.com/science/in-1967-the-us-detonated-a-29-kiloton-nuclear-device-4227-feet-below-new-mexico-to-unlock-natural-gas-5-tests-produced-213-million-cubic-feet-but-the-gas-had-measurable-radioactivity/articleshow/133705011.cms'
+    },
     {
       id: 'MAG-REALTIME-POLLUTION-TRACKING-GORE-INSLEE-2026',
       title: 'EarthTalk: Real-Time Pollution Tracking Serves Many Roles — The Sovereign Case for ICEarth as Master Aggregator & Infomediary',
@@ -2065,6 +2120,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AQ',
+      title: 'Project Gasbuggy (1967) Subterranean Nuclear Audit: Jicarilla Apache Sovereign Radiation Defense Plate (Plate #35)',
+      category: 'Nuclear Detonation Audit, Indigenous Environmental Justice & Subterranean Exposenomics',
+      imageSrc: gasbuggyAuditImg,
+      location: 'Project Gasbuggy Site (GB-ER Wellhead, Carson National Forest, 12 miles SW of Dulce, NM) & Jicarilla Apache Nation',
+      date: '2026-09-02',
+      description: "Origins: Forensic environmental intelligence and subterranean geological cross-section plate auditing Project Gasbuggy—the 29-kiloton nuclear device detonated 4,227 feet underground in 1967 just 12 miles southwest of Dulce, NM. Based on the Times of India Science Desk dispatch: 5 production tests produced 213 million cubic feet of natural gas with measurable tritium and krypton-85 radioactivity. Illustrates historic environmental injustice across indigenous lands and establishes the sovereign imperative for ICE-Jicarilla: independent, air-gapped IoT radiation monitoring nodes, post-quantum telemetry, and local cryptographic ledgers protecting tribal water aquifers (Ojo Alamo Sandstone) under Roulet's Law.",
+      vaultHash: '0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT',
+      tags: ['JicarillaApache', 'ProjectGasbuggy', 'NuclearDetonation', 'TimesOfIndia', 'DulceNM', 'CarsonNationalForest', 'EnvironmentalInjustice', 'SovereignIT', 'RadiationAudit', 'Plate35', 'RouletsLaw', 'ICEarth', 'IndigenousSovereignty']
+    },
     {
       id: 'PHOTO-000AP',
       title: 'Real-Time Pollution Tracking: The Sovereign Case for ICEarth (Plate #34)',

@@ -41,6 +41,7 @@ import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
+import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import {
   Shield,
   UserCheck,
@@ -172,6 +173,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AQ',
+      title: 'Project Gasbuggy (1967) Subterranean Nuclear Audit: Jicarilla Apache Sovereign Radiation Defense Plate (Plate #35)',
+      type: 'Nuclear Detonation Audit, Indigenous Environmental Justice & Subterranean Exposenomics IP Asset',
+      imageSrc: gasbuggyAuditImg,
+      link: 'jicarilla_gasbuggy_audit',
+      description: "Origins: Forensic environmental intelligence and subterranean geological cross-section plate auditing Project Gasbuggy—the 29-kiloton nuclear device detonated 4,227 feet underground in 1967 just 12 miles southwest of Dulce, NM. Based on the Times of India Science Desk dispatch: 5 production tests produced 213 million cubic feet of natural gas with measurable tritium and krypton-85 radioactivity. Illustrates historic environmental injustice across indigenous lands and establishes the sovereign imperative for ICE-Jicarilla: independent, air-gapped IoT radiation monitoring nodes, post-quantum telemetry, and local cryptographic ledgers protecting tribal water aquifers (Ojo Alamo Sandstone) under Roulet's Law.",
+      sovereignHash: '0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT'
+    },
     {
       id: 'IP-000AP',
       title: 'Real-Time Pollution Tracking: The Sovereign Case for ICEarth (Plate #34)',

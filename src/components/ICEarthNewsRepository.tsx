@@ -40,6 +40,7 @@ import beetrootLeadImg from '../assets/images/red_beetroot_lead_neuroprotection_
 import publicInterestTechImg from '../assets/images/public_interest_tech_lead_1788280223679.jpg';
 import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
+import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -50,6 +51,7 @@ import {
   Share2,
   Bookmark,
   Shield,
+  ShieldAlert,
   ShieldCheck,
   CheckCircle2,
   Sparkles,
@@ -136,6 +138,17 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gasbuggy') ||
+    u.includes('1788431807620') ||
+    u.includes('jicarilla_gasbuggy') ||
+    u.includes('plate_35') ||
+    u.includes('plate35') ||
+    u.includes('plate #35') ||
+    u.includes('0xjicarilla_gasbuggy')
+  ) {
+    return gasbuggyAuditImg;
+  }
   if (
     u.includes('realtime_pollution') ||
     u.includes('realtimepollution') ||
@@ -586,6 +599,62 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-JICARILLA-GASBUGGY-1967-SOVEREIGN-AUDIT',
+    contentType: 'Article',
+    title: 'In 1967, the US Detonated a 29-Kiloton Nuclear Device 4,227 Feet Below New Mexico to Unlock Natural Gas: The Sovereign Imperative for ICE-Jicarilla',
+    subtitle: 'Times of India Science Desk (Sep 2, 2026) • 5 Tests Produced 213M ft³ of Gas, but with Measurable Radioactivity • Located in Carson National Forest 12 Miles SW of Dulce, NM (Jicarilla Apache Nation) • Illustrating Cold War Environmental Injustice across Indigenous Lands & Deploying Air-Gapped Sovereign IoT Monitoring under Roulet\'s Law',
+    sourceUrl: 'https://timesofindia.indiatimes.com/science/in-1967-the-us-detonated-a-29-kiloton-nuclear-device-4227-feet-below-new-mexico-to-unlock-natural-gas-5-tests-produced-213-million-cubic-feet-but-the-gas-had-measurable-radioactivity/articleshow/133705011.cms',
+    sourceName: 'Times of India Science Desk / TIMESOFINDIA.COM (Published September 02, 2026)',
+    publishDate: '2026-09-02',
+    author: 'TOI Science Desk & Norm Roulet (ICEarth Chief News Editor)',
+    authorName: 'TOI Science Desk • Commentary & Sovereign Environmental Audit by Norm Roulet',
+    abstract: 'In 1967, the US detonated a 29-kiloton nuclear device 4,227 feet below New Mexico to unlock natural gas; 5 tests produced 213 million cubic feet, but the gas had measurable radioactivity. Sited in the Carson National Forest just 12 miles southwest of Dulce, NM—the sovereign capital of the Jicarilla Apache Nation—Project Gasbuggy created an extreme subterranean radioactive hazard without tribal consent. The experiment released radioactive tritium and krypton-85, forcing open-air flaring across northern New Mexico. This historic injustice demonstrates why indigenous nations globally cannot rely on federal self-reporting and must deploy independent, air-gapped sovereign environmental intelligence via ICEarth.',
+    editorCommentary: 'Norm Roulet & ICEarth Lead Exposenomics Commentary: The Times of India report on Project Gasbuggy lays bare the systemic environmental injustice visited upon indigenous lands. Detonating a 29-kiloton thermonuclear device—nearly double the Hiroshima yield—12 miles from the Jicarilla Apache tribal government without sovereign consultation is a stark historical indictment. When five production tests extracted 213 million cubic feet of gas, it was heavily contaminated with radioactive tritium (³H) and krypton-85 (⁸⁵Kr), forcing the operators to flare it into the skies over Carson National Forest and neighboring tribal grazing sanctuaries. Today, 59 years later, deep subterranean radionuclides remain in the Lewis Shale, adjacent to regional aquifers like the Ojo Alamo Sandstone. With expanding commercial fracking operations in the San Juan Basin, the risk of pressurized fissure migration into drinking aquifers is an urgent concern. Indigenous nations require computational and sensory sovereignty. Through ICE-Jicarilla and our air-gapped hybrid IT architecture, tribes can monitor their own borders, aquifers, and airspaces with post-quantum security and zero data leakage.',
+    fullExcerpt: `IN 1967, THE US DETONATED A 29-KILOTON NUCLEAR DEVICE 4,227 FEET BELOW NEW MEXICO TO UNLOCK NATURAL GAS: 5 TESTS PRODUCED 213 MILLION CUBIC FEET, BUT THE GAS HAD MEASURABLE RADIOACTIVITY
+TIMES OF INDIA SCIENCE DESK (PUBLISHED SEPTEMBER 02, 2026, 17:00 IST)
+
+Source: https://timesofindia.indiatimes.com/science/in-1967-the-us-detonated-a-29-kiloton-nuclear-device-4227-feet-below-new-mexico-to-unlock-natural-gas-5-tests-produced-213-million-cubic-feet-but-the-gas-had-measurable-radioactivity/articleshow/133705011.cms
+Sovereign Vault Hash: 0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT
+Interactive Environmental Audit Engine: https://icearth.org/?tab=jicarilla_gasbuggy_audit
+Location: Carson National Forest, Rio Arriba County, NM (36°40′40″N 107°12′30″W) • 12 Miles SW of Dulce, NM (Jicarilla Apache Nation)
+
+SUMMARY OF THE 1967 DETONATION:
+On December 10, 1967, as part of Operation Plowshare, the United States Atomic Energy Commission (AEC) and El Paso Natural Gas conducted the first commercial nuclear stimulation test in history: Project Gasbuggy.
+• Depth: 4,227 feet below ground level in the Lewis Shale formation.
+• Yield: 29 kilotons (approximately 1.9 times the yield of the Little Boy bomb dropped on Hiroshima).
+• Immediate Geological Impact: Created an 80-foot radius spherical cavity that collapsed within seconds into a cylindrical rubble chimney 335 feet high and 160 feet wide, surrounded by an extensive radial fracture zone over 400 feet wide.
+• Gas Production & Radioactivity: Over the course of five subsequent production tests, 213 million cubic feet of natural gas were produced. However, all of it was contaminated with high levels of tritium (³H) and krypton-85 (⁸⁵Kr), rendering it unusable for public or commercial consumption.
+• Atmospheric Flaring: The radioactive gas was flared into the open air across Carson National Forest and neighboring rural communities, releasing volatile radionuclides downwind.
+
+PROXIMITY TO THE JICARILLA APACHE NATION & DULCE, NM:
+The detonation borehole (GB-ER / G-1) is situated approximately 12 miles southwest of Dulce, NM, the tribal headquarters of the Jicarilla Apache Nation. The test took place without sovereign tribal consent, notice, or independent ecological oversight. The Jicarilla Apache people have resided in the surrounding San Juan Basin and Carson National Forest for millennia.
+
+HISTORICAL ENVIRONMENTAL INJUSTICE ON INDIGENOUS LANDS:
+Throughout North American history, indigenous territories have systematically borne the burden of hazardous nuclear, chemical, and industrial operations:
+1. Jicarilla Apache Nation: Project Gasbuggy subterranean nuclear test (1967); intensive oil and gas extraction across the San Juan Basin resulting in major fugitive methane and VOC emissions.
+2. Navajo Nation (Diné): 523 abandoned uranium mines, the 1979 Church Rock mill tailings spill (94 million gallons of radioactive liquid spilled into the Puerco River), and unrecognized pediatric lead poisoning from subsistence hunting ammunition.
+3. Western Shoshone Nation: 928 nuclear explosions at the Nevada Test Site on unceded lands guaranteed under the 1863 Treaty of Ruby Valley.
+4. Yakama & Nez Perce Tribes: Radioactive waste leaks from 177 underground tanks at the Hanford Nuclear Reservation threatening the Columbia River fishery.
+
+THE ROLE OF SOVEREIGNTY & THE PURPOSE OF ICEARTH:
+Centralized state and federal portals frequently obscure or delay disclosure of environmental contamination to avoid liability. Under Roulet's Law of Exposenomics:
+Perturbation (H') × Biological Exposure (t) = Biological Chaos (C).
+
+When contamination goes unmonitored or concealed, exposure time (t) expands across generations, multiplying irreversible cellular damage, genetic mutations, and neurodevelopmental deficits.
+
+ICE-Jicarilla provides the independent sovereign alternative:
+1. Air-Gapped IoT Sensor Mesh: Deploying continuous gamma counters, alpha/beta monitors, and tritium scintillation probes along reservation perimeters and municipal wellheads.
+2. Post-Quantum Cryptographic Data Flows: Transmitting telemetry over private tribal wireless networks into air-gapped servers in Dulce with zero external WAN exposure.
+3. Sovereign AI Intelligence: Running localized edge inference models to correlate seismic tremors from commercial hydraulic fracturing with groundwater aquifer shifts, ensuring total protection of tribal water sanctuaries.`,
+    tags: ['ProjectGasbuggy', 'JicarillaApache', 'NuclearDetonation', 'TimesOfIndia', 'DulceNM', 'CarsonNationalForest', 'EnvironmentalInjustice', 'SovereignIT', 'RadiationAudit', 'Plate35', 'RouletsLaw', 'ICEarth', 'IndigenousSovereignty', 'SanJuanBasin'],
+    communities: ['Jicarilla Apache Nation', 'ICE-Jicarilla', 'Indigenous Environmental Justice', 'San Juan Basin', 'ICEarth Global'],
+    vaultHash: '0xJICARILLA_GASBUGGY_1967_NUCLEAR_AUDIT_SOVEREIGN_VAULT',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Chief News Editor & Lead Exposenomics Researcher',
+    featured: true,
+    imageUrl: gasbuggyAuditImg
+  },
   {
     id: 'ART-REALTIME-POLLUTION-TRACKING-GORE-INSLEE-2026',
     contentType: 'Article',
@@ -3777,6 +3846,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                       >
                         <Atom size={14} className="text-red-200" />
                         <span>🧬 Launch Occupational Lead & Homeostasis Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('ProjectGasbuggy') || article.tags?.includes('GasbuggyAudit') || article.id.includes('GASBUGGY')) && (
+                      <button
+                        onClick={() => onNavigateTab('jicarilla_gasbuggy_audit')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-900 via-stone-900 to-rose-900 hover:from-amber-800 hover:to-rose-800 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <ShieldAlert size={14} className="text-amber-300 animate-pulse" />
+                        <span>☢️ Launch Project Gasbuggy Environmental Audit</span>
                         <ArrowRight size={13} />
                       </button>
                     )}
