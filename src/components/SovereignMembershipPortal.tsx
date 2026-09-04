@@ -43,6 +43,7 @@ import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
+import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import {
   Shield,
   UserCheck,
@@ -174,6 +175,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AS',
+      title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth (Plate #37)',
+      type: 'Indigenous Sovereignty, 1680 Pueblo Revolt & Taos Rebellion History IP Asset',
+      imageSrc: puebloRevoltTaosImg,
+      link: 'why_icearth',
+      description: "Origins: Historical documentary plate and sovereign mission charter commemorating the 1680 Pueblo Revolt and Taos Rebellion, published in Smithsonian Voices by Dennis W. Zotigh (National Museum of the American Indian, September 2, 2026). Chronicles 12,000 years of indigenous habitation, the 1599 Acoma Massacre, Franciscan destruction of sacred kivas, and Po'pay's tactical sanctuary at Taos Pueblo. Highlights the knotted deerskin countdown cords and the unified uprising that expelled the Spanish Crown for 12 years of independence. Establishes the founding purpose of Indigenous Communities Earth (ICEarth) in Taos, New Mexico by Norm Roulet: providing sovereign environmental forensics, air-gapped IT, and community resilience for Indigenous nations.",
+      sovereignHash: '0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT'
+    },
     {
       id: 'IP-000AR',
       title: 'Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: AIIMS Human Cohort Epigenetic Plate (Plate #36)',

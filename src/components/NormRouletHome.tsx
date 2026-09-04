@@ -104,10 +104,29 @@ import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
+import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('pueblo_revolt') ||
+    u.includes('pueblo-revolt') ||
+    u.includes('taos_rebellion') ||
+    u.includes('taos-rebellion') ||
+    u.includes('1680') ||
+    u.includes('popay') ||
+    u.includes('po\'pay') ||
+    u.includes('1788483881945') ||
+    u.includes('plate_37') ||
+    u.includes('plate37') ||
+    u.includes('plate #37') ||
+    u.includes('0x1680') ||
+    u.includes('why_icearth') ||
+    u.includes('why-icearth')
+  ) {
+    return puebloRevoltTaosImg;
+  }
   if (
     u.includes('mirna31') ||
     u.includes('mirna-31') ||
@@ -595,7 +614,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty';
   date: string;
   summary: string;
   fullText: string;
@@ -694,6 +713,45 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-SMITHSONIAN-1680-PUEBLO-REVOLT-TAOS-SOVEREIGNTY',
+      title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth',
+      category: 'Indigenous Sovereignty',
+      date: '2026-09-02',
+      imageSrc: puebloRevoltTaosImg,
+      summary: "Smithsonian Voices / National Museum of the American Indian (Sep 2, 2026) by Dennis W. Zotigh: After more than a century of colonial oppression, forced encomienda labor, the Acoma Massacre, and the desecration of sacred kivas, Pueblo leaders united under Po'pay at northernmost Taos Pueblo. Using secret knotted deerskin cords carried by fleet runners, they orchestrated a synchronized uprising on August 10, 1680, expelling the Spanish Crown from Santa Fe for 12 years of sovereign independence. This historic victory is why Norm Roulet moved to Taos, New Mexico to found Indigenous Communities Earth (ICEarth)—equipping sovereign tribes with open-source environmental forensics, air-gapped secure IT, and regenerative community resilience.",
+      fullText: `IN 1680, PUEBLO NATIVES IN THE SOUTHWEST LAUNCHED THE FIRST SUCCESSFUL, ALTHOUGH SHORT-LIVED, AMERICAN REVOLUTION
+SMITHSONIAN VOICES / NATIONAL MUSEUM OF THE AMERICAN INDIAN (PUBLISHED SEPTEMBER 02, 2026)
+
+Author: Dennis W. Zotigh (Kiowa/Ohkay Owingeh Pueblo/Isanti Dakota Indian)
+Cultural Specialist & Writer at the Smithsonian's National Museum of the American Indian in Washington, D.C.
+Sovereign Vault Hash: 0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT
+Interactive Mission Engine: https://icearth.org/?tab=why_icearth
+Plate #37 Infographic Archive: PHOTO-000AS / IP-000AS
+Sanctuary: Taos Pueblo, Sangre de Cristo Mountains, New Mexico
+
+HISTORICAL FOUNDATION & 12,000 YEARS OF ANCESTRAL ROOTS:
+Early humans inhabited what is now New Mexico for over 12,000 years, as evidenced by Paleolithic Clovis-point stone tools, arrow and spear heads. Modern Pueblo people are descendants of the Anasazi, Hohokam, and Mogollon cultures, living in multistoried housing of timber, clay, and stone across more than 100 villages in NM, AZ, and CO.
+
+COLONIAL INVASION & THE CENTURY OF PERSECUTION:
+• 1540: Francisco Vázquez de Coronado invades searching for the Seven Golden Cities of Cíbola, instigating the Tiguex War.
+• 1598: Juan de Oñate invades with 129 soldiers and 10 Catholic priests, demanding land, food, and forced labor while attempting to extinguish traditional religious practices.
+• 1599: The Acoma Massacre — Spanish soldiers kill hundreds at Acoma, enslave 600, and amputate the right feet of 25 Acoma men.
+• 1656–1665: Fray Alonso de Posada outlaws ceremonies, raids sacred kivas, burns wooden masks, and destroys religious regalia.
+• 1675: Governor Juan Francisco Treviño arrests 47 medicine men for "sorcery", hanging three. Armed Pueblo leaders march on Santa Fe and force their release, including a leader from Ohkay Owingeh named Po'pay.
+
+THE TAOS SANCTUARY & THE KNOTTED DEERSKIN CORDS:
+Upon release, Po'pay sought refuge in the northernmost citadel of Taos Pueblo. From Taos, he planned a synchronized revolution uniting Towa, Tiwa, Tewa, Tano, Keres, Zuni, Hopi, and allied Apache nations. Runners carried knotted deerskin cords, untying one knot each sunrise. When the runners from Tesuque Pueblo were captured and tortured on August 9, Po'pay advanced the strike to August 10.
+
+THE EXPULSION & 12 YEARS OF INDEPENDENCE:
+On August 10, 1680, Pueblo warriors struck simultaneously, killing ~400 Spaniards and 21 of 33 priests. They surrounded Santa Fe, severed its water canal, and on August 21 forced Governor Antonio de Otermín and 2,000 settlers to flee 300 miles south to El Paso del Norte. The revolt ended Spanish rule for 12 years—the most successful Native American uprising in North American history.
+
+WHY NORM ROULET MOVED TO TAOS TO FOUND ICEARTH:
+"Taos Pueblo is the northernmost citadel of Indigenous survival in North America. When Po'pay organized the revolution that expelled the Spanish Empire, he based his entire alliance right here in Taos. Today, colonial violence takes the form of unmeasured lead, radioactive fallout like Project Gasbuggy, poisoned aquifers, and corporate data theft. I moved to Taos to found Indigenous Communities Earth (ICEarth) for these sovereign communities—equipping them with air-gapped computers, independent exposenomic laboratories, and sovereign commodity markets so their next thousand years will be governed by their own law and their own children."`,
+      tags: ['PuebloRevolt1680', 'TaosRebellion', 'Popay', 'Smithsonian', 'DennisZotigh', 'NMAI', 'TaosPueblo', 'OhkayOwingeh', 'AcomaMassacre', 'IndigenousSovereignty', 'WhyICEarth', 'NormRoulet', 'Plate37', 'SovereignIT'],
+      linkHash: '0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT',
+      publishedUrl: 'https://www.smithsonianmag.com/blogs/national-museum-american-indian/2026/09/02/1680-pueblo-revolt-american-revolution/'
+    },
     {
       id: 'MAG-INDIA-MIRNA31-NRF2-LEAD-EPIGENETICS-2026',
       title: 'Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: AIIMS Human Cohort Unveils the Epigenetic Axis of Harm',
@@ -2180,6 +2238,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AS',
+      title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth (Plate #37)',
+      category: 'Indigenous Sovereignty, 1680 Pueblo Revolt & Taos Rebellion History',
+      imageSrc: puebloRevoltTaosImg,
+      location: 'Taos Pueblo (Sangre de Cristo Mountains), Ohkay Owingeh & Palace of the Governors (Santa Fe, NM)',
+      date: '2026-09-02',
+      description: "Origins: Historical documentary plate and sovereign mission charter commemorating the 1680 Pueblo Revolt and Taos Rebellion, published in Smithsonian Voices by Dennis W. Zotigh (National Museum of the American Indian, September 2, 2026). Chronicles 12,000 years of indigenous habitation, the 1599 Acoma Massacre, Franciscan destruction of sacred kivas, and Po'pay's tactical sanctuary at Taos Pueblo. Highlights the knotted deerskin countdown cords and the unified uprising that expelled the Spanish Crown for 12 years of independence. Establishes the founding purpose of Indigenous Communities Earth (ICEarth) in Taos, New Mexico by Norm Roulet: providing sovereign environmental forensics, air-gapped IT, and community resilience for Indigenous nations.",
+      vaultHash: '0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT',
+      tags: ['PuebloRevolt1680', 'TaosRebellion', 'Popay', 'Smithsonian', 'DennisZotigh', 'NMAI', 'TaosPueblo', 'OhkayOwingeh', 'AcomaMassacre', 'IndigenousSovereignty', 'WhyICEarth', 'NormRoulet', 'Plate37', 'SovereignIT', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AR',
       title: 'miRNA-31/Nrf2 Epigenetic Axis of Harm in Lead Toxicity: AIIMS Human Cohort Molecular Plate (Plate #36)',
@@ -4477,7 +4546,7 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
             {/* Category Filter Bar */}
             <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-1 text-xs font-mono">
-              {['All', 'Infomediation', 'Exposenomics', 'Cavitation', 'Sovereign Law'].map((cat) => (
+              {['All', 'Infomediation', 'Exposenomics', 'Cavitation', 'Sovereign Law', 'Indigenous Sovereignty'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
@@ -4897,6 +4966,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AS' || selectedPhoto.tags?.includes('PuebloRevolt1680') || selectedPhoto.tags?.includes('WhyICEarth') || selectedPhoto.tags?.includes('TaosRebellion')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('why_icearth');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400"
+                    >
+                      <span>🪶 Launch Why ICEarth Mission Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AR' || selectedPhoto.tags?.includes('miRNA-31') || selectedPhoto.tags?.includes('Nrf2')) && (
                     <button
                       onClick={() => {

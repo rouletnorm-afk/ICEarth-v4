@@ -42,6 +42,7 @@ import nlppw2026Img from '../assets/images/nlppw_epa_fixed_1788387847458.jpg';
 import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_portal_1788390749643.jpg';
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
+import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -140,6 +141,24 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('pueblo_revolt') ||
+    u.includes('pueblo-revolt') ||
+    u.includes('taos_rebellion') ||
+    u.includes('taos-rebellion') ||
+    u.includes('1680') ||
+    u.includes('popay') ||
+    u.includes('po\'pay') ||
+    u.includes('1788483881945') ||
+    u.includes('plate_37') ||
+    u.includes('plate37') ||
+    u.includes('plate #37') ||
+    u.includes('0x1680') ||
+    u.includes('why_icearth') ||
+    u.includes('why-icearth')
+  ) {
+    return puebloRevoltTaosImg;
+  }
   if (
     u.includes('mirna31') ||
     u.includes('mirna-31') ||
@@ -614,6 +633,58 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-SMITHSONIAN-1680-PUEBLO-REVOLT-TAOS-SOVEREIGNTY',
+    contentType: 'Article',
+    title: 'In 1680, Pueblo Natives in the Southwest Launched the First Successful, Although Short-Lived, American Revolution: The Taos Rebellion & Why We Founded ICEarth',
+    subtitle: 'Smithsonian Voices / National Museum of the American Indian (Sep 2, 2026) • Dennis W. Zotigh (Kiowa/Ohkay Owingeh/Isanti Dakota) • After a Century of Spanish Suppression, Po\'pay Orchestrated the Historic Multi-Tribal Alliance from Taos Pueblo • Expelling the Spanish Crown from New Mexico for 12 Years • The Founding Catalyst for Indigenous Communities Earth (ICEarth) in Taos',
+    sourceUrl: 'https://www.smithsonianmag.com/blogs/national-museum-american-indian/2026/09/02/1680-pueblo-revolt-american-revolution/',
+    sourceName: 'Smithsonian Voices / National Museum of the American Indian (Published September 02, 2026)',
+    publishDate: '2026-09-02',
+    author: 'Dennis W. Zotigh & Norm Roulet (ICEarth Founder)',
+    authorName: 'Dennis W. Zotigh (NMAI Cultural Specialist) • Commentary & Sovereign Charter by Norm Roulet',
+    abstract: 'After enduring more than a century of suppression, forced encomienda tribute, the 1599 Acoma Massacre, and the Franciscan desecration of sacred kivas, the Indigenous tribes of modern-day New Mexico united to expel the Spanish colonists from their lands. In 1675, after 47 medicine men were arrested and three hanged in Santa Fe, Pueblo leaders forced their release. Among them was Po\'pay of Ohkay Owingeh, who sought refuge at northernmost Taos Pueblo. There, Po\'pay coordinated a secret multi-lingual alliance across Towa, Tiwa, Tewa, Tano, Keres, Zuni, Hopi, and allied Apache nations using knotted deerskin countdown cords carried by fleet runners. On August 10, 1680, the Pueblos launched a synchronized revolution, obliterating colonial settlements, killing 21 priests and ~400 Spaniards, cutting off Santa Fe\'s water supply, and forcing Governor Otermín and 2,000 survivors to flee 300 miles south. This historic victory is why Norm Roulet moved to Taos to found Indigenous Communities Earth (ICEarth).',
+    editorCommentary: 'Norm Roulet & ICEarth Founding Mission Commentary: Dennis Zotigh\'s authoritative Smithsonian history of the 1680 Pueblo Revolt and Taos Rebellion illuminates the foundational spirit of Indigenous Communities Earth. When I moved to Taos, New Mexico, it was because Taos Pueblo is the northernmost sanctuary of Indigenous defiance in North America—the very citadel where Po\'pay sat with the war chiefs to orchestrate the only successful revolution against a European empire on this continent. In the 21st century, colonial oppression is no longer carried out with Spanish matchlocks and Franciscan whips; it is enacted through silent environmental violence—subterranean nuclear explosions like Project Gasbuggy 12 miles from Jicarilla Apache lands, poisoned aquifers, abandoned uranium tailings, unmeasured pediatric lead poisoning, and the algorithmic enclosure of Indigenous data. We founded ICEarth right here in Taos for these Indigenous communities: providing air-gapped sovereign IT, field exposenomics laboratories, cryptographic ancestral vaults, and decentralized commodity networks (UCANX) so that Indigenous nations can defend their lands, their children, and their sovereignty on their own terms.',
+    fullExcerpt: `IN 1680, PUEBLO NATIVES IN THE SOUTHWEST LAUNCHED THE FIRST SUCCESSFUL, ALTHOUGH SHORT-LIVED, AMERICAN REVOLUTION
+SMITHSONIAN VOICES / NATIONAL MUSEUM OF THE AMERICAN INDIAN (PUBLISHED SEPTEMBER 02, 2026)
+
+Source: https://www.smithsonianmag.com/blogs/national-museum-american-indian/2026/09/02/1680-pueblo-revolt-american-revolution/
+Cryptographic Sovereign Vault Hash: 0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT
+Interactive Mission Engine: https://icearth.org/?tab=why_icearth
+Plate #37 Infographic Archive: PHOTO-000AS / IP-000AS
+Sanctuary: Taos Pueblo, Sangre de Cristo Mountains, New Mexico
+
+AUTHOR & INSTITUTIONAL AFFILIATION:
+Dennis W. Zotigh (Kiowa/Ohkay Owingeh Pueblo/Isanti Dakota Indian), Cultural Specialist and Writer at the Smithsonian's National Museum of the American Indian in Washington, D.C. Member of the Kiowa Gourd Clan and San Juan Pueblo Winter Clan, and descendant of Sitting Bear and No Retreat.
+
+HISTORICAL MONOGRAPH FULL TEXT:
+Early humans inhabited what is now New Mexico for over 12,000 years, as evidenced by the man-made Clovis-point stone tools, arrow and spear heads unearthed from the Paleolithic period. Modern Pueblo people are believed to be descendants of the Anasazi (Navajo for "ancient enemies”), Hohokam and Mogollon cultures, and live in one of the oldest continually inhabited regions in North America. In prehistory, they lived in cliffside fortresses as well as communities on top of mesas and in the open desert in multistoried housing made of timber, clay, straw and stone. As many as 100 Pueblo villages spanned throughout what is now New Mexico, Arizona and Colorado.
+
+In 1540, the first European expedition into present-day New Mexico was led by Francisco Vázquez de Coronado, who was motivated by stories of the legendary Seven Golden Cities of Cíbola. During his expedition, the Tiguex War was fought with some of the Tiwa Pueblos, which started the demise of Pueblo and Spanish relations. After two years of searching for the Golden Cities with no results, Coronado returned to New Spain (Mexico) without establishing permanent settlements.
+
+In 1598 Juan de Oñate revisited the upper Rio Grande valley of what is now New Mexico, with 129 soldiers, 10 Catholic priests and colonizers, to begin the establishment of multiple Spanish settlements. During Oñate’s occupation, the new Spanish occupiers sought land, labor and food from their sophisticated agriculture and attempted to impose religious control over the Pueblo people who followed their traditional religious practices. Realizing that their way of life was being disrupted and overrun, small skirmishes of rebellion occurred from individual Pueblo villages.
+
+In 1599, 70 Spanish soldiers were ordered to the clifftop village of Acoma Pueblo to punish the Pueblo inhabitants for killing 12 soldiers. After two days of battle, many Acoma were slain. In addition, approximately 600 Acoma were captured and enslaved. From these captives, 25 Acoma men were selected to have one foot cut off as punishment for crimes against the Spanish Crown. News of the Acoma Massacre spread throughout all the pueblos, instilling anger among villagers. In addition, Franciscan missionaries established Catholic churches in several of the Pueblo villages, Christianizing the Natives while abolishing their traditional worship practices under the protection of armed Spanish soldiers. From 1656 to 1665, Franciscan missionary leader Alonso de Posada forbid traditional ceremonies by the Pueblo people and ordered the Spanish missionaries to invade the sacred Pueblo kivas (dwellings of spiritual worship), burn their masks and confiscate or destroy their sacred objects.
+
+Additional attempts of rebellion were met with severe reprisals targeting medicine men and spiritual leaders. In 1675 Juan Francisco Treviño, Spanish governor of Santa Fe de Nuevo México, ordered the arrest of 47 medicine men for practicing sorcery. Four were sentenced to death by hanging; in the end, three were hanged and one committed suicide. The remaining spiritual leaders were humiliated and publicly whipped before being sent to prison. When news reached the pueblo villages, they organized and traveled to Santa Fe to demand the release of the remaining prisoners. The Spanish complied. Among those released was a leader from Ohkay Owingeh, a Tewa language phrase meaning “Village of the Strong People.” His name was Po’pay.
+
+Upon his release, Po’pay sought refuge in the northernmost Taos Pueblo and planned a united and synchronized revolt of Pueblo villages. The Towa, Tiwa, Tewa, Tano and Keres language-speaking pueblos, as well as Zuni, Hopi and even some Apache pledged their support.
+
+Integral to the revolt, Po’pay sent runners carrying knotted ropes to the distant villages. A knot was unraveled each day until all the knots were gone, to synchronize the revolt. The day all the knots were untied signaled the time to begin the revolt, which was set for August 11, 1680. On the morning of August 8, Pedro Omtua and Nicolas Catua, two young runners from Tesuque Pueblo, meaning “village of the narrow place of the cottonwood trees” in the Tewa language, set out for Tanogeh (Tano villages) with the ropes. The first pueblo they reached was Pecos. Upon their departure from Pecos, Christian Indians informed Franciscan missionary leader Fernando De Velasco that two Tewa messengers had visited the war chief’s house.
+
+On August 9, the Spanish captured Pedro Omtua and Nicolas Catua and tortured them to make them reveal the significance of the knotted cord. Learning of their capture, Po’pay ordered the revolt to begin a day early. The Hopi villages located in what is now Arizona did not receive the advance notice. On August 10, the Ohkay Owingeh began their revolution by attacking Spanish settlements. When they were finished, approximately 400 people were killed, including 21 of the 33 Spanish priests in Nuevo México. Tusayan (Hopi) Christian churches at Oraibi, Awatovi and Shungopavi were also obliterated and their priests were killed. The surviving Spanish immediately sought refuge in Santa Fe and in Isleta Pueblo, a village that did not participate in the revolt, located south of present-day Albuquerque.
+
+By August 13, almost all the Spanish settlements in Nuevo México had been destroyed. Santa Fe was surrounded by Pueblo warriors who cut off its water supply. In desperation, on August 21, Governor Antonio de Otermín, who had been barricaded in Santa Fe’s Palace of the Governors, gathered the remaining Spanish to force the Pueblo warriors to momentarily retreat and give them time to escape. The remaining 2,000 settlers fled south to El Paso del Norte, present day El Paso, Texas.
+
+After the expulsion of the Spanish, their churches were destroyed and the traditional religious practices of the Pueblo people were restored. The Pueblo Revolt effectively ended Spanish rule in the region for 12 years. Upon their return, the Spanish adopted more accommodating policies toward Pueblo customs. Today, most Pueblo feast days include a combination of Pueblo and Spanish customs, such as receiving a blessing by the Catholic priest before beginning a traditional Pueblo dance. The 1680 revolt is considered the most successful Native American uprising in North America and illustrates the complexity of historical colonialism, Indigenous resistance and cultural survival.`,
+    tags: ['PuebloRevolt1680', 'TaosRebellion', 'Popay', 'Smithsonian', 'DennisZotigh', 'NMAI', 'TaosPueblo', 'OhkayOwingeh', 'AcomaMassacre', 'IndigenousSovereignty', 'WhyICEarth', 'NormRoulet', 'Plate37', 'SovereignIT'],
+    communities: ['ICEarth Global', 'Taos Pueblo', 'Ohkay Owingeh', 'Jicarilla Apache', 'Sovereign Research', 'Indigenous Communities Earth'],
+    vaultHash: '0x1680_PUEBLO_REVOLT_TAOS_SOVEREIGN_MISSION_VAULT',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Exposenomics Researcher',
+    featured: true,
+    imageUrl: puebloRevoltTaosImg
+  },
   {
     id: 'ART-INDIA-MIRNA31-NRF2-LEAD-EPIGENETICS-2026',
     contentType: 'Article',
@@ -3817,6 +3888,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('PuebloRevolt1680') || article.tags?.includes('WhyICEarth') || article.id.includes('1680-PUEBLO') || article.title?.includes('Pueblo Natives')) && (
+                      <button
+                        onClick={() => onNavigateTab('why_icearth')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 via-stone-900 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <span className="text-amber-300">🪶</span>
+                        <span>Launch Why ICEarth Mission Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('miRNA-31') || article.tags?.includes('Nrf2') || article.id.includes('MIRNA31') || article.title?.includes('miRNA-31')) && (
                       <button
                         onClick={() => onNavigateTab('mirna31_nrf2_lead')}
