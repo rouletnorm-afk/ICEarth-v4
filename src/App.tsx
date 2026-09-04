@@ -126,6 +126,7 @@ import { RealTimePollutionTracking } from './components/RealTimePollutionTrackin
 import { ICEJicarillaGasbuggyAudit } from './components/ICEJicarillaGasbuggyAudit';
 import { MiRNA31Nrf2LeadEpigenetics } from './components/MiRNA31Nrf2LeadEpigenetics';
 import { WhyICEarthMission } from './components/WhyICEarthMission';
+import { ICEarthStackIndigenousAI } from './components/ICEarthStackIndigenousAI';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation } from 'lucide-react';
 
@@ -134,7 +135,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -354,6 +355,30 @@ export default function App() {
         lower.includes('gasbuggy')
       ) {
         setActiveTab('jicarilla_gasbuggy_audit');
+      } else if (
+        lower === 'icearth_stack' ||
+        lower === 'the_icearth_stack' ||
+        lower === 'icearth-stack' ||
+        lower === 'the-icearth-stack' ||
+        lower === 'indigenous_ai' ||
+        lower === 'indigenous-ai' ||
+        lower === 'indigenous_ai_solution' ||
+        lower === 'project_jupiter' ||
+        lower === 'project-jupiter' ||
+        lower === 'clean_compute' ||
+        lower === 'plate_38' ||
+        lower === 'plate38' ||
+        lower === 'google_ceo' ||
+        lower === 'google-ceo' ||
+        lower === 'gemini_testimonial' ||
+        lower === 'gemini-testimonial' ||
+        lower === 'gemini_outreach' ||
+        lower.includes('icearth_stack') ||
+        lower.includes('icearth-stack') ||
+        lower.includes('indigenous_ai') ||
+        lower.includes('gemini_testimonial')
+      ) {
+        setActiveTab('icearth_stack');
       } else if (
         lower === 'jicarilla_sovereign_it' ||
         lower === 'jicarilla' ||
@@ -1150,6 +1175,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B THE INDIGENOUS AI SOLUTION FOR AI: THE ICEARTH STACK (PLATE #38) */}
+                <button
+                  onClick={() => setActiveTab('icearth_stack')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-emerald-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-emerald-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'icearth_stack' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">⚡ The ICEarth Stack: Indigenous AI</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #38
+                  </span>
+                </button>
+
                 {/* 0.00001 Global Lead-Crime Proof & Roulet's Law (8,000-Year Proof) */}
                 <button
                   onClick={() => setActiveTab('global_lead_crime_proof')}
@@ -1726,6 +1767,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38) */}
+                <button
+                  onClick={() => setActiveTab('icearth_stack')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'icearth_stack' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">⚡ The ICEarth Stack: Indigenous AI</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #38
+                  </span>
+                </button>
+
                 {/* Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture */}
                 <button
                   onClick={() => setActiveTab('jicarilla_sovereign_it')}
@@ -2247,6 +2304,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'nlppw_2026', icon: Calendar, label: '🗓️ Lead Poisoning Prevention Week 2026', badge: 'EPA Event', color: 'emerald' },
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
+                    { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'global_lead_crime_proof', icon: Crown, label: '👑 Global Lead-Crime Proof (8k Yr)', badge: 'Proof', color: 'red' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
@@ -2377,6 +2435,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
+              {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla') && '🪶 Jicarilla Apache Sovereign IT'}
               {(activeTab === 'mirna31_nrf2_lead' || (activeTab as string) === 'mirna31' || (activeTab as string) === 'nrf2' || (activeTab as string) === 'plate_36') && '🧬 miRNA-31/Nrf2 Epigenetic Axis (AIIMS)'}
               {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
@@ -4011,6 +4070,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows' || (activeTab as string) === 'anakwue' || (activeTab as string) === 'nigeria_cvd' || (activeTab as string) === 'nigeria') && (
             <div className="flex-1 overflow-y-auto">
               <NigeriaHeartHabitat 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B: THE INDIGENOUS AI SOLUTION FOR AI: THE ICEARTH STACK (PLATE #38) */}
+          {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute' || (activeTab as string) === 'project_jupiter' || (activeTab as string) === 'plate_38' || (activeTab as string) === 'plate38') && (
+            <div className="flex-1 overflow-y-auto">
+              <ICEarthStackIndigenousAI 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

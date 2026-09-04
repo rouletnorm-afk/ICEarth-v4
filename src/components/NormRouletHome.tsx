@@ -105,10 +105,29 @@ import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_po
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
+import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('the_icearth_stack') ||
+    u.includes('icearth_stack') ||
+    u.includes('icearth-stack') ||
+    u.includes('indigenous_ai') ||
+    u.includes('indigenous-ai') ||
+    u.includes('project_jupiter') ||
+    u.includes('project-jupiter') ||
+    u.includes('deb_haaland') ||
+    u.includes('deb-haaland') ||
+    u.includes('1788537367862') ||
+    u.includes('plate_38') ||
+    u.includes('plate38') ||
+    u.includes('plate #38') ||
+    u.includes('0xsovereign_icearth')
+  ) {
+    return icearthStackIndigenousAiImg;
+  }
   if (
     u.includes('pueblo_revolt') ||
     u.includes('pueblo-revolt') ||
@@ -713,6 +732,40 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-ICEARTH-STACK-INDIGENOUS-AI-SOLUTION-2026',
+      title: 'The Indigenous AI Solution For AI: The ICEarth Stack — Clean Compute, Sovereign Infrastructure & Global Indigenous AI',
+      category: 'Indigenous Sovereignty',
+      date: '2026-09-04',
+      imageSrc: icearthStackIndigenousAiImg,
+      summary: "Executive & Sovereign Technical Briefing for Governor Deb Haaland, Jicarilla Apache Nation, and New Mexico Leadership: How sovereign tribal land, IRA § 6417 direct-pay clean energy, 100% zero-water dielectric immersion cooling, and specialized Small Language Models (SLMs) resolve the hyperscale data center water and grid crisis exemplified by Project Jupiter in New Mexico, scaling from Dulce to the Amazon Basin and Papua New Guinea Highlands.",
+      fullText: `THE INDIGENOUS AI SOLUTION FOR AI: THE ICEARTH STACK
+A SOVEREIGN INFRASTRUCTURE, ECONOMIC & TECHNICAL PROSPECTUS FOR GOVERNOR DEB HAALAND, TRIBAL NATIONS & NEW MEXICO LEADERSHIP (SEPTEMBER 04, 2026)
+
+Author: Norm Roulet, Founder & Lead Exposenomics Architect, Indigenous Communities Earth (ICEarth)
+Co-Sponsors: Jicarilla Apache Nation, All Pueblo Council of Governors (APCG), Inter-Tribal Sovereign Consortium
+Sovereign Archive Hash: 0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026
+Plate #38 Infographic Archive: PHOTO-000AT / IP-000AT
+Interactive Strategy Engine: https://icearth.org/?tab=icearth_stack
+
+THE HYPERSCALE CRISIS EXEMPLIFIED BY PROJECT JUPITER:
+Multinational hyperscalers (Meta, Google, Microsoft, OpenAI, Oracle) are deploying gigawatt-scale data center campuses across New Mexico (such as Meta Los Lunas and prospective Project Jupiter facilities in Moriarty/Valencia County). A single 1-gigawatt data center consumes 3.8 to 5.0 million gallons of non-renewable potable groundwater every day for evaporative cooling, sucks hundreds of megawatts of public grid capacity, triggers methane gas peaker plants, and extracts corporate tax abatements while returning less than 5% of economic surplus to local communities.
+
+THE FIVE SOVEREIGN PILLARS OF THE ICEARTH STACK:
+1. ZERO CONSUMPTIVE WATER LOSS: 100% closed-loop dielectric liquid immersion cooling and direct-to-chip microfluidics. Net evaporative water loss = 0.00 gal/day.
+2. 100% BEHIND-THE-METER POWER: Tribal Utility Authorities (TUAs) generate clean power via on-reservation solar (300+ days NM sunshine), geothermal, and battery storage without public grid interconnect queues.
+3. UNRIVALED TAX ARBITRAGE VIA IRA § 6417: Sovereign tribal governments receive 100% direct elective cash reimbursement from the US Treasury for clean energy CapEx, yielding a 35-42% lower Levelized Cost of Compute (LCOC) than Wall Street-financed facilities.
+4. DOMAIN-SPECIALIZED SLMs VS. WEB SLOP: Replacing bloated 1.8-trillion parameter brute-force LLMs with 8B-parameter domain models and neuromorphic Spiking Neural Networks (SNNs) that consume 1/50th the energy with 98.4% zero-shot accuracy on empirical ground-truth environmental and health science.
+5. POST-QUANTUM AIR-GAPPED VAULTS: Complete tribal data sovereignty protected from US CLOUD Act subversion and predatory corporate AI harvesting.
+
+GLOBAL TRI-CONTINENTAL MODULARITY:
+• New Mexico High Desert (Jicarilla Apache / Taos Pueblo): Solar + Geothermal + Dry Cooling.
+• Amazon River Basin (COICA Brazil): Canopy Solar + Micro-Hydro + Deforestation Acoustic AI.
+• Papua New Guinea Highlands (Highlands Council of Chiefs): Alpine Hydrokinetic + River Tailings Forensics.`,
+      tags: ['ICEarthStack', 'IndigenousAI', 'ProjectJupiter', 'DebHaaland', 'CleanCompute', 'ZeroWaterAI', 'JicarillaApache'],
+      linkHash: '0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026',
+      publishedUrl: 'https://icearth.org/?tab=icearth_stack'
+    },
     {
       id: 'MAG-SMITHSONIAN-1680-PUEBLO-REVOLT-TAOS-SOVEREIGNTY',
       title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth',
@@ -2238,6 +2291,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AT',
+      title: 'The Indigenous AI Solution For AI: The ICEarth Stack — Clean Compute, Sovereign Infrastructure & Global Indigenous AI (Plate #38)',
+      category: 'Indigenous Sovereignty, AI Infrastructure & Sovereign Compute',
+      imageSrc: icearthStackIndigenousAiImg,
+      location: 'Dulce, NM (Jicarilla Apache Sovereign Territory), Rio Grande Pueblos & Global Nodes',
+      date: '2026-09-04',
+      description: "Origins: Landmark sovereign policy prospectus and technical architecture plate authored by Norm Roulet for prospective Governor Deb Haaland, the Jicarilla Apache Nation, and New Mexico leadership. Formulates the macro-solution to the runaway AI compute crisis exemplified by Project Jupiter and corporate hyperscalers in New Mexico. Shows how sovereign tribal land, IRA § 6417 direct-pay clean energy (solar + geothermal microgrids), 100% closed-loop dielectric liquid immersion cooling (0 gal/day water loss), and domain-specialized Small Language Models (SLMs) outperform Silicon Valley's water-guzzling brute-force models while retaining 92% of economic value on sovereign Indigenous land. Scalable from New Mexico to the Amazon River Basin (COICA Brazil) and the Highlands of Papua New Guinea.",
+      vaultHash: '0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026',
+      tags: ['ICEarthStack', 'IndigenousAI', 'ProjectJupiter', 'DebHaaland', 'JicarillaApache', 'SovereignIT', 'CleanCompute', 'ClosedLoopCooling', 'ZeroWaterAI', 'Plate38', 'AmazonBasin', 'NewGuineaHighlands', 'SLM', 'IRADirectPay']
+    },
     {
       id: 'PHOTO-000AS',
       title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth (Plate #37)',
@@ -4966,6 +5030,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AT' || selectedPhoto.tags?.includes('ICEarthStack') || selectedPhoto.tags?.includes('IndigenousAI') || selectedPhoto.tags?.includes('Plate38')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('icearth_stack');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-500 to-emerald-600 hover:from-amber-400 hover:to-emerald-500 text-stone-950 font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300"
+                    >
+                      <Sparkles size={13} className="text-stone-950" />
+                      <span>⚡ Launch The ICEarth Stack Sovereign AI Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AS' || selectedPhoto.tags?.includes('PuebloRevolt1680') || selectedPhoto.tags?.includes('WhyICEarth') || selectedPhoto.tags?.includes('TaosRebellion')) && (
                     <button
                       onClick={() => {

@@ -43,6 +43,7 @@ import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_po
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
+import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -141,6 +142,24 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('the_icearth_stack') ||
+    u.includes('icearth_stack') ||
+    u.includes('icearth-stack') ||
+    u.includes('indigenous_ai') ||
+    u.includes('indigenous-ai') ||
+    u.includes('project_jupiter') ||
+    u.includes('project-jupiter') ||
+    u.includes('deb_haaland') ||
+    u.includes('deb-haaland') ||
+    u.includes('1788537367862') ||
+    u.includes('plate_38') ||
+    u.includes('plate38') ||
+    u.includes('plate #38') ||
+    u.includes('0xsovereign_icearth')
+  ) {
+    return icearthStackIndigenousAiImg;
+  }
   if (
     u.includes('pueblo_revolt') ||
     u.includes('pueblo-revolt') ||
@@ -633,6 +652,56 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-ICEARTH-STACK-INDIGENOUS-AI-SOLUTION-2026',
+    contentType: 'Research',
+    title: 'The Indigenous AI Solution For AI: The ICEarth Stack — Clean Compute, Sovereign Infrastructure & Global Indigenous AI',
+    subtitle: 'A Sovereign Infrastructure & Economic Prospectus for Governor Deb Haaland, Jicarilla Apache Nation, and New Mexico Leadership • Solving the Runaway Project Jupiter Water/Grid Crisis Through Tribal Sovereignty, IRA § 6417 Direct Pay, Zero-Water Immersion Cooling, and Domain-Specialized SLMs • Scaling from Dulce, NM to the Amazon Basin and Papua New Guinea Highlands',
+    sourceUrl: 'https://icearth.org/?tab=icearth_stack',
+    sourceName: 'ICEarth Sovereign Policy & Technical Briefing Series (Published September 04, 2026)',
+    publishDate: '2026-09-04',
+    author: 'Norm Roulet & Sovereign Tribal Consortium',
+    authorName: 'Norm Roulet (ICEarth Founder & Exposenomics Architect) with Jicarilla Apache IT & Energy Authorities',
+    abstract: 'Exploding demand for AI compute is destabilizing western US power grids and depleting fragile aquifers through gigawatt-scale hyperscale data center projects like Project Jupiter. In New Mexico, a single 1-gigawatt hyperscale facility consumes 3.8 to 5.0 million gallons of non-renewable potable groundwater daily for evaporative cooling, stresses the public grid, triggers new methane gas peaker plants, and extracts massive municipal tax abatements while capturing 95% of revenues outside the host communities. The ICEarth Stack demonstrates how sovereign Indigenous nations—operating under inherent tribal sovereignty, direct-pay clean energy subsidies under IRA § 6417, 100% closed-loop dielectric liquid immersion cooling with zero water consumption, and domain-specialized Small Language Models (SLMs) and neuromorphic SNNs—provide a 38% lower Levelized Cost of Compute (LCOC) while preserving tribal water, ensuring total air-gapped data sovereignty, and retaining 92% of economic value on sovereign land.',
+    editorCommentary: 'Norm Roulet Sovereign Strategy Commentary: Silicon Valley and Wall Street are building an unsustainable AI monoculture. They deploy brute-force 1.8-trillion parameter models trained on scraped web slop that require multi-gigawatt facilities and drain millions of gallons of desert water every single day. For New Mexico and prospective Governor Deb Haaland, rubber-stamping these projects poses catastrophic risks to state aquifers and electrical rates. Indigenous Communities Earth offers the true antidote: The ICEarth Stack. By anchoring compute on sovereign reservation lands, tribal governments can utilize Section 6417 elective direct-pay credits to build clean solar and geothermal microgrids with 100% tribal ownership. By replacing evaporative cooling towers with closed-loop dielectric immersion tanks, we consume zero gallons of water. And by deploying mathematically rigorous, domain-specialized SLMs instead of generalist hallucinations, we achieve superior empirical accuracy at 1/50th the energy footprint. This model not only protects New Mexico—it provides a repeatable sovereign architecture for the Amazon River Basin in Brazil and the Highlands of Papua New Guinea.',
+    fullExcerpt: `THE INDIGENOUS AI SOLUTION FOR AI: THE ICEARTH STACK
+A SOVEREIGN INFRASTRUCTURE, ECONOMIC & TECHNICAL PROSPECTUS FOR GOVERNOR DEB HAALAND, TRIBAL NATIONS & NEW MEXICO LEADERSHIP (SEPTEMBER 04, 2026)
+
+Author: Norm Roulet, Founder & Lead Exposenomics Architect, Indigenous Communities Earth (ICEarth)
+Co-Sponsors: Jicarilla Apache Nation, All Pueblo Council of Governors (APCG), Inter-Tribal Sovereign Consortium
+Sovereign Archive Hash: 0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026
+Plate #38 Infographic Archive: PHOTO-000AT / IP-000AT
+Interactive Strategy Engine: https://icearth.org/?tab=icearth_stack
+
+I. THE HYPERSCALE CRISIS EXEMPLIFIED BY PROJECT JUPITER:
+Multinational hyperscalers (Meta, Google, Microsoft, OpenAI, Oracle) are deploying gigawatt-scale data center campuses across New Mexico (such as Meta Los Lunas and prospective Project Jupiter facilities in Moriarty/Valencia County). A single 1-gigawatt data center consumes 3.8 to 5.0 million gallons of non-renewable potable groundwater every day for evaporative cooling, sucks hundreds of megawatts of public grid capacity, triggers methane gas peaker plants, and extracts corporate tax abatements while returning less than 5% of economic surplus to local communities.
+
+II. THE FIVE SOVEREIGN PILLARS OF THE ICEARTH STACK:
+1. ZERO CONSUMPTIVE WATER LOSS: 100% closed-loop dielectric liquid immersion cooling and direct-to-chip microfluidics. Net evaporative water loss = 0.00 gal/day.
+2. 100% BEHIND-THE-METER POWER: Tribal Utility Authorities (TUAs) generate clean power via on-reservation solar (300+ days NM sunshine), geothermal, and battery storage without public grid interconnect queues.
+3. UNRIVALED TAX ARBITRAGE VIA IRA § 6417: Sovereign tribal governments receive 100% direct elective cash reimbursement from the US Treasury for clean energy CapEx, yielding a 35-42% lower Levelized Cost of Compute (LCOC) than Wall Street-financed facilities.
+4. DOMAIN-SPECIALIZED SLMs VS. WEB SLOP: Replacing bloated 1.8-trillion parameter brute-force LLMs with 8B-parameter domain models and neuromorphic Spiking Neural Networks (SNNs) that consume 1/50th the energy with 98.4% zero-shot accuracy on empirical ground-truth environmental and health science.
+5. POST-QUANTUM AIR-GAPPED VAULTS: Complete tribal data sovereignty protected from US CLOUD Act subversion and predatory corporate AI harvesting.
+
+III. COMPARATIVE METRIC BENCHMARKS (1-GW EQUIVALENT):
+• Consumptive Water Use: Hyperscale = 4.2 Million Gal/Day | ICEarth Stack = 0.00 Gal/Day (100% Closed Loop)
+• Energy Source: Hyperscale = 68% Fossil Grid Peakers | ICEarth Stack = 100% Tribal Solar/Geothermal/BESS
+• Levelized Cost of Compute (LCOC): Hyperscale = $0.142 / TFLOP-hr | ICEarth Stack = $0.088 / TFLOP-hr (38% Reduction)
+• Local Community Wealth Retention: Hyperscale = 4.8% | ICEarth Stack = 92.4% (Tribal Trust Dividends)
+• Data Sovereignty & Privacy: Hyperscale = Cloud Act Subpoenable | ICEarth Stack = Sovereign Air-Gapped HSM & ZK-Proofs
+
+IV. GLOBAL TRI-CONTINENTAL MODULARITY:
+• New Mexico High Desert (Jicarilla Apache / Taos Pueblo): Solar + Geothermal + Dry Cooling.
+• Amazon River Basin (COICA Brazil): Canopy Solar + Micro-Hydro + Deforestation Acoustic AI.
+• Papua New Guinea Highlands (Highlands Council of Chiefs): Alpine Hydrokinetic + River Tailings Forensics.`,
+    tags: ['ICEarthStack', 'IndigenousAI', 'ProjectJupiter', 'DebHaaland', 'JicarillaApache', 'SovereignIT', 'CleanCompute', 'ClosedLoopCooling', 'ZeroWaterAI', 'Plate38', 'AmazonBasin', 'NewGuineaHighlands', 'SLM', 'IRADirectPay'],
+    communities: ['ICEarth Global', 'Jicarilla Apache', 'Taos Pueblo', 'Sovereign Research', 'Indigenous Communities Earth'],
+    vaultHash: '0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026',
+    editorName: 'Norm Roulet',
+    editorRole: 'ICEarth Founder & Lead Exposenomics Researcher',
+    featured: true,
+    imageUrl: icearthStackIndigenousAiImg
+  },
   {
     id: 'ART-SMITHSONIAN-1680-PUEBLO-REVOLT-TAOS-SOVEREIGNTY',
     contentType: 'Article',
@@ -3888,6 +3957,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('ICEarthStack') || article.tags?.includes('IndigenousAI') || article.tags?.includes('ProjectJupiter') || article.id.includes('ICEARTH-STACK') || article.title?.includes('The ICEarth Stack')) && (
+                      <button
+                        onClick={() => onNavigateTab('icearth_stack')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-500 via-stone-900 to-emerald-600 hover:from-amber-400 hover:to-emerald-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Sparkles size={14} className="text-amber-300 animate-pulse" />
+                        <span>⚡ Launch The ICEarth Stack Sovereign AI Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('PuebloRevolt1680') || article.tags?.includes('WhyICEarth') || article.id.includes('1680-PUEBLO') || article.title?.includes('Pueblo Natives')) && (
                       <button
                         onClick={() => onNavigateTab('why_icearth')}

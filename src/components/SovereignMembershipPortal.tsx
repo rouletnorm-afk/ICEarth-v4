@@ -44,6 +44,7 @@ import realtimePollutionImg from '../assets/images/icearth_realtime_pollution_po
 import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_1788431807620.jpg';
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
+import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import {
   Shield,
   UserCheck,
@@ -175,6 +176,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AT',
+      title: 'The Indigenous AI Solution For AI: The ICEarth Stack — Clean Compute, Sovereign Infrastructure & Global Indigenous AI (Plate #38)',
+      type: 'Indigenous Sovereignty, AI Infrastructure & Clean Compute IP Asset',
+      imageSrc: icearthStackIndigenousAiImg,
+      link: 'icearth_stack',
+      description: "Origins: Landmark sovereign policy prospectus and technical architecture plate authored by Norm Roulet for prospective Governor Deb Haaland, the Jicarilla Apache Nation, and New Mexico leadership. Formulates the macro-solution to the runaway AI compute crisis exemplified by Project Jupiter and corporate hyperscalers in New Mexico. Shows how sovereign tribal land, IRA § 6417 direct-pay clean energy (solar + geothermal microgrids), 100% closed-loop dielectric liquid immersion cooling (0 gal/day water loss), and domain-specialized Small Language Models (SLMs) outperform Silicon Valley's water-guzzling brute-force models while retaining 92% of economic value on sovereign Indigenous land. Scalable from New Mexico to the Amazon River Basin (COICA Brazil) and the Highlands of Papua New Guinea.",
+      sovereignHash: '0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026'
+    },
     {
       id: 'IP-000AS',
       title: 'In 1680, Pueblo Natives Launched America\'s First Successful Revolution: The Taos Rebellion & Why We Founded ICEarth (Plate #37)',

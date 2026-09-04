@@ -456,6 +456,35 @@ export const JicarillaSovereignIT: React.FC<JicarillaSovereignITProps> = ({
         </div>
       </div>
 
+      {/* GLOBAL SOVEREIGN AI STRATEGY BANNER */}
+      <div className="bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 border border-amber-500/50 rounded-2xl p-4 sm:p-5 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="px-2 py-0.5 bg-amber-500 text-stone-950 font-mono text-[10px] font-black uppercase rounded tracking-wider">
+              The Sovereign AI Portfolio
+            </span>
+            <span className="text-xs font-mono text-amber-300 font-bold">
+              Global Platform Strategy • Plate #38
+            </span>
+          </div>
+          <h3 className="text-base sm:text-lg font-bold text-white">
+            The Indigenous AI Solution For AI: The ICEarth Stack
+          </h3>
+          <p className="text-xs sm:text-sm text-stone-300 max-w-3xl leading-relaxed">
+            Expand beyond reservation hybrid IT to the global macroeconomic solution: how Jicarilla Apache sovereignty, IRA § 6417 direct-pay clean energy, 
+            zero-water immersion cooling, and domain SLMs solve the Project Jupiter data center crisis for Governor Deb Haaland, New Mexico, the Amazon Basin, and PNG Highlands.
+          </p>
+        </div>
+
+        <button
+          onClick={() => onNavigateTab && onNavigateTab('icearth_stack')}
+          className="px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-2 shrink-0 cursor-pointer"
+        >
+          <span>Launch The ICEarth Stack</span>
+          <ArrowRight size={14} />
+        </button>
+      </div>
+
       {/* NAVIGATION SUB-TABS */}
       <div className="flex flex-wrap gap-2 border-b border-stone-200 dark:border-stone-800 pb-2">
         <button
