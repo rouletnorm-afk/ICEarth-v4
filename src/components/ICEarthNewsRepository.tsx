@@ -44,6 +44,7 @@ import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_17884318
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
+import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -57,6 +58,7 @@ import {
   Shield,
   ShieldAlert,
   ShieldCheck,
+  AlertTriangle,
   CheckCircle2,
   Sparkles,
   Building2,
@@ -142,6 +144,22 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('ghana_silent_poison') ||
+    u.includes('silent_poison') ||
+    u.includes('1788567620598') ||
+    u.includes('plate_39') ||
+    u.includes('plate39') ||
+    u.includes('plate #39') ||
+    u.includes('tema') ||
+    u.includes('ashaiman') ||
+    u.includes('kpone') ||
+    u.includes('afienya') ||
+    u.includes('battery_recycling') ||
+    u.includes('0xghana_silent_poison')
+  ) {
+    return ghanaSilentPoisonImg;
+  }
   if (
     u.includes('the_icearth_stack') ||
     u.includes('icearth_stack') ||
@@ -652,6 +670,46 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-GHANA-SILENT-POISON-LEAD-BATTERY-2026',
+    contentType: 'Article',
+    title: 'Ghana’s Silent Poison: Three Years After Landmark Survey Found Children Being Poisoned by Lead, Slow Pace of Reforms Is Putting More Children at Risk',
+    subtitle: 'Tema & Greater Accra Lead-Acid Battery Recycling & E-Waste Investigation • Over 50% of Children in 9 Communities Suffer Lead Poisoning (≥ 5 µg/dL) • 31 Children Critically Poisoned (> 45 µg/dL) Requiring Urgent Chelation Therapy • Residential Soils Reach 7,000 ppm (35x EPA Limit) Around Formal Recycling Smelters',
+    sourceUrl: 'https://newnarratives.org/stories/environment-and-climate-reporting/ghanas-silent-poison-three-years-after-landmark-survey-found-children-being-poisoned-by-lead-slow-pace-of-reforms-is-putting-more-children-at-risk/',
+    sourceName: 'New Narratives / Pure Earth / Ghana Health Service (Investigative Report)',
+    publishDate: '2026-09-04',
+    author: 'New Narratives Environmental Investigation Team',
+    authorName: 'New Narratives & Pure Earth Africa Research Consortium',
+    abstract: 'In 2023, a landmark Ghana Health Service and Pure Earth survey across nine communities in Greater Accra and Central regions discovered that more than half of all children tested had blood lead levels of 5 µg/dL or higher. For 31 children, blood lead spiked past 45 µg/dL—a critical threshold requiring immediate hospital chelation therapy to avert brain damage, seizures, or death. Three years later, parents still do not know what happened to the poisoned children, national recycling guidelines remain unfinished drafts, and toxic recycling of used lead-acid batteries (ULAB) from vehicles and solar panels continues unabated. Soil samples in residential neighborhoods around smelters in Afienya, Ashaiman, and Kpone show lead concentrations exceeding 7,000 ppm (35 times the US EPA 200 ppm guideline), leaving an entire generation vulnerable to irreversible synaptic damage.',
+    editorCommentary: 'Norm Roulet Exposenomics Commentary: The situation in Tema and Greater Accra exemplifies the catastrophic convergence of global e-waste dumping, unregulated lead-acid battery recycling, and regulatory paralysis. Under Roulet\'s Law, heavy metal contamination correlates directly with cognitive impairment, loss of educational attainment, impulse control breakdown, and lifetime institutional burden. As UNICEF Ghana health specialist Dr. Emmanuel Kyeremanteng-Amoah notes, synaptic recall failure means children forget today what they learned yesterday. While Western nations transition to renewable fleets, their spent lead batteries are exported to Africa for crude, toxic smelting. ICEarth publishes Plate #39 and launches the Ghana Battery Lead Crisis Engine to demand immediate chelation access, EPA enforcement of baghouse filters, residential soil remediation, and international accountability under the Basel Convention.',
+    fullExcerpt: `GHANA’S SILENT POISON: THREE YEARS AFTER LANDMARK SURVEY FOUND CHILDREN BEING POISONED BY LEAD, SLOW PACE OF REFORMS IS PUTTING MORE CHILDREN AT RISK
+NEW NARRATIVES / PURE EARTH / GHANA HEALTH SERVICE INVESTIGATION (SEPTEMBER 04, 2026)
+
+Source: https://newnarratives.org/stories/environment-and-climate-reporting/ghanas-silent-poison-three-years-after-landmark-survey-found-children-being-poisoned-by-lead-slow-pace-of-reforms-is-putting-more-children-at-risk/
+Location: Tema, Afienya, Ashaiman & Kpone, Greater Accra Region, Ghana
+Plate #39 Cryptographic Archive: PHOTO-000AU / IP-000AU
+Sovereign Archive Hash: 0xGHANA_SILENT_POISON_LEAD_ACID_BATTERY_2026
+
+SUMMARY & KEY FINDINGS:
+• A landmark 2023 study by Ghana Health Service and Pure Earth tested children across nine communities in Greater Accra and Central regions: over half had blood lead levels exceeding 5 µg/dL.
+• 31 children tested at or above 45 µg/dL—an acute pediatric emergency requiring immediate intravenous/oral chelation therapy (Calcium Disodium EDTA and DMSA / Succimer) to prevent fatal encephalopathy and severe neurodevelopmental deficits.
+• Residential topsoil tested up to 7,000 ppm—35 times the US EPA residential threshold of 200 ppm.
+• Formal smelters identified as major point-source polluters: Success Africa Ghana Ltd (Shai-Osudoku), White Star Global Ltd (Kpone-Katamanso), and Recyclers Ghana Ltd (Tema Corridor).
+• Unfinished guidelines: Environmental Protection Agency (EPA) guidelines have remained draft status for three years, with no clear timeline for enforcement or victim follow-up.
+• UNICEF warning: Dr. Emmanuel Kyeremanteng-Amoah warns that lead prevents synapses from consolidating memories, destroying academic retention and accelerating nationwide school dropouts.`,
+    tags: ['GhanaSilentPoison', 'BatteryRecycling', 'Tema', 'PureEarth', 'UNICEF', 'ChildLeadPoisoning', 'ChelationTherapy', 'Plate39', 'ULAB', 'Ewaste', 'RouletsLaw', 'GreaterAccra'],
+    communities: ['Global Indigenous Network', 'Exposenomics Research Hub', 'Environmental Forensics', 'Africa Health Watch'],
+    vaultHash: '0xGHANA_SILENT_POISON_LEAD_ACID_BATTERY_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Heavy Metals Forensics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'ghana_silent_poison_1788567620598.jpg',
+    originState: 'Greater Accra, Ghana',
+    provenanceHash: '0xGHANA_SILENT_POISON_LEAD_ACID_BATTERY_2026',
+    vaultRef: 'VAULT-PURE-EARTH-GHANA-2026',
+    sourceType: 'Journalistic Investigation & Epidemiological Survey'
+  },
   {
     id: 'ART-ICEARTH-STACK-INDIGENOUS-AI-SOLUTION-2026',
     contentType: 'Research',
@@ -3957,6 +4015,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('GhanaSilentPoison') || article.tags?.includes('BatteryRecycling') || article.id.includes('GHANA-SILENT-POISON') || article.title?.includes('Ghana’s Silent Poison')) && (
+                      <button
+                        onClick={() => onNavigateTab('ghana_lead_poisoning')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <AlertTriangle size={14} className="text-amber-300 animate-pulse" />
+                        <span>🇬🇭 Launch Ghana Silent Poison & Battery Lead Crisis Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('ICEarthStack') || article.tags?.includes('IndigenousAI') || article.tags?.includes('ProjectJupiter') || article.id.includes('ICEARTH-STACK') || article.title?.includes('The ICEarth Stack')) && (
                       <button
                         onClick={() => onNavigateTab('icearth_stack')}

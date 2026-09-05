@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
 import {
@@ -17,6 +17,7 @@ import {
   Building,
   CheckCircle,
   ExternalLink,
+  ChevronLeft,
   ChevronRight,
   ChevronDown,
   Sparkles,
@@ -92,6 +93,19 @@ export const ICEarthStackIndigenousAI: React.FC<ICEarthStackProps> = ({
   const [copiedSubmissionLink, setCopiedSubmissionLink] = useState<boolean>(false);
   const [isArtworkModalOpen, setIsArtworkModalOpen] = useState<boolean>(false);
   const [expandedSection, setExpandedSection] = useState<string | null>('pillar_1');
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollSubmenuLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -260, behavior: 'smooth' });
+    }
+  };
+
+  const scrollSubmenuRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 260, behavior: 'smooth' });
+    }
+  };
 
   const vaultHash = '0xSOVEREIGN_ICEARTH_STACK_INDIGENOUS_AI_SOLUTION_2026';
   const geminiTestimonialHash = '0xGEMINI_SOVEREIGN_ICEARTH_STACK_TESTIMONIAL_2026';
@@ -338,14 +352,102 @@ We submit this proposal for formal review and request an initial bilateral brief
         </div>
       </div>
 
-      {/* SUB-NAVIGATION TABS - ALL 6 ITEMS FULLY VISIBLE SIMULTANEOUSLY ACROSS THE SCREEN */}
-      <div className="bg-stone-100 dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-20 px-3 sm:px-6 lg:px-10 py-3 shadow-md">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 font-mono">
+      {/* SUB-NAVIGATION TABS - ALL 5 ITEMS FULLY VISIBLE ACROSS THE SCREEN WITH SCROLL & ARROWS */}
+      <div className="bg-stone-100 dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-30 px-3 sm:px-6 lg:px-10 py-2.5 shadow-md">
+        <div className="max-w-7xl mx-auto space-y-2">
+          
+          {/* HEADER ROW WITH QUICK PILLS & SCROLL CHEVRONS */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 overflow-x-auto py-0.5 no-scrollbar">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 shrink-0">
+                Strategy Modules:
+              </span>
+              <div className="flex items-center gap-1 font-mono text-[10px]">
+                <button
+                  onClick={() => setActiveSubTab('executive_memo')}
+                  className={`px-2 py-0.5 rounded-full transition-all cursor-pointer shrink-0 ${
+                    activeSubTab === 'executive_memo'
+                      ? 'bg-amber-600 text-white font-bold'
+                      : 'bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-300'
+                  }`}
+                >
+                  01 Memo
+                </button>
+                <button
+                  onClick={() => setActiveSubTab('gemini_testimonial')}
+                  className={`px-2 py-0.5 rounded-full transition-all cursor-pointer shrink-0 ${
+                    activeSubTab === 'gemini_testimonial'
+                      ? 'bg-blue-600 text-white font-bold shadow-xs'
+                      : 'bg-blue-100 dark:bg-blue-950/60 text-blue-900 dark:text-blue-300 hover:bg-blue-200'
+                  }`}
+                >
+                  02 Gemini Endorsement
+                </button>
+                <button
+                  onClick={() => setActiveSubTab('project_jupiter_comparison')}
+                  className={`px-2 py-0.5 rounded-full transition-all cursor-pointer shrink-0 ${
+                    activeSubTab === 'project_jupiter_comparison'
+                      ? 'bg-amber-600 text-white font-bold'
+                      : 'bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-300'
+                  }`}
+                >
+                  03 Jupiter Audit
+                </button>
+                <button
+                  onClick={() => setActiveSubTab('algorithmic_superiority')}
+                  className={`px-2 py-0.5 rounded-full transition-all cursor-pointer shrink-0 ${
+                    activeSubTab === 'algorithmic_superiority'
+                      ? 'bg-amber-600 text-white font-bold'
+                      : 'bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-300'
+                  }`}
+                >
+                  04 SLMs
+                </button>
+                <button
+                  onClick={() => setActiveSubTab('plate_view')}
+                  className={`px-2.5 py-0.5 rounded-full transition-all cursor-pointer shrink-0 flex items-center gap-1 border ${
+                    activeSubTab === 'plate_view'
+                      ? 'bg-amber-500 text-stone-950 font-black border-amber-300 shadow'
+                      : 'bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 border-amber-400/50 hover:bg-amber-200'
+                  }`}
+                >
+                  <Sparkles size={11} className="text-amber-600 dark:text-amber-400 animate-pulse" />
+                  <span>⭐ 05 Plate #38 Graphic</span>
+                </button>
+              </div>
+            </div>
+
+            {/* SCROLL BUTTONS FOR NARROW SCREENS */}
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                onClick={scrollSubmenuLeft}
+                className="p-1 rounded-md bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-300 transition-colors cursor-pointer"
+                title="Scroll Left"
+                aria-label="Scroll Submenu Left"
+              >
+                <ChevronLeft size={15} />
+              </button>
+              <button
+                onClick={scrollSubmenuRight}
+                className="p-1 rounded-md bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-300 transition-colors cursor-pointer"
+                title="Scroll Right"
+                aria-label="Scroll Submenu Right"
+              >
+                <ChevronRight size={15} />
+              </button>
+            </div>
+          </div>
+
+          {/* PRIMARY 5-ITEM SUBMENU BAR */}
+          <div
+            ref={scrollContainerRef}
+            className="flex md:grid md:grid-cols-5 gap-2 overflow-x-auto pb-1.5 scroll-smooth font-mono"
+            style={{ scrollbarWidth: 'thin' }}
+          >
             {/* 1. Policy Memo */}
             <button
               onClick={() => setActiveSubTab('executive_memo')}
-              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[160px] md:min-w-0 shrink-0 md:shrink ${
                 activeSubTab === 'executive_memo'
                   ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-2 ring-amber-400/40'
                   : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-750'
@@ -364,7 +466,7 @@ We submit this proposal for formal review and request an initial bilateral brief
             {/* 2. Gemini Testimonial & Google CEO Outreach */}
             <button
               onClick={() => setActiveSubTab('gemini_testimonial')}
-              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[170px] md:min-w-0 shrink-0 md:shrink ${
                 activeSubTab === 'gemini_testimonial'
                   ? 'bg-gradient-to-r from-blue-700 to-indigo-800 text-white border-blue-400 shadow-lg ring-2 ring-blue-400/60'
                   : 'bg-gradient-to-r from-blue-50 to-indigo-50/80 dark:from-blue-950/40 dark:to-indigo-950/40 text-blue-950 dark:text-blue-200 border-blue-300/80 dark:border-blue-700 hover:border-blue-500 shadow-xs ring-1 ring-blue-400/20'
@@ -383,7 +485,7 @@ We submit this proposal for formal review and request an initial bilateral brief
             {/* 3. Project Jupiter */}
             <button
               onClick={() => setActiveSubTab('project_jupiter_comparison')}
-              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[160px] md:min-w-0 shrink-0 md:shrink ${
                 activeSubTab === 'project_jupiter_comparison'
                   ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-2 ring-amber-400/40'
                   : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-750'
@@ -402,7 +504,7 @@ We submit this proposal for formal review and request an initial bilateral brief
             {/* 4. Algorithmic Superiority */}
             <button
               onClick={() => setActiveSubTab('algorithmic_superiority')}
-              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[160px] md:min-w-0 shrink-0 md:shrink ${
                 activeSubTab === 'algorithmic_superiority'
                   ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-2 ring-amber-400/40'
                   : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-750'
@@ -418,45 +520,26 @@ We submit this proposal for formal review and request an initial bilateral brief
               <div className="text-[10px] opacity-80 truncate">Domain SLMs vs LLMs</div>
             </button>
 
-            {/* 5. Global Topology */}
-            <button
-              onClick={() => setActiveSubTab('global_topology')}
-              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
-                activeSubTab === 'global_topology'
-                  ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-2 ring-amber-400/40'
-                  : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-750'
-              }`}
-            >
-              <div className="flex items-center justify-between gap-1 mb-1">
-                <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/20 text-inherit">
-                  05
-                </span>
-                <Globe size={15} />
-              </div>
-              <div className="font-bold text-xs truncate">5. Global Topology</div>
-              <div className="text-[10px] opacity-80 truncate">NM • Amazon • PNG</div>
-            </button>
-
-            {/* 6. Plate #38 Artwork & Architectural Blueprint */}
+            {/* 5. Plate #38 Artwork & Architectural Blueprint - FEATURED */}
             <button
               onClick={() => setActiveSubTab('plate_view')}
-              className={`col-span-2 sm:col-span-1 p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border ${
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[185px] md:min-w-0 shrink-0 md:shrink ${
                 activeSubTab === 'plate_view'
-                  ? 'bg-gradient-to-r from-amber-600 to-amber-700 text-white border-amber-300 shadow-lg ring-2 ring-amber-400'
-                  : 'bg-gradient-to-r from-amber-50 to-amber-100/70 dark:from-amber-950/40 dark:to-stone-800 text-amber-950 dark:text-amber-200 border-amber-400/80 hover:border-amber-500 shadow-xs ring-1 ring-amber-400/30'
+                  ? 'bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-stone-950 border-amber-300 shadow-xl ring-2 ring-amber-400'
+                  : 'bg-gradient-to-br from-amber-50 via-amber-100/80 to-stone-50 dark:from-amber-950/40 dark:via-stone-850 dark:to-stone-900 text-amber-950 dark:text-amber-200 border-amber-400/80 hover:border-amber-500 shadow-sm ring-1 ring-amber-400/40'
               }`}
             >
               <div className="flex items-center justify-between gap-1 mb-1">
                 <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-600 text-white shadow-xs">
-                  06 • PLATE #38
+                  05 • PLATE #38
                 </span>
                 <Sparkles size={15} className="text-amber-500 animate-pulse" />
               </div>
-              <div className="font-black text-xs text-amber-900 dark:text-amber-100 flex items-center gap-1">
-                <span>6. Plate #38 Graphic</span>
+              <div className="font-black text-xs text-amber-950 dark:text-amber-100 flex items-center gap-1">
+                <span>5. Plate #38 Graphic</span>
               </div>
-              <div className="text-[10px] text-amber-700 dark:text-amber-300 truncate font-semibold">
-                High-Res Blueprint
+              <div className="text-[10px] text-amber-800 dark:text-amber-300 truncate font-semibold">
+                High-Res Blueprint & Mesh
               </div>
             </button>
           </div>
@@ -1656,9 +1739,96 @@ We submit this proposal for formal review and request an initial bilateral brief
           </div>
         )}
 
-        {/* SUB-TAB 4: GLOBAL TOPOLOGY (NM, AMAZON, PNG) */}
-        {activeSubTab === 'global_topology' && (
-          <div className="space-y-8">
+        {/* SUB-TAB 5: PLATE #38 ARTWORK, TECHNICAL BLUEPRINT & GLOBAL TOPOLOGY MESH */}
+        {(activeSubTab === 'plate_view' || activeSubTab === 'global_topology') && (
+          <div className="space-y-10">
+            {/* PLATE #38 ARTWORK & PROVENANCE VAULT */}
+            <div className="bg-white dark:bg-stone-900 border-2 border-amber-500/40 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="px-2.5 py-0.5 bg-amber-500 text-stone-950 text-[10px] font-mono font-black uppercase rounded tracking-wider shadow">
+                      FEATURED ARTIFACT
+                    </span>
+                    <span className="px-2.5 py-0.5 bg-amber-950 text-amber-200 border border-amber-500/40 text-[10px] font-mono uppercase rounded font-bold">
+                      PLATE #38 OF 40
+                    </span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-stone-950 dark:text-white">
+                    The Indigenous AI Solution For AI: The ICEarth Stack
+                  </h2>
+                  <p className="text-xs text-stone-500 font-mono mt-0.5">
+                    Location: Dulce, NM & Sangre de Cristo Mesas • Sovereign Archive Hash: {vaultHash}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handleCopy(vaultHash)}
+                    className="px-3 py-1.5 bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 text-xs font-mono rounded-lg transition-all flex items-center gap-1 border border-stone-300 dark:border-stone-700 cursor-pointer"
+                  >
+                    {copiedHash ? <Check size={13} className="text-emerald-500" /> : <Copy size={13} />}
+                    <span>{copiedHash ? 'Hash Copied!' : 'Copy Vault Hash'}</span>
+                  </button>
+                  <button
+                    onClick={() => setIsArtworkModalOpen(true)}
+                    className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-xs font-mono rounded-xl transition-all flex items-center gap-1.5 shadow-md cursor-pointer"
+                  >
+                    <Maximize2 size={14} />
+                    <span>Fullscreen Lightbox</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* IMAGE SHOWCASE CONTAINER */}
+              <div
+                onClick={() => setIsArtworkModalOpen(true)}
+                className="relative rounded-2xl overflow-hidden border-2 border-amber-500/50 bg-stone-950 cursor-pointer group shadow-2xl"
+              >
+                <img
+                  src={icearthStackIndigenousAiImg}
+                  alt="The Indigenous AI Solution For AI: The ICEarth Stack"
+                  className="w-full h-auto max-h-[650px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute bottom-4 left-4 right-4 p-4 bg-stone-900/90 backdrop-blur-md rounded-xl border border-amber-500/30 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-mono uppercase text-amber-400 block font-bold">
+                      Architectural Blueprint & Visionary Render
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-amber-100">
+                      Modular Air-Gapped Clean Compute Sanctuary in High-Desert Mesa
+                    </h3>
+                    <p className="text-xs text-stone-300">
+                      Depicting behind-the-meter solar arrays, direct-to-chip immersion pods, zero-water dry coolers, and sovereign tribal optical links.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 self-start sm:self-center">
+                    <span className="px-3 py-1.5 bg-amber-500 text-stone-950 font-black text-xs font-mono rounded-lg shadow">
+                      Click to Enlarge 🔍
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ARCHIVAL METADATA CARD */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono bg-stone-50 dark:bg-stone-950 p-5 rounded-xl border border-stone-200 dark:border-stone-800">
+                <div>
+                  <span className="text-stone-500 uppercase block">Curator / Researcher:</span>
+                  <span className="font-bold text-stone-900 dark:text-stone-100">Norm Roulet (User #1 Vault)</span>
+                </div>
+                <div>
+                  <span className="text-stone-500 uppercase block">Indigenous Sovereign Host:</span>
+                  <span className="font-bold text-stone-900 dark:text-stone-100">Jicarilla Apache & New Mexico Pueblos</span>
+                </div>
+                <div>
+                  <span className="text-stone-500 uppercase block">License & Jurisdictional Code:</span>
+                  <span className="font-bold text-emerald-600 dark:text-emerald-400">FPIC Protected • Undrip Sovereign Vault</span>
+                </div>
+              </div>
+            </div>
+
+            {/* GLOBAL TOPOLOGY MESH SECTION WITHIN TAB 5 */}
             <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-md space-y-6">
               <div className="space-y-2">
                 <h2 className="text-xl font-bold text-stone-950 dark:text-white flex items-center gap-2">
@@ -1666,7 +1836,7 @@ We submit this proposal for formal review and request an initial bilateral brief
                   <span>Global Portability: The Tri-Continental Sovereign AI Mesh</span>
                 </h2>
                 <p className="text-sm text-stone-600 dark:text-stone-400 max-w-4xl">
-                  The ICEarth Stack is not merely a New Mexico regional initiative; it is an internationally modular sovereign architecture 
+                  The ICEarth Stack is an internationally modular sovereign architecture 
                   designed to scale identically across the high-desert plateaus of New Mexico, the tropical rainforest canopy of the Amazon Basin, 
                   and the volcanic alpine valleys of Papua New Guinea.
                 </p>
@@ -1769,91 +1939,6 @@ We submit this proposal for formal review and request an initial bilateral brief
                     State & Global Synergy
                   </span>
                   {currentRegion.stateSynergy}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* SUB-TAB 5: PLATE #38 ARTWORK & PROVENANCE VAULT */}
-        {activeSubTab === 'plate_view' && (
-          <div className="space-y-8">
-            <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-md space-y-6">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
-                <div>
-                  <span className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">
-                    Sovereign Fine Art & Technical Blueprint Series • Plate #38
-                  </span>
-                  <h2 className="text-xl sm:text-2xl font-bold text-stone-950 dark:text-white">
-                    The Indigenous AI Solution For AI: The ICEarth Stack
-                  </h2>
-                  <p className="text-xs text-stone-500 font-mono mt-0.5">
-                    Location: Dulce, NM & Sangre de Cristo Mesas • Sovereign Archive Hash: {vaultHash}
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handleCopy(vaultHash)}
-                    className="px-3 py-1.5 bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 text-xs font-mono rounded-lg transition-all flex items-center gap-1 border border-stone-300 dark:border-stone-700"
-                  >
-                    {copiedHash ? <Check size={13} className="text-emerald-500" /> : <Copy size={13} />}
-                    <span>{copiedHash ? 'Hash Copied!' : 'Copy Vault Hash'}</span>
-                  </button>
-                  <button
-                    onClick={() => setIsArtworkModalOpen(true)}
-                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold text-xs font-mono rounded-lg transition-all flex items-center gap-1 shadow"
-                  >
-                    <Maximize2 size={13} />
-                    <span>Fullscreen</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* IMAGE SHOWCASE CONTAINER */}
-              <div
-                onClick={() => setIsArtworkModalOpen(true)}
-                className="relative rounded-2xl overflow-hidden border border-stone-300 dark:border-stone-800 bg-stone-950 cursor-pointer group shadow-2xl"
-              >
-                <img
-                  src={icearthStackIndigenousAiImg}
-                  alt="The Indigenous AI Solution For AI: The ICEarth Stack"
-                  className="w-full h-auto max-h-[650px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-stone-900/90 backdrop-blur-md rounded-xl border border-amber-500/30 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-mono uppercase text-amber-400 block font-bold">
-                      Architectural Blueprint & Visionary Render
-                    </span>
-                    <h3 className="text-sm sm:text-base font-bold text-amber-100">
-                      Modular Air-Gapped Clean Compute Sanctuary in High-Desert Mesa
-                    </h3>
-                    <p className="text-xs text-stone-300">
-                      Depicting behind-the-meter solar arrays, direct-to-chip immersion pods, zero-water dry coolers, and sovereign tribal optical links.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 self-start sm:self-center">
-                    <span className="px-2.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-mono rounded-lg">
-                      Click to Enlarge
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* ARCHIVAL METADATA CARD */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono bg-stone-50 dark:bg-stone-950 p-5 rounded-xl border border-stone-200 dark:border-stone-800">
-                <div>
-                  <span className="text-stone-500 uppercase block">Curator / Researcher:</span>
-                  <span className="font-bold text-stone-900 dark:text-stone-100">Norm Roulet (User #1 Vault)</span>
-                </div>
-                <div>
-                  <span className="text-stone-500 uppercase block">Indigenous Sovereign Host:</span>
-                  <span className="font-bold text-stone-900 dark:text-stone-100">Jicarilla Apache & New Mexico Pueblos</span>
-                </div>
-                <div>
-                  <span className="text-stone-500 uppercase block">License & Jurisdictional Code:</span>
-                  <span className="font-bold text-emerald-600 dark:text-emerald-400">FPIC Protected • Undrip Sovereign Vault</span>
                 </div>
               </div>
             </div>

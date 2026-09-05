@@ -45,6 +45,7 @@ import gasbuggyAuditImg from '../assets/images/gasbuggy_jicarilla_audit_17884318
 import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_1788454916540.jpg';
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
+import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import {
   Shield,
   UserCheck,
@@ -176,6 +177,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AU',
+      title: 'Ghana\'s Silent Poison: Lead-Acid Battery Recycling, E-Waste & Severe Child Neurotoxicity in Greater Accra (Plate #39)',
+      type: 'Used Battery Recycling (ULAB), E-Waste Dumping & Pediatric Neurotoxicology IP Asset',
+      imageSrc: ghanaSilentPoisonImg,
+      link: 'ghana_lead_poisoning',
+      description: "Origins: Landmark investigative exposenomics plate and environmental health dispatch auditing the catastrophic lead poisoning epidemic in Greater Accra, Ghana. A 2023 Ghana Health Service and Pure Earth survey tested children across 9 communities: over 50% had dangerous blood lead levels (≥ 5 µg/dL), 31 children had critical acute levels exceeding 45 µg/dL requiring emergency hospitalization and chelation therapy (Calcium Disodium EDTA / Succimer), and residential topsoil measured up to 7,000 ppm (35x the US EPA 200 ppm guideline). Highlights three formal ULAB recycling smelters (Success Africa Ghana Ltd, White Star Global Ltd, Recyclers Ghana Ltd) processing scrap batteries and imported e-waste from Europe and North America. Documents UNICEF health specialist Dr. Emmanuel Kyeremanteng-Amoah's warning on synaptic recall loss, school dropout cascades, and lifetime criminality risks under Roulet's Law.",
+      sovereignHash: '0xGHANA_SILENT_POISON_LEAD_ACID_BATTERY_2026'
+    },
     {
       id: 'IP-000AT',
       title: 'The Indigenous AI Solution For AI: The ICEarth Stack — Clean Compute, Sovereign Infrastructure & Global Indigenous AI (Plate #38)',
