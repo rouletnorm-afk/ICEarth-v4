@@ -128,6 +128,7 @@ import { MiRNA31Nrf2LeadEpigenetics } from './components/MiRNA31Nrf2LeadEpigenet
 import { WhyICEarthMission } from './components/WhyICEarthMission';
 import { ICEarthStackIndigenousAI } from './components/ICEarthStackIndigenousAI';
 import { GhanaBatteryLeadCrisis } from './components/GhanaBatteryLeadCrisis';
+import { BangladeshLeadCrisisIgnored } from './components/BangladeshLeadCrisisIgnored';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -136,7 +137,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ghana_lead_poisoning' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1784,6 +1785,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Bangladesh Lead Crisis: A Crisis Ignored for Too Long (Plate #40) */}
+                <button
+                  onClick={() => setActiveTab('bangladesh_lead_crisis')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'bangladesh_lead_crisis' || (activeTab as string) === 'bangladesh_crisis' || (activeTab as string) === 'bangladesh_lead_crisis_ignored' || (activeTab as string) === 'plate_40' || (activeTab as string) === 'plate40'
+                      ? 'bg-red-950 text-red-100 border-red-500 shadow-md font-bold ring-1 ring-red-400/50'
+                      : 'hover:bg-red-500/20 text-red-950 border-red-400/60 bg-red-50/90 font-bold'
+                  }`}
+                >
+                  <AlertTriangle size={16} className={activeTab === 'bangladesh_lead_crisis' ? 'text-red-300' : 'text-red-700'} />
+                  <span className="flex-1 font-semibold">🇧🇩 Bangladesh Lead Crisis</span>
+                  <span className="px-1.5 py-0.2 bg-red-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #40
+                  </span>
+                </button>
+
                 {/* Toxic Shadows And The Heart-Habitat Interface, Nigeria (Prof. Raphael Anakwue) */}
                 <button
                   onClick={() => setActiveTab('nigeria_heart_habitat')}
@@ -2383,6 +2400,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'flint', icon: Building2, label: '☣️ Flint Lead Audit & Scatterplots', badge: 'Audit', color: 'red' },
                     { id: 'twin_cities_lead', icon: Droplets, label: '💧 Minneapolis & St. Paul Lead Audit', badge: '612/651', color: 'amber' },
                     { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
+                    { id: 'bangladesh_lead_crisis', icon: AlertTriangle, label: '🇧🇩 Bangladesh Lead Crisis (Plate #40)', badge: 'Plate #40', color: 'red' },
                     { id: 'nigeria_heart_habitat', icon: HeartPulse, label: '🫀 Toxic Shadows: Heart-Habitat Nigeria', badge: 'UNN 249', color: 'rose' },
                     { id: 'icetaos', icon: Compass, label: '🏜️ ICETaos Community Hub', badge: 'Taos NM', color: 'teal' },
                     { id: 'why_icearth', icon: Feather, label: '🪶 Why ICEarth: 1680 Pueblo Revolt & Mission', badge: 'Taos 1680', color: 'amber' },
@@ -2482,6 +2500,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
               {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && '💧 Minneapolis & St. Paul Lead Audit'}
               {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && '🇧🇩 Bangladesh Lead-Free 2035 Plan'}
+              {(activeTab === 'bangladesh_lead_crisis' || (activeTab as string) === 'bangladesh_crisis' || (activeTab as string) === 'bangladesh_lead_crisis_ignored' || (activeTab as string) === 'plate_40' || (activeTab as string) === 'plate40') && '🇧🇩 Bangladesh Lead Crisis: A Crisis Ignored for Too Long (Plate #40)'}
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
@@ -4111,6 +4130,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && (
             <div className="flex-1 overflow-y-auto">
               <BangladeshLeadFreeStrategy 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.116B: LEAD POISONING IN BANGLADESH: A CRISIS IGNORED FOR TOO LONG (PLATE #40) */}
+          {(activeTab === 'bangladesh_lead_crisis' || (activeTab as string) === 'bangladesh_crisis' || (activeTab as string) === 'bangladesh_lead_crisis_ignored' || (activeTab as string) === 'plate_40' || (activeTab as string) === 'plate40') && (
+            <div className="flex-1 overflow-y-auto">
+              <BangladeshLeadCrisisIgnored 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

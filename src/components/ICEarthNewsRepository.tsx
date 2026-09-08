@@ -45,6 +45,7 @@ import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_178845491654
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
+import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -144,6 +145,18 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('bangladesh_lead_crisis') ||
+    u.includes('bangladesh-lead-crisis') ||
+    u.includes('1788864698233') ||
+    u.includes('plate_40') ||
+    u.includes('plate40') ||
+    u.includes('plate #40') ||
+    u.includes('mirzapur') ||
+    u.includes('0xbangladesh_lead_crisis')
+  ) {
+    return bangladeshLeadCrisisImg;
+  }
   if (
     u.includes('ghana_silent_poison') ||
     u.includes('silent_poison') ||
@@ -670,6 +683,46 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-BANGLADESH-LEAD-CRISIS-IGNORED-2026',
+    contentType: 'Article',
+    title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long',
+    subtitle: 'UNHEARD VOICES Investigation by Tagabun Taharim Titun • BBS / UNICEF MICS 2025 Audit: 38.34% of Children Nationwide and 65% in Dhaka Have Elevated Blood Lead (≥ 5 µg/dL) • 1,100+ Informal Battery Smelters Supply Electric Three-Wheelers • Turmeric Adulteration, Cookware & Zero Public Reference Labs',
+    sourceUrl: 'https://www.thedailystar.net/slow-reads/unheard-voices/news/lead-poisoning-bangladesh-crisis-ignored-too-long-4264201',
+    sourceName: 'The Daily Star / UNHEARD VOICES (Investigative Report)',
+    publishDate: '2026-09-04',
+    author: 'Tagabun Taharim Titun',
+    authorName: 'Tagabun Taharim Titun (taharimtitun@gmail.com) • The Daily Star',
+    abstract: 'Near abandoned lead-acid battery recycling sites, lead can remain in the environment long after the furnaces have gone quiet, finding its way into dust, soil, food, and human bodies. A 2026 BMC Public Health study on soil remediation in Mirzapur revealed deep ongoing anxieties about soil handling and recurring contamination. Meanwhile, the Bangladesh Multiple Indicator Cluster Survey (MICS 2025) conducted by the Bangladesh Bureau of Statistics (BBS) and UNICEF found elevated blood lead levels (≥ 5 µg/dL) in 38.34% of young children (12-59 months) and 7.54% of pregnant women, soaring to an alarming 65% in Dhaka. Electric three-wheelers drive 60-65% of domestic lead-acid battery demand across 1,100+ informal recycling yards. Adulterated turmeric with lead chromate, toxic aluminum cookware (96 of 367 consumer products positive), and a total absence of a national public health reference laboratory leave millions of children in neurodevelopmental jeopardy.',
+    editorCommentary: 'Norm Roulet Exposenomics Commentary: Bangladesh exemplifies the invisible, pervasive nature of toxic heavy metals woven into everyday economic survival. Under Roulet\'s Law, chronic heavy metal exposure does not manifest as an acute obvious sickness—instead, it silently erodes synaptic connectivity, speech acquisition, impulse control, and educational attainment during early childhood. Electric three-wheelers provide crucial livelihoods and clean green mobility in cities, yet their informal battery supply chain operates as an open-air toxic engine poisoning future generations. Physical soil remediation in Mirzapur proves that soil replacement works, but without an accredited National Reference Laboratory under the Ministry of Health, systematic clinical screening, and a formal battery deposit-refund system, the nation remains blind to its greatest neurological crisis. ICEarth publishes Plate #40 and launches the Bangladesh Lead Crisis Engine to support UNICEF and national advocates demanding immediate systemic action.',
+    fullExcerpt: `LEAD POISONING IN BANGLADESH: A CRISIS IGNORED FOR TOO LONG
+THE DAILY STAR / UNHEARD VOICES INVESTIGATION (SEPTEMBER 04, 2026)
+Author: Tagabun Taharim Titun (taharimtitun@gmail.com)
+Source: https://www.thedailystar.net/slow-reads/unheard-voices/news/lead-poisoning-bangladesh-crisis-ignored-too-long-4264201
+Location: Dhaka, Mirzapur & Greater Bangladesh
+Plate #40 Cryptographic Archive: PHOTO-000AV / IP-000AV
+Sovereign Archive Hash: 0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026
+
+SUMMARY & KEY FINDINGS:
+• Nationwide MICS 2025 Audit: Conducted by Bangladesh Bureau of Statistics (BBS) and UNICEF, testing blood lead levels in children aged 12 to 59 months and pregnant women. Found elevated BLL (≥ 5 µg/dL) in 38.34% of young children and 7.54% of pregnant women.
+• Dhaka Urban Epicenter: Dr. Priscilla Wobil (UNICEF BD) highlights a dramatic concentration of cases in Dhaka, where 65% of tested children have elevated blood lead due to vehicle density, industrial emissions, informal workshops, and toxic street dust.
+• Over 1,100 Informal Smelters: Electric three-wheelers and rickshaws account for 60 to 65 percent of domestic lead-acid battery demand. The World Bank estimates over 1,100 informal ULAB recycling sites operate in Bangladesh, releasing toxic fumes and dust directly into residential communities.
+• Turmeric & Consumer Products: In addition to battery recycling, lead chromate (PbCrO₄) used to brighten spice color and toxic aluminum cookware made from aircraft scrap contaminate food. Dr. Mahbubur Rahman (icddr,b) reports 96 of 367 consumer product samples tested positive for lead.
+• Mirzapur Soil Remediation (BMC Public Health 2026): Proved that excavating and replacing lead-polluted soil around abandoned battery yards dramatically reduced livestock mortality and childhood exposure, confirming the urgent need for nationwide soil remediation.
+• Zero Public Reference Laboratories: The Ministry of Health and Family Welfare maintains no national reference laboratory for blood lead testing, leaving public hospitals without routine point-of-care testing capacity or chelation protocols.`,
+    tags: ['BangladeshLeadCrisis', 'MICS2025', 'UNICEF', 'DailyStar', 'Dhaka', 'Mirzapur', 'BatteryRecycling', 'ULAB', 'TurmericLeadChromate', 'ElectricThreeWheelers', 'Plate40', 'RouletsLaw', 'ChildLeadPoisoning'],
+    communities: ['Global Indigenous Network', 'Exposenomics Research Hub', 'Environmental Forensics', 'Asia Health Watch'],
+    vaultHash: '0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Heavy Metals Forensics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'bangladesh_lead_crisis_1788864698233.jpg',
+    originState: 'Dhaka & Mirzapur, Bangladesh',
+    provenanceHash: '0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026',
+    vaultRef: 'VAULT-DAILY-STAR-BANGLADESH-2026',
+    sourceType: 'Investigative Dispatch & Epidemiological Survey'
+  },
   {
     id: 'ART-GHANA-SILENT-POISON-LEAD-BATTERY-2026',
     contentType: 'Article',
@@ -4015,6 +4068,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('BangladeshLeadCrisis') || article.id.includes('BANGLADESH-LEAD-CRISIS') || article.title?.includes('Bangladesh: A Crisis Ignored')) && (
+                      <button
+                        onClick={() => onNavigateTab('bangladesh_lead_crisis')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <AlertTriangle size={14} className="text-amber-300 animate-pulse" />
+                        <span>🇧🇩 Launch Bangladesh Lead Crisis Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('GhanaSilentPoison') || article.tags?.includes('BatteryRecycling') || article.id.includes('GHANA-SILENT-POISON') || article.title?.includes('Ghana’s Silent Poison')) && (
                       <button
                         onClick={() => onNavigateTab('ghana_lead_poisoning')}

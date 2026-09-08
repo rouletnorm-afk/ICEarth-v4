@@ -108,10 +108,23 @@ import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_178845491654
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
+import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('bangladesh_lead_crisis') ||
+    u.includes('bangladesh-lead-crisis') ||
+    u.includes('1788864698233') ||
+    u.includes('plate_40') ||
+    u.includes('plate40') ||
+    u.includes('plate #40') ||
+    u.includes('mirzapur') ||
+    u.includes('0xbangladesh_lead_crisis')
+  ) {
+    return bangladeshLeadCrisisImg;
+  }
   if (
     u.includes('ghana_silent_poison') ||
     u.includes('silent_poison') ||
@@ -750,6 +763,39 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-BANGLADESH-LEAD-CRISIS-IGNORED-2026',
+      title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long',
+      category: 'Exposenomics',
+      date: '2026-09-04',
+      imageSrc: bangladeshLeadCrisisImg,
+      summary: "The Daily Star / UNHEARD VOICES (Tagabun Taharim Titun): Multiple Indicator Cluster Survey (MICS 2025) reveals 38.34% of young children across Bangladesh and 65% in Dhaka suffer from elevated blood lead levels (≥ 5 µg/dL). Over 1,100 informal battery recycling yards supply electric three-wheelers, while lead chromate turmeric, toxic cookware, and contaminated soil poison children without a single public national reference testing lab in the country.",
+      fullText: `LEAD POISONING IN BANGLADESH: A CRISIS IGNORED FOR TOO LONG
+THE DAILY STAR / UNHEARD VOICES INVESTIGATION (SEPTEMBER 04, 2026)
+Author: Tagabun Taharim Titun (taharimtitun@gmail.com)
+Source: https://www.thedailystar.net/slow-reads/unheard-voices/news/lead-poisoning-bangladesh-crisis-ignored-too-long-4264201
+Location: Dhaka, Mirzapur & Nationwide Bangladesh
+Plate #40 Cryptographic Archive: PHOTO-000AV / IP-000AV
+Sovereign Archive Hash: 0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026
+
+I. THE INVISIBLE POISON & NATIONWIDE EPIDEMIOLOGICAL SURVEY:
+The Bangladesh Multiple Indicator Cluster Survey (MICS) 2025, conducted by the Bangladesh Bureau of Statistics (BBS) with UNICEF, tested blood lead levels among children aged 12 to 59 months and pregnant women. Elevated blood lead levels (≥ 5 µg/dL) were found in 38.34 percent of young children and 7.54 percent of pregnant women. In the capital of Dhaka, the rate soared to an astounding 65 percent.
+
+II. THE ELECTRIC THREE-WHEELER CYCLE & 1,100 INFORMAL SMELTERS:
+Electric three-wheelers and rickshaws drive 60 to 65 percent of Bangladesh's lead-acid battery demand. The World Bank identified over 1,100 informal used lead-acid battery (ULAB) recycling sites. Manual battery cracking and open smelting spread lead dust into surrounding soil, food, and human bodies. Shutting down informal recyclers without economic market incentives merely displaces the activity to new backyards.
+
+III. EVERYDAY HOUSEHOLD SOURCES & TURMERIC ADULTERATION:
+Beyond batteries, lead chromate (PbCrO₄) used to brighten turmeric has poisoned consumer food supplies. icddr,b testing screened 367 consumer products, finding 96 positive for lead—including locally recycled aluminum cookware, paints, toys, and cosmetics.
+
+IV. SOIL REMEDIATION BREAKTHROUGH IN MIRZAPUR:
+A 2026 study in BMC Public Health (“Community responses to soil remediation for lead exposure reduction in Mirzapur, Bangladesh”) demonstrated that physical removal and remediation of lead-contaminated soil near abandoned battery smelters markedly improved agricultural yields, livestock survival, and children’s health, though institutional handling protocols remain urgent.
+
+V. THE TESTING BLIND SPOT:
+The Ministry of Health and Family Welfare lacks a single national reference laboratory for blood lead testing, leaving pediatricians unable to diagnose lead toxicity in clinical settings. UNICEF and health experts demand comprehensive source prevention, deposit-refund battery schemes, and public testing infrastructure.`,
+      tags: ['BangladeshLeadCrisis', 'Plate40', 'DailyStar', 'UNICEF', 'MICS2025', 'Dhaka', 'Mirzapur', 'TurmericLeadChromate', 'ElectricThreeWheelers', 'ULAB', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026',
+      publishedUrl: 'https://www.thedailystar.net/slow-reads/unheard-voices/news/lead-poisoning-bangladesh-crisis-ignored-too-long-4264201'
+    },
     {
       id: 'MAG-GHANA-SILENT-POISON-LEAD-BATTERY-2026',
       title: 'Ghana’s Silent Poison: Three Years After Landmark Survey Found Children Being Poisoned by Lead, Slow Pace of Reforms Is Putting More Children at Risk',
@@ -2346,6 +2392,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AV',
+      title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long (Plate #40)',
+      category: 'Used Battery Recycling (ULAB), Spices Adulteration & Pediatric Neurotoxicology',
+      imageSrc: bangladeshLeadCrisisImg,
+      location: 'Dhaka, Mirzapur & Greater Bangladesh',
+      date: '2026-09-04',
+      description: "Origins: Landmark investigative exposenomics plate and environmental health dispatch from The Daily Star / UNHEARD VOICES by Tagabun Taharim Titun. The BBS / UNICEF Multiple Indicator Cluster Survey (MICS 2025) reveals 38.34% of young children across Bangladesh and 65% in Dhaka suffer from elevated blood lead levels (≥ 5 µg/dL). Electric three-wheelers drive 60-65% of domestic lead-acid battery demand, powering over 1,100 informal recycling smelters. Contamination permeates everyday life through lead chromate in turmeric, toxic aluminum cookware, toys, and industrial emissions. Documents BMC Public Health 2026 Mirzapur soil remediation findings and highlights the dangerous absence of a single national reference testing laboratory under the Ministry of Health.",
+      vaultHash: '0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026',
+      tags: ['BangladeshLeadCrisis', 'Plate40', 'DailyStar', 'UNICEF', 'MICS2025', 'Dhaka', 'Mirzapur', 'TurmericLeadChromate', 'ElectricThreeWheelers', 'ULAB', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AU',
       title: 'Ghana\'s Silent Poison: Lead-Acid Battery Recycling, E-Waste & Severe Child Neurotoxicity in Greater Accra (Plate #39)',
@@ -5017,14 +5074,40 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               </div>
             )}
 
-            <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-xs font-mono text-stone-400">
+            <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
-              <button
-                onClick={() => setSelectedArticle(null)}
-                className="px-4 py-2 bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-bold rounded-xl"
-              >
-                Close Reader
-              </button>
+              <div className="flex items-center gap-2">
+                {onNavigateTab && (selectedArticle.id === 'MAG-BANGLADESH-LEAD-CRISIS-IGNORED-2026' || selectedArticle.tags?.includes('BangladeshLeadCrisis')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('bangladesh_lead_crisis');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-stone-950 font-bold rounded-xl cursor-pointer flex items-center gap-1.5 shadow"
+                  >
+                    <span>🇧🇩 Launch Bangladesh Lead Crisis Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-GHANA-SILENT-POISON-LEAD-BATTERY-2026' || selectedArticle.tags?.includes('GhanaSilentPoison')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('ghana_lead_poisoning');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-stone-950 font-bold rounded-xl cursor-pointer flex items-center gap-1.5 shadow"
+                  >
+                    <span>🇬🇭 Launch Ghana Crisis Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+                <button
+                  onClick={() => setSelectedArticle(null)}
+                  className="px-4 py-2 bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-bold rounded-xl cursor-pointer"
+                >
+                  Close Reader
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -5096,6 +5179,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AV' || selectedPhoto.tags?.includes('BangladeshLeadCrisis') || selectedPhoto.tags?.includes('Plate40')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('bangladesh_lead_crisis');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-stone-950 font-bold rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300"
+                    >
+                      <AlertTriangle size={13} className="text-stone-950" />
+                      <span>🇧🇩 Launch Bangladesh Lead Crisis Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AU' || selectedPhoto.tags?.includes('GhanaSilentPoison') || selectedPhoto.tags?.includes('BatteryRecycling') || selectedPhoto.tags?.includes('Plate39')) && (
                     <button
                       onClick={() => {

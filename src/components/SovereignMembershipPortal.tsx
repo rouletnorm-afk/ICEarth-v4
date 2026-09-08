@@ -46,6 +46,7 @@ import mirna31AxisImg from '../assets/images/mirna31_nrf2_lead_axis_178845491654
 import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_1788483881945.jpg';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
+import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import {
   Shield,
   UserCheck,
@@ -177,6 +178,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AV',
+      title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long (Plate #40)',
+      type: 'Used Battery Recycling (ULAB), Spices Adulteration & Pediatric Neurotoxicology IP Asset',
+      imageSrc: bangladeshLeadCrisisImg,
+      link: 'bangladesh_lead_crisis',
+      description: "Origins: Landmark investigative exposenomics plate and environmental health dispatch from The Daily Star / UNHEARD VOICES by Tagabun Taharim Titun. The BBS / UNICEF Multiple Indicator Cluster Survey (MICS 2025) reveals 38.34% of young children across Bangladesh and 65% in Dhaka suffer from elevated blood lead levels (≥ 5 µg/dL). Electric three-wheelers drive 60-65% of domestic lead-acid battery demand, powering over 1,100 informal recycling smelters. Contamination permeates everyday life through lead chromate in turmeric, toxic aluminum cookware, toys, and industrial emissions. Documents BMC Public Health 2026 Mirzapur soil remediation findings and highlights the dangerous absence of a single national reference testing laboratory under the Ministry of Health.",
+      sovereignHash: '0xBANGLADESH_LEAD_CRISIS_IGNORED_TOO_LONG_2026'
+    },
     {
       id: 'IP-000AU',
       title: 'Ghana\'s Silent Poison: Lead-Acid Battery Recycling, E-Waste & Severe Child Neurotoxicity in Greater Accra (Plate #39)',
