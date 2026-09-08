@@ -129,6 +129,7 @@ import { WhyICEarthMission } from './components/WhyICEarthMission';
 import { ICEarthStackIndigenousAI } from './components/ICEarthStackIndigenousAI';
 import { GhanaBatteryLeadCrisis } from './components/GhanaBatteryLeadCrisis';
 import { BangladeshLeadCrisisIgnored } from './components/BangladeshLeadCrisisIgnored';
+import { AiAndTheKehoeRule } from './components/AiAndTheKehoeRule';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -137,7 +138,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -381,6 +382,26 @@ export default function App() {
         lower.includes('gemini_testimonial')
       ) {
         setActiveTab('icearth_stack');
+      } else if (
+        lower === 'ai_and_kehoe_rule' ||
+        lower === 'ai-and-kehoe-rule' ||
+        lower === 'kehoe' ||
+        lower === 'kehoe_rule' ||
+        lower === 'kehoe-rule' ||
+        lower === 'ai_kehoe' ||
+        lower === 'ai-kehoe' ||
+        lower === 'lanphear' ||
+        lower === 'lanphear_kehoe' ||
+        lower === 'lanphear-kehoe' ||
+        lower === 'plate_41' ||
+        lower === 'plate41' ||
+        lower === 'ai_is_the_new_pb' ||
+        lower === 'pacing_the_frontier' ||
+        lower === 'hugging_face_breach' ||
+        lower.includes('kehoe') ||
+        lower.includes('lanphear')
+      ) {
+        setActiveTab('ai_and_kehoe_rule');
       } else if (
         lower === 'ghana_lead_poisoning' ||
         lower === 'ghana' ||
@@ -1209,6 +1230,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B2 ARTIFICIAL INTELLIGENCE AND THE KEHOE RULE (PLATE #41) */}
+                <button
+                  onClick={() => setActiveTab('ai_and_kehoe_rule')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-red-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-red-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-red-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'ai_and_kehoe_rule' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">⚖️ AI & The Kehoe Rule (Lanphear)</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #41
+                  </span>
+                </button>
+
                 {/* 0.00000C GHANA'S SILENT POISON: BATTERY RECYCLING & PEDIATRIC LEAD TOXICITY (PLATE #39) */}
                 <button
                   onClick={() => setActiveTab('ghana_lead_poisoning')}
@@ -1833,6 +1870,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Artificial Intelligence and the Kehoe Rule (Plate #41) */}
+                <button
+                  onClick={() => setActiveTab('ai_and_kehoe_rule')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-red-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'ai_and_kehoe_rule' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">⚖️ AI & The Kehoe Rule (Lanphear)</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #41
+                  </span>
+                </button>
+
                 {/* Ghana's Silent Poison: Lead-Acid Battery Recycling & Child Toxicity (Plate #39) */}
                 <button
                   onClick={() => setActiveTab('ghana_lead_poisoning')}
@@ -2371,6 +2424,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
+                    { id: 'ai_and_kehoe_rule', icon: Scale, label: '⚖️ AI & The Kehoe Rule (Lanphear)', badge: 'Plate #41', color: 'amber' },
                     { id: 'ghana_lead_poisoning', icon: AlertTriangle, label: '🇬🇭 Ghana Silent Poison: Battery Lead', badge: 'Plate #39', color: 'red' },
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'global_lead_crime_proof', icon: Crown, label: '👑 Global Lead-Crime Proof (8k Yr)', badge: 'Proof', color: 'red' },
@@ -2505,6 +2559,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
+              {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear') && '⚖️ AI & The Kehoe Rule: Bruce Lanphear Thesis (Plate #41)'}
               {(activeTab === 'ghana_lead_poisoning' || (activeTab as string) === 'ghana' || (activeTab as string) === 'ghana_silent_poison') && '🇬🇭 Ghana’s Silent Poison: Battery Recycling & Child Lead Crisis (Plate #39)'}
               {(activeTab === 'jicarilla_sovereign_it' || (activeTab as string) === 'jicarilla') && '🪶 Jicarilla Apache Sovereign IT'}
               {(activeTab === 'mirna31_nrf2_lead' || (activeTab as string) === 'mirna31' || (activeTab as string) === 'nrf2' || (activeTab as string) === 'plate_36') && '🧬 miRNA-31/Nrf2 Epigenetic Axis (AIIMS)'}
@@ -4160,6 +4215,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute' || (activeTab as string) === 'project_jupiter' || (activeTab as string) === 'plate_38' || (activeTab as string) === 'plate38') && (
             <div className="flex-1 overflow-y-auto">
               <ICEarthStackIndigenousAI 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B2: ARTIFICIAL INTELLIGENCE AND THE KEHOE RULE (PLATE #41) */}
+          {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear' || (activeTab as string) === 'lanphear_kehoe' || (activeTab as string) === 'ai_kehoe') && (
+            <div className="flex-1 overflow-y-auto">
+              <AiAndTheKehoeRule 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

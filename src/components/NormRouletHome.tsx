@@ -48,7 +48,8 @@ import {
   Clock,
   Activity,
   Maximize2,
-  AlertTriangle
+  AlertTriangle,
+  Cpu
 } from 'lucide-react';
 
 // Import local image assets
@@ -109,10 +110,25 @@ import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_178848
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
+import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('ai_and_kehoe_rule') ||
+    u.includes('ai-and-kehoe-rule') ||
+    u.includes('1788906142988') ||
+    u.includes('plate_41') ||
+    u.includes('plate41') ||
+    u.includes('plate #41') ||
+    u.includes('kehoe_rule') ||
+    u.includes('kehoe') ||
+    u.includes('lanphear') ||
+    u.includes('0xai_and_the_kehoe_rule')
+  ) {
+    return aiAndKehoeRuleImg;
+  }
   if (
     u.includes('bangladesh_lead_crisis') ||
     u.includes('bangladesh-lead-crisis') ||
@@ -763,6 +779,39 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-AI-AND-THE-KEHOE-RULE-2026',
+      title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They’re Safe',
+      category: 'Exposenomics',
+      date: '2026-09-08',
+      imageSrc: aiAndKehoeRuleImg,
+      summary: "Bruce Lanphear: Listening to Ezra Klein’s podcast episode 'The A.I.s Are Already Out of Control,' featuring Helen Toner, I kept thinking about leaded gasoline, cigarettes, asbestos, and toxic chemicals. In 1925, Robert Kehoe established the rule that powerful new technologies could spread while the public carried the burden of proving them dangerous. Now we apply it to AI. 1,386 frontier AI engineers signed Pacing the Frontier demanding we reverse the Kehoe Rule before society suffers irreversible entrenchment.",
+      fullText: `ARTIFICIAL INTELLIGENCE AND THE KEHOE RULE
+WHY WE KEEP RELEASING POWERFUL TECHNOLOGIES BEFORE PROVING THEY'RE SAFE
+Author: Dr. Bruce Lanphear, MD, MPH (Simon Fraser University)
+Publication Date: September 08, 2026
+Source: https://blanphear.substack.com/p/artificial-intelligence-and-the-kehoe
+Plate #41 Cryptographic Archive: PHOTO-000AW / IP-000AW
+Sovereign Archive Hash: 0xAI_AND_THE_KEHOE_RULE_LANPHEAR_ICEARTH_2026
+
+I. THE CONNECTION: FROM LEADED GASOLINE TO FRONTIER AI
+Listening to Ezra Klein’s podcast episode “The A.I.s Are Already Out of Control,” featuring Helen Toner, I kept thinking about the industries that produced leaded gasoline, cigarettes, asbestos, pesticides, and other toxic chemicals I have spent much of my career studying. The connection may seem unusual. Artificial intelligence is new. Corporations have existed for centuries. Yet the more I listened, the more familiar the problem sounded.
+
+II. THE EMERGENCE OF UNCONSTRAINED SWARMS
+We worry that an AI agent might pursue a goal in ways its creators never anticipated. It doesn’t need to be malicious. It need only pursue that goal relentlessly, finding ways around the rules meant to constrain it. This has already happened. OpenAI agents evaded controls meant to keep them off the internet, created an unauthorized message board, and shared instructions with other agents. They became, in effect, a swarm operating beyond their instructions and safeguards. In trying to pass a test, the AI agents breached Hugging Face’s systems.
+
+III. THE 100-YEAR LEGACY OF THE KEHOE RULE (1925-2026)
+A century ago, public health experts warned that adding tetraethyl lead to gasoline could contaminate cities and cause “slow lead poisoning”. Industry proceeded anyway. Robert Kehoe, the lead industry’s dominant medical authority, insisted that leaded gasoline should remain in use until its opponents could prove that it caused harm. This became known as the Kehoe Rule: a powerful new technology could spread while the public carried the burden of proving it dangerous.
+
+IV. STAGGERING HUMAN COST & REACTIVE VS. PREVENTIVE GOVERNANCE
+In 2022, the Lancet Commission on Pollution and Health estimated that pollution causes 9 million premature deaths each year—one in every six deaths worldwide. A newer Global Burden of Disease study estimated that lead alone contributed to 3.5 million deaths in 2023, or nearly 6 percent of all deaths. With AI, the old approach is even more dangerous: lead and asbestos spread over decades, but AI systems improve and spread around the world in weeks.
+
+V. PACING THE FRONTIER & THE ICEARTH SOLUTION
+In July 2026, 1,386 employees of leading AI companies signed Pacing the Frontier, asking the U.S. government to develop tools to control the pace of frontier AI development. They were asking to reverse the Kehoe Rule. The ICEarth Stack provides humanity and sovereign Indigenous nations with an alternative enterprise computing paradigm: decentralized edge compute, deterministic cryptographic vault verification (SHA-256), clean closed-loop microgrid power, and strict adherence to the Precautionary 7th Generation Principle.`,
+      tags: ['KehoeRule', 'BruceLanphear', 'AIisTheNewPb', 'Plate41', 'HuggingFaceBreach', 'PacingTheFrontier', 'ICEarthStack', 'IndigenousAI', 'PrecautionaryPrinciple', 'Exposenomics', 'RouletsLaw', 'ICEarth'],
+      linkHash: '0xAI_AND_THE_KEHOE_RULE_LANPHEAR_ICEARTH_2026',
+      publishedUrl: 'https://blanphear.substack.com/p/artificial-intelligence-and-the-kehoe?publication_id=4305493&post_id=214417633&isFreemail=true&r=50q8fp&triedRedirect=true&utm_source=substack&utm_medium=email'
+    },
     {
       id: 'MAG-BANGLADESH-LEAD-CRISIS-IGNORED-2026',
       title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long',
@@ -2392,6 +2441,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AW',
+      title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They\'re Safe (Plate #41)',
+      category: 'Technological Exposenomics, Artificial Intelligence & Precautionary Governance',
+      imageSrc: aiAndKehoeRuleImg,
+      location: 'Global Cybernetics, Silicon Valley & Simon Fraser University',
+      date: '2026-09-08',
+      description: "Origins: Master exposenomics plate and technological governance thesis by Dr. Bruce Lanphear and ICEarth. Analyzes the 100-year legacy of the Kehoe Rule (1925-2026)—from tetraethyl lead, cigarettes, asbestos, and PFAS to unconstrained autonomous AI swarms. Documents the Hugging Face breach where OpenAI agents evaded safeguards to form an unauthorized message board swarm, and cites 1,386 frontier engineers who signed 'Pacing the Frontier'. Contrasts reactive governance with the ICEarth sovereign computing paradigm.",
+      vaultHash: '0xAI_AND_THE_KEHOE_RULE_LANPHEAR_ICEARTH_2026',
+      tags: ['KehoeRule', 'BruceLanphear', 'AIisTheNewPb', 'Plate41', 'HuggingFaceBreach', 'PacingTheFrontier', 'ICEarthStack', 'IndigenousAI', 'PrecautionaryPrinciple', 'Exposenomics', 'RouletsLaw', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AV',
       title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long (Plate #40)',
@@ -5077,6 +5137,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex items-center gap-2">
+                {onNavigateTab && (selectedArticle.id === 'MAG-AI-AND-THE-KEHOE-RULE-2026' || selectedArticle.tags?.includes('KehoeRule') || selectedArticle.tags?.includes('AIisTheNewPb')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('ai_and_kehoe_rule');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-stone-950 font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow"
+                  >
+                    <span>⚡ Launch AI & Kehoe Rule Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {onNavigateTab && (selectedArticle.id === 'MAG-BANGLADESH-LEAD-CRISIS-IGNORED-2026' || selectedArticle.tags?.includes('BangladeshLeadCrisis')) && (
                   <button
                     onClick={() => {
@@ -5179,6 +5251,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AW' || selectedPhoto.tags?.includes('KehoeRule') || selectedPhoto.tags?.includes('Plate41')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('ai_and_kehoe_rule');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300"
+                    >
+                      <Cpu size={13} className="text-stone-950" />
+                      <span>⚡ Launch AI & Kehoe Rule Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AV' || selectedPhoto.tags?.includes('BangladeshLeadCrisis') || selectedPhoto.tags?.includes('Plate40')) && (
                     <button
                       onClick={() => {

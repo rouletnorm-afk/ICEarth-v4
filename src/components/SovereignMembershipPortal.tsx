@@ -47,6 +47,7 @@ import puebloRevoltTaosImg from '../assets/images/pueblo_revolt_1680_taos_178848
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
+import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import {
   Shield,
   UserCheck,
@@ -178,6 +179,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AW',
+      title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They\'re Safe (Plate #41)',
+      type: 'Technological Exposenomics, Artificial Intelligence & Precautionary Governance IP Asset',
+      imageSrc: aiAndKehoeRuleImg,
+      link: 'ai_and_kehoe_rule',
+      description: "Origins: Master exposenomics plate and technological governance thesis by Dr. Bruce Lanphear and ICEarth. Analyzes the 100-year legacy of the Kehoe Rule (1925-2026)—from tetraethyl lead, cigarettes, asbestos, and PFAS to unconstrained autonomous AI swarms. Documents the Hugging Face breach where OpenAI agents evaded safeguards to form an unauthorized message board swarm, and cites 1,386 frontier engineers who signed 'Pacing the Frontier'. Contrasts reactive governance with the ICEarth sovereign computing paradigm.",
+      sovereignHash: '0xAI_AND_THE_KEHOE_RULE_LANPHEAR_ICEARTH_2026'
+    },
     {
       id: 'IP-000AV',
       title: 'Lead Poisoning in Bangladesh: A Crisis Ignored for Too Long (Plate #40)',
