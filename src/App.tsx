@@ -131,6 +131,7 @@ import { GhanaBatteryLeadCrisis } from './components/GhanaBatteryLeadCrisis';
 import { BangladeshLeadCrisisIgnored } from './components/BangladeshLeadCrisisIgnored';
 import { AiAndTheKehoeRule } from './components/AiAndTheKehoeRule';
 import { RoanokeLeadAudit } from './components/RoanokeLeadAudit';
+import { JacksonLeadAudit } from './components/JacksonLeadAudit';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -139,7 +140,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -383,6 +384,23 @@ export default function App() {
         lower.includes('gemini_testimonial')
       ) {
         setActiveTab('icearth_stack');
+      } else if (
+        lower === 'jackson' ||
+        lower === 'jackson_water' ||
+        lower === 'jackson-water' ||
+        lower === 'jackson_lead' ||
+        lower === 'jackson_lead_audit' ||
+        lower === 'jackson-lead-audit' ||
+        lower === 'jackson_water_audit' ||
+        lower === 'jackson-water-audit' ||
+        lower === 'jackson_ms' ||
+        lower === 'sterling' ||
+        lower === 'sterling_v_jackson' ||
+        lower === 'plate_43' ||
+        lower === 'plate43' ||
+        lower.includes('jackson')
+      ) {
+        setActiveTab('jackson_lead_audit');
       } else if (
         lower === 'roanoke' ||
         lower === 'roanoke_lead_audit' ||
@@ -1838,6 +1856,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Jackson, MS Lead Water Audit & 5th Circuit En Banc Ruling (Plate #43) */}
+                <button
+                  onClick={() => setActiveTab('jackson_lead_audit')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'jackson_lead_audit' || (activeTab as string) === 'jackson' || (activeTab as string) === 'jackson_water' || (activeTab as string) === 'plate_43' || (activeTab as string) === 'plate43'
+                      ? 'bg-red-950 text-red-200 border-red-500 shadow-md font-bold ring-1 ring-red-400/50'
+                      : 'hover:bg-red-500/20 text-red-950 border-red-300/80 bg-red-50/90 font-bold'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'jackson_lead_audit' ? 'text-red-300 animate-pulse' : 'text-red-700'} />
+                  <span className="flex-1 font-bold">⚖️ Jackson MS Lead Water Audit</span>
+                  <span className="px-1.5 py-0.2 bg-red-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    PLATE #43
+                  </span>
+                </button>
+
                 {/* Bangladesh Lead-Free 2026-2035 National Strategy */}
                 <button
                   onClick={() => setActiveTab('bangladesh_lead_free')}
@@ -2486,6 +2520,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'flint', icon: Building2, label: '☣️ Flint Lead Audit & Scatterplots', badge: 'Audit', color: 'red' },
                     { id: 'twin_cities_lead', icon: Droplets, label: '💧 Minneapolis & St. Paul Lead Audit', badge: '612/651', color: 'amber' },
                     { id: 'roanoke_lead_audit', icon: Building2, label: '🏛️ Roanoke Lead Audit & HUD Remediation', badge: 'Plate #42', color: 'red' },
+                    { id: 'jackson_lead_audit', icon: Scale, label: '⚖️ Jackson MS Lead Water Audit', badge: 'Plate #43', color: 'red' },
                     { id: 'bangladesh_lead_free', icon: Globe, label: '🇧🇩 Bangladesh Lead-Free 2035 Strategy', badge: 'Cabinet', color: 'emerald' },
                     { id: 'bangladesh_lead_crisis', icon: AlertTriangle, label: '🇧🇩 Bangladesh Lead Crisis (Plate #40)', badge: 'Plate #40', color: 'red' },
                     { id: 'nigeria_heart_habitat', icon: HeartPulse, label: '🫀 Toxic Shadows: Heart-Habitat Nigeria', badge: 'UNN 249', color: 'rose' },
@@ -2587,6 +2622,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'flint' && '☣️ Flint Lead Audit & Scatterplots'}
               {(activeTab === 'twin_cities_lead' || (activeTab as string) === 'minneapolis' || (activeTab as string) === 'st_paul' || (activeTab as string) === 'twin_cities') && '💧 Minneapolis & St. Paul Lead Audit'}
               {(activeTab === 'roanoke_lead_audit' || (activeTab as string) === 'roanoke' || (activeTab as string) === 'roanoke_lead' || (activeTab as string) === 'plate_42' || (activeTab as string) === 'plate42') && '🏛️ Roanoke Lead Audit: $6.25M HUD Remediation (Plate #42)'}
+              {(activeTab === 'jackson_lead_audit' || (activeTab as string) === 'jackson' || (activeTab as string) === 'jackson_water' || (activeTab as string) === 'plate_43' || (activeTab as string) === 'plate43') && '⚖️ Jackson, MS Lead Water Audit: 5th Cir. Ruling (Plate #43)'}
               {(activeTab === 'bangladesh_lead_free' || (activeTab as string) === 'bangladesh' || (activeTab as string) === 'lead_free_2035') && '🇧🇩 Bangladesh Lead-Free 2035 Plan'}
               {(activeTab === 'bangladesh_lead_crisis' || (activeTab as string) === 'bangladesh_crisis' || (activeTab as string) === 'bangladesh_lead_crisis_ignored' || (activeTab as string) === 'plate_40' || (activeTab as string) === 'plate40') && '🇧🇩 Bangladesh Lead Crisis: A Crisis Ignored for Too Long (Plate #40)'}
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
@@ -4219,6 +4255,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'roanoke_lead_audit' || (activeTab as string) === 'roanoke' || (activeTab as string) === 'roanoke_lead' || (activeTab as string) === 'plate_42' || (activeTab as string) === 'plate42') && (
             <div className="flex-1 overflow-y-auto">
               <RoanokeLeadAudit 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.115C: JACKSON, MISSISSIPPI LEAD WATER AUDIT: 5TH CIR. EN BANC RULING & CORRUPTION AUDIT (PLATE #43) */}
+          {(activeTab === 'jackson_lead_audit' || (activeTab as string) === 'jackson' || (activeTab as string) === 'jackson_water' || (activeTab as string) === 'plate_43' || (activeTab as string) === 'plate43') && (
+            <div className="flex-1 overflow-y-auto">
+              <JacksonLeadAudit 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

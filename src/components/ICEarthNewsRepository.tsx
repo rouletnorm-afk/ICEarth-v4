@@ -48,6 +48,7 @@ import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_178856762
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
+import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -147,6 +148,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('jackson') ||
+    u.includes('jackson_water_audit') ||
+    u.includes('1788985202588') ||
+    u.includes('plate_43') ||
+    u.includes('plate43') ||
+    u.includes('plate #43') ||
+    u.includes('ob_curtis') ||
+    u.includes('siemens') ||
+    u.includes('0xjackson_water')
+  ) {
+    return jacksonWaterAuditImg;
+  }
   if (
     u.includes('roanoke') ||
     u.includes('roanoke_lead_audit') ||
@@ -712,6 +726,70 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-JACKSON-WATER-LEAD-AUDIT-2026',
+    contentType: 'Article',
+    title: 'Jackson Water Ruling Raises a Surprising Question: Is Clean Water a Right? The Fifth Circuit En Banc Decision & History of Corruption',
+    subtitle: 'Fifth Circuit En Banc (10-5) Rules "The Constitution Does Not Guarantee Clean Water" (Sterling v. City of Jackson) • Direct Circuit Split with Sixth Circuit Flint Decision (Guertin) • SDWA Statutory Rights vs 14th Amendment Bodily Integrity • Preserved State Tort & Contractor Malpractice Remedies • Decades of Racialized Disinvestment & The $90M Siemens Meter Catastrophe',
+    sourceUrl: 'https://www.yahoo.com/news/us/articles/jackson-water-ruling-raises-surprising-165812234.html',
+    sourceName: 'Yahoo News / Mississippi Today (Mainstream & Investigative Legal Coverage)',
+    publishDate: '2026-09-09',
+    author: 'Mississippi Today & Yahoo News Staff',
+    authorName: 'Mississippi Today & Yahoo News Staff, with Forensic Exposenomics Commentary by Norm Roulet (ICEarth)',
+    abstract: 'In a 10-5 en banc ruling in Sterling v. City of Jackson, the full U.S. Court of Appeals for the Fifth Circuit affirmed the dismissal of Jackson residents\' constitutional claims against city officials for catastrophic lead contamination of the municipal water system. The majority held that "the Constitution does not guarantee clean water" and refused to recognize Fourteenth Amendment substantive due process protections for exposure to contaminated drinking water. Five dissenting judges emphasized that the case closely mirrors the Flint water crisis, where the Sixth Circuit allowed bodily integrity claims to proceed under Guertin v. Michigan. While federal constitutional damages under Section 1983 were foreclosed, the Fifth Circuit explicitly confirmed that residents retain actionable rights under state tort law, contractor professional negligence claims, and federal Safe Drinking Water Act citizen enforcement.',
+    editorCommentary: 'Norm Roulet Exposenomics Commentary: The Fifth Circuit\'s ruling in Sterling v. City of Jackson lays bare the deep chasm in American jurisprudence between statutory environmental regulations and constitutional human rights. By holding that "the Constitution does not guarantee clean water," the Fifth Circuit created an irreconcilable circuit split with the Sixth Circuit\'s Flint decision (Guertin v. Michigan)—virtually guaranteeing a petition for certiorari to the United States Supreme Court under Rule 10(a). But the legal doctrine cannot be understood in isolation from the forensic history of political and financial corruption in Jackson. Over five decades, white flight stripped 80% of Jackson\'s tax base while the Mississippi Legislature consistently blocked municipal access to infrastructure bond financing and state revolving funds. Then came the catastrophic 2012 Siemens automated water meter contract—a $90M failure that crippled municipal billing, leaving over 50% of water unbilled and bleeding over $100M from utility revenues. Deprived of operational cash, the O.B. Curtis water treatment plant ceased consistent ortho-phosphate corrosion inhibitor dosing, stripping protective mineral scales and leaching lead directly from tens of thousands of aging lead service lines. Under Roulet\'s Law, the social and neurological cost of poisoning a generation of Jackson\'s children dwarfs the capital expenditure needed to replace every lead pipe in Mississippi. We establish Plate #43 and launch the Jackson Lead Water Audit Engine.',
+    fullExcerpt: `JACKSON WATER RULING RAISES A SURPRISING QUESTION: IS CLEAN WATER A RIGHT?
+The full Fifth Circuit upheld the dismissal of Jackson residents' constitutional claims over lead-contaminated drinking water.
+Legal Forensics, Constitutional Boundaries & History of Corruption Audit
+By Norm Roulet & Legal Correspondents
+Source: Mississippi Today / Yahoo News / Fifth Circuit Records (Sterling v. City of Jackson, No. 24-60126)
+Date: September 9, 2026
+Plate #43 Sovereign Cryptographic Archive: PHOTO-000AY / IP-000AY
+Vault Hash: 0xJACKSON_WATER_LEAD_AUDIT_FIFTH_CIRCUIT_2026
+
+I. THE EN BANC RULING: "THE CONSTITUTION DOES NOT GUARANTEE CLEAN WATER"
+A federal appeals court sided against Jackson, Mississippi residents who sued the city over lead-contaminated drinking water. In a 10-5 decision, the full Fifth U.S. Circuit Court of Appeals affirmed a lower court's dismissal of their claims, declaring that "the Constitution does not guarantee clean water."
+
+The proposed class-action lawsuit was filed in September 2022 by Jackson residents Priscilla Sterling, Raine Becker, Shawn Miller, and John Bennett amid the city's massive water crisis. It came weeks after a system failure left much of Jackson without reliable running water and just after officials lifted a nearly two-month boil-water notice. The residents alleged that city officials' decisions and failures allowed lead to leach into the public water supply and worsen the contamination.
+
+After a federal district court dismissed their constitutional claims in 2024, a three-judge Fifth Circuit panel revived portions of the case in November 2025. The full appeals court later vacated that decision, reheard the case en banc, and ultimately restored the dismissal. The complaint alleged that Jackson's problems stretched back years before the 2022 emergency, pointing to Mississippi State Department of Health (MSDH) testing from 2010 to 2013 showing lead levels "increasing at an alarming rate." Several of Sterling's children were later diagnosed with lead poisoning.
+
+Writing for the majority, Judge Kurt Engelhardt said the residents were asking the court to recognize constitutional protections against exposure to contaminated water and inaccurate information from public officials. The court declined, writing: "It is undisputed that the Constitution does not guarantee clean water." The majority determined that the alleged exposure did not fit within Supreme Court precedent protecting bodily integrity, which requires direct, affirmative state physical invasion.
+
+II. THE FIVE-JUDGE DISSENT & THE FLINT CIRCUIT SPLIT
+Five judges vigorously dissented. Writing for the minority, Judge Catharina Haynes stated that the allegations "mirror in various ways" the Flint water crisis. The Sixth U.S. Circuit Court of Appeals covering Michigan previously allowed Flint residents to pursue Fourteenth Amendment substantive due process claims after officials knowingly exposed them to lead-contaminated water (Guertin v. Michigan Dept of Environmental Quality, 912 F.3d 907).
+
+The Fifth Circuit majority acknowledged Guertin but said it was neither bound nor persuaded by the Sixth Circuit's reasoning. This creates an irreconcilable split between the Fifth and Sixth Circuits on whether state-sponsored neurotoxic water delivery violates fundamental constitutional rights—a prime candidate for U.S. Supreme Court certiorari review under Rule 10(a).
+
+III. CITIZEN RECOURSE & WHAT RIGHTS AMERICANS ACTUALLY HAVE
+The ruling does not grant water utilities impunity to poison citizens. The court established clear doctrinal boundaries:
+1. Statutory vs. Constitutional Protections: The federal Safe Drinking Water Act (SDWA) authorizes the EPA to set minimum health standards for tap water. Those statutory standards, however, do not create a fundamental constitutional right under Section 1983.
+2. Preserved State Tort Claims: The majority explicitly confirmed that Jackson residents can pursue state-law tort claims (negligence, gross negligence, nuisance, and breach of duty) and proceed under the Mississippi Tort Claims Act (MTCA).
+3. Private Contractor Liability: Private engineering consultants and technology contractors enjoy no sovereign immunity and remain subject to professional malpractice and product liability actions.
+4. Ongoing Federal Receivership: Jackson's water system remains under federal oversight pursuant to the November 2022 DOJ/EPA stipulated order managed by interim third-party manager Ted Henifin (JXN Water), with over $600M in federal infrastructure appropriations.
+
+IV. HISTORY OF CORRUPTION & CAPITAL STARVATION IN JACKSON
+The crisis was engineered by decades of political malfeasance:
+1. The $90 Million Siemens Fiasco (2012–2020): Jackson signed a $90M automated water meter contract with Siemens. Faulty meters and broken software meant over 50% of water went unbilled for years, causing over $100M in lost revenue and bankrupting routine water treatment maintenance.
+2. Racialized Tax Base Depletion: Decades of white flight shifted Jackson from majority white to >82% Black, while surrounding suburban counties drained capital and refused regional infrastructure compacts.
+3. State Legislative Hostility: The Mississippi state legislature repeatedly blocked Jackson from accessing local option sales taxes or clean water revolving loan funds, attempting instead to seize local municipal utilities through HB 1020 and SB 2343.
+4. Chemical Corrosion Collapse: Operating without funds, the O.B. Curtis water treatment plant ceased consistent ortho-phosphate corrosion inhibitor dosing, stripping the protective mineral passivation scale from decades-old lead service lines.
+
+Under Roulet's Law, failing to remediate municipal lead water infrastructure imposes billions in lifetime cognitive, behavioral, and economic damage on children—far exceeding the cost of full pipe replacement.`,
+    tags: ['JacksonWaterAudit', 'Plate43', 'FifthCircuit', 'IsCleanWaterARight', 'SterlingVJackson', 'FlintCircuitSplit', 'Guertin', 'SiemensScandal', 'OBCurtis', 'SafeDrinkingWaterAct', 'RouletsLaw', 'Exposenomics', 'ICEarth'],
+    communities: ['Mississippi Delta & Jackson', 'Exposenomics Research Hub', 'Constitutional Law Forum', 'Municipal Water Forensics'],
+    vaultHash: '0xJACKSON_WATER_LEAD_AUDIT_FIFTH_CIRCUIT_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Heavy Metals Forensics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'jackson_water_audit_1788985202588.jpg',
+    originState: 'Jackson, Mississippi',
+    provenanceHash: '0xJACKSON_WATER_LEAD_AUDIT_FIFTH_CIRCUIT_2026',
+    vaultRef: 'VAULT-JACKSON-WATER-FIFTH-CIRCUIT-2026',
+    viewCount: 3824,
+    readTime: '9 min read'
+  },
   {
     id: 'ART-ROANOKE-LEAD-AUDIT-2026',
     contentType: 'Article',
@@ -4200,6 +4278,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('JacksonWaterAudit') || article.id.includes('JACKSON-WATER-LEAD-AUDIT') || article.title?.includes('Jackson Water Ruling')) && (
+                      <button
+                        onClick={() => onNavigateTab('jackson_lead_audit')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Scale size={14} className="text-amber-300 animate-pulse" />
+                        <span>🏛️ Launch Jackson MS Lead Water Audit</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('RoanokeLeadAudit') || article.id.includes('ROANOKE-LEAD-AUDIT') || article.title?.includes('Roanoke Just Got')) && (
                       <button
                         onClick={() => onNavigateTab('roanoke_lead_audit')}

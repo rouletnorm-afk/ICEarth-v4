@@ -49,6 +49,7 @@ import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_178856762
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
+import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import {
   Shield,
   UserCheck,
@@ -180,6 +181,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AY',
+      title: 'Jackson, Mississippi Water Audit: 5th Circuit En Banc Ruling, Flint Precedent Split & History of Corruption (Plate #43)',
+      type: 'Constitutional Jurisprudence, Water Grid Exposenomics & Municipal Corruption IP Asset',
+      imageSrc: jacksonWaterAuditImg,
+      link: 'jackson_lead_audit',
+      description: "Origins: Landmark constitutional forensics and exposenomics plate documenting the full Fifth Circuit's 10-5 en banc decision in Sterling v. City of Jackson. Affirms dismissal of residents' substantive due process claims by holding that 'the Constitution does not guarantee clean water,' creating a direct circuit split with the Sixth Circuit's Flint decision (Guertin v. Michigan). Illustrates the chemical corrosion breakdown at O.B. Curtis, the $90M Siemens automated meter collapse, and preserved avenues for state tort claims, contractor malpractice litigation, and Safe Drinking Water Act citizen enforcement.",
+      sovereignHash: '0xJACKSON_WATER_LEAD_AUDIT_FIFTH_CIRCUIT_2026'
+    },
     {
       id: 'IP-000AX',
       title: 'Roanoke Lead Audit: $6.25 Million HUD Remediation, 27,913-Unit Housing Deficit & Roulet\'s Law (Plate #42)',
