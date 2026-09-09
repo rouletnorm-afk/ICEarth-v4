@@ -111,10 +111,24 @@ import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indi
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
+import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('roanoke') ||
+    u.includes('roanoke_lead_audit') ||
+    u.includes('1788983122792') ||
+    u.includes('plate_42') ||
+    u.includes('plate42') ||
+    u.includes('plate #42') ||
+    u.includes('rambler') ||
+    u.includes('hud_6.25m') ||
+    u.includes('0xroanoke_lead_audit')
+  ) {
+    return roanokeLeadAuditImg;
+  }
   if (
     u.includes('ai_and_kehoe_rule') ||
     u.includes('ai-and-kehoe-rule') ||
@@ -779,6 +793,42 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-ROANOKE-LEAD-AUDIT-2026',
+      title: 'Roanoke Just Got $6.25 Million to Rip the Lead Out of Its Oldest Houses. Here’s What That Actually Means',
+      category: 'Exposenomics',
+      date: '2026-09-09',
+      imageSrc: roanokeLeadAuditImg,
+      summary: "The Roanoke Rambler: The city already knows where the poison lives. The question was always whether it had the money to go remove it. Roanoke's housing stock is among the oldest in Virginia, with 27,913 pre-1978 units. A new $6.25M HUD grant remediates 150 homes—meaningful progress, but leaving 2,921 urgent high-risk units occupied by toddlers. Pediatricians detect 74 lead-poisoned children—a 9x undercount over state surveillance (8 kids). Independent journalism proves Roulet's Law: remediation delivers a 3x–6x return in lifetime earnings ($20M–$40M) and protects children's brains.",
+      fullText: `ROANOKE JUST GOT $6.25 MILLION TO RIP THE LEAD OUT OF ITS OLDEST HOUSES. HERE'S WHAT THAT ACTUALLY MEANS
+The city already knows where the poison lives. The question was always whether it had the money to go remove it.
+Author: The Roanoke Rambler Staff
+Publication Date: September 9, 2026
+Source: https://www.roanokerambler.com/roanoke-just-got-6-25-million-to-rip-the-lead-out-of-its-oldest-houses-heres-what-that-actually-means/
+Plate #42 Cryptographic Archive: PHOTO-000AX / IP-000AX
+Sovereign Archive Hash: 0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026
+
+I. THE GRANT & ROANOKE'S 100-YEAR REMEDIATION DEFICIT
+Roanoke has one of the oldest housing stocks in Virginia: roughly 80% of owner-occupied homes and 76% of rentals were built before 1980 (the government proxy for before the 1978 lead paint ban). On September 8, 2026, the City announced a $6.25 million grant from HUD's Office of Lead Hazard Control and Healthy Homes to remediate up to 150 homes over three years via Lead Safe Roanoke. 
+According to Roanoke's own filings with HUD:
+- 27,913 housing units in the target area were built before 1978.
+- 11,383 were built before 1940 (carrying the highest concentrations of lead carbonate).
+- 13,042 units are currently occupied by low-to-moderate income residents and contain lead-based paint.
+- 2,921 of those are classified as "high-risk LBP units" with peeling/chipping paint and young children.
+At the past pace of 85 homes per three years, Roanoke would need 34 more grants and roughly a century (103 years) just to reach the 2,921 high-risk homes alone. This $6.25M award knocks out 150. Meaningful progress, but far from a finish line.
+
+II. THE TESTING SURVEILLANCE GAP: 8 VS. 74
+The city's own data reports two figures for children under 6 with elevated blood lead:
+- 8 kids (1%) by U.S. Census / Virginia Department of Health data
+- 74 kids (1%) by local pediatricians' data
+The gap between those two numbers—8 vs 74—is the story. State surveillance systems are notoriously under-testing. Local pediatricians catching nine times more cases than the state count proves the true number of exposed kids is severely undercounted. In March 1994, Roanoke fenced off 27 pieces of playground equipment after more than a third exceeded federal 0.5% lead thresholds. 32 years later, children sleep under the same paint.
+
+III. ROULET'S LAW & THE ECONOMIC RETURN
+Whole-home abatement costs $10,000 to $30,000, exceeding $50,000 for extensive interior trim and sash windows ($600–$1,200 each). A working-class family cannot write a $25,000 check. Eliminating childhood lead hazards yields $84 billion per U.S. birth cohort in lifetime earnings (Health Impact Project / CDC). Applied at Roanoke's scale, protecting even a few dozen children generates $20 million to $40 million in local economic return—a 3x to 6x ROI over 60 years in higher graduation rates, wages, and reduced juvenile justice and special education expenditures across the West End, Melrose, Belmont, and Hurt Park.`,
+      tags: ['RoanokeLeadAudit', 'RoanokeRambler', 'Plate42', 'HUDGrant', 'LeadSafeRoanoke', 'RouletsLaw', 'SurveillanceGap', 'PediatricNeurotoxicity', 'HousingMath', 'Exposenomics', 'ICEarth'],
+      linkHash: '0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026',
+      publishedUrl: 'https://www.roanokerambler.com/roanoke-just-got-6-25-million-to-rip-the-lead-out-of-its-oldest-houses-heres-what-that-actually-means/'
+    },
     {
       id: 'MAG-AI-AND-THE-KEHOE-RULE-2026',
       title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They’re Safe',
@@ -2441,6 +2491,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AX',
+      title: 'Roanoke Lead Audit: $6.25 Million HUD Remediation, 27,913-Unit Housing Deficit & Roulet\'s Law (Plate #42)',
+      category: 'Municipal Lead Audit, Housing Exposenomics & Independent Journalism',
+      imageSrc: roanokeLeadAuditImg,
+      location: 'Roanoke, Virginia (West End, Belmont, Melrose, Hurt Park)',
+      date: '2026-09-09',
+      description: "Origins: Investigative exposenomics plate and empirical municipal audit by The Roanoke Rambler Staff and ICEarth. Documents the City of Roanoke's $6.25 million HUD grant to remediate 150 homes against a reality of 27,913 pre-1978 units (including 11,383 pre-1940 units and 2,921 high-risk homes with toddlers). Exposes the severe surveillance gap between Virginia Department of Health records (8 children) and clinical pediatricians (74 children)—a 9x undercount. Details Roulet's Law: whole-home abatement yields $20M–$40M in preserved lifetime earnings (3x–6x ROI), proving that withholding remediation funds is fiscal suicide.",
+      vaultHash: '0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026',
+      tags: ['RoanokeLeadAudit', 'RoanokeRambler', 'Plate42', 'HUDGrant', 'LeadSafeRoanoke', 'RouletsLaw', 'SurveillanceGap', 'PediatricNeurotoxicity', 'VirginiaHealth', 'Exposenomics', 'ICEarth']
+    },
     {
       id: 'PHOTO-000AW',
       title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They\'re Safe (Plate #41)',
@@ -5137,6 +5198,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex items-center gap-2">
+                {onNavigateTab && (selectedArticle.id === 'MAG-ROANOKE-LEAD-AUDIT-2026' || selectedArticle.tags?.includes('RoanokeLeadAudit') || selectedArticle.tags?.includes('RoanokeRambler')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('roanoke_lead_audit');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-stone-950 font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow"
+                  >
+                    <span>🏛️ Launch Roanoke Lead Audit Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {onNavigateTab && (selectedArticle.id === 'MAG-AI-AND-THE-KEHOE-RULE-2026' || selectedArticle.tags?.includes('KehoeRule') || selectedArticle.tags?.includes('AIisTheNewPb')) && (
                   <button
                     onClick={() => {
@@ -5251,6 +5324,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AX' || selectedPhoto.tags?.includes('RoanokeLeadAudit') || selectedPhoto.tags?.includes('Plate42')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('roanoke_lead_audit');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300"
+                    >
+                      <AlertTriangle size={13} className="text-stone-950" />
+                      <span>🏛️ Launch Roanoke Lead Audit Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AW' || selectedPhoto.tags?.includes('KehoeRule') || selectedPhoto.tags?.includes('Plate41')) && (
                     <button
                       onClick={() => {

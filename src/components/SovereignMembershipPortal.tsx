@@ -48,6 +48,7 @@ import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indi
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
+import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import {
   Shield,
   UserCheck,
@@ -179,6 +180,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AX',
+      title: 'Roanoke Lead Audit: $6.25 Million HUD Remediation, 27,913-Unit Housing Deficit & Roulet\'s Law (Plate #42)',
+      type: 'Municipal Lead Audit, Housing Exposenomics & Independent Journalism IP Asset',
+      imageSrc: roanokeLeadAuditImg,
+      link: 'roanoke_lead_audit',
+      description: "Origins: Investigative exposenomics plate and empirical municipal audit by The Roanoke Rambler Staff and ICEarth. Documents the City of Roanoke's $6.25 million HUD grant to remediate 150 homes against a reality of 27,913 pre-1978 units (including 11,383 pre-1940 units and 2,921 high-risk homes with toddlers). Exposes the severe surveillance gap between Virginia Department of Health records (8 children) and clinical pediatricians (74 children)—a 9x undercount. Details Roulet's Law: whole-home abatement yields $20M–$40M in preserved lifetime earnings (3x–6x ROI), proving that withholding remediation funds is fiscal suicide.",
+      sovereignHash: '0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026'
+    },
     {
       id: 'IP-000AW',
       title: 'Artificial Intelligence and the Kehoe Rule: Why We Keep Releasing Powerful Technologies Before Proving They\'re Safe (Plate #41)',

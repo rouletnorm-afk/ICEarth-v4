@@ -47,6 +47,7 @@ import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indi
 import ghanaSilentPoisonImg from '../assets/images/ghana_silent_poison_1788567620598.jpg';
 import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_1788864698233.jpg';
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
+import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -146,6 +147,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('roanoke') ||
+    u.includes('roanoke_lead_audit') ||
+    u.includes('1788983122792') ||
+    u.includes('plate_42') ||
+    u.includes('plate42') ||
+    u.includes('plate #42') ||
+    u.includes('rambler') ||
+    u.includes('hud_6.25m') ||
+    u.includes('0xroanoke_lead_audit')
+  ) {
+    return roanokeLeadAuditImg;
+  }
   if (
     u.includes('ai_and_kehoe_rule') ||
     u.includes('ai-and-kehoe-rule') ||
@@ -698,6 +712,59 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-ROANOKE-LEAD-AUDIT-2026',
+    contentType: 'Article',
+    title: 'Roanoke Just Got $6.25 Million to Rip the Lead Out of Its Oldest Houses. Here’s What That Actually Means',
+    subtitle: 'The Roanoke Rambler Investigation: The city already knows where the poison lives. The question was always whether it had the money to go get it • 27,913 Pre-1978 Housing Units • 103-Year Remediation Deficit • Surveillance Gap: 8 State Cases vs 74 Pediatrician Cases (9x Undercount) • Roulet\'s Law: $20M–$40M Economic Return (3x–6x ROI)',
+    sourceUrl: 'https://www.roanokerambler.com/roanoke-just-got-6-25-million-to-rip-the-lead-out-of-its-oldest-houses-heres-what-that-actually-means/',
+    sourceName: 'The Roanoke Rambler (Independent Investigative Journalism)',
+    publishDate: '2026-09-09',
+    author: 'The Roanoke Rambler Staff',
+    authorName: 'The Roanoke Rambler Staff & Norm Roulet (ICEarth)',
+    abstract: 'Roanoke has one of the oldest housing stocks in Virginia: roughly 80% of owner-occupied homes and 76% of rentals were built before 1980. On September 8, 2026, the City announced a $6.25 million grant from HUD\'s Office of Lead Hazard Control and Healthy Homes to remediate up to 150 homes over three years via Lead Safe Roanoke. Yet the city\'s own HUD filings document 27,913 pre-1978 units, 11,383 pre-1940 homes, 13,042 low-income units with lead-based paint, and 2,921 high-risk units with toddlers and peeling paint. At the past pace of 85 homes per three years, Roanoke would require over 100 years to reach the high-risk homes alone. Furthermore, state health surveillance reports only 8 poisoned kids (1%) while local pediatricians report 74 kids—a 9x undercount proving that passive testing masks an epidemic.',
+    editorCommentary: 'Norm Roulet Exposenomics Commentary: The Roanoke Rambler\'s investigation proves Roulet\'s Law in every dimension: the physics of friction on old double-hung sash windows generating microscopic lead dust, the predatory economics of low-income rental markets where landlords defer maintenance, and the total failure of passive government surveillance. When clinical pediatricians detect 74 lead-poisoned children while state health databases record only 8, the state is effectively blindfolded. More critically, the economics are irrefutable: whole-home lead abatement costs $10,000–$30,000 per home, but preventing childhood lead poisoning yields $84 billion per national birth cohort. In Roanoke, remediating these homes generates a 3x to 6x return ($20M–$40M) in lifetime earnings, reduced special education, and lower criminal justice costs. This independent audit is the exact empirical data model ICEarth needs. We publish Plate #42 and launch the Roanoke Lead Audit Engine.',
+    fullExcerpt: `ROANOKE JUST GOT $6.25 MILLION TO RIP THE LEAD OUT OF ITS OLDEST HOUSES. HERE'S WHAT THAT ACTUALLY MEANS
+The city already knows where the poison lives. The question was always whether it had the money to go get it.
+Author: The Roanoke Rambler Staff
+Publication Date: September 9, 2026
+Source: https://www.roanokerambler.com/roanoke-just-got-6-25-million-to-rip-the-lead-out-of-its-oldest-houses-heres-what-that-actually-means/
+Plate #42 Cryptographic Archive: PHOTO-000AX / IP-000AX
+Sovereign Archive Hash: 0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026
+
+I. THE $6.25 MILLION GRANT & THE HOUSING ARITHMETIC
+Roanoke has one of the oldest housing stocks in Virginia: roughly 80% of owner-occupied homes and 76% of rentals were built before 1980 (the government proxy for before the 1978 lead paint ban). On September 8, 2026, the City announced a $6.25 million grant from the U.S. Department of Housing and Urban Development (HUD) through its Lead Hazard Reduction Grant program. Administered by Lead Safe Roanoke, the program aims to remediate up to 150 homes over three years.
+According to the city's grant application:
+• 27,913 housing units in the target area were built before 1978.
+• 11,383 were built before 1940 (carrying the highest concentrations of lead carbonate).
+• 13,042 units are currently occupied by low-to-moderate income residents and contain lead-based paint.
+• 2,921 of those are classified as "high-risk LBP units" with peeling or chipping paint and young children under age 6 living there.
+At Roanoke's past pace of 85 homes per three-year grant cycle, reaching those 2,921 high-risk homes would require 34 more grants and roughly a century (103 years). This new grant doubles the pace to 150 homes, but still addresses only 5.1% of the urgent priority tier.
+
+II. THE SURVEILLANCE GAP: 8 VS. 74
+The city's own data reports two figures for children under 6 with elevated blood lead levels:
+• 8 kids (1%) by U.S. Census / Virginia Department of Health data
+• 74 kids (1%) by local pediatricians' data
+The gap between those two numbers—8 vs 74—is the story. State surveillance systems are notoriously under-testing. Local pediatricians catching nine times more cases than the state count proves the true number of exposed kids is severely undercounted. Because children rarely receive universal capillary screenings at 12 and 24 months, thousands of children pass through developmental windows without diagnosis.
+
+III. PLAYGROUND PARKS & HISTORIC EXPOSURE
+In March 1994, the City of Roanoke fenced off 27 pieces of playground equipment in municipal parks after testing found that more than a third exceeded federal thresholds for lead paint (0.5% lead by weight). Thirty-two years later, children who played on those parks are raising their own children in homes built with the same paint. Lead is an immutable chemical element; it does not degrade, evaporate, or metabolize.
+
+IV. ROULET'S LAW & THE RETURN ON REMEDIATION
+Whole-home abatement costs between $10,000 and $30,000, and can exceed $50,000 for extensive historic millwork, trim, and sash window replacements ($600 to $1,200 per window). A working-class family cannot write a $25,000 check. Eliminating childhood lead hazards yields $84 billion per U.S. birth cohort in lifetime earnings (Health Impact Project / CDC). In Roanoke, every dollar invested in whole-home remediation yields $3.10 to $6.20 in preserved lifetime earnings, reduced special education, and lower juvenile justice expenditures—generating $20 million to $40 million in local economic benefit.`,
+    tags: ['RoanokeLeadAudit', 'RoanokeRambler', 'Plate42', 'HUDGrant', 'LeadSafeRoanoke', 'RouletsLaw', 'SurveillanceGap', 'PediatricNeurotoxicity', 'HousingMath', 'Exposenomics', 'ICEarth'],
+    communities: ['Virginia Health Network', 'Exposenomics Research Hub', 'Municipal Housing Forensics', 'Pediatric Toxicology'],
+    vaultHash: '0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Heavy Metals Forensics Director',
+    featured: true,
+    promotedToHomePage: true,
+    imageUrl: 'roanoke_lead_audit_1788983122792.jpg',
+    originState: 'Roanoke, Virginia',
+    provenanceHash: '0xROANOKE_LEAD_AUDIT_RAMBLER_HUD_2026',
+    vaultRef: 'VAULT-ROANOKE-RAMBLER-HUD-2026',
+    sourceType: 'Independent Journalism & Municipal Lead Audit'
+  },
   {
     id: 'ART-AI-AND-THE-KEHOE-RULE-2026',
     contentType: 'Article',
@@ -4133,6 +4200,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('RoanokeLeadAudit') || article.id.includes('ROANOKE-LEAD-AUDIT') || article.title?.includes('Roanoke Just Got')) && (
+                      <button
+                        onClick={() => onNavigateTab('roanoke_lead_audit')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <AlertTriangle size={14} className="text-amber-300 animate-pulse" />
+                        <span>🏛️ Launch Roanoke Lead Audit Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('KehoeRule') || article.id.includes('AI-AND-THE-KEHOE-RULE') || article.title?.includes('Kehoe Rule')) && (
                       <button
                         onClick={() => onNavigateTab('ai_and_kehoe_rule')}
