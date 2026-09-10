@@ -49,6 +49,7 @@ import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_178
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
+import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -100,7 +101,8 @@ import {
   Flame,
   Pill,
   Cpu,
-  Droplets
+  Droplets,
+  Skull
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video' | 'Research';
@@ -148,6 +150,20 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('existential') ||
+    u.includes('continuum') ||
+    u.includes('ai_existential_risk') ||
+    u.includes('1789014098693') ||
+    u.includes('plate_44') ||
+    u.includes('plate44') ||
+    u.includes('plate #44') ||
+    u.includes('coxon') ||
+    u.includes('anthropic_resignation') ||
+    u.includes('0xcontinuum_of_failure')
+  ) {
+    return aiExistentialRiskImg;
+  }
   if (
     u.includes('jackson') ||
     u.includes('jackson_water_audit') ||
@@ -726,6 +742,68 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-AI-EXISTENTIAL-RISK-CONTINUUM-2026',
+    contentType: 'Article',
+    title: 'A Researcher Warned AI Could End Humanity. Congress Is Starting to Freak Out: The Continuum of Failure from Pb to AI',
+    subtitle: 'Anthropic / OpenAI Whistleblower Jacob Coxon Resigns: "Could Kill Us All by the End of the Decade" • Congress In Bipartisan Panic Over Uncontrolled Frontier Models • The 100-Year Continuum of Failure from Tetraethyl Lead (Pb) to Autonomous AI • Chemical vs Informational Impairment • The Kehoe Rule Reincarnate • ICEarth Sovereign Architecture as Solution',
+    sourceUrl: 'https://www.usatoday.com/story/news/politics/2026/09/09/congress-reaction-anthropic-ai-warning-end-humanity/91675031007/?utm_source=firefox-newtab-en-us',
+    sourceName: 'USA Today / Politics (Washington Bureau)',
+    publishDate: '2026-09-09',
+    author: 'USA Today Washington Bureau & AI Correspondents',
+    authorName: 'USA Today Washington Bureau, with Forensic Exposenomics Commentary by Norm Roulet (ICEarth)',
+    abstract: 'Following the dramatic public resignation of Anthropic and OpenAI safety researcher Jacob Coxon—who warned that frontier AI labs are "racing straight to self-improving superintelligence... gambling with our lives... and could kill us all by the end of the decade"—Congress erupted in bipartisan alarm. Representative Jay Obernolte (R-CA) and Representative Ted Lieu (D-CA) issued urgent appeals for special sessions and emergency statutory guardrails. Mainstream media and tech executives blame the algorithm for threatening human extinction, describing AI as an existential peril unlike any other human activity. But this analysis is fundamentally backwards: humanity already poisoned the entire planetary biosphere with element 82 (Pb), causing multi-generational brain damage, impulse control collapse, violent crime waves, and cardiovascular slaughter. The same humanity that suffered chemical impairment for a century is now inflicting computational impairment through addictive algorithmic feedback loops and unaccountable frontier AI. The true existential threat is humanity\'s systemic inability to take institutional responsibility for its technologies—from leaded gasoline to artificial intelligence.',
+    editorCommentary: 'Norm Roulet Exposenomics Commentary: When Anthropic safety researcher Jacob Coxon warns Congress that artificial intelligence could "kill us all by the end of the decade," he describes a dynamic that ICEarth has documented for decades: the Kehoe Rule reincarnated in Silicon Valley. Under Robert Kehoe\'s 1925 doctrine, corporations released hundreds of millions of tons of tetraethyl lead into the air and water, demanding that victims "prove harm with absolute clinical certainty" before any regulation could be enacted. It took 70 years to ban leaded gasoline, leaving the entire global population cognitively and neurologically compromised. Today, frontier AI corporations deploy recursive self-improving models using the exact same playbook: privatize trillion-dollar capital gains, externalize existential risk onto 8 billion humans, and suppress internal safety whistleblowers. The claim that AI is uniquely perilous ignores the fact that humanity has already caused a global, irreversible neurotoxic holocaust with chemistry. The threat of AI does not arise from silicon; it arises from humanity\'s refusal to govern technological power with precautionary discipline. ICEarth\'s decentralized, air-gapped, community-sovereign computing stack proves that intelligence can be deployed without corporate monopoly capture or planetary roulette.',
+    fullExcerpt: `A RESEARCHER WARNED AI COULD END HUMANITY. CONGRESS IS STARTING TO FREAK OUT.
+A Republican called on Congress to convene a special session on AI guardrails. A Democrat pleaded with his colleagues to "wake up" to an "emergency."
+By USA Today Washington Bureau & Legal Correspondents
+Source: USA Today (Sep 9, 2026) / Resignation Record of Jacob Coxon
+Date: September 9, 2026
+Plate #44 Sovereign Cryptographic Archive: PHOTO-000AZ / IP-000AZ
+Vault Hash: 0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026
+
+I. THE WHISTLEBLOWER WARNING: "KILL US ALL BY THE END OF THE DECADE"
+WASHINGTON — Members of Congress are expressing alarm over a scary new warning from an artificial intelligence researcher that the technology could "kill us all by the end of the decade."
+
+The plea, which came in a sudden public resignation from an Anthropic employee named Jacob Coxon, immediately prompted demands from lawmakers for an emergency intervention, including potential hearings and the consideration of legislation to pause or slow AI development.
+
+Coxon said in a viral Sept. 8 post that after spending the last three years doing research at both OpenAI and Anthropic, what he saw terrified him:
+"They are racing straight to self-improving superintelligence and gambling with our lives. The people building AI earnestly believe that it could kill us all by the end of the decade. This is not a marketing stunt ... No other human activity poses this level of danger."
+
+He went on to urge the federal government to mandate that frontier AI companies pause development for several years.
+
+II. BIPARTISAN ALARM ERUPTS ON CAPITOL HILL
+Coxon's message quickly reverberated among lawmakers who have raised concerns about the potential harms of AI. 
+
+Representative Jay Obernolte (R-CA), the chair of the House Task Force on AI, said: "When you hear statements like this from senior researchers inside frontier labs, it is imperative that Congress listen. We must examine whether current safety benchmarks are adequate to prevent catastrophic misuse or loss of control."
+
+Representative Ted Lieu (D-CA) pleaded with his colleagues: "This is an emergency. We cannot wait for a catastrophe before establishing statutory guardrails. We need mandatory independent third-party audits, verifiable red-teaming, and criminal liability for reckless deployment."
+
+Representative Ro Khanna (D-CA) noted: "We cannot allow a handful of venture-backed monopolies to gamble with the future of human civilization behind closed doors."
+
+III. THE DEEPER REALITY: THE CONTINUUM OF FAILURE FROM PB TO AI
+Mainstream analysts treat AI as a sudden anomaly. But forensic exposenomics reveals that AI risk is simply the latest chapter in an unbroken 100-year continuum of human governance failure:
+
+1. THE CHEMICAL PRECEDENT (1925–1986): Under the Kehoe Rule, General Motors, DuPont, and Standard Oil dumped 100+ million tons of neurotoxic lead into the global atmosphere. The resulting brain damage and impulse control deficits fueled the 1960–1990 global violent crime waves.
+2. THE INFORMATIONAL PHASE (2010–2024): The same socio-technical systems deployed algorithmic social feeds optimized for outrage, destroying democratic consensus and attention spans.
+3. THE AUTONOMOUS FRONTIER (2025–2030): Now, recursive self-improving models are deployed before proving safety, with labs explicitly acknowledging extinction risks while accelerating development.
+
+The root cause is humanity's refusal to accept accountability for technological power. ICEarth's sovereign, air-gapped, decentralized architecture stands as the only viable antidote to centralized corporate catastrophe.`,
+    imageUrl: aiExistentialRiskImg,
+    provenanceHash: '0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026',
+    vaultRef: 'PHOTO-000AZ / IP-000AZ',
+    sourceType: 'Mainstream Investigative & Forensic Sovereign Legal Audit',
+    promotedToHomePage: true,
+    viewCount: 14820,
+    readTime: '9 min read',
+    tags: ['AIExistentialRisk', 'AnthropicResignation', 'JacobCoxon', 'USAToday', 'CongressEmergency', 'KehoeRule', 'PbToAI', 'ContinuumOfFailure', 'RouletsLaw', 'ICEarthStack', 'Plate44'],
+    communities: ['Global Exposenomics Hub', 'AI Safety & Governance Council', 'Congress AI Task Force', 'ICEarth Sovereign Computing'],
+    vaultHash: '0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Heavy Metals Forensics Director',
+    featured: true,
+    originState: 'Washington, D.C. / Capitol Hill'
+  },
   {
     id: 'ART-JACKSON-WATER-LEAD-AUDIT-2026',
     contentType: 'Article',
@@ -4278,6 +4356,17 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {onNavigateTab && (article.tags?.includes('AIExistentialRisk') || article.id.includes('AI-EXISTENTIAL-RISK') || article.title?.includes('Researcher Warned AI') || article.title?.includes('Continuum of Failure')) && (
+                      <button
+                        onClick={() => onNavigateTab('ai_existential_risk')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Skull size={14} className="text-red-400 animate-pulse" />
+                        <span>⚡ Launch AI & Continuum of Failure Engine</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('JacksonWaterAudit') || article.id.includes('JACKSON-WATER-LEAD-AUDIT') || article.title?.includes('Jackson Water Ruling')) && (
                       <button
                         onClick={() => onNavigateTab('jackson_lead_audit')}

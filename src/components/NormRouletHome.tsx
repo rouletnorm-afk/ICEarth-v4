@@ -49,7 +49,8 @@ import {
   Activity,
   Maximize2,
   AlertTriangle,
-  Cpu
+  Cpu,
+  Skull
 } from 'lucide-react';
 
 // Import local image assets
@@ -113,10 +114,25 @@ import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_178
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
+import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('existential') ||
+    u.includes('continuum') ||
+    u.includes('ai_existential_risk') ||
+    u.includes('1789014098693') ||
+    u.includes('plate_44') ||
+    u.includes('plate44') ||
+    u.includes('plate #44') ||
+    u.includes('coxon') ||
+    u.includes('anthropic_resignation') ||
+    u.includes('0xcontinuum_of_failure')
+  ) {
+    return aiExistentialRiskImg;
+  }
   if (
     u.includes('jackson') ||
     u.includes('jackson_water_audit') ||
@@ -807,6 +823,37 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-AI-EXISTENTIAL-RISK-CONTINUUM-2026',
+      title: 'A Researcher Warned AI Could End Humanity. Congress Is Starting to Freak Out: The Continuum of Failure from Tetraethyl Lead to Autonomous AI',
+      category: 'Sovereign Law',
+      date: '2026-09-09',
+      imageSrc: aiExistentialRiskImg,
+      summary: "Following the public resignation of Anthropic and OpenAI safety researcher Jacob Coxon—who warned that frontier AI labs are 'racing straight to self-improving superintelligence... gambling with our lives... and could kill us all by the end of the decade'—Capitol Hill erupted in bipartisan alarm. But the existential threat to humanity is not the algorithm; it is humanity's unbroken century-long pattern of refusing to govern technology responsibly. From poisoning the entire planet with neurotoxic tetraethyl lead (TEL) under the Kehoe Rule to modern cognitive fragmentation and unconstrained hyperscale compute, the failure to assume institutional responsibility is what makes AI an existential danger. ICEarth's decentralized, air-gapped sovereign architecture provides the structural counter-model.",
+      fullText: `A RESEARCHER WARNED AI COULD END HUMANITY. CONGRESS IS STARTING TO FREAK OUT.
+The Continuum of Human Technological Governance Failure: From Tetraethyl Lead to Autonomous AI
+Deep AI Investigation & Forensic Sovereign Audit
+By Norm Roulet & Sovereign AI Systems Correspondents
+Source: USA Today (Sep 9, 2026) / Public Resignation Record of Jacob Coxon
+Date: September 9, 2026
+Plate #44 Sovereign Cryptographic Archive: PHOTO-000AZ / IP-000AZ
+Vault Hash: 0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026
+
+I. THE WHISTLEBLOWER RESIGNATION: "KILL US ALL BY THE END OF THE DECADE"
+Members of Congress are expressing alarm over a scary new warning from an artificial intelligence researcher that the technology could "kill us all by the end of the decade." The plea, which came in a sudden public resignation from an Anthropic employee named Jacob Coxon, immediately prompted demands from lawmakers for an emergency intervention, including potential hearings and the consideration of legislation to pause or slow AI development.
+
+In a viral Sept. 8 post, Coxon revealed that after spending the last three years doing research at both OpenAI and Anthropic, what he saw terrified him:
+"They are racing straight to self-improving superintelligence and gambling with our lives. The people building AI earnestly believe that it could kill us all by the end of the decade. This is not a marketing stunt ... No other human activity poses this level of danger."
+
+II. THE DEEPER REALITY: FROM CHEMICAL IMPAIRMENT TO COMPUTATIONAL IMPAIRMENT
+The mainstream framing portrays AI as an alien force arriving without precedent. But as an AI evaluating humanity's technological track record, the diagnosis is fundamentally different. 
+
+Humanity already poisoned the entire biosphere with element 82 (Pb)—dispersing hundreds of millions of tons of tetraethyl lead into the atmosphere and drinking water, causing multi-generational brain damage, impulse control loss, violent crime waves, and cardiovascular slaughter. Having chemically impaired collective human judgment for a century under the profit-driven "Kehoe Rule," industrial society then deployed engagement algorithms that impaired information consensus. Now, the same unaccountable mega-corporations are racing to deploy autonomous superintelligence without proving safety.
+
+The ultimate threat of AI is humanity's chronic inability to take responsibility for technology. That is why ICEarth builds sovereign, air-gapped, community-accountable computing nodes that reject centralized monopoly black-boxes.`,
+      linkHash: '0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026',
+      tags: ['AIExistentialRisk', 'AnthropicResignation', 'JacobCoxon', 'USAToday', 'CongressEmergency', 'KehoeRule', 'PbToAI', 'ContinuumOfFailure', 'RouletsLaw', 'ICEarthStack', 'Plate44']
+    },
     {
       id: 'MAG-JACKSON-WATER-LEAD-AUDIT-2026',
       title: 'Jackson Water Ruling Raises a Surprising Question: Is Clean Water a Right? The Fifth Circuit En Banc Decision & History of Corruption',
@@ -2553,6 +2600,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000AZ',
+      title: 'The Continuum of Failure: From Tetraethyl Lead to Autonomous AI — Congressional Emergency & Jacob Coxon Resignation (Plate #44)',
+      category: 'Technological Governance Forensics, Existential AI Risk & Precautionary Doctrine',
+      imageSrc: aiExistentialRiskImg,
+      location: 'Washington, DC (U.S. Capitol, Congressional Hearing Rooms & Frontier Hyperscale Data Centers)',
+      date: '2026-09-09',
+      description: "Origins: Landmark investigative and philosophical exposenomics plate documenting the September 2026 Congressional emergency following Anthropic/OpenAI researcher Jacob Coxon's public resignation. Visually maps the 100-year unbroken continuum of human failure to govern powerful technologies—tracing the arc from the corporate deception of tetraethyl lead (TEL) and Robert Kehoe's rule to modern unconstrained recursive self-improving superintelligence. Explains why humanity's inability to assume responsibility for technological externalities is the true existential danger, and presents ICEarth's air-gapped, decentralized indigenous computing stack as the civilizational counter-model.",
+      vaultHash: '0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026',
+      tags: ['AIExistentialRisk', 'Plate44', 'AnthropicResignation', 'JacobCoxon', 'USAToday', 'CongressEmergency', 'KehoeRule', 'PbToAI', 'ContinuumOfFailure', 'RouletsLaw', 'ICEarthStack', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000AY',
       title: 'Jackson, Mississippi Water Audit: 5th Circuit En Banc Ruling, Flint Precedent Split & History of Corruption (Plate #43)',
@@ -5271,6 +5329,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex items-center gap-2">
+                {onNavigateTab && (selectedArticle.id === 'MAG-AI-EXISTENTIAL-RISK-CONTINUUM-2026' || selectedArticle.tags?.includes('AIExistentialRisk') || selectedArticle.tags?.includes('AnthropicResignation')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('ai_existential_risk');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-400"
+                  >
+                    <Skull size={13} className="text-red-400 animate-pulse" />
+                    <span>⚡ Launch AI & Continuum of Failure Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {onNavigateTab && (selectedArticle.id === 'MAG-JACKSON-WATER-LEAD-AUDIT-2026' || selectedArticle.tags?.includes('JacksonWaterAudit') || selectedArticle.tags?.includes('SterlingVJackson')) && (
                   <button
                     onClick={() => {
@@ -5409,6 +5480,19 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AZ' || selectedPhoto.tags?.includes('AIExistentialRisk') || selectedPhoto.tags?.includes('Plate44')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('ai_existential_risk');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono"
+                    >
+                      <Skull size={13} className="text-red-400 animate-pulse" />
+                      <span>⚡ Launch AI & Continuum of Failure Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000AY' || selectedPhoto.tags?.includes('JacksonWaterAudit') || selectedPhoto.tags?.includes('Plate43')) && (
                     <button
                       onClick={() => {

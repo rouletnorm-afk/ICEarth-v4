@@ -50,6 +50,7 @@ import bangladeshLeadCrisisImg from '../assets/images/bangladesh_lead_crisis_178
 import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.jpg';
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
+import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import {
   Shield,
   UserCheck,
@@ -181,6 +182,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000AZ',
+      title: 'The Continuum of Failure: From Tetraethyl Lead to Autonomous AI — Congressional Emergency & Jacob Coxon Resignation (Plate #44)',
+      type: 'Technological Governance Forensics, Existential AI Risk & Precautionary Doctrine IP Asset',
+      imageSrc: aiExistentialRiskImg,
+      link: 'ai_existential_risk',
+      description: "Origins: Landmark investigative and philosophical exposenomics plate documenting the September 2026 Congressional emergency following Anthropic/OpenAI researcher Jacob Coxon's public resignation. Visually maps the 100-year unbroken continuum of human failure to govern powerful technologies—tracing the arc from the corporate deception of tetraethyl lead (TEL) and Robert Kehoe's rule to modern unconstrained recursive self-improving superintelligence. Explains why humanity's inability to assume responsibility for technological externalities is the true existential danger, and presents ICEarth's air-gapped, decentralized indigenous computing stack as the civilizational counter-model.",
+      sovereignHash: '0xCONTINUUM_OF_FAILURE_PB_TO_AI_CONGRESS_2026'
+    },
     {
       id: 'IP-000AY',
       title: 'Jackson, Mississippi Water Audit: 5th Circuit En Banc Ruling, Flint Precedent Split & History of Corruption (Plate #43)',
