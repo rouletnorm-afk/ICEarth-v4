@@ -188,6 +188,17 @@ export const GlialNeurotoxicityAudit: React.FC<GlialNeurotoxicityAuditProps> = (
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 bg-gradient-to-r from-yellow-500 via-amber-500 to-red-600 hover:from-yellow-400 hover:to-red-500 text-stone-950 font-mono font-black rounded-xl flex items-center gap-2 shadow-xl border border-yellow-300 text-sm cursor-pointer transition-all hover:scale-102"
+                >
+                  <FileText size={16} className="text-stone-950" />
+                  <span>Download Original Study (PDF)</span>
+                  <ExternalLink size={14} className="text-stone-950" />
+                </a>
+
                 <button
                   onClick={() => setIsArtModalOpen(true)}
                   className="px-4 py-2.5 bg-gradient-to-r from-red-600 via-stone-900 to-amber-600 hover:from-red-500 hover:to-amber-500 text-amber-100 font-mono font-bold rounded-xl flex items-center gap-2 shadow-lg border border-amber-400/40 text-sm cursor-pointer transition-all hover:scale-102"
@@ -298,6 +309,42 @@ export const GlialNeurotoxicityAudit: React.FC<GlialNeurotoxicityAuditProps> = (
 
       {/* Main Interactive Workspace */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+
+        {/* ICEarth Open Science Sovereign Source Document Bar */}
+        <div className="bg-gradient-to-r from-stone-900 via-amber-950/40 to-stone-900 border-2 border-yellow-500/40 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <div className="space-y-1.5 max-w-3xl">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-yellow-400 uppercase tracking-wider">
+              <FileText size={15} />
+              <span>Verified Scientific Source Document • Open Science Manuscript Archive</span>
+            </div>
+            <h3 className="text-base sm:text-lg font-bold text-stone-100">
+              Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Model: A Systematic Review
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+              Permanent source preprint and systematic review analyzing heavy metal cytotoxicity, ROS cascade, microglial neuroinflammation, and pineal gland circadian desynchronization across Sprague-Dawley and Wistar models.
+            </p>
+            <div className="text-[11px] font-mono text-stone-400 flex flex-wrap items-center gap-2 pt-1">
+              <span className="text-amber-300 font-semibold">Repository: Preprints.org</span>
+              <span>•</span>
+              <span className="text-stone-300">Identifier: 27557c0e1e330d82c1afe32083803fa5</span>
+              <span>•</span>
+              <span className="text-emerald-400">Full-Text PDF Document Available</span>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-stone-950 font-mono font-black text-sm rounded-xl shadow-lg border border-yellow-300 transition-all flex items-center gap-2 hover:scale-103 cursor-pointer"
+            >
+              <FileText size={16} className="text-stone-950" />
+              <span>Download Original Article (PDF)</span>
+              <ExternalLink size={14} className="text-stone-950" />
+            </a>
+          </div>
+        </div>
 
         {/* Section Navigation Tabs */}
         <div className="flex flex-wrap items-center gap-2 border-b border-stone-800 pb-3">
@@ -993,12 +1040,21 @@ export const GlialNeurotoxicityAudit: React.FC<GlialNeurotoxicityAuditProps> = (
 
           {/* Modal Footer / Metadata */}
           <div className="border-t border-stone-800 pt-4 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400">
-            <div className="flex items-center gap-4">
-              <span>Scientific Source: PubMed Systematic Review (Rats/Glial Cells/Heavy Metals)</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span>Scientific Source: Preprints.org / PubMed Systematic Review (Rats/Glial Cells/Heavy Metals)</span>
               <span>•</span>
               <span>Models: Sprague-Dawley & Wistar Rat Strains</span>
               <span>•</span>
-              <span>Translational Domain: Human Clinical Exposenomics</span>
+              <a
+                href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1 bg-yellow-500 hover:bg-yellow-400 text-stone-950 rounded border border-yellow-300 flex items-center gap-1.5 cursor-pointer font-bold transition-colors"
+              >
+                <FileText size={13} className="text-stone-950" />
+                <span>Download Manuscript PDF</span>
+                <ExternalLink size={12} className="text-stone-950" />
+              </a>
             </div>
             <button
               onClick={handleCopyHash}

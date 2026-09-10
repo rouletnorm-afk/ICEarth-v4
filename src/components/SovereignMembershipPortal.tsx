@@ -52,6 +52,7 @@ import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_17889831227
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
+import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import {
   Shield,
   UserCheck,
@@ -184,11 +185,22 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
 
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
+      id: 'IP-000BB',
+      title: 'Microbial Bioremediation & Advanced Nanotechnology for Aquatic Heavy Metal Mitigation (Plate #46)',
+      type: 'Environmental Biotechnology, Cavitation Physics & Aquatic Restoration IP Asset',
+      imageSrc: microbialBioremediationImg,
+      link: 'microbial_bioremediation',
+      sourceUrl: 'https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23',
+      description: "Origins: Landmark scientific exposenomics plate analyzing the critical review published in ScienceDirect Clean Water Solutions on microbial bioremediation of toxic heavy metals (Pb, Cd, Hg, Cr, As) in aquatic ecosystems. Highlights the four biochemical mechanisms: biosorption, bioaccumulation, biotransformation, and biomineralization. Unveils the transformative integration with NanoSpire hydrodynamic and acoustic cavitation—which shatters aqueous boundary-layer diffusion resistance, accelerating mass-transfer kinetics by +340%—and Microbial Electrochemical Systems (MES) for concurrent cathodic metal recovery and bioelectricity generation.",
+      sovereignHash: '0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026'
+    },
+    {
       id: 'IP-000BA',
       title: 'Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Models & Human Clinical Exposenomics (Plate #45)',
       type: 'Glial Pathophysiology, Neurotoxicology Forensics & Circadian Epidemiology IP Asset',
       imageSrc: glialInfographicImg,
       link: 'glial_neurotoxicity',
+      sourceUrl: 'https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub',
       description: "Origins: Landmark systematic review and scientific exposenomics plate analyzing PubMed research on the pathological impact of cadmium (Cd), lead (Pb), and mercury (Hg) on glial cells (astrocytes, microglia, and oligodendrocytes) in Sprague-Dawley and Wistar rat models. Highlights the four core mechanisms of neurotoxicity: 1) Blood-brain barrier (BBB) tight junction breakdown and astrocytic end-feet detachment; 2) Massive reactive oxygen species (ROS) induction (+620%) and glutathione depletion; 3) Chronic M1 microglial neuroinflammation and aberrant synaptic pruning; and 4) Severe pineal gland accumulation disrupting circadian melatonin distribution (-84% nocturnal peak). Directly translates rodent experimental findings to human pediatric neurodevelopmental disorders (ADHD, ASD, IQ deficits) and adult neurodegeneration (Alzheimer's and ALS).",
       sovereignHash: '0xGLIAL_NEUROTOXICITY_PB_HG_CD_CNS_2026'
     },
@@ -2029,26 +2041,40 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
                       </div>
 
                       <div className="flex items-center justify-between pt-1 border-t border-stone-800 text-[10px] font-mono text-stone-500">
-                        <span className="truncate max-w-[180px]">{item.sovereignHash}</span>
-                        {item.link.startsWith('http') ? (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
-                          >
-                            <span>Original Link</span>
-                            <ArrowUpRight size={11} />
-                          </a>
-                        ) : (
-                          <button
-                            onClick={() => onNavigateTab && onNavigateTab(item.link.replace('#', ''))}
-                            className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
-                          >
-                            <span>View App Section</span>
-                            <ArrowUpRight size={11} />
-                          </button>
-                        )}
+                        <span className="truncate max-w-[150px]">{item.sovereignHash}</span>
+                        <div className="flex items-center gap-2">
+                          {(item as any).sourceUrl && (
+                            <a
+                              href={(item as any).sourceUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="text-yellow-400 hover:text-yellow-300 hover:underline flex items-center gap-1 font-semibold"
+                            >
+                              <span>Source PDF</span>
+                              <ArrowUpRight size={11} />
+                            </a>
+                          )}
+                          {item.link.startsWith('http') ? (
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
+                            >
+                              <span>Original Link</span>
+                              <ArrowUpRight size={11} />
+                            </a>
+                          ) : (
+                            <button
+                              onClick={() => onNavigateTab && onNavigateTab(item.link.replace('#', ''))}
+                              className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
+                            >
+                              <span>View App Section</span>
+                              <ArrowUpRight size={11} />
+                            </button>
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}

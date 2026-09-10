@@ -135,6 +135,7 @@ import { RoanokeLeadAudit } from './components/RoanokeLeadAudit';
 import { JacksonLeadAudit } from './components/JacksonLeadAudit';
 import { AIExistentialRiskContinuum } from './components/AIExistentialRiskContinuum';
 import { GlialNeurotoxicityAudit } from './components/GlialNeurotoxicityAudit';
+import { MicrobialBioremediationAudit } from './components/MicrobialBioremediationAudit';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -522,6 +523,20 @@ export default function App() {
         lower.includes('plate_45')
       ) {
         setActiveTab('glial_neurotoxicity');
+      } else if (
+        lower === 'microbial_bioremediation' ||
+        lower === 'bioremediation' ||
+        lower === 'clean_water_remediation' ||
+        lower === 'aquatic_bioremediation' ||
+        lower === 'plate_46' ||
+        lower === 'plate46' ||
+        lower === 'mes_remediation' ||
+        lower === 'nanospire_bioremediation' ||
+        lower.includes('bioremediation') ||
+        lower.includes('plate46') ||
+        lower.includes('plate_46')
+      ) {
+        setActiveTab('microbial_bioremediation');
       } else if (
         lower === 'nigeria_heart_habitat' ||
         lower === 'nigeria_heart' ||
@@ -2121,6 +2136,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Aquatic Microbial Bioremediation & NanoSpire Cavitation Synthesis: Plate #46 */}
+                <button
+                  onClick={() => setActiveTab('microbial_bioremediation' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'microbial_bioremediation' || (activeTab as string) === 'bioremediation' || (activeTab as string) === 'plate_46' || (activeTab as string) === 'plate46'
+                      ? 'bg-emerald-950 text-emerald-100 border-emerald-500 shadow-md font-bold ring-1 ring-emerald-400/50'
+                      : 'hover:bg-emerald-500/20 text-emerald-950 border-emerald-400/60 bg-emerald-50/90 font-bold'
+                  }`}
+                >
+                  <Droplets size={16} className={activeTab === 'microbial_bioremediation' ? 'text-emerald-300 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-semibold">💧 Aquatic Microbial Bioremediation</span>
+                  <span className="px-1.5 py-0.2 bg-emerald-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #46
+                  </span>
+                </button>
+
                 {/* Artisanal Metallurgy, Galamsey & Primal Hominid Exposenomics (Deep-AI Dive) */}
                 <button
                   onClick={() => setActiveTab('artisanal_metallurgy')}
@@ -2621,6 +2652,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'mirna31_nrf2_lead', icon: Dna, label: '🧬 miRNA-31/Nrf2 Epigenetic Axis', badge: 'AIIMS 2026', color: 'rose' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'glial_neurotoxicity', icon: Brain, label: '🧠 Glial Cells & Heavy Metal Toxicity', badge: 'Plate #45', color: 'amber' },
+                    { id: 'microbial_bioremediation', icon: Droplets, label: '💧 Aquatic Microbial Bioremediation', badge: 'Plate #46', color: 'emerald' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'nigeria_lead_review', icon: Shield, label: '🇳🇬 Nigeria Lead & Remediation Review', badge: '4.5k Review', color: 'emerald' },
@@ -2728,6 +2760,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {(activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity') && '🧠 Glial Cells & Heavy Metal Neurotoxicity (Plate #45)'}
+              {(activeTab === 'microbial_bioremediation' || (activeTab as string) === 'bioremediation' || (activeTab as string) === 'plate_46' || (activeTab as string) === 'aquatic_bioremediation') && '💧 Aquatic Microbial Bioremediation & NanoSpire Cavitation (Plate #46)'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
               {(activeTab === 'childhood_lead_testing' || (activeTab as string) === 'childhood_lead' || (activeTab as string) === 'lead_testing' || (activeTab as string) === 'mdhhs_algorithm' || (activeTab as string) === 'mdhhs' || (activeTab as string) === 'universal_lead_testing') && '🩺 MDHHS Universal Childhood Lead Testing Standard'}
@@ -4480,6 +4513,15 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               <GlialNeurotoxicityAudit 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.119C: MICROBIAL BIOREMEDIATION & ADVANCED NANOTECHNOLOGY FOR AQUATIC HEAVY METALS (PLATE #46) */}
+          {(activeTab === 'microbial_bioremediation' || (activeTab as string) === 'bioremediation' || (activeTab as string) === 'clean_water_remediation' || (activeTab as string) === 'aquatic_bioremediation' || (activeTab as string) === 'plate_46' || (activeTab as string) === 'plate46' || (activeTab as string) === 'mes_remediation' || (activeTab as string) === 'nanospire_bioremediation') && (
+            <div className="flex-1 overflow-y-auto">
+              <MicrobialBioremediationAudit 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
               />
             </div>
           )}

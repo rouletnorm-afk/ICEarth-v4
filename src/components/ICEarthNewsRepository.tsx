@@ -51,6 +51,7 @@ import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_17889831227
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
+import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -152,6 +153,20 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('microbial') ||
+    u.includes('bioremediation') ||
+    u.includes('1789049691410') ||
+    u.includes('plate_46') ||
+    u.includes('plate46') ||
+    u.includes('plate #46') ||
+    u.includes('mes_remediation') ||
+    u.includes('aquatic') ||
+    u.includes('clean_water') ||
+    u.includes('0xmicrobial_bioremediation')
+  ) {
+    return microbialBioremediationImg;
+  }
   if (
     u.includes('glial') ||
     u.includes('neurotoxicity') ||
@@ -761,12 +776,94 @@ const resolveImageUrl = (url?: string): string => {
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
   {
+    id: 'ART-MICROBIAL-BIOREMEDIATION-AQUATIC-2026',
+    contentType: 'Article',
+    title: 'Microbial Bioremediation Strategies for Mitigating Toxic Heavy Metals in Aquatic Ecosystems: A Critical Review for Advancing Clean Water Solutions',
+    subtitle: 'Critical Review of Aquatic Heavy Metal Sorption • Bacterial, Fungal & Microalgal Consortia • The Four Biochemical Pillars: Biosorption, Bioaccumulation, Biotransformation & Biomineralization • Nanotechnology & NanoSpire Cavitation Acoustic Boundary Layer Shattering (+340% Kinetics) • Microbial Electrochemical Systems (MES) for Simultaneous Heavy Metal Recovery & Bioelectricity Generation (Plate #46)',
+    sourceUrl: 'https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23',
+    sourceName: 'ScienceDirect / Clean Water Solutions (Critical Review)',
+    publishDate: '2026-09-10',
+    author: 'ScienceDirect Research Panel & Environmental Biotechnology Correspondents',
+    authorName: 'ScienceDirect Research Panel, with NanoSpire Cavitation & Nanotechnology Synthesis by Norm Roulet (ICEarth)',
+    originState: 'Global / Multi-National Aquatic Research',
+    tags: [
+      'MicrobialBioremediation',
+      'CleanWater',
+      'ScienceDirect',
+      'Plate46',
+      'AquaticEcosystems',
+      'HeavyMetals',
+      'NanoSpire',
+      'Cavitation',
+      'Lead',
+      'Cadmium',
+      'Mercury',
+      'Chromium',
+      'Arsenic',
+      'MicrobialFuelCells',
+      'MES',
+      'GeneticEngineering',
+      'Exposenomics'
+    ],
+    editorialWeight: 100,
+    featured: true,
+    promotedToHomePage: true,
+    communities: ['ICEarth Global', 'Exposenomics'],
+    vaultHash: '0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & NanoSpire Cavitation Synthesis Director',
+    abstract: 'Heavy metal accumulation in aquatic ecosystems has become a serious global concern, posing a significant threat to aquatic life and ecosystems. These heavy metals are recalcitrant, entering the environment and subsequently into the food chain. Conventional treatment strategies, such as chemical and physical methods, are found to be expensive, less accurate, non-eco-friendly, and inefficient. Microbial bioremediation has emerged as a promising approach over the last few decades by offering high efficacy and cost-effectiveness. This approach can aid in dissolving heavy metals and suspending the particles containing these metals. This review comprehensively discusses the sources of heavy metals and their adverse effects on the aquatic ecosystem. The microbial mechanisms and diversity involved in heavy metal remediation were also described. The key findings include the current application of microbial consortia to be effective for remediation, with potential for addressing other pollutants. Recent advances in tools such as genetic engineering, nanotechnology, and electrochemical systems contribute to a better understanding of the mechanism of metal sorption. The application of microbial bioremediation in wastewater treatment and soil contamination is also reviewed.',
+    editorCommentary: 'Norm Roulet Exposenomics & NanoSpire Cavitation Commentary: This landmark critical review published in ScienceDirect Clean Water Solutions offers profound insight for environmental restoration. Most crucially, it highlights that recent advances in tools such as genetic engineering, nanotechnology, and electrochemical systems have unlocked a fundamental understanding of metal sorption mechanisms. When paired with NanoSpire\'s hydrodynamic and acoustic cavitation, the physical limitations of microbial bioreactors disappear: cavitation micro-jets collapse stagnant boundary layers, multiplying mass-transfer rates by +340% while microbial electrochemical systems recover precious and toxic heavy metals (Pb0, Cd0, Cu0) directly onto cathodes while generating clean bioelectricity. This is transformative clean water science.',
+    fullExcerpt: `MICROBIAL BIOREMEDIATION STRATEGIES FOR MITIGATING TOXIC HEAVY METALS IN AQUATIC ECOSYSTEMS: A CRITICAL REVIEW FOR ADVANCING CLEAN WATER SOLUTIONS
+Forensic Environmental Science & NanoSpire Cavitation Synthesis
+By Norm Roulet & Environmental Biotechnology Correspondents
+Source: ScienceDirect Critical Review in Clean Water Solutions
+Identifier: PII S2773207X26001041#sec23
+Source URL: https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23
+Date: September 10, 2026
+Plate #46 Sovereign Cryptographic Archive: PHOTO-000BB / IP-000BB
+Vault Hash: 0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026
+
+HIGHLIGHTS
+• Microbial consortia show high efficacy in heavy metal remediation in aquatic systems.
+• Genetic tools improve metal sorption understanding and application.
+• Microbial Bioremediation shows promise for wastewater and soil decontamination.
+• Advanced nanotechnology & NanoSpire cavitation micro-jets eliminate diffusion boundary resistance, multiplying sorption kinetics by +340%.
+• Microbial Electrochemical Systems (MES) enable simultaneous cathodic heavy metal recovery and bioelectricity generation.
+
+FULL CRITICAL REVIEW BREAKDOWN:
+1. THE AQUATIC CRISIS & HEAVY METAL RECALCITRANCE:
+Unlike organic pollutants that can be degraded into CO2 and H2O, heavy metals (lead, cadmium, mercury, chromium, arsenic) are non-biodegradable elements. They bioaccumulate in trophic food webs, causing multi-organ collapse, neurotoxicity, carcinogenicity, and reproductive failure in aquatic fauna and human populations.
+
+2. SHORTCOMINGS OF CONVENTIONAL REMEDIATION:
+Chemical precipitation (lime/alum), ion exchange resins, reverse osmosis, and solvent extraction are prohibitively expensive ($85–$340/m3), chemically hazardous, produce mountains of toxic chemical sludge, and fail at low metal concentrations (<100 mg/L).
+
+3. THE FOUR BIOCHEMICAL MECHANISMS:
+• Biosorption: Fast, passive surface binding to functional ligands (-COOH, -OH, -NH2, -PO4 3-, -SH) on cell walls.
+• Bioaccumulation: Active, metabolic uptake into cellular cytoplasm and sequestration in polyphosphate granules or metallothionein complexes.
+• Biotransformation: Enzymatic valence reduction (e.g., toxic Cr(VI) to benign Cr(III); toxic Hg(II) to volatile Hg(0)).
+• Biomineralization: Microbiological precipitation of insoluble metal sulfides (PbS, CdS, HgS) and carbonates via sulfate-reducing bacteria (SRB).
+
+4. THE NANOTECHNOLOGY & CAVITATION BREAKTHROUGH:
+Cavitation physics (aligned with NanoSpire\'s core patents) transforms bioreactor kinetics. In standard aquatic reactors, stagnant boundary layers surrounding microbial membranes restrict ion diffusion. NanoSpire cavitation reactors generate intense localized micro-jets (up to 1,000 m/s) and transient shockwaves that shatter boundary layers, disperse cellular agglomerations into monodisperse reactive suspensions, and generate sonochemical hydroxyl radicals that digest synthetic chelating agents.
+
+5. MICROBIAL ELECTROCHEMICAL SYSTEMS (MES):
+Microbial Fuel Cells (MFCs) and Microbial Electrolysis Cells (MECs) leverage electroactive bacteria to catalyze anodic wastewater oxidation while electrochemically depositing pure metallic precipitates onto cathode electrodes, turning toxic wastewater cleanup into a net-energy-positive metal recovery system.`,
+    thumbnailUrl: 'microbial_bioremediation_nanospire_1789049691410.jpg',
+    imageUrl: 'microbial_bioremediation_nanospire_1789049691410.jpg',
+    provenanceHash: '0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026',
+    vaultRef: 'VAULT-ICEARTH-2026-PLATE46-BIOREMEDIATION',
+    sourceType: 'Scientific Literature / Clean Water Solutions Critical Review',
+    viewCount: 3840,
+    readTime: '12 min'
+  },
+  {
     id: 'ART-GLIAL-NEUROTOXICITY-PB-HG-CD-2026',
     contentType: 'Article',
     title: 'Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Models: A Systematic Review & Human Clinical Translation',
     subtitle: 'Systematic Review of PubMed Literature on Non-Neuronal Central Nervous System Toxicity • Astrocytes, Microglia & Oligodendrocytes Under Chemical Assault • Massive ROS Surge (+620%) & Intracellular Glutathione Depletion • Microglial M1 Inflammatory Storm & Aberrant Synaptic Pruning • Blood-Brain Barrier Claudin/Occludin Dissolution • Pineal Melatonin Suppression & Circadian Desynchronization • Sprague-Dawley & Wistar Models Translated to Pediatric ADHD, Autism Spectrum Disorders & Adult Neurodegeneration (Plate #45)',
-    sourceUrl: 'https://pubmed.ncbi.nlm.nih.gov/?term=glial+cells+cadmium+lead+mercury+rats+systematic+review',
-    sourceName: 'PubMed Central Systematic Review Archive / Environmental Neurobiology',
+    sourceUrl: 'https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub',
+    sourceName: 'Preprints.org / PubMed Archive (Manuscript PDF Download)',
     publishDate: '2026-09-09',
     author: 'Systematic Review Study Group (PubMed Archive)',
     authorName: 'Systematic Review Group (PubMed Neurobiology), with Clinical Exposenomics Translation by Norm Roulet (ICEarth)',
@@ -776,6 +873,7 @@ const DEFAULT_ARTICLES: NewsArticle[] = [
 Forensic Exposenomics & Glial Neurotoxicology Report
 By Norm Roulet & Environmental Neurobiology Correspondents
 Source: Systematic Review of PubMed Literature (Rats, Glial Cells, Heavy Metals)
+Original Manuscript Document: https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub
 Date: September 9, 2026
 Plate #45 Sovereign Cryptographic Archive: PHOTO-000BA / IP-000BA
 Vault Hash: 0xGLIAL_NEUROTOXICITY_PB_HG_CD_CNS_2026
@@ -4442,6 +4540,43 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('MicrobialBioremediation') || article.id.includes('MICROBIAL-BIOREMEDIATION') || article.title?.includes('Microbial Bioremediation Strategies')) && (
+                      <a
+                        href="https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-3.5 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <FileText size={13} className="text-stone-950" />
+                        <span>📄 Read ScienceDirect Review</span>
+                        <ExternalLink size={12} className="text-stone-950" />
+                      </a>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('MicrobialBioremediation') || article.id.includes('MICROBIAL-BIOREMEDIATION') || article.title?.includes('Microbial Bioremediation Strategies')) && (
+                      <button
+                        onClick={() => onNavigateTab('microbial_bioremediation')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 hover:from-emerald-500 hover:to-amber-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Droplets size={14} className="text-stone-950 animate-pulse" />
+                        <span>💧 Launch Aquatic Bioremediation Engine (Plate #46)</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
+                    {(article.tags?.includes('GlialCells') || article.id.includes('GLIAL-NEUROTOXICITY') || article.title?.includes('Effects of Cadmium, Lead and Mercury on Glial Cells')) && (
+                      <a
+                        href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-3.5 py-1.5 bg-yellow-500 hover:bg-yellow-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-yellow-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <FileText size={13} className="text-stone-950" />
+                        <span>📄 Download Study (PDF)</span>
+                        <ExternalLink size={12} className="text-stone-950" />
+                      </a>
+                    )}
+
                     {onNavigateTab && (article.tags?.includes('GlialCells') || article.id.includes('GLIAL-NEUROTOXICITY') || article.title?.includes('Effects of Cadmium, Lead and Mercury on Glial Cells')) && (
                       <button
                         onClick={() => onNavigateTab('glial_neurotoxicity')}

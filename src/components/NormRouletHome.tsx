@@ -51,7 +51,8 @@ import {
   AlertTriangle,
   Cpu,
   Skull,
-  Microscope
+  Microscope,
+  Droplets
 } from 'lucide-react';
 
 // Import local image assets
@@ -117,10 +118,25 @@ import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_17889831227
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
+import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('microbial') ||
+    u.includes('bioremediation') ||
+    u.includes('1789049691410') ||
+    u.includes('plate_46') ||
+    u.includes('plate46') ||
+    u.includes('plate #46') ||
+    u.includes('mes_remediation') ||
+    u.includes('aquatic') ||
+    u.includes('clean_water') ||
+    u.includes('0xmicrobial_bioremediation')
+  ) {
+    return microbialBioremediationImg;
+  }
   if (
     u.includes('glial') ||
     u.includes('neurotoxicity') ||
@@ -842,16 +858,67 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-MICROBIAL-BIOREMEDIATION-AQUATIC-2026',
+      title: 'Microbial Bioremediation Strategies for Toxic Heavy Metals in Aquatic Ecosystems: A Critical Review & NanoSpire Cavitation Synthesis (Plate #46)',
+      category: 'Exposenomics',
+      date: '2026-09-10',
+      imageSrc: microbialBioremediationImg,
+      publishedUrl: 'https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23',
+      summary: 'A landmark critical review published in ScienceDirect Clean Water Solutions evaluating microbial bioremediation strategies (bacteria, fungi, microalgae, and consortia) for mitigating recalcitrant toxic heavy metals (Pb, Cd, Hg, Cr, As) in aquatic ecosystems. Synthesizes the four core biochemical mechanisms—biosorption, bioaccumulation, biotransformation, and biomineralization—with recent transformative advances in genetic engineering, Microbial Electrochemical Systems (MES), and NanoSpire acoustic/hydrodynamic cavitation. Cavitation micro-jets dismantle diffusion boundary layers, multiplying mass-transfer kinetics by +340% while MES enables simultaneous heavy metal recovery at cathodes alongside net bioelectricity generation.',
+      fullText: `MICROBIAL BIOREMEDIATION STRATEGIES FOR MITIGATING TOXIC HEAVY METALS IN AQUATIC ECOSYSTEMS: A CRITICAL REVIEW FOR ADVANCING CLEAN WATER SOLUTIONS
+Forensic Environmental Science & NanoSpire Cavitation Synthesis
+By Norm Roulet & Environmental Biotechnology Correspondents
+Source: ScienceDirect Critical Review in Clean Water Solutions
+Identifier: PII S2773207X26001041#sec23
+Source URL: https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23
+Date: September 10, 2026
+Plate #46 Sovereign Cryptographic Archive: PHOTO-000BB / IP-000BB
+Vault Hash: 0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026
+
+HIGHLIGHTS
+• Microbial consortia show high efficacy in heavy metal remediation in aquatic systems.
+• Genetic tools improve metal sorption understanding and application.
+• Microbial Bioremediation shows promise for wastewater and soil decontamination.
+• Integration with NanoSpire hydrodynamic & acoustic cavitation shatters boundary-layer diffusion resistance, accelerating sorption kinetics by +340%.
+• Microbial Electrochemical Systems (MES) enable simultaneous cathodic heavy metal recovery and bioelectricity generation.
+
+I. ABSTRACT & SCIENTIFIC SCOPE
+Heavy metal accumulation in aquatic ecosystems has become a serious global concern, posing a significant threat to aquatic life and ecosystems. These heavy metals are recalcitrant, entering the environment and subsequently into the food chain. Conventional treatment strategies, such as chemical and physical methods, are found to be expensive, less accurate, non-eco-friendly, and inefficient. Microbial bioremediation has emerged as a promising approach over the last few decades by offering high efficacy and cost-effectiveness. This approach can aid in dissolving heavy metals and suspending the particles containing these metals. This review comprehensively discusses the sources of heavy metals and their adverse effects on the aquatic ecosystem. The microbial mechanisms and diversity involved in heavy metal remediation were also described. The key findings include the current application of microbial consortia to be effective for remediation, with potential for addressing other pollutants. Recent advances in tools such as genetic engineering, nanotechnology, and electrochemical systems contribute to a better understanding of the mechanism of metal sorption. The application of microbial bioremediation in wastewater treatment and soil contamination is also reviewed.
+
+II. THE FOUR PILLARS OF MICROBIAL HEAVY METAL EXTRACTION
+1. Biosorption (Cell Wall Functional Ligands): Fast, metabolism-independent surface complexation with carboxyl (-COOH), hydroxyl (-OH), amino (-NH2), phosphate (-PO4 3-), and sulfhydryl (-SH) groups on peptidoglycan and chitin.
+2. Bioaccumulation (Active Intracellular Sequestration): ATP-driven membrane transport into intracellular vacuoles and chelation by metallothioneins and phytochelatins.
+3. Biotransformation (Enzymatic Detoxification): Redox conversion of toxic metal ions, such as chromate reductase converting Cr(VI) to non-toxic Cr(III), and MerA reducing Hg(II) to volatile elemental Hg(0).
+4. Biomineralization (Insoluble Precipitation): Microbially mediated precipitation of metal sulfides (PbS, CdS, HgS) via sulfate-reducing bacteria (SRB), permanently immobilizing toxic metals out of solution.
+
+III. THE NANOSPIRE CAVITATION & NANOTECHNOLOGY FRONTIER
+What makes this critical review profoundly transformational—and directly aligned with Norm Roulet's pioneering work with NanoSpire—is the synthesis of advanced cavitation physics and nanotechnology:
+1. Shattering Boundary Layers: In conventional bioreactors, aqueous diffusion boundary layers surrounding microbial membranes restrict the transport of hydrated heavy metal ions. NanoSpire acoustic and hydrodynamic cavitation reactors generate localized shockwaves and micro-jets (up to 1,000 m/s), collapsing boundary layer thickness from micrometers to nanometers.
+2. Disaggregating Biofilm Clumps: Cavitation shear forces unbundle microbial flocs into monodisperse cell suspensions, expanding accessible ligand surface area by 400-600% without cellular lysis.
+3. Sonochemical Free Radicals: Transient cavitation bubble collapse generates localized pyrolytic hotspots (>5,000 K) that produce hydroxyl radicals (•OH), mineralizing organic heavy-metal chelates (such as EDTA-Pb complexes) into free ions ready for immediate biosorption.
+4. Magnetic Nano-Sorbent Harvesting: Functionalizing biomass with superparamagnetic nanoparticles (Fe3O4) allows instantaneous post-treatment magnetic separation, eliminating conventional settling basins.
+
+IV. MICROBIAL ELECTROCHEMICAL SYSTEMS (MES) & RESOURCE RECOVERY
+Rather than producing hazardous chemical sludge—the fatal economic flaw of lime and alum precipitation—Microbial Electrochemical Systems (MES) utilize exoelectrogenic bacteria (Geobacter, Shewanella) at the anode to oxidize organic wastewater contaminants while electrochemically depositing pure metallic precipitates (Pb0, Cu0, Ag0) at the cathode. This transforms toxic wastewater decontamination into a net-positive bioelectricity and mineral recovery facility.
+
+V. CONCLUSION & CIVILIZATIONAL RESTORATION
+As concluded in Section 9 of the review, the convergence of microbial consortia, modern genetic engineering, nanotechnology, and electrochemical systems overcomes historical scaling barriers. Coupled with NanoSpire's cavitation processing, this paradigm delivers scalable, decentralized, and environmentally regenerative clean water solutions worldwide.`,
+      linkHash: '0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026',
+      tags: ['MicrobialBioremediation', 'Plate46', 'NanoSpire', 'Cavitation', 'CleanWater', 'ScienceDirect', 'AquaticEcosystems', 'HeavyMetals', 'Lead', 'Cadmium', 'Mercury', 'Chromium', 'Arsenic', 'MES', 'MicrobialFuelCells', 'GeneticEngineering', 'Exposenomics']
+    },
+    {
       id: 'MAG-GLIAL-NEUROTOXICITY-PB-HG-CD-2026',
       title: 'Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Models & Human Translation: A Systematic Review (Plate #45)',
       category: 'Exposenomics',
       date: '2026-09-09',
       imageSrc: glialInfographicImg,
+      publishedUrl: 'https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub',
       summary: 'A comprehensive systematic forensic review of PubMed literature analyzing the mechanisms of heavy metal neurotoxicity (Pb, Hg, Cd) on glial cells—astrocytes, microglia, and oligodendrocytes—in experimental Sprague-Dawley and Wistar rat models. The research maps how heavy metals trigger reactive oxygen species (ROS) hyper-induction (+620%), deplete intracellular glutathione, trigger chronic M1 microglial neuroinflammation, dissolve blood-brain barrier tight junctions (claudin-5 and occludin), and cause pineal gland accumulation that suppresses circadian melatonin secretion (-84% peak). Directly translated to human clinical epidemiology, these glial injuries provide the biochemical etiology for pediatric ADHD, autism spectrum synaptic pruning defects, executive dysfunction, and accelerated adult neurodegeneration (Alzheimer\'s and ALS).',
       fullText: `EFFECTS OF CADMIUM, LEAD AND MERCURY ON GLIAL CELLS IN RAT MODEL: A SYSTEMATIC REVIEW & HUMAN NEUROPATHOLOGICAL TRANSLATION
 Forensic Exposenomics & Glial Neurotoxicology Report
 By Norm Roulet & Environmental Neurobiology Correspondents
 Source: Systematic Review of PubMed Literature (Rats, Glial Cells, Heavy Metals)
+Original Manuscript Document: https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub
 Date: September 9, 2026
 Plate #45 Sovereign Cryptographic Archive: PHOTO-000BA / IP-000BA
 Vault Hash: 0xGLIAL_NEUROTOXICITY_PB_HG_CD_CNS_2026
@@ -2668,6 +2735,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BB',
+      title: 'Microbial Bioremediation & Advanced Nanotechnology for Aquatic Heavy Metal Mitigation (Plate #46)',
+      category: 'Environmental Biotechnology, Cavitation Physics & Aquatic Ecosystem Restoration',
+      imageSrc: microbialBioremediationImg,
+      location: 'ScienceDirect Clean Water Solutions Archive, Global Aquatic Basins & NanoSpire Cavitation Laboratories',
+      date: '2026-09-10',
+      description: "Origins: Landmark scientific exposenomics plate analyzing the critical review published in ScienceDirect Clean Water Solutions on microbial bioremediation of toxic heavy metals (Pb, Cd, Hg, Cr, As) in aquatic ecosystems. Highlights the four biochemical mechanisms: biosorption, bioaccumulation, biotransformation, and biomineralization. Unveils the transformative integration with NanoSpire hydrodynamic and acoustic cavitation—which shatters aqueous boundary-layer diffusion resistance, accelerating mass-transfer kinetics by +340%—and Microbial Electrochemical Systems (MES) for concurrent cathodic metal recovery and bioelectricity generation.",
+      vaultHash: '0xMICROBIAL_BIOREMEDIATION_NANOSPIRE_CAVITATION_AQUATIC_2026',
+      tags: ['MicrobialBioremediation', 'Plate46', 'NanoSpire', 'Cavitation', 'CleanWater', 'ScienceDirect', 'AquaticEcosystems', 'HeavyMetals', 'Lead', 'Cadmium', 'Mercury', 'Chromium', 'Arsenic', 'MES', 'MicrobialFuelCells', 'GeneticEngineering', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BA',
       title: 'Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Models & Human Clinical Exposenomics (Plate #45)',
@@ -5407,7 +5485,44 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-MICROBIAL-BIOREMEDIATION-AQUATIC-2026' || selectedArticle.tags?.includes('MicrobialBioremediation') || selectedArticle.tags?.includes('Plate46')) && (
+                  <a
+                    href="https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-emerald-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>📄 Read ScienceDirect Review</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-MICROBIAL-BIOREMEDIATION-AQUATIC-2026' || selectedArticle.tags?.includes('MicrobialBioremediation') || selectedArticle.tags?.includes('Plate46')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('microbial_bioremediation');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 hover:from-emerald-500 hover:to-amber-500 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-emerald-300"
+                  >
+                    <Droplets size={13} className="text-stone-950" />
+                    <span>💧 Launch Bioremediation Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+                {(selectedArticle.id === 'MAG-GLIAL-NEUROTOXICITY-PB-HG-CD-2026' || selectedArticle.tags?.includes('GlialCells') || selectedArticle.tags?.includes('Plate45')) && (
+                  <a
+                    href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 bg-yellow-500 hover:bg-yellow-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-yellow-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>📄 Download Original Study (PDF)</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
                 {onNavigateTab && (selectedArticle.id === 'MAG-GLIAL-NEUROTOXICITY-PB-HG-CD-2026' || selectedArticle.tags?.includes('GlialCells') || selectedArticle.tags?.includes('Plate45')) && (
                   <button
                     onClick={() => {
@@ -5572,6 +5687,43 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000BB' || selectedPhoto.tags?.includes('MicrobialBioremediation') || selectedPhoto.tags?.includes('Plate46')) && (
+                    <a
+                      href="https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-emerald-300 text-xs font-mono transition-colors"
+                    >
+                      <FileText size={12} className="text-stone-950" />
+                      <span>📄 Read ScienceDirect Review</span>
+                      <ExternalLink size={11} className="text-stone-950" />
+                    </a>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000BB' || selectedPhoto.tags?.includes('MicrobialBioremediation') || selectedPhoto.tags?.includes('Plate46')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('microbial_bioremediation');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 hover:from-emerald-500 hover:to-amber-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-emerald-300 text-xs font-mono"
+                    >
+                      <Droplets size={13} className="text-stone-950" />
+                      <span>💧 Launch Aquatic Bioremediation Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
+                  {(selectedPhoto.id === 'PHOTO-000BA' || selectedPhoto.tags?.includes('GlialCells') || selectedPhoto.tags?.includes('Plate45')) && (
+                    <a
+                      href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-yellow-500 hover:bg-yellow-400 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-yellow-300 text-xs font-mono transition-colors"
+                    >
+                      <FileText size={12} className="text-stone-950" />
+                      <span>📄 Download Original Study (PDF)</span>
+                      <ExternalLink size={11} className="text-stone-950" />
+                    </a>
+                  )}
                   {onNavigateTab && (selectedPhoto.id === 'PHOTO-000BA' || selectedPhoto.tags?.includes('GlialCells') || selectedPhoto.tags?.includes('Plate45')) && (
                     <button
                       onClick={() => {
