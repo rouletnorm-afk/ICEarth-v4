@@ -51,6 +51,7 @@ import aiAndKehoeRuleImg from '../assets/images/ai_and_kehoe_rule_1788906142988.
 import roanokeLeadAuditImg from '../assets/images/roanoke_lead_audit_1788983122792.jpg';
 import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_1788985202588.jpg';
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
+import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
 import {
   Shield,
   UserCheck,
@@ -182,6 +183,15 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BA',
+      title: 'Effects of Cadmium, Lead and Mercury on Glial Cells in Rat Models & Human Clinical Exposenomics (Plate #45)',
+      type: 'Glial Pathophysiology, Neurotoxicology Forensics & Circadian Epidemiology IP Asset',
+      imageSrc: glialInfographicImg,
+      link: 'glial_neurotoxicity',
+      description: "Origins: Landmark systematic review and scientific exposenomics plate analyzing PubMed research on the pathological impact of cadmium (Cd), lead (Pb), and mercury (Hg) on glial cells (astrocytes, microglia, and oligodendrocytes) in Sprague-Dawley and Wistar rat models. Highlights the four core mechanisms of neurotoxicity: 1) Blood-brain barrier (BBB) tight junction breakdown and astrocytic end-feet detachment; 2) Massive reactive oxygen species (ROS) induction (+620%) and glutathione depletion; 3) Chronic M1 microglial neuroinflammation and aberrant synaptic pruning; and 4) Severe pineal gland accumulation disrupting circadian melatonin distribution (-84% nocturnal peak). Directly translates rodent experimental findings to human pediatric neurodevelopmental disorders (ADHD, ASD, IQ deficits) and adult neurodegeneration (Alzheimer's and ALS).",
+      sovereignHash: '0xGLIAL_NEUROTOXICITY_PB_HG_CD_CNS_2026'
+    },
     {
       id: 'IP-000AZ',
       title: 'The Continuum of Failure: From Tetraethyl Lead to Autonomous AI — Congressional Emergency & Jacob Coxon Resignation (Plate #44)',

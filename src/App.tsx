@@ -134,6 +134,7 @@ import { AiAndTheKehoeRule } from './components/AiAndTheKehoeRule';
 import { RoanokeLeadAudit } from './components/RoanokeLeadAudit';
 import { JacksonLeadAudit } from './components/JacksonLeadAudit';
 import { AIExistentialRiskContinuum } from './components/AIExistentialRiskContinuum';
+import { GlialNeurotoxicityAudit } from './components/GlialNeurotoxicityAudit';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -142,7 +143,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -505,6 +506,22 @@ export default function App() {
         lower.includes('metal_homeostasis')
       ) {
         setActiveTab('occupational_lead_review');
+      } else if (
+        lower === 'glial_neurotoxicity' ||
+        lower === 'glial' ||
+        lower === 'glial_cells' ||
+        lower === 'neurotoxicity' ||
+        lower === 'plate_45' ||
+        lower === 'plate45' ||
+        lower === 'cadmium_lead_mercury' ||
+        lower === 'cadmium_lead_mercury_glial' ||
+        lower === 'astrocytes_microglia' ||
+        lower.includes('glial') ||
+        lower.includes('neurotoxicity') ||
+        lower.includes('plate45') ||
+        lower.includes('plate_45')
+      ) {
+        setActiveTab('glial_neurotoxicity');
       } else if (
         lower === 'nigeria_heart_habitat' ||
         lower === 'nigeria_heart' ||
@@ -2088,6 +2105,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Cadmium, Lead & Mercury on Glial Cells: Systematic Review & Human Translation */}
+                <button
+                  onClick={() => setActiveTab('glial_neurotoxicity' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Brain size={16} className={activeTab === 'glial_neurotoxicity' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🧠 Glial Cells & Heavy Metal Toxicity</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #45
+                  </span>
+                </button>
+
                 {/* Artisanal Metallurgy, Galamsey & Primal Hominid Exposenomics (Deep-AI Dive) */}
                 <button
                   onClick={() => setActiveTab('artisanal_metallurgy')}
@@ -2587,6 +2620,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'jicarilla_sovereign_it', icon: Feather, label: '🪶 Jicarilla Sovereign IT', badge: 'Air-Gap', color: 'amber' },
                     { id: 'mirna31_nrf2_lead', icon: Dna, label: '🧬 miRNA-31/Nrf2 Epigenetic Axis', badge: 'AIIMS 2026', color: 'rose' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
+                    { id: 'glial_neurotoxicity', icon: Brain, label: '🧠 Glial Cells & Heavy Metal Toxicity', badge: 'Plate #45', color: 'amber' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'nigeria_lead_review', icon: Shield, label: '🇳🇬 Nigeria Lead & Remediation Review', badge: '4.5k Review', color: 'emerald' },
@@ -2693,6 +2727,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'mirna31_nrf2_lead' || (activeTab as string) === 'mirna31' || (activeTab as string) === 'nrf2' || (activeTab as string) === 'plate_36') && '🧬 miRNA-31/Nrf2 Epigenetic Axis (AIIMS)'}
               {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
+              {(activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity') && '🧠 Glial Cells & Heavy Metal Neurotoxicity (Plate #45)'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
               {(activeTab === 'childhood_lead_testing' || (activeTab as string) === 'childhood_lead' || (activeTab as string) === 'lead_testing' || (activeTab as string) === 'mdhhs_algorithm' || (activeTab as string) === 'mdhhs' || (activeTab as string) === 'universal_lead_testing') && '🩺 MDHHS Universal Childhood Lead Testing Standard'}
@@ -4433,6 +4468,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'occupational_lead_homeostasis' || (activeTab as string) === 'lead_homeostasis' || (activeTab as string) === 'lead_review' || (activeTab as string) === 'oxidative_stress') && (
             <div className="flex-1 overflow-y-auto">
               <OccupationalLeadHomeostasis 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.119B: EFFECTS OF CADMIUM, LEAD & MERCURY ON GLIAL CELLS: SYSTEMATIC REVIEW (PLATE #45) */}
+          {(activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity' || (activeTab as string) === 'plate_45' || (activeTab as string) === 'plate45' || (activeTab as string) === 'cadmium_lead_mercury' || (activeTab as string) === 'astrocytes_microglia') && (
+            <div className="flex-1 overflow-y-auto">
+              <GlialNeurotoxicityAudit 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
