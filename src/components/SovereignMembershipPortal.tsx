@@ -53,6 +53,7 @@ import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_178898520
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
+import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import {
   Shield,
   UserCheck,
@@ -184,6 +185,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BC',
+      title: 'Lead Poisoning: The Only Recourse for Victims Is Litigation — New York Construction & Civil Precedents (Plate #47)',
+      type: 'Forensic Jurisprudence, NY Labor Law § 241(6) & Toxic Tort Exposenomics IP Asset',
+      imageSrc: leadLitigationRecourseImg,
+      link: 'lead_poisoning_legal_recourse',
+      sourceUrl: 'https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/',
+      description: "Origins: Landmark forensic legal exposenomics plate inspired by attorney Jay Nelson Gorayeb's amNY Op-Ed on lead poisoning in New York construction. Details the only recourse left for victims: aggressive civil litigation. Analyzes the Motley Rice $305M California verdict against Sherwin-Williams (and its Ohio roots), the Flint Water Crisis $626.25M class action ($719M+ total recoveries), and Freddie Gray's Baltimore structured settlement. Outlines New York Labor Law § 241(6) and Industrial Code 12 NYCRR § 23-1.26 holding general contractors and owners strictly accountable for failing to provide approved respirators during confined space welding and lead paint remediation.",
+      sovereignHash: '0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026'
+    },
     {
       id: 'IP-000BB',
       title: 'Microbial Bioremediation & Advanced Nanotechnology for Aquatic Heavy Metal Mitigation (Plate #46)',

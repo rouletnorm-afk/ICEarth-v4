@@ -136,6 +136,7 @@ import { JacksonLeadAudit } from './components/JacksonLeadAudit';
 import { AIExistentialRiskContinuum } from './components/AIExistentialRiskContinuum';
 import { GlialNeurotoxicityAudit } from './components/GlialNeurotoxicityAudit';
 import { MicrobialBioremediationAudit } from './components/MicrobialBioremediationAudit';
+import { LeadPoisoningLegalRecourseNY } from './components/LeadPoisoningLegalRecourseNY';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -523,6 +524,22 @@ export default function App() {
         lower.includes('plate_45')
       ) {
         setActiveTab('glial_neurotoxicity');
+      } else if (
+        lower === 'lead_poisoning_legal_recourse' ||
+        lower === 'lead_legal_recourse' ||
+        lower === 'lead_litigation' ||
+        lower === 'legal_recourse' ||
+        lower === 'ny_labor_law' ||
+        lower === 'labor_law_241' ||
+        lower === 'gorayeb' ||
+        lower === 'plate_47' ||
+        lower === 'plate47' ||
+        lower.includes('plate47') ||
+        lower.includes('plate_47') ||
+        lower.includes('gorayeb') ||
+        lower.includes('lead_litigation')
+      ) {
+        setActiveTab('lead_poisoning_legal_recourse');
       } else if (
         lower === 'microbial_bioremediation' ||
         lower === 'bioremediation' ||
@@ -2136,6 +2153,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Lead Poisoning Legal Recourse & NY Construction Jurisprudence: Plate #47 */}
+                <button
+                  onClick={() => setActiveTab('lead_poisoning_legal_recourse' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'lead_poisoning_legal_recourse' || (activeTab as string) === 'lead_litigation' || (activeTab as string) === 'plate_47' || (activeTab as string) === 'plate47'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'lead_poisoning_legal_recourse' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">⚖️ Lead Litigation & Legal Recourse</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #47
+                  </span>
+                </button>
+
                 {/* Aquatic Microbial Bioremediation & NanoSpire Cavitation Synthesis: Plate #46 */}
                 <button
                   onClick={() => setActiveTab('microbial_bioremediation' as any)}
@@ -2652,6 +2685,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'mirna31_nrf2_lead', icon: Dna, label: '🧬 miRNA-31/Nrf2 Epigenetic Axis', badge: 'AIIMS 2026', color: 'rose' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'glial_neurotoxicity', icon: Brain, label: '🧠 Glial Cells & Heavy Metal Toxicity', badge: 'Plate #45', color: 'amber' },
+                    { id: 'lead_poisoning_legal_recourse', icon: Scale, label: '⚖️ Lead Litigation & Legal Recourse', badge: 'Plate #47', color: 'amber' },
                     { id: 'microbial_bioremediation', icon: Droplets, label: '💧 Aquatic Microbial Bioremediation', badge: 'Plate #46', color: 'emerald' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
                     { id: 'eighteenmile_creek', icon: Building, label: '👑 Eighteenmile Creek Superfund', badge: 'Deep-AI Dive', color: 'amber' },
@@ -2760,6 +2794,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {(activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity') && '🧠 Glial Cells & Heavy Metal Neurotoxicity (Plate #45)'}
+              {(activeTab === 'lead_poisoning_legal_recourse' || (activeTab as string) === 'lead_litigation' || (activeTab as string) === 'plate_47' || (activeTab as string) === 'labor_law_241') && '⚖️ Lead Poisoning Legal Recourse & NY Labor Law (Plate #47)'}
               {(activeTab === 'microbial_bioremediation' || (activeTab as string) === 'bioremediation' || (activeTab as string) === 'plate_46' || (activeTab as string) === 'aquatic_bioremediation') && '💧 Aquatic Microbial Bioremediation & NanoSpire Cavitation (Plate #46)'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
               {(activeTab === 'eighteenmile_creek' || (activeTab as string) === 'eighteenmile' || (activeTab as string) === 'superfund') && '👑 Eighteenmile Creek Superfund Fiasco'}
@@ -4522,6 +4557,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <div className="flex-1 overflow-y-auto">
               <MicrobialBioremediationAudit 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.119D: LEAD POISONING LEGAL RECOURSE & NY LABOR LAW § 241(6) (PLATE #47) */}
+          {(activeTab === 'lead_poisoning_legal_recourse' || (activeTab as string) === 'lead_litigation' || (activeTab as string) === 'lead_legal_recourse' || (activeTab as string) === 'ny_labor_law' || (activeTab as string) === 'labor_law_241' || (activeTab as string) === 'plate_47' || (activeTab as string) === 'plate47' || (activeTab as string) === 'gorayeb') && (
+            <div className="flex-1 overflow-y-auto">
+              <LeadPoisoningLegalRecourseNY 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
               />
             </div>
           )}

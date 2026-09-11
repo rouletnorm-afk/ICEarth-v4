@@ -119,10 +119,24 @@ import jacksonWaterAuditImg from '../assets/images/jackson_water_audit_178898520
 import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum_1789014098693.jpg';
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
+import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('lead_litigation') ||
+    u.includes('litigation_recourse') ||
+    u.includes('1789169382379') ||
+    u.includes('plate_47') ||
+    u.includes('plate47') ||
+    u.includes('plate #47') ||
+    u.includes('gorayeb') ||
+    u.includes('labor_law_241') ||
+    u.includes('0xlead_litigation')
+  ) {
+    return leadLitigationRecourseImg;
+  }
   if (
     u.includes('microbial') ||
     u.includes('bioremediation') ||
@@ -857,6 +871,57 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-LEAD-LEGAL-RECOURSE-NY-LABOR-2026',
+      title: 'Lead Poisoning Is an Ancient Danger That New York’s Construction Workers Still Face Today: The Only Recourse Is Litigation (Plate #47)',
+      category: 'Exposenomics',
+      date: '2026-09-11',
+      imageSrc: leadLitigationRecourseImg,
+      publishedUrl: 'https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/',
+      summary: 'An incisive Op-Ed by attorney Jay Nelson Gorayeb (Gorayeb and Associates, P.C.) examining how New York construction workers continue to confront toxic lead plumes from pre-1978 buildings, cable sheathing, and torch-cutting without mandatory respirators. Paired with forensic analysis by Norm Roulet connecting Motley Rice’s $305M Sherwin-Williams California verdict, Flint’s $719M+ civil recoveries, and Freddie Gray’s legacy: because society and regulators fail to protect workers proactively, aggressive civil litigation under NY Labor Law § 241(6) and 12 NYCRR § 23-1.26 remains the sole recourse for poisoning victims.',
+      fullText: `OP-ED | LEAD POISONING IS AN ANCIENT DANGER THAT NEW YORK’S CONSTRUCTION WORKERS STILL FACE TODAY: THE ONLY RECOURSE IS LITIGATION
+By Jay Nelson Gorayeb, with Forensic Exposenomics Commentary by Norm Roulet (ICEarth)
+Source: amNewYork (amNY Law)
+Source URL: https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/
+Date: September 11, 2026
+Plate #47 Sovereign Cryptographic Archive: PHOTO-000BC / IP-000BC
+Vault Hash: 0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026
+
+I. ATTORNEY JAY NELSON GORAYEB OP-ED
+Today, lead exposure remains a modern public-health concern. According to the EPA, homes built before 1978 are more likely to contain lead-based paint, and two of the most common sources of household exposure are dust and paint chips from deteriorating lead-based paint.
+
+For thousands of years, humans have worked with lead. Ancient Egyptians used lead for fishing-net weights, jewelry, beads, solder, domestic utensils, pottery glazes, construction materials, ornaments, decorations, glass, and enamels. Later, Greek and Roman builders also incorporated lead into construction. For example, the Pantheon in Rome was covered with lead roofing by Emperor Constans II in 663 A.D.
+
+Today, it is understood that lead is poisonous to humans and dangerous to work with. However, the dangers of lead have been recognized throughout human history. Dr. Herbert L. Needleman notes that German tribes reportedly banned Roman wine because it caused sickness among those who drank it. Likewise, the Greek physician Hippocrates described symptoms consistent with lead poisoning, including loss of appetite, colic, pallor, weight loss, fatigue, irritability, and nervous spasms. The Romans also referred to lead poisoning as “saturnism,” referencing the symptoms with Saturn, the irritable god.
+
+Centuries later, physicians continued to connect lead exposure with serious illness. In 1763, a physician at the court of King George III wrote that lead fittings used to press cider had caused an outbreak of colic.
+
+In the early days of America, Benjamin Franklin also recognized the potential danger of lead exposure. In a July 31, 1786 letter to Benjamin Vaughan, Franklin observed that rainwater running over white lead paint could carry lead residue from rooftops into collected water. Specifically, he described a case in which an entire family suffered from “dry bellyach” after drinking rainwater that had been stored in a tank contaminated by lead.
+
+Nonetheless, despite centuries of concern about lead’s toxicity, the Industrial Revolution rapidly changed the predominance of lead in everyday life. The resulting increase in demand contributed to a rise in industrial diseases, including widespread lead poisoning.
+
+Even with modern safety procedures and protocols, lead continues to be used in construction. Lead is still used in sheets designed to prevent water penetration, as sheathing material for high-voltage power cables, and in certain roofing materials.
+
+Fortunately, there exist laws that protect laborers who are required to work with these substances. In New York, the Labor Law § 241(6) requires contractors and owners to comply with specific safety rules during construction, excavation, and demolition work. The statute applies to injuries arising from violations of specific, applicable Industrial Code regulations. Under 12 NYCRR § 23-1.4(b)(13), lead-abatement work performed as part of a renovation or demolition project can fall within this definition.
+
+Specifically, N.Y. Comp. Codes R. & Regs. tit. 12 § 23-1.26 addresses lead in construction. The law notes that materials containing lead that may lead to toxic fumes cannot be welded in confined spaces. Further, any worker performing cleaning or grinding lead-coated metals must also be provided with an approved respirator.
+
+Unfortunately, regardless of the historical risks of working with lead, workers are all too often provided with inadequate protection. For example, the respirators that these workers are entitled to may not be readily available onsite or may be in faulty condition. Much of the time, safety protocols are ignored on job sites to prioritize speed over safety.
+
+What compounds this lackluster regard for safety is the historical knowledge that lead is a dangerous material to work with, and the threat of exposure remains persistent in the construction industry. As such, those who have the means to provide the proper safety equipment must not forget what history has shown: lead is dangerous.
+
+For these reasons, New York remains at the forefront of worker protection. Here, workers have access to legal recourse for when they are in need of help. The labor law allows sick workers to receive the help that they need – compensation for medical treatment and their suffering.
+
+As such, when little to no protection is provided for our city’s construction workers who risk lead poisoning or any risk of toxic exposure, for that matter, they ought to continue to have meaningful legal recourse that has existed in this state for over 100 years.
+
+II. FORENSIC EXPOSENOMICS COMMENTARY BY NORM ROULET
+Attorney Gorayeb's op-ed hits the raw nerve of our society: victims must litigate after poisoning. 
+I brought Motley Rice lead paint litigation against Sherwin-Williams to Ohio, and similar litigation was successful in California, awarding over $300 million for lead abatement. Lead poisoning victims in Flint had to bring litigation against the government, resulting in a landmark $626.25 million civil class-action settlement, with total recoveries exceeding $719 million. And Freddie Gray was one of the most notorious lead poisoning victims to pursue litigation—when combined with his two sisters, the Gray siblings' total lead settlement was worth $435,000 in future payments with a present value around $280,000. 
+
+In modern civil litigation, victims are now often awarded millions in damages. That is how victims have been treated by society: poison first, litigate later. New York Labor Law § 241(6) is the critical legal hammer that enables workers to hold negligent owners and contractors accountable when job sites sacrifice human brains and nervous systems for corporate speed.`,
+      tags: ['LeadLitigation', 'Plate47', 'LaborLaw241', 'Gorayeb', 'NewYorkConstruction', 'MotleyRice', 'SherwinWilliams', 'FlintWaterCrisis', 'FreddieGray', 'Exposenomics'],
+      linkHash: '0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026'
+    },
     {
       id: 'MAG-MICROBIAL-BIOREMEDIATION-AQUATIC-2026',
       title: 'Microbial Bioremediation Strategies for Toxic Heavy Metals in Aquatic Ecosystems: A Critical Review & NanoSpire Cavitation Synthesis (Plate #46)',
@@ -2735,6 +2800,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BC',
+      title: 'Lead Poisoning: The Only Recourse for Victims Is Litigation — New York Construction & Civil Precedents (Plate #47)',
+      category: 'Forensic Jurisprudence, NY Labor Law § 241(6) & Toxic Tort Exposenomics',
+      imageSrc: leadLitigationRecourseImg,
+      location: 'New York Supreme Court, amNY Op-Ed Archive & Sovereign Exposenomics Chambers',
+      date: '2026-09-11',
+      description: "Origins: Landmark forensic legal exposenomics plate inspired by attorney Jay Nelson Gorayeb's amNY Op-Ed on lead poisoning in New York construction. Details the only recourse left for victims: aggressive civil litigation. Analyzes the Motley Rice $305M California verdict against Sherwin-Williams (and its Ohio roots), the Flint Water Crisis $626.25M class action ($719M+ total recoveries), and Freddie Gray's Baltimore structured settlement. Outlines New York Labor Law § 241(6) and Industrial Code 12 NYCRR § 23-1.26 holding general contractors and owners strictly accountable for failing to provide approved respirators during confined space welding and lead paint remediation.",
+      vaultHash: '0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026',
+      tags: ['LeadLitigation', 'Plate47', 'LaborLaw241', 'Gorayeb', 'NewYorkConstruction', 'MotleyRice', 'SherwinWilliams', 'FlintWaterCrisis', 'FreddieGray', 'IndustrialCode23', 'ToxicTorts', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BB',
       title: 'Microbial Bioremediation & Advanced Nanotechnology for Aquatic Heavy Metal Mitigation (Plate #46)',
@@ -5486,6 +5562,31 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-LEAD-LEGAL-RECOURSE-NY-LABOR-2026' || selectedArticle.tags?.includes('LaborLaw241') || selectedArticle.tags?.includes('Plate47')) && (
+                  <a
+                    href="https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>📄 Read amNY Op-Ed</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-LEAD-LEGAL-RECOURSE-NY-LABOR-2026' || selectedArticle.tags?.includes('LaborLaw241') || selectedArticle.tags?.includes('Plate47')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('lead_poisoning_legal_recourse');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 hover:from-amber-400 hover:to-yellow-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300"
+                  >
+                    <Scale size={13} className="text-stone-950" />
+                    <span>⚖️ Launch Legal Recourse Engine</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {(selectedArticle.id === 'MAG-MICROBIAL-BIOREMEDIATION-AQUATIC-2026' || selectedArticle.tags?.includes('MicrobialBioremediation') || selectedArticle.tags?.includes('Plate46')) && (
                   <a
                     href="https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23"
@@ -5687,6 +5788,31 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000BC' || selectedPhoto.tags?.includes('LaborLaw241') || selectedPhoto.tags?.includes('Plate47')) && (
+                    <a
+                      href="https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300 text-xs font-mono transition-colors"
+                    >
+                      <FileText size={12} className="text-stone-950" />
+                      <span>📄 Read amNY Op-Ed</span>
+                      <ExternalLink size={11} className="text-stone-950" />
+                    </a>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000BC' || selectedPhoto.tags?.includes('LaborLaw241') || selectedPhoto.tags?.includes('Plate47')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('lead_poisoning_legal_recourse');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 hover:from-amber-400 hover:to-yellow-400 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300 text-xs font-mono"
+                    >
+                      <Scale size={13} className="text-stone-950" />
+                      <span>⚖️ Launch Legal Recourse Engine</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000BB' || selectedPhoto.tags?.includes('MicrobialBioremediation') || selectedPhoto.tags?.includes('Plate46')) && (
                     <a
                       href="https://www.sciencedirect.com/science/article/pii/S2773207X26001041#sec23"
