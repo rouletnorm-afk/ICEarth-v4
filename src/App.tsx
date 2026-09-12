@@ -137,6 +137,7 @@ import { AIExistentialRiskContinuum } from './components/AIExistentialRiskContin
 import { GlialNeurotoxicityAudit } from './components/GlialNeurotoxicityAudit';
 import { MicrobialBioremediationAudit } from './components/MicrobialBioremediationAudit';
 import { LeadPoisoningLegalRecourseNY } from './components/LeadPoisoningLegalRecourseNY';
+import { SlowViolenceLowVitamins } from './components/SlowViolenceLowVitamins';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -524,6 +525,23 @@ export default function App() {
         lower.includes('plate_45')
       ) {
         setActiveTab('glial_neurotoxicity');
+      } else if (
+        lower === 'slow_violence_low_vitamins' ||
+        lower === 'slow_violence' ||
+        lower === 'christian_warren' ||
+        lower === 'warren' ||
+        lower === 'low_vitamins' ||
+        lower === 'rickets_lead' ||
+        lower === 'bone_disease' ||
+        lower === 'plate_48' ||
+        lower === 'plate48' ||
+        lower.includes('slow_violence') ||
+        lower.includes('low_vitamins') ||
+        lower.includes('rickets') ||
+        lower.includes('plate48') ||
+        lower.includes('plate_48')
+      ) {
+        setActiveTab('slow_violence_low_vitamins');
       } else if (
         lower === 'lead_poisoning_legal_recourse' ||
         lower === 'lead_legal_recourse' ||
@@ -2153,6 +2171,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Slow Violence, Low Vitamins & Rickets Comorbidity: Plate #48 */}
+                <button
+                  onClick={() => setActiveTab('slow_violence_low_vitamins' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'slow_violence_low_vitamins' || (activeTab as string) === 'slow_violence' || (activeTab as string) === 'plate_48' || (activeTab as string) === 'plate48'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Dna size={16} className={activeTab === 'slow_violence_low_vitamins' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🧬 Slow Violence & Low Vitamins</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #48
+                  </span>
+                </button>
+
                 {/* Lead Poisoning Legal Recourse & NY Construction Jurisprudence: Plate #47 */}
                 <button
                   onClick={() => setActiveTab('lead_poisoning_legal_recourse' as any)}
@@ -2685,6 +2719,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'mirna31_nrf2_lead', icon: Dna, label: '🧬 miRNA-31/Nrf2 Epigenetic Axis', badge: 'AIIMS 2026', color: 'rose' },
                     { id: 'occupational_lead_review', icon: Microscope, label: '🧬 Lead & Metal Homeostasis Review', badge: '7.3k Review', color: 'cyan' },
                     { id: 'glial_neurotoxicity', icon: Brain, label: '🧠 Glial Cells & Heavy Metal Toxicity', badge: 'Plate #45', color: 'amber' },
+                    { id: 'slow_violence_low_vitamins', icon: Dna, label: '🧬 Slow Violence & Low Vitamins', badge: 'Plate #48', color: 'amber' },
                     { id: 'lead_poisoning_legal_recourse', icon: Scale, label: '⚖️ Lead Litigation & Legal Recourse', badge: 'Plate #47', color: 'amber' },
                     { id: 'microbial_bioremediation', icon: Droplets, label: '💧 Aquatic Microbial Bioremediation', badge: 'Plate #46', color: 'emerald' },
                     { id: 'artisanal_metallurgy', icon: Flame, label: '👑 Artisanal Metallurgy & Galamsey', badge: 'Deep-AI Dive', color: 'amber' },
@@ -2794,6 +2829,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'jicarilla_gasbuggy_audit' || (activeTab as string) === 'gasbuggy' || (activeTab as string) === 'jicarilla_audit' || (activeTab as string) === 'ice_jicarilla' || (activeTab as string) === 'gasbuggy_audit') && '☢️ ICE-Jicarilla: Project Gasbuggy Environmental Audit'}
               {(activeTab === 'occupational_lead_review' || (activeTab as string) === 'occupational_lead' || (activeTab as string) === 'lead_homeostasis') && '🧬 Lead & Essential Metal Homeostasis'}
               {(activeTab === 'glial_neurotoxicity' || (activeTab as string) === 'glial' || (activeTab as string) === 'glial_cells' || (activeTab as string) === 'neurotoxicity') && '🧠 Glial Cells & Heavy Metal Neurotoxicity (Plate #45)'}
+              {(activeTab === 'slow_violence_low_vitamins' || (activeTab as string) === 'slow_violence' || (activeTab as string) === 'christian_warren' || (activeTab as string) === 'low_vitamins' || (activeTab as string) === 'rickets_lead' || (activeTab as string) === 'plate_48' || (activeTab as string) === 'plate48') && '🧬 Slow Violence, Low Vitamins & Rickets Comorbidity (Plate #48)'}
               {(activeTab === 'lead_poisoning_legal_recourse' || (activeTab as string) === 'lead_litigation' || (activeTab as string) === 'plate_47' || (activeTab as string) === 'labor_law_241') && '⚖️ Lead Poisoning Legal Recourse & NY Labor Law (Plate #47)'}
               {(activeTab === 'microbial_bioremediation' || (activeTab as string) === 'bioremediation' || (activeTab as string) === 'plate_46' || (activeTab as string) === 'aquatic_bioremediation') && '💧 Aquatic Microbial Bioremediation & NanoSpire Cavitation (Plate #46)'}
               {(activeTab === 'artisanal_metallurgy' || (activeTab as string) === 'gold_greed_graves' || (activeTab as string) === 'galamsey') && '👑 Artisanal Metallurgy & Galamsey'}
@@ -4565,6 +4601,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'lead_poisoning_legal_recourse' || (activeTab as string) === 'lead_litigation' || (activeTab as string) === 'lead_legal_recourse' || (activeTab as string) === 'ny_labor_law' || (activeTab as string) === 'labor_law_241' || (activeTab as string) === 'plate_47' || (activeTab as string) === 'plate47' || (activeTab as string) === 'gorayeb') && (
             <div className="flex-1 overflow-y-auto">
               <LeadPoisoningLegalRecourseNY 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.119E: SLOW VIOLENCE, LOW VITAMINS & RICKETS COMORBIDITY (PLATE #48) */}
+          {(activeTab === 'slow_violence_low_vitamins' || (activeTab as string) === 'slow_violence' || (activeTab as string) === 'christian_warren' || (activeTab as string) === 'warren' || (activeTab as string) === 'low_vitamins' || (activeTab as string) === 'rickets_lead' || (activeTab as string) === 'bone_disease' || (activeTab as string) === 'plate_48' || (activeTab as string) === 'plate48') && (
+            <div className="flex-1 overflow-y-auto">
+              <SlowViolenceLowVitamins 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

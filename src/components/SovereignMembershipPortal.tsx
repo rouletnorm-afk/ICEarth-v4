@@ -54,6 +54,7 @@ import aiExistentialRiskImg from '../assets/images/ai_existential_risk_continuum
 import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_1789015560249.jpg';
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
+import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
 import {
   Shield,
   UserCheck,
@@ -185,6 +186,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BD',
+      title: 'Slow Violence, Low Vitamins: Lead Poisoning & Childhood Bone Disease Comorbidity — Christian Warren Thesis (Plate #48)',
+      type: 'Forensic Exposenomics, Bone Pathology & Structural Racism Agnotology IP Asset',
+      imageSrc: slowViolenceRicketsImg,
+      link: 'slow_violence_low_vitamins',
+      sourceUrl: 'https://chrisinnermostthoughts.substack.com/p/slow-violence-low-vitamins',
+      description: "Origins: Landmark forensic exposenomics plate analyzing medical historian Christian Warren's December 2025 Substack essay 'Slow Violence, Low Vitamins: The harm done by vitamin D deficiency is hard to track, especially if no one is tracking it.' Warren (author of Brush With Death: A Social History of Lead Poisoning, recommended by Dr. Bruce Lanphear) draws on Rob Nixon’s concept of 'slow violence'—incremental, accretive violence somatized into hidden cellular lesions. Integrated with Roulet’s Law: lead and vitamin D deficiency form an insidious two-way biological vicious cycle where lead inhibits renal 1α-hydroxylase (suppressing active calcitriol by 48-75%), while low vitamin D upregulates intestinal DMT1/calbindin, multiplying lead absorption by 300-500%. Deconstructs the historical myth of rickets as a 'race disease,' showing how Dickensian English tenements, southern slave labor camps, and NYC 25x100 railroad flats inflicted both conditions through deliberate economic choice and structural racism.",
+      sovereignHash: '0xSLOW_VIOLENCE_LOW_VITAMINS_WARREN_ROULET_2026'
+    },
     {
       id: 'IP-000BC',
       title: 'Lead Poisoning: The Only Recourse for Victims Is Litigation — New York Construction & Civil Precedents (Plate #47)',
