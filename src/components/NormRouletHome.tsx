@@ -121,10 +121,24 @@ import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_17890
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
+import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('necropolitics') ||
+    u.includes('jackson_necropolitics') ||
+    u.includes('1789219600494') ||
+    u.includes('plate_49') ||
+    u.includes('plate49') ||
+    u.includes('plate #49') ||
+    u.includes('zack_linly') ||
+    u.includes('madiba_dennie') ||
+    u.includes('0xjackson_necropolitics')
+  ) {
+    return jacksonNecropoliticsImg;
+  }
   if (
     u.includes('slow_violence') ||
     u.includes('low_vitamins') ||
@@ -889,6 +903,51 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-JACKSON-NECROPOLITICS-DUAL-OPED-2026',
+      title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Dual Op-Ed Forensic Synthesis (Plate #49)',
+      category: 'Exposenomics',
+      date: '2026-09-12',
+      imageSrc: jacksonNecropoliticsImg,
+      publishedUrl: 'https://newsone.com/6871533/jackson-mississippi-poisonous-water-supply/',
+      summary: "Two landmark September 11, 2026 Op-Eds—by Zack Linly in NewsOne and Madiba K. Dennie in Balls & Strikes—expose the Jackson, Mississippi lead water crisis as textbook necropolitics: the sovereign governance of human disposability through infrastructural abandonment and legal immunity. Linly dismantles the superficial framing of the crisis: while disproportionate poisoning of an 80%+ Black population is framed as generic racism, the immediate political crisis is the total abdication of executive responsibility by municipal leadership (Mayor Tony Yarber firing DPW interim director Willie Bell in 2014 after Bell warned of acidic low-pH river water leaching century-old lead bands every 20 feet, then lying to the public that 'We are not even close to being Flint'). Dennie demonstrates how the Fifth Circuit Court of Appeals amputated the Fourteenth Amendment's guarantee of bodily integrity through conservative originalism and qualified immunity, ruling that the Constitution does not prevent the state from poisoning your drinking water. ICEarth traces this directly to the corporate emergency management lineage of Jones Day (Kevyn Orr in Detroit cutting off Flint) and the Trump judicial pipeline that gutted civil rights.",
+      fullText: `THE NECROPOLITICS OF LEAD POISONING: JACKSON, FLINT & CONSTITUTIONAL ABANDONMENT
+Forensic Exposenomics & Jurisprudential Audit by Norman Roulet (ICEarth)
+Synthesizing September 11, 2026 Analyses by Zack Linly (NewsOne) & Madiba K. Dennie (Balls & Strikes)
+Plate #49 Sovereign Cryptographic Archive: PHOTO-000BE / IP-000BE
+Vault Hash: 0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026
+
+I. THE CRISIS OF EXECUTIVE RESPONSIBILITY: ZACK LINLY AUDIT
+In "Jackson Residents Not Legally Protected From Poisonous Water Supply" (NewsOne, Sept 11, 2026), journalist Zack Linly confronts the uncomfortable reality of municipal betrayal:
+"At some point, it's not hyperbolic to say that cash-poor Black people are being targeted for death via systematic neglect."
+
+Jackson's water crisis did not originate with the 2022 flood. In 2014, Willie Bell, the interim director of Jackson’s Department of Public Works, alerted Mayor Tony Yarber that the Pearl River’s low pH was triggering a dangerous surge of lead in the water supply. Bell warned that corrosion control was desperately required. Rather than warning the community or installing corrosion inhibitors, Yarber fired Bell and expanded the use of the acidic river water. 
+
+In June 2015, the Mississippi State Department of Health found that 22% of tested homes had elevated lead levels—meaning the contamination rate in Jackson was even higher than Flint, Michigan's peak (17.1%). City officials hid these findings from the public until early 2016, with Yarber declaring at a city council meeting: "The system is not the issue... We are not even close to being Flint."
+
+When leadership responsible for the poisoning shares the racial demographic of the poisoned community, the crisis cannot be dismissed as generic external racism. The profound political crisis is the total lack of executive responsibility, where elected leaders treat their own citizens as expendable while pocketing administrative perks and protecting political patrons.
+
+II. THE FIFTH CIRCUIT'S ORIGINALIST AMPUTATION: MADIBA K. DENNIE AUDIT
+In "Fifth Circuit: The Constitution Does Not Prevent the Government From Poisoning Your Drinking Water" (Balls & Strikes, Sept 11, 2026), Madiba K. Dennie documents the judicial evisceration of substantive due process under the 14th Amendment:
+"By defining constitutional rights as narrowly as possible, conservative judges make it very easy for them to conclude that those rights do not exist."
+
+Underneath Jackson lie 1,500 miles of pipes; over 100 miles are century-old with solid lead bands every 20 feet. Residents sued alleging violations of their fundamental right to bodily integrity and protection from state-created dangers under the 14th Amendment Due Process Clause. 
+- In June 2024, the Southern District of Mississippi dismissed the case, claiming residents failed to prove constitutional violations.
+- In November 2025, a Fifth Circuit panel conceded the city plausibly violated the Constitution, but granted officials qualified immunity because there was no prior identical case.
+- In 2026, the conservative en banc majority went further, ruling that no constitutional right to bodily integrity exists that protects citizens from toxic tap water.
+
+Unlike the Sixth Circuit's ruling in Guertin v. Michigan (which affirmed that knowingly delivering poisoned water violates substantive due process), the Fifth Circuit weaponized originalist minimalism to create an insurmountable shield for state perpetrators.
+
+III. THE CORPORATE AUSTERITY LINEAGE: JONES DAY, KEVYN ORR & FLINT
+Jackson and Flint are not isolated anomalies; they are twin products of the same corporate restructuring apparatus. In Detroit, Kevyn Orr—a partner at white-shoe corporate law firm Jones Day—was installed as Emergency Financial Manager. Under Orr and Jones Day, Detroit cut off Flint from Lake Huron to save pennies, forcing the city onto the corrosive Flint River. 
+
+Jones Day went on to serve as Donald Trump’s central legal architect and judicial vetting machine, packing federal appeals courts—especially the Fifth Circuit—with originalist judges designed to dismantle civil rights and environmental accountability.
+
+IV. ACHILLE MBEMBE'S NECROPOLITICS: SOVEREIGN DISPOSABILITY
+Political theorist Achille Mbembe defined necropolitics as the sovereign capacity to dictate who may live and who must die—the creation of death-worlds where vast populations are subjected to living conditions that confer the status of the "living dead." Jackson, Mississippi represents modern American necropolitics: communities stripped of clean water, poisoned with brain-damaging heavy metals, and legally barred from seeking constitutional redress by federal courts.`,
+      tags: ['Necropolitics', 'JacksonWaterCrisis', 'Plate49', 'MadibaDennie', 'ZackLinly', 'TonyYarber', 'WillieBell', 'FifthCircuit', 'DueProcess', 'BodilyIntegrity', 'JonesDay', 'KevynOrr', 'FlintWaterCrisis', 'AchilleMbembe', 'Exposenomics'],
+      linkHash: '0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026'
+    },
     {
       id: 'MAG-WARREN-SLOW-VIOLENCE-LOW-VITAMINS-2026',
       title: 'Slow Violence, Low Vitamins: Lead Poisoning, Vitamin D Deficiency & the Social Construction of Childhood Bone Disease (Plate #48)',
@@ -2865,6 +2924,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BE',
+      title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Zack Linly & Madiba K. Dennie Forensic Analysis (Plate #49)',
+      category: 'Forensic Jurisprudence, Substantive Due Process & Necropolitical Exposenomics',
+      imageSrc: jacksonNecropoliticsImg,
+      location: 'Jackson, Mississippi • Fifth Circuit Court of Appeals & Flint Infrastructure Matrix',
+      date: '2026-09-12',
+      description: "Origins: Landmark forensic exposenomics plate synthesizing the September 11, 2026 Op-Eds by Zack Linly (NewsOne) and Madiba K. Dennie (Balls & Strikes) on the Jackson, MS lead water crisis and the Fifth Circuit's ruling denying constitutional bodily integrity protection. Interrogates the anatomy of necropolitics: when leadership responsible for poisoning an 80%+ Black population is also of color (Mayor Tony Yarber retaliating against and firing DPW interim director Willie Bell in 2014 after Bell warned about corrosive low-pH Pearl River water leaching century-old lead bands every 20 feet across 1,500 miles of mains), the political crisis is the total abdication of executive responsibility. Synthesized with the Flint/Detroit lineage of corporate austerity (Kevyn Orr / Jones Day emergency management cutting off clean water) and Trump-era judicial appointments gutting the 14th Amendment.",
+      vaultHash: '0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026',
+      tags: ['Necropolitics', 'JacksonWaterCrisis', 'Plate49', 'MadibaDennie', 'ZackLinly', 'TonyYarber', 'WillieBell', 'FifthCircuit', 'DueProcess', 'BodilyIntegrity', 'JonesDay', 'KevynOrr', 'FlintWaterCrisis', 'AchilleMbembe', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BD',
       title: 'Slow Violence, Low Vitamins: Lead Poisoning & Childhood Bone Disease Comorbidity — Christian Warren Thesis & Roulet’s Law (Plate #48)',

@@ -55,6 +55,7 @@ import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_17890
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
+import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
 import {
   Shield,
   UserCheck,
@@ -186,6 +187,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BE',
+      title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Zack Linly & Madiba K. Dennie Forensic Analysis (Plate #49)',
+      type: 'Forensic Jurisprudence, Substantive Due Process & Necropolitical Exposenomics IP Asset',
+      imageSrc: jacksonNecropoliticsImg,
+      link: 'jackson_necropolitics',
+      sourceUrl: 'https://newsone.com/6871533/jackson-mississippi-poisonous-water-supply/',
+      description: "Origins: Landmark forensic exposenomics plate synthesizing the September 11, 2026 Op-Eds by Zack Linly (NewsOne) and Madiba K. Dennie (Balls & Strikes) on the Jackson, MS lead water crisis and the Fifth Circuit's ruling denying constitutional bodily integrity protection. Interrogates the anatomy of necropolitics: when leadership responsible for poisoning an 80%+ Black population is also of color (Mayor Tony Yarber retaliating against and firing DPW interim director Willie Bell in 2014 after Bell warned about corrosive low-pH Pearl River water leaching century-old lead bands every 20 feet across 1,500 miles of mains), the political crisis is the total abdication of executive responsibility. Synthesized with the Flint/Detroit lineage of corporate austerity (Kevyn Orr / Jones Day emergency management cutting off clean water) and Trump-era judicial appointments gutting the 14th Amendment.",
+      sovereignHash: '0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026'
+    },
     {
       id: 'IP-000BD',
       title: 'Slow Violence, Low Vitamins: Lead Poisoning & Childhood Bone Disease Comorbidity — Christian Warren Thesis (Plate #48)',

@@ -54,6 +54,7 @@ import glialInfographicImg from '../assets/images/glial_cells_heavy_metals_17890
 import microbialBioremediationImg from '../assets/images/microbial_bioremediation_nanospire_1789049691410.jpg';
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
+import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -155,6 +156,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('necropolitics') ||
+    u.includes('jackson_necropolitics') ||
+    u.includes('1789219600494') ||
+    u.includes('plate_49') ||
+    u.includes('plate49') ||
+    u.includes('plate #49') ||
+    u.includes('zack_linly') ||
+    u.includes('madiba_dennie') ||
+    u.includes('0xjackson_necropolitics')
+  ) {
+    return jacksonNecropoliticsImg;
+  }
   if (
     u.includes('slow_violence') ||
     u.includes('low_vitamins') ||
@@ -807,6 +821,90 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-JACKSON-NECROPOLITICS-DUAL-OPED-2026',
+    contentType: 'Article',
+    title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment',
+    subtitle: 'Zack Linly (NewsOne) & Madiba K. Dennie (Balls & Strikes) Dual Op-Ed Audit: When Leadership of Color Retaliates Against Whistleblowers, the Crisis Is Executive Responsibility; When the 5th Circuit Grants Immunity, the State Codifies Necropolitics (Plate #49)',
+    sourceUrl: 'https://newsone.com/6871533/jackson-mississippi-poisonous-water-supply/',
+    sourceName: 'NewsOne & Balls & Strikes Jurisprudential Archives',
+    publishDate: '2026-09-12',
+    author: 'Zack Linly & Madiba K. Dennie',
+    authorName: 'Zack Linly (NewsOne) & Madiba K. Dennie (Balls & Strikes), with Exposenomics & Sovereignty Commentary by Norman Roulet (ICEarth)',
+    originState: 'Mississippi / 5th Circuit Court of Appeals Jurisprudence',
+    tags: [
+      'Necropolitics',
+      'JacksonWaterCrisis',
+      'Plate49',
+      'MadibaDennie',
+      'ZackLinly',
+      'TonyYarber',
+      'WillieBell',
+      'FifthCircuit',
+      'DueProcess',
+      'BodilyIntegrity',
+      'JonesDay',
+      'KevynOrr',
+      'FlintWaterCrisis',
+      'AchilleMbembe',
+      'Exposenomics'
+    ],
+    editorialWeight: 100,
+    featured: true,
+    promotedToHomePage: true,
+    communities: ['ICEarth Global', 'Exposenomics', 'Jackson, MS'],
+    vaultHash: '0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026',
+    editorName: 'Norm Roulet (ICEarth Lead Exposenomics Architect)',
+    editorRole: 'Lead Exposenomics & Civil Litigation Forensics Director',
+    imageUrl: 'jackson_necropolitics_lead_water_1789219600494',
+    readTime: '15 min read',
+    abstract: "Two landmark September 11, 2026 Op-Eds—by Zack Linly in NewsOne and Madiba K. Dennie in Balls & Strikes—converge on a horrifying constitutional reality: cash-poor Black residents of Jackson, Mississippi are not legally protected from a poisonous water supply. Linly highlights the crisis of leadership accountability: when Mayor Tony Yarber was warned by DPW interim director Willie Bell in 2014 that low river pH was leaching neurotoxic lead from 1,500 miles of pipes (with solid lead bands every 20 feet in century-old mains), Yarber fired Bell and expanded acidic river water use, concealing 22% elevated lead rates that exceeded Flint. Dennie exposes how the Fifth Circuit Court of Appeals manipulated conservative originalism to rule that the 14th Amendment's Due Process Clause does not prevent the state from knowingly poisoning tap water. Roulet connects this to the Jones Day / Kevyn Orr emergency management lineage in Detroit and Flint.",
+    editorCommentary: "The Jackson Water Crisis exposes the hollow core of performative identity politics without structural accountability. When Black municipal leaders like Mayor Tony Yarber fire conscientious whistleblowers like Willie Bell to conceal lead contamination exceeding Flint's peak, the crisis is fundamentally an abdication of executive responsibility. Compounded by white-shoe corporate austerity—where Jones Day partner Kevyn Orr severed Flint's clean water supply to balance ledgers—and reinforced by federal judges who deny the existence of a right to bodily integrity, Jackson represents modern American necropolitics in its purest form: the sovereign power to treat impoverished citizens as disposable.",
+    fullExcerpt: `THE NECROPOLITICS OF LEAD POISONING: JACKSON, FLINT & CONSTITUTIONAL ABANDONMENT
+Dual Op-Ed Forensic Audit & Structural Critique by Norman Roulet (ICEarth)
+Featuring Zack Linly (NewsOne, Sept 11, 2026) and Madiba K. Dennie (Balls & Strikes, Sept 11, 2026)
+Plate #49 Sovereign Cryptographic Archive: PHOTO-000BE / IP-000BE
+Vault Hash: 0xJACKSON_NECROPOLITICS_LEAD_WATER_DENNIE_LINLY_ROULET_2026
+
+ARTICLE 1: "Jackson Residents Not Legally Protected From Poisonous Water Supply [Op-Ed]"
+By Zack Linly | NewsOne | Published September 11, 2026
+Source: https://newsone.com/6871533/jackson-mississippi-poisonous-water-supply/
+
+HIGHLIGHT ANALYSIS:
+"At some point, it's not hyperbolic to say that cash-poor Black people are being targeted for death via systematic neglect."
+
+Jackson’s water woes began long before the widely publicized 2022 water treatment plant freeze. In 2014, Willie Bell, the interim director of Jackson’s Department of Public Works, alerted Mayor Tony Yarber that the river’s low pH levels were triggering a dangerous increase in the amount of lead in the water supply. Bell warned that the city urgently needed to upgrade its corrosion control program, and that the city’s residents were at high risk of lead poisoning.
+
+Yarber did not pass on these warnings to the public. He instead fired Bell and expanded the city’s use of the low-pH river water. As a result, the people of Jackson—more than 80 percent of whom are Black, and a quarter of whom live below the federal poverty line—kept drinking and cooking with and bathing in water that they didn’t know was poisoning them.
+
+In June 2015, the Mississippi State Department of Health found that 22 percent of homes in Jackson had elevated levels of lead in the water, meaning the danger was even more widespread in Jackson than in Flint, Michigan. Still, no one told Jackson residents until early 2016. And even then, city officials downplayed the risks and told the public that the water was safe. “The system is not the issue,” said Yarber at a February 2016 city council meeting. “We are not even close to being Flint.”
+
+The plaintiffs’ lawsuit specifically alleged that “the city had endangered their fundamental right to bodily integrity as well as their right to be protected from state-created dangers, as guaranteed by the Due Process Clause of the Fourteenth Amendment.” But in June 2024, the District Court for the Southern District of Mississippi dismissed the case, finding that the residents hadn’t proven their Constitutional rights were violated. The Fifth Circuit Court of Appeals, on the other hand, ruled in November 2025 that while the city “plausibly violated the Constitution,” it was entitled to qualified immunity.
+
+Now, the court is essentially saying there was no constitutional violation at all. So, at what point are we willing to admit this is necropolitics at work?
+
+--------------------------------------------------------------------------------
+
+ARTICLE 2: "Fifth Circuit: The Constitution Does Not Prevent the Government From Poisoning Your Drinking Water"
+By Madiba K. Dennie | Balls & Strikes | Published September 11, 2026
+Source: https://ballsandstrikes.org/law-politics/fifth-circuit-jackson-lead-drinking-water-constitution-originalism/
+
+HIGHLIGHT ANALYSIS:
+"By defining constitutional rights as narrowly as possible, conservative judges make it very easy for them to conclude that those rights do not exist."
+
+Underneath the streets of Jackson, Mississippi, 1,500 miles of pipes deliver water to roughly 140,000 residents of the state’s capital. At least 100 miles of those pipes are over a century old and contain solid bands of lead every 20 feet. 
+
+Lead is a toxic metal that, if ingested, can cause lasting damage to the heart, brain, kidneys, and reproductive organs. And the health risks posed by lead pipes can be exacerbated by the water supply itself: Water sources with low pH levels, like the river that provides much of Jackson’s drinking water, wear away at the pipes’ lining and allow more lead to leach into the water.
+
+Dennie analyzes how the Fifth Circuit used originalism to evade Guertin v. Michigan (6th Cir. 2019), which affirmed that the 14th Amendment protects citizens against state-created environmental poisoning. By defining the right not as "bodily integrity" but as "a historically rooted right to lead-free municipal tap water in 1868," conservative judges manufactured the conclusion that no constitutional violation occurred.
+
+--------------------------------------------------------------------------------
+
+ICEARTH FORENSIC SYNTHESIS:
+1. THE RETALIATION TRAIL: Mayor Tony Yarber's termination of whistleblower Willie Bell and subsequent concealment of the June 2015 22% lead surge demonstrates that internal executive malfeasance is the first barrier to environmental justice.
+2. THE JONES DAY AUSTERITY BLUEPRINT: In Detroit and Flint, Jones Day partner Kevyn Orr exercised emergency management powers to terminate clean water supplies, establishing the blueprint for municipal austerity that leaves pipes to rot.
+3. ACHILLE MBEMBE'S NECROPOLITICS: Modern sovereignty exercises control over mortality not via physical execution, but by abandoning infrastructure, granting qualified immunity to polluters, and extinguishing constitutional rights.`
+  },
   {
     id: 'ART-WARREN-SLOW-VIOLENCE-LOW-VITAMINS-2026',
     contentType: 'Article',
@@ -4711,6 +4809,43 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('Necropolitics') || article.tags?.includes('MadibaDennie') || article.tags?.includes('ZackLinly') || article.id.includes('JACKSON-NECROPOLITICS') || article.title?.includes('Necropolitics of Lead Poisoning')) && (
+                      <>
+                        <a
+                          href="https://newsone.com/6871533/jackson-mississippi-poisonous-water-supply/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-red-600 hover:bg-red-500 text-white font-mono font-bold text-xs rounded-xl shadow border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-white" />
+                          <span>📄 NewsOne Op-Ed (Zack Linly)</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+
+                        <a
+                          href="https://ballsandstrikes.org/law-politics/fifth-circuit-jackson-lead-drinking-water-constitution-originalism/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs rounded-xl shadow border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Scale size={13} className="text-stone-950" />
+                          <span>⚖️ Balls & Strikes (Madiba K. Dennie)</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('Necropolitics') || article.tags?.includes('MadibaDennie') || article.tags?.includes('ZackLinly') || article.id.includes('JACKSON-NECROPOLITICS') || article.title?.includes('Necropolitics of Lead Poisoning')) && (
+                      <button
+                        onClick={() => onNavigateTab('jackson_necropolitics')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-amber-500 to-yellow-500 hover:from-red-500 hover:to-amber-400 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Scale size={14} className="text-stone-950" />
+                        <span>⚖️ Launch Necropolitics Engine (Plate #49)</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {(article.tags?.includes('SlowViolence') || article.tags?.includes('LowVitamins') || article.id.includes('WARREN-SLOW-VIOLENCE') || article.title?.includes('Slow Violence, Low Vitamins')) && (
                       <a
                         href="https://chrisinnermostthoughts.substack.com/p/slow-violence-low-vitamins"
