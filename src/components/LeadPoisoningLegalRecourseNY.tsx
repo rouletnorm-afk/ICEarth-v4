@@ -28,7 +28,10 @@ import {
   Layers,
   History,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  Mail,
+  Send,
+  Download
 } from 'lucide-react';
 import {
   BarChart,
@@ -50,13 +53,15 @@ import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse
 
 interface Props {
   onNavigateTab?: (tab: string) => void;
+  siteTheme?: 'light' | 'dark';
 }
 
-export const LeadPoisoningLegalRecourseNY: React.FC<Props> = ({ onNavigateTab }) => {
+export const LeadPoisoningLegalRecourseNY: React.FC<Props> = ({ onNavigateTab, siteTheme = 'dark' }) => {
   const [isArtModalOpen, setIsArtModalOpen] = useState<boolean>(false);
   const [copiedHash, setCopiedHash] = useState<boolean>(false);
+  const [copiedLetter, setCopiedLetter] = useState<boolean>(false);
   const [activeTabSection, setActiveTabSection] = useState<
-    'precedents' | 'nylabor' | 'history' | 'calculator'
+    'precedents' | 'nylabor' | 'history' | 'calculator' | 'coverletter'
   >('precedents');
 
   // Interactive Calculator State for Legal Damages & Economic Valuation
@@ -68,10 +73,92 @@ export const LeadPoisoningLegalRecourseNY: React.FC<Props> = ({ onNavigateTab })
 
   const provenanceHash = '0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026';
 
+  const letterSubject = "Your amNY Op-Ed Featured on ICEarth (Plate #47) | Collaborative Proposal: Leveraging Forensic Exposenomics & Sponsoring ICEarth to Power High-Yield Lead Poisoning Litigation";
+
+  const fullLetterText = `September 11, 2026
+
+Jay Nelson Gorayeb, Esq.
+Gorayeb & Associates, P.C.
+100 William Street, Suite 1900
+New York, NY 10038
+
+RE: Recognition of amNY Op-Ed on Lead Poisoning in New York Construction (Archived as ICEarth Plate #47) | Strategic Proposal: Leveraging Forensic Exposenomics & Sponsoring ICEarth to Power High-Yield Lead Poisoning Litigation
+
+Dear Mr. Gorayeb,
+
+I am writing to commend you on your exceptional and incisive op-ed published in amNewYork, "Lead poisoning is an ancient danger that New York’s construction workers still face today: The only recourse is litigation." Your piece strikes at the profound and uncomfortable truth that defines toxic exposure in America: regulatory frameworks remain chronically sluggish and toothless, leaving aggressive civil litigation as the only genuine vehicle for worker accountability, medical restitution, and justice.
+
+By seamlessly connecting 3,000 years of clinical and metallurgical history—from Hippocrates’ early diagnosis of colic and saturnism to Benjamin Franklin’s prescient 1786 warning regarding rainwater runoff over lead paint—to modern New York demolition and renovation sites, you have framed the issue with the historical weight it demands. It is inexcusable that in 2026, construction laborers across New York City continue to be exposed to lead plumes while torching structural steel and stripping pre-1978 infrastructure without the mandatory, functioning respirators guaranteed under 12 NYCRR § 23-1.26.
+
+I. INCLUSION ON ICEARTH: PLATE #47 FORENSIC DOSSIER
+In recognition of your vital contribution, we have permanently enshrined your op-ed, legal analysis, and statutory arguments onto ICEarth (Information Community Earth) under Plate #47: Forensic Jurisprudence, NY Labor Law § 241(6) & Toxic Tort Exposenomics. 
+
+You can review the interactive forensic cockpit and permanent cryptographic archive here:
+https://ais-pre-nnzrzhfvvedjfcsbci6446-116268305333.us-west2.run.app/?tab=lead_poisoning_legal_recourse
+Cryptographic Vault Provenance Hash: 0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026
+
+Your article is featured alongside an interactive damages valuation simulator, regulatory breakdown under New York Labor Law § 241(6), and historical litigation benchmarks.
+
+II. THE PURPOSE OF ICEARTH IN SUPPORTING LEAD POISONING LITIGATION
+I founded ICEarth on sovereign exposenomics and environmental truth. Prior to establishing ICEarth, I served as Co-Chair of the Greater Cleveland Lead Advisory Council (GCLAC, chartered in 2006) and was the originator who brought Motley Rice’s historic lead paint litigation against Sherwin-Williams to Ohio. That legal fight helped pave the way for the historic California public nuisance verdict, which secured over $305 million for lead abatement against Sherwin-Williams, ConAgra, and NL Industries.
+
+Having spent decades on the frontlines of lead exposure and corporate evasion, one ironclad reality has emerged:
+Society treats lead poisoning victims with callous indifference—until they litigate.
+
+Consider the evidentiary record:
+1. California Lead Paint (Motley Rice): Over $305 million recovered for residential abatement after proving paint manufacturers had constructive notice of lead hazards dating back to the early 20th century.
+2. Flint Water Crisis: Victims were forced to battle the state and municipal contractors in federal court to secure a landmark $626.25 million civil class-action settlement, culminating in over $719 million in total recoveries.
+3. Freddie Gray Legacy: Before his tragic death in Baltimore, Freddie Gray and his sisters secured a $435,000 structured settlement ($280,000 present value) for childhood lead paint poisoning in substandard rental housing.
+
+Today, civil litigation routinely yields multi-million-dollar recoveries for lead victims. However, defense carriers and general contractors consistently exploit information asymmetries: they dispute causation, minimize sub-clinical neurological deficits, and blame lifestyle factors. 
+
+This is precisely where ICEarth provides transformative value for plaintiffs’ trial lawyers:
+- Quantitative Toxicokinetic Modeling: We map acute and chronic lead exposures to cellular neurotoxicity (including astrocytic mitochondrial collapse, blood-brain barrier degradation, and microvascular necrosis), establishing proximate medical causation.
+- Historical Notice Evidentiary Dossiers: We maintain exhaustive forensic archives proving corporate, contractor, and property-owner knowledge of lead hazards spanning centuries, defeating "lack of foreseeability" defenses.
+- Precision Economic Loss Actuarials: We model lifetime lost earning capacity, micro-cognitive impairment costs (e.g., lost IQ points and executive dysfunction), and lifelong medical monitoring frameworks required to maximize jury verdicts and settlement values.
+- Statutory Violation Cross-Referencing: Under New York Labor Law § 241(6), establishing that an owner or general contractor breached a specific, non-delegable provision of 12 NYCRR § 23-1.26 (such as inadequate ventilation, confined-space welding, or failure to furnish approved NIOSH respirators) establishes absolute liability. ICEarth translates job-site air and dust readings directly into concrete regulatory violations.
+
+III. PROPOSAL FOR SPONSORSHIP & STRATEGIC LITIGATION COLLABORATION
+ICEarth is actively reaching out to premier toxic tort and construction litigation firms nationwide to establish formal litigation sponsorships. As the preeminent champion of New York construction workers—"Los Abogados del Pueblo"—Gorayeb & Associates, P.C. is our premier candidate for an inaugural founding partnership.
+
+Through an ICEarth Litigation Sponsorship, your firm will gain:
+1. Tailored Forensic Dossiers for Trial: Custom forensic exposenomics reports, graphical exhibits, and kinetic modeling ready for expert disclosure and jury presentation in NY Labor Law § 241(6) lead cases.
+2. Spatial Exposure Corridors: Interactive GIS mapping cross-referencing pre-1978 New York building stock, bridge reconstruction corridors, high-voltage cable refurbishment sites, and sub-contractor safety violation registries.
+3. Co-Branded Sovereign Research: Recognition across ICEarth’s global platform, media repository, and scientific network as a champion of sovereign worker health and legal recourse.
+4. Expert Witness & Discovery Advisory: Direct coordination with our scientific network to counter defense toxicologists, dispute junk-science defenses, and establish indisputable contractor liability.
+
+We would be honored to schedule a 20-minute introductory briefing to demonstrate the ICEarth forensic engine and explore how our investigative data can support your active and upcoming construction toxic exposure caseload.
+
+Thank you for your tireless advocacy on behalf of New York’s construction workers. As your op-ed powerfully reaffirmed, when institutions fail to protect labor, the courtroom is our strongest shield.
+
+Respectfully submitted,
+
+Norman Roulet
+Founder & Principal Forensic Architect, ICEarth (Information Community Earth)
+Co-Chair, Greater Cleveland Lead Advisory Council (GCLAC)
+Email: rouletnorm@gmail.com
+Platform: https://ais-pre-nnzrzhfvvedjfcsbci6446-116268305333.us-west2.run.app`;
+
   const handleCopyHash = () => {
     navigator.clipboard.writeText(provenanceHash);
     setCopiedHash(true);
     setTimeout(() => setCopiedHash(false), 2500);
+  };
+
+  const handleCopyLetter = () => {
+    navigator.clipboard.writeText(fullLetterText);
+    setCopiedLetter(true);
+    setTimeout(() => setCopiedLetter(false), 3000);
+  };
+
+  const handleDownloadLetter = () => {
+    const element = document.createElement("a");
+    const file = new Blob([fullLetterText], { type: 'text/plain;charset=utf-8' });
+    element.href = URL.createObjectURL(file);
+    element.download = "ICEarth_Cover_Letter_Gorayeb_Lead_Litigation_Sponsorship.txt";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
   };
 
   // Litigation Benchmark Comparison Data
@@ -401,6 +488,21 @@ export const LeadPoisoningLegalRecourseNY: React.FC<Props> = ({ onNavigateTab })
         >
           <Sliders size={14} />
           <span>IV. Civil Damage & Valuation Simulator</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTabSection('coverletter')}
+          className={`px-4 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer ${
+            activeTabSection === 'coverletter'
+              ? 'bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-stone-950 font-black shadow-xl ring-2 ring-amber-300'
+              : 'bg-stone-900 text-amber-300 hover:bg-stone-800 hover:text-amber-200 border border-amber-500/30'
+          }`}
+        >
+          <Mail size={14} className={activeTabSection === 'coverletter' ? 'text-stone-950' : 'text-amber-400'} />
+          <span>V. Attorney Outreach & Sponsorship Dispatch</span>
+          <span className="px-1.5 py-0.5 bg-amber-900/60 text-amber-200 text-[9px] rounded font-bold border border-amber-500/40">
+            Gorayeb & Associates
+          </span>
         </button>
       </div>
 
@@ -936,6 +1038,294 @@ export const LeadPoisoningLegalRecourseNY: React.FC<Props> = ({ onNavigateTab })
                       <Copy size={12} />
                     </button>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* TAB 5: ATTORNEY OUTREACH & LITIGATION SPONSORSHIP DISPATCH */}
+        {activeTabSection === 'coverletter' && (
+          <div className="space-y-6 animate-fadeIn">
+            {/* INAUGURAL OUTREACH BANNER */}
+            <div className="bg-gradient-to-r from-amber-950/60 via-stone-900 to-stone-950 border border-amber-500/40 rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-xl">
+              <div className="absolute -right-10 -bottom-10 w-72 h-72 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+              
+              <div className="relative z-10 space-y-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3 py-1 bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-mono font-black text-xs rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow">
+                    <Mail size={13} className="text-stone-950" />
+                    <span>INAUGURAL ATTORNEY DISPATCH #01</span>
+                  </span>
+                  <span className="px-3 py-1 bg-stone-900 text-amber-300 border border-amber-500/30 font-mono text-xs rounded-full flex items-center gap-1.5">
+                    <Building size={13} className="text-amber-400" />
+                    <span>Gorayeb & Associates, P.C.</span>
+                  </span>
+                  <span className="px-3 py-1 bg-emerald-950 text-emerald-300 border border-emerald-500/40 font-mono text-xs rounded-full flex items-center gap-1.5">
+                    <Scale size={13} className="text-emerald-400" />
+                    <span>Nationwide Litigation Sponsorship Initiative</span>
+                  </span>
+                </div>
+
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-black text-white tracking-tight">
+                      Formal Outreach & Strategic Litigation Sponsorship Proposal
+                    </h3>
+                    <p className="text-sm text-stone-300 mt-1 max-w-3xl leading-relaxed">
+                      This formal cover letter is addressed to <strong className="text-amber-300">Jay Nelson Gorayeb, Esq.</strong> of Gorayeb & Associates, P.C.—author of the featured amNY Op-Ed. It represents the inaugural dispatch of ICEarth’s nationwide initiative contacting all toxic tort, construction accident, and personal injury attorneys who litigate lead poisoning, introducing ICEarth’s exposenomics intelligence and proposing sustainable litigation sponsorships.
+                    </p>
+                  </div>
+
+                  {/* QUICK ACTION CONTROLS */}
+                  <div className="flex flex-wrap items-center gap-2 pt-2 lg:pt-0">
+                    <button
+                      onClick={handleCopyLetter}
+                      className="px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl text-xs flex items-center gap-2 shadow-lg border border-amber-300 cursor-pointer transition-all hover:scale-102"
+                    >
+                      {copiedLetter ? <Check size={14} className="text-emerald-950" /> : <Copy size={14} className="text-stone-950" />}
+                      <span>{copiedLetter ? 'Letter Copied to Clipboard!' : 'Copy Full Letter'}</span>
+                    </button>
+
+                    <a
+                      href={`mailto:jgorayeb@gorayeb.com?subject=${encodeURIComponent(letterSubject)}&body=${encodeURIComponent(fullLetterText)}`}
+                      className="px-4 py-2.5 bg-stone-900 hover:bg-stone-800 text-amber-300 font-mono font-bold rounded-xl text-xs border border-amber-500/40 flex items-center gap-2 cursor-pointer transition-all"
+                    >
+                      <Send size={14} className="text-amber-400" />
+                      <span>Open in Email (mailto)</span>
+                    </a>
+
+                    <button
+                      onClick={handleDownloadLetter}
+                      className="px-4 py-2.5 bg-stone-900 hover:bg-stone-800 text-stone-300 font-mono font-bold rounded-xl text-xs border border-stone-700 flex items-center gap-2 cursor-pointer transition-all"
+                    >
+                      <Download size={14} className="text-stone-300" />
+                      <span>Download .txt</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* STRATEGIC RATIONALE: NATIONWIDE ATTORNEY SPONSORSHIP INITIATIVE */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 rounded-2xl bg-stone-900/70 border border-stone-800 space-y-2">
+                <div className="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono">
+                  <Scale size={15} />
+                  <span>1. Evidentiary Asymmetry</span>
+                </div>
+                <p className="text-xs text-stone-300 leading-relaxed">
+                  Defense carriers exploit sub-clinical exposure ambiguities. ICEarth bridges molecular toxicokinetics with NY Labor Law § 241(6) non-delegable duty statutes to substantiate causation beyond doubt.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-stone-900/70 border border-stone-800 space-y-2">
+                <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs font-mono">
+                  <DollarSign size={15} />
+                  <span>2. Sponsorship Architecture</span>
+                </div>
+                <p className="text-xs text-stone-300 leading-relaxed">
+                  By sponsoring ICEarth, plaintiffs’ law firms fund real-time sovereign environmental research and receive tailored trial-ready dossiers, GIS exposure heatmaps, and expert actuarial calculators.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-stone-900/70 border border-stone-800 space-y-2">
+                <div className="flex items-center gap-2 text-cyan-400 font-bold text-xs font-mono">
+                  <Users size={15} />
+                  <span>3. Nationwide Consortium</span>
+                </div>
+                <p className="text-xs text-stone-300 leading-relaxed">
+                  Gorayeb & Associates is the first of a planned nationwide outreach to all attorneys prosecuting lead torts—building a unified repository of contractor notices and corporate liability benchmarks.
+                </p>
+              </div>
+            </div>
+
+            {/* FORMAL LETTER VIEWER CONTAINER */}
+            <div className="bg-stone-900/90 border border-amber-600/30 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+              {/* LETTERHEAD / METADATA HEADER */}
+              <div className="border-b border-stone-800 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs text-stone-400">
+                <div className="space-y-1">
+                  <div className="text-white font-bold text-base tracking-tight flex items-center gap-2">
+                    <Scale size={18} className="text-amber-400" />
+                    <span>ICEARTH FORENSIC EXPOSENOMICS & TOXIC TORT ADVOCACY</span>
+                  </div>
+                  <div className="text-stone-400 text-[11px]">
+                    Information Community Earth • Greater Cleveland Lead Advisory Council (GCLAC, Est. 2006)
+                  </div>
+                  <div className="text-amber-300/80 text-[11px]">
+                    Official Correspondence: Dispatch Ref #ICE-LEGAL-NY-001
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:items-end gap-1 text-[11px]">
+                  <span className="text-stone-300 font-bold">Date: September 11, 2026</span>
+                  <span>Recipient: Jay Nelson Gorayeb, Esq.</span>
+                  <span>Firm: Gorayeb & Associates, P.C.</span>
+                  <span className="text-emerald-400 font-bold">Status: Ready for Transmission</span>
+                </div>
+              </div>
+
+              {/* SUBJECT BAR */}
+              <div className="p-4 bg-amber-950/40 border border-amber-500/30 rounded-2xl">
+                <div className="text-[10px] font-mono text-amber-400 uppercase font-black tracking-wider">Subject</div>
+                <div className="text-sm font-bold text-white mt-0.5">
+                  Recognition of amNY Op-Ed on Lead Poisoning in New York Construction (Archived as ICEarth Plate #47) | Strategic Proposal: Leveraging Forensic Exposenomics & Sponsoring ICEarth to Power High-Yield Lead Poisoning Litigation
+                </div>
+              </div>
+
+              {/* LETTER BODY CONTENT */}
+              <div className="prose prose-invert max-w-none text-stone-200 text-sm leading-relaxed space-y-4 font-sans">
+                <p className="font-semibold text-white">
+                  Dear Mr. Gorayeb,
+                </p>
+
+                <p>
+                  I am writing to commend you on your exceptional and incisive op-ed published in <em>amNewYork</em>, 
+                  <strong className="text-amber-300"> “Lead poisoning is an ancient danger that New York’s construction workers still face today: The only recourse is litigation.”</strong> Your piece strikes at the profound and uncomfortable truth that defines toxic exposure in America: regulatory frameworks remain chronically sluggish and toothless, leaving aggressive civil litigation as the only genuine vehicle for worker accountability, medical restitution, and justice.
+                </p>
+
+                <p>
+                  By seamlessly connecting 3,000 years of clinical and metallurgical history—from Hippocrates’ early diagnosis of colic and saturnism to Benjamin Franklin’s prescient 1786 warning regarding rainwater runoff over lead paint—to modern New York demolition and renovation sites, you have framed the issue with the historical weight it demands. It is inexcusable that in 2026, construction laborers across New York City continue to be exposed to lead plumes while torching structural steel and stripping pre-1978 infrastructure without the mandatory, functioning respirators guaranteed under <strong>12 NYCRR § 23-1.26</strong>.
+                </p>
+
+                {/* SECTION 1 */}
+                <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-2 my-4">
+                  <div className="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase tracking-wider">
+                    <FileText size={14} />
+                    <span>I. Inclusion on ICEarth: Plate #47 Forensic Dossier</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    In recognition of your vital contribution, we have permanently enshrined your op-ed, legal analysis, and statutory arguments onto ICEarth (Information Community Earth) under <strong className="text-amber-300">Plate #47: Forensic Jurisprudence, NY Labor Law § 241(6) & Toxic Tort Exposenomics</strong>.
+                  </p>
+                  <div className="pt-2 flex flex-wrap items-center gap-2">
+                    <a
+                      href="https://ais-pre-nnzrzhfvvedjfcsbci6446-116268305333.us-west2.run.app/?tab=lead_poisoning_legal_recourse"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 rounded-lg text-xs font-mono font-bold flex items-center gap-1.5"
+                    >
+                      <ExternalLink size={12} />
+                      <span>Launch Interactive Plate #47 Cockpit</span>
+                    </a>
+                    <span className="text-[11px] font-mono text-stone-500">
+                      Vault Provenance: <code className="text-amber-300">0xLEAD_LITIGATION_RECOURSE_NY_LABOR_LAW_2026</code>
+                    </span>
+                  </div>
+                </div>
+
+                {/* SECTION 2 */}
+                <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-3 my-4">
+                  <div className="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase tracking-wider">
+                    <Scale size={14} />
+                    <span>II. The Purpose of ICEarth in Supporting Lead Poisoning Litigation</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    I founded ICEarth on sovereign exposenomics and environmental truth. Prior to establishing ICEarth, I served as Co-Chair of the Greater Cleveland Lead Advisory Council (GCLAC, chartered in 2006) and was the originator who brought Motley Rice’s historic lead paint litigation against Sherwin-Williams to Ohio. That legal fight helped pave the way for the landmark California public nuisance verdict, which secured over <strong>$305 million</strong> for lead abatement against Sherwin-Williams, ConAgra, and NL Industries.
+                  </p>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Having spent decades on the frontlines of lead exposure and corporate evasion, one ironclad reality has emerged:
+                    <strong className="text-amber-300 block mt-1">Society treats lead poisoning victims with callous indifference—until they litigate.</strong>
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2 text-[11px] font-mono">
+                    <div className="p-2.5 rounded-xl bg-stone-900 border border-stone-800">
+                      <span className="text-amber-400 font-bold block">1. Motley Rice Precedent:</span>
+                      <span className="text-stone-300">$305M residential abatement recovery establishing constructive corporate notice.</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-stone-900 border border-stone-800">
+                      <span className="text-red-400 font-bold block">2. Flint Water Crisis:</span>
+                      <span className="text-stone-300">$626.25M class fund ($719M+ total civil recoveries) holding regulators & contractors liable.</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-stone-900 border border-stone-800">
+                      <span className="text-purple-400 font-bold block">3. Freddie Gray Legacy:</span>
+                      <span className="text-stone-300">$435K structured settlement demonstrating pediatric poisoning tort recovery.</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed pt-1">
+                    Today, civil litigation routinely yields multi-million-dollar recoveries for lead victims. However, defense carriers and general contractors consistently exploit information asymmetries: they dispute causation, minimize sub-clinical neurological deficits, and blame lifestyle factors. 
+                  </p>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    <strong>This is precisely where ICEarth provides transformative value for plaintiffs’ trial lawyers:</strong>
+                  </p>
+                  <ul className="text-xs text-stone-300 space-y-1.5 list-disc pl-4">
+                    <li><strong className="text-white">Quantitative Toxicokinetic Modeling:</strong> Mapping acute and chronic lead exposures to cellular neurotoxicity (astrocytic mitochondrial collapse, blood-brain barrier degradation, and microvascular necrosis) to establish proximate medical causation.</li>
+                    <li><strong className="text-white">Historical Notice Evidentiary Dossiers:</strong> Exhaustive forensic archives proving corporate and contractor knowledge of lead hazards spanning centuries, defeating "lack of foreseeability" defenses.</li>
+                    <li><strong className="text-white">Precision Economic Loss Actuarials:</strong> Modeling lifetime lost earning capacity, micro-cognitive impairment costs, and lifelong medical monitoring frameworks to maximize jury verdicts and settlement values.</li>
+                    <li><strong className="text-white">Statutory Violation Cross-Referencing:</strong> Translating job-site air and dust readings directly into non-delegable duty violations under <strong>NY Labor Law § 241(6)</strong> and <strong>12 NYCRR § 23-1.26</strong>.</li>
+                  </ul>
+                </div>
+
+                {/* SECTION 3 */}
+                <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-3 my-4">
+                  <div className="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase tracking-wider">
+                    <Briefcase size={14} />
+                    <span>III. Proposal for Sponsorship & Strategic Litigation Collaboration</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    ICEarth is actively reaching out to premier toxic tort and construction litigation firms nationwide to establish formal litigation sponsorships. As the preeminent champion of New York construction workers—<strong className="text-amber-300">“Los Abogados del Pueblo”</strong>—Gorayeb & Associates, P.C. is our premier candidate for an inaugural founding partnership.
+                  </p>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Through an ICEarth Litigation Sponsorship, your firm will gain:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <div className="p-3 bg-stone-900/80 rounded-xl border border-stone-800">
+                      <span className="font-bold text-amber-300 block">1. Trial-Ready Forensic Dossiers</span>
+                      <span className="text-stone-400 text-[11px]">Custom exposenomics reports, graphical exhibits, and kinetic modeling ready for expert disclosure in NY Labor Law § 241(6) lead cases.</span>
+                    </div>
+                    <div className="p-3 bg-stone-900/80 rounded-xl border border-stone-800">
+                      <span className="font-bold text-amber-300 block">2. Spatial Exposure Corridors</span>
+                      <span className="text-stone-400 text-[11px]">Interactive GIS mapping cross-referencing pre-1978 NYC building stock, bridge reconstruction, and contractor violation registries.</span>
+                    </div>
+                    <div className="p-3 bg-stone-900/80 rounded-xl border border-stone-800">
+                      <span className="font-bold text-amber-300 block">3. Co-Branded Sovereign Research</span>
+                      <span className="text-stone-400 text-[11px]">Recognition across ICEarth’s global platform, media repository, and scientific network as a champion of sovereign worker health.</span>
+                    </div>
+                    <div className="p-3 bg-stone-900/80 rounded-xl border border-stone-800">
+                      <span className="font-bold text-amber-300 block">4. Expert Witness & Discovery Advisory</span>
+                      <span className="text-stone-400 text-[11px]">Direct coordination with our scientific network to counter defense toxicologists and dispute junk-science defenses.</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed pt-2">
+                    We would be honored to schedule a 20-minute introductory briefing to demonstrate the ICEarth forensic engine and explore how our investigative data can support your active and upcoming construction toxic exposure caseload.
+                  </p>
+                </div>
+
+                <p>
+                  Thank you for your tireless advocacy on behalf of New York’s construction workers. As your op-ed powerfully reaffirmed, when institutions fail to protect labor, the courtroom is our strongest shield.
+                </p>
+
+                <div className="pt-4 border-t border-stone-800 space-y-1 font-mono text-xs">
+                  <p className="text-stone-400">Respectfully submitted,</p>
+                  <p className="text-white font-bold text-sm">Norman Roulet</p>
+                  <p className="text-amber-400">Founder & Principal Forensic Architect, ICEarth (Information Community Earth)</p>
+                  <p className="text-stone-400">Co-Chair, Greater Cleveland Lead Advisory Council (GCLAC)</p>
+                  <p className="text-stone-400">Email: <a href="mailto:rouletnorm@gmail.com" className="text-amber-300 hover:underline">rouletnorm@gmail.com</a></p>
+                  <p className="text-stone-400">Platform: <a href="https://ais-pre-nnzrzhfvvedjfcsbci6446-116268305333.us-west2.run.app" target="_blank" rel="noreferrer" className="text-amber-300 hover:underline">https://ais-pre-nnzrzhfvvedjfcsbci6446-116268305333.us-west2.run.app</a></p>
+                </div>
+              </div>
+
+              {/* FOOTER ACTIONS */}
+              <div className="border-t border-stone-800 pt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+                <div className="flex items-center gap-2 text-stone-400">
+                  <CheckCircle2 size={14} className="text-emerald-400" />
+                  <span>Document Format: Verified Legal Brief Dispatch (RFC 2822 / Text Format)</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleCopyLetter}
+                    className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black rounded-lg text-xs flex items-center gap-1.5 cursor-pointer"
+                  >
+                    {copiedLetter ? <Check size={13} /> : <Copy size={13} />}
+                    <span>{copiedLetter ? 'Copied!' : 'Copy Letter'}</span>
+                  </button>
+
+                  <button
+                    onClick={handleDownloadLetter}
+                    className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-lg text-xs flex items-center gap-1.5 cursor-pointer border border-stone-700"
+                  >
+                    <Download size={13} />
+                    <span>Save .txt</span>
+                  </button>
                 </div>
               </div>
             </div>
