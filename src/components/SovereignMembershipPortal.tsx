@@ -56,6 +56,7 @@ import microbialBioremediationImg from '../assets/images/microbial_bioremediatio
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
 import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
+import aiSovereigntyImg from '../assets/images/ai_sovereignty_indigenous_watchdogs_1789627407553.jpg';
 import {
   Shield,
   UserCheck,
@@ -187,6 +188,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BF',
+      title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
+      type: 'AI Sovereignty, Biocultural Jurisprudence & Indigenous Data Enclaves IP Asset',
+      imageSrc: aiSovereigntyImg,
+      link: 'ai_sovereignty',
+      sourceUrl: 'https://www.cnbc.com/2026/09/16/anthropic-open-ai-model-safety-risks.html?utm_source=firefox-newtab-en-us',
+      description: "Origins: Landmark forensic exposenomics plate analyzing the September 16, 2026 CNBC investigation into Anthropic and OpenAI's proposed 'neutral' AI watchdogs. Anthropic CEO Dario Amodei cites bank supervision as the model for embedding third-party evaluators with badges and laptops inside frontier labs, but banking regulation expert Julie Andersen Hill (Univ. of Wyoming) reveals the fatal loophole: bank supervisors possess statutory power to compel action or close down an institution, whereas corporate AI evaluators have zero shutdown power. Hands-on evaluator Albert Ziegler (XBOW) exposes that linear benchmarks miss the rare emergent combinations triggering catastrophic failure. ICEarth presents the counter-framework: data sovereignty originating with humanity and protected across millennia by 470M+ indigenous citizens globally, utilizing Gemini AI to architect air-gapped sovereign data enclaves that resist predatory corporate-state extraction.",
+      sovereignHash: '0xAI_SOVEREIGNTY_INDIGENOUS_DATA_CNBC_ROULET_2026'
+    },
     {
       id: 'IP-000BE',
       title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Zack Linly & Madiba K. Dennie Forensic Analysis (Plate #49)',

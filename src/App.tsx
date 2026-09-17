@@ -139,6 +139,7 @@ import { GlialNeurotoxicityAudit } from './components/GlialNeurotoxicityAudit';
 import { MicrobialBioremediationAudit } from './components/MicrobialBioremediationAudit';
 import { LeadPoisoningLegalRecourseNY } from './components/LeadPoisoningLegalRecourseNY';
 import { SlowViolenceLowVitamins } from './components/SlowViolenceLowVitamins';
+import { AISovereigntyWatchdogs } from './components/AISovereigntyWatchdogs';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
 
@@ -147,7 +148,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -460,6 +461,28 @@ export default function App() {
         lower.includes('lanphear')
       ) {
         setActiveTab('ai_and_kehoe_rule');
+      } else if (
+        lower === 'ai_sovereignty' ||
+        lower === 'ai-sovereignty' ||
+        lower === 'sovereignty' ||
+        lower === 'ai_watchdogs' ||
+        lower === 'ai-watchdogs' ||
+        lower === 'watchdogs' ||
+        lower === 'cnbc' ||
+        lower === 'cnbc_ai' ||
+        lower === 'dario_amodei' ||
+        lower === 'amodei' ||
+        lower === 'albert_ziegler' ||
+        lower === 'ziegler' ||
+        lower === 'xbow' ||
+        lower === 'julie_andersen_hill' ||
+        lower === 'plate_50' ||
+        lower === 'plate50' ||
+        lower === 'plate #50' ||
+        lower.includes('sovereignty') ||
+        lower.includes('watchdog')
+      ) {
+        setActiveTab('ai_sovereignty');
       } else if (
         lower === 'ai_existential_risk' ||
         lower === 'ai-existential-risk' ||
@@ -1357,6 +1380,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B0 THE GLOBAL AI SOVEREIGNTY IMPERATIVE: INDIGENOUS NATIONS VS. WATCHDOGS (PLATE #50) */}
+                <button
+                  onClick={() => setActiveTab('ai_sovereignty')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50'
+                      ? 'bg-gradient-to-r from-red-950 via-amber-950 to-emerald-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-emerald-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-emerald-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Shield size={16} className={activeTab === 'ai_sovereignty' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">⚡ Global AI Sovereignty (CNBC Audit)</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #50
+                  </span>
+                </button>
+
                 {/* 0.00000B THE INDIGENOUS AI SOLUTION FOR AI: THE ICEARTH STACK (PLATE #38) */}
                 <button
                   onClick={() => setActiveTab('icearth_stack')}
@@ -2061,54 +2100,6 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
-                {/* The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38) */}
-                <button
-                  onClick={() => setActiveTab('icearth_stack')}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
-                    activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai'
-                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
-                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
-                  }`}
-                >
-                  <Cpu size={16} className={activeTab === 'icearth_stack' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
-                  <span className="flex-1 font-semibold">⚡ The ICEarth Stack: Indigenous AI</span>
-                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
-                    Plate #38
-                  </span>
-                </button>
-
-                {/* Artificial Intelligence and the Kehoe Rule (Plate #41) */}
-                <button
-                  onClick={() => setActiveTab('ai_and_kehoe_rule')}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
-                    activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41'
-                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-red-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
-                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
-                  }`}
-                >
-                  <Scale size={16} className={activeTab === 'ai_and_kehoe_rule' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
-                  <span className="flex-1 font-semibold">⚖️ AI & The Kehoe Rule (Lanphear)</span>
-                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
-                    Plate #41
-                  </span>
-                </button>
-
-                {/* Artificial Intelligence Existential Risk & Continuum of Failure (Plate #44) */}
-                <button
-                  onClick={() => setActiveTab('ai_existential_risk')}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
-                    activeTab === 'ai_existential_risk' || (activeTab as string) === 'ai_risk' || (activeTab as string) === 'continuum' || (activeTab as string) === 'plate_44' || (activeTab as string) === 'plate44' || (activeTab as string) === 'coxon'
-                      ? 'bg-gradient-to-r from-red-950 via-stone-900 to-amber-950 text-amber-200 border-red-500 shadow-md font-extrabold ring-2 ring-red-400/80'
-                      : 'hover:bg-red-500/20 text-stone-950 border-red-500/70 bg-red-50/90 font-black'
-                  }`}
-                >
-                  <Skull size={16} className={activeTab === 'ai_existential_risk' ? 'text-red-300 animate-pulse' : 'text-red-700'} />
-                  <span className="flex-1 font-semibold">⚡ AI Existential Risk & Continuum</span>
-                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 to-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
-                    Plate #44
-                  </span>
-                </button>
-
                 {/* Ghana's Silent Poison: Lead-Acid Battery Recycling & Child Toxicity (Plate #39) */}
                 <button
                   onClick={() => setActiveTab('ghana_lead_poisoning')}
@@ -2125,7 +2116,89 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
-                {/* Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture */}
+                {/* ========================================================================= */}
+                {/* SECTION: GLOBAL AI SOVEREIGNTY, EXISTENTIAL RISK & INDIGENOUS COMPUTING */}
+                {/* ========================================================================= */}
+                <div className="pt-4 pb-2 px-1 border-t-2 border-amber-500/50 mt-4 mb-2 bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-red-500/10 rounded-lg p-2">
+                  <div className="flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-amber-900 dark:text-amber-200">
+                    <span className="flex items-center gap-1.5">
+                      <Cpu size={15} className="text-amber-600 animate-pulse" />
+                      AI Sovereignty, Existential Risk & Computing
+                    </span>
+                    <span className="px-1.5 py-0.5 bg-gradient-to-r from-amber-600 to-emerald-600 text-white rounded text-[8px] font-extrabold tracking-widest shadow-xs">
+                      CORE FOCUS
+                    </span>
+                  </div>
+                  <p className="text-[10px] text-stone-600 dark:text-stone-300 mt-1 font-mono font-bold">
+                    Humanity-First Sovereign Architectures vs. Toothless Corporate Regulatory Capture
+                  </p>
+                </div>
+
+                {/* 1. The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Watchdogs (Plate #50) */}
+                <button
+                  onClick={() => setActiveTab('ai_sovereignty')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50'
+                      ? 'bg-gradient-to-r from-red-950 via-amber-950 to-emerald-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-gradient-to-r from-amber-50/95 to-emerald-50/95 font-black shadow-xs'
+                  }`}
+                >
+                  <Shield size={16} className={activeTab === 'ai_sovereignty' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">⚡ Global AI Sovereignty (CNBC Audit)</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    Plate #50
+                  </span>
+                </button>
+
+                {/* 2. The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38) */}
+                <button
+                  onClick={() => setActiveTab('icearth_stack')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'icearth_stack' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">⚡ The ICEarth Stack: Indigenous AI</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #38
+                  </span>
+                </button>
+
+                {/* 3. Artificial Intelligence and the Kehoe Rule (Plate #41) */}
+                <button
+                  onClick={() => setActiveTab('ai_and_kehoe_rule')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-red-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'ai_and_kehoe_rule' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">⚖️ AI & The Kehoe Rule (Lanphear)</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #41
+                  </span>
+                </button>
+
+                {/* 4. Artificial Intelligence Existential Risk & Continuum of Failure (Plate #44) */}
+                <button
+                  onClick={() => setActiveTab('ai_existential_risk')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_existential_risk' || (activeTab as string) === 'ai_risk' || (activeTab as string) === 'continuum' || (activeTab as string) === 'plate_44' || (activeTab as string) === 'plate44' || (activeTab as string) === 'coxon'
+                      ? 'bg-gradient-to-r from-red-950 via-stone-900 to-amber-950 text-amber-200 border-red-500 shadow-md font-extrabold ring-2 ring-red-400/80'
+                      : 'hover:bg-red-500/20 text-stone-950 border-red-500/70 bg-red-50/90 font-black'
+                  }`}
+                >
+                  <Skull size={16} className={activeTab === 'ai_existential_risk' ? 'text-red-300 animate-pulse' : 'text-red-700'} />
+                  <span className="flex-1 font-semibold">⚡ AI Existential Risk & Continuum</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 to-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #44
+                  </span>
+                </button>
+
+                {/* 5. Jicarilla Apache Sovereign Hybrid IT & Air-Gapped AI Architecture */}
                 <button
                   onClick={() => setActiveTab('jicarilla_sovereign_it')}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
@@ -2138,6 +2211,38 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-semibold">🪶 Jicarilla Apache Sovereign IT</span>
                   <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
                     Air-Gap AI
+                  </span>
+                </button>
+
+                {/* 6. AI Testimonial & Cognition: AI as the New Pb */}
+                <button
+                  onClick={() => setActiveTab('ai_testimonial' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_testimonial' || (activeTab as string) === 'ai_cognition' || (activeTab as string) === 'ai_lead'
+                      ? 'bg-amber-950 text-amber-100 border-amber-500 shadow-md font-bold ring-1 ring-amber-400/50'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-400/60 bg-amber-50/90 font-bold'
+                  }`}
+                >
+                  <Brain size={16} className={activeTab === 'ai_testimonial' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🤖 AI Testimonial & Cognition: AI as Pb</span>
+                  <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    AI/Pb
+                  </span>
+                </button>
+
+                {/* 7. Public Interest Technology & Algorithmic Justice (Plate #32) */}
+                <button
+                  onClick={() => setActiveTab('public_interest_tech')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech'
+                      ? 'bg-sky-950 text-sky-100 border-sky-500 shadow-md font-bold ring-1 ring-sky-400/50'
+                      : 'hover:bg-sky-500/20 text-sky-950 border-sky-400/60 bg-sky-50/90 font-bold'
+                  }`}
+                >
+                  <Lightbulb size={16} className={activeTab === 'public_interest_tech' ? 'text-sky-300 animate-pulse' : 'text-sky-700'} />
+                  <span className="flex-1 font-semibold">💡 Public Interest Tech & AI Governance</span>
+                  <span className="px-1.5 py-0.2 bg-sky-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #32
                   </span>
                 </button>
 
@@ -2710,6 +2815,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'nlppw_2026', icon: Calendar, label: '🗓️ Lead Poisoning Prevention Week 2026', badge: 'EPA Event', color: 'emerald' },
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
+                    { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'ai_and_kehoe_rule', icon: Scale, label: '⚖️ AI & The Kehoe Rule (Lanphear)', badge: 'Plate #41', color: 'amber' },
                     { id: 'ai_existential_risk', icon: Skull, label: '⚡ AI Existential Risk & Continuum', badge: 'Plate #44', color: 'red' },
@@ -2856,6 +2962,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
+              {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear') && '⚖️ AI & The Kehoe Rule: Bruce Lanphear Thesis (Plate #41)'}
               {(activeTab === 'ai_existential_risk' || (activeTab as string) === 'ai_risk' || (activeTab as string) === 'continuum' || (activeTab as string) === 'plate_44' || (activeTab as string) === 'plate44' || (activeTab as string) === 'coxon') && '⚡ AI Existential Risk & The Continuum of Failure (Plate #44)'}
@@ -4538,6 +4645,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows' || (activeTab as string) === 'anakwue' || (activeTab as string) === 'nigeria_cvd' || (activeTab as string) === 'nigeria') && (
             <div className="flex-1 overflow-y-auto">
               <NigeriaHeartHabitat 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B0: THE GLOBAL AI SOVEREIGNTY IMPERATIVE: INDIGENOUS NATIONS VS. WATCHDOGS (PLATE #50) */}
+          {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50' || (activeTab as string) === 'dario_amodei' || (activeTab as string) === 'watchdogs') && (
+            <div className="flex-1 overflow-y-auto">
+              <AISovereigntyWatchdogs 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

@@ -122,10 +122,28 @@ import microbialBioremediationImg from '../assets/images/microbial_bioremediatio
 import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse_ny_1789169382379.jpg';
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
 import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
+import aiSovereigntyImg from '../assets/images/ai_sovereignty_indigenous_watchdogs_1789627407553.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('ai_sovereignty') ||
+    u.includes('sovereignty_watchdogs') ||
+    u.includes('indigenous_watchdogs') ||
+    u.includes('1789627407553') ||
+    u.includes('plate_50') ||
+    u.includes('plate50') ||
+    u.includes('plate #50') ||
+    u.includes('dario_amodei') ||
+    u.includes('amodei') ||
+    u.includes('ziegler') ||
+    u.includes('xbow') ||
+    u.includes('julie_andersen_hill') ||
+    u.includes('0xai_sovereignty')
+  ) {
+    return aiSovereigntyImg;
+  }
   if (
     u.includes('necropolitics') ||
     u.includes('jackson_necropolitics') ||
@@ -804,7 +822,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics';
   date: string;
   summary: string;
   fullText: string;
@@ -903,6 +921,49 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-AI-SOVEREIGNTY-INDIGENOUS-WATCHDOGS-2026',
+      title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
+      category: 'AI Sovereignty & Exposenomics',
+      date: '2026-09-16',
+      imageSrc: aiSovereigntyImg,
+      publishedUrl: 'https://www.cnbc.com/2026/09/16/anthropic-open-ai-model-safety-risks.html?utm_source=firefox-newtab-en-us',
+      summary: "A foundational forensic critique of the September 16, 2026 CNBC report on Anthropic and OpenAI's proposed 'neutral' AI watchdogs. Anthropic CEO Dario Amodei cites bank supervision as the precedent for embedding evaluators with badges and company laptops inside frontier labs, but banking regulation scholar Julie Andersen Hill exposes the lethal loophole: bank supervisors have the statutory power to compel action or close down an institution, whereas corporate AI watchdogs are given zero shutdown teeth. Model evaluator Albert Ziegler (XBOW) demonstrates that today's linear benchmarks can never trigger the rare emergent combination of behaviors causing catastrophic failure. ICEarth contrasts this corporate regulatory capture with genuine data sovereignty: sovereignty originating with humanity and preserved across millennia by 470M+ indigenous citizens globally, architecting air-gapped sovereign data enclaves with Gemini AI to protect community knowledge from predatory corporate-state hegemony.",
+      fullText: `THE GLOBAL AI SOVEREIGNTY IMPERATIVE: INDIGENOUS NATIONS VS. TOOTHLESS CORPORATE WATCHDOGS
+Forensic Jurisprudence & Exposenomics Audit by Norman Roulet (ICEarth) & Gemini AI Architecture
+Critique of CNBC Work Investigation: "Anthropic, OpenAI proposed new 'neutral' AI watchdogs. Why you should worry about the idea" (Published Wed, Sep 16, 2026)
+Plate #50 Sovereign Cryptographic Archive: PHOTO-000BF / IP-000BF
+Vault Hash: 0xAI_SOVEREIGNTY_INDIGENOUS_DATA_CNBC_ROULET_2026
+
+I. THE PERFORMATIVE OVERSIGHT OF THE FRONTIER OLIGOPOLY
+On September 16, 2026, CNBC published a revelatory investigation detailing proposals by Anthropic CEO Dario Amodei and OpenAI leadership to embed third-party evaluators inside frontier laboratories. Amodei explicitly invoked bank supervision—where regulatory examiners maintain continuous physical desks inside Wall Street banks—as the model for neutral AI oversight.
+
+Yet banking regulation expert Julie Andersen Hill (University of Wyoming) identified the fatal defect:
+"If you don’t give them that kind of power [to compel action or close an institution], I don’t know what they’re doing."
+
+As CNBC summarized:
+"The most important new job in artificial intelligence may come with an office badge, a company laptop, and access to some of the most closely guarded systems in technology: the large language models of AI leaders including Anthropic and OpenAI. What it may not come with is the power to stop them."
+
+II. THE MATHEMATICS OF CATASTROPHIC TAIL RISK: ALBERT ZIEGLER (XBOW)
+Hands-on model evaluator Albert Ziegler at cybersecurity firm XBOW highlighted a deeper structural reality:
+"Today’s tests can expose important large language model failures but may never trigger the rare combination of behavior that produces a catastrophic outcome."
+
+With context windows stretching past two million tokens and parameter counts exceeding trillions, the combinatorial interaction space cannot be evaluated with synthetic test suites. Evaluators with company badges evaluate the safe center while remaining blind to the catastrophic perimeter.
+
+III. THE CRISIS OF DISTRUST: TRUMP, XI & CORPORATE CARTELS
+This debate occurs against the backdrop of an escalatory geopolitical standoff. Presidents Trump and Xi have staked aggressive nationalist claims over compute clusters, chip supply chains, and sovereign models. Civil society, developing nations, and indigenous peoples reject both the Silicon Valley self-regulation decoy and the surveillance state apparatus. Opposition is rooted in justified, pervasive distrust at all levels.
+
+IV. SOVEREIGNTY THAT ORIGINATED WITH HUMANITY
+ICEarth addresses this crisis at its philosophical and legal origin:
+1. Sovereignty does not belong to Westphalian nation-states or tech monopolies; it originated with humanity.
+2. We propose alignments of indigenous nations globally—protecting the biological, linguistic, and ecological heritage of over 470 million people across 5,000 distinct nations.
+3. Indigenous sovereignty evaluates technological risk over seven generations, far outlasting 90-day corporate earnings and 4-year political cycles.
+
+V. GEMINI & THE ICEARTH SOVEREIGN ENCLAVE ARCHITECTURE
+AI is core to developing and authoring ICEarth. Gemini is actively helping architect sovereign AI for indigenous communities—deploying air-gapped sovereign vaults, biocultural firewalls, and local edge intelligence that protect communities from information technology designed to violate their sovereign rights.`,
+      tags: ['AISovereignty', 'Plate50', 'CNBC', 'DarioAmodei', 'Anthropic', 'OpenAI', 'JulieAndersenHill', 'AlbertZiegler', 'XBOW', 'IndigenousSovereignty', 'BankSupervision', 'ExistentialRisk', 'AirGappedVaults', 'GeminiArchitecture', 'Exposenomics'],
+      linkHash: '0xAI_SOVEREIGNTY_INDIGENOUS_DATA_CNBC_ROULET_2026'
+    },
     {
       id: 'MAG-JACKSON-NECROPOLITICS-DUAL-OPED-2026',
       title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Dual Op-Ed Forensic Synthesis (Plate #49)',
@@ -2924,6 +2985,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BF',
+      title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
+      category: 'AI Sovereignty, Existential Risk Jurisprudence & Indigenous Data Enclaves',
+      imageSrc: aiSovereigntyImg,
+      location: 'Global Digital Commons • Jicarilla Apache IT Enclave, Wall Street & Frontier AI Labs',
+      date: '2026-09-16',
+      description: "Origins: Landmark forensic exposenomics plate analyzing the September 16, 2026 CNBC investigation into Anthropic and OpenAI's proposed 'neutral' AI watchdogs. Anthropic CEO Dario Amodei cites bank supervision as the model for embedding third-party evaluators with badges and laptops inside frontier labs, but banking regulation expert Julie Andersen Hill (Univ. of Wyoming) reveals the fatal loophole: bank supervisors possess statutory power to compel action or close down an institution, whereas corporate AI evaluators have zero shutdown power. Hands-on evaluator Albert Ziegler (XBOW) exposes that linear benchmarks miss the rare emergent combinations triggering catastrophic failure. ICEarth presents the counter-framework: data sovereignty originating with humanity and protected across millennia by 470M+ indigenous citizens globally, utilizing Gemini AI to architect air-gapped sovereign data enclaves that resist predatory corporate-state extraction.",
+      vaultHash: '0xAI_SOVEREIGNTY_INDIGENOUS_DATA_CNBC_ROULET_2026',
+      tags: ['AISovereignty', 'Plate50', 'CNBC', 'DarioAmodei', 'Anthropic', 'OpenAI', 'JulieAndersenHill', 'AlbertZiegler', 'XBOW', 'IndigenousSovereignty', 'BankSupervision', 'ExistentialRisk', 'AirGappedVaults', 'GeminiArchitecture', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BE',
       title: 'The Necropolitics of Lead Poisoning: Jackson, Flint & Constitutional Abandonment — Zack Linly & Madiba K. Dennie Forensic Analysis (Plate #49)',
