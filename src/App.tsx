@@ -140,15 +140,16 @@ import { MicrobialBioremediationAudit } from './components/MicrobialBioremediati
 import { LeadPoisoningLegalRecourseNY } from './components/LeadPoisoningLegalRecourseNY';
 import { SlowViolenceLowVitamins } from './components/SlowViolenceLowVitamins';
 import { AISovereigntyWatchdogs } from './components/AISovereigntyWatchdogs';
+import { DebHaalandICEarthHome } from './components/DebHaalandICEarthHome';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -461,6 +462,26 @@ export default function App() {
         lower.includes('lanphear')
       ) {
         setActiveTab('ai_and_kehoe_rule');
+      } else if (
+        lower === 'deb_haaland_home' ||
+        lower === 'deb_haaland' ||
+        lower === 'deb-haaland' ||
+        lower === 'debhaaland' ||
+        lower === 'governor_haaland' ||
+        lower === 'governor-haaland' ||
+        lower === 'haaland' ||
+        lower === 'user_3' ||
+        lower === 'user-3' ||
+        lower === 'user3' ||
+        lower === 'plate_51' ||
+        lower === 'plate51' ||
+        lower === 'plate #51' ||
+        lower.includes('haaland') ||
+        lower.includes('laguna') ||
+        lower.includes('data_center_moratorium') ||
+        lower.includes('datacenter_moratorium')
+      ) {
+        setActiveTab('deb_haaland_home');
       } else if (
         lower === 'ai_sovereignty' ||
         lower === 'ai-sovereignty' ||
@@ -1380,6 +1401,23 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000A0 GOVERNOR DEB HAALAND'S ICEARTH HOME & 8 DATA CENTER ACCOUNTABILITY MEASURES (PLATE #51) */}
+                <button
+                  id="nav-deb-haaland-home-tab"
+                  onClick={() => setActiveTab('deb_haaland_home')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51'
+                      ? 'bg-gradient-to-r from-red-950 via-amber-950 to-emerald-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-red-100 hover:to-amber-100 text-stone-950 border-red-500/80 bg-gradient-to-r from-red-50/90 via-stone-50 to-amber-50/90 font-black shadow-xs ring-1 ring-red-400/40'
+                  }`}
+                >
+                  <Award size={16} className={activeTab === 'deb_haaland_home' ? 'text-amber-300 animate-pulse' : 'text-red-700'} />
+                  <span className="flex-1 font-black">🏛️ Governor Deb Haaland's ICEarth Home</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #51
+                  </span>
+                </button>
+
                 {/* 0.00000B0 THE GLOBAL AI SOVEREIGNTY IMPERATIVE: INDIGENOUS NATIONS VS. WATCHDOGS (PLATE #50) */}
                 <button
                   onClick={() => setActiveTab('ai_sovereignty')}
@@ -2134,6 +2172,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </p>
                 </div>
 
+                {/* 0. Governor Deb Haaland's ICEarth Home & 8 Data Center Accountability Measures (Plate #51) */}
+                <button
+                  id="mobile-nav-deb-haaland-home-tab"
+                  onClick={() => {
+                    setActiveTab('deb_haaland_home');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51'
+                      ? 'bg-gradient-to-r from-red-950 via-amber-950 to-emerald-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-red-500/20 text-stone-950 border-red-500/70 bg-gradient-to-r from-red-50/95 to-amber-50/95 font-black shadow-xs'
+                  }`}
+                >
+                  <Award size={16} className={activeTab === 'deb_haaland_home' ? 'text-amber-300 animate-pulse' : 'text-red-700'} />
+                  <span className="flex-1 font-black">🏛️ Governor Deb Haaland's ICEarth Home</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    Plate #51
+                  </span>
+                </button>
+
                 {/* 1. The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Watchdogs (Plate #50) */}
                 <button
                   onClick={() => setActiveTab('ai_sovereignty')}
@@ -2815,6 +2873,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'nlppw_2026', icon: Calendar, label: '🗓️ Lead Poisoning Prevention Week 2026', badge: 'EPA Event', color: 'emerald' },
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
+                    { id: 'deb_haaland_home', icon: Award, label: "🏛️ Governor Deb Haaland's ICEarth Home", badge: 'Plate #51', color: 'amber' },
                     { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'ai_and_kehoe_rule', icon: Scale, label: '⚖️ AI & The Kehoe Rule (Lanphear)', badge: 'Plate #41', color: 'amber' },
@@ -2962,6 +3021,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat') && '🫀 Toxic Shadows: Heart-Habitat Nigeria'}
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
+              {(activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51') && '🏛️ Governor Deb Haaland’s ICEarth Home: 8 Data Center Accountability Measures & Sovereign AI (Plate #51)'}
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear') && '⚖️ AI & The Kehoe Rule: Bruce Lanphear Thesis (Plate #41)'}
@@ -4645,6 +4705,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'nigeria_heart_habitat' || (activeTab as string) === 'nigeria_heart' || (activeTab as string) === 'heart_habitat' || (activeTab as string) === 'toxic_shadows' || (activeTab as string) === 'anakwue' || (activeTab as string) === 'nigeria_cvd' || (activeTab as string) === 'nigeria') && (
             <div className="flex-1 overflow-y-auto">
               <NigeriaHeartHabitat 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117A0: GOVERNOR DEB HAALAND'S ICEARTH HOME & 8 DATA CENTER ACCOUNTABILITY MEASURES (PLATE #51) */}
+          {(activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51' || (activeTab as string) === 'user_3' || (activeTab as string) === 'user3') && (
+            <div className="flex-1 overflow-y-auto">
+              <DebHaalandICEarthHome 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

@@ -57,6 +57,9 @@ import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
 import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
 import aiSovereigntyImg from '../assets/images/ai_sovereignty_indigenous_watchdogs_1789627407553.jpg';
+import debHaalandImg from '../assets/images/deb_haaland_profile_1789687423309.jpg';
+import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1789691744576.jpg';
+import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.jpg';
 import {
   Shield,
   UserCheck,
@@ -188,6 +191,36 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BH',
+      title: "The 8 Laws of New Mexico IT Sovereignty: Governor Deb Haaland’s Accountability Directive (Plate #52)",
+      type: 'Indigenous IT Sovereignty, Data Center Moratorium & High Desert Clean Compute IP Asset',
+      imageSrc: nmItSovereigntyPlateImg,
+      link: 'deb_haaland_home',
+      sourceUrl: 'https://x.com/DebHaalandNM/status/2100685661917553063',
+      description: "Origins: Landmark sovereign environmental and technological governance infographic plate presenting Governor Deb Haaland (enrolled member of Laguna Pueblo, 35th generation New Mexican) in the foreground with her authentic ancestral homeland of Laguna Pueblo in the background (historic Old Laguna village, San José de la Laguna mission church, and Mount Taylor). Features her official directive for a statewide moratorium on extractive data centers and her 8 accountability measures verbatim: 1. No backroom deals, strong community benefits; 2. No utility rate increases & reliable energy for New Mexicans; 3. Protect New Mexico’s water; 4. New Mexico jobs for New Mexico workers; 5. Expand renewable energy; 6. Clean air, land, and habitat; 7. Clean up your mess. Any industry in New Mexico should clean up after themselves; 8. Accountable to communities.",
+      sovereignHash: '0x8_LAWS_OF_NM_IT_SOVEREIGNTY_DEB_HAALAND_PLATE_52_VAULT_2026'
+    },
+    {
+      id: 'IP-000BJ',
+      title: "Ancestral Homeland of Deb Haaland: The Historic Village of Old Laguna & Mount Taylor, New Mexico",
+      type: 'Indigenous Landscapes, Pueblo Architecture & Authentic Geography IP Asset',
+      imageSrc: lagunaHomelandLandscapeImg,
+      link: 'deb_haaland_home',
+      sourceUrl: 'https://images.squarespace-cdn.com/content/6692c4f2d4413204243f19fc/caa7eb3d-ec4b-4e96-899e-9c9c285492ec/laguna-new-mexico-housing-landscape.jpg?format=1500w&content-type=image%2Fjpeg',
+      description: "Origins: Documentary landscape photograph capturing the authentic ancestral homeland of Deb Haaland: the historic pueblo village of Old Laguna, New Mexico. Shows traditional adobe and sandstone dwellings terraced along the sunlit hill, crowned by the white Mission San José de la Laguna church (established 1699), with the sacred peak of Mount Taylor (Tsiipiya) rising in the western high desert. Preserves exact geographic authenticity for Laguna Pueblo, rejecting interchangeable or fictional depictions of Indigenous homelands.",
+      sovereignHash: '0xLAGUNA_PUEBLO_ANCESTRAL_HOMELAND_LANDSCAPE_2026'
+    },
+    {
+      id: 'IP-000BG',
+      title: "Governor Deb Haaland: Enrolled Member of Laguna Pueblo, 35th Generation New Mexican, Former US Secretary of the Interior & ICEarth User #3 Sovereign Credential (Plate #51)",
+      type: 'Indigenous Sovereignty, User Account Profile & Sovereign Credentials IP Asset',
+      imageSrc: debHaalandImg,
+      link: 'deb_haaland_home',
+      sourceUrl: 'https://x.com/DebHaalandNM/status/2100685661917553063',
+      description: "Origin: Laguna Pueblo, NM. Landmark sovereign environmental and technological governance credential plate welcoming Governor Deb Haaland as ICEarth User #3, joining User #1 Norm Roulet and User #2 Ouray Muskrat. Deb Haaland, enrolled member of the Laguna Pueblo tribe, 35th Generation New Mexican, and former US Secretary of the Interior, establishes her sovereign ICEarth account profile.",
+      sovereignHash: '0xUSER_003_DEB_HAALAND_LAGUNA_PUEBLO_SOVEREIGN_VAULT_2026'
+    },
     {
       id: 'IP-000BF',
       title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
@@ -860,6 +893,35 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
     setPipeWaterSource('well');
     setAuthRole('individual');
     setActivePortalSubTab('exposome_profiler');
+  };
+
+  // Pre-load preset for Governor Deb Haaland (User #3)
+  const handleLoadDebHaalandUser3Preset = () => {
+    setMemberName('Deb Haaland');
+    setTribalAffiliation('Pueblo of Laguna (35th Gen New Mexican)');
+    setTribalRollId('LAGUNA-PUEBLO-DH-0003');
+    setNationalIdHash('US-NM-GOV-ZK-00000003');
+    setCurrentAddress('Laguna Pueblo & Santa Fe, NM (State Capitol / Executive)');
+    setEmail('deb@debhaaland.com');
+    setPhone('(505) 555-0103');
+    setZkVerificationStatus('User #3 Sovereign Leader Key (0xUSER_003_DEB_HAALAND)');
+    setAddressQuery('Laguna Pueblo, New Mexico');
+    setAnalyzedLocation('Laguna Pueblo, NM (Rio San Jose Basin / Cibola County)');
+    setEnvData({
+      soilLeadPpm: 42,
+      waterLeadPpb: 1.4,
+      airAqi: 18,
+      pm25: 3.2,
+      miningProximityKm: 18.5,
+      pfasRisk: 'Low / Ancestral Aquifer Monitoring Active',
+      overallExposomeRiskScore: 24
+    });
+    setHuntingLeadAmmo(false);
+    setGameConsumptionFreq(1);
+    setTraditionalPotteryUse(true);
+    setPipeWaterSource('well');
+    setAuthRole('individual');
+    setActivePortalSubTab('sovereign_vault');
   };
 
   // Export JSON Sovereign Data Package
@@ -1872,7 +1934,14 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
                   className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5"
                 >
                   <Users className="w-4 h-4 text-amber-400" />
-                  <span>Load Ouray Muskrat Preset</span>
+                  <span>Load User #2 (Ouray Muskrat)</span>
+                </button>
+                <button
+                  onClick={handleLoadDebHaalandUser3Preset}
+                  className="px-3.5 py-2 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold text-xs rounded-xl shadow transition-all flex items-center gap-1.5 border border-red-400/50"
+                >
+                  <UserCheck className="w-4 h-4 text-amber-300" />
+                  <span>Load User #3 (Deb Haaland)</span>
                 </button>
                 <button
                   onClick={handleExportSovereignDataPackage}

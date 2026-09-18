@@ -112,6 +112,29 @@ export const MemberMatrix: React.FC<MemberMatrixProps> = ({
       tags: ['Indigenous', 'JicarillaApache', 'DataSovereignty', 'Phytoremediation', 'Four Corners', 'Agua Das', 'AirGappedAI']
     },
     {
+      id: 'USER-003',
+      name: 'Deb Haaland',
+      userRole: 'User #3 (Future Governor of New Mexico & Laguna Pueblo Leader)',
+      title: '35th Generation New Mexican • Indigenous Climate & Sovereign Land Protector • Former US Secretary of the Interior',
+      location: 'Laguna Pueblo & Santa Fe, New Mexico',
+      type: 'Member',
+      avatarInitials: 'DH',
+      avatarColor: 'bg-red-600 text-white',
+      description: 'Enrolled member of Laguna Pueblo, 35th generation New Mexican, former US Secretary of the Interior, and future Governor. Proposing 8 statewide data center accountability measures and championing sovereign indigenous green computing over extractive corporate hyperscalers.',
+      projects: [
+        { name: 'Governor Deb Haaland ICEarth Home', tab: 'deb_haaland_home' },
+        { name: '8 Data Center Accountability Measures', tab: 'deb_haaland_home' },
+        { name: 'Pueblo & Tribal Sovereign Cloud Compact', tab: 'jicarilla_sovereign_it' },
+        { name: 'Waterless Sovereign AI Architecture', tab: 'icearth_stack' }
+      ],
+      vaultHash: '0xUSER_003_DEB_HAALAND_LAGUNA_PUEBLO_SOVEREIGN_VAULT_2026',
+      featured: true,
+      navTab: 'deb_haaland_home',
+      navLabel: 'Visit Governor Deb Haaland Home',
+      badgeText: 'User #3 Member',
+      tags: ['DebHaaland', 'LagunaPueblo', 'GovernorOfNM', 'DataCenterMoratorium', 'WaterProtection', 'AISovereignty', '35thGeneration']
+    },
+    {
       id: 'AI-AGENT-001',
       name: 'ICEarth AI Community Concierge',
       userRole: 'Autonomous AI Navigator & Vault Captain',

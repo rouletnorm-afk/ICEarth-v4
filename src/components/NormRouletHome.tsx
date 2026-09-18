@@ -123,10 +123,46 @@ import leadLitigationRecourseImg from '../assets/images/lead_litigation_recourse
 import slowViolenceRicketsImg from '../assets/images/slow_violence_low_vitamins_rickets_lead_1789194227570.jpg';
 import jacksonNecropoliticsImg from '../assets/images/jackson_necropolitics_lead_water_1789219600494.jpg';
 import aiSovereigntyImg from '../assets/images/ai_sovereignty_indigenous_watchdogs_1789627407553.jpg';
+import debHaalandImg from '../assets/images/deb_haaland_profile_1789687423309.jpg';
+import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1789691744576.jpg';
+import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (u.includes('laguna_homeland') || u.includes('laguna_landscape')) {
+    return lagunaHomelandLandscapeImg;
+  }
+  if (
+    u.includes('nm_it_sovereignty') ||
+    u.includes('8_laws') ||
+    u.includes('8laws') ||
+    u.includes('1789688337444') ||
+    u.includes('1789689124306') ||
+    u.includes('plate_52') ||
+    u.includes('plate52') ||
+    u.includes('plate #52') ||
+    u.includes('photo-000bh') ||
+    u.includes('ip-000bh')
+  ) {
+    return nmItSovereigntyPlateImg;
+  }
+  if (
+    u.includes('deb_haaland') ||
+    u.includes('haaland') ||
+    u.includes('1789687423309') ||
+    u.includes('1789684767188') ||
+    u.includes('plate_51') ||
+    u.includes('plate51') ||
+    u.includes('plate #51') ||
+    u.includes('user_3') ||
+    u.includes('user3') ||
+    u.includes('photo-000bg') ||
+    u.includes('ip-000bg') ||
+    u.includes('0xuser_003_deb_haaland')
+  ) {
+    return debHaalandImg;
+  }
   if (
     u.includes('ai_sovereignty') ||
     u.includes('sovereignty_watchdogs') ||
@@ -921,6 +957,54 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-DEB-HAALAND-NM-DATA-CENTER-ACCOUNTABILITY-2026',
+      title: "Governor Deb Haaland's 8 Laws of New Mexico IT Sovereignty: Why ICEarth Sovereign Computing is the Solution for The Land of Enchantment (Plate #52 & User #3)",
+      category: 'Indigenous Sovereignty',
+      date: '2026-09-17',
+      imageSrc: nmItSovereigntyPlateImg,
+      publishedUrl: 'https://x.com/DebHaalandNM/status/2100685661917553063',
+      summary: "Governor Deb Haaland, enrolled member of Laguna Pueblo, 35th Generation New Mexican, former US Secretary of the Interior, and future Governor, has issued an emergency call for a statewide moratorium on extractive data centers until developers satisfy 8 strong accountability laws. Welcomed as ICEarth User #3 alongside Founder Norm Roulet (User #1) and Master Phytoremediator Ouray Muskrat (User #2), this case study features Plate #52 (The 8 Laws of New Mexico IT Sovereignty Infographic Plate with her official portrait, statement, and 8 accountability measures) and Plate #51 (Deb Haaland User #3 Sovereign Credential), demonstrating how ICEarth's decentralized, waterless (0 gal/day), 100% tribal solar-powered hybrid IT architecture natively fulfills every mandate.",
+      fullText: `GOVERNOR DEB HAALAND'S 8 LAWS OF NEW MEXICO IT SOVEREIGNTY: WHY ICEARTH SOVEREIGN COMPUTING IS THE SOLUTION FOR THE LAND OF ENCHANTMENT
+Executive Case Study & Sovereign Architecture Blueprint by Norman Roulet (ICEarth Founder) & Gemini Sovereign AI
+Featuring Deb Haaland: Enrolled Member of Laguna Pueblo, 35th Generation New Mexican, Former US Secretary of the Interior, and Candidate for Governor of New Mexico
+Official Statement on X (@DebHaalandNM): September 17, 2026 | Campaign Platform: DebHaaland.com
+Plate #52 Infographic Archive: PHOTO-000BH / IP-000BH (8 Laws of New Mexico IT Sovereignty)
+Plate #51 Credential Archive: PHOTO-000BG / IP-000BG (User #3 Sovereign Credential)
+Sovereign Vault Hash: 0x8_LAWS_OF_NM_IT_SOVEREIGNTY_DEB_HAALAND_PLATE_52_VAULT_2026
+User #3 Vault Hash: 0xUSER_003_DEB_HAALAND_LAGUNA_PUEBLO_SOVEREIGN_VAULT_2026
+
+I. THE GOVERNOR'S MORATORIUM CALL
+On September 17, 2026, Deb Haaland published her definitive terms for artificial intelligence and data center development in New Mexico:
+"I support a moratorium on data centers until developers can meet the strong, clear, statewide protections many New Mexicans want. That's why I am proposing the following accountability measures:
+1. No backroom deals, strong community benefits.
+2. No utility rate increases & reliable energy for New Mexicans.
+3. Protect New Mexico’s water.
+4. New Mexico jobs for New Mexico workers.
+5. Expand renewable energy.
+6. Clean air, land, and habitat.
+7. Clean up your mess. Any industry in New Mexico should clean up after themselves.
+8. Accountable to communities.
+Want to learn more about my plan? Visit DebHaaland.com."
+
+II. THE CRISIS OF HYPERSCALE COLONIALISM IN NEW MEXICO
+For decades, extractive industries have targeted New Mexico: from uranium mill tailings in the Grants Mineral Belt to oil flaring in the Permian Basin. Today, Silicon Valley hyperscale data centers represent the newest extractive threat. A single 100MW corporate facility consumes up to 3.8 million gallons of desert drinking water per day for evaporative cooling, threatens residential electric bills with 14% rate hikes, tests hundreds of dirty diesel backup generators over frontline neighborhoods, and signs 30-year tax abatement non-disclosure agreements behind closed doors.
+
+III. THE ICEARTH SOLUTION: 100% NATIVE FULFILLMENT
+Indigenous Communities Earth (ICEarth) was founded in Taos, New Mexico, working with Jicarilla Apache and Pueblo partners, precisely to pioneer an alternative:
+1. No Backroom Deals: 100% open-ledger, treaty-bound sovereign compacts co-governed with tribes and counties.
+2. No Rate Hikes: Fully behind-the-meter agrivoltaic microgrids that feed surplus clean energy to rural families at zero cost.
+3. Protect NM Water: 100% closed-loop dielectric immersion cooling consuming 0 gallons of drinking water per day.
+4. NM Jobs: Training Native youth and local workers in high-wage AI orchestration, hardware stewardship, and phytoremediation telemetry.
+5. Expand Renewables: On-site tribal agrivoltaics and iron-flow battery storage.
+6. Clean Air & Land: Zero diesel backup generators; modular footprints honoring ancestral landscapes.
+7. Clean Up Your Mess: Mandatory upfront cryptographic reclamation bonds in escrow and circular zero-waste lifecycles.
+8. Accountable to Communities: Physical and cryptographic master keys held by Tribal Councils under Shamir 3/5 Elder Key ceremonies.
+
+Governor Deb Haaland is officially welcomed to Indigenous Communities Earth as User #3. Together with User #1 Norm Roulet and User #2 Ouray Muskrat, New Mexico will lead the world in sovereign green computing.`,
+      tags: ['DebHaaland', 'User003', 'Plate51', 'LagunaPueblo', 'DataCenterMoratorium', 'NewMexico', 'SovereignAI', 'ClosedLoopWaterless', 'TribalSolar', 'ShamirSecretSharing', 'IndigenousDataSovereignty', 'Exposenomics', 'TaosNM'],
+      linkHash: '0xUSER_003_DEB_HAALAND_LAGUNA_PUEBLO_SOVEREIGN_VAULT_2026'
+    },
     {
       id: 'MAG-AI-SOVEREIGNTY-INDIGENOUS-WATCHDOGS-2026',
       title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
@@ -2985,6 +3069,39 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BH',
+      title: "The 8 Laws of New Mexico IT Sovereignty: Governor Deb Haaland’s Accountability Directive (Plate #52)",
+      category: 'Indigenous IT Sovereignty, Data Center Moratorium & High Desert Clean Compute',
+      imageSrc: nmItSovereigntyPlateImg,
+      location: 'Laguna Pueblo, New Mexico • Sovereign Cloud Enclave',
+      date: '2026-09-17',
+      description: "Origins: Landmark sovereign environmental and technological governance infographic plate presenting Governor Deb Haaland (enrolled member of Laguna Pueblo, 35th generation New Mexican) in the foreground with her authentic ancestral homeland of Laguna Pueblo in the background (historic Old Laguna village, San José de la Laguna mission church, and Mount Taylor). Features her official directive for a statewide moratorium on extractive data centers and her 8 accountability measures verbatim: 1. No backroom deals, strong community benefits; 2. No utility rate increases & reliable energy for New Mexicans; 3. Protect New Mexico’s water; 4. New Mexico jobs for New Mexico workers; 5. Expand renewable energy; 6. Clean air, land, and habitat; 7. Clean up your mess. Any industry in New Mexico should clean up after themselves; 8. Accountable to communities.",
+      vaultHash: '0x8_LAWS_OF_NM_IT_SOVEREIGNTY_DEB_HAALAND_PLATE_52_VAULT_2026',
+      tags: ['DebHaaland', 'Plate52', '8LawsOfNMIT', 'LagunaPueblo', 'GovernorOfNM', 'DataCenterMoratorium', 'WaterProtection', 'ZeroWaterCooling', 'SolarMicrogrids', 'TribalSovereignty', 'Exposenomics']
+    },
+    {
+      id: 'PHOTO-000BJ',
+      title: "Ancestral Homeland of Deb Haaland: The Historic Village of Old Laguna & Mount Taylor, New Mexico",
+      category: 'Indigenous Landscapes, Pueblo Architecture & Authentic Geography',
+      imageSrc: lagunaHomelandLandscapeImg,
+      location: 'Laguna Pueblo (Kawaik), Cibola County, New Mexico',
+      date: '2026-09-17',
+      description: "Origins: Documentary landscape photograph capturing the authentic ancestral homeland of Deb Haaland: the historic pueblo village of Old Laguna, New Mexico. Shows traditional adobe and sandstone dwellings terraced along the sunlit hill, crowned by the white Mission San José de la Laguna church (established 1699), with the sacred peak of Mount Taylor (Tsiipiya) rising in the western high desert. Preserves exact geographic authenticity for Laguna Pueblo, rejecting interchangeable or fictional depictions of Indigenous homelands.",
+      vaultHash: '0xLAGUNA_PUEBLO_ANCESTRAL_HOMELAND_LANDSCAPE_2026',
+      tags: ['LagunaPueblo', 'Kawaik', 'OldLaguna', 'MountTaylor', 'Tsiipiya', 'DebHaaland', 'PuebloArchitecture', 'CibolaCounty', 'IndigenousGeography', 'Sovereignty']
+    },
+    {
+      id: 'PHOTO-000BG',
+      title: "Governor Deb Haaland: Enrolled Member of Laguna Pueblo, 35th Generation New Mexican, Former US Secretary of the Interior & ICEarth User #3 Sovereign Credential (Plate #51)",
+      category: 'Indigenous Sovereignty, User Account Profile & Sovereign Credentials',
+      imageSrc: debHaalandImg,
+      location: 'Laguna Pueblo, New Mexico • Sovereign Cloud Enclave',
+      date: '2026-09-17',
+      description: "Origin: Laguna Pueblo, NM. Landmark sovereign environmental and technological governance credential plate welcoming Governor Deb Haaland as ICEarth User #3, joining User #1 Norm Roulet and User #2 Ouray Muskrat. Deb Haaland, enrolled member of the Laguna Pueblo tribe, 35th Generation New Mexican, and former US Secretary of the Interior, establishes her sovereign ICEarth account profile.",
+      vaultHash: '0xUSER_003_DEB_HAALAND_LAGUNA_PUEBLO_SOVEREIGN_VAULT_2026',
+      tags: ['DebHaaland', 'Plate51', 'User3', 'LagunaPueblo', 'GovernorOfNM', '35thGeneration', 'InteriorSecretary', 'TribalSovereignty', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BF',
       title: 'The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Corporate Watchdogs — CNBC Forensic Critique (Plate #50)',
