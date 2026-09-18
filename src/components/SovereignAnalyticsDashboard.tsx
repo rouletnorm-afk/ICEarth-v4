@@ -179,6 +179,39 @@ export const SovereignAnalyticsDashboard: React.FC<SovereignAnalyticsDashboardPr
       {/* SUB-VIEW 1: METRICS DASHBOARD */}
       {activeSubTab === 'metrics' && (
         <div className="space-y-6">
+
+          {/* GA4 LIVE INTEGRATION BANNER */}
+          <div className="p-4 sm:p-5 bg-gradient-to-r from-blue-900/30 via-stone-900 to-emerald-950/30 rounded-2xl border-2 border-blue-500/40 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="p-2.5 bg-blue-500/20 text-blue-400 rounded-xl border border-blue-500/40">
+                <Globe size={22} />
+              </span>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-serif font-black text-white text-base">
+                    Google Analytics 4 Active (Measurement ID: G-3QNR87XKSS)
+                  </span>
+                  <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold rounded border border-emerald-500/40 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                    LIVE GLOBAL DISPATCH
+                  </span>
+                </div>
+                <p className="text-xs text-stone-300 font-sans mt-0.5">
+                  Real-time global user tracking, country maps, and multi-device counts are active. View full global stats in your Google Analytics dashboard.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://analytics.google.com/analytics/web/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs font-bold rounded-xl transition-all flex items-center gap-2 shadow-md cursor-pointer"
+            >
+              <ExternalLink size={14} />
+              <span>Launch Google Analytics Dashboard</span>
+            </a>
+          </div>
           
           {/* TOP STAT CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -186,28 +219,28 @@ export const SovereignAnalyticsDashboard: React.FC<SovereignAnalyticsDashboardPr
             {/* Card 1: Unique Visitors */}
             <div className="p-6 bg-white rounded-3xl border-2 border-stone-200 shadow-sm space-y-2">
               <div className="flex items-center justify-between text-stone-500 font-mono text-xs font-bold">
-                <span>UNIQUE VISITORS</span>
+                <span>IN-BROWSER UNIQUE SESSIONS</span>
                 <Users size={18} className="text-amber-600" />
               </div>
               <div className="text-3xl sm:text-4xl font-serif font-black text-stone-900">
                 {summary.uniqueVisitors.toLocaleString()}
               </div>
               <span className="text-[11px] font-mono text-emerald-600 font-bold block">
-                ✓ Unique Session Persistent Tracking
+                ✓ Local Client-Side Telemetry
               </span>
             </div>
 
             {/* Card 2: Total Page Views */}
             <div className="p-6 bg-white rounded-3xl border-2 border-stone-200 shadow-sm space-y-2">
               <div className="flex items-center justify-between text-stone-500 font-mono text-xs font-bold">
-                <span>TOTAL PAGE VIEWS</span>
+                <span>IN-APP PAGE VIEWS</span>
                 <Eye size={18} className="text-blue-600" />
               </div>
               <div className="text-3xl sm:text-4xl font-serif font-black text-stone-900">
                 {summary.totalViews.toLocaleString()}
               </div>
               <span className="text-[11px] font-mono text-blue-600 font-bold block">
-                Direct Deep Links & Tab Views
+                Cumulative in-app views (Uncapped)
               </span>
             </div>
 
@@ -379,12 +412,13 @@ export const SovereignAnalyticsDashboard: React.FC<SovereignAnalyticsDashboardPr
             </div>
 
             {/* Option 2: Google Analytics 4 (GA4) */}
-            <div className="p-6 bg-stone-50 text-stone-900 rounded-2xl border-2 border-stone-200 space-y-4 shadow-sm">
-              <div className="flex items-center justify-between border-b border-stone-200 pb-3">
-                <span className="px-2.5 py-1 bg-blue-100 text-blue-900 font-mono text-xs font-bold rounded-md">
-                  FREE GOOGLE TOOL
+            <div className="p-6 bg-blue-950/20 text-stone-900 rounded-2xl border-2 border-blue-500/60 space-y-4 shadow-sm relative overflow-hidden">
+              <div className="flex items-center justify-between border-b border-blue-200/60 pb-3">
+                <span className="px-2.5 py-1 bg-blue-600 text-white font-mono text-xs font-black rounded-md flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  CONNECTED & ACTIVE
                 </span>
-                <span className="text-xs font-mono text-stone-500">Option 2</span>
+                <span className="text-xs font-mono text-blue-700 font-bold">G-3QNR87XKSS</span>
               </div>
 
               <h3 className="text-lg font-serif font-black text-stone-900">
@@ -392,7 +426,7 @@ export const SovereignAnalyticsDashboard: React.FC<SovereignAnalyticsDashboardPr
               </h3>
 
               <p className="text-xs font-sans text-stone-600 leading-relaxed">
-                Provides comprehensive global demographics, country origins, real-time user maps, and acquisition funnel analysis.
+                Provides comprehensive global demographics, country origins, real-time user maps, and acquisition funnel analysis across all users globally.
               </p>
 
               <ul className="text-xs font-mono space-y-1.5 text-stone-700">
@@ -406,9 +440,21 @@ export const SovereignAnalyticsDashboard: React.FC<SovereignAnalyticsDashboardPr
                 </li>
                 <li className="flex items-center gap-1.5">
                   <CheckCircle2 size={13} className="text-blue-600 shrink-0" />
-                  <span>Search engine keyword sources</span>
+                  <span>Cross-device & global visitor aggregation</span>
                 </li>
               </ul>
+
+              <div className="pt-2">
+                <a
+                  href="https://analytics.google.com/analytics/web/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <ExternalLink size={13} />
+                  <span>Open GA4 Console</span>
+                </a>
+              </div>
             </div>
 
             {/* Option 3: Cloudflare Edge Web Analytics */}

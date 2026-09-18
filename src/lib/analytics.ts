@@ -37,6 +37,7 @@ export interface AnalyticsSummary {
 const STORAGE_KEY_EVENTS = 'icearth_analytics_events_v1';
 const STORAGE_KEY_SESSION = 'icearth_analytics_session_v1';
 const STORAGE_KEY_VISITORS = 'icearth_analytics_visitors_v1';
+const STORAGE_KEY_TOTAL_VIEWS_COUNT = 'icearth_analytics_total_views_count_v1';
 
 // Tab Labels Lookup
 const TAB_LABELS: Record<string, string> = {
@@ -147,13 +148,18 @@ export function recordPageView(tabId: string): void {
     }
     localStorage.setItem(STORAGE_KEY_SESSION, JSON.stringify(session));
 
-    // Load existing events (keep last 500 max)
+    // Load existing events (keep last 500 max in ring buffer for inspection log)
     let events: PageViewEvent[] = JSON.parse(localStorage.getItem(STORAGE_KEY_EVENTS) || '[]');
     events.unshift(event);
     if (events.length > 500) {
       events = events.slice(0, 500);
     }
     localStorage.setItem(STORAGE_KEY_EVENTS, JSON.stringify(events));
+
+    // Maintain an uncapped cumulative total views counter
+    const currentStoredCount = parseInt(localStorage.getItem(STORAGE_KEY_TOTAL_VIEWS_COUNT) || '0', 10);
+    const newTotalCount = Math.max(currentStoredCount, events.length) + 1;
+    localStorage.setItem(STORAGE_KEY_TOTAL_VIEWS_COUNT, newTotalCount.toString());
 
     // Optional Google Analytics 4 (GA4) dispatch if initialized
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -208,8 +214,11 @@ export function getAnalyticsSummary(): AnalyticsSummary {
       .map(([source, count]) => ({ source, count }))
       .sort((a, b) => b.count - a.count);
 
+    const storedTotalCount = parseInt(localStorage.getItem(STORAGE_KEY_TOTAL_VIEWS_COUNT) || '0', 10);
+    const cumulativeTotalViews = Math.max(storedTotalCount, events.length, currentSession.pageViews);
+
     return {
-      totalViews: Math.max(events.length, currentSession.pageViews),
+      totalViews: cumulativeTotalViews,
       uniqueVisitors: Math.max(visitorList.length, 1),
       totalSessions: Math.max(visitorList.length, 1),
       avgTimeOnSiteSeconds: currentSession.totalTimeSeconds || 180,
@@ -236,6 +245,7 @@ export function resetAnalyticsData(): void {
     localStorage.removeItem(STORAGE_KEY_EVENTS);
     localStorage.removeItem(STORAGE_KEY_SESSION);
     localStorage.removeItem(STORAGE_KEY_VISITORS);
+    localStorage.removeItem(STORAGE_KEY_TOTAL_VIEWS_COUNT);
   } catch (err) {
     console.warn('Failed to reset analytics:', err);
   }
@@ -243,10 +253,10 @@ export function resetAnalyticsData(): void {
 
 // Initialize Google Analytics Script dynamically if GA4 ID is present
 export function initGoogleAnalytics(gaMeasurementId?: string): void {
-  const measurementId = gaMeasurementId || import.meta.env.VITE_GA_MEASUREMENT_ID;
+  const measurementId = gaMeasurementId || import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-3QNR87XKSS';
   if (!measurementId || typeof window === 'undefined') return;
 
-  if (document.getElementById('ga-script')) return; // Already initialized
+  if (document.getElementById('ga-script') || (window as any).gtag) return; // Already initialized in index.html or earlier
 
   const script = document.createElement('script');
   script.id = 'ga-script';
