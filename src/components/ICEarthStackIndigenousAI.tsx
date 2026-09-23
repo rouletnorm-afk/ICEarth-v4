@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import icearthStackIndigenousAiImg from '../assets/images/the_icearth_stack_indigenous_ai_solution_1788537367862.jpg';
 import jicarillaNetworkMapImg from '../assets/images/jicarilla_network_map_1787291207967.jpg';
+import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
+import { CherokeeNationITPosition } from './CherokeeNationITPosition';
 import {
   Shield,
   Cpu,
@@ -43,7 +45,8 @@ import {
   Award,
   CheckCircle2,
   BookmarkCheck,
-  Compass
+  Compass,
+  Ban
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -61,7 +64,7 @@ import {
 interface ICEarthStackProps {
   onNavigateTab?: (tab: string) => void;
   siteTheme?: 'light' | 'dark';
-  initialSubTab?: 'executive_memo' | 'gemini_testimonial' | 'project_jupiter_comparison' | 'algorithmic_superiority' | 'global_topology' | 'plate_view';
+  initialSubTab?: 'executive_memo' | 'gemini_testimonial' | 'project_jupiter_comparison' | 'algorithmic_superiority' | 'global_topology' | 'plate_view' | 'cherokee_position';
 }
 
 export const ICEarthStackIndigenousAI: React.FC<ICEarthStackProps> = ({
@@ -70,7 +73,7 @@ export const ICEarthStackIndigenousAI: React.FC<ICEarthStackProps> = ({
   initialSubTab
 }) => {
   const [activeSubTab, setActiveSubTab] = useState<
-    'executive_memo' | 'gemini_testimonial' | 'project_jupiter_comparison' | 'algorithmic_superiority' | 'global_topology' | 'plate_view'
+    'executive_memo' | 'gemini_testimonial' | 'project_jupiter_comparison' | 'algorithmic_superiority' | 'global_topology' | 'plate_view' | 'cherokee_position'
   >(() => {
     if (initialSubTab) return initialSubTab;
     if (typeof window !== 'undefined') {
@@ -78,6 +81,9 @@ export const ICEarthStackIndigenousAI: React.FC<ICEarthStackProps> = ({
       const sub = params.get('sub');
       if (sub === 'gemini' || sub === 'gemini_testimonial' || sub === 'testimonial' || sub === 'google_ceo' || sub === 'outreach') {
         return 'gemini_testimonial';
+      }
+      if (sub === 'cherokee' || sub === 'cherokee_position' || sub === 'cherokee_ban' || sub === 'plate54' || sub === 'plate_54') {
+        return 'cherokee_position';
       }
       if (sub === 'project_jupiter' || sub === 'jupiter') return 'project_jupiter_comparison';
       if (sub === 'algorithms' || sub === 'slm') return 'algorithmic_superiority';
@@ -412,7 +418,18 @@ We submit this proposal for formal review and request an initial bilateral brief
                   }`}
                 >
                   <Sparkles size={11} className="text-amber-600 dark:text-amber-400 animate-pulse" />
-                  <span>⭐ 05 Plate #38 Graphic</span>
+                  <span>⭐ 05 Plate #38</span>
+                </button>
+                <button
+                  onClick={() => setActiveSubTab('cherokee_position')}
+                  className={`px-2.5 py-0.5 rounded-full transition-all cursor-pointer shrink-0 flex items-center gap-1 border ${
+                    activeSubTab === 'cherokee_position'
+                      ? 'bg-emerald-600 text-white font-black border-emerald-400 shadow'
+                      : 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 border-emerald-400/50 hover:bg-emerald-200'
+                  }`}
+                >
+                  <Ban size={11} className="text-red-500 animate-pulse" />
+                  <span>🌿 06 Cherokee Ban (Plate #54)</span>
                 </button>
               </div>
             </div>
@@ -438,10 +455,10 @@ We submit this proposal for formal review and request an initial bilateral brief
             </div>
           </div>
 
-          {/* PRIMARY 5-ITEM SUBMENU BAR */}
+          {/* PRIMARY 6-ITEM SUBMENU BAR */}
           <div
             ref={scrollContainerRef}
-            className="flex md:grid md:grid-cols-5 gap-2 overflow-x-auto pb-1.5 scroll-smooth font-mono"
+            className="flex lg:grid lg:grid-cols-6 gap-2 overflow-x-auto pb-1.5 scroll-smooth font-mono"
             style={{ scrollbarWidth: 'thin' }}
           >
             {/* 1. Policy Memo */}
@@ -540,6 +557,29 @@ We submit this proposal for formal review and request an initial bilateral brief
               </div>
               <div className="text-[10px] text-amber-800 dark:text-amber-300 truncate font-semibold">
                 High-Res Blueprint & Mesh
+              </div>
+            </button>
+
+            {/* 6. Cherokee Nation IT Position: Hyperscale Ban (Plate #54) */}
+            <button
+              onClick={() => setActiveSubTab('cherokee_position')}
+              className={`p-2.5 sm:p-3 rounded-xl transition-all cursor-pointer flex flex-col justify-between text-left border min-w-[185px] md:min-w-0 shrink-0 md:shrink ${
+                activeSubTab === 'cherokee_position'
+                  ? 'bg-gradient-to-r from-emerald-700 via-stone-900 to-emerald-800 text-white border-emerald-400 shadow-xl ring-2 ring-emerald-400/80'
+                  : 'bg-gradient-to-br from-emerald-50 via-stone-50 to-emerald-100/70 dark:from-emerald-950/40 dark:via-stone-850 dark:to-stone-900 text-emerald-950 dark:text-emerald-200 border-emerald-400/80 hover:border-emerald-500 shadow-xs ring-1 ring-emerald-400/30'
+              }`}
+            >
+              <div className="flex items-center justify-between gap-1 mb-1">
+                <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-700 text-white shadow-xs">
+                  06 • PLATE #54
+                </span>
+                <Ban size={15} className="text-red-500 animate-pulse" />
+              </div>
+              <div className="font-black text-xs text-stone-900 dark:text-emerald-100 flex items-center gap-1">
+                <span>6. Cherokee Ban</span>
+              </div>
+              <div className="text-[10px] text-emerald-800 dark:text-emerald-300 truncate font-semibold">
+                Hyperscale Ban & ICEarth Spec
               </div>
             </button>
           </div>
@@ -1942,6 +1982,16 @@ We submit this proposal for formal review and request an initial bilateral brief
                 </div>
               </div>
             </div>
+          </div>
+        )}
+
+        {/* SUB-TAB 6: CHEROKEE NATION HYPERSCALE BAN & SOVEREIGN IT SPECIFICATION (PLATE #54) */}
+        {activeSubTab === 'cherokee_position' && (
+          <div className="space-y-8 -mt-6 sm:-mt-10">
+            <CherokeeNationITPosition
+              onNavigateTab={onNavigateTab}
+              siteTheme={siteTheme}
+            />
           </div>
         )}
 

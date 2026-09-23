@@ -59,6 +59,7 @@ import aiSovereigntyImg from '../assets/images/ai_sovereignty_indigenous_watchdo
 import debHaalandImg from '../assets/images/deb_haaland_profile_1789687423309.jpg';
 import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1789691744576.jpg';
 import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_1789799082370.jpg';
+import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -114,7 +115,8 @@ import {
   Droplets,
   Skull,
   Award,
-  Landmark
+  Landmark,
+  Ban
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video' | 'Research';
@@ -166,6 +168,20 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('cherokee') ||
+    u.includes('hyperscale_ban') ||
+    u.includes('cherokee_ban') ||
+    u.includes('plate_54') ||
+    u.includes('plate54') ||
+    u.includes('plate #54') ||
+    u.includes('photo-000bm') ||
+    u.includes('ip-000bm') ||
+    u.includes('1790198046613') ||
+    u.includes('15724-cherokee-nation-bans')
+  ) {
+    return cherokeePlateImg;
+  }
   if (
     u.includes('gemini_hack') ||
     u.includes('gemini_defense') ||
@@ -896,6 +912,98 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-CHEROKEE-NATION-HYPERSCALE-BAN-PLATE54-2026',
+    contentType: 'Article',
+    title: "Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands: Principal Chief Chuck Hoskin Jr. Task Force Findings & ICEarth's Sovereign Zero-Footprint IT Architecture (Plate #54)",
+    subtitle: "Cherokee Nation issues historic prohibition against hyperscale data centers on tribal and trust lands following task force survey showing 64% citizen opposition over water depletion, power grid strain, and cultural desecration. ICEarth provides the sovereign technical solution: 0 gal/day waterless compute, microgrids, and NEPA consultation enforcement.",
+    sourceUrl: 'https://tribalbusinessnews.com/sections/economic-development/15724-cherokee-nation-bans-hyperscale-data-centers-on-tribal-lands',
+    sourceName: 'Tribal Business News / Chez Oxendine / Brian Edwards / KOSU / New York Times',
+    publishDate: '2026-08-10',
+    author: 'Chez Oxendine & Brian Edwards (Tribal Business News), with Norman Roulet (ICEarth Founder)',
+    authorName: 'Chez Oxendine (Tribal Business News) with reporting by Brian Edwards, KOSU News & Norman Roulet (ICEarth Founder)',
+    originState: 'Tahlequah, OK / Cherokee Nation Reservation (14 Counties) / Taos Sovereign IT',
+    communities: [
+      'Cherokee Nation',
+      'Tonawanda Seneca Nation',
+      'Mohawk Council of Akwesasne',
+      'Seminole Nation of Oklahoma',
+      'Kickapoo Tribe of Oklahoma',
+      'Jicarilla Apache Nation',
+      'ICEarth Global Sovereign Network'
+    ],
+    vaultHash: '0xCHEROKEE_HYPERSCALE_BAN_PLATE_54_SOVEREIGN_VAULT_2026',
+    editorName: 'Norman Roulet & Cherokee Data Center Task Force Analysis',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: cherokeePlateImg,
+    thumbnailUrl: cherokeePlateImg,
+    tags: [
+      'CherokeeNation',
+      'Plate54',
+      'HyperscaleBan',
+      'ChuckHoskinJr',
+      'TribalSovereignty',
+      'WaterConservation',
+      'EnergyGrid',
+      'NEPA',
+      'TonawandaSeneca',
+      'AkwesasneMohawk',
+      'SeminoleNation',
+      'KickapooTribe',
+      'ZeroWaterCooling',
+      'Microgrid',
+      'IndigenousITPosition',
+      'Exposenomics'
+    ],
+    primaryThreat: 'Unregulated Hyperscale Data Center Encroachment, 5M Gal/Day Aquifer Depletion & Tribal Sovereignty Bypass',
+    evidenceLevel: 'Official Executive Order & Legislative Task Force Survey (1,593 Citizens, 64% Opposition)',
+    status: 'ACTIVE TRIBAL PROHIBITION & RECOGNIZED INDIGENOUS IT POSITION',
+    abstract: "The Cherokee Nation—the largest federally recognized tribe in the United States—has enacted a comprehensive prohibition on hyperscale data center construction across its tribally owned and trust lands spanning 14 counties in northeastern Oklahoma. Principal Chief Chuck Hoskin Jr. issued the prohibition following an exhaustive report from the Principal Chief's Data Center Task Force, which revealed 64% citizen opposition among 1,593 surveyed tribal members. Citizens cited acute threats to groundwater aquifers (up to 5 million gallons/day per facility), regional power grid destabilization, noise pollution, light pollution, air quality degradation, and the destruction of sacred cultural resources. Critically, the task force identified a complete regulatory vacuum in Oklahoma, where state agencies fail to track proposed projects and developers routinely exploit municipal carve-outs to sidestep National Environmental Policy Act (NEPA) tribal consultation. ICEarth establishes the technical counter-architecture to honor the Cherokee position: closed-loop 0-gal/day waterless compute, off-grid micro-hydro microgrids, and sovereign air-gapped nodes.",
+    editorCommentary: "Norman Roulet (ICEarth Founder): 'Principal Chief Chuck Hoskin Jr. and the Cherokee Nation have drawn a decisive line in the red dirt of Oklahoma that every sovereign Indigenous nation on Earth should emulate. Big Tech's hyperscale cloud buildout is an extractive carbon-and-water sponge disguised as innovation. They consume 5 million gallons of pristine water every single day, hike residential electricity bills, and bypass NEPA consultation by cutting deals with compliant municipal boards. ICEarth was designed from the ground up as the sovereign antithesis to hyperscale colonialism: waterless, off-grid, air-gapped, and strictly governed by tribal law. We welcome the Cherokee Nation's position as a foundational cornerstone of the ICEarth Stack.'",
+    fullExcerpt: `CHEROKEE NATION BANS HYPERSCALE DATA CENTERS ON TRIBAL LANDS: TASK FORCE REPORT, TRIBAL MORATORIUM COALITION & ICEARTH SOVEREIGN SPECIFICATION (PLATE #54)
+By Chez Oxendine & Brian Edwards | Tribal Business News | Published: August 10, 2026
+Source Investigation: KOSU Public Radio, New York Times, Truthout, Cherokee Nation Executive Office
+Plate #54 Sovereign Infographic Archive: PHOTO-000BM / IP-000BM
+Sovereign Provenance Hash: 0xCHEROKEE_HYPERSCALE_BAN_PLATE_54_SOVEREIGN_VAULT_2026
+
+I. THE PROHIBITION: EXECUTIVE DIRECTIVE ON TRIBAL & TRUST LANDS
+The Cherokee Nation has become the latest and largest tribal nation to formally ban hyperscale data center development on tribal lands, issuing the prohibition following the delivery of an exhaustive report by the Principal Chief's Data Center Task Force.
+
+Cherokee Nation Principal Chief Chuck Hoskin Jr. announced that the Nation will not support hyperscale development on tribally owned or trust lands and will require 'robust' consultation for any proposals on non-tribal fee lands within the 14-county Cherokee Nation Reservation.
+
+'It’s clear that our Cherokee Nation Administration, Council, and citizens have serious concerns about the construction of hyperscale data centers on our tribal lands, which affect our resources and cultural lifeways,' Hoskin said in an official statement. 'Our primary responsibility is to protect our citizens and tribal communities from these threats.'
+
+The decision marks a decisive evolution from earlier deliberations. In July, Hoskin noted that Cherokee Nation did not wish to be mere 'bystanders' as computing infrastructure expanded across the region, but emphasized that the Nation would move deliberately while studying environmental, fiscal, and cultural impacts. Following the task force's conclusive findings, that study culminated in an immediate ban.
+
+II. TASK FORCE SURVEY METRICS & CITIZEN OPPOSITION
+The Data Center Task Force surveyed 1,593 Cherokee citizens across reservation communities. The quantitative results demonstrated overwhelming grassroots resistance:
+• 64% OPPOSE hyperscale data center construction within the Cherokee Nation Reservation.
+• 14% SUPPORT or conditionally favor hyperscale development.
+• 22% UNSURE or requested stringent regulatory oversight prior to any consideration.
+
+Primary Citizen Grievances Documented in Task Force Proceedings:
+1. Massive Water Consumption: Hyperscale evaporative cooling systems consume between 1 to 5 million gallons of potable water daily, threatening tribal alluvial aquifers and regional watersheds during prolonged Oklahoma droughts.
+2. Grid Parasitism & Cost Shifting: A single 100MW to 500MW hyperscale facility consumes the energy equivalent of 80,000 to 400,000 homes, prompting utility rate hikes for tribal households and straining Southwest Power Pool (SPP) transmission infrastructure.
+3. Noise & Light Pollution: Continuous low-frequency acoustic hums from industrial chiller fans and perimeter security arrays disrupt rural reservation lifeways and wildlife migratory patterns.
+4. Cultural & Sacred Site Desecration: Subsurface trenching for high-voltage transmission lines and fiber conduits risks unmitigated disruption of Cherokee historical gravesites and cultural resources.
+5. Regulatory Vacuum: The task force uncovered that the State of Oklahoma maintains no centralized registry or tracking mechanism for proposed data center developments.
+
+III. A PAN-TRIBAL RESISTANCE ACROSS INDIAN COUNTRY
+The Cherokee Nation's executive action reflects a rising nationwide movement of Indigenous resistance against hyperscale AI infrastructure:
+• Seminole Nation of Oklahoma: Passed an emergency moratorium in March 2026 freezing data center development.
+• Kickapoo Tribe of Oklahoma: Enacted a data center moratorium in July 2026 citing aquifer and transmission vulnerability.
+• Tonawanda Seneca Nation (New York): Filed federal litigation over the Western New York Science & Technology Advanced Manufacturing Park (STAMP) hyperscale project directly abutting sovereign Seneca territory.
+• Mohawk Council of Akwesasne: Mobilized against a hyperscale data center planned at a former bitcoin mining site in Massena, NY, protesting the bypass of tribal emergency management and environmental consultation.
+• NEPA Loophole Exploitation: KOSU investigative reporting revealed that developers deliberately site hyperscale facilities within municipal boundaries to evade federal permits that would trigger mandatory National Environmental Policy Act (NEPA) Section 106 government-to-government consultation.
+
+IV. ICEARTH'S RECOGNIZED INDIGENOUS IT POSITION SPECIFICATION
+ICEarth officially adopts the Cherokee Nation's IT Position into the sovereign platform, providing 5 direct technical solutions:
+1. 0 Gal/Day Waterless Closed-Loop Compute: Phase-change dielectric immersion and closed loop heat exchangers that consume zero groundwater.
+2. 100% Off-Grid Islanded Microgrids: Solar PV, micro-hydro, and geothermal systems that feed surplus clean power back to tribal elder homes rather than leeching from public grids.
+3. Modular Micro-Clusters (50kW-250kW): Compact footprint preserving 100% of surface vegetation and wildlife corridors.
+4. Non-Custodial Sovereign Governance: Hardware cryptographically tied to 3-of-5 Shamir Elder Key splits; no remote access or cloud vendor backdoors.
+5. Mandatory Pre-Permit NEPA Digital Injunction: Automated cryptographic registry that flags any municipal project within 50 miles of sovereign boundaries lacking free, prior, and informed consent (FPIC).`
+  },
   {
     id: 'ART-GEMINI-HACK-AUTONOMOUS-INFILTRATION-PLATE53-2026',
     contentType: 'Article',
@@ -5151,6 +5259,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('CherokeeNation') || article.tags?.includes('Plate54') || article.id.includes('CHEROKEE-NATION') || article.title?.includes("Cherokee Nation Bans Hyperscale")) && (
+                      <>
+                        <a
+                          href="https://tribalbusinessnews.com/sections/economic-development/15724-cherokee-nation-bans-hyperscale-data-centers-on-tribal-lands"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-black text-xs rounded-xl shadow border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Ban size={13} className="text-red-400 animate-pulse" />
+                          <span>Tribal Business News (Chez Oxendine)</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('CherokeeNation') || article.tags?.includes('Plate54') || article.id.includes('CHEROKEE-NATION') || article.title?.includes("Cherokee Nation Bans Hyperscale")) && (
+                      <button
+                        onClick={() => onNavigateTab('cherokee_it_position')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-600 via-stone-900 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Ban size={14} className="text-red-400 animate-pulse" />
+                        <span>🪶 Launch Cherokee IT Position Engine (Plate #54)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('GeminiHack') || article.tags?.includes('Plate53') || article.id.includes('GEMINI-HACK') || article.title?.includes("Gemini AI Hacked 3 Companies")) && (

@@ -61,6 +61,7 @@ import debHaalandImg from '../assets/images/deb_haaland_profile_1789687423309.jp
 import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1789691744576.jpg';
 import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.jpg';
 import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_1789799082370.jpg';
+import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
 import {
   Shield,
   UserCheck,
@@ -192,6 +193,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BM',
+      title: "Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands: Task Force Survey, Alluvial Aquifer Defense & ICEarth Sovereign Computing Architecture (Plate #54)",
+      type: 'Indigenous IT Sovereignty, Hyperscale Data Center Moratorium & Waterless Sovereign Compute IP Asset',
+      imageSrc: cherokeePlateImg,
+      link: 'cherokee_it_position',
+      sourceUrl: 'https://tribalbusinessnews.com/sections/economic-development/15724-cherokee-nation-bans-hyperscale-data-centers-on-tribal-lands',
+      description: "Origins: Landmark sovereign environmental and computational governance infographic plate documenting the Cherokee Nation's historic prohibition of hyperscale data centers on tribal and trust lands across its 14-county reservation in northeastern Oklahoma. Highlights Principal Chief Chuck Hoskin Jr.'s Data Center Task Force report detailing 64% citizen opposition among 1,593 surveyed tribal members due to excessive water depletion (up to 5M gal/day), electrical grid instability, noise/light pollution, and sacred site desecration. Maps the pan-tribal resistance coalition (Tonawanda Seneca, Mohawk Council of Akwesasne, Seminole Nation of Oklahoma, Kickapoo Tribe) and details ICEarth's 5 technical solutions: 0-gal/day closed-loop waterless cooling, 100% off-grid islanded microgrids, 50kW modular clusters, non-custodial 3-of-5 Shamir Elder Key governance, and digital NEPA consultation enforcement.",
+      sovereignHash: '0xCHEROKEE_HYPERSCALE_BAN_PLATE_54_SOVEREIGN_VAULT_2026'
+    },
     {
       id: 'IP-000BK',
       title: "Google's Gemini AI Hacked 3 Companies During Testing: Autonomous Infiltration Forensic & Sovereign Defense (Plate #53)",
