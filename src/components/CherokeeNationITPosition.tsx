@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
+import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
 import {
   Shield,
   Zap,
@@ -252,7 +253,7 @@ Indigenous Communities Earth (ICEarth)`;
 
           {/* Main Title Row with Plate Infographic Thumbnail */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div className="space-y-3 max-w-3xl">
+            <div className="space-y-4 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="px-3 py-1 bg-emerald-600 text-stone-950 font-mono text-xs font-black uppercase rounded tracking-wider shadow">
                   CHEROKEE NATION (ᏣᎳᎩᎯ ᎠᏰᎵ)
@@ -266,13 +267,31 @@ Indigenous Communities Earth (ICEarth)`;
                 </span>
               </div>
 
-              <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-                Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands
-              </h1>
+              <div className="flex items-start gap-4">
+                {/* Official Authentic Great Seal */}
+                <div className="shrink-0 hidden sm:block">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white p-1 shadow-2xl border-2 border-amber-400 ring-2 ring-emerald-500/50 hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={cherokeeSealImg}
+                      alt="Great Seal of the Cherokee Nation (Adopted Sept. 6, 1839 • ᏣᎳᎩᎯ ᎠᏰᎵ)"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span className="block text-center text-[9px] font-mono text-amber-300/80 mt-1 font-bold">
+                    Sept. 6, 1839
+                  </span>
+                </div>
 
-              <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-                Prompted by a comprehensive citizen task force finding <strong className="text-red-400">64% community opposition</strong>, the Cherokee Nation issued a formal executive ban on hyperscale data centers on tribal and trust lands across its 14-county reservation. ICEarth establishes full technical concurrence and delivers the <strong className="text-emerald-400">0 Gal/Day Waterless Sovereign IT Specification (Plate #54)</strong> to protect tribal aquifers, clean grids, and cultural sovereignty.
-              </p>
+                <div className="space-y-2">
+                  <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                    Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands
+                  </h1>
+
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
+                    Prompted by a comprehensive citizen task force finding <strong className="text-red-400">64% community opposition</strong>, the Cherokee Nation issued a formal executive ban on hyperscale data centers on tribal and trust lands across its 14-county reservation. ICEarth establishes full technical concurrence and delivers the <strong className="text-emerald-400">0 Gal/Day Waterless Sovereign IT Specification (Plate #54)</strong> to protect tribal aquifers, clean grids, and cultural sovereignty.
+                  </p>
+                </div>
+              </div>
 
               {/* Cryptographic Vault Hash Bar */}
               <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
@@ -533,6 +552,85 @@ Indigenous Communities Earth (ICEarth)`;
               <p className="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
                 Reporting by Chez Oxendine (Tribal Business News) and KOSU reveals that the State of Oklahoma maintains <strong>no centralized tracking mechanism</strong> and <strong>no state regulatory framework</strong> for hyperscale data center construction. Commercial developers deliberately bypass federal review under the National Environmental Policy Act (NEPA) by routing power and water agreements through municipal utilities and county industrial trusts. This strategy circumvents Section 106 tribal cultural consultations entirely, placing sacred burial sites, high-volume aquifers, and rural electric co-ops at immediate risk.
               </p>
+            </div>
+
+            {/* AUTHENTIC SOVEREIGN INSIGNIA PROTOCOL & SEAL PROVENANCE */}
+            <div className="bg-white dark:bg-stone-900 border-2 border-emerald-500/40 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-white p-1 shadow border border-amber-400 shrink-0">
+                    <img
+                      src={cherokeeSealImg}
+                      alt="Authentic Great Seal of the Cherokee Nation"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 block">
+                      Authentic Sovereign Insignia Protocol
+                    </span>
+                    <h3 className="font-bold text-base sm:text-lg text-stone-900 dark:text-stone-100">
+                      The Great Seal of the Cherokee Nation (ᏣᎳᎩᎯ ᎠᏰᎵ)
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 font-mono text-xs">
+                  <span className="px-2.5 py-1 bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-400/40 rounded-lg font-bold">
+                    Adopted: Sept. 6, 1839
+                  </span>
+                  <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40 rounded-lg font-bold">
+                    Official Identity
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div className="space-y-3 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+                  <p>
+                    <strong>Constitutional Provenance:</strong> The Great Seal of the Cherokee Nation was established on <strong className="text-amber-600 dark:text-amber-400">September 6, 1839</strong>, upon adoption of the Cherokee Nation Constitution in Tahlequah, Oklahoma, formally reuniting the Eastern and Western Cherokees following the Trail of Tears.
+                  </p>
+                  <p>
+                    <strong>Iconographic Anatomy & Clan Symbolism:</strong>
+                  </p>
+                  <ul className="space-y-1.5 pl-4 list-disc marker:text-emerald-500 text-xs">
+                    <li>
+                      <strong>7-Pointed Star:</strong> Represents the seven ancient clans of the Cherokee people: <em>Bird, Paint, Deer, Wolf, Blue, Long Hair,</em> and <em>Wild Potato</em>.
+                    </li>
+                    <li>
+                      <strong>Oak Wreath & Acorns:</strong> Commemorates the eternal sacred fire of the Cherokee people, traditionally fueled by white oak wood.
+                    </li>
+                    <li>
+                      <strong>Cherokee Syllabary (ᏣᎳᎩᎯ ᎠᏰᎵ):</strong> Pronounced <em>Tsalagihi Ayeli</em>, signifying the "Cherokee Nation" in the 85-character writing system invented by Sequoyah in 1821.
+                    </li>
+                    <li>
+                      <strong>Continuous Golden Rope Border:</strong> Represents unbroken national sovereignty, self-determination, and territorial jurisdiction.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-stone-50 dark:bg-stone-950 p-5 rounded-xl border border-stone-200 dark:border-stone-800 space-y-3">
+                  <div className="flex items-center gap-2 text-stone-900 dark:text-stone-100 font-bold text-xs font-mono uppercase">
+                    <Shield size={16} className="text-emerald-600" />
+                    <span>ICEarth Sovereign Identity Standard</span>
+                  </div>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Official seals, national flags, tribal cartography, cultural regalia, and sacred emblems embody living sovereignty, treaty law, and ancestral memory. Under the ICEarth Sovereign Publishing standard, official identities and insignia must <strong>never be synthetically reimagined, hallucinated, or altered by generative models</strong>. Only authentic, verified archival assets and government-conferred emblems are used across the ICEarth platform.
+                  </p>
+                  <div className="pt-2 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-500">
+                    <span>Source: Wikimedia Commons / Cherokee Nation Records</span>
+                    <a
+                      href="https://commons.wikimedia.org/wiki/File:Great_seal_of_the_cherokee_nation.svg"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-emerald-600 hover:underline flex items-center gap-1"
+                    >
+                      <span>Verified Commons File</span>
+                      <ExternalLink size={10} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
