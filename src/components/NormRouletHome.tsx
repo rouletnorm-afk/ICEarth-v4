@@ -53,7 +53,8 @@ import {
   Skull,
   Microscope,
   Droplets,
-  Ban
+  Ban,
+  Fingerprint
 } from 'lucide-react';
 
 // Import local image assets
@@ -129,10 +130,21 @@ import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1
 import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.jpg';
 import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_1789799082370.jpg';
 import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
+import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('cherokee_seal') ||
+    u.includes('great_seal') ||
+    u.includes('photo-000bn') ||
+    u.includes('ip-000bn') ||
+    u.includes('anadisgoi') ||
+    u.includes('authentic_cherokee')
+  ) {
+    return cherokeeSealImg;
+  }
   if (
     u.includes('cherokee') ||
     u.includes('hyperscale_ban') ||
@@ -990,15 +1002,15 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   const magazineArticles: ArticleFeedItem[] = [
     {
       id: 'MAG-CHEROKEE-NATION-HYPERSCALE-BAN-2026',
-      title: "Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands: Task Force Survey Findings & ICEarth Sovereign IT Architecture (Plate #54)",
+      title: "Cherokee Nation Bans Hyperscale Data Centers & Issues AI Seal Directive: Principal Chief Chuck Hoskin Jr. on Sovereign Identity & ICEarth Defense (Plate #54)",
       category: 'Indigenous IT Sovereignty & Zero-Footprint Compute',
       date: '2026-08-10',
       imageSrc: cherokeePlateImg,
       publishedUrl: 'https://tribalbusinessnews.com/sections/economic-development/15724-cherokee-nation-bans-hyperscale-data-centers-on-tribal-lands',
-      summary: "Cherokee Nation Principal Chief Chuck Hoskin Jr. enacts a historic prohibition on hyperscale data center construction on tribal and trust lands across the 14-county Cherokee Nation Reservation following an exhaustive task force study. Surveying 1,593 tribal citizens, the task force found 64% opposition driven by fears of 5M gallon/day water consumption, electrical grid instability, acoustic/light pollution, and sacred site desecration. Critically, the report revealed Oklahoma's total lack of regulatory tracking and how developers bypass NEPA tribal consultation via municipal conduits. ICEarth integrates the Cherokee position into its sovereign stack: 0 gal/day waterless closed-loop compute, off-grid micro-hydro microgrids, air-gapped non-custodial hardware, and mandatory digital NEPA consultation injunctions.",
-      fullText: `CHEROKEE NATION BANS HYPERSCALE DATA CENTERS ON TRIBAL LANDS: EXECUTIVE MORATORIUM, TASK FORCE METRICS & ICEARTH SOVEREIGN SPECIFICATION (PLATE #54)
+      summary: "Cherokee Nation Principal Chief Chuck Hoskin Jr. enacts a historic prohibition on hyperscale data centers on tribal lands following 64% citizen opposition, while issuing an urgent public directive prohibiting AI generation of the Cherokee Great Seal ('an almost guaranteed way to irresponsibly get it wrong') and directing researchers to the official Anadisgoi media kit. Prompted by an AI mirage on Plate #54 that synthesized an unauthorized 8th star point and counterfeit 1956 date, ICEarth implements the 5-Pillar Sovereign Identity Management Standard and waterless 0-gal/day compute to protect Indigenous sovereignty from algorithmic erasure.",
+      fullText: `CHEROKEE NATION BANS HYPERSCALE DATA CENTERS ON TRIBAL LANDS & ISSUES HISTORIC AI SEAL DIRECTIVE (PLATE #54)
 Reporting by Chez Oxendine & Brian Edwards (Tribal Business News) with ICEarth Sovereign Systems Integration
-Published August 10, 2026 | Source: Tribal Business News, KOSU, New York Times
+Published August 10, 2026 | Source: Tribal Business News, Anadisgoi Media Kit, KOSU, New York Times
 Plate #54 Cryptographic Archive: PHOTO-000BM / IP-000BM | Sovereign Vault Hash: 0xCHEROKEE_HYPERSCALE_BAN_PLATE_54_SOVEREIGN_VAULT_2026
 
 I. THE HISTORIC EXECUTIVE PROHIBITION
@@ -1008,34 +1020,29 @@ For proposed facilities on non-tribal fee lands within the reservation boundarie
 
 'It’s clear that our Cherokee Nation Administration, Council, and citizens have serious concerns about the construction of hyperscale data centers on our tribal lands, which affect our resources and cultural lifeways,' Chief Hoskin stated. 'Our primary responsibility is to protect our citizens and tribal communities from these threats.'
 
-II. CITIZEN SURVEY METRICS (1,593 RESPONDENTS)
-The task force conducted a rigorous survey of 1,593 Cherokee citizens:
-• 64% OPPOSED hyperscale data center construction within the reservation.
-• 14% SUPPORTED or reported favorability.
-• 22% UNSURE or demanded comprehensive environmental safeguards.
+II. CHIEF CHUCK HOSKIN JR.'S JULY 29 DIRECTIVE ON THE CHEROKEE SEAL & AI HALLUCINATIONS
+Principal Chief Chuck Hoskin Jr. issued an explicit warning regarding the cultural degradation inflicted by generative AI models:
+"Our seal is deeply meaningful and should be treated with respect. Sharing our seal for non-commercial purposes is part of sharing our identity and we encourage it. Using the wrong Cherokee Nation seal is avoidable. First, don’t use AI to generate our seal, an act that is an almost guaranteed way to irresponsibly get it wrong. Second, using seals that look legitimate on the internet can sometimes lead to using the wrong seal. Mistakes happen. Candidly, we’ve even made that mistake and I’m sure I have. But, with our new media kit, mistakes are avoidable. https://www.anadisgoi.com/index.php/media-kit"
 
-Key citizen threats documented:
-1. Groundwater Depletion: Evaporative cooling towers consuming up to 5 million gallons of potable water daily, jeopardizing regional aquifers.
-2. Grid Strain & Cost Shifting: Massive power demands threatening residential rate spikes and grid destabilization.
-3. Environmental Degradation: Continuous low-frequency noise and industrial light pollution disrupting traditional lifeways.
-4. Cultural Desecration: Unmonitored utility corridors crossing unrecorded Cherokee gravesites and sacred cultural resources.
-5. Regulatory Vacuum: Oklahoma state agencies fail to track data center proposals or provide oversight.
+III. THE FORENSIC CASE STUDY: THE PLATE #54 AI MIRAGE
+During the generation of Plate #54, generative AI synthesized an 'AI mirage' that subverted the core identity of the Cherokee Nation:
+• 8th Phantom Star Appendage: Added an 8th point to the sacred 7-pointed star representing the seven matrilineal clans (Bird, Paint, Deer, Wolf, Blue, Long Hair, Wild Potato), inventing a non-existent clan.
+• Counterfeit Date "1956": Replaced the sacred constitutional date of Sept. 6, 1839 with "1956", echoing the damaging era of U.S. Indian Termination Policy.
+• Scrambled Syllabary: Replaced Sequoyah's phonetic writing system (ᏣᎳᎩᎯ ᎠᏰᎵ) with nonsensical graphic artifacts.
+• Hazard of Permanence: Had ICEarth citizen oversight not caught and corrected this anomaly, the synthetic mirage would have become permanent digital canon across global search indices.
 
-III. A PAN-TRIBAL RESISTANCE
-The Cherokee ban aligns with a nationwide Indigenous defense front:
-• Seminole Nation of Oklahoma: Enacted a data center moratorium in March 2026.
-• Kickapoo Tribe of Oklahoma: Enacted a moratorium in July 2026.
-• Tonawanda Seneca Nation (NY): Filed federal lawsuits against the Western NY STAMP hyperscale park abutting sovereign territory.
-• Mohawk Council of Akwesasne: Mobilized against unconsulted hyperscale conversion at Massena, NY.
+IV. THE HISTORICAL CONTINUUM: 1492 TO ALGORITHMIC ERASURE
+Since Columbus erroneously misidentified Indigenous Americans as people from India—a fatal error of identity that opened five centuries of continental genocide and later served as the explicit legal model for Hitler's Lebensraum—Indigenous nations have fought to protect their sacred identity. Unchecked AI models that hallucinate tribal heraldry threaten to complete through automated assimilation what military force could not.
 
-IV. ICEARTH RECOGNIZED INDIGENOUS IT SPECIFICATION
-ICEarth honors the Cherokee Nation position by deploying zero-impact infrastructure:
-1. 0 Gal/Day Waterless Closed-Loop Cooling: Dielectric immersion eliminating evaporative water waste.
-2. 100% Off-Grid Islanded Microgrids: Solar PV and micro-hydro generating independent clean power.
-3. Modular Micro-Clusters (50kW-250kW): Minimizing land disturbance and protecting sacred sites.
-4. Non-Custodial 3-of-5 Shamir Elder Key Veto: Community-governed cryptographic access.
-5. NEPA Sovereign Digital Registry: Enforcing mandatory pre-permit tribal consultation across regional buffer zones.`,
-      tags: ['CherokeeNation', 'Plate54', 'HyperscaleBan', 'ChuckHoskinJr', 'TribalSovereignty', 'ZeroWaterCooling', 'Microgrid', 'IndigenousITPosition'],
+V. ICEARTH RECOGNIZED INDIGENOUS IT SPECIFICATION & SEAL PROTOCOL
+ICEarth deploys the 5-Pillar Sovereign Identity Architecture:
+1. Complete Ban on Generative Tribal Heraldry
+2. Whitelisted Media Kit Ingestion via Anadisgoi (anadisgoi.com/index.php/media-kit)
+3. Cryptographic SHA-256 Vault Pinning & Immutable Provenance
+4. Automated Cultural Invariant Linting (7 Star Points, Sept. 6 1839 Date, Sequoyah Glyphs)
+5. Citizen-Sovereign Human-in-the-Loop Oversight
+In addition to deploying 0 gal/day waterless closed-loop compute and off-grid micro-hydro microgrids to defend tribal waters.`,
+      tags: ['CherokeeNation', 'Plate54', 'HyperscaleBan', 'ChuckHoskinJr', 'TribalSovereignty', 'Anadisgoi', 'GreatSeal', 'AIMirageDefense', 'ZeroWaterCooling', 'Microgrid', 'IndigenousITPosition'],
       linkHash: '0xCHEROKEE_HYPERSCALE_BAN_PLATE_54_SOVEREIGN_VAULT_2026'
     },
     {
@@ -3192,6 +3199,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BN',
+      title: "Authentic Great Seal of the Cherokee Nation vs. The AI Mirage: Defending Sovereign Heraldry (Sept. 6, 1839 Constitution)",
+      category: 'Sovereign Identity Protection, Heraldry Defense & Anti-Algorithmic Erasure',
+      imageSrc: cherokeeSealImg,
+      location: 'Tahlequah, OK • Capital of the Cherokee Nation • Anadisgoi Media Kit',
+      date: '2026-08-10',
+      description: "Origins: Landmark sovereign identity and heraldic defense asset establishing the authentic Great Seal of the Cherokee Nation (ᏣᎳᎩᎯ ᎠᏰᎵ) under the September 6, 1839 Constitution adopted at Tahlequah following the Trail of Tears. Highlights Principal Chief Chuck Hoskin Jr.'s July 29 directive prohibiting AI generation of the Great Seal ('an almost guaranteed way to irresponsibly get it wrong') and directing researchers to the official Anadisgoi media kit. Forensically audits the Plate #54 AI mirage—which hallucinated an unauthorized 8th star point and counterfeit 1956 date—and establishes the 5-Pillar Sovereign Identity Architecture: complete prohibition of generative tribal heraldry, whitelisted media kits, SHA-256 vault pinning, cultural invariant linting (7 clans, 1839, Sequoyah syllabary), and citizen-sovereign human-in-the-loop oversight to prevent digital assimilation.",
+      vaultHash: '0xCHEROKEE_SOVEREIGN_SEAL_AUTHENTICITY_VAULT_ANADISGOI_2026',
+      tags: ['CherokeeNation', 'GreatSeal', 'SovereignIdentity', 'AIMirage', 'Anadisgoi', 'ChuckHoskinJr', 'SevenClans', 'Sequoyah', 'HeraldryDefense', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BM',
       title: "Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands: Task Force Survey, Alluvial Aquifer Defense & ICEarth Sovereign Computing Architecture (Plate #54)",
@@ -6290,6 +6308,30 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                     >
                       <Ban size={13} className="text-red-400 animate-pulse" />
                       <span>🪶 Launch Cherokee IT Position Engine (Plate #54)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
+                  {(selectedPhoto.id === 'PHOTO-000BN' || selectedPhoto.tags?.includes('GreatSeal') || selectedPhoto.tags?.includes('SovereignIdentity') || selectedPhoto.tags?.includes('Anadisgoi')) && (
+                    <a
+                      href="https://www.anadisgoi.com/index.php/media-kit"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300 text-xs font-mono transition-colors"
+                    >
+                      <span>🪶 Anadisgoi Media Kit</span>
+                      <ExternalLink size={11} className="text-stone-950" />
+                    </a>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000BN' || selectedPhoto.tags?.includes('GreatSeal') || selectedPhoto.tags?.includes('SovereignIdentity') || selectedPhoto.id === 'PHOTO-000BM' || selectedPhoto.tags?.includes('Plate54')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('sovereign_identity');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 via-stone-900 to-red-600 hover:from-amber-500 hover:to-red-500 text-white font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono"
+                    >
+                      <Fingerprint size={13} className="text-amber-300 animate-pulse" />
+                      <span>🪶 Sovereign Identity vs. AI Mirage</span>
                       <ArrowRight size={13} />
                     </button>
                   )}

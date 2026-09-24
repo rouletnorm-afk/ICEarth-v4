@@ -62,6 +62,7 @@ import nmItSovereigntyPlateImg from '../assets/images/deb_haaland_laguna_plate_1
 import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.jpg';
 import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_1789799082370.jpg';
 import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
+import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
 import {
   Shield,
   UserCheck,
@@ -193,6 +194,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BN',
+      title: "Authentic Great Seal of the Cherokee Nation vs. The AI Mirage: Defending Sovereign Heraldry (Sept. 6, 1839 Constitution)",
+      type: 'Sovereign Identity Protection, Heraldry Defense & Anti-Algorithmic Erasure IP Asset',
+      imageSrc: cherokeeSealImg,
+      link: 'sovereign_identity',
+      sourceUrl: 'https://www.anadisgoi.com/index.php/media-kit',
+      description: "Origins: Landmark sovereign identity and heraldic defense asset establishing the authentic Great Seal of the Cherokee Nation (ᏣᎳᎩᎯ ᎠᏰᎵ) under the September 6, 1839 Constitution adopted at Tahlequah following the Trail of Tears. Highlights Principal Chief Chuck Hoskin Jr.'s July 29 directive prohibiting AI generation of the Great Seal ('an almost guaranteed way to irresponsibly get it wrong') and directing researchers to the official Anadisgoi media kit. Forensically audits the Plate #54 AI mirage—which hallucinated an unauthorized 8th star point and counterfeit 1956 date—and establishes the 5-Pillar Sovereign Identity Architecture: complete prohibition of generative tribal heraldry, whitelisted media kits, SHA-256 vault pinning, cultural invariant linting (7 clans, 1839, Sequoyah syllabary), and citizen-sovereign human-in-the-loop oversight to prevent digital assimilation.",
+      sovereignHash: '0xCHEROKEE_SOVEREIGN_SEAL_AUTHENTICITY_VAULT_ANADISGOI_2026'
+    },
     {
       id: 'IP-000BM',
       title: "Cherokee Nation Bans Hyperscale Data Centers on Tribal Lands: Task Force Survey, Alluvial Aquifer Defense & ICEarth Sovereign Computing Architecture (Plate #54)",

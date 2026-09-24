@@ -28,7 +28,12 @@ import {
   Compass,
   ArrowRight,
   BookmarkCheck,
-  FileCheck
+  FileCheck,
+  AlertTriangle,
+  Fingerprint,
+  Lock,
+  History,
+  Scroll
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -53,7 +58,7 @@ export const CherokeeNationITPosition: React.FC<CherokeeNationITPositionProps> =
   onNavigateTab,
   siteTheme = 'light'
 }) => {
-  const [activeSection, setActiveSection] = useState<'overview' | 'survey' | 'prohibitions' | 'icearth_solution' | 'intertribal_coalition' | 'diplomatic_memo'>('overview');
+  const [activeSection, setActiveSection] = useState<'overview' | 'survey' | 'prohibitions' | 'icearth_solution' | 'intertribal_coalition' | 'diplomatic_memo' | 'seal_sovereignty'>('overview');
   const [copiedHash, setCopiedHash] = useState(false);
   const [copiedMemo, setCopiedMemo] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -465,6 +470,18 @@ Indigenous Communities Earth (ICEarth)`;
             >
               <FileText size={14} />
               <span>6. Diplomatic Concurrence Memo</span>
+            </button>
+
+            <button
+              onClick={() => setActiveSection('seal_sovereignty')}
+              className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer shrink-0 flex items-center gap-1.5 ${
+                activeSection === 'seal_sovereignty'
+                  ? 'bg-gradient-to-r from-amber-600 to-red-600 text-white shadow ring-2 ring-amber-400/50'
+                  : 'bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border border-amber-300/60 hover:bg-amber-100'
+              }`}
+            >
+              <Fingerprint size={14} className="text-amber-500" />
+              <span>7. Chief Hoskin Seal Directive & AI Mirage Defense</span>
             </button>
           </div>
         </div>
@@ -1040,6 +1057,318 @@ Indigenous Communities Earth (ICEarth)`;
               <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-500 dark:text-stone-400 pt-2">
                 <span>Cryptographically Timestamped: August 12, 2026</span>
                 <span>Transmitted via Sovereign Diplomatic Vault</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* TAB 7: SOVEREIGN IDENTITY & AI MIRAGE DEFENSE */}
+        {activeSection === 'seal_sovereignty' && (
+          <div className="space-y-8">
+            {/* Header Callout */}
+            <div className="bg-gradient-to-br from-stone-900 via-stone-950 to-stone-900 border-2 border-amber-500/50 rounded-2xl p-6 sm:p-10 shadow-2xl text-white space-y-6">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-400/40 rounded-full font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <Fingerprint size={14} className="text-amber-400" />
+                    Sovereign Identity Case Study
+                  </span>
+                  <span className="px-3 py-1 bg-red-600/30 text-red-300 border border-red-500/40 rounded-full font-mono text-xs font-bold uppercase">
+                    AI Mirage Warning
+                  </span>
+                </div>
+                <div className="text-xs font-mono text-stone-400">
+                  Ref: Anadisgoi Media Kit • Directive of Chief Chuck Hoskin Jr.
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row items-start gap-6">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-2 shadow-2xl border-2 border-amber-400 ring-4 ring-emerald-500/40 shrink-0">
+                  <img
+                    src={cherokeeSealImg}
+                    alt="Authentic Great Seal of the Cherokee Nation"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+                    Sovereign Identity vs. The AI Mirage: Defending Indigenous Heraldry from Algorithmic Erasure
+                  </h2>
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
+                    When generative AI models synthesized Plate #54, they produced an insidious <strong className="text-amber-400">AI mirage</strong>: adding an unauthorized 8th appendage to the sacred 7-pointed star of the Cherokee clans and supplanting the foundational constitutional date of <strong className="text-emerald-400">September 6, 1839</strong> with an arbitrary <strong className="text-red-400">"1956"</strong>. Prompted by eagle-eyed citizen oversight by Norm Roulet, ICEarth replaced this mirage with the authentic Great Seal and codified Principal Chief Chuck Hoskin Jr.'s directive into the <strong className="text-amber-300">ICEarth Sovereign Anti-Hallucination Protocol</strong>.
+                  </p>
+                </div>
+              </div>
+
+              {/* Chief Chuck Hoskin Jr. Verbatim Proclamation */}
+              <div className="bg-stone-950/80 border-2 border-amber-500/60 rounded-xl p-5 sm:p-7 space-y-4">
+                <div className="flex items-center justify-between gap-2 border-b border-stone-800 pb-3">
+                  <div className="flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase">
+                    <Scroll size={16} />
+                    <span>Official Directive: Principal Chief Chuck Hoskin Jr. (July 29)</span>
+                  </div>
+                  <a
+                    href="https://www.anadisgoi.com/index.php/media-kit"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-3 py-1 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold rounded flex items-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    <span>Anadisgoi Media Kit</span>
+                    <ExternalLink size={12} />
+                  </a>
+                </div>
+
+                <blockquote className="text-stone-200 text-xs sm:text-sm font-serif italic leading-relaxed border-l-4 border-amber-500 pl-4 py-1">
+                  &ldquo;Our seal is deeply meaningful and should be treated with respect. Sharing our seal for non-commercial purposes is part of sharing our identity and we encourage it. Using the wrong Cherokee Nation seal is avoidable. First, don&rsquo;t use AI to generate our seal, an act that is an almost guaranteed way to irresponsibly get it wrong. Second, using seals that look legitimate on the internet can sometimes lead to using the wrong seal. Mistakes happen. Candidly, we&rsquo;ve even made that mistake and I&rsquo;m sure I have. But, with our new media kit, mistakes are avoidable.&rdquo;
+                </blockquote>
+
+                <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-stone-400 pt-1">
+                  <span>Speaker: Principal Chief Chuck Hoskin Jr., Cherokee Nation</span>
+                  <span>Official Media Portal: anadisgoi.com</span>
+                </div>
+              </div>
+            </div>
+
+            {/* THE HISTORICAL CONTINUUM: 1492 TO THE ALGORITHMIC AGE */}
+            <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-md space-y-6">
+              <div className="flex items-center gap-3 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <History size={22} className="text-red-600 dark:text-red-400 shrink-0" />
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400 block">
+                    The Historical Continuum
+                  </span>
+                  <h3 className="font-bold text-lg sm:text-xl text-stone-900 dark:text-stone-100">
+                    From 1492 Misidentification to 21st-Century Algorithmic Erasure
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+                <div className="p-4 bg-stone-50 dark:bg-stone-950 rounded-xl border border-stone-200 dark:border-stone-800 space-y-2">
+                  <div className="font-bold font-mono text-xs uppercase text-red-600 dark:text-red-400">
+                    1. The 1492 Cartographic Mirage
+                  </div>
+                  <p>
+                    When European invaders first made landfall, they misidentified the diverse, sovereign nations of an entire hemisphere as &ldquo;Indians&rdquo;—an epistemic failure of geographical navigation that inaugurated 500 years of dispossession, biological warfare, and the extermination of tens of millions of Indigenous people.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-50 dark:bg-stone-950 rounded-xl border border-stone-200 dark:border-stone-800 space-y-2">
+                  <div className="font-bold font-mono text-xs uppercase text-amber-600 dark:text-amber-400">
+                    2. The Blueprint for Genocide
+                  </div>
+                  <p>
+                    As exhaustively documented by historians including David Stannard (<em>American Holocaust</em>), John Toland (<em>Adolf Hitler</em>), and James Q. Whitman (<em>Hitler&rsquo;s American Model</em>), the systematic clearing of Indigenous peoples and the U.S. reservation system served as an explicit model for Hitler&rsquo;s <em>Lebensraum</em> and racial extermination policies in Eastern Europe.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-50 dark:bg-stone-950 rounded-xl border border-stone-200 dark:border-stone-800 space-y-2">
+                  <div className="font-bold font-mono text-xs uppercase text-purple-600 dark:text-purple-400">
+                    3. The High-Tech Mirage Hazard
+                  </div>
+                  <p>
+                    What survived centuries of military massacres and forced assimilation cares deeply about identity. If an AI generator fabricates an 8th star point or a counterfeit 1956 date, and human oversight fails to intercept it, that mirage becomes permanent digital canon, rewriting treaty history through automated assimilation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* COMPARATIVE FORENSIC AUDIT: AUTHENTIC VS. AI MIRAGE */}
+            <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-md space-y-6">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 block mb-1">
+                  Forensic Anomaly Comparison
+                </span>
+                <h3 className="font-bold text-lg sm:text-xl text-stone-900 dark:text-stone-100">
+                  Plate #54 Seal Audit: Sovereign Truth vs. The Hallucinated Mirage
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Column A: Authentic Great Seal */}
+                <div className="bg-emerald-50/60 dark:bg-emerald-950/20 border-2 border-emerald-500/50 rounded-xl p-5 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-white p-1 border border-emerald-500 shadow shrink-0">
+                      <img
+                        src={cherokeeSealImg}
+                        alt="Authentic Great Seal"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <span className="px-2 py-0.5 bg-emerald-600 text-white font-mono text-[10px] font-bold rounded uppercase">
+                        Authentic Sovereign Standard
+                      </span>
+                      <h4 className="font-bold text-sm text-stone-900 dark:text-stone-100">
+                        The Great Seal (Sept. 6, 1839)
+                      </h4>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 text-xs text-stone-700 dark:text-stone-300">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Sacred 7-Pointed Star:</strong> Strictly represents the seven matrilineal clans: Bird (ᎠᏂᏥᏍᏆ), Paint (ᎠᏂᏬᏗ), Deer (ᎠᏂᎧᏫ), Wolf (ᎠᏂᏩᏯ), Blue (ᎠᏂᏌᎰᏂ), Long Hair (ᎠᏂᎩᎶᎯ), and Wild Potato (ᎠᏂᎪᏓᎨᏫ).
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Founding Date Sept. 6, 1839:</strong> Marks the adoption of the unified Cherokee Constitution at Tahlequah following the genocidal Trail of Tears, reuniting Eastern and Western Cherokees under law.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Sequoyah Syllabary (ᏣᎳᎩᎯ ᎠᏰᎵ):</strong> Phonetically and culturally accurate script for <em>Tsalagihi Ayeli</em> (Cherokee Nation), celebrating the 1821 Cherokee literacy revolution.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>White Oak Wreath:</strong> Symbol of the eternal sacred fire, fueled by white oak, sustaining continuous national existence.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column B: Hallucinated AI Mirage */}
+                <div className="bg-red-50/60 dark:bg-red-950/20 border-2 border-red-500/50 rounded-xl p-5 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/60 p-2 border border-red-500 shadow shrink-0 flex items-center justify-center">
+                      <AlertTriangle size={24} className="text-red-600 dark:text-red-400" />
+                    </div>
+                    <div>
+                      <span className="px-2 py-0.5 bg-red-600 text-white font-mono text-[10px] font-bold rounded uppercase">
+                        AI Mirage Failure Modes
+                      </span>
+                      <h4 className="font-bold text-sm text-stone-900 dark:text-stone-100">
+                        Synthetically Generated Counterfeit
+                      </h4>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 text-xs text-stone-700 dark:text-stone-300">
+                    <li className="flex items-start gap-2">
+                      <Ban size={16} className="text-red-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>8th Phantom Star Appendage:</strong> The AI model arbitrarily generated an 8th star point, hallucinating a fictional clan and subverting the sacred matrilineal order of the Cherokee people.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Ban size={16} className="text-red-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Counterfeit 1956 Date:</strong> Supplanting 1839 with &ldquo;1956&rdquo; severed the seal from treaty law, coincidentally mimicking the destructive 1950s Congressional Indian Termination Policy.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Ban size={16} className="text-red-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Garbled Pseudoglyphs:</strong> The model replaced Sequoyah&rsquo;s living syllabic writing system with unreadable gibberish, treating Indigenous language as mere decorative texture.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Ban size={16} className="text-red-600 shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Risk of Permanent Canon:</strong> Without sovereign citizen review, generative errors enter search engines, training corpuses, and civic documents, challenging official identity management.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* THE ICEARTH 5-PILLAR SOVEREIGN IDENTITY DEFENSE PROTOCOL */}
+            <div className="bg-stone-950 border-2 border-emerald-500/50 rounded-2xl p-6 sm:p-8 text-white space-y-6">
+              <div className="flex items-center gap-3 border-b border-stone-800 pb-4">
+                <Shield size={22} className="text-emerald-400 shrink-0" />
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase text-emerald-400 block">
+                    The ICEarth Solution
+                  </span>
+                  <h3 className="font-bold text-lg sm:text-xl text-white">
+                    5-Pillar Architecture: Protecting Indigenous Nations from AI-Driven Erasure
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="p-4 bg-stone-900 border border-stone-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold uppercase">
+                    <Ban size={16} className="text-red-400" />
+                    <span>Pillar 1: Ban on Generative Heraldry</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    AI models are strictly forbidden from synthesizing tribal seals, sacred emblems, ceremonial regalia, or national flags. Generative hallucination of tribal insignia is classified as an epistemic sovereignty violation.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-900 border border-stone-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase">
+                    <Fingerprint size={16} className="text-amber-400" />
+                    <span>Pillar 2: Whitelisted Media Kits</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Tribal heraldry must be imported exclusively from verified, government-administered sovereign media kits (such as Anadisgoi at <code>anadisgoi.com/index.php/media-kit</code>) to guarantee authentic vector/raster lineage.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-900 border border-stone-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-blue-400 font-mono text-xs font-bold uppercase">
+                    <Lock size={16} className="text-blue-400" />
+                    <span>Pillar 3: Cryptographic Vault Panning</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Every sovereign asset is pinned with SHA-256 and IPFS hashes registered in tribal archives. Once verified, no AI agent or algorithmic rewrite can alter or drift the cultural asset.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-900 border border-stone-800 rounded-xl space-y-2">
+                  <div className="flex items-center gap-2 text-purple-400 font-mono text-xs font-bold uppercase">
+                    <Scale size={16} className="text-purple-400" />
+                    <span>Pillar 4: Cultural Invariant Linting</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    Automated linting rules verify key cultural constants—such as requiring exactly 7 star points for Cherokee heraldry, constitutional dates (Sept. 6, 1839), and authentic Sequoyah Unicode characters (U+13A0–U+13FF).
+                  </p>
+                </div>
+
+                <div className="p-4 bg-stone-900 border border-stone-800 rounded-xl space-y-2 md:col-span-2 lg:col-span-2">
+                  <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold uppercase">
+                    <Users size={16} className="text-emerald-400" />
+                    <span>Pillar 5: Citizen-Sovereign Human-in-the-Loop Oversight</span>
+                  </div>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    The core defense against AI cultural genocide is living human stewardship. As demonstrated by Norm Roulet&rsquo;s immediate detection of the Plate #54 seal defect, no AI-generated research plate or report on ICEarth can achieve sovereign certification without tribal citizen inspection and sign-off.
+                  </p>
+                </div>
+              </div>
+
+              {/* Action Banner */}
+              <div className="pt-4 border-t border-stone-800 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+                <div className="flex items-center gap-2 text-stone-400">
+                  <BookmarkCheck size={14} className="text-emerald-400" />
+                  <span>Sovereign Identity Protocol Certified: Cherokee Nation (ᏣᎳᎩᎯ ᎠᏰᎵ)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => onNavigateTab ? onNavigateTab('sovereign_identity') : undefined}
+                    className="px-4 py-2 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-stone-950 font-bold rounded-lg transition-colors flex items-center gap-2 cursor-pointer shadow-lg"
+                  >
+                    <Fingerprint size={14} />
+                    <span>Open Standalone Sovereign Identity Tab (#sovereign_identity)</span>
+                    <ArrowRight size={14} />
+                  </button>
+                  <button
+                    onClick={() => onNavigateTab ? onNavigateTab('norm_home') : undefined}
+                    className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold rounded-lg transition-colors flex items-center gap-2 cursor-pointer"
+                  >
+                    <span>Return to Sovereign Directory</span>
+                    <ArrowRight size={14} />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

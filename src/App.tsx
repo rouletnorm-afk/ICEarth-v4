@@ -143,6 +143,7 @@ import { AISovereigntyWatchdogs } from './components/AISovereigntyWatchdogs';
 import { DebHaalandICEarthHome } from './components/DebHaalandICEarthHome';
 import { GeminiInfiltrationDefense } from './components/GeminiInfiltrationDefense';
 import { CherokeeNationITPosition } from './components/CherokeeNationITPosition';
+import { SovereignIdentityAIMirage } from './components/SovereignIdentityAIMirage';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban } from 'lucide-react';
 
@@ -151,7 +152,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -506,6 +507,25 @@ export default function App() {
         lower.includes('plate53')
       ) {
         setActiveTab('gemini_infiltration_defense');
+      } else if (
+        lower === 'sovereign_identity' ||
+        lower === 'sovereign-identity' ||
+        lower === 'sovereign_seal' ||
+        lower === 'sovereign-seal' ||
+        lower === 'ai_mirage' ||
+        lower === 'ai-mirage' ||
+        lower === 'seal_defense' ||
+        lower === 'seal-defense' ||
+        lower === 'cherokee_seal' ||
+        lower === 'cherokee-seal' ||
+        lower === 'hoskin_directive' ||
+        lower === 'hoskin-directive' ||
+        lower === 'anadisgoi' ||
+        lower.includes('ai_mirage') ||
+        lower.includes('sovereign_identity') ||
+        lower.includes('seal_defense')
+      ) {
+        setActiveTab('sovereign_identity');
       } else if (
         lower === 'cherokee_it_position' ||
         lower === 'cherokee-it-position' ||
@@ -1521,6 +1541,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B1.1 SOVEREIGN IDENTITY VS AI MIRAGE (DEFENDING INDIGENOUS HERALDRY) */}
+                <button
+                  onClick={() => setActiveTab('sovereign_identity')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'sovereign_identity' || (activeTab as string) === 'ai_mirage' || (activeTab as string) === 'seal_defense'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-amber-900 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-stone-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-amber-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Fingerprint size={16} className={activeTab === 'sovereign_identity' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">🪶 Sovereign Identity vs. AI Mirage</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    DEFENSE
+                  </span>
+                </button>
+
                 {/* 0.00000B2 ARTIFICIAL INTELLIGENCE AND THE KEHOE RULE (PLATE #41) */}
                 <button
                   onClick={() => setActiveTab('ai_and_kehoe_rule')}
@@ -2334,6 +2370,25 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 2.2 Sovereign Identity vs AI Mirage (Defending Indigenous Heraldry) */}
+                <button
+                  onClick={() => {
+                    setActiveTab('sovereign_identity');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'sovereign_identity' || (activeTab as string) === 'ai_mirage' || (activeTab as string) === 'seal_defense'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-amber-900 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-gradient-to-r from-amber-50/90 to-stone-50 font-black'
+                  }`}
+                >
+                  <Fingerprint size={16} className={activeTab === 'sovereign_identity' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🪶 Sovereign Identity vs. AI Mirage</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-500 to-red-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    DEFENSE
+                  </span>
+                </button>
+
                 {/* 3. Artificial Intelligence and the Kehoe Rule (Plate #41) */}
                 <button
                   onClick={() => setActiveTab('ai_and_kehoe_rule')}
@@ -2988,6 +3043,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'cherokee_it_position', icon: Ban, label: '🪶 Cherokee Nation Hyperscale Ban', badge: 'Plate #54', color: 'emerald' },
+                    { id: 'sovereign_identity', icon: Fingerprint, label: '🪶 Sovereign Identity vs. AI Mirage', badge: 'Heraldry Defense', color: 'amber' },
                     { id: 'ai_and_kehoe_rule', icon: Scale, label: '⚖️ AI & The Kehoe Rule (Lanphear)', badge: 'Plate #41', color: 'amber' },
                     { id: 'ai_existential_risk', icon: Skull, label: '⚡ AI Existential Risk & Continuum', badge: 'Plate #44', color: 'red' },
                     { id: 'ghana_lead_poisoning', icon: AlertTriangle, label: '🇬🇭 Ghana Silent Poison: Battery Lead', badge: 'Plate #39', color: 'red' },
@@ -3138,6 +3194,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'cherokee_it_position' || (activeTab as string) === 'cherokee_ban' || (activeTab as string) === 'cherokee' || (activeTab as string) === 'plate_54' || (activeTab as string) === 'plate54' || (activeTab as string) === 'cherokee_position') && '🪶 Cherokee Nation Hyperscale Data Center Ban & Sovereign IT Position (Plate #54)'}
+              {(activeTab === 'sovereign_identity' || (activeTab as string) === 'ai_mirage' || (activeTab as string) === 'seal_defense' || (activeTab as string) === 'cherokee_seal') && '🪶 Sovereign Identity vs. The AI Mirage: Defending Indigenous Heraldry from Algorithmic Erasure'}
               {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear') && '⚖️ AI & The Kehoe Rule: Bruce Lanphear Thesis (Plate #41)'}
               {(activeTab === 'ai_existential_risk' || (activeTab as string) === 'ai_risk' || (activeTab as string) === 'continuum' || (activeTab as string) === 'plate_44' || (activeTab as string) === 'plate44' || (activeTab as string) === 'coxon') && '⚡ AI Existential Risk & The Continuum of Failure (Plate #44)'}
               {(activeTab === 'ghana_lead_poisoning' || (activeTab as string) === 'ghana' || (activeTab as string) === 'ghana_silent_poison') && '🇬🇭 Ghana’s Silent Poison: Battery Recycling & Child Lead Crisis (Plate #39)'}
@@ -4869,6 +4926,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'cherokee_it_position' || (activeTab as string) === 'cherokee_ban' || (activeTab as string) === 'cherokee' || (activeTab as string) === 'plate_54' || (activeTab as string) === 'plate54' || (activeTab as string) === 'cherokee_position') && (
             <div className="flex-1 overflow-y-auto">
               <CherokeeNationITPosition 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B1.1: SOVEREIGN IDENTITY VS THE AI MIRAGE: DEFENDING INDIGENOUS HERALDRY */}
+          {(activeTab === 'sovereign_identity' || (activeTab as string) === 'ai_mirage' || (activeTab as string) === 'seal_defense' || (activeTab as string) === 'cherokee_seal' || (activeTab as string) === 'hoskin_directive' || (activeTab as string) === 'anadisgoi') && (
+            <div className="flex-1 overflow-y-auto">
+              <SovereignIdentityAIMirage 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
