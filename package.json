@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && cp -r dist build",
-    "start": "node server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --outfile=dist/server.cjs --packages=external && cp -r dist build",
+    "start": "node dist/server.cjs",
     "clean": "rm -rf dist build",
     "lint": "tsc --noEmit"
   },
