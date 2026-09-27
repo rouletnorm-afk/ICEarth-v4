@@ -63,6 +63,7 @@ import lagunaHomelandLandscapeImg from '../assets/images/laguna_pueblo_homeland.
 import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_1789799082370.jpg';
 import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
 import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
+import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
 import {
   Shield,
   UserCheck,
@@ -194,6 +195,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BO',
+      title: "Swiss Data Sovereignty & The Global Freedom Spectrum: Europe's AI Data Center Backlash vs. Repressive Kill Switches (Plate #55)",
+      type: 'Swiss Data Sovereignty, Cryptographic Zero-Trust & Global Digital Freedom IP Asset',
+      imageSrc: swissPlateImg,
+      link: 'swiss_data_sovereignty',
+      sourceUrl: 'https://p.dw.com/p/5NEiW?at_medium=SocialMedia&at_campaign=Twitter&at_share_source=SharingButton&at_origin=Web',
+      description: "Origins: Landmark sovereign intelligence and cryptographic infrastructure infographic plate establishing Swiss Data Sovereignty as the founding foundation of ICEarth and Norm Roulet's heritage. Explores the global sovereignty spectrum: contrasting authoritarian state kill switches (Ethiopia's total internet blackouts, Iran's National Information Network, Russia's RuNet TSPU DPI, China's Great Firewall) against the European AI data center dilemma reported by David Ehl in Deutsche Welle (DW protests over power grid strain and water depletion vs US hyperscalers). Establishes ICEarth's freedom extreme: 100% non-custodial Proton-grade encryption, zero public grid dependency, 0 gal/day waterless cooling, and sovereign microgrid deployment for all individuals and Indigenous nations.",
+      sovereignHash: '0xSWISS_DATA_SOVEREIGNTY_GLOBAL_FREEDOM_SPECTRUM_PLATE_55_VAULT_2026'
+    },
     {
       id: 'IP-000BN',
       title: "Authentic Great Seal of the Cherokee Nation vs. The AI Mirage: Defending Sovereign Heraldry (Sept. 6, 1839 Constitution)",
