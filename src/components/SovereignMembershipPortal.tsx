@@ -64,6 +64,7 @@ import geminiHackPlateImg from '../assets/images/gemini_hack_defense_plate53_178
 import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1790198046613.jpg';
 import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
 import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
+import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import {
   Shield,
   UserCheck,
@@ -195,6 +196,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BP',
+      title: "The Evolution of Data Center Incentives: From Corporate Tax Welfare to $10,000 Citizen Checks & The Sovereign IT Alternative (Plate #56)",
+      type: 'Data Center Incentives, Acoustic Nuisance Torts & Sovereign IT Architecture IP Asset',
+      imageSrc: incentivesPlateImg,
+      link: 'datacenter_incentives',
+      sourceUrl: 'https://www.tomshardware.com/tech-industry/data-centers/data-center-developer-offers-usd10-000-checks-to-4-500-households-if-the-1-300-acre-facility-is-approved-locals-push-back-over-noise-and-bribe-concerns',
+      description: "Origins: Landmark computational economics and environmental tort infographic plate analyzing NorthPoint Development's offer of $10,000 direct checks to 4,500 households ($45M cash + $120M community fund) to build a 1,300-acre hyperscale data center in Hazle Township, PA. Details citizen revolt against 24/7 low-frequency fan noise ('like a vacuum in your living room'), 8% property devaluation, and utility grid rate spikes. Contrasts the 4 incentive phases (Tax Abatements -> Municipal Bribes -> Direct Citizen Checks -> Sovereign Tribal Equity) and establishes the ICEarth Sovereign IT specification: 100% community ownership, 0-gal/day waterless dielectric cooling, and off-grid microgrid energy dividends.",
+      sovereignHash: '0xDATA_CENTER_INCENTIVES_EVOLUTION_SOVEREIGN_IT_PLATE_56_VAULT_2026'
+    },
     {
       id: 'IP-000BO',
       title: "Swiss Data Sovereignty & The Global Freedom Spectrum: Europe's AI Data Center Backlash vs. Repressive Kill Switches (Plate #55)",
