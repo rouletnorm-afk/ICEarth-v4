@@ -67,6 +67,7 @@ import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_17904
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
+import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
 import {
   Shield,
   UserCheck,
@@ -198,6 +199,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BS',
+      title: "The Normal-People Problem: Why Sovereign IT & Roulet's Law Unlock Humanity's AI Adoption (Plate #59)",
+      type: 'Sovereign AI Agents, Roulet’s Law & Digital Freedom IP Asset',
+      imageSrc: sovereignAgentsPlateImg,
+      link: 'sovereign_agents',
+      sourceUrl: 'https://www.axios.com/2026/09/30/ai-agents-adoption-meta-muse',
+      description: "Origins: Landmark sovereign technology and digital human rights infographic plate analyzing Axios's September 30, 2026 editorial 'AI agents have a normal-people problem.' Directly addresses the core roadblock identified by Axios: 'Agents only become truly useful when people hand them access to their digital lives — and people really don't want to.' Cross-references empirical surveys (Pew: 51% avoid chatbots, 79% citing privacy fears; Thales: only 13% trust AI with emails and 7% with banking; YouGov: 56% reject AI shopping; Menlo Ventures: agent users skewed heavily to >$100k tech/finance postgrads). Solves the dilemma through Roulet's Law: proving normal people's refusal is an evolutionary defense against corporate data predation. Establishes the ICEarth Sovereign IT solution: local client-side enclaves, user-held cryptographic keys, Swiss zero-knowledge data vaulting, and community elder governance.",
+      sovereignHash: '0xSOVEREIGN_AI_AGENTS_NORMAL_PEOPLE_PROBLEM_AXIOS_PLATE_59_VAULT_2026'
+    },
     {
       id: 'IP-000BR',
       title: "Lead Exposure, Alzheimer’s Disease and Dementia Risk: University of Michigan Policy Brief (Plate #58)",

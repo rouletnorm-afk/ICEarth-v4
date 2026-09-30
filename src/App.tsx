@@ -148,15 +148,16 @@ import { SwissDataSovereignty } from './components/SwissDataSovereignty';
 import { DataCenterIncentivesEngine } from './components/DataCenterIncentivesEngine';
 import { SuperIntelligenceSovereignty } from './components/SuperIntelligenceSovereignty';
 import { LeadAlzheimersDementiaRisk } from './components/LeadAlzheimersDementiaRisk';
+import { SovereignAIAgentsAdoption } from './components/SovereignAIAgentsAdoption';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban, DollarSign } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban, DollarSign, Bot } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -416,6 +417,22 @@ export default function App() {
         lower.includes('swiss_sovereignty')
       ) {
         setActiveTab('swiss_data_sovereignty');
+      } else if (
+        lower === 'sovereign_agents' ||
+        lower === 'sovereign-agents' ||
+        lower === 'ai_agents' ||
+        lower === 'ai-agents' ||
+        lower === 'normal_people' ||
+        lower === 'normal-people' ||
+        lower === 'normal_people_problem' ||
+        lower === 'axios' ||
+        lower === 'plate_59' ||
+        lower === 'plate59' ||
+        lower === 'plate-59' ||
+        lower.includes('sovereign_agent') ||
+        lower.includes('normal_people')
+      ) {
+        setActiveTab('sovereign_agents');
       } else if (
         lower === 'super_intelligence_sovereignty' ||
         lower === 'super-intelligence-sovereignty' ||
@@ -1611,6 +1628,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B0.0A THE NORMAL-PEOPLE PROBLEM: SOVEREIGN AI AGENTS (PLATE #59) */}
+                <button
+                  onClick={() => setActiveTab('sovereign_agents')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios'
+                      ? 'bg-gradient-to-r from-emerald-950 via-stone-900 to-teal-950 text-emerald-200 border-emerald-400 shadow-xl font-black ring-2 ring-emerald-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-emerald-100 hover:to-teal-100 text-stone-950 border-emerald-500/80 bg-gradient-to-r from-emerald-50/90 via-stone-50 to-teal-50/90 font-black shadow-xs ring-1 ring-emerald-400/40'
+                  }`}
+                >
+                  <Bot size={16} className={activeTab === 'sovereign_agents' ? 'text-emerald-400 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-black">🤖 AI Agents & The Normal-People Problem</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #59
+                  </span>
+                </button>
+
                 {/* 0.00000B0.0 SUPER INTELLIGENCE SOVEREIGNTY: THE LAKE AMERICA PARADOX (PLATE #57) */}
                 <button
                   onClick={() => setActiveTab('super_intelligence_sovereignty')}
@@ -2504,6 +2537,25 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 2.0A The Normal-People Problem: Sovereign AI Agents (Plate #59) */}
+                <button
+                  onClick={() => {
+                    setActiveTab('sovereign_agents');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios'
+                      ? 'bg-gradient-to-r from-emerald-950 via-stone-900 to-teal-950 text-emerald-200 border-emerald-400 shadow-md font-extrabold ring-2 ring-emerald-400/80'
+                      : 'hover:bg-emerald-500/20 text-stone-950 border-emerald-500/70 bg-emerald-50/90 font-black'
+                  }`}
+                >
+                  <Bot size={16} className={activeTab === 'sovereign_agents' ? 'text-emerald-400 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-semibold">🤖 AI Agents: Normal-People Problem</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #59
+                  </span>
+                </button>
+
                 {/* 2.04 Super Intelligence Sovereignty: The Lake America Paradox (Plate #57) */}
                 <button
                   onClick={() => {
@@ -3234,6 +3286,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'swiss_data_sovereignty', icon: Shield, label: '🇨🇭 Swiss Data Sovereignty: Global Spectrum', badge: 'Plate #55', color: 'red' },
+                    { id: 'sovereign_agents', icon: Bot, label: '🤖 AI Agents & The Normal-People Problem', badge: 'Plate #59', color: 'emerald' },
                     { id: 'super_intelligence_sovereignty', icon: Crown, label: '👑 Super Intelligence Sovereignty', badge: 'Plate #57', color: 'purple' },
                     { id: 'datacenter_incentives', icon: DollarSign, label: '🏛️ Data Center Incentives Engine', badge: 'Plate #56', color: 'amber' },
                     { id: 'cherokee_it_position', icon: Ban, label: '🪶 Cherokee Nation Hyperscale Ban', badge: 'Plate #54', color: 'emerald' },
@@ -3389,6 +3442,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'swiss_data_sovereignty' || (activeTab as string) === 'swiss_sovereignty' || (activeTab as string) === 'swiss' || (activeTab as string) === 'plate_55' || (activeTab as string) === 'plate55' || (activeTab as string) === 'david_ehl') && '🇨🇭 Swiss Data Sovereignty & The Global Freedom Spectrum: Europe’s AI Backlash vs Repressive Kill Switches (Plate #55)'}
+              {(activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios') && '🤖 The Normal-People Problem: Why Sovereign IT & Roulet’s Law Unlock AI Adoption (Plate #59)'}
               {(activeTab === 'super_intelligence_sovereignty' || (activeTab as string) === 'super_intelligence' || (activeTab as string) === 'superintelligence' || (activeTab as string) === 'lake_america' || (activeTab as string) === 'plate_57' || (activeTab as string) === 'plate57') && '👑 The Sovereignty of Super Intelligence: The "Lake America" Paradox & The 6-CEO White House Accord (Plate #57)'}
               {(activeTab === 'datacenter_incentives' || (activeTab as string) === 'incentives_engine' || (activeTab as string) === 'data_center_incentives' || (activeTab as string) === 'plate_56' || (activeTab as string) === 'plate56' || (activeTab as string) === 'mark_tyson' || (activeTab as string) === 'hazle_township') && '🏛️ Data Center Incentives Engine: From Government Tax Giveaways to Direct Household Payments (Plate #56)'}
               {(activeTab === 'cherokee_it_position' || (activeTab as string) === 'cherokee_ban' || (activeTab as string) === 'cherokee' || (activeTab as string) === 'plate_54' || (activeTab as string) === 'plate54' || (activeTab as string) === 'cherokee_position') && '🪶 Cherokee Nation Hyperscale Data Center Ban & Sovereign IT Position (Plate #54)'}
@@ -5134,6 +5188,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'swiss_data_sovereignty' || (activeTab as string) === 'swiss_sovereignty' || (activeTab as string) === 'swiss' || (activeTab as string) === 'plate_55' || (activeTab as string) === 'plate55' || (activeTab as string) === 'david_ehl') && (
             <div className="flex-1 overflow-y-auto">
               <SwissDataSovereignty 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B0.0A: THE NORMAL-PEOPLE PROBLEM: SOVEREIGN AI AGENTS & ROULET'S LAW (PLATE #59) */}
+          {(activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios') && (
+            <div className="flex-1 overflow-y-auto">
+              <SovereignAIAgentsAdoption 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

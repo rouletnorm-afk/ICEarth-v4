@@ -64,6 +64,7 @@ import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_17904
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
+import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -125,7 +126,8 @@ import {
   Landmark,
   Ban,
   Fingerprint,
-  DollarSign
+  DollarSign,
+  Bot
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video' | 'Research';
@@ -177,6 +179,22 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('sovereign_agents') ||
+    u.includes('normal_people') ||
+    u.includes('normalpeople') ||
+    u.includes('axios') ||
+    u.includes('plate_59') ||
+    u.includes('plate59') ||
+    u.includes('plate #59') ||
+    u.includes('photo-000bs') ||
+    u.includes('ip-000bs') ||
+    u.includes('1790802841973') ||
+    u.includes('thales') ||
+    u.includes('menlo')
+  ) {
+    return sovereignAgentsPlateImg;
+  }
   if (
     u.includes('lead_alzheimers') ||
     u.includes('alzheimers') ||
@@ -984,6 +1002,82 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-SOVEREIGN-AI-AGENTS-NORMAL-PEOPLE-AXIOS-PLATE59-2026',
+    contentType: 'Article',
+    title: "Axios Editorial: AI Agents Have a Normal-People Problem — Why Roulet’s Law & Sovereign IT Unlock Humanity’s Adoption (Plate #59)",
+    subtitle: "Axios reports that 'Agents only become truly useful when people hand them access to their digital lives — and people really don't want to.' With Pew finding 51% of Americans avoid chatbots (79% citing privacy fears) and Thales revealing only 13% trust AI with emails and 7% with banking, ICEarth demonstrates that Earth's normal-people problem is Roulet's Law: surveillance capitalism's extraction of private human consciousness. Sovereign IT solves the trust roadblock via client-side zero-knowledge enclaves, user-held keys, and community elder governance.",
+    sourceUrl: 'https://www.axios.com/2026/09/30/ai-agents-adoption-meta-muse',
+    sourceName: 'Axios AI & Tech / ICEarth Sovereign IT Research Consortium',
+    publishDate: '2026-09-30',
+    author: 'Ina Fried & Scott Rosenberg (Axios) • Commentary & Architecture by Norman Roulet',
+    authorName: 'Ina Fried & Scott Rosenberg (Axios) with Sovereign Systems Commentary by Norman Roulet',
+    originState: 'Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Web',
+    communities: [
+      'Axios Technology & AI Editorial Board',
+      'ICEarth Sovereign IT Research Consortium',
+      'Pew Research Center',
+      'Thales Global Security Survey',
+      'YouGov Public Trust Research',
+      'Menlo Ventures & Morning Consult AI Survey',
+      'Jicarilla Apache Nation Sovereign IT Initiative',
+      'Swiss Federal Data Protection Framework'
+    ],
+    vaultHash: '0xSOVEREIGN_AI_AGENTS_NORMAL_PEOPLE_PROBLEM_AXIOS_PLATE_59_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Sovereign Systems Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: sovereignAgentsPlateImg,
+    thumbnailUrl: sovereignAgentsPlateImg,
+    tags: [
+      'AIAgents',
+      'NormalPeopleProblem',
+      'Axios',
+      'RouletsLaw',
+      'SovereignIT',
+      'Plate59',
+      'PewResearch',
+      'ThalesPoll',
+      'Privacy',
+      'SurveillanceCapitalism',
+      'ZeroKnowledge',
+      'MenloVentures',
+      'ClientSideEnclaves'
+    ],
+    abstract: "Axios published a pivotal editorial titled 'AI agents have a normal-people problem,' spotlighting the existential roadblock facing Silicon Valley: autonomous agents require unconstrained access to emails, calendars, banking credentials, and daily life data to be useful, yet normal people overwhelmingly refuse to hand over their keys to Big Tech. Survey data reveals that 51% of Americans avoid chatbots entirely (with 79% citing privacy concerns), while international polling by Thales indicates that only 13% would let an AI read their emails, 11% let one rebook travel, and a mere 7% permit AI bank transfers. ICEarth analyzes this crisis through Roulet’s Law, explaining that Earth’s normal-people problem is the predator-prey relationship of corporate extraction. Sovereign IT provides the unassailable antidote: client-side zero-knowledge execution, user-held private keys, ephemeral data enclaves, and community elder governance.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'Axios accurately diagnoses Silicon Valley’s dilemma: agents only work when you hand over your digital life, and normal people refuse. But Axios fails to see the root cause: Earth has a normal-people problem, which is Roulet’s Law. For a century, centralized industrial cartels have extracted from the commons—poisoning children with lead, draining aquifers, and now strip-mining private human consciousness for ad revenue and LLM weights. Normal people are not technologically illiterate; they possess an acute evolutionary defense mechanism against being farmed. The tech elite in their $100k+ post-grad bubble may surrender their lives to corporate clouds, but 87% of humanity will not. That is why we built ICEarth Sovereign IT. When agents run locally in zero-knowledge enclaves where the user holds 100% of the cryptographic keys and no data can leak to corporate cloud farms, the trust barrier vanishes. Sovereignty is the only path to universal AI adoption.'",
+    fullExcerpt: `AXIOS EDITORIAL: AI AGENTS HAVE A NORMAL-PEOPLE PROBLEM — WHY ROULET'S LAW & SOVEREIGN IT UNLOCK HUMANITY'S ADOPTION (PLATE #59)
+Reporting by Axios (Ina Fried & Scott Rosenberg) with Sovereign Jurisprudence Analysis by Norman Roulet
+Published September 30, 2026 | Source: Axios AI & Technology
+Plate #59 Cryptographic Archive: PHOTO-000BS / IP-000BS | Sovereign Vault Hash: 0xSOVEREIGN_AI_AGENTS_NORMAL_PEOPLE_PROBLEM_AXIOS_PLATE_59_VAULT_2026
+
+I. THE AXIOS PREMISE: THE UNBRIDGED CHASM IN AGENT ADOPTION
+"The big roadblock is that most Americans don't use AI chatbots, let alone agents. Back in February, Pew found that 51% avoided using AI chatbots entirely. Of those people, 79% who didn't use chatbots cited privacy concerns and 67% were unlikely to use a chatbot in the next year.
+The even bigger problem: Agents only become truly useful when people hand them access to their digital lives — and people really don't want to."
+
+II. THE EMPIRICAL PROOF OF PUBLIC RESISTANCE
+1. Thales International Poll: Broad pushback against core uses of autonomous agents:
+   - Only 13% of respondents would let an 'AI helper' read their emails.
+   - Only 11% would let an agent rebook personal travel.
+   - Just 7% would permit an AI agent to move money between bank accounts.
+2. YouGov Shopping Survey:
+   - 56% stated they wouldn't let an agent shop for them at all.
+   - Only 10% trust an agent with more than $25 without explicit manual approval.
+3. Menlo Ventures & Morning Consult Wealth Divide:
+   - Households with incomes >$100,000 are substantially more likely to use AI than households making <$50,000.
+   - People who pay for AI are 2x more likely to use it daily, and 5x more likely to use agents.
+   - Menlo characterizes AI power spenders: "a millennial parent with a post-grad degree working in technology or financial services" who "tends to have more money than time."
+
+III. ROULET'S LAW: WHY EARTH HAS A NORMAL-PEOPLE PROBLEM
+Roulet's Law establishes that centralized extractivist corporate cartels inevitably treat biological, neurological, and cognitive commons as uncompensated raw ore to be stripped until systemic ruin. Normal people's refusal to hand over digital keys is not ignorance or resistance to technology—it is a rational, species-level evolutionary survival defense against corporate data colonization.
+
+IV. THE ICEARTH SOVEREIGN IT ARCHITECTURE
+ICEarth was built specifically to solve Earth's normal-people problem:
+1. Local Enclaves: Agents run on local device silicon or within sovereign Swiss zero-water microgrid nodes; zero cloud telemetry.
+2. User-Held Private Keys: Private keys are hardware-backed and held solely by the human user; corporate backdoors and FISA 702 dragnet subpoenas are mathematically impossible.
+3. Zero-Knowledge Ephemeral Inference: Data streams are processed in-memory and expunged immediately; models are strictly prohibited from training on human life streams.
+4. Micro-Escrow Smart Contract Safeguards: Financial spending is constrained by strict user-configured spending gates (default $25) requiring biometric signature.
+5. Community Elder Governance: Data recovery and ethics are governed by tribal and community elder stewardship instead of platform oligarchs.`
+  },
   {
     id: 'ART-LEAD-ALZHEIMERS-DEMENTIA-RISK-UMICH-PLATE58-2026',
     contentType: 'Article',
@@ -5649,6 +5743,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('AIAgents') || article.tags?.includes('NormalPeopleProblem') || article.tags?.includes('Plate59') || article.id.includes('AXIOS-AI-AGENTS-NORMAL-PEOPLE')) && (
+                      <>
+                        <a
+                          href="https://www.axios.com/2026/09/30/ai-agents-adoption-meta-muse"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-black text-xs rounded-xl shadow border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Bot size={13} className="text-amber-300 animate-pulse" />
+                          <span>Axios Editorial</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('AIAgents') || article.tags?.includes('NormalPeopleProblem') || article.tags?.includes('Plate59') || article.id.includes('AXIOS-AI-AGENTS-NORMAL-PEOPLE')) && (
+                      <button
+                        onClick={() => onNavigateTab('sovereign_agents')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-emerald-600 via-stone-900 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Bot size={14} className="text-amber-300 animate-pulse" />
+                        <span>🤖 Launch Sovereign Agents Engine (Plate #59)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('Alzheimers') || article.tags?.includes('Dementia') || article.tags?.includes('Plate58') || article.id.includes('LEAD-ALZHEIMERS-DEMENTIA-RISK')) && (

@@ -34,7 +34,8 @@ import {
   Sliders,
   CheckCircle,
   HelpCircle,
-  BarChart3
+  BarChart3,
+  Bot
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -980,7 +981,19 @@ export const SwissDataSovereignty: React.FC<SwissDataSovereigntyProps> = ({
             <span className="text-xs font-mono text-stone-400">Direct Permalinks</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            <button
+              onClick={() => onNavigateTab && onNavigateTab('sovereign_agents')}
+              className="p-3 bg-gradient-to-br from-emerald-950/80 to-stone-900 hover:from-emerald-900/90 hover:to-stone-800 rounded-xl text-left border border-emerald-500/50 shadow-md transition-all cursor-pointer group"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-mono font-bold text-emerald-400">PLATE #59</span>
+                <Bot size={14} className="text-emerald-400 group-hover:translate-x-1 transition-transform animate-pulse" />
+              </div>
+              <div className="text-xs font-bold text-white">AI Agents: Normal-People Problem</div>
+              <p className="text-[11px] text-stone-300 mt-1">Axios forensic & Roulet's Law sovereign enclave solution</p>
+            </button>
+
             <button
               onClick={() => onNavigateTab && onNavigateTab('icearth_stack')}
               className="p-3 bg-stone-100 hover:bg-stone-200 dark:bg-stone-950 dark:hover:bg-stone-800 rounded-xl text-left border border-stone-300 dark:border-stone-800 transition-all cursor-pointer group"
