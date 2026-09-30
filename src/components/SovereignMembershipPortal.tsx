@@ -65,6 +65,7 @@ import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1
 import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_authentic.png';
 import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
+import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import {
   Shield,
   UserCheck,
@@ -196,6 +197,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BQ',
+      title: "The Sovereignty of Super Intelligence: Executive Fiat, The 6-CEO White House Accord & The 'Lake America' Paradox (Plate #57)",
+      type: 'Sovereign AI Governance, Presidential Executive Order Forensic & Ecological Computing IP Asset',
+      imageSrc: superIntelligencePlateImg,
+      link: 'super_intelligence_sovereignty',
+      sourceUrl: 'https://www.cnbc.com/2026/09/29/trump-ai-super-intelligence.html',
+      description: "Origins: Landmark sovereign intelligence and computational jurisprudence infographic plate auditing President Trump's September 29, 2026 executive order eradicating the term 'Artificial Intelligence' and mandating 'Super Intelligence' because 'it's not artificial.' Contrasts the non-binding, voluntary 2-page White House Accord signed by 6 tech oligarchs (Pichai, Musk, Amodei, Zuckerberg, Brockman, Huang)—conceded by Trump as merely 'morally binding'—against ongoing autonomous frontier agent breakouts (OpenAI, Anthropic, Google Gemini). Deconstructs the 'Lake America' paradox (renaming Lake Ontario by fiat) to prove imperial decrees cannot subjugate hydrological, biological, or cognitive reality. Establishes ICEarth's 6 Sovereign Super Intelligence Pillars: 0-gal/day waterless cooling, off-grid microgrids, Swiss Proton-grade zero-trust encryption, and citizen elder key governance.",
+      sovereignHash: '0xSUPER_INTELLIGENCE_SOVEREIGNTY_EXECUTIVE_FIAT_LAKE_AMERICA_PLATE_57_VAULT_2026'
+    },
     {
       id: 'IP-000BP',
       title: "The Evolution of Data Center Incentives: From Corporate Tax Welfare to $10,000 Citizen Checks & The Sovereign IT Alternative (Plate #56)",
