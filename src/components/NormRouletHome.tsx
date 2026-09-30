@@ -137,10 +137,28 @@ import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_
 import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
+import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('lead_alzheimers') ||
+    u.includes('alzheimers') ||
+    u.includes('dementia') ||
+    u.includes('plate_58') ||
+    u.includes('plate58') ||
+    u.includes('plate #58') ||
+    u.includes('photo-000br') ||
+    u.includes('ip-000br') ||
+    u.includes('1790765300425') ||
+    u.includes('1790766370985') ||
+    u.includes('umich') ||
+    u.includes('170 million') ||
+    u.includes('bone_lead')
+  ) {
+    return leadAlzheimersPlateImg;
+  }
   if (
     u.includes('super_intelligence') ||
     u.includes('superintelligence') ||
@@ -953,7 +971,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk';
   date: string;
   summary: string;
   fullText: string;
@@ -1052,6 +1070,39 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-LEAD-ALZHEIMERS-DEMENTIA-RISK-UMICH-2026',
+      title: "Policy Brief: Lead Exposure and Alzheimer’s Disease and Dementia Risk: 170 Million Exposed Living Americans & 18% of New Cases (Plate #58)",
+      category: 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk',
+      date: '2026-09-30',
+      imageSrc: leadAlzheimersPlateImg,
+      publishedUrl: 'https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy',
+      summary: "A landmark University of Michigan policy brief reveals that 18% of new US dementia cases (~90,000 annually) may be linked to cumulative lifetime lead exposure. An estimated 170 million adults alive today experienced elevated lead during childhood. Older adults with highest bone lead levels had 3x the risk of Alzheimer's and 2x the risk of all-cause dementia, while living within 3 miles of EPA lead-emitting facilities accelerated semantic memory aging by up to 7 years.",
+      fullText: `POLICY BRIEF: LEAD EXPOSURE AND ALZHEIMER'S DISEASE AND DEMENTIA RISK: EMERGING EVIDENCE AND POLICY IMPLICATIONS (PLATE #58)
+University of Michigan Institute for Healthcare Policy and Innovation (IHPI) & School of Public Health
+Published September 30, 2026 | Source: University of Michigan News & Events
+Plate #58 Cryptographic Archive: PHOTO-000BR / IP-000BR | Sovereign Vault Hash: 0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026
+
+I. KEY TAKEAWAYS FROM THE UNIVERSITY OF MICHIGAN POLICY BRIEF
+• Lead exposure contributes directly to dementia risk: Approximately 18% of all new dementia cases in the United States may be linked to cumulative lead exposure, representing roughly 90,000 preventable new cases each year.
+• Higher exposure causes escalating risk: Older adults with the highest estimated bone lead levels had nearly three times the risk of Alzheimer’s disease (HR 2.97) and more than twice the risk of any dementia (HR 2.14) compared with those with the lowest levels.
+• 170 Million living Americans exposed: Although children's blood lead levels have declined by >90% since the 1970s phaseout of leaded gasoline, as many as 170 million adults alive today experienced elevated lead levels during childhood development.
+• The Global Scale: 1/3 to over 1/2 of humanity has significant lifetime lead exposure, and that population is expanding as populations age.
+
+II. THE SKELETAL RESERVOIR & BONE REMODELING EFFLUX
+Unlike blood lead (which reflects only the preceding 30 days), bone lead has a half-life of 20 to 30 years and stores >90% of the body's total lead burden. As older adults experience osteopenia or osteoporosis, bone mineral breaks down, releasing decades-old lead back into the bloodstream where it crosses the blood-brain barrier into memory centers (hippocampus and cerebral cortex).
+
+III. LIVING NEAR LEAD-RELEASING FACILITIES: ACCELERATING BRAIN AGING
+Older adults living within 3 miles of EPA Toxics Release Inventory (TRI) lead-emitting facilities (glass, concrete, electronics, metal smelters) performed worse on standardized cognitive tests:
+• Up to 3 years older on episodic memory (personal experiences)
+• Up to 7 years older on semantic memory (facts, concepts, and language)
+• Each additional 3 miles of distance was associated with significantly superior memory scores two years later.
+
+IV. POLICY AND REMEDIATION MANDATE
+The findings demand strengthening environmental regulations (in 2024, US industrial releases still exceeded 500 billion pounds), establishing state dementia registries linked with environmental mapping, and advancing targeted clinical remediation (calcium/vitamin D bone density stabilization and Calcium Disodium EDTA chelation).`,
+      tags: ['LeadPoisoning', 'Alzheimers', 'Dementia', 'Plate58', 'UMich', 'IHPI', 'BoneLead', '170Million', 'ToxicsTracker', 'EPATRI', 'Neurotoxicity', 'Exposenomics'],
+      linkHash: '0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026'
+    },
     {
       id: 'MAG-SUPER-INTELLIGENCE-SOVEREIGNTY-LAKE-AMERICA-2026',
       title: "Trump Rebrands AI as 'Super Intelligence' by Executive Order as Tech CEOs Sign Non-Binding White House Accord: The 'Lake America' Paradox & ICEarth Sovereign Truth (Plate #57)",
@@ -3377,6 +3428,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BR',
+      title: "Lead Exposure, Alzheimer’s Disease and Dementia Risk: University of Michigan Policy Brief (Plate #58)",
+      category: 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk',
+      imageSrc: leadAlzheimersPlateImg,
+      location: 'Ann Arbor, MI • Nationwide NHANES-Medicare Cohort • Global Population Exposome',
+      date: '2026-09-30',
+      description: "Origins: Landmark medical exposenomics and geriatric epidemiology infographic plate presenting the University of Michigan Institute for Healthcare Policy and Innovation (IHPI) policy brief. Establishes that 18% of new US dementia cases (~90,000 annually) are attributable to cumulative lifetime lead exposure, with 170 million living Americans exposed during childhood. Demonstrates that older adults with the highest cumulative bone lead levels face 3x the risk of Alzheimer's disease (HR 2.97) and >2x the risk of all-cause dementia, while blood lead tests completely miss this skeletal reservoir. Audits the EPA TRI Kaiser Permanente cohort showing that living within 3 miles of lead-releasing industrial facilities accelerates semantic memory aging by up to 7 years. Highlights the global crisis with 1/3 to over 1/2 of humanity exposed.",
+      vaultHash: '0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026',
+      tags: ['LeadPoisoning', 'Alzheimers', 'Dementia', 'Plate58', 'UMich', 'IHPI', 'BoneLead', '170Million', 'ToxicsTracker', 'EPATRI', 'Neurotoxicity', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BQ',
       title: "The Sovereignty of Super Intelligence: Executive Fiat, The 6-CEO White House Accord & The 'Lake America' Paradox (Plate #57)",
@@ -6321,6 +6383,30 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                     <ArrowRight size={13} />
                   </button>
                 )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-LEAD-ALZHEIMERS-DEMENTIA-RISK-UMICH-2026' || selectedArticle.tags?.includes('Alzheimers') || selectedArticle.tags?.includes('Plate58')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('lead_alzheimers_dementia');
+                    }}
+                    className="px-3 py-1.5 bg-gradient-to-r from-purple-600 via-stone-900 to-rose-600 hover:from-purple-500 hover:to-rose-500 text-purple-100 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-purple-400"
+                  >
+                    <Brain size={13} className="text-amber-300 animate-pulse" />
+                    <span>🧠 Launch Lead & Dementia Engine (Plate #58)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+                {(selectedArticle.id === 'MAG-LEAD-ALZHEIMERS-DEMENTIA-RISK-UMICH-2026' || selectedArticle.tags?.includes('Alzheimers') || selectedArticle.tags?.includes('Plate58')) && (
+                  <a
+                    href="https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-purple-300 transition-colors"
+                  >
+                    <ExternalLink size={13} className="text-amber-300" />
+                    <span>📄 Read UMich Policy Brief</span>
+                  </a>
+                )}
                 {(selectedArticle.id === 'MAG-GLIAL-NEUROTOXICITY-PB-HG-CD-2026' || selectedArticle.tags?.includes('GlialCells') || selectedArticle.tags?.includes('Plate45')) && (
                   <a
                     href="https://www.preprints.org/frontend/manuscript/27557c0e1e330d82c1afe32083803fa5/download_pub"
@@ -6497,6 +6583,33 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000BR' || selectedPhoto.tags?.includes('LeadPoisoning') || selectedPhoto.tags?.includes('Alzheimers') || selectedPhoto.tags?.includes('Plate58')) && (
+                    <>
+                      <a
+                        href="https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-purple-600 hover:bg-purple-500 text-white font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-purple-400 text-xs font-mono transition-colors"
+                      >
+                        <Brain size={12} className="text-amber-300 animate-pulse" />
+                        <span>🧠 UMich Policy Brief</span>
+                        <ExternalLink size={11} className="text-white" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000BR' || selectedPhoto.tags?.includes('LeadPoisoning') || selectedPhoto.tags?.includes('Alzheimers') || selectedPhoto.tags?.includes('Plate58')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('lead_alzheimers_dementia');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-purple-600 via-stone-900 to-rose-600 hover:from-purple-500 hover:to-rose-500 text-white font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-purple-400 text-xs font-mono"
+                    >
+                      <Brain size={13} className="text-amber-300 animate-pulse" />
+                      <span>🧠 Launch Lead & Dementia Engine (Plate #58)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000BQ' || selectedPhoto.tags?.includes('SuperIntelligence') || selectedPhoto.tags?.includes('Plate57')) && (
                     <>
                       <a

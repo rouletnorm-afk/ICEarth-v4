@@ -63,6 +63,7 @@ import cherokeePlateImg from '../assets/images/cherokee_hyperscale_ban_plate54_1
 import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
+import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -76,6 +77,7 @@ import {
   Shield,
   Crown,
   Waves,
+  Brain,
   ShieldAlert,
   ShieldCheck,
   AlertTriangle,
@@ -175,6 +177,23 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('lead_alzheimers') ||
+    u.includes('alzheimers') ||
+    u.includes('dementia') ||
+    u.includes('plate_58') ||
+    u.includes('plate58') ||
+    u.includes('plate #58') ||
+    u.includes('photo-000br') ||
+    u.includes('ip-000br') ||
+    u.includes('1790765300425') ||
+    u.includes('1790766370985') ||
+    u.includes('umich') ||
+    u.includes('170 million') ||
+    u.includes('bone_lead')
+  ) {
+    return leadAlzheimersPlateImg;
+  }
   if (
     u.includes('super_intelligence') ||
     u.includes('superintelligence') ||
@@ -965,6 +984,81 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-LEAD-ALZHEIMERS-DEMENTIA-RISK-UMICH-PLATE58-2026',
+    contentType: 'Article',
+    title: "University of Michigan Policy Brief: Cumulative Lead Exposure Linked to 18% of US Dementia Cases & 3x Higher Alzheimer’s Risk (Plate #58)",
+    subtitle: "A groundbreaking policy brief from the University of Michigan Institute for Healthcare Policy and Innovation (IHPI) establishes that 18% of new US dementia cases (~90,000 annually) may be attributable to lifetime lead exposure. With 170 million living Americans exposed during childhood, older adults with the highest cumulative bone lead levels had nearly three times the risk of Alzheimer's disease (HR 2.97) and more than twice the risk of all-cause dementia, while living within 3 miles of EPA lead-releasing facilities accelerated semantic memory aging by up to 7 years.",
+    sourceUrl: 'https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy',
+    sourceName: 'University of Michigan (IHPI) / NHANES-Medicare 30-Yr Cohort & EPA TRI Study',
+    publishDate: '2026-09-30',
+    author: 'University of Michigan Health Lab & Institute for Healthcare Policy and Innovation',
+    authorName: 'University of Michigan IHPI Research Team with clinical commentary by Norman Roulet (ICEarth Founder)',
+    originState: 'Ann Arbor, MI • Nationwide NHANES Cohort • Global Population Exposome',
+    communities: [
+      'ICEarth Global Sovereign Network',
+      'Michigan Environmental Health Coalition',
+      'Dementia Prevention & Environmental Exposome Alliance',
+      'Jicarilla Apache Nation',
+      'Great Lakes Health Defense Initiative'
+    ],
+    vaultHash: '0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026',
+    editorName: 'Norman Roulet (Sovereign Computing & Exposenomics Review)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: leadAlzheimersPlateImg,
+    thumbnailUrl: leadAlzheimersPlateImg,
+    tags: [
+      'LeadPoisoning',
+      'Alzheimers',
+      'Dementia',
+      'Plate58',
+      'UMich',
+      'IHPI',
+      'BoneLead',
+      '170Million',
+      'ToxicsTracker',
+      'EPATRI',
+      'Neurotoxicity',
+      'BoneResorption',
+      'KaiserCohort',
+      'Exposenomics'
+    ],
+    abstract: "The University of Michigan Institute for Healthcare Policy and Innovation has issued a species-defining policy brief synthesizing two longitudinal cohorts: a 30-year NHANES-Medicare follow-up and a Kaiser Permanente Northern California study linked with the EPA's Toxics Release Inventory. Findings demonstrate that cumulative lifetime lead exposure contributes to approximately 18% of all new dementia cases in the US (~90,000 cases/year). Older adults in the highest estimated bone lead quartile had nearly 3x the risk of Alzheimer's disease and >2x the risk of all-cause dementia. Furthermore, living within 3 miles of a lead-releasing industrial facility accelerated semantic memory aging by up to 7 years. Crucially, blood lead levels showed no association with dementia risk, confirming that conventional blood screening completely overlooks the decades-old skeletal reservoir leaching into aging cerebral circulation.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'This University of Michigan policy brief is the smoking gun of late-life neurodegeneration. For decades, conventional medicine treated Alzheimer\'s disease as an untreatable mystery of genetics and amyloid buildup, ignoring the environmental elephant in the room. In America, 170 million living adults grew up inhaling leaded gasoline exhaust and drinking from lead service lines. When these adults reach age 65 and experience age-related osteopenia or osteoporosis, their bones begin breaking down—releasing 30-year-old divalent lead ions back into the bloodstream to cross the blood-brain barrier. Lead mimics calcium, penetrates the hippocampus, triggers astrocyte swelling (Plate #45), and catalyzes amyloid plaque formation. If 18% of all dementia is driven by cumulative lead, then Alzheimer\'s prevention must begin with skeletal mineralization, environmental EPA buffer enforcement, and heavy metal chelation. This proof validates why ICEarth was founded.'",
+    fullExcerpt: `POLICY BRIEF: LEAD EXPOSURE AND ALZHEIMER'S DISEASE AND DEMENTIA RISK: EMERGING EVIDENCE AND POLICY IMPLICATIONS (PLATE #58)
+University of Michigan Institute for Healthcare Policy and Innovation (IHPI) & School of Public Health
+Published September 30, 2026 | Source: University of Michigan News & Events
+Plate #58 Cryptographic Archive: PHOTO-000BR / IP-000BR | Sovereign Vault Hash: 0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026
+
+I. AN URGENT PUBLIC HEALTH THREAT
+An estimated 7.2 million Americans age 65 and older live with Alzheimer’s disease, the most common type of dementia. As the U.S. population ages, Alzheimer’s disease is projected to affect 13.8 million Americans by 2060, posing an escalating challenge for families, health systems, and national economies. Because there is currently no cure, identifying modifiable lifetime environmental risk factors is an urgent priority.
+
+II. THE 170 MILLION LIVING AMERICANS EXPOSED IN CHILDHOOD
+While children's blood lead levels have declined by >90% since the mid-1970s phaseout of leaded gasoline and lead paint bans, as many as 170 million adults alive today in the United States experienced elevated lead levels during childhood.
+No level of lead exposure is safe. Over 90% of lead absorbed across the lifespan accumulates in the human skeleton, where it remains stored in cortical bone for decades with a half-life of 20 to 30 years. As people age and bone density declines through osteopenia or osteoporosis, stored skeletal lead is remobilized into the bloodstream, crossing the blood-brain barrier to damage memory and cognitive processing centers. Globally, between one-third and more than one-half of humanity bears substantial lifetime lead burdens.
+
+III. THE TWO U-MICH RESEARCH COHORTS
+1. Study 1: Cumulative Lifetime Lead & Dementia Risk (NHANES-Medicare Follow-Up)
+   - Evaluated bone lead levels as a cumulative lifetime dosimeter using nationally representative NHANES data linked to Medicare claims and mortality records for up to 30 years.
+   - 18% of new dementia cases in the US may be linked to cumulative lead exposure, representing roughly 90,000 preventable cases each year.
+   - Highest estimated bone lead levels were associated with:
+     * 3 times the risk of Alzheimer's disease (HR 2.97) compared to lowest levels.
+     * 2 times the risk of any dementia (HR 2.14) compared to lowest levels.
+   - Current blood lead levels showed NO association with dementia, proving that blood tests miss the true lifetime skeletal burden.
+
+2. Study 2: Proximity to Industrial Lead-Releasing Facilities (Kaiser Permanente Northern California Cohort)
+   - Evaluated residential distance to lead-emitting facilities (glass, concrete, electronics, metal smelters) using the EPA Toxics Release Inventory (TRI) Toxics Tracker.
+   - Older adults living within 3 miles of a lead-releasing facility performed significantly worse on standardized cognitive tests:
+     * Up to 3 years older on episodic memory (personal experiences recall).
+     * Up to 7 years older on semantic memory (facts, concepts, and language).
+   - Each additional 3 miles of distance from a facility was associated with significantly superior memory performance two years later.
+
+IV. POLICY IMPLICATIONS & SOVEREIGN REMEDIATION
+• Industrial Emissions: In 2024, US industrial facilities released over 500 billion pounds of toxic lead into air, water, and soil. Policies must lower allowable emission thresholds and eliminate regulatory loopholes.
+• Community Mapping: Public health agencies must promote EPA TRI Toxics Tracker awareness, enforcing residential buffer zones around lead-emitting manufacturing.
+• State Dementia Registries: States should establish population-based Alzheimer's and dementia registries cross-linked with historical environmental lead exposure maps.
+• Clinical Strategy: Medical protocols must integrate bone density preservation (Vitamin D3, bioavailable calcium) and targeted heavy metal chelation (Calcium Disodium EDTA) to halt the remobilization of skeletal lead into the aging brain.`
+  },
   {
     id: 'ART-SUPER-INTELLIGENCE-SOVEREIGNTY-LAKE-AMERICA-PLATE57-2026',
     contentType: 'Article',
@@ -5555,6 +5649,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('Alzheimers') || article.tags?.includes('Dementia') || article.tags?.includes('Plate58') || article.id.includes('LEAD-ALZHEIMERS-DEMENTIA-RISK')) && (
+                      <>
+                        <a
+                          href="https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-mono font-black text-xs rounded-xl shadow border border-purple-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Brain size={13} className="text-amber-300 animate-pulse" />
+                          <span>UMich Policy Brief</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('Alzheimers') || article.tags?.includes('Dementia') || article.tags?.includes('Plate58') || article.id.includes('LEAD-ALZHEIMERS-DEMENTIA-RISK')) && (
+                      <button
+                        onClick={() => onNavigateTab('lead_alzheimers_dementia')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-purple-600 via-stone-900 to-rose-600 hover:from-purple-500 hover:to-rose-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-purple-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <Brain size={14} className="text-amber-300 animate-pulse" />
+                        <span>🧠 Launch Lead & Dementia Risk Engine (Plate #58)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('SuperIntelligence') || article.tags?.includes('Plate57') || article.id.includes('SUPER-INTELLIGENCE') || article.title?.includes("Super Intelligence")) && (

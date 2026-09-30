@@ -66,6 +66,7 @@ import cherokeeSealImg from '../assets/images/great_seal_of_the_cherokee_nation_
 import swissPlateImg from '../assets/images/swiss_data_sovereignty_plate55_1790481058586.jpg';
 import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1790673860022.jpg';
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
+import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import {
   Shield,
   UserCheck,
@@ -197,6 +198,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BR',
+      title: "Lead Exposure, Alzheimer’s Disease and Dementia Risk: University of Michigan Policy Brief (Plate #58)",
+      type: 'Geriatric Neuro-Epidemiology, Bone Demineralization & Lifetime Exposenomics IP Asset',
+      imageSrc: leadAlzheimersPlateImg,
+      link: 'lead_alzheimers_dementia',
+      sourceUrl: 'https://ihpi.umich.edu/news/policy-brief-lead-exposure-and-alzheimers-disease-and-dementia-risk-emerging-evidence-and-policy',
+      description: "Origins: Landmark medical exposenomics and geriatric epidemiology infographic plate presenting the University of Michigan Institute for Healthcare Policy and Innovation (IHPI) policy brief. Establishes that 18% of new US dementia cases (~90,000 annually) are attributable to cumulative lifetime lead exposure, with 170 million living Americans exposed during childhood. Demonstrates that older adults with the highest cumulative bone lead levels face 3x the risk of Alzheimer's disease (HR 2.97) and >2x the risk of all-cause dementia, while blood lead tests completely miss this skeletal reservoir. Audits the EPA TRI Kaiser Permanente cohort showing that living within 3 miles of lead-releasing industrial facilities accelerates semantic memory aging by up to 7 years. Highlights the global crisis with 1/3 to over 1/2 of humanity exposed.",
+      sovereignHash: '0xLEAD_ALZHEIMERS_DEMENTIA_RISK_UMICH_PLATE_58_VAULT_2026'
+    },
     {
       id: 'IP-000BQ',
       title: "The Sovereignty of Super Intelligence: Executive Fiat, The 6-CEO White House Accord & The 'Lake America' Paradox (Plate #57)",

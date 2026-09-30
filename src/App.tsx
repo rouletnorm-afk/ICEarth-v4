@@ -147,6 +147,7 @@ import { SovereignIdentityAIMirage } from './components/SovereignIdentityAIMirag
 import { SwissDataSovereignty } from './components/SwissDataSovereignty';
 import { DataCenterIncentivesEngine } from './components/DataCenterIncentivesEngine';
 import { SuperIntelligenceSovereignty } from './components/SuperIntelligenceSovereignty';
+import { LeadAlzheimersDementiaRisk } from './components/LeadAlzheimersDementiaRisk';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
 import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban, DollarSign } from 'lucide-react';
 
@@ -155,7 +156,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -764,6 +765,21 @@ export default function App() {
         setActiveTab('nigeria_heart_habitat');
       } else if (lower === 'canary' || lower === 'evolutionary' || lower === 'evolutionary_canary') {
         setActiveTab('evolutionary_canary');
+      } else if (
+        lower === 'lead_alzheimers_dementia' ||
+        lower === 'lead-alzheimers-dementia' ||
+        lower === 'lead_alzheimers' ||
+        lower === 'alzheimers' ||
+        lower === 'dementia' ||
+        lower === 'alzheimers_risk' ||
+        lower === 'plate_58' ||
+        lower === 'plate58' ||
+        lower === 'plate-58' ||
+        lower === 'umich' ||
+        lower.includes('alzheimer') ||
+        lower.includes('dementia')
+      ) {
+        setActiveTab('lead_alzheimers_dementia');
       } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
         setActiveTab('reports');
       } else if (lower === 'sovereign_portal' || lower === 'sovereign' || lower === 'home' || lower === 'portal') {
@@ -1736,6 +1752,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-bold">🐤 H. sapiens Evolutionary Canary</span>
                   <span className="px-1.5 py-0.2 bg-amber-600 text-white text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
                     NATURE 2026
+                  </span>
+                </button>
+
+                {/* 0.00015 Lead Exposure & Alzheimer's / Dementia Risk (UMich 2026 - Plate #58) */}
+                <button
+                  onClick={() => setActiveTab('lead_alzheimers_dementia' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'lead_alzheimers_dementia' || (activeTab as string) === 'alzheimers' || (activeTab as string) === 'dementia' || (activeTab as string) === 'plate_58'
+                      ? 'bg-gradient-to-r from-purple-950 via-stone-900 to-rose-950 text-purple-200 border-purple-400 shadow-xl font-black ring-2 ring-purple-400/80'
+                      : 'hover:bg-purple-100 text-stone-950 border-purple-500/80 bg-gradient-to-r from-purple-50/90 via-stone-50 to-rose-50/90 font-black shadow-xs ring-1 ring-purple-400/40'
+                  }`}
+                >
+                  <Brain size={16} className={activeTab === 'lead_alzheimers_dementia' ? 'text-amber-300 animate-pulse' : 'text-purple-700'} />
+                  <span className="flex-1 font-black">🧠 Lead & Alzheimer’s / Dementia Risk</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-purple-600 to-rose-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #58
                   </span>
                 </button>
 
@@ -3212,6 +3244,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'global_lead_crime_proof', icon: Crown, label: '👑 Global Lead-Crime Proof (8k Yr)', badge: 'Proof', color: 'red' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
+                    { id: 'lead_alzheimers_dementia', icon: Brain, label: '🧠 Lead & Alzheimer’s / Dementia Risk', badge: 'Plate #58', color: 'purple' },
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
                     { id: 'storybook', icon: BookOpen, label: '📖 Graphical Storybook (Early Learners)', badge: 'Storybook', color: 'amber' },
                     { id: 'documentary', icon: Film, label: '🎬 Animated Documentary Stage', badge: 'Film', color: 'amber' },
@@ -4787,6 +4820,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {activeTab === 'evolutionary_canary' && (
             <div className="flex-1 overflow-y-auto">
               <EvolutionaryCanaryProof 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0035: LEAD EXPOSURE & ALZHEIMER'S DISEASE / DEMENTIA RISK (UMICH 2026 POLICY BRIEF - PLATE #58) */}
+          {(activeTab === 'lead_alzheimers_dementia' || (activeTab as string) === 'alzheimers' || (activeTab as string) === 'dementia' || (activeTab as string) === 'plate_58') && (
+            <div className="flex-1 overflow-y-auto">
+              <LeadAlzheimersDementiaRisk 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
