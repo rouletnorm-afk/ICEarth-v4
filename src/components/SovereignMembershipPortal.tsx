@@ -68,6 +68,7 @@ import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
+import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
 import {
   Shield,
   UserCheck,
@@ -199,6 +200,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BT',
+      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled vs. Indigenous Sovereign Cognitive Dividend (Plate #60)",
+      type: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution IP Asset',
+      imageSrc: trumpAiSummitPlateImg,
+      link: 'trump_ai_summit_table',
+      sourceUrl: 'https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/',
+      description: "Origins: Landmark sovereign economics and computational justice infographic plate auditing President Trump's September 30, 2026 White House AI summit with tech executives representing over $1.8 trillion in combined net worth (Elon Musk, Jensen Huang, Dario Amodei, Greg Brockman, alongside VP JD Vance and Speaker Mike Johnson). Audits the stark juxtaposition between Trump's declaration that 'these big, powerful, very rich companies are going to be making massive contributions to communities' and the historical reality of corporate data extraction under Roulet's Law. Demands the Sovereign Cognitive Dividend: establishing that the billions of individuals and Indigenous peoples whose languages, art, knowledge, and life data trained these frontier models must receive direct equity dividends, computational royalties, and non-custodial Swiss zero-knowledge data ownership rather than monopoly charity.",
+      sovereignHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026'
+    },
     {
       id: 'IP-000BS',
       title: "The Normal-People Problem: Why Sovereign IT & Roulet's Law Unlock Humanity's AI Adoption (Plate #59)",

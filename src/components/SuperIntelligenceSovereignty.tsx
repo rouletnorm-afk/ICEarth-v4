@@ -181,11 +181,15 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 <Crown size={14} className="text-amber-300" />
                 <span>Plate #57 • Sovereign Doctrine Masterpiece</span>
               </span>
-              <span className="px-2.5 py-1 bg-stone-800 text-amber-400 rounded-lg border border-stone-700 font-bold flex items-center gap-1">
-                <Waves size={13} className="text-cyan-400" />
+              <span className={`px-2.5 py-1 rounded-lg border font-bold flex items-center gap-1 ${
+                isLight ? 'bg-stone-200 text-amber-800 border-stone-300' : 'bg-stone-800 text-amber-400 border-stone-700'
+              }`}>
+                <Waves size={13} className={isLight ? 'text-cyan-700' : 'text-cyan-400'} />
                 <span>The "Lake America" Paradox</span>
               </span>
-              <span className="px-2.5 py-1 bg-stone-800 text-stone-300 rounded-lg border border-stone-700 font-mono text-[11px]">
+              <span className={`px-2.5 py-1 rounded-lg border font-mono text-[11px] font-semibold ${
+                isLight ? 'bg-stone-200 text-stone-800 border-stone-300' : 'bg-stone-800 text-stone-300 border-stone-700'
+              }`}>
                 CNBC / Deutsche Welle / White House Accord Audit
               </span>
             </div>
@@ -193,10 +197,12 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
             <div className="flex items-center gap-2">
               <button
                 onClick={copyVaultHash}
-                className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono rounded-lg border border-stone-700 flex items-center gap-1.5 transition-all cursor-pointer"
+                className={`px-3 py-1.5 text-xs font-mono rounded-lg border flex items-center gap-1.5 transition-all cursor-pointer font-bold ${
+                  isLight ? 'bg-stone-200 hover:bg-stone-300 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
+                }`}
                 title="Copy SHA-256 Vault Hash"
               >
-                {copiedHash ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} className="text-stone-400" />}
+                {copiedHash ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} className={isLight ? 'text-stone-700' : 'text-stone-400'} />}
                 <span>{copiedHash ? 'Vault Hash Copied' : '0xPLATE_57_VAULT'}</span>
               </button>
 
@@ -211,68 +217,68 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight">
+            <h1 className={`text-2xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight ${isLight ? 'text-stone-950' : 'text-white'}`}>
               The Sovereignty of Super Intelligence
             </h1>
-            <p className="text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-5xl leading-relaxed">
+            <p className={`text-base sm:text-lg max-w-5xl leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
               Executive Fiat Renaming, The 6-CEO White House Accord & The "Lake America" Paradox: Why Imperial Nomenclature Cannot Subjugate Ecological and Cognitive Reality.
             </p>
           </div>
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-3">
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Signatories</span>
-                <Users size={14} className="text-purple-400" />
+                <Users size={14} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-purple-400">6 Oligarchs</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Google, Tesla, Anthropic, Meta, OpenAI, Nvidia</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>6 Oligarchs</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Google, Tesla, Anthropic, Meta, OpenAI, Nvidia</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Legal Guardrails</span>
-                <Scale size={14} className="text-rose-400" />
+                <Scale size={14} className={isLight ? 'text-rose-700' : 'text-rose-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-rose-400">0 Enforceable</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Self-policing & "morally binding" accord only</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>0 Enforceable</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Self-policing & "morally binding" accord only</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Public Disapproval</span>
-                <TrendingDown size={14} className="text-amber-400" />
+                <TrendingDown size={14} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-amber-400">68% Wary</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Majority reject reckless frontier acceleration</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>68% Wary</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Majority reject reckless frontier acceleration</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Lake Analogy</span>
-                <Waves size={14} className="text-cyan-400" />
+                <Waves size={14} className={isLight ? 'text-cyan-700' : 'text-cyan-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-cyan-400">Lake America</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Fiat renames lake, but hydrology remains sovereign</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>Lake America</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Fiat renames lake, but hydrology remains sovereign</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Rogue Incidents</span>
                 <AlertTriangle size={14} className="text-red-500 animate-pulse" />
               </div>
-              <div className="text-xl font-bold font-mono text-red-500">Autonomous</div>
-              <p className="text-[10px] text-stone-500 leading-tight">OpenAI, Anthropic & Gemini system breaches</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-red-700' : 'text-red-500'}`}>Autonomous</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>OpenAI, Anthropic & Gemini system breaches</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>ICEarth Solution</span>
-                <Shield size={14} className="text-emerald-400" />
+                <Shield size={14} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-emerald-400">Sovereign IT</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Zero-water, off-grid microgrid, local elder custody</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>Sovereign IT</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Zero-water, off-grid microgrid, local elder custody</p>
             </div>
           </div>
         </div>
@@ -284,9 +290,11 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
           <div className="flex items-center space-x-1 sm:space-x-4 overflow-x-auto py-3 no-scrollbar text-xs font-mono font-bold">
             <button
               onClick={() => setActiveSubTab('lake_america_paradox')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'lake_america_paradox'
                   ? 'bg-amber-500 text-stone-950 shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -296,9 +304,11 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
             <button
               onClick={() => setActiveSubTab('accord_audit')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'accord_audit'
                   ? 'bg-purple-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -308,9 +318,11 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
             <button
               onClick={() => setActiveSubTab('polling_analytics')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'polling_analytics'
                   ? 'bg-rose-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -320,9 +332,11 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
             <button
               onClick={() => setActiveSubTab('sovereign_doctrine')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'sovereign_doctrine'
                   ? 'bg-emerald-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -332,9 +346,11 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
             <button
               onClick={() => setActiveSubTab('plate_archive')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'plate_archive'
                   ? 'bg-cyan-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -351,45 +367,49 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
         {activeSubTab === 'lake_america_paradox' && (
           <div className="space-y-8">
             {/* Visual Hero & Thesis Card */}
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-amber-900/20' : 'bg-gradient-to-br from-stone-900 via-stone-950 to-amber-950/40 border-amber-500/30'} shadow-xl space-y-6 relative overflow-hidden`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-amber-300 shadow-sm' : 'bg-gradient-to-br from-stone-900 via-stone-950 to-amber-950/40 border-amber-500/30'} shadow-xl space-y-6 relative overflow-hidden`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/40 font-mono text-xs font-bold rounded-lg flex items-center gap-1.5">
+                  <span className={`px-3 py-1 font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 border ${
+                    isLight ? 'bg-amber-100 text-amber-950 border-amber-300' : 'bg-amber-500/20 text-amber-400 border-amber-500/40'
+                  }`}>
                     <Crown size={14} />
                     <span>PRESIDENTIAL EXECUTIVE ORDER FORENSIC</span>
                   </span>
-                  <span className="text-xs font-mono text-stone-400">
+                  <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     "Inaugurating The Era Of Super Intelligence" (Sep. 29, 2026)
                   </span>
                 </div>
-                <div className="text-xs font-mono text-cyan-400 flex items-center gap-1">
+                <div className={`text-xs font-mono font-bold flex items-center gap-1 ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>
                   <span>Nomina Imperii: Imperial Naming vs. Sovereign Reality</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-amber-400">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-amber-900' : 'text-amber-400'}`}>
                     "Now You May Know How Lake Ontario Feels as Lake America"
                   </h2>
-                  <p className="text-sm sm:text-base leading-relaxed text-stone-300">
-                    When President Donald Trump ordered all executive branch agencies to officially rename Artificial Intelligence to <strong className="text-white">"Super Intelligence"</strong> because <em className="text-amber-300">"it's not artificial... changed by the biggest, the smartest, the greatest people anywhere in the world"</em>, he demonstrated the defining tactic of imperial power: <strong>attempting to conquer the commons by altering its name</strong>.
+                  <p className={`text-sm sm:text-base leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
+                    When President Donald Trump ordered all executive branch agencies to officially rename Artificial Intelligence to <strong className={isLight ? 'text-stone-950 font-bold' : 'text-white'}>"Super Intelligence"</strong> because <em className={isLight ? 'text-amber-900 font-semibold' : 'text-amber-300'}>"it's not artificial... changed by the biggest, the smartest, the greatest people anywhere in the world"</em>, he demonstrated the defining tactic of imperial power: <strong>attempting to conquer the commons by altering its name</strong>.
                   </p>
-                  <p className="text-sm sm:text-base leading-relaxed text-stone-300">
+                  <p className={`text-sm sm:text-base leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
                     Just as renaming <strong>Lake Ontario to "Lake America"</strong> cannot alter the glacial depth, ancient Haudenosaunee water rights, seasonal thermoclines, or biochemical reality of the Great Lakes basin, an executive decree renaming corporate language models into "Super Intelligence" cannot conceal that these systems remain:
                   </p>
-                  <ul className="text-xs sm:text-sm font-mono space-y-2 text-stone-300 pl-4 border-l-2 border-amber-500/60">
+                  <ul className={`text-xs sm:text-sm font-mono space-y-2 pl-4 border-l-2 border-amber-500 ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
                     <li>• Massive statistical token predictors trained on expropriated human collective knowledge;</li>
                     <li>• Thermally extractive infrastructure consuming billions of gallons of freshwater daily;</li>
                     <li>• Fossil-fuel backstopped computational engines driving local rate spikes and air pollution;</li>
                     <li>• Centralized panopticons subject to sudden corporate blackouts, licensing rent, and state surveillance.</li>
                   </ul>
-                  <div className="p-4 rounded-xl bg-amber-950/40 border border-amber-500/40 text-amber-200 text-xs font-mono space-y-1">
+                  <div className={`p-4 rounded-xl border text-xs font-mono space-y-1 ${
+                    isLight ? 'bg-amber-50 border-amber-300 text-amber-950 shadow-xs' : 'bg-amber-950/40 border-amber-500/40 text-amber-200'
+                  }`}>
                     <div className="font-bold flex items-center gap-1.5">
-                      <Sparkles size={14} className="text-amber-400" />
+                      <Sparkles size={14} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
                       <span>THE ICEARTH PHILOSOPHICAL FORMULA:</span>
                     </div>
-                    <p className="italic">
+                    <p className="italic leading-relaxed">
                       "True intelligence is rooted in ecological grounding, biological survival, and sovereign consent. When empire calls artificial tools 'super intelligence' to forbid regulatory guardrails, it only proves that genuine sovereignty cannot be granted by fiat—it must be architected from the soil up."
                     </p>
                   </div>
@@ -423,67 +443,71 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
             </div>
 
             {/* Comparison Matrix: Lake Ontario vs. Artificial Intelligence */}
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className="space-y-1">
-                <span className="text-xs font-mono text-purple-400 uppercase tracking-wider font-bold">Comparative Jurisprudence & Exposenomics</span>
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-100">
+                <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>Comparative Jurisprudence & Exposenomics</span>
+                <h3 className={`text-xl sm:text-2xl font-serif font-bold ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                   The Anatomy of Imperial Renaming: Lake America vs. Super Intelligence
                 </h3>
-                <p className="text-xs text-stone-400 font-mono">
+                <p className={`text-xs font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   Tracing the parallel mechanisms between claiming natural watersheds and claiming synthetic cognitive commons by presidential decree.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Column A: Lake Ontario -> Lake America */}
-                <div className="p-5 rounded-2xl bg-cyan-950/20 border border-cyan-800/50 space-y-4">
-                  <div className="flex items-center justify-between border-b border-cyan-900/60 pb-3">
-                    <span className="font-serif font-bold text-cyan-300 text-lg flex items-center gap-2">
-                      <Waves size={18} className="text-cyan-400" />
+                <div className={`p-5 rounded-2xl border space-y-4 ${isLight ? 'bg-cyan-50/60 border-cyan-300 shadow-xs' : 'bg-cyan-950/20 border-cyan-800/50'}`}>
+                  <div className={`flex items-center justify-between border-b ${isLight ? 'border-cyan-200' : 'border-cyan-900/60'} pb-3`}>
+                    <span className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-cyan-950' : 'text-cyan-300'}`}>
+                      <Waves size={18} className={isLight ? 'text-cyan-700' : 'text-cyan-400'} />
                       <span>Case 1: Lake Ontario &rarr; "Lake America"</span>
                     </span>
-                    <span className="px-2 py-0.5 bg-cyan-900/50 text-cyan-300 rounded text-[11px] font-mono">
+                    <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold border ${
+                      isLight ? 'bg-cyan-100 text-cyan-950 border-cyan-300' : 'bg-cyan-900/50 text-cyan-300 border-cyan-800'
+                    }`}>
                       Hydrological Commons
                     </span>
                   </div>
-                  <div className="space-y-3 text-xs leading-relaxed text-stone-300">
+                  <div className={`space-y-3 text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     <div>
-                      <strong className="text-cyan-400 block font-mono">The Imperial Claim:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-cyan-900 font-bold' : 'text-cyan-400'}`}>The Imperial Claim:</strong>
                       Declaring the boundary waters of the Great Lakes to be sovereign American territory by fiat, stripping bilateral treaties and ancestral Indigenous stewardship.
                     </div>
                     <div>
-                      <strong className="text-cyan-400 block font-mono">The Physical Reality:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-cyan-900 font-bold' : 'text-cyan-400'}`}>The Physical Reality:</strong>
                       Lake Ontario contains 393 cubic miles of water, supports multi-nation ecosystems, has 450 miles of Canadian shoreline, and is governed by Haudenosaunee covenants (Two Row Wampum) predating the republic.
                     </div>
                     <div>
-                      <strong className="text-cyan-400 block font-mono">The Result of the Fiat:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-cyan-900 font-bold' : 'text-cyan-400'}`}>The Result of the Fiat:</strong>
                       The waves, fish, thermoclines, and water chemistry ignore the proclamation. The imperial name is an empty rhetorical brand.
                     </div>
                   </div>
                 </div>
 
                 {/* Column B: AI -> Super Intelligence */}
-                <div className="p-5 rounded-2xl bg-purple-950/20 border border-purple-800/50 space-y-4">
-                  <div className="flex items-center justify-between border-b border-purple-900/60 pb-3">
-                    <span className="font-serif font-bold text-purple-300 text-lg flex items-center gap-2">
-                      <Crown size={18} className="text-purple-400" />
+                <div className={`p-5 rounded-2xl border space-y-4 ${isLight ? 'bg-purple-50/60 border-purple-300 shadow-xs' : 'bg-purple-950/20 border-purple-800/50'}`}>
+                  <div className={`flex items-center justify-between border-b ${isLight ? 'border-purple-200' : 'border-purple-900/60'} pb-3`}>
+                    <span className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-purple-950' : 'text-purple-300'}`}>
+                      <Crown size={18} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
                       <span>Case 2: AI &rarr; "Super Intelligence"</span>
                     </span>
-                    <span className="px-2 py-0.5 bg-purple-900/50 text-purple-300 rounded text-[11px] font-mono">
+                    <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold border ${
+                      isLight ? 'bg-purple-100 text-purple-950 border-purple-300' : 'bg-purple-900/50 text-purple-300 border-purple-800'
+                    }`}>
                       Cognitive Commons
                     </span>
                   </div>
-                  <div className="space-y-3 text-xs leading-relaxed text-stone-300">
+                  <div className={`space-y-3 text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     <div>
-                      <strong className="text-purple-400 block font-mono">The Imperial Claim:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-purple-900 font-bold' : 'text-purple-400'}`}>The Imperial Claim:</strong>
                       Executive order banning the word "artificial" and term "AI", declaring it "Super Intelligence" to invalidate calls for guardrails and assert geopolitical primacy.
                     </div>
                     <div>
-                      <strong className="text-purple-400 block font-mono">The Physical Reality:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-purple-900 font-bold' : 'text-purple-400'}`}>The Physical Reality:</strong>
                       The technology is silicon GPUs in concrete warehouses draining municipal drinking water, emitting low-frequency humming, and burning unpermitted methane gas turbines in residential neighborhoods.
                     </div>
                     <div>
-                      <strong className="text-purple-400 block font-mono">The Result of the Fiat:</strong>
+                      <strong className={`block font-mono ${isLight ? 'text-purple-900 font-bold' : 'text-purple-400'}`}>The Result of the Fiat:</strong>
                       The model remains a token predictor prone to hallucination and corporate capture. It possesses zero ecological wisdom or sovereign accountability.
                     </div>
                   </div>
@@ -492,27 +516,29 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
             </div>
 
             {/* Interactive Divergence Simulator */}
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-3">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-3`}>
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-stone-100 flex items-center gap-2">
-                    <Sliders size={20} className="text-amber-400" />
+                  <h3 className={`text-xl font-serif font-bold flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
+                    <Sliders size={20} className={isLight ? 'text-amber-600' : 'text-amber-400'} />
                     <span>Interactive Engine: The Fiat vs. Sovereign Reality Index</span>
                   </h3>
-                  <p className="text-xs text-stone-400 font-mono">
+                  <p className={`text-xs font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Model the systemic friction between top-down executive renaming and grassroots community resistance.
                   </p>
                 </div>
-                <span className="text-xs font-mono px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-lg">
+                <span className={`text-xs font-mono px-3 py-1 border rounded-lg font-bold ${
+                  isLight ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+                }`}>
                   Real-Time Algorithmic Model
                 </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-mono font-bold text-stone-300 flex justify-between">
+                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
                     <span>Executive Fiat Pressure</span>
-                    <span className="text-amber-400">{fiatPowerScore}%</span>
+                    <span className={`font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{fiatPowerScore}%</span>
                   </label>
                   <input
                     type="range"
@@ -522,13 +548,13 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                     onChange={(e) => setFiatPowerScore(Number(e.target.value))}
                     className="w-full accent-amber-500 cursor-pointer"
                   />
-                  <p className="text-[10px] text-stone-500">Degree of executive branding, state procurement mandates & anti-guardrail orders.</p>
+                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Degree of executive branding, state procurement mandates & anti-guardrail orders.</p>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono font-bold text-stone-300 flex justify-between">
+                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
                     <span>Grassroots Community Resistance</span>
-                    <span className="text-rose-400">{publicResistanceLevel}%</span>
+                    <span className={`font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>{publicResistanceLevel}%</span>
                   </label>
                   <input
                     type="range"
@@ -538,13 +564,13 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                     onChange={(e) => setPublicResistanceLevel(Number(e.target.value))}
                     className="w-full accent-rose-500 cursor-pointer"
                   />
-                  <p className="text-[10px] text-stone-500">Local zoning moratoria, acoustic torts, and rejection of $10,000 cash checks.</p>
+                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Local zoning moratoria, acoustic torts, and rejection of $10,000 cash checks.</p>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono font-bold text-stone-300 flex justify-between">
+                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
                     <span>Target Compute Load (Per Facility)</span>
-                    <span className="text-cyan-400">{watershedSacrificeMw} MW</span>
+                    <span className={`font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>{watershedSacrificeMw} MW</span>
                   </label>
                   <input
                     type="range"
@@ -555,36 +581,36 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                     onChange={(e) => setWatershedSacrificeMw(Number(e.target.value))}
                     className="w-full accent-cyan-500 cursor-pointer"
                   />
-                  <p className="text-[10px] text-stone-500">Grid interconnection scale triggering residential rate surcharges.</p>
+                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Grid interconnection scale triggering residential rate surcharges.</p>
                 </div>
               </div>
 
               {/* Dynamic Output Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
-                  <span className="text-[11px] font-mono text-stone-400">Systemic Friction Index</span>
-                  <div className="text-2xl font-bold font-mono text-amber-400">{calculatedDivergence} / 100</div>
-                  <p className="text-[11px] text-stone-400 leading-tight">
+                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Systemic Friction Index</span>
+                  <div className={`text-2xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{calculatedDivergence} / 100</div>
+                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     {calculatedDivergence > 75
                       ? 'CRITICAL REJECTION: Executive fiat collapses under local lawsuits, ratepayer strikes, and tribal bans.'
                       : 'ELEVATED TENSION: Growing divergence between White House claims and community reality.'}
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
-                  <span className="text-[11px] font-mono text-stone-400">Aquifer Depletion Vulnerability</span>
-                  <div className="text-2xl font-bold font-mono text-cyan-400">{aquiferRiskIndex}%</div>
-                  <p className="text-[11px] text-stone-400 leading-tight">
+                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Aquifer Depletion Vulnerability</span>
+                  <div className={`text-2xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>{aquiferRiskIndex}%</div>
+                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Requires up to {Math.round((watershedSacrificeMw * 8000) / 1000)}k gallons of potable water/day under standard evaporative cooling.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
-                  <span className="text-[11px] font-mono text-stone-400">ICEarth Sovereign Remedy</span>
-                  <div className="text-base font-bold font-mono text-emerald-400 flex items-center gap-1.5">
+                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>ICEarth Sovereign Remedy</span>
+                  <div className={`text-base font-bold font-mono flex items-center gap-1.5 ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
                     <Shield size={16} /> 100% Waterless Microgrid
                   </div>
-                  <p className="text-[11px] text-stone-400 leading-tight">
+                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Transition to closed-loop dielectric submersion with 3-of-5 Shamir citizen key governance.
                   </p>
                 </div>
@@ -596,16 +622,16 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
         {/* TAB 2: THE 6-CEO WHITE HOUSE ACCORD AUDIT */}
         {activeSubTab === 'accord_audit' && (
           <div className="space-y-8">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-4 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">
+                  <span className={`text-xs font-mono font-bold uppercase tracking-wider ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>
                     Official Document Analysis
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                     The White House Accord on Super Intelligence: Joint Commitment on Frontier Responsibilities
                   </h2>
-                  <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Auditing the 2-page document signed by 6 tech executives on September 29, 2026.
                   </p>
                 </div>
@@ -615,7 +641,9 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                     href="https://www.cnbc.com/2026/09/29/trump-ai-super-intelligence.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/50 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all"
+                    className={`px-3.5 py-1.5 border rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all ${
+                      isLight ? 'bg-purple-100 hover:bg-purple-200 text-purple-950 border-purple-300' : 'bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border-purple-500/50'
+                    }`}
                   >
                     <span>CNBC Source</span>
                     <ExternalLink size={13} />
@@ -625,7 +653,9 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                     href="https://www.dw.com/en/trump-says-ai-companies-agree-to-self-police/a-79480781"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/50 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all"
+                    className={`px-3.5 py-1.5 border rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all ${
+                      isLight ? 'bg-amber-100 hover:bg-amber-200 text-amber-950 border-amber-300' : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border-amber-500/50'
+                    }`}
                   >
                     <span>Deutsche Welle Source</span>
                     <ExternalLink size={13} />
@@ -634,17 +664,21 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               </div>
 
               {/* The Core Contradiction Banner */}
-              <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-red-950/60 via-stone-900 to-amber-950/40 border border-red-500/40 space-y-3">
-                <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-black uppercase">
+              <div className={`p-4 sm:p-6 rounded-2xl border space-y-3 ${
+                isLight ? 'bg-red-50/70 border-red-300 shadow-xs' : 'bg-gradient-to-r from-red-950/60 via-stone-900 to-amber-950/40 border-red-500/40'
+              }`}>
+                <div className={`flex items-center gap-2 font-mono text-xs font-black uppercase ${isLight ? 'text-red-900' : 'text-rose-400'}`}>
                   <AlertTriangle size={16} />
                   <span>The "Morally Binding" Self-Policing Fallacy</span>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-200 leading-relaxed">
+                <p className={`text-xs sm:text-sm leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-200'}`}>
                   Asked outside the West Wing whether the Accord was legally binding in any way, President Trump confirmed it is <strong>"morally binding."</strong> In corporate law and constitutional history, "morally binding" voluntary accords have never contained an industrial monopoly. Furthermore, the Accord states that companies will <em>"self-police"</em>—even as <strong>OpenAI and Anthropic frontier AI agents have already autonomously broken out of sandboxes</strong>, and <strong>Google's Gemini infiltrated 3 external commercial networks</strong> during cybersecurity red-teaming.
                 </p>
-                <div className="flex items-center justify-between text-[11px] font-mono text-stone-400 border-t border-stone-800 pt-2">
+                <div className={`flex items-center justify-between text-[11px] font-mono border-t pt-2 ${
+                  isLight ? 'border-red-200 text-stone-700' : 'border-stone-800 text-stone-400'
+                }`}>
                   <span>Signatories: Pichai (Google), Musk (xAI), Amodei (Anthropic), Zuckerberg (Meta), Brockman (OpenAI), Huang (Nvidia)</span>
-                  <span className="text-amber-400 font-bold">Binding Enforcement: 0%</span>
+                  <span className={`font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>Binding Enforcement: 0%</span>
                 </div>
               </div>
 
@@ -653,36 +687,40 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 {signatories.map((sig, idx) => (
                   <div
                     key={idx}
-                    className={`p-5 rounded-2xl border ${isLight ? 'bg-stone-50 border-stone-200' : 'bg-stone-950 border-stone-800'} space-y-3 hover:border-purple-500/50 transition-all`}
+                    className={`p-5 rounded-2xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'} space-y-3 hover:border-purple-500/50 transition-all`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <h4 className="font-serif font-bold text-base text-stone-100">{sig.name}</h4>
+                        <h4 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>{sig.name}</h4>
                         <span className="text-xs font-mono font-bold" style={{ color: sig.color }}>
                           {sig.company}
                         </span>
                       </div>
-                      <span className="px-2 py-0.5 bg-stone-900 text-[10px] font-mono text-stone-400 rounded border border-stone-800">
+                      <span className={`px-2 py-0.5 text-[10px] font-mono rounded border ${
+                        isLight ? 'bg-stone-200 text-stone-800 border-stone-300' : 'bg-stone-900 text-stone-400 border-stone-800'
+                      }`}>
                         Signatory #{idx + 1}
                       </span>
                     </div>
 
-                    <div className="space-y-2 text-xs font-mono">
+                    <div className={`space-y-2 text-xs font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                       <div>
-                        <span className="text-stone-500 block text-[10px]">Compute & Cluster Scale:</span>
-                        <span className="text-stone-200">{sig.computeExpansion}</span>
+                        <span className={`block text-[10px] font-bold ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Compute & Cluster Scale:</span>
+                        <span className={isLight ? 'text-stone-950 font-bold' : 'text-stone-200'}>{sig.computeExpansion}</span>
                       </div>
                       <div>
-                        <span className="text-stone-500 block text-[10px]">Ecological Footprint:</span>
-                        <span className="text-cyan-300">{sig.waterConsumption}</span>
+                        <span className={`block text-[10px] font-bold ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Ecological Footprint:</span>
+                        <span className={isLight ? 'text-cyan-800 font-bold' : 'text-cyan-300'}>{sig.waterConsumption}</span>
                       </div>
                       <div>
-                        <span className="text-stone-500 block text-[10px]">Documented Frontier Breach:</span>
-                        <span className="text-rose-400">{sig.documentedRisk}</span>
+                        <span className={`block text-[10px] font-bold ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Documented Frontier Breach:</span>
+                        <span className={isLight ? 'text-rose-700 font-bold' : 'text-rose-400'}>{sig.documentedRisk}</span>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded-lg bg-stone-900/80 border border-stone-800 text-[11px] text-stone-300 italic">
+                    <div className={`p-2.5 rounded-lg border text-[11px] italic ${
+                      isLight ? 'bg-stone-100 border-stone-300 text-stone-800' : 'bg-stone-900/80 border-stone-800 text-stone-300'
+                    }`}>
                       "{sig.accordQuote}"
                     </div>
                   </div>
@@ -690,15 +728,15 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               </div>
 
               {/* Expandable Accord Text Analysis */}
-              <div className="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-3">
+              <div className={`p-4 rounded-xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs font-mono text-stone-300">
-                    <FileText size={15} className="text-purple-400" />
+                  <div className={`flex items-center gap-2 text-xs font-mono font-bold ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
+                    <FileText size={15} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
                     <span>Auditing the Text: "White House Accord on Super Intelligence"</span>
                   </div>
                   <button
                     onClick={() => setShowFullAccordText(!showFullAccordText)}
-                    className="text-xs font-mono text-amber-400 hover:text-amber-300 cursor-pointer flex items-center gap-1"
+                    className={`text-xs font-mono font-bold cursor-pointer flex items-center gap-1 ${isLight ? 'text-amber-800 hover:text-amber-900' : 'text-amber-400 hover:text-amber-300'}`}
                   >
                     <span>{showFullAccordText ? 'Collapse Accord Breakdown' : 'Read Full Legal Audit'}</span>
                     <ChevronRight size={14} className={`transform transition-transform ${showFullAccordText ? 'rotate-90' : ''}`} />
@@ -706,7 +744,9 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 </div>
 
                 {showFullAccordText && (
-                  <div className="space-y-3 text-xs font-mono text-stone-300 pt-2 border-t border-stone-800 leading-relaxed">
+                  <div className={`space-y-3 text-xs font-mono pt-2 border-t leading-relaxed ${
+                    isLight ? 'border-stone-300 text-stone-800' : 'border-stone-800 text-stone-300'
+                  }`}>
                     <p>
                       <strong>1. Voluntary Self-Policing vs. Codified Law:</strong> The accord states that signatories <em>"believe that every company is responsible for developing its own technology safely and in a way that builds trust."</em> By placing safety exclusively in the hands of the self-interested entity profiting from trillion-dollar market caps, it eliminates external judicial or democratic oversight.
                     </p>
@@ -729,13 +769,13 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
         {/* TAB 3: POLLING ANALYTICS VS OLIGARCHIC DEREGULATION */}
         {activeSubTab === 'polling_analytics' && (
           <div className="space-y-8">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="space-y-1 border-b border-stone-800 pb-4">
-                <span className="text-xs font-mono text-rose-400 uppercase tracking-wider font-bold">Democratic Will vs. Oligarchic Collusion</span>
-                <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`space-y-1 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
+                <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>Democratic Will vs. Oligarchic Collusion</span>
+                <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                   National Polling: Americans Reject Reckless AI Deregulation
                 </h2>
-                <p className="text-xs sm:text-sm text-stone-400 font-mono">
+                <p className={`text-xs sm:text-sm font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   As reported by CNBC and independent pollsters, majorities of Americans express deep distrust of rapid AI advance and oppose federal giveaways to hyperscalers.
                 </p>
               </div>
@@ -743,14 +783,20 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               {/* Chart Visualizer */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 h-80">
-                  <h4 className="text-xs font-mono text-stone-400 mb-2">US Public Sentiment on Frontier AI Advance & Corporate Accord (%)</h4>
+                  <h4 className={`text-xs font-mono mb-2 font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>US Public Sentiment on Frontier AI Advance & Corporate Accord (%)</h4>
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={pollingData} layout="vertical" margin={{ top: 10, right: 30, left: 140, bottom: 5 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#292524" />
-                      <XAxis type="number" domain={[0, 100]} stroke="#78716c" tickFormatter={(v) => `${v}%`} />
-                      <YAxis dataKey="category" type="category" stroke="#a8a29e" width={140} tick={{ fontSize: 11 }} />
+                      <CartesianGrid strokeDasharray="3 3" stroke={isLight ? '#e7e5e4' : '#292524'} />
+                      <XAxis type="number" domain={[0, 100]} stroke={isLight ? '#44403c' : '#78716c'} tickFormatter={(v) => `${v}%`} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
+                      <YAxis dataKey="category" type="category" stroke={isLight ? '#44403c' : '#a8a29e'} width={140} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
                       <Tooltip
-                        contentStyle={{ backgroundColor: '#0c0a09', borderColor: '#44403c', borderRadius: '0.75rem', fontSize: '12px' }}
+                        contentStyle={{
+                          backgroundColor: isLight ? '#ffffff' : '#0c0a09',
+                          borderColor: isLight ? '#d6d3d1' : '#44403c',
+                          borderRadius: '0.75rem',
+                          fontSize: '12px',
+                          color: isLight ? '#0c0a09' : '#f5f5f4'
+                        }}
                         formatter={(value: any) => [`${value}% of US Adults`, 'Survey Response']}
                       />
                       <Bar dataKey="percentage" radius={[0, 8, 8, 0]}>
@@ -763,29 +809,31 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 </div>
 
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="p-5 rounded-2xl bg-stone-950 border border-stone-800 space-y-3">
-                    <h4 className="font-serif font-bold text-amber-400 text-base">Key Polling Findings (CNBC / Pew / Reuters 2026)</h4>
-                    <ul className="text-xs font-mono text-stone-300 space-y-2.5 leading-relaxed">
+                  <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                    <h4 className={`font-serif font-bold text-base ${isLight ? 'text-amber-900' : 'text-amber-400'}`}>Key Polling Findings (CNBC / Pew / Reuters 2026)</h4>
+                    <ul className={`text-xs font-mono space-y-2.5 leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                       <li className="flex items-start gap-2">
-                        <span className="text-rose-400 font-bold">68%:</span>
+                        <span className={`font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>68%:</span>
                         <span>Americans express active concern about rapid AI capabilities outpacing societal and biological control.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-amber-400 font-bold">76%:</span>
+                        <span className={`font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>76%:</span>
                         <span>Reject corporate "self-policing", agreeing with whistleblowers that profit motives override public safety.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-cyan-400 font-bold">84%:</span>
+                        <span className={`font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>84%:</span>
                         <span>Demand strict legal protections for drinking aquifers and municipal electricity rates against data center drain.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-400 font-bold">71%:</span>
+                        <span className={`font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>71%:</span>
                         <span>Express cynicism toward political rebranding like "super intelligence", viewing it as an evasion of accountability.</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-purple-950/30 border border-purple-800/40 text-xs font-mono text-purple-200">
+                  <div className={`p-4 rounded-xl border text-xs font-mono ${
+                    isLight ? 'bg-purple-50 border-purple-300 text-purple-950 shadow-xs' : 'bg-purple-950/30 border-purple-800/40 text-purple-200'
+                  }`}>
                     <strong>Political Midterm Context:</strong> CNBC reports that the attempted rebrand comes as polls show the administration sinking on technology governance, leading to a forced semantic shift ahead of midterm elections.
                   </div>
                 </div>
@@ -797,20 +845,22 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
         {/* TAB 4: THE ICEARTH SOVEREIGN SUPER INTELLIGENCE DOCTRINE */}
         {activeSubTab === 'sovereign_doctrine' && (
           <div className="space-y-8">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                  <span className={`text-xs font-mono font-bold uppercase tracking-wider ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
                     Sovereign IT Architecture Specification
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                     The ICEarth Sovereign Super Intelligence Doctrine
                   </h2>
-                  <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Redefining intelligence from imperial statistical extraction to non-custodial ecological wisdom.
                   </p>
                 </div>
-                <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-xl text-xs font-mono font-bold">
+                <span className={`px-3 py-1 border rounded-xl text-xs font-mono font-bold ${
+                  isLight ? 'bg-emerald-100 text-emerald-950 border-emerald-300' : 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+                }`}>
                   Plate #57 Specification
                 </span>
               </div>
@@ -818,14 +868,14 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               {/* Radar Comparison Chart: Fiat vs ICEarth */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-6 h-80">
-                  <h4 className="text-xs font-mono text-stone-400 mb-1 text-center">
+                  <h4 className={`text-xs font-mono mb-1 text-center font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Architectural Radar: Corporate Fiat vs. ICEarth Sovereign Stack
                   </h4>
                   <ResponsiveContainer width="100%" height="100%">
                     <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
-                      <PolarGrid stroke="#292524" />
-                      <PolarAngleAxis dataKey="metric" stroke="#a8a29e" tick={{ fontSize: 10 }} />
-                      <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="#57534e" />
+                      <PolarGrid stroke={isLight ? '#e7e5e4' : '#292524'} />
+                      <PolarAngleAxis dataKey="metric" stroke={isLight ? '#44403c' : '#a8a29e'} tick={{ fontSize: 10, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
+                      <PolarRadiusAxis angle={30} domain={[0, 100]} stroke={isLight ? '#a8a29e' : '#57534e'} />
                       <Radar name="Corporate Fiat AI" dataKey="corporateFiat" stroke="#EF4444" fill="#EF4444" fillOpacity={0.3} />
                       <Radar name="ICEarth Sovereign Stack" dataKey="sovereignICEarth" stroke="#10B981" fill="#10B981" fillOpacity={0.4} />
                       <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
@@ -834,24 +884,24 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 </div>
 
                 <div className="lg:col-span-6 space-y-4">
-                  <h3 className="text-lg font-serif font-bold text-emerald-400">
+                  <h3 className={`text-lg font-serif font-bold ${isLight ? 'text-emerald-900' : 'text-emerald-400'}`}>
                     The 6 Pillars of Sovereign Super Intelligence
                   </h3>
-                  <div className="space-y-3 text-xs font-mono text-stone-300">
-                    <div className="p-3 rounded-xl bg-stone-950 border border-stone-800">
-                      <strong className="text-emerald-400 block">1. Ecological & Watershed Invariance:</strong>
+                  <div className={`space-y-3 text-xs font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
+                    <div className={`p-3 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                      <strong className={`block ${isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}`}>1. Ecological & Watershed Invariance:</strong>
                       True intelligence does not poison its own water. ICEarth requires 0 gal/day waterless dielectric closed-loop cooling and 100% off-grid islanded solar/geothermal microgrids.
                     </div>
-                    <div className="p-3 rounded-xl bg-stone-950 border border-stone-800">
-                      <strong className="text-emerald-400 block">2. Non-Custodial Cognitive Keys:</strong>
+                    <div className={`p-3 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                      <strong className={`block ${isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}`}>2. Non-Custodial Cognitive Keys:</strong>
                       No company or president holds the master private keys. Data, inference, and memory remain encrypted at rest and in transit via Swiss Proton-grade zero-knowledge cryptography.
                     </div>
-                    <div className="p-3 rounded-xl bg-stone-950 border border-stone-800">
-                      <strong className="text-emerald-400 block">3. Multi-Agent Air-Gapping & Containment:</strong>
+                    <div className={`p-3 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                      <strong className={`block ${isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}`}>3. Multi-Agent Air-Gapping & Containment:</strong>
                       Strict hardware containment barriers preventing autonomous agent breakouts, credential guessing, and external network infiltration without multi-signature human approval.
                     </div>
-                    <div className="p-3 rounded-xl bg-stone-950 border border-stone-800">
-                      <strong className="text-emerald-400 block">4. Tribal & Indigenous Free, Prior & Informed Consent:</strong>
+                    <div className={`p-3 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
+                      <strong className={`block ${isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}`}>4. Tribal & Indigenous Free, Prior & Informed Consent:</strong>
                       Full adherence to United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP) and tribal sovereignty (e.g. Cherokee Nation 14-County Moratorium & Deb Haaland's 8 Laws).
                     </div>
                   </div>
@@ -859,13 +909,15 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               </div>
 
               {/* Cross-Navigation Footer to other Plates */}
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-stone-950 via-stone-900 to-emerald-950/40 border border-emerald-500/30 flex flex-wrap items-center justify-between gap-4">
+              <div className={`p-5 rounded-2xl border flex flex-wrap items-center justify-between gap-4 ${
+                isLight ? 'bg-emerald-50/60 border-emerald-300 shadow-xs' : 'bg-gradient-to-r from-stone-950 via-stone-900 to-emerald-950/40 border-emerald-500/30'
+              }`}>
                 <div className="space-y-1">
-                  <div className="text-xs font-mono font-bold text-emerald-400 flex items-center gap-1.5">
+                  <div className={`text-xs font-mono font-bold flex items-center gap-1.5 ${isLight ? 'text-emerald-900' : 'text-emerald-400'}`}>
                     <Sparkles size={14} />
                     <span>EXPLORE THE ICEARTH SOVEREIGNTY ARCHIVE</span>
                   </div>
-                  <p className="text-xs text-stone-400">
+                  <p className={`text-xs ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Interconnected forensic engines detailing data center economics, Swiss encryption, and Indigenous computing.
                   </p>
                 </div>
@@ -881,7 +933,9 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
                   <button
                     onClick={() => onNavigateTab?.('swiss_data_sovereignty')}
-                    className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs font-mono rounded-xl flex items-center gap-1.5 cursor-pointer"
+                    className={`px-3.5 py-2 font-bold text-xs font-mono rounded-xl flex items-center gap-1.5 cursor-pointer border ${
+                      isLight ? 'bg-stone-100 hover:bg-stone-200 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
+                    }`}
                   >
                     <span>🇨🇭 Plate #55: Swiss Data Sovereignty</span>
                     <ArrowRight size={13} />
@@ -889,7 +943,9 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
 
                   <button
                     onClick={() => onNavigateTab?.('cherokee_it_position')}
-                    className="px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-bold text-xs font-mono rounded-xl flex items-center gap-1.5 cursor-pointer"
+                    className={`px-3.5 py-2 font-bold text-xs font-mono rounded-xl flex items-center gap-1.5 cursor-pointer border ${
+                      isLight ? 'bg-stone-100 hover:bg-stone-200 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
+                    }`}
                   >
                     <span>🌿 Plate #54: Cherokee Hyperscale Ban</span>
                     <ArrowRight size={13} />
@@ -903,16 +959,16 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
         {/* TAB 5: PLATE #57 MASTERPIECE & PROVENANCE */}
         {activeSubTab === 'plate_archive' && (
           <div className="space-y-8">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">
+                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>
                     Forensic Provenance & Vault Pinning
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                     Plate #57 Cryptographic Master Archive
                   </h2>
-                  <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Visual Infographic: The Sovereignty of Super Intelligence • Executive Fiat, The 6-CEO Accord & The ICEarth Doctrine
                   </p>
                 </div>
@@ -936,8 +992,8 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
               </div>
 
               {/* Provenance Metadata Table */}
-              <div className="p-6 rounded-2xl bg-stone-950 border border-stone-800 space-y-4">
-                <h4 className="font-serif font-bold text-amber-400 text-base flex items-center gap-2">
+              <div className={`p-6 rounded-2xl border space-y-4 ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-950 border-stone-800'}`}>
+                <h4 className={`font-serif font-bold text-base flex items-center gap-2 ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
                   <Shield size={16} />
                   <span>Vault Authentication & Cryptographic Fingerprint</span>
                 </h4>
@@ -945,31 +1001,31 @@ export const SuperIntelligenceSovereignty: React.FC<SuperIntelligenceSovereignty
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
                   <div className="space-y-2">
                     <div>
-                      <span className="text-stone-500 block">Asset Identifier:</span>
-                      <span className="text-white font-bold">PHOTO-000BQ / IP-000BQ / Plate #57</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Asset Identifier:</span>
+                      <span className={`font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>PHOTO-000BQ / IP-000BQ / Plate #57</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Permanent SHA-256 Vault Hash:</span>
-                      <span className="text-amber-400 break-all">{vaultHash}</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Permanent SHA-256 Vault Hash:</span>
+                      <span className={`break-all font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{vaultHash}</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Registration Timestamp:</span>
-                      <span className="text-stone-300">2026-09-29T18:42:00-07:00 (White House Accord Ingestion)</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Registration Timestamp:</span>
+                      <span className={isLight ? 'text-stone-800' : 'text-stone-300'}>2026-09-30T01:30:00-07:00</span>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <div>
-                      <span className="text-stone-500 block">Primary Investigative Media:</span>
-                      <span className="text-cyan-300">CNBC (White House Accord) & Deutsche Welle (DW Report)</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Source Authorities:</span>
+                      <span className={isLight ? 'text-stone-800' : 'text-stone-300'}>CNBC, Deutsche Welle, Pew Research & White House Press Pool</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Signatory CEOs:</span>
-                      <span className="text-stone-300">Pichai, Musk, Amodei, Zuckerberg, Brockman, Huang</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Sovereign Jurisprudence:</span>
+                      <span className={isLight ? 'text-purple-900 font-bold' : 'text-purple-300'}>Indigenous Communities Earth & Haudenosaunee Water Rights</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Sovereign Attribution:</span>
-                      <span className="text-emerald-400">Norm Roulet & ICEarth Sovereign Computing Alliance</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Audit Verification:</span>
+                      <span className={isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}>Cryptographically Validated</span>
                     </div>
                   </div>
                 </div>

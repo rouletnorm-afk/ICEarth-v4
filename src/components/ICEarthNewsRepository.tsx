@@ -65,6 +65,7 @@ import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
+import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -179,6 +180,24 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('trump_ai_summit') ||
+    u.includes('richest_table') ||
+    u.includes('1.8_trillion') ||
+    u.includes('1.8t') ||
+    u.includes('plate_60') ||
+    u.includes('plate60') ||
+    u.includes('plate #60') ||
+    u.includes('photo-000bt') ||
+    u.includes('ip-000bt') ||
+    u.includes('1790839148889') ||
+    u.includes('amodei') ||
+    u.includes('brockman') ||
+    u.includes('jensen_huang') ||
+    u.includes('summit_table')
+  ) {
+    return trumpAiSummitPlateImg;
+  }
   if (
     u.includes('sovereign_agents') ||
     u.includes('normal_people') ||
@@ -1002,6 +1021,80 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-TRUMP-1-8-TRILLION-AI-SUMMIT-RICHEST-TABLE-PLATE60-2026',
+    contentType: 'Article',
+    title: "Trump’s $1.8 Trillion AI Summit Table: All the Execs Who Answered President’s Call & Why Sovereign Indigenous IT Demands Humanity’s Cognitive Dividend (Plate #60)",
+    subtitle: "WASHINGTON — 'It’s the richest table ever assembled.' President Trump gathers tech executives representing $1.8 trillion in concentrated AI net worth — including Elon Musk, Jensen Huang, Dario Amodei, and Greg Brockman. While Trump declares 'these big, powerful companies are going to be making massive contributions... it's going to be so good for the people,' ICEarth establishes that Indigenous Communities and the billions of individuals whose collective linguistic, cultural, and cognitive commons trained these foundation models must receive direct sovereign wealth equity, computational royalties, and zero-compromise data governance rather than oligarchic trickle-down charity.",
+    sourceUrl: 'https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/',
+    sourceName: 'New York Post (Sep 30, 2026) / ICEarth Sovereign Economics Consortium',
+    publishDate: '2026-09-30',
+    author: 'Ryan King (NY Post White House) • Sovereign Economics & Wealth Restitution Audit by Norman Roulet',
+    authorName: 'Ryan King (NY Post) with Sovereign IT Wealth Restitution Audit by Norman Roulet',
+    originState: 'Washington, DC • Palm Beach • Geneva • Jicarilla Apache Nation • Global Sovereign Web',
+    communities: [
+      'New York Post White House Press Corps',
+      'ICEarth Sovereign IT Research Consortium',
+      'Executive Office of the President of the United States',
+      'Jicarilla Apache Nation Sovereign IT Initiative',
+      'Indigenous Communities Earth Economic Directorate',
+      'Swiss Federal Sovereign Trust Network'
+    ],
+    vaultHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Sovereign Systems Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: trumpAiSummitPlateImg,
+    thumbnailUrl: trumpAiSummitPlateImg,
+    tags: [
+      'TrumpSummit',
+      'RichestTable',
+      'AIOligarchy',
+      'RouletsLaw',
+      'SovereignIT',
+      'Plate60',
+      'ElonMusk',
+      'JensenHuang',
+      'DarioAmodei',
+      'GregBrockman',
+      'CognitiveDividend',
+      'IndigenousWealth',
+      'ComputationalRoyalties'
+    ],
+    abstract: "Reporting from the White House, the New York Post documented what observers termed 'the richest table ever assembled' — an extraordinary convening of the world’s top artificial intelligence executives convened by President Donald Trump representing a collective market capitalization and personal valuation exceeding $1.8 trillion. Seated directly beside Trump was SpaceX, xAI, and Tesla near-trillionaire Elon Musk and Nvidia CEO Jensen Huang, with Anthropic founder Dario Amodei and OpenAI co-founder Greg Brockman flanking the forum, alongside Vice President JD Vance and House Speaker Mike Johnson. As Trump asserted that 'these big, powerful, very rich, very smart companies are going to be making massive contributions to communities... It’s going to be so good for the people,' ICEarth's Sovereign Economic Directorate issued a foundational counter-monograph: the entire $1.8 trillion valuation is built upon the stolen intellectual, cultural, oral, and written commons of Indigenous peoples and billions of human creators. Under Roulet's Law, corporate centralization strips raw cognitive value while externalizing biological chaos and energy burdens. The only ethical resolution is Sovereign IT: perpetual computational royalty dividends, data infomediary trust equity, and sovereign microgrid infrastructure owned directly by the communities.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'When Ryan King reports that Trump’s $1.8 trillion AI summit is the richest table ever assembled, every working human and Indigenous leader must ask one elementary question: Whose wealth is on that table? That $1.8 trillion was not created in a vacuum by six venture-backed men in Silicon Valley. Every single parameter, token, embedding, and synthetic capability inside xAI, OpenAI, Anthropic, and Nvidia was trained on the collective corpus of human civilization — our languages, our traditional ecological knowledge, our artistic expressions, our scientific publications, our medical records, and our sacred oral histories. Under Roulet’s Law, centralized extractive cartels harvest the commons without compensation, concentrate trillion-dollar windfall profits into a handful of boardrooms, and leave local towns with depleted groundwater, skyrocketing electric bills, and poisoned air. When Trump says these companies will make massive contributions to communities, history warns us against relying on the philanthropic benevolence of monopoly titans. Indigenous communities and normal citizens do not need corporate charity; we demand sovereign restitution. Through ICEarth Sovereign IT, communities hold the cryptographic keys, own the inference nodes, and mandate an irreversible Sovereign Cognitive Dividend on all AI model utilization.'",
+    fullExcerpt: `TRUMP’S $1.8 TRILLION AI SUMMIT TABLE: ALL THE EXECS WHO ANSWERED PRESIDENT’S CALL, AND WHAT THEY’RE WORTH
+By Ryan King (New York Post White House Correspondent) | Published Sep. 30, 2026, 5:55 p.m. ET
+Sovereign IT Forensic Audit & Cognitive Restitution Commentary by Norman Roulet
+Plate #60 Cryptographic Archive: PHOTO-000BT / IP-000BT | Sovereign Vault Hash: 0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026
+
+I. THE NEW YORK POST DISPATCH: THE RICHEST TABLE EVER ASSEMBLED
+WASHINGTON — It’s the richest table ever assembled.
+The summit illustrated Trump’s eagerness to have the federal government collaborate with and elevate the private sector, despite pressure he’s faced to regulate the industry more aggressively.
+“I just have to do what’s right,” he told reporters when asked about the dicy politics of AI.
+“All I can tell you is that these big, powerful, very rich, very smart companies are going to be making massive contributions to communities,” he added. “It’s going to be so good for the people.”
+Trump himself shared the table seating — with SpaceX, xAI and Tesla near-trillionaire Elon Musk to his right, Nvidia CEO Jensen Huang to his right and Vice President JD Vance and House Speaker Mike Johnson across the table from him.
+Anthropic founder Dario Amodei was near the right end of the table while OpenAI co-founder Greg Brockman sat roughly across from him.
+
+II. THE EXECUTIVE ROSTER & VALUATION BREAKDOWN ($1.8 TRILLION COMBINED NET WORTH)
+1. Elon Musk (Tesla, SpaceX, xAI): ~$450B - $800B personal net worth; controlling frontier compute clusters (Colossus 100k H100s/H200s).
+2. Jensen Huang (Nvidia): ~$125B personal net worth; $3.4T enterprise market cap supplying the monolithic silicon picks and shovels.
+3. Dario Amodei (Anthropic): Leading Claude models backed by Amazon and Google hyperscale commitments.
+4. Greg Brockman (OpenAI): President and co-founder driving ChatGPT/o1/o3 frontier models and multi-billion Stargate infrastructure.
+5. Co-Attendees: Key venture titans, cloud hyperscalers, alongside federal leadership (VP JD Vance, Speaker Mike Johnson).
+
+III. THE ICEARTH CRITIQUE: CORPORATE ENCLOSURE OF THE COGNITIVE COMMONS
+The foundational asset powering this $1.8 trillion table is not proprietary algorithmic wizardry—it is the uncompensated scraping and training on the collective linguistic, scientific, artistic, and cultural heritage of humanity, particularly Indigenous languages and oral traditions.
+While Wall Street celebrates astronomical paper wealth, the communities hosting the physical infrastructure face:
+- Subsidized megawatt drain driving up local utility rates.
+- Millions of gallons of potable water consumed per day for evaporative cooling towers.
+- Grid vulnerability and environmental sacrifice zones.
+
+IV. THE SOVEREIGN IT MANDATE: ROULET'S LAW & THE COGNITIVE DIVIDEND
+ICEarth proposes the only mathematically sound, anti-extractive remedy:
+1. Sovereign Cognitive Dividend: A mandatory 1.5% - 3% gross compute/inference dividend distributed directly to Indigenous and sovereign citizen data trusts.
+2. Zero-Compromise Local Enclaves: AI agents must execute inside user-owned, zero-knowledge Swiss hardware enclaves where users retain hardware root-of-trust.
+3. Community-Owned Compute Microgrids: Decentralized, closed-loop cooled, renewable microgrids governed by tribal elders, severing dependence on extractive hyperscalers.`
+  },
   {
     id: 'ART-SOVEREIGN-AI-AGENTS-NORMAL-PEOPLE-AXIOS-PLATE59-2026',
     contentType: 'Article',
@@ -5743,6 +5836,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('TrumpSummit') || article.tags?.includes('RichestTable') || article.tags?.includes('Plate60') || article.id.includes('TRUMP-1-8-TRILLION-AI-SUMMIT-TABLE')) && (
+                      <>
+                        <a
+                          href="https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <DollarSign size={13} className="text-stone-950 animate-pulse" />
+                          <span>NY Post White House Dispatch</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('TrumpSummit') || article.tags?.includes('RichestTable') || article.tags?.includes('Plate60') || article.id.includes('TRUMP-1-8-TRILLION-AI-SUMMIT-TABLE')) && (
+                      <button
+                        onClick={() => onNavigateTab('trump_ai_summit_table')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-500 via-stone-900 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                      >
+                        <DollarSign size={14} className="text-amber-300 animate-pulse" />
+                        <span>👑 Launch Trump $1.8T Summit Engine (Plate #60)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('AIAgents') || article.tags?.includes('NormalPeopleProblem') || article.tags?.includes('Plate59') || article.id.includes('AXIOS-AI-AGENTS-NORMAL-PEOPLE')) && (

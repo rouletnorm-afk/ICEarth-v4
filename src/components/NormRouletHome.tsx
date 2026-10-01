@@ -140,10 +140,29 @@ import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
+import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('trump_ai_summit') ||
+    u.includes('richest_table') ||
+    u.includes('1.8_trillion') ||
+    u.includes('1.8t') ||
+    u.includes('plate_60') ||
+    u.includes('plate60') ||
+    u.includes('plate #60') ||
+    u.includes('photo-000bt') ||
+    u.includes('ip-000bt') ||
+    u.includes('1790839148889') ||
+    u.includes('amodei') ||
+    u.includes('brockman') ||
+    u.includes('jensen_huang') ||
+    u.includes('summit_table')
+  ) {
+    return trumpAiSummitPlateImg;
+  }
   if (
     u.includes('sovereign_agents') ||
     u.includes('normal_people') ||
@@ -989,7 +1008,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution';
   date: string;
   summary: string;
   fullText: string;
@@ -1088,6 +1107,49 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-TRUMP-1-8-TRILLION-AI-SUMMIT-RICHEST-TABLE-2026',
+      title: "Trump’s $1.8 Trillion AI Summit Table: All the Execs Who Answered President’s Call & Why Sovereign Indigenous IT Demands Humanity’s Cognitive Dividend (Plate #60)",
+      category: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution',
+      date: '2026-09-30',
+      imageSrc: trumpAiSummitPlateImg,
+      publishedUrl: 'https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/',
+      summary: "WASHINGTON — 'It’s the richest table ever assembled.' President Trump gathers tech executives representing $1.8 trillion in net worth — including Elon Musk, Jensen Huang, Dario Amodei, and Greg Brockman. While Trump promises these companies will make 'massive contributions... so good for the people,' ICEarth establishes that Indigenous Communities and the billions of individuals whose collective cognitive commons trained these models must receive direct sovereign wealth equity, computational royalties, and zero-compromise governance rather than oligarchic trickle-down charity.",
+      fullText: `TRUMP’S $1.8 TRILLION AI SUMMIT TABLE: ALL THE EXECS WHO ANSWERED PRESIDENT’S CALL, AND WHAT THEY’RE WORTH
+By Ryan King (New York Post White House Correspondent) | Published Sep. 30, 2026, 5:55 p.m. ET
+Sovereign IT Forensic Audit & Cognitive Restitution Commentary by Norman Roulet
+Plate #60 Cryptographic Archive: PHOTO-000BT / IP-000BT | Sovereign Vault Hash: 0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026
+
+I. THE NEW YORK POST DISPATCH: THE RICHEST TABLE EVER ASSEMBLED
+WASHINGTON — It’s the richest table ever assembled.
+The summit illustrated Trump’s eagerness to have the federal government collaborate with and elevate the private sector, despite pressure he’s faced to regulate the industry more aggressively.
+“I just have to do what’s right,” he told reporters when asked about the dicy politics of AI.
+“All I can tell you is that these big, powerful, very rich, very smart companies are going to be making massive contributions to communities,” he added. “It’s going to be so good for the people.”
+Trump himself shared the table seating — with SpaceX, xAI and Tesla near-trillionaire Elon Musk to his right, Nvidia CEO Jensen Huang to his right and Vice President JD Vance and House Speaker Mike Johnson across the table from him.
+Anthropic founder Dario Amodei was near the right end of the table while OpenAI co-founder Greg Brockman sat roughly across from him.
+
+II. THE EXECUTIVE ROSTER & VALUATION BREAKDOWN ($1.8 TRILLION COMBINED NET WORTH)
+1. Elon Musk (Tesla, SpaceX, xAI): ~$450B - $800B personal net worth; controlling frontier compute clusters (Colossus 100k H100s/H200s).
+2. Jensen Huang (Nvidia): ~$125B personal net worth; $3.4T enterprise market cap supplying the monolithic silicon picks and shovels.
+3. Dario Amodei (Anthropic): Leading Claude models backed by Amazon and Google hyperscale commitments.
+4. Greg Brockman (OpenAI): President and co-founder driving ChatGPT/o1/o3 frontier models and multi-billion Stargate infrastructure.
+5. Co-Attendees: Key venture titans, cloud hyperscalers, alongside federal leadership (VP JD Vance, Speaker Mike Johnson).
+
+III. THE ICEARTH CRITIQUE: CORPORATE ENCLOSURE OF THE COGNITIVE COMMONS
+The foundational asset powering this $1.8 trillion table is not proprietary algorithmic wizardry—it is the uncompensated scraping and training on the collective linguistic, scientific, artistic, and cultural heritage of humanity, particularly Indigenous languages and oral traditions.
+While Wall Street celebrates astronomical paper wealth, the communities hosting the physical infrastructure face:
+- Subsidized megawatt drain driving up local utility rates.
+- Millions of gallons of potable water consumed per day for evaporative cooling towers.
+- Grid vulnerability and environmental sacrifice zones.
+
+IV. THE SOVEREIGN IT MANDATE: ROULET'S LAW & THE COGNITIVE DIVIDEND
+ICEarth proposes the only mathematically sound, anti-extractive remedy:
+1. Sovereign Cognitive Dividend: A mandatory 1.5% - 3% gross compute/inference dividend distributed directly to Indigenous and sovereign citizen data trusts.
+2. Zero-Compromise Local Enclaves: AI agents must execute inside user-owned, zero-knowledge Swiss hardware enclaves where users retain hardware root-of-trust.
+3. Community-Owned Compute Microgrids: Decentralized, closed-loop cooled, renewable microgrids governed by tribal elders, severing dependence on extractive hyperscalers.`,
+      tags: ['TrumpSummit', 'RichestTable', 'Plate60', 'ElonMusk', 'JensenHuang', 'DarioAmodei', 'GregBrockman', 'CognitiveDividend', 'IndigenousWealth', 'SovereignIT', 'RouletsLaw', 'Exposenomics'],
+      linkHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026'
+    },
     {
       id: 'MAG-SOVEREIGN-AI-AGENTS-NORMAL-PEOPLE-AXIOS-2026',
       title: "Axios Editorial: AI Agents Have a Normal-People Problem — Why Roulet’s Law & Sovereign IT Unlock Humanity’s Adoption (Plate #59)",
@@ -3481,6 +3543,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BT',
+      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled vs. Indigenous Sovereign Cognitive Dividend (Plate #60)",
+      category: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution',
+      imageSrc: trumpAiSummitPlateImg,
+      location: 'Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Trust',
+      date: '2026-09-30',
+      description: "Origins: Landmark sovereign economics and computational justice infographic plate auditing President Trump's September 30, 2026 White House AI summit with tech executives representing over $1.8 trillion in combined net worth (Elon Musk, Jensen Huang, Dario Amodei, Greg Brockman, alongside VP JD Vance and Speaker Mike Johnson). Audits the stark juxtaposition between Trump's declaration that 'these big, powerful, very rich companies are going to be making massive contributions to communities' and the historical reality of corporate data extraction under Roulet's Law. Demands the Sovereign Cognitive Dividend: establishing that the billions of individuals and Indigenous peoples whose languages, art, knowledge, and life data trained these frontier models must receive direct equity dividends, computational royalties, and non-custodial Swiss zero-knowledge data ownership rather than monopoly charity.",
+      vaultHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026',
+      tags: ['TrumpSummit', 'RichestTable', 'Plate60', 'ElonMusk', 'JensenHuang', 'DarioAmodei', 'GregBrockman', 'CognitiveDividend', 'IndigenousWealth', 'SovereignIT', 'RouletsLaw', 'Exposenomics']
+    },
     {
       id: 'PHOTO-000BS',
       title: "The Normal-People Problem: Why Sovereign IT & Roulet's Law Unlock Humanity's AI Adoption (Plate #59)",

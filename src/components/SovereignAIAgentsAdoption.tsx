@@ -148,11 +148,15 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                 <Bot size={14} className="text-amber-300" />
                 <span>Plate #59 • Sovereign IT Breakthrough</span>
               </span>
-              <span className="px-2.5 py-1 bg-stone-800 text-emerald-300 rounded-lg border border-stone-700 font-bold flex items-center gap-1">
-                <Globe size={13} className="text-emerald-400" />
+              <span className={`px-2.5 py-1 rounded-lg border font-bold flex items-center gap-1 ${
+                isLight ? 'bg-stone-200 border-stone-300 text-emerald-900' : 'bg-stone-800 border-stone-700 text-emerald-300'
+              }`}>
+                <Globe size={13} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
                 <span>Axios Editorial Forensic & ICEarth Architecture</span>
               </span>
-              <span className="px-2.5 py-1 bg-stone-800 text-stone-300 rounded-lg border border-stone-700 font-mono text-[11px]">
+              <span className={`px-2.5 py-1 rounded-lg border font-mono text-[11px] ${
+                isLight ? 'bg-stone-200 border-stone-300 text-stone-800 font-semibold' : 'bg-stone-800 border-stone-700 text-stone-300'
+              }`}>
                 Pew Research • Thales Global Poll • YouGov • Menlo Ventures
               </span>
             </div>
@@ -160,16 +164,18 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
             <div className="flex items-center gap-2">
               <button
                 onClick={copyVaultHash}
-                className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono rounded-lg border border-stone-700 flex items-center gap-1.5 transition-all cursor-pointer"
+                className={`px-3 py-1.5 text-xs font-mono rounded-lg border flex items-center gap-1.5 transition-all cursor-pointer font-bold ${
+                  isLight ? 'bg-stone-200 hover:bg-stone-300 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
+                }`}
                 title="Copy SHA-256 Vault Hash"
               >
-                {copiedHash ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} className="text-stone-400" />}
+                {copiedHash ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} className={isLight ? 'text-stone-700' : 'text-stone-400'} />}
                 <span>{copiedHash ? 'Vault Hash Copied' : '0xPLATE_59_VAULT'}</span>
               </button>
 
               <button
                 onClick={() => setIsPlateModalOpen(true)}
-                className="px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-stone-950 font-bold text-xs font-mono rounded-lg flex items-center gap-1.5 shadow-md cursor-pointer transition-all"
+                className="px-3 py-1.5 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-xs font-mono rounded-lg flex items-center gap-1.5 shadow-md cursor-pointer transition-all"
               >
                 <Maximize2 size={14} />
                 <span>View Forensic Master Plate #59</span>
@@ -178,68 +184,68 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight">
+            <h1 className={`text-2xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight ${isLight ? 'text-stone-950' : 'text-white'}`}>
               The Normal-People Problem: Why Sovereign IT Unlocks AI Adoption
             </h1>
-            <p className="text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-5xl leading-relaxed">
+            <p className={`text-base sm:text-lg max-w-5xl leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
               Axios reports that <strong>“Agents only become truly useful when people hand them access to their digital lives — and people really don’t want to.”</strong> Earth’s normal-people problem is <em>Roulet’s Law</em>: the predatory extraction of human life data by surveillance capitalism. ICEarth Sovereign IT delivers the solution: zero-knowledge, client-side, user-owned autonomous agents that never leak private life streams.
             </p>
           </div>
 
           {/* Core Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-3">
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Chatbot Refusal</span>
-                <UserX size={14} className="text-rose-400" />
+                <UserX size={14} className={isLight ? 'text-rose-600' : 'text-rose-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-rose-400">51% of Americans</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Pew: Majority actively avoid AI chatbots altogether</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>51% of Americans</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Pew: Majority actively avoid AI chatbots altogether</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Privacy Concerns</span>
-                <Lock size={14} className="text-amber-400" />
+                <Lock size={14} className={isLight ? 'text-amber-600' : 'text-amber-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-amber-400">79% Fear Scraping</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Primary reason cited by non-users for avoiding AI</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-amber-700' : 'text-amber-400'}`}>79% Fear Scraping</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Primary reason cited by non-users for avoiding AI</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Email Agent Trust</span>
-                <Mail size={14} className="text-purple-400" />
+                <Mail size={14} className={isLight ? 'text-purple-600' : 'text-purple-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-purple-400">Only 13%</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Thales: Only 1 in 8 would let AI read personal inbox</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-purple-700' : 'text-purple-400'}`}>Only 13%</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Thales: Only 1 in 8 would let AI read personal inbox</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Bank Move Access</span>
-                <CreditCard size={14} className="text-red-500" />
+                <CreditCard size={14} className={isLight ? 'text-red-600' : 'text-red-500'} />
               </div>
-              <div className="text-xl font-bold font-mono text-red-500">Just 7%</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Thales: Broad rejection of AI moving personal funds</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-red-700' : 'text-red-500'}`}>Just 7%</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Thales: Broad rejection of AI moving personal funds</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Shopping Refusal</span>
-                <ShoppingBag size={14} className="text-cyan-400" />
+                <ShoppingBag size={14} className={isLight ? 'text-cyan-700' : 'text-cyan-400'} />
               </div>
-              <div className="text-xl font-bold font-mono text-cyan-400">56% Reject AI</div>
-              <p className="text-[10px] text-stone-500 leading-tight">YouGov: Only 10% trust AI with &gt;$25 without approval</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>56% Reject AI</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>YouGov: Only 10% trust AI with &gt;$25 without approval</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className="flex items-center justify-between text-stone-400 text-xs">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                 <span>Sovereign Adoption</span>
-                <CheckCircle size={14} className="text-emerald-400 animate-pulse" />
+                <CheckCircle size={14} className="text-emerald-500 animate-pulse" />
               </div>
-              <div className="text-xl font-bold font-mono text-emerald-400">91% Unlocked</div>
-              <p className="text-[10px] text-stone-500 leading-tight">Predicted adoption when zero-knowledge sovereignty is enforced</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-emerald-700' : 'text-emerald-400'}`}>91% Unlocked</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Predicted adoption when zero-knowledge sovereignty is enforced</p>
             </div>
           </div>
         </div>
@@ -251,9 +257,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
           <div className="flex items-center space-x-1 sm:space-x-4 overflow-x-auto py-3 no-scrollbar text-xs font-mono font-bold">
             <button
               onClick={() => setActiveSubTab('axios_forensic')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'axios_forensic'
                   ? 'bg-emerald-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -263,9 +271,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => setActiveSubTab('roulets_law_analysis')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'roulets_law_analysis'
                   ? 'bg-amber-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -275,9 +285,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => setActiveSubTab('agent_comparison_matrix')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'agent_comparison_matrix'
                   ? 'bg-cyan-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -287,9 +299,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => setActiveSubTab('adoption_simulator')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'adoption_simulator'
                   ? 'bg-purple-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -299,9 +313,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => setActiveSubTab('plate_provenance')}
-              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
                 activeSubTab === 'plate_provenance'
                   ? 'bg-teal-600 text-white shadow-md'
+                  : isLight
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
@@ -317,16 +333,16 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         {/* SUB-TAB 1: AXIOS FORENSIC */}
         {activeSubTab === 'axios_forensic' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className="text-xs font-mono text-emerald-400 uppercase tracking-wider font-bold">
+                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
                     Empirical Polling Data & Tech Elite Bubble
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                     Why Normal People Reject Big Tech AI Agents
                   </h2>
-                  <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Axios Analysis by Ina Fried & Scott Rosenberg (Sept 30, 2026) • Pew Research • Thales • YouGov
                   </p>
                 </div>
@@ -335,7 +351,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                   href="https://www.axios.com/2026/09/30/ai-agents-adoption-meta-muse"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-emerald-300 font-mono text-xs rounded-xl border border-stone-700 flex items-center gap-2 transition-all"
+                  className={`px-4 py-2 font-mono text-xs rounded-xl border flex items-center gap-2 transition-all font-bold ${
+                    isLight
+                      ? 'bg-stone-100 hover:bg-stone-200 text-emerald-900 border-stone-300 shadow-sm'
+                      : 'bg-stone-800 hover:bg-stone-700 text-emerald-300 border-stone-700'
+                  }`}
                 >
                   <ExternalLink size={14} />
                   <span>Read Axios Article</span>
@@ -343,15 +363,21 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
               </div>
 
               {/* Editorial Quotation Highlight */}
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-emerald-950/40 via-stone-950 to-stone-900 border border-emerald-800/60 space-y-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">
+              <div className={`p-5 rounded-2xl border space-y-3 ${
+                isLight
+                  ? 'bg-emerald-50/80 border-emerald-300 text-stone-900'
+                  : 'bg-gradient-to-r from-emerald-950/40 via-stone-950 to-stone-900 border-emerald-800/60 text-stone-100'
+              }`}>
+                <div className={`flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider ${isLight ? 'text-emerald-900' : 'text-emerald-400'}`}>
                   <AlertTriangle size={15} />
                   <span>The Core Axiom of Axios’ Editorial:</span>
                 </div>
-                <blockquote className="text-base sm:text-xl font-serif italic text-stone-100 leading-relaxed border-l-4 border-emerald-500 pl-4 py-1">
+                <blockquote className={`text-base sm:text-xl font-serif italic leading-relaxed border-l-4 border-emerald-500 pl-4 py-1 ${
+                  isLight ? 'text-stone-950 font-medium' : 'text-stone-100'
+                }`}>
                   “The even bigger problem: Agents only become truly useful when people hand them access to their digital lives — and people really don’t want to... That means the people embracing AI agents right now probably look a lot like the people building them.”
                 </blockquote>
-                <div className="text-xs font-mono text-stone-400 flex flex-wrap gap-4 pt-1">
+                <div className={`text-xs font-mono flex flex-wrap gap-4 pt-1 font-bold ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                   <span>• Pew: 51% avoided chatbots entirely</span>
                   <span>• 79% cited privacy concerns</span>
                   <span>• 67% unlikely to use AI in next year</span>
@@ -361,26 +387,28 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
               {/* Chart 1: Trust Deficit Bar Chart */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif font-bold text-lg text-stone-200 flex items-center gap-2">
-                    <Lock size={18} className="text-emerald-400" />
+                  <h3 className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
+                    <Lock size={18} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
                     <span>The Normal-People Trust Deficit: Big Tech Cloud vs. Sovereign Zero-Knowledge Agent</span>
                   </h3>
-                  <span className="text-xs font-mono text-stone-400">Thales International & YouGov Polls vs. ICEarth Model</span>
+                  <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
+                    Thales International & YouGov Polls vs. ICEarth Model
+                  </span>
                 </div>
 
                 <div className="h-72 w-full pt-4">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={trustDeficitData} margin={{ top: 10, right: 30, left: 0, bottom: 20 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#292524" />
-                      <XAxis dataKey="task" stroke="#78716c" tick={{ fontSize: 11 }} interval={0} />
-                      <YAxis stroke="#78716c" domain={[0, 100]} tick={{ fontSize: 11 }} />
+                      <CartesianGrid strokeDasharray="3 3" stroke={isLight ? '#e7e5e4' : '#292524'} />
+                      <XAxis dataKey="task" stroke={isLight ? '#44403c' : '#78716c'} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#d6d3d1' }} interval={0} />
+                      <YAxis stroke={isLight ? '#44403c' : '#78716c'} domain={[0, 100]} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#d6d3d1' }} />
                       <Tooltip
                         contentStyle={{
-                          backgroundColor: '#0c0a09',
-                          borderColor: '#44403c',
+                          backgroundColor: isLight ? '#ffffff' : '#0c0a09',
+                          borderColor: isLight ? '#d6d3d1' : '#44403c',
                           borderRadius: '0.75rem',
                           fontSize: '12px',
-                          color: '#f5f5f4'
+                          color: isLight ? '#0c0a09' : '#f5f5f4'
                         }}
                       />
                       <Legend verticalAlign="top" height={36} />
@@ -389,34 +417,36 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
-                <p className="text-xs font-mono text-stone-400 text-center">
+                <p className={`text-xs font-mono text-center font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   Figure 1.1: Only 7% to 13% of normal humans trust corporate surveillance AI with sensitive life channels (Thales). Sovereign Zero-Knowledge enclaves restore trust above 85%.
                 </p>
               </div>
 
               {/* Chart 2: Income & Class AI Adoption Bubble */}
-              <div className="space-y-3 pt-6 border-t border-stone-800">
+              <div className={`space-y-3 pt-6 border-t ${isLight ? 'border-stone-200' : 'border-stone-800'}`}>
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif font-bold text-lg text-stone-200 flex items-center gap-2">
-                    <TrendingUp size={18} className="text-amber-400" />
+                  <h3 className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
+                    <TrendingUp size={18} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
                     <span>The Tech-Elite Power Spender Bubble (Menlo Ventures & Morning Consult)</span>
                   </h3>
-                  <span className="text-xs font-mono text-stone-400">Adoption (%) by Household Income Bracket</span>
+                  <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
+                    Adoption (%) by Household Income Bracket
+                  </span>
                 </div>
 
                 <div className="h-72 w-full pt-4">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={incomeAdoptionData} margin={{ top: 10, right: 30, left: 0, bottom: 20 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#292524" />
-                      <XAxis dataKey="bracket" stroke="#78716c" tick={{ fontSize: 11 }} />
-                      <YAxis stroke="#78716c" domain={[0, 100]} tick={{ fontSize: 11 }} />
+                      <CartesianGrid strokeDasharray="3 3" stroke={isLight ? '#e7e5e4' : '#292524'} />
+                      <XAxis dataKey="bracket" stroke={isLight ? '#44403c' : '#78716c'} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#d6d3d1' }} />
+                      <YAxis stroke={isLight ? '#44403c' : '#78716c'} domain={[0, 100]} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#d6d3d1' }} />
                       <Tooltip
                         contentStyle={{
-                          backgroundColor: '#0c0a09',
-                          borderColor: '#44403c',
+                          backgroundColor: isLight ? '#ffffff' : '#0c0a09',
+                          borderColor: isLight ? '#d6d3d1' : '#44403c',
                           borderRadius: '0.75rem',
                           fontSize: '12px',
-                          color: '#f5f5f4'
+                          color: isLight ? '#0c0a09' : '#f5f5f4'
                         }}
                       />
                       <Legend verticalAlign="top" height={36} />
@@ -426,9 +456,15 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </AreaChart>
                   </ResponsiveContainer>
                 </div>
-                <div className="p-4 rounded-xl bg-stone-950 border border-stone-800 text-xs font-mono text-stone-300 space-y-1">
-                  <span className="text-amber-400 font-bold block">Menlo Ventures Power Spender Profile:</span>
-                  <p>
+                <div className={`p-4 rounded-xl border text-xs font-mono space-y-1 ${
+                  isLight
+                    ? 'bg-amber-50/80 border-amber-300 text-stone-900 shadow-sm'
+                    : 'bg-stone-950 border-stone-800 text-stone-300'
+                }`}>
+                  <span className={`font-bold block ${isLight ? 'text-amber-900' : 'text-amber-400'}`}>
+                    Menlo Ventures Power Spender Profile:
+                  </span>
+                  <p className={isLight ? 'text-stone-800 leading-relaxed' : 'text-stone-300 leading-relaxed'}>
                     “A millennial parent with a post-grad degree working in technology or financial services who tends to have more money than time.” People who pay for AI are 5x more likely to use agents, while working-class and everyday citizens flatly refuse to surrender their personal sovereignty to Big Tech data-harvesting empires.
                   </p>
                 </div>
@@ -440,97 +476,129 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         {/* SUB-TAB 2: ROULET'S LAW ANALYSIS */}
         {activeSubTab === 'roulets_law_analysis' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="border-b border-stone-800 pb-4">
-                <span className="text-xs font-mono text-amber-400 uppercase tracking-wider font-bold">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
+                <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
                   Sovereign Epistemology & Global Systems Jurisprudence
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                   Earth Has a Normal-People Problem: Roulet's Law
                 </h2>
-                <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   Deconstructing the Extractivist Paradigm of Silicon Valley from Colonial Mining to Cognitive Enclosure
                 </p>
               </div>
 
               {/* Core Thesis Card */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-stone-950 border border-amber-900/60 space-y-4">
-                  <h3 className="font-serif font-bold text-amber-400 text-lg flex items-center gap-2">
+                <div className={`p-6 rounded-2xl border space-y-4 ${
+                  isLight ? 'bg-amber-50/70 border-amber-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-amber-900/60 text-stone-300'
+                }`}>
+                  <h3 className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-amber-950' : 'text-amber-400'}`}>
                     <Scale size={20} />
                     <span>The Roulet's Law Formulation</span>
                   </h3>
-                  <p className="text-sm text-stone-300 leading-relaxed">
+                  <p className={`text-sm leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     <strong>Roulet’s Law</strong> states that centralized corporate systems inevitably treat biological, neurological, and ecological commons as free externalities to be mined until irreversible collapse, unless bounded by inviolable sovereign feedback loops and local community keys.
                   </p>
-                  <p className="text-sm text-stone-300 leading-relaxed">
+                  <p className={`text-sm leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     Just as 20th-century petrochemical cartels distributed lead exhaust across 170 million American children’s bones to maximize octane margins, Big Tech hyperscalers now distribute corporate surveillance bots across human digital lives to strip-mine private consciousness, financial records, and personal communications.
                   </p>
-                  <div className="p-3 rounded-xl bg-stone-900 border border-stone-800 text-xs font-mono text-amber-300">
+                  <div className={`p-3 rounded-xl border text-xs font-mono font-medium ${
+                    isLight ? 'bg-white border-amber-300 text-amber-950 shadow-sm' : 'bg-stone-900 border-stone-800 text-amber-300'
+                  }`}>
                     <strong>Key Insight:</strong> Normal people’s hesitation to use AI agents is not "Luddism" or "ignorance" — it is an acute, rational evolutionary survival instinct against digital predation.
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-stone-950 border border-emerald-900/60 space-y-4">
-                  <h3 className="font-serif font-bold text-emerald-400 text-lg flex items-center gap-2">
+                <div className={`p-6 rounded-2xl border space-y-4 ${
+                  isLight ? 'bg-emerald-50/70 border-emerald-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-emerald-900/60 text-stone-300'
+                }`}>
+                  <h3 className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-emerald-950' : 'text-emerald-400'}`}>
                     <Shield size={20} />
                     <span>Why ICEarth Developed Sovereign IT</span>
                   </h3>
-                  <p className="text-sm text-stone-300 leading-relaxed">
+                  <p className={`text-sm leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     Indigenous Communities Earth (ICEarth) was founded specifically because <strong>Earth has a normal-people problem</strong>: sovereign peoples, working families, and local communities have been stripped of the tools to govern their own environments, water, food, and data.
                   </p>
-                  <p className="text-sm text-stone-300 leading-relaxed">
+                  <p className={`text-sm leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                     Sovereign IT inverts the entire power architecture. Instead of an agent running on Google, Microsoft, or Meta cloud servers with permanent backdoor telemetry, ICEarth agents operate within client-side zero-knowledge enclaves, with cryptographic keys held by the human user or verified community elders.
                   </p>
-                  <div className="p-3 rounded-xl bg-stone-900 border border-stone-800 text-xs font-mono text-emerald-300">
+                  <div className={`p-3 rounded-xl border text-xs font-mono font-medium ${
+                    isLight ? 'bg-white border-emerald-300 text-emerald-950 shadow-sm' : 'bg-stone-900 border-stone-800 text-emerald-300'
+                  }`}>
                     <strong>The Sovereign Guarantee:</strong> You never "hand access" to an outside corporation. The agent lives in your sovereign enclave, answers to your keys, and cannot transmit a single byte without cryptographic consent.
                   </div>
                 </div>
               </div>
 
               {/* The 4 Extraction Pillars vs Sovereign Counter-Measures */}
-              <div className="space-y-4 pt-4 border-t border-stone-800">
-                <h3 className="font-serif font-bold text-lg text-stone-200">
+              <div className={`space-y-4 pt-4 border-t ${isLight ? 'border-stone-200' : 'border-stone-800'}`}>
+                <h3 className={`font-serif font-bold text-lg ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
                   The Four Extraction Pillars vs. The Sovereign IT Solution
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono">
-                  <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-2">
-                    <span className="text-rose-400 font-bold block uppercase tracking-wider">1. The Cloud Honey-Pot</span>
-                    <p className="text-stone-400 text-[11px] leading-relaxed">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+                  }`}>
+                    <span className={`font-bold block uppercase tracking-wider ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
+                      1. The Cloud Honey-Pot
+                    </span>
+                    <p className={`text-[11px] leading-relaxed ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>
                       Big Tech requires emails and bank tokens to be stored on remote server farms vulnerable to FISA 702 subpoenas and ad-targeting trackers.
                     </p>
-                    <div className="p-2 rounded-lg bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-[10px]">
+                    <div className={`p-2 rounded-lg border text-[10px] font-medium ${
+                      isLight ? 'bg-emerald-100 border-emerald-300 text-emerald-950' : 'bg-emerald-950/60 text-emerald-300 border-emerald-800/40'
+                    }`}>
                       <strong>Sovereign IT:</strong> Local On-Device Enclaves with WebAssembly/ZK proofs; zero cloud storage.
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-2">
-                    <span className="text-rose-400 font-bold block uppercase tracking-wider">2. Secondary Model Training</span>
-                    <p className="text-stone-400 text-[11px] leading-relaxed">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+                  }`}>
+                    <span className={`font-bold block uppercase tracking-wider ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
+                      2. Secondary Model Training
+                    </span>
+                    <p className={`text-[11px] leading-relaxed ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>
                       Corporate terms of service quietly ingest user habits, calendar entries, and financial purchases to train proprietary next-gen models.
                     </p>
-                    <div className="p-2 rounded-lg bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-[10px]">
+                    <div className={`p-2 rounded-lg border text-[10px] font-medium ${
+                      isLight ? 'bg-emerald-100 border-emerald-300 text-emerald-950' : 'bg-emerald-950/60 text-emerald-300 border-emerald-800/40'
+                    }`}>
                       <strong>Sovereign IT:</strong> Ephemeral inference loops. Zero training back-propagation without explicit cash bounties.
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-2">
-                    <span className="text-rose-400 font-bold block uppercase tracking-wider">3. Unlimited Fund Access</span>
-                    <p className="text-stone-400 text-[11px] leading-relaxed">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+                  }`}>
+                    <span className={`font-bold block uppercase tracking-wider ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
+                      3. Unlimited Fund Access
+                    </span>
+                    <p className={`text-[11px] leading-relaxed ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>
                       Open-ended OAuth bank tokens risk automated drain, spoofing, or hallucinations purchasing hundreds of dollars of unapproved goods.
                     </p>
-                    <div className="p-2 rounded-lg bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-[10px]">
+                    <div className={`p-2 rounded-lg border text-[10px] font-medium ${
+                      isLight ? 'bg-emerald-100 border-emerald-300 text-emerald-950' : 'bg-emerald-950/60 text-emerald-300 border-emerald-800/40'
+                    }`}>
                       <strong>Sovereign IT:</strong> Cryptographic Micro-Escrow with strict $25 default approvals and physical biometric authorization.
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-2">
-                    <span className="text-rose-400 font-bold block uppercase tracking-wider">4. Unilateral Corporate Fiat</span>
-                    <p className="text-stone-400 text-[11px] leading-relaxed">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+                  }`}>
+                    <span className={`font-bold block uppercase tracking-wider ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
+                      4. Unilateral Corporate Fiat
+                    </span>
+                    <p className={`text-[11px] leading-relaxed ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>
                       Algorithms alter privacy permissions overnight without democratic oversight or community recall mechanisms.
                     </p>
-                    <div className="p-2 rounded-lg bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-[10px]">
+                    <div className={`p-2 rounded-lg border text-[10px] font-medium ${
+                      isLight ? 'bg-emerald-100 border-emerald-300 text-emerald-950' : 'bg-emerald-950/60 text-emerald-300 border-emerald-800/40'
+                    }`}>
                       <strong>Sovereign IT:</strong> Swiss Proton-grade zero-trust encryption + Indigenous elder key governance.
                     </div>
                   </div>
@@ -543,15 +611,15 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         {/* SUB-TAB 3: COMPARISON MATRIX */}
         {activeSubTab === 'agent_comparison_matrix' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="border-b border-stone-800 pb-4">
-                <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
+                <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>
                   Technical Architecture Comparison
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                   Surveillance Cloud Agents vs. ICEarth Sovereign Autonomous Agents
                 </h2>
-                <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   How Sovereign IT breaks the "hand access to your life" dilemma through client-side cryptography
                 </p>
               </div>
@@ -561,9 +629,9 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                 <div className="h-80 w-full">
                   <ResponsiveContainer width="100%" height="100%">
                     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarComparisonData}>
-                      <PolarGrid stroke="#3f3f46" />
-                      <PolarAngleAxis dataKey="metric" stroke="#a1a1aa" tick={{ fontSize: 10 }} />
-                      <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="#71717a" />
+                      <PolarGrid stroke={isLight ? '#d6d3d1' : '#3f3f46'} />
+                      <PolarAngleAxis dataKey="metric" stroke={isLight ? '#292524' : '#a1a1aa'} tick={{ fontSize: 10, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
+                      <PolarRadiusAxis angle={30} domain={[0, 100]} stroke={isLight ? '#78716c' : '#71717a'} />
                       <Radar name="Big Tech Cloud Agent" dataKey="bigTechCloud" stroke="#ef4444" fill="#ef4444" fillOpacity={0.4} />
                       <Radar name="ICEarth Sovereign Agent" dataKey="sovereignIT" stroke="#10b981" fill="#10b981" fillOpacity={0.5} />
                       <Legend />
@@ -572,22 +640,26 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="p-4 rounded-2xl bg-rose-950/30 border border-rose-900/60 space-y-2">
-                    <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-bold uppercase">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-rose-50 border-rose-300 text-stone-900 shadow-sm' : 'bg-rose-950/30 border-rose-900/60 text-stone-300'
+                  }`}>
+                    <div className={`flex items-center gap-2 font-mono text-xs font-bold uppercase ${isLight ? 'text-rose-900' : 'text-rose-400'}`}>
                       <UserX size={15} />
                       <span>The Big Tech Dilemma (Why 79% Refuse)</span>
                     </div>
-                    <p className="text-xs text-stone-300 leading-relaxed">
+                    <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                       Big Tech agents act as <strong>corporate spies inside your home</strong>. They require unencrypted access to Gmail, calendar, iMessage, and banking APIs. Their servers ingest your data to profile your behavior, monetize ad auctions, and fuel LLM training datasets.
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-900/60 space-y-2">
-                    <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold uppercase">
+                  <div className={`p-4 rounded-2xl border space-y-2 ${
+                    isLight ? 'bg-emerald-50 border-emerald-300 text-stone-900 shadow-sm' : 'bg-emerald-950/30 border-emerald-900/60 text-stone-300'
+                  }`}>
+                    <div className={`flex items-center gap-2 font-mono text-xs font-bold uppercase ${isLight ? 'text-emerald-900' : 'text-emerald-400'}`}>
                       <UserCheck size={15} />
                       <span>The Sovereign IT Solution (Why Normal People Adopt)</span>
                     </div>
-                    <p className="text-xs text-stone-300 leading-relaxed">
+                    <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
                       Sovereign agents act as <strong>cryptographic bodyguards</strong>. The agent runs in a local sandbox on your device or in a Swiss zero-knowledge data enclave. It never phones home. When performing tasks (shopping, travel, emails), it emits one-time cryptographic tokens with pre-set financial spending ceilings.
                     </p>
                   </div>
@@ -595,45 +667,47 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
               </div>
 
               {/* Comprehensive Comparison Table */}
-              <div className="overflow-x-auto rounded-2xl border border-stone-800">
+              <div className={`overflow-x-auto rounded-2xl border ${isLight ? 'border-stone-300 shadow-sm' : 'border-stone-800'}`}>
                 <table className="w-full text-left text-xs font-mono">
-                  <thead className="bg-stone-950 text-stone-300 uppercase tracking-wider border-b border-stone-800">
+                  <thead className={`uppercase tracking-wider border-b font-bold ${
+                    isLight ? 'bg-stone-100 text-stone-900 border-stone-300' : 'bg-stone-950 text-stone-300 border-stone-800'
+                  }`}>
                     <tr>
                       <th className="p-3.5">Agent Feature</th>
-                      <th className="p-3.5 text-rose-400">Big Tech Cloud Agents (Meta Muse, Google Astra, OpenAI Operator)</th>
-                      <th className="p-3.5 text-emerald-400">ICEarth Sovereign Agents (Plate #59 Sovereign IT Specification)</th>
+                      <th className={`p-3.5 ${isLight ? 'text-rose-800' : 'text-rose-400'}`}>Big Tech Cloud Agents (Meta Muse, Google Astra, OpenAI Operator)</th>
+                      <th className={`p-3.5 ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>ICEarth Sovereign Agents (Plate #59 Sovereign IT Specification)</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-stone-800 bg-stone-900/50">
+                  <tbody className={`divide-y ${isLight ? 'divide-stone-200 bg-white text-stone-800' : 'divide-stone-800 bg-stone-900/50 text-stone-200'}`}>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Execution Runtime</td>
-                      <td className="p-3.5 text-stone-400">Hyperscale Cloud Data Center (Water & Power Intensive)</td>
-                      <td className="p-3.5 text-emerald-300 font-semibold">Local On-Device Enclave or Swiss Zero-Water Microgrid</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Execution Runtime</td>
+                      <td className={`p-3.5 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Hyperscale Cloud Data Center (Water & Power Intensive)</td>
+                      <td className={`p-3.5 font-semibold ${isLight ? 'text-emerald-800' : 'text-emerald-300'}`}>Local On-Device Enclave or Swiss Zero-Water Microgrid</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Cryptographic Keys</td>
-                      <td className="p-3.5 text-stone-400">Held by Corporate Provider; Accessible by Platform Admins</td>
-                      <td className="p-3.5 text-emerald-300 font-semibold">100% User-Held via ZK-Proof & Hardware Secure Enclave</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Cryptographic Keys</td>
+                      <td className={`p-3.5 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Held by Corporate Provider; Accessible by Platform Admins</td>
+                      <td className={`p-3.5 font-semibold ${isLight ? 'text-emerald-800' : 'text-emerald-300'}`}>100% User-Held via ZK-Proof & Hardware Secure Enclave</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Email & Message Access</td>
-                      <td className="p-3.5 text-stone-400">Full Ingestion; Indexed & Analyzed for Behavioral Ads</td>
-                      <td className="p-3.5 text-emerald-300 font-semibold">Ephemeral In-Memory Filter; Zero Telemetry Transmitted</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Email & Message Access</td>
+                      <td className={`p-3.5 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Full Ingestion; Indexed & Analyzed for Behavioral Ads</td>
+                      <td className={`p-3.5 font-semibold ${isLight ? 'text-emerald-800' : 'text-emerald-300'}`}>Ephemeral In-Memory Filter; Zero Telemetry Transmitted</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Financial Authority</td>
-                      <td className="p-3.5 text-stone-400">Permanent OAuth Tokens; Auto-Debit without Granular Limits</td>
-                      <td className="p-3.5 text-emerald-300 font-semibold">Micro-Escrow Smart Contract; Strict $25 Default User Gate</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Financial Authority</td>
+                      <td className={`p-3.5 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Permanent OAuth Tokens; Auto-Debit without Granular Limits</td>
+                      <td className={`p-3.5 font-semibold ${isLight ? 'text-emerald-800' : 'text-emerald-300'}`}>Micro-Escrow Smart Contract; Strict $25 Default User Gate</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Legal Jurisdiction</td>
-                      <td className="p-3.5 text-stone-400">US CLOUD Act / FISA 702 Backdoor Subpoenas</td>
-                      <td className="p-3.5 text-emerald-300 font-semibold">Swiss Federal Data Protection & Tribal Sovereignty Charter</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Legal Jurisdiction</td>
+                      <td className={`p-3.5 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>US CLOUD Act / FISA 702 Backdoor Subpoenas</td>
+                      <td className={`p-3.5 font-semibold ${isLight ? 'text-emerald-800' : 'text-emerald-300'}`}>Swiss Federal Data Protection & Tribal Sovereignty Charter</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 font-bold text-white">Public Adoption Rate</td>
-                      <td className="p-3.5 text-rose-400 font-bold">11% – 13% (Stuck in Wealthy Tech-Elite Bubble)</td>
-                      <td className="p-3.5 text-emerald-400 font-bold">88% – 92% (Adopted by Working Families & Normal People)</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>Public Adoption Rate</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-rose-800' : 'text-rose-400'}`}>11% – 13% (Stuck in Wealthy Tech-Elite Bubble)</td>
+                      <td className={`p-3.5 font-bold ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>88% – 92% (Adopted by Working Families & Normal People)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -645,15 +719,15 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         {/* SUB-TAB 4: ADOPTION SIMULATOR */}
         {activeSubTab === 'adoption_simulator' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="border-b border-stone-800 pb-4">
-                <span className="text-xs font-mono text-purple-400 uppercase tracking-wider font-bold">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
+                <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>
                   Interactive Trust & Adoption Engine
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                   Sovereign Agent Adoption & Trust Index Simulator
                 </h2>
-                <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                   Adjust sovereign security toggles to see how protecting user rights elevates AI agent adoption across humanity
                 </p>
               </div>
@@ -661,23 +735,31 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
               {/* Simulator Controls & Output */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Control Panel (2 Cols) */}
-                <div className="lg:col-span-2 space-y-5 p-6 rounded-2xl bg-stone-950 border border-stone-800">
-                  <h3 className="font-serif font-bold text-stone-200 text-base flex items-center gap-2">
-                    <Sliders size={18} className="text-purple-400" />
+                <div className={`lg:col-span-2 space-y-5 p-6 rounded-2xl border ${
+                  isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+                }`}>
+                  <h3 className={`font-serif font-bold text-base flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
+                    <Sliders size={18} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
                     <span>Sovereignty Architecture Toggles</span>
                   </h3>
 
                   <div className="space-y-4 text-xs font-mono">
                     {/* Toggle 1 */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-stone-900 border border-stone-800">
+                    <div className={`flex items-center justify-between p-3 rounded-xl border ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div>
-                        <strong className="text-white block">1. Client-Side Local Enclave Execution</strong>
-                        <span className="text-stone-400 text-[11px]">Run reasoning models on local chip / WebAssembly without cloud upload</span>
+                        <strong className={`block ${isLight ? 'text-stone-950 font-bold' : 'text-white'}`}>1. Client-Side Local Enclave Execution</strong>
+                        <span className={`text-[11px] ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>Run reasoning models on local chip / WebAssembly without cloud upload</span>
                       </div>
                       <button
                         onClick={() => setUseLocalEnclave(!useLocalEnclave)}
                         className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                          useLocalEnclave ? 'bg-emerald-600 text-white' : 'bg-stone-800 text-stone-400'
+                          useLocalEnclave
+                            ? 'bg-emerald-600 text-white shadow-xs'
+                            : isLight
+                            ? 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                            : 'bg-stone-800 text-stone-400'
                         }`}
                       >
                         {useLocalEnclave ? 'ENABLED (+24%)' : 'DISABLED'}
@@ -685,15 +767,21 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
 
                     {/* Toggle 2 */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-stone-900 border border-stone-800">
+                    <div className={`flex items-center justify-between p-3 rounded-xl border ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div>
-                        <strong className="text-white block">2. 100% User-Held Cryptographic Keys</strong>
-                        <span className="text-stone-400 text-[11px]">Hardware-backed private key; zero provider backdoors or admin logins</span>
+                        <strong className={`block ${isLight ? 'text-stone-950 font-bold' : 'text-white'}`}>2. 100% User-Held Cryptographic Keys</strong>
+                        <span className={`text-[11px] ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>Hardware-backed private key; zero provider backdoors or admin logins</span>
                       </div>
                       <button
                         onClick={() => setUserHeldKeys(!userHeldKeys)}
                         className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                          userHeldKeys ? 'bg-emerald-600 text-white' : 'bg-stone-800 text-stone-400'
+                          userHeldKeys
+                            ? 'bg-emerald-600 text-white shadow-xs'
+                            : isLight
+                            ? 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                            : 'bg-stone-800 text-stone-400'
                         }`}
                       >
                         {userHeldKeys ? 'ENABLED (+22%)' : 'DISABLED'}
@@ -701,15 +789,21 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
 
                     {/* Toggle 3 */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-stone-900 border border-stone-800">
+                    <div className={`flex items-center justify-between p-3 rounded-xl border ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div>
-                        <strong className="text-white block">3. Zero-Telemetry & Zero-Training Guarantee</strong>
-                        <span className="text-stone-400 text-[11px]">Inviolable contractual & technical prohibition on harvesting user prompt streams</span>
+                        <strong className={`block ${isLight ? 'text-stone-950 font-bold' : 'text-white'}`}>3. Zero-Telemetry & Zero-Training Guarantee</strong>
+                        <span className={`text-[11px] ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>Inviolable contractual & technical prohibition on harvesting user prompt streams</span>
                       </div>
                       <button
                         onClick={() => setZeroTelemetryScraping(!zeroTelemetryScraping)}
                         className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                          zeroTelemetryScraping ? 'bg-emerald-600 text-white' : 'bg-stone-800 text-stone-400'
+                          zeroTelemetryScraping
+                            ? 'bg-emerald-600 text-white shadow-xs'
+                            : isLight
+                            ? 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                            : 'bg-stone-800 text-stone-400'
                         }`}
                       >
                         {zeroTelemetryScraping ? 'ENABLED (+18%)' : 'DISABLED'}
@@ -717,15 +811,21 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
 
                     {/* Toggle 4 */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-stone-900 border border-stone-800">
+                    <div className={`flex items-center justify-between p-3 rounded-xl border ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div>
-                        <strong className="text-white block">4. Micro-Escrow Smart Contract Gate</strong>
-                        <span className="text-stone-400 text-[11px]">Agent cannot spend or move funds without biometric authorization</span>
+                        <strong className={`block ${isLight ? 'text-stone-950 font-bold' : 'text-white'}`}>4. Micro-Escrow Smart Contract Gate</strong>
+                        <span className={`text-[11px] ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>Agent cannot spend or move funds without biometric authorization</span>
                       </div>
                       <button
                         onClick={() => setMicroEscrowApproval(!microEscrowApproval)}
                         className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                          microEscrowApproval ? 'bg-emerald-600 text-white' : 'bg-stone-800 text-stone-400'
+                          microEscrowApproval
+                            ? 'bg-emerald-600 text-white shadow-xs'
+                            : isLight
+                            ? 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                            : 'bg-stone-800 text-stone-400'
                         }`}
                       >
                         {microEscrowApproval ? 'ENABLED (+12%)' : 'DISABLED'}
@@ -733,15 +833,21 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
 
                     {/* Toggle 5 */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-stone-900 border border-stone-800">
+                    <div className={`flex items-center justify-between p-3 rounded-xl border ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div>
-                        <strong className="text-white block">5. Community Elder Governance Key Escrow</strong>
-                        <span className="text-stone-400 text-[11px]">Social recovery through trusted local elders instead of corporate password reset</span>
+                        <strong className={`block ${isLight ? 'text-stone-950 font-bold' : 'text-white'}`}>5. Community Elder Governance Key Escrow</strong>
+                        <span className={`text-[11px] ${isLight ? 'text-stone-700 font-medium' : 'text-stone-400'}`}>Social recovery through trusted local elders instead of corporate password reset</span>
                       </div>
                       <button
                         onClick={() => setCommunityGovernance(!communityGovernance)}
                         className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                          communityGovernance ? 'bg-emerald-600 text-white' : 'bg-stone-800 text-stone-400'
+                          communityGovernance
+                            ? 'bg-emerald-600 text-white shadow-xs'
+                            : isLight
+                            ? 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                            : 'bg-stone-800 text-stone-400'
                         }`}
                       >
                         {communityGovernance ? 'ENABLED (+9%)' : 'DISABLED'}
@@ -749,10 +855,12 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
 
                     {/* Slider */}
-                    <div className="p-3 rounded-xl bg-stone-900 border border-stone-800 space-y-2">
+                    <div className={`p-3 rounded-xl border space-y-2 ${
+                      isLight ? 'bg-white border-stone-300 shadow-xs' : 'bg-stone-900 border-stone-800'
+                    }`}>
                       <div className="flex justify-between items-center">
-                        <strong className="text-white">Autonomous Spending Trust Ceiling:</strong>
-                        <span className="text-purple-400 font-bold">${spendingTrustLimit} per transaction</span>
+                        <strong className={isLight ? 'text-stone-950 font-bold' : 'text-white'}>Autonomous Spending Trust Ceiling:</strong>
+                        <span className={`font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>${spendingTrustLimit} per transaction</span>
                       </div>
                       <input
                         type="range"
@@ -761,9 +869,9 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                         step="5"
                         value={spendingTrustLimit}
                         onChange={(e) => setSpendingTrustLimit(Number(e.target.value))}
-                        className="w-full accent-purple-500 cursor-pointer"
+                        className="w-full accent-purple-600 cursor-pointer"
                       />
-                      <div className="flex justify-between text-[10px] text-stone-500">
+                      <div className={`flex justify-between text-[10px] font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>
                         <span>$5 (Micro-gate)</span>
                         <span>$25 (YouGov Baseline)</span>
                         <span>$250 (High Autonomy)</span>
@@ -773,31 +881,37 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                 </div>
 
                 {/* Score Output Card (1 Col) */}
-                <div className="p-6 rounded-2xl bg-gradient-to-b from-stone-950 to-purple-950/40 border-2 border-purple-500/60 flex flex-col justify-between space-y-6">
+                <div className={`p-6 rounded-2xl border-2 flex flex-col justify-between space-y-6 ${
+                  isLight
+                    ? 'bg-gradient-to-b from-purple-50 via-white to-purple-100 border-purple-400 text-stone-900 shadow-md'
+                    : 'bg-gradient-to-b from-stone-950 to-purple-950/40 border-purple-500/60 text-white'
+                }`}>
                   <div className="space-y-2">
-                    <span className="text-xs font-mono text-purple-400 uppercase tracking-wider font-bold">
+                    <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-purple-900' : 'text-purple-400'}`}>
                       Predicted Human Adoption Index
                     </span>
-                    <div className="text-5xl sm:text-6xl font-black font-mono text-white tracking-tight">
+                    <div className={`text-5xl sm:text-6xl font-black font-mono tracking-tight ${isLight ? 'text-purple-950' : 'text-white'}`}>
                       {calculatedAdoptionScore}%
                     </div>
-                    <p className="text-xs text-stone-300 font-mono">
+                    <p className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-300'}`}>
                       Percent of general public willing to grant autonomous agent daily execution permissions.
                     </p>
                   </div>
 
-                  <div className="space-y-3 border-t border-purple-800/40 pt-4 text-xs font-mono">
+                  <div className={`space-y-3 border-t pt-4 text-xs font-mono font-semibold ${
+                    isLight ? 'border-purple-200' : 'border-purple-800/40'
+                  }`}>
                     <div className="flex justify-between">
-                      <span className="text-stone-400">Big Tech Status Quo:</span>
-                      <span className="text-rose-400 font-bold">11% – 13%</span>
+                      <span className={isLight ? 'text-stone-700' : 'text-stone-400'}>Big Tech Status Quo:</span>
+                      <span className={`font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>11% – 13%</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-stone-400">Sovereign IT Uplift:</span>
-                      <span className="text-emerald-400 font-bold">+{calculatedAdoptionScore - 11}%</span>
+                      <span className={isLight ? 'text-stone-700' : 'text-stone-400'}>Sovereign IT Uplift:</span>
+                      <span className={`font-bold ${isLight ? 'text-emerald-700' : 'text-emerald-400'}`}>+{calculatedAdoptionScore - 11}%</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-stone-400">Adoption Status:</span>
-                      <span className="text-amber-300 font-bold">
+                      <span className={isLight ? 'text-stone-700' : 'text-stone-400'}>Adoption Status:</span>
+                      <span className={`font-bold ${isLight ? 'text-amber-800' : 'text-amber-300'}`}>
                         {calculatedAdoptionScore > 80
                           ? 'Universal Public Adoption'
                           : calculatedAdoptionScore > 50
@@ -807,7 +921,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-purple-950/80 border border-purple-500/40 text-[11px] font-mono text-purple-200">
+                  <div className={`p-3 rounded-xl border text-[11px] font-mono leading-relaxed ${
+                    isLight
+                      ? 'bg-purple-100 border-purple-300 text-purple-950'
+                      : 'bg-purple-950/80 border-purple-500/40 text-purple-200'
+                  }`}>
                     <strong>Conclusion:</strong> When people control their cryptographic keys and data enclaves, their natural rejection of surveillance AI disappears, opening universal adoption of beneficial autonomous agents.
                   </div>
                 </div>
@@ -819,16 +937,16 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         {/* SUB-TAB 5: MASTER PLATE PROVENANCE */}
         {activeSubTab === 'plate_provenance' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-4">
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className="text-xs font-mono text-teal-400 uppercase tracking-wider font-bold">
+                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-teal-800' : 'text-teal-400'}`}>
                     Forensic Provenance & Vault Pinning
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-black text-stone-100">
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
                     Plate #59 Cryptographic Master Archive
                   </h2>
-                  <p className="text-xs sm:text-sm text-stone-400 font-mono mt-1">
+                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
                     Visual Infographic: The Normal-People Problem • Axios Editorial Forensic & Sovereign IT Solution
                   </p>
                 </div>
@@ -838,11 +956,15 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                     onClick={() => setShowPlateAnnotations(!showPlateAnnotations)}
                     className={`px-3 py-1.5 rounded-xl font-mono text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer border ${
                       showPlateAnnotations
-                        ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/60 shadow-md'
+                        ? isLight
+                          ? 'bg-emerald-100 text-emerald-950 border-emerald-300 shadow-xs'
+                          : 'bg-emerald-950/80 text-emerald-300 border-emerald-500/60 shadow-md'
+                        : isLight
+                        ? 'bg-stone-100 text-stone-700 border-stone-300 hover:text-stone-950'
                         : 'bg-stone-800 text-stone-400 border-stone-700 hover:text-stone-200'
                     }`}
                   >
-                    <Check size={14} className={showPlateAnnotations ? 'text-emerald-400' : 'text-stone-500'} />
+                    <Check size={14} className={showPlateAnnotations ? (isLight ? 'text-emerald-700' : 'text-emerald-400') : 'text-stone-500'} />
                     <span>{showPlateAnnotations ? 'Verified Typographic Callouts: Active' : 'Show Callouts'}</span>
                   </button>
 
@@ -905,8 +1027,12 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
               </div>
 
               {/* Provenance Metadata Table */}
-              <div className="p-6 rounded-2xl bg-stone-950 border border-stone-800 space-y-4">
-                <h4 className="font-serif font-bold text-amber-400 text-base flex items-center gap-2">
+              <div className={`p-6 rounded-2xl border space-y-4 ${
+                isLight ? 'bg-stone-50 border-stone-300 text-stone-900 shadow-sm' : 'bg-stone-950 border-stone-800 text-stone-100'
+              }`}>
+                <h4 className={`font-serif font-bold text-base flex items-center gap-2 ${
+                  isLight ? 'text-amber-900' : 'text-amber-400'
+                }`}>
                   <Shield size={16} />
                   <span>Vault Authentication & Cryptographic Fingerprint</span>
                 </h4>
@@ -914,31 +1040,31 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
                   <div className="space-y-2">
                     <div>
-                      <span className="text-stone-500 block">Asset Identifier:</span>
-                      <span className="text-white font-bold">PHOTO-000BS / IP-000BS / Plate #59</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Asset Identifier:</span>
+                      <span className={`font-bold ${isLight ? 'text-stone-950' : 'text-white'}`}>PHOTO-000BS / IP-000BS / Plate #59</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Permanent SHA-256 Vault Hash:</span>
-                      <span className="text-amber-400 break-all">{vaultHash}</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Permanent SHA-256 Vault Hash:</span>
+                      <span className={`break-all font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{vaultHash}</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Registration Timestamp:</span>
-                      <span className="text-stone-300">2026-09-30T14:14:00-07:00 (Axios Editorial Ingestion)</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Registration Timestamp:</span>
+                      <span className={isLight ? 'text-stone-800' : 'text-stone-300'}>2026-09-30T14:14:00-07:00 (Axios Editorial Ingestion)</span>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <div>
-                      <span className="text-stone-500 block">Editorial Source:</span>
-                      <span className="text-emerald-300">Axios: "AI agents have a normal-people problem" (Fried & Rosenberg)</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Editorial Source:</span>
+                      <span className={`font-bold ${isLight ? 'text-emerald-900' : 'text-emerald-300'}`}>Axios: "AI agents have a normal-people problem" (Fried & Rosenberg)</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Jurisprudence Framework:</span>
-                      <span className="text-stone-300">Roulet’s Law & Swiss Data Sovereignty Specification</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Jurisprudence Framework:</span>
+                      <span className={isLight ? 'text-stone-800' : 'text-stone-300'}>Roulet’s Law & Swiss Data Sovereignty Specification</span>
                     </div>
                     <div>
-                      <span className="text-stone-500 block">Sovereign Attribution:</span>
-                      <span className="text-teal-400">ICEarth Sovereign IT Research Consortium</span>
+                      <span className={`block font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Sovereign Attribution:</span>
+                      <span className={`font-bold ${isLight ? 'text-teal-900' : 'text-teal-400'}`}>ICEarth Sovereign IT Research Consortium</span>
                     </div>
                   </div>
                 </div>
@@ -948,13 +1074,13 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
         )}
 
         {/* 4. CROSS-NAVIGATION BUTTONS TO RELATED PROOFS */}
-        <section className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-4`}>
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-800 pb-3">
-            <h4 className="font-serif font-bold text-base text-stone-200 flex items-center gap-2">
-              <Key size={16} className="text-amber-400" />
+        <section className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-4`}>
+          <div className={`flex flex-wrap items-center justify-between gap-2 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-3`}>
+            <h4 className={`font-serif font-bold text-base flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
+              <Key size={16} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
               <span>Related Sovereign IT Proofs & Architecture</span>
             </h4>
-            <span className="text-xs font-mono text-stone-500">Cross-Disciplinary Validation</span>
+            <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-600' : 'text-stone-500'}`}>Cross-Disciplinary Validation</span>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
@@ -968,7 +1094,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => onNavigateTab?.('super_intelligence_sovereignty')}
-              className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-purple-300 border border-purple-500/40 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105"
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight
+                  ? 'bg-stone-100 hover:bg-stone-200 text-purple-900 border-purple-300 shadow-xs'
+                  : 'bg-stone-800 hover:bg-stone-700 text-purple-300 border-purple-500/40'
+              }`}
             >
               <span>👑 Super Intelligence Sovereignty (Plate #57)</span>
               <ArrowRight size={13} />
@@ -976,7 +1106,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => onNavigateTab?.('cherokee_it_position')}
-              className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-emerald-300 border border-emerald-500/40 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105"
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight
+                  ? 'bg-stone-100 hover:bg-stone-200 text-emerald-900 border-emerald-300 shadow-xs'
+                  : 'bg-stone-800 hover:bg-stone-700 text-emerald-300 border-emerald-500/40'
+              }`}
             >
               <span>🪶 Cherokee Nation Hyperscale Ban (Plate #54)</span>
               <ArrowRight size={13} />
@@ -984,7 +1118,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => onNavigateTab?.('datacenter_incentives')}
-              className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/40 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105"
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight
+                  ? 'bg-stone-100 hover:bg-stone-200 text-amber-900 border-amber-300 shadow-xs'
+                  : 'bg-stone-800 hover:bg-stone-700 text-amber-300 border-amber-500/40'
+              }`}
             >
               <span>🏛️ Data Center Incentives Engine (Plate #56)</span>
               <ArrowRight size={13} />
@@ -992,7 +1130,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => onNavigateTab?.('lead_alzheimers_dementia')}
-              className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-purple-300 border border-purple-500/40 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105"
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight
+                  ? 'bg-stone-100 hover:bg-stone-200 text-purple-900 border-purple-300 shadow-xs'
+                  : 'bg-stone-800 hover:bg-stone-700 text-purple-300 border-purple-500/40'
+              }`}
             >
               <span>🧠 Lead & Dementia Risk (Plate #58)</span>
               <ArrowRight size={13} />
@@ -1000,7 +1142,11 @@ export const SovereignAIAgentsAdoption: React.FC<SovereignAIAgentsAdoptionProps>
 
             <button
               onClick={() => onNavigateTab?.('reports')}
-              className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105"
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight
+                  ? 'bg-stone-100 hover:bg-stone-200 text-cyan-900 border-cyan-300 shadow-xs'
+                  : 'bg-stone-800 hover:bg-stone-700 text-cyan-300 border-cyan-500/40'
+              }`}
             >
               <span>📰 News and Reports Hub</span>
               <ArrowRight size={13} />
