@@ -163,6 +163,7 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
   const [showDispatchSuccess, setShowDispatchSuccess] = useState<boolean>(false);
   const [showPodcastTranscript, setShowPodcastTranscript] = useState<boolean>(false);
   const [showEditorLetter, setShowEditorLetter] = useState<boolean>(false);
+  const [showOct3Editorial, setShowOct3Editorial] = useState<boolean>(false);
 
   // Financial Estimates for Cleveland
   const confirmedLeadCount = 82000;
@@ -1590,6 +1591,95 @@ export const ClevelandLeadAudit: React.FC<ClevelandLeadAuditProps> = ({ onNaviga
                 Read Citizens Declaration & Analysis &rarr;
               </button>
             </div>
+          </div>
+
+          {/* OCTOBER 3, 2026 EPILOGUE & CIVIC HYPOCRISY AUDIT: "JUSTIN BIBB, GET UP AND LEAD" */}
+          <div className="p-6 bg-gradient-to-r from-red-950 via-stone-900 to-rose-950 text-white rounded-2xl border-2 border-red-500 shadow-xl space-y-4 my-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-red-500/40">
+              <div className="space-y-1">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-2.5 py-1 bg-red-600 text-white font-mono text-[10px] font-black rounded uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                    <AlertTriangle size={13} className="text-white" />
+                    <span>OCTOBER 3, 2026 LATEST EDITORIAL EPILOGUE</span>
+                  </span>
+                  <span className="px-2 py-0.5 bg-rose-900/60 border border-rose-500/40 text-rose-200 font-mono text-[10px] font-bold rounded">
+                    Letter from Editor Chris Quinn • cleveland.com / The Plain Dealer
+                  </span>
+                </div>
+                <h4 className="text-xl sm:text-2xl font-serif font-black text-rose-100 leading-tight">
+                  "Justin Bibb, get up and lead. Cleveland’s children need you" — The Plain Dealer’s Final Hypocrisy
+                </h4>
+                <p className="text-xs text-rose-200/90 font-sans max-w-4xl leading-relaxed">
+                  On October 3, 2026, Plain Dealer Editor Chris Quinn published an impassioned public letter addressed directly to Cleveland Mayor Justin Bibb. While placing the entire civic failure on Bibb, Quinn explicitly refused to demand financial restitution from polluter Sherwin-Williams ("Our series did not ask Sherwin-Williams to shoulder the cost"), suggested Bibb get "schooling" from former Mayor Frank Jackson (who sabotaged the Motley Rice lawsuit and ousted East Cleveland Mayor Eric Brewer), and praised giving Sherwin-Williams over $100M in public tax subsidies while thousands of children suffer irreversible brain damage.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+                <button
+                  onClick={() => setShowOct3Editorial(!showOct3Editorial)}
+                  className="px-4 py-2 bg-stone-800 hover:bg-stone-700 text-white font-sans font-bold text-xs rounded-xl uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer shadow-md transition-all border border-stone-600"
+                >
+                  <FileText size={13} />
+                  <span>{showOct3Editorial ? 'Hide Verbatim Letter' : 'Read Verbatim Letter'}</span>
+                </button>
+                <button
+                  onClick={() => onNavigateTab?.('cleveland_hypocrisy')}
+                  className="px-4 py-2 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-sans font-black text-xs rounded-xl uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer shadow-lg transition-all ring-2 ring-red-400/50 hover:scale-105"
+                >
+                  <Gavel size={14} />
+                  <span>Launch Cleveland Hypocrisy Engine (Plate #61) &rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Collapsible Verbatim Letter & Exposenomics Analysis */}
+            {showOct3Editorial && (
+              <div className="p-5 bg-black/60 rounded-xl border border-red-500/30 space-y-4 font-sans text-xs leading-relaxed animate-fadeIn">
+                <div className="flex items-center justify-between border-b border-stone-800 pb-2">
+                  <span className="font-mono text-[11px] text-rose-300 font-bold">
+                    Official Published Transcript: cleveland.com / The Plain Dealer (Oct. 03, 2026, 8:05 a.m.)
+                  </span>
+                  <a
+                    href="https://www.cleveland.com/news/2026/10/justin-bibb-get-up-and-lead-clevelands-children-need-you-letter-from-the-editor.html?outputType=amp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-400 hover:text-red-300 font-mono text-[10px] underline flex items-center gap-1"
+                  >
+                    <span>Original Source</span>
+                    <ExternalLink size={10} />
+                  </a>
+                </div>
+
+                <div className="space-y-3 text-stone-300 font-serif italic text-xs sm:text-sm">
+                  <p>"Whenever we discuss the lack of leadership in Ohio and Greater Cleveland, readers respond passionately. They want people they can trust to put the public first."</p>
+                  <p>"No issue exposes our leadership failure more starkly than the lead paint crisis. Cleveland children continue to be poisoned in their homes, suffering brain damage that significantly impairs their ability to learn and thrive for the rest of their lives."</p>
+                  <p className="p-3 bg-red-950/40 border-l-2 border-red-500 rounded-r text-red-200 not-italic font-sans">
+                    <strong>The First Contradiction:</strong> <em>"Our series did not ask Sherwin-Williams to shoulder the cost of solving the crisis. The people running the company today did not make those sinister decisions generations ago. But they can help determine what happens next... We asked the company to fill Greater Cleveland’s glaring leadership void and oversee a cleanup."</em>
+                  </p>
+                  <p>"We proposed a team of people in our region who know how to get things done: Sherwin-Williams CEO Heidi Petz, Browns owners Dee and Jimmy Haslam, Cavaliers owner and developer Dan Gilbert, Cleveland Clinic CEO Tom Mihaljevic, Cleveland Foundation chief Lillian Kuri and entrepreneur Ray Leach. And Cleveland Mayor Justin Bibb, who bears a particular responsibility for bringing them together."</p>
+                  <p className="p-3 bg-purple-950/40 border-l-2 border-purple-500 rounded-r text-purple-200 not-italic font-sans">
+                    <strong>The Historical Revisionism:</strong> <em>"Bibb needs to sit down with former Mayor Frank Jackson for some schooling about the power of his office to assemble people who can solve difficult problems... Jackson knew that if he called leaders to the table to tackle a challenge, they would show up. I wish Jackson had used that power to end the lead paint crisis. Bibb still can."</em> — <strong>ICEarth Note:</strong> Frank Jackson actively killed the Motley Rice lawsuit and ousted East Cleveland Mayor Eric Brewer who initiated the legal battle!
+                  </p>
+                  <p className="p-3 bg-amber-950/40 border-l-2 border-amber-500 rounded-r text-amber-200 not-italic font-sans">
+                    <strong>Billionaire Charity vs. Justice:</strong> <em>"Last month, the Haslams gave $10 million to the Rock & Roll Hall of Fame’s expansion. Why?... How many homes could we rid of lead hazards with $10 million? How many children will grow up in those homes over the next 50 years? Children we could save? But I’m not asking the Haslams and the others for money. I’m asking for their time and expertise."</em>
+                  </p>
+                  <p>"I know the blame for this continuing crisis reaches in many directions, including here. On the first day of our series, I acknowledged that we had not previously examined Sherwin-Williams’ role. I’ve been here for 30 years, 20 in a leadership role, and I had not made this the priority it deserved to be."</p>
+                  <p className="font-bold text-white not-italic">
+                    "Justin Bibb, get up and lead. The kids need you. Use the power of your office to assemble a team, set a timetable and make the results public. Give this crisis the urgency those children deserve."
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-stone-800 flex justify-end">
+                  <button
+                    onClick={() => onNavigateTab?.('cleveland_hypocrisy')}
+                    className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-mono font-bold text-xs rounded-lg flex items-center gap-1.5 cursor-pointer shadow"
+                  >
+                    <span>View Full Forensic Audit in Dedicated Cleveland Lead Hypocrisy Section</span>
+                    <ArrowRight size={13} />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="pt-4 border-t border-indigo-200/50 text-[11px] text-indigo-900 italic font-medium flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">

@@ -68,7 +68,8 @@ import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
-import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
+import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
+import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import {
   Shield,
   UserCheck,
@@ -201,13 +202,23 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
 
   const [memberMediaIp, setMemberMediaIp] = useState([
     {
+      id: 'IP-000BU',
+      title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",
+      type: 'Lead Exposenomics, Corporate Liability & Media Accountability IP Asset',
+      imageSrc: clevelandHypocrisyPlateImg,
+      link: 'cleveland_hypocrisy',
+      sourceUrl: 'https://www.cleveland.com/news/2026/10/justin-bibb-get-up-and-lead-clevelands-children-need-you-letter-from-the-editor.html?outputType=amp',
+      description: "Plate #61: Comprehensive forensic exposenomics audit of Plain Dealer Editor Chris Quinn's Oct 3, 2026 letter telling Mayor Justin Bibb 'get up and lead.' Features the four historic betrayals of Cleveland democracy: (1) Sherwin-Williams' 100-year marketing of toxic lead pigments and evasion of Ohio liability despite California's $305M judgment; (2) Then-Mayor Frank Jackson killing the Motley Rice lead lawsuit and the political ouster of East Cleveland Mayor Eric Brewer; (3) The granting of over $100M in public tax subsidies to build Sherwin-Williams' downtown skyscraper while 1,000+ Cleveland children are poisoned annually; (4) The 4th Estate's complete refusal to demand financial restitution from the corporate polluter. Explains why GCLAC co-chair Norm Roulet physically departed Ohio and formulated Roulet's Law and ICEarth.",
+      sovereignHash: '0xCLEVELAND_LEAD_HYPOCRISY_PLAIN_DEALER_SHERWIN_WILLIAMS_PLATE_61_VAULT_2026'
+    },
+    {
       id: 'IP-000BT',
-      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled vs. Indigenous Sovereign Cognitive Dividend (Plate #60)",
-      type: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution IP Asset',
-      imageSrc: trumpAiSummitPlateImg,
+      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled (Plate #60)",
+      type: 'Sovereign Economics, AI Wealth Distribution & Indigenous Restitution IP Asset',
+      imageSrc: trumpAiSummitOfficialImg,
       link: 'trump_ai_summit_table',
       sourceUrl: 'https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/',
-      description: "Origins: Landmark sovereign economics and computational justice infographic plate auditing President Trump's September 30, 2026 White House AI summit with tech executives representing over $1.8 trillion in combined net worth (Elon Musk, Jensen Huang, Dario Amodei, Greg Brockman, alongside VP JD Vance and Speaker Mike Johnson). Audits the stark juxtaposition between Trump's declaration that 'these big, powerful, very rich companies are going to be making massive contributions to communities' and the historical reality of corporate data extraction under Roulet's Law. Demands the Sovereign Cognitive Dividend: establishing that the billions of individuals and Indigenous peoples whose languages, art, knowledge, and life data trained these frontier models must receive direct equity dividends, computational royalties, and non-custodial Swiss zero-knowledge data ownership rather than monopoly charity.",
+      description: "Official New York Post photograph of President Donald Trump convening 13 technology CEOs at the White House representing over $1.84 trillion in combined net worth, including Elon Musk, Jeff Bezos, Mark Zuckerberg, and Jensen Huang. Illustrates the imperative for Indigenous communities and creators to share in the economic value of AI models trained on human knowledge.",
       sovereignHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026'
     },
     {

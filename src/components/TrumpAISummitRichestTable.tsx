@@ -1,32 +1,20 @@
 import React, { useState } from 'react';
-import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
+import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
 import {
   Shield,
   DollarSign,
   Users,
-  Lock,
   Cpu,
-  TrendingUp,
-  AlertTriangle,
-  Scale,
   Building,
   Check,
   Copy,
   ExternalLink,
-  ChevronRight,
   Maximize2,
-  FileText,
   Sliders,
-  Sparkles,
   ArrowRight,
-  PieChart,
   Landmark,
-  Coins,
   Crown,
-  Share2,
-  Award,
-  CircleDollarSign,
-  Factory
+  CircleDollarSign
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -36,9 +24,6 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
-  Legend,
-  PieChart as RechartsPieChart,
-  Pie,
   Cell
 } from 'recharts';
 
@@ -55,22 +40,21 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
 
   // Sub-tab navigation
   const [activeSubTab, setActiveSubTab] = useState<
-    'richest_table_forensic' | 'seating_and_net_worth' | 'data_extraction_paradox' | 'sovereign_dividend_simulator' | 'plate_provenance'
-  >('richest_table_forensic');
+    'summit_overview' | 'ceo_roster_ledger' | 'cognitive_commons' | 'dividend_simulator' | 'provenance'
+  >('summit_overview');
 
   // Vault hash copy state
   const [copiedHash, setCopiedHash] = useState(false);
-  const vaultHash = '0x60A1F78D32E549B89C230491EF3978BD728A37549C012F4902B7854EFB60718A';
+  const vaultHash = '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026';
 
   // Interactive full resolution artwork modal
   const [isPlateModalOpen, setIsPlateModalOpen] = useState(false);
-  const [showPlateAnnotations, setShowPlateAnnotations] = useState(true);
 
   // Sovereign Dividend Simulator interactive state
-  const [globalAiMarketCapTrillions, setGlobalAiMarketCapTrillions] = useState<number>(1.8);
-  const [sovereignDataRoyaltyPercent, setSovereignDataRoyaltyPercent] = useState<number>(3.5);
-  const [communityPopulationMillions, setCommunityPopulationMillions] = useState<number>(470); // Global Indigenous & Local Population
-  const [watershedRemediationSharePercent, setWatershedRemediationSharePercent] = useState<number>(30);
+  const [globalAiMarketCapTrillions, setGlobalAiMarketCapTrillions] = useState<number>(1.84);
+  const [sovereignDataRoyaltyPercent, setSovereignDataRoyaltyPercent] = useState<number>(3.0);
+  const [communityPopulationMillions, setCommunityPopulationMillions] = useState<number>(470);
+  const [cleanMicrogridSharePercent, setCleanMicrogridSharePercent] = useState<number>(40);
 
   const copyVaultHash = () => {
     navigator.clipboard.writeText(vaultHash);
@@ -78,118 +62,172 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
     setTimeout(() => setCopiedHash(false), 2500);
   };
 
-  // Seating List & Net Worth at the White House Table (Sep. 30, 2026)
+  // Seating List & Net Worth at the White House Table (Official NY Post Infographic Roster)
   const summitTableAttendees = [
     {
       name: 'Elon Musk',
-      role: 'CEO & Founder, xAI, Tesla, SpaceX',
-      netWorthBillions: 485,
-      marketCapTrillions: 1.15,
-      seatingPosition: 'Right of President Trump',
-      companyValuation: '$50B (xAI) / $850B (Tesla)',
-      quote: '"We are building digital superintelligence at an exponential trajectory."',
+      company: 'X, Tesla, SpaceX, xAI',
+      role: 'CEO & Founder',
+      netWorthBillions: 929.9,
+      companyCategory: 'Frontier AI, Robotics, Space & Compute Clusters',
       color: '#F59E0B'
     },
     {
+      name: 'Jeff Bezos',
+      company: 'Amazon / Blue Origin',
+      role: 'Founder & Executive Chairman',
+      netWorthBillions: 370.2,
+      companyCategory: 'AWS Cloud Infrastructure & Frontier Compute',
+      color: '#F97316'
+    },
+    {
+      name: 'Mark Zuckerberg',
+      company: 'Meta',
+      role: 'Founder & CEO',
+      netWorthBillions: 249.4,
+      companyCategory: 'Llama Open Models & Hyperscale Infrastructure',
+      color: '#3B82F6'
+    },
+    {
       name: 'Jensen Huang',
-      role: 'President & CEO, NVIDIA',
-      netWorthBillions: 135,
-      marketCapTrillions: 3.42,
-      seatingPosition: 'Immediate Right Flank',
-      companyValuation: '$3.42T (NVIDIA)',
-      quote: '"The next industrial revolution has begun—every nation needs sovereign AI factories."',
+      company: 'Nvidia',
+      role: 'President & CEO',
+      netWorthBillions: 199.4,
+      companyCategory: 'GPU Hardware, CUDA Architecture & AI Silicon',
       color: '#10B981'
     },
     {
-      name: 'Donald J. Trump',
-      role: '45th & 47th President of the United States',
-      netWorthBillions: 6.5,
-      marketCapTrillions: 0.0,
-      seatingPosition: 'Head of Table (Center)',
-      companyValuation: 'Executive Power',
-      quote: '"These big, powerful, very rich, very smart companies are going to be making massive contributions to communities. It\'s going to be so good for the people."',
-      color: '#EF4444'
-    },
-    {
-      name: 'JD Vance',
-      role: 'Vice President of the United States',
-      netWorthBillions: 0.015,
-      marketCapTrillions: 0.0,
-      seatingPosition: 'Across from President Trump',
-      companyValuation: 'Executive Branch',
-      quote: '"We want domestic American dominance in AI compute and energy production."',
-      color: '#8B5CF6'
-    },
-    {
-      name: 'Mike Johnson',
-      role: 'Speaker of the US House of Representatives',
-      netWorthBillions: 0.005,
-      marketCapTrillions: 0.0,
-      seatingPosition: 'Across Table from Trump',
-      companyValuation: 'Legislative Branch',
-      quote: '"Congress will ensure America stays ahead without burdensome federal mandates."',
-      color: '#6366F1'
-    },
-    {
       name: 'Greg Brockman',
-      role: 'President & Co-Founder, OpenAI',
-      netWorthBillions: 1.8,
-      marketCapTrillions: 0.157,
-      seatingPosition: 'Opposite Amodei',
-      companyValuation: '$157B (OpenAI)',
-      quote: '"AGI requires tens of gigawatts and unprecedented capital cooperation."',
+      company: 'OpenAI',
+      role: 'President & Co-Founder',
+      netWorthBillions: 25.5,
+      companyCategory: 'ChatGPT, o1/o3 Frontier Reasoning Models',
       color: '#06B6D4'
     },
     {
+      name: 'Alex Karp',
+      company: 'Palantir',
+      role: 'CEO & Co-Founder',
+      netWorthBillions: 20.2,
+      companyCategory: 'Enterprise AI Operations & Defense Intelligence',
+      color: '#6366F1'
+    },
+    {
       name: 'Dario Amodei',
-      role: 'CEO & Co-Founder, Anthropic',
-      netWorthBillions: 1.2,
-      marketCapTrillions: 0.045,
-      seatingPosition: 'Right End of Table',
-      companyValuation: '$45B (Anthropic)',
-      quote: '"Models in 2027 could exceed human experts across all disciplines."',
+      company: 'Anthropic',
+      role: 'CEO & Co-Founder',
+      netWorthBillions: 15.5,
+      companyCategory: 'Claude Frontier Models & AI Alignment',
       color: '#EC4899'
+    },
+    {
+      name: 'Tom Brown',
+      company: 'Anthropic',
+      role: 'Co-Founder',
+      netWorthBillions: 15.5,
+      companyCategory: 'Frontier Language Model Architecture',
+      color: '#D946EF'
+    },
+    {
+      name: 'Lisa Su',
+      company: 'AMD',
+      role: 'Chair & CEO',
+      netWorthBillions: 3.3,
+      companyCategory: 'MI300 AI Accelerators & High-Performance Silicon',
+      color: '#8B5CF6'
+    },
+    {
+      name: 'Nikesh Arora',
+      company: 'Palo Alto Networks',
+      role: 'CEO & Chairman',
+      netWorthBillions: 1.8,
+      companyCategory: 'Enterprise AI Cybersecurity & Cloud Defense',
+      color: '#14B8A6'
+    },
+    {
+      name: 'Sundar Pichai',
+      company: 'Google / Alphabet',
+      role: 'CEO',
+      netWorthBillions: 1.6,
+      companyCategory: 'Gemini Models, TPU Hardware & Search Index',
+      color: '#EAB308'
+    },
+    {
+      name: 'Satya Nadella',
+      company: 'Microsoft',
+      role: 'Chairman & CEO',
+      netWorthBillions: 1.4,
+      companyCategory: 'Azure Cloud, Copilot & OpenAI Infrastructure',
+      color: '#0284C7'
+    },
+    {
+      name: 'Sanjay Mehrotra',
+      company: 'Micron',
+      role: 'President & CEO',
+      netWorthBillions: 1.4,
+      companyCategory: 'High-Bandwidth Memory (HBM) for AI Accelerators',
+      color: '#84CC16'
     }
   ];
 
-  // Market Cap vs Sovereign Distribution Breakdown Data
-  const wealthDistributionComparison = [
-    { sector: '6 Summit Tech Giants Market Cap', value: 5200, fill: '#8B5CF6' },
-    { sector: 'Summit Execs Combined Net Worth', value: 1800, fill: '#F59E0B' },
-    { sector: 'Total Global Indigenous Revenue Share from AI Training', value: 0.001, fill: '#EF4444' },
-    { sector: 'ICEarth Proposed Annual Sovereign Equity Fund (3.5%)', value: 63, fill: '#10B981' }
+  // Government & Summit Hosts
+  const summitHosts = [
+    {
+      name: 'Donald J. Trump',
+      title: 'President of the United States',
+      role: 'Summit Host & Convener',
+      quote: '"These big, powerful, very rich, very smart companies are going to be making massive contributions to communities. It\'s going to be so good for the people."'
+    },
+    {
+      name: 'JD Vance',
+      title: 'Vice President of the United States',
+      role: 'Administration Leadership',
+      quote: '"We want domestic American dominance in AI compute and energy production."'
+    },
+    {
+      name: 'Mike Johnson',
+      title: 'Speaker of the House of Representatives',
+      role: 'Congressional Leadership',
+      quote: '"Congress will ensure America stays ahead without burdensome federal mandates."'
+    }
   ];
+
+  // Chart data: Net worth comparison of CEOs
+  const ceoWealthChartData = summitTableAttendees.map((att) => ({
+    name: att.name.split(' ')[1] || att.name,
+    fullName: att.name,
+    company: att.company,
+    netWorth: att.netWorthBillions,
+    color: att.color
+  }));
 
   // Calculations for Simulator
   const totalRoyaltyBillions = (globalAiMarketCapTrillions * 1000) * (sovereignDataRoyaltyPercent / 100);
-  const watershedRemediationBillions = totalRoyaltyBillions * (watershedRemediationSharePercent / 100);
-  const directCommunityDividendBillions = totalRoyaltyBillions - watershedRemediationBillions;
-  const annualDividendPerCapitaDollars = Math.round((directCommunityDividendBillions * 1e9) / (communityPopulationMillions * 1e6));
+  const cleanMicrogridBillions = totalRoyaltyBillions * (cleanMicrogridSharePercent / 100);
+  const directCommunityDividendsBillions = totalRoyaltyBillions - cleanMicrogridBillions;
+  const annualDividendPerPerson = Math.round((directCommunityDividendsBillions * 1000000000) / (communityPopulationMillions * 1000000));
 
   return (
     <div className={`min-h-screen ${isLight ? 'bg-stone-50 text-stone-900' : 'bg-stone-950 text-stone-100'} transition-colors duration-300 font-sans`}>
       {/* 1. TOP HEADER & METADATA HERO BANNER */}
-      <section className={`border-b ${isLight ? 'bg-gradient-to-r from-amber-900/10 via-stone-100 to-emerald-900/10 border-stone-200' : 'bg-gradient-to-r from-amber-950/40 via-stone-900 to-purple-950/30 border-stone-800'} px-4 sm:px-6 lg:px-8 py-8 relative overflow-hidden`}>
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
+      <section className={`border-b ${isLight ? 'bg-white border-stone-200 shadow-sm' : 'bg-stone-900/90 border-stone-800'} px-4 sm:px-6 lg:px-8 py-8 relative overflow-hidden`}>
+        <div className="max-w-7xl mx-auto space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
               <span className="px-3 py-1 bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 font-black rounded-lg uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
                 <Crown size={14} className="text-stone-950" />
-                <span>Plate #60 • Sovereign Wealth & AI Justice</span>
+                <span>Plate #60 • Sovereign Wealth & AI Restitution</span>
               </span>
               <span className={`px-2.5 py-1 rounded-lg border font-bold flex items-center gap-1 ${
-                isLight ? 'bg-stone-200 border-stone-300 text-amber-950' : 'bg-stone-800 border-stone-700 text-amber-300'
+                isLight ? 'bg-stone-100 border-stone-300 text-amber-950' : 'bg-stone-800 border-stone-700 text-amber-300'
               }`}>
                 <Landmark size={13} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
-                <span>The Richest Table in Human History ($1.8 Trillion)</span>
+                <span>The Richest Table Ever Assembled ($1.84 Trillion)</span>
               </span>
               <span className={`px-2.5 py-1 rounded-lg border font-mono text-[11px] font-semibold ${
-                isLight ? 'bg-stone-200 border-stone-300 text-stone-800' : 'bg-stone-800 border-stone-700 text-stone-300'
+                isLight ? 'bg-stone-100 border-stone-300 text-stone-800' : 'bg-stone-800 border-stone-700 text-stone-300'
               }`}>
-                White House Summit • NY Post Forensic • Sep. 30, 2026
+                White House Summit • Sep. 30, 2026 • NY Post Official Photo
               </span>
             </div>
 
@@ -197,7 +235,7 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
               <button
                 onClick={copyVaultHash}
                 className={`px-3 py-1.5 text-xs font-mono rounded-lg border flex items-center gap-1.5 transition-all cursor-pointer font-bold ${
-                  isLight ? 'bg-stone-200 hover:bg-stone-300 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
+                  isLight ? 'bg-stone-100 hover:bg-stone-200 text-stone-900 border-stone-300' : 'bg-stone-800 hover:bg-stone-700 text-stone-200 border-stone-700'
                 }`}
                 title="Copy SHA-256 Vault Hash"
               >
@@ -210,151 +248,133 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                 className="px-3 py-1.5 bg-gradient-to-r from-amber-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 text-white font-bold text-xs font-mono rounded-lg flex items-center gap-1.5 shadow-md cursor-pointer transition-all"
               >
                 <Maximize2 size={14} />
-                <span>View Forensic Master Plate #60</span>
+                <span>View Full Photo</span>
               </button>
             </div>
           </div>
 
           <div className="space-y-2">
             <h1 className={`text-2xl sm:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight ${isLight ? 'text-stone-950' : 'text-white'}`}>
-              Trump’s $1.8 Trillion AI Summit Table: Whose Intelligence Built the Richest Table in History?
+              Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled
             </h1>
             <p className={`text-base sm:text-lg max-w-5xl leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
-              WASHINGTON — As Donald Trump assembled Elon Musk, Jensen Huang, Greg Brockman, and Dario Amodei for the richest meeting in world history, the core sovereign truth emerges: <strong>Indigenous Communities and individuals who authored human intelligence must share in these trillions in generated value.</strong>
+              WASHINGTON — President Donald Trump convened the richest executive table in history, assembling 13 technology leaders with a combined net worth of over $1.84 Trillion. The core question for humanity and Indigenous communities: <strong>Whose knowledge and intelligence built the models powering these trillions, and how should that value be shared?</strong>
             </p>
           </div>
 
           {/* Core Metrics Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-3">
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-1`}>
               <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>Table Wealth</span>
+                <span>Total Exec Net Worth</span>
                 <DollarSign size={14} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
               </div>
-              <div className={`text-xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>$1.8 Trillion</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Combined personal net worth of seated executives</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>$1.84 Trillion</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>13 CEOs pictured in the official NY Post photo</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-1`}>
               <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>Market Cap Represented</span>
-                <Building size={14} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
+                <span>Top Net Worth Leader</span>
+                <Crown size={14} className={isLight ? 'text-purple-700' : 'text-purple-400'} />
               </div>
-              <div className={`text-xl font-bold font-mono ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>$5.2 Trillion</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>NVIDIA, Tesla/xAI, OpenAI, Anthropic aggregate value</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>Elon Musk (~$929.9B)</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Tesla, SpaceX, xAI, X</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-1`}>
               <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>Origin Data Source</span>
+                <span>Training Data Origin</span>
                 <Users size={14} className={isLight ? 'text-cyan-700' : 'text-cyan-400'} />
               </div>
               <div className={`text-xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>All Humanity</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Centuries of collective language, culture, art & science</p>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Languages, literature, science & Indigenous cultural heritage</p>
             </div>
 
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
+            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-stone-50 border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-1`}>
               <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>Indigenous Share Today</span>
-                <AlertTriangle size={14} className="text-red-500 animate-pulse" />
+                <span>Proposed Sovereign Dividend</span>
+                <Shield size={14} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
               </div>
-              <div className={`text-xl font-bold font-mono ${isLight ? 'text-red-700' : 'text-red-400'}`}>$0.00 (0.0%)</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Uncompensated extraction of cultural & linguistic corpora</p>
-            </div>
-
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>ICEarth Proposed Dividend</span>
-                <Coins size={14} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
-              </div>
-              <div className={`text-xl font-bold font-mono ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>3.5% Royalty</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>$63 Billion annual sovereign perpetual trust fund</p>
-            </div>
-
-            <div className={`p-3.5 rounded-xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900/90 border-stone-800'} space-y-1`}>
-              <div className={`flex items-center justify-between text-xs font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                <span>Infrastructure Drain</span>
-                <Factory size={14} className={isLight ? 'text-rose-700' : 'text-rose-400'} />
-              </div>
-              <div className={`text-xl font-bold font-mono ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>Aquifers & Grid</div>
-              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Billions of gallons extracted from local water tables</p>
+              <div className={`text-xl font-bold font-mono ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>3.0% Royalty ($55B/yr)</div>
+              <p className={`text-[10px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Direct community dividend & clean microgrid trust</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. SUB-TAB NAVIGATION */}
-      <div className={`border-b ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900/80 border-stone-800'} sticky top-0 z-20 backdrop-blur-md`}>
+      {/* 2. SUB-NAVIGATION TABS */}
+      <div className={`border-b ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} sticky top-0 z-30 shadow-xs`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-1 sm:space-x-4 overflow-x-auto py-3 no-scrollbar text-xs font-mono font-bold">
+          <div className="flex overflow-x-auto gap-2 py-2 text-xs font-mono scrollbar-none">
             <button
-              onClick={() => setActiveSubTab('richest_table_forensic')}
+              onClick={() => setActiveSubTab('summit_overview')}
               className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
-                activeSubTab === 'richest_table_forensic'
-                  ? 'bg-amber-500 text-stone-950 shadow-md'
+                activeSubTab === 'summit_overview'
+                  ? 'bg-amber-600 text-stone-950 shadow-md'
                   : isLight
-                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-100'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
               <Landmark size={15} />
-              <span>1. The White House Summit Table Forensic</span>
+              <span>1. Summit Overview & Photo</span>
             </button>
 
             <button
-              onClick={() => setActiveSubTab('seating_and_net_worth')}
+              onClick={() => setActiveSubTab('ceo_roster_ledger')}
               className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
-                activeSubTab === 'seating_and_net_worth'
+                activeSubTab === 'ceo_roster_ledger'
                   ? 'bg-purple-600 text-white shadow-md'
                   : isLight
-                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-100'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
               <Users size={15} />
-              <span>2. Executive Seating Chart & Wealth Ledger</span>
+              <span>2. 13 CEOs & Net Worth Ledger ($1.84T)</span>
             </button>
 
             <button
-              onClick={() => setActiveSubTab('data_extraction_paradox')}
+              onClick={() => setActiveSubTab('cognitive_commons')}
               className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
-                activeSubTab === 'data_extraction_paradox'
+                activeSubTab === 'cognitive_commons'
                   ? 'bg-rose-600 text-white shadow-md'
                   : isLight
-                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-100'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
               <Cpu size={15} />
-              <span>3. Whose Intelligence Built the Model?</span>
+              <span>3. The Cognitive Commons & Roulet’s Law</span>
             </button>
 
             <button
-              onClick={() => setActiveSubTab('sovereign_dividend_simulator')}
+              onClick={() => setActiveSubTab('dividend_simulator')}
               className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
-                activeSubTab === 'sovereign_dividend_simulator'
+                activeSubTab === 'dividend_simulator'
                   ? 'bg-emerald-600 text-white shadow-md'
                   : isLight
-                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-100'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
               <Sliders size={15} />
-              <span>4. Interactive Sovereign Equity & Dividend Simulator</span>
+              <span>4. Sovereign Dividend Calculator</span>
             </button>
 
             <button
-              onClick={() => setActiveSubTab('plate_provenance')}
+              onClick={() => setActiveSubTab('provenance')}
               className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer font-bold ${
-                activeSubTab === 'plate_provenance'
+                activeSubTab === 'provenance'
                   ? 'bg-cyan-600 text-white shadow-md'
                   : isLight
-                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-200'
+                  ? 'text-stone-700 hover:text-stone-950 hover:bg-stone-100'
                   : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800'
               }`}
             >
               <Maximize2 size={15} />
-              <span>5. Master Plate #60 & Cryptographic Provenance</span>
+              <span>5. Official Photo & Provenance Archive</span>
             </button>
           </div>
         </div>
@@ -362,8 +382,8 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
 
       {/* 3. SUB-TAB CONTENT PANELS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* SUB-TAB 1: THE RICHEST TABLE IN HISTORY */}
-        {activeSubTab === 'richest_table_forensic' && (
+        {/* SUB-TAB 1: SUMMIT OVERVIEW & PHOTO */}
+        {activeSubTab === 'summit_overview' && (
           <div className="space-y-8 animate-fadeIn">
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
@@ -372,10 +392,10 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                     isLight ? 'bg-amber-100 text-amber-950 border-amber-300' : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
                   }`}>
                     <Crown size={14} />
-                    <span>WHITE HOUSE WEST WING INVESTIGATION</span>
+                    <span>WHITE HOUSE WEST WING SUMMIT</span>
                   </span>
                   <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Reported by Ryan King (NY Post) • Published Sep. 30, 2026
+                    Reported by Ryan King (New York Post) • Published Sep. 30, 2026
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -399,52 +419,52 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                     "It’s the Richest Table Ever Assembled"
                   </h2>
                   <p className={`text-sm sm:text-base leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
-                    On September 30, 2026, President Donald Trump convened the most concentrated accumulation of private capital ever seated in a single room. Seated around the White House Roosevelt Table were tech titans commanding over <strong>$1.8 Trillion in personal net worth</strong> and presiding over companies valued at over <strong>$5.2 Trillion</strong>.
+                    On September 30, 2026, President Donald Trump gathered the world's most prominent technology executives at the White House. The participants represent over <strong>$1.84 Trillion in personal wealth</strong>, leading corporations that power global artificial intelligence hardware, software, and cloud infrastructure.
                   </p>
                   <blockquote className={`p-4 rounded-xl border-l-4 border-amber-500 text-sm font-serif italic ${
-                    isLight ? 'bg-amber-50/70 border-stone-300 text-stone-900' : 'bg-stone-950 border-stone-800 text-stone-200'
+                    isLight ? 'bg-stone-50 border-stone-300 text-stone-900' : 'bg-stone-950 border-stone-800 text-stone-200'
                   }`}>
                     "I just have to do what’s right... All I can tell you is that these big, powerful, very rich, very smart companies are going to be making massive contributions to communities. It’s going to be so good for the people."
-                    <footer className="text-xs font-mono font-bold mt-2 text-amber-600 dark:text-amber-400 not-italic">
-                      — President Donald J. Trump to Reporters
+                    <footer className="text-xs font-mono font-bold mt-2 text-amber-700 dark:text-amber-400 not-italic">
+                      — President Donald J. Trump
                     </footer>
                   </blockquote>
                   <p className={`text-sm sm:text-base leading-relaxed ${isLight ? 'text-stone-800 font-medium' : 'text-stone-300'}`}>
-                    Yet beneath the celebratory rhetoric of "massive contributions," an unaddressed moral and economic question looms: <strong>Where did the foundational intelligence inside these models come from?</strong> The LLMs, neural networks, and generative transformers represented at this table were trained by scraping billions of words, centuries of Indigenous linguistic heritage, folklore, mathematical treaties, medical discoveries, and cultural art—without consent, attribution, or compensation.
+                    As President Trump highlighted, these companies must make massive contributions to communities. Indigenous Communities and everyday creators whose collective language, culture, discoveries, and digital records were used to train frontier models should participate directly in the economic gains generated by AI.
                   </p>
                   <div className={`p-4 rounded-2xl border text-xs font-mono space-y-1.5 ${
                     isLight ? 'bg-emerald-50 border-emerald-300 text-emerald-950' : 'bg-emerald-950/40 border-emerald-500/40 text-emerald-200'
                   }`}>
                     <div className="font-bold flex items-center gap-1.5">
-                      <Sparkles size={14} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
-                      <span>THE SOVEREIGN ICEARTH THESIS:</span>
+                      <Shield size={14} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
+                      <span>THE SOVEREIGN IT PERSPECTIVE:</span>
                     </div>
                     <p className="leading-relaxed">
-                      "True economic justice requires that Indigenous Communities and individuals who authored human knowledge are not treated as passive extractive colonies for Silicon Valley hyperscalers. They must hold perpetual equity shares, non-custodial cryptographic keys, and direct dividend rights in the multi-trillion dollar AI economy."
+                      Indigenous Communities and individuals who are the sources of human intelligence should share in these trillions in value through non-custodial data trusts, computational royalties, and community-owned clean energy microgrids.
                     </p>
                   </div>
                 </div>
 
-                {/* Right: Graphic Card Preview */}
+                {/* Right: Official Photo Preview */}
                 <div className="lg:col-span-5">
                   <div
                     onClick={() => setIsPlateModalOpen(true)}
                     className="relative group rounded-2xl overflow-hidden border-2 border-amber-500/60 shadow-2xl cursor-pointer bg-black"
                   >
                     <img
-                      src={trumpAiSummitPlateImg}
-                      alt="Plate 60: Trump’s $1.8 Trillion AI Summit Table"
+                      src={trumpAiSummitOfficialImg}
+                      alt="NY Post Official Photo: Trump’s $1.8 Trillion AI Summit Table"
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
                       <div className="flex items-center justify-between text-xs font-mono font-bold text-amber-300">
-                        <span>PLATE #60 MASTER FORENSIC ARCHIVE</span>
+                        <span>OFFICIAL NY POST PHOTOGRAPH</span>
                         <span className="flex items-center gap-1 text-white">
-                          <Maximize2 size={13} /> Expand
+                          <Maximize2 size={13} /> Click to Expand
                         </span>
                       </div>
-                      <p className="text-[11px] text-stone-300 font-mono mt-1">
-                        White House Summit: Executive Seating, $1.8T Net Worth Ledger & Sovereign Dividend Model
+                      <p className="text-[11px] text-stone-200 font-mono mt-1">
+                        All 13 CEOs labeled with exact net worth and company affiliations
                       </p>
                     </div>
                   </div>
@@ -452,99 +472,91 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
               </div>
             </div>
 
-            {/* Wealth Concentration Comparison Chart */}
+            {/* Wealth Distribution Chart */}
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
                   <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
-                    Macroeconomic Wealth Disparity Analysis
+                    Personal Net Worth Breakdown
                   </span>
                   <h3 className={`text-xl sm:text-2xl font-serif font-bold ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
-                    The Trillion-Dollar Disparity: Summit Execs vs. Human Data Contributors
+                    Net Worth of the 13 Tech Leaders at the Table ($ Billions)
                   </h3>
-                  <p className={`text-xs font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Visualizing the disparity between corporate valuation and community returns (Billions USD).
-                  </p>
                 </div>
                 <span className={`px-3 py-1 rounded-lg text-xs font-mono font-bold border ${
-                  isLight ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+                  isLight ? 'bg-stone-100 text-stone-900 border-stone-300' : 'bg-stone-800 text-stone-300 border-stone-700'
                 }`}>
-                  Data: Bloomberg Billionaires & SEC Filings
+                  Source: NY Post / Bloomberg
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-8 h-80">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={wealthDistributionComparison} margin={{ top: 20, right: 30, left: 10, bottom: 25 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke={isLight ? '#e7e5e4' : '#292524'} />
-                      <XAxis dataKey="sector" stroke={isLight ? '#44403c' : '#a8a29e'} tick={{ fontSize: 10, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
-                      <YAxis stroke={isLight ? '#44403c' : '#78716c'} tickFormatter={(v) => `$${v}B`} tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#e4e4e7' }} />
-                      <Tooltip
-                        contentStyle={{
-                          backgroundColor: isLight ? '#ffffff' : '#0c0a09',
-                          borderColor: isLight ? '#d6d3d1' : '#44403c',
-                          borderRadius: '0.75rem',
-                          fontSize: '12px',
-                          color: isLight ? '#0c0a09' : '#f5f5f4'
-                        }}
-                        formatter={(val: any) => [`$${val} Billion`, 'Valuation']}
-                      />
-                      <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-                        {wealthDistributionComparison.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.fill} />
-                        ))}
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-
-                <div className="lg:col-span-4 space-y-3">
-                  <div className={`p-4 rounded-2xl border space-y-2 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                    <h4 className={`font-serif font-bold text-sm flex items-center gap-1.5 ${isLight ? 'text-amber-900' : 'text-amber-400'}`}>
-                      <CircleDollarSign size={15} />
-                      <span>The Extractive Imbalance</span>
-                    </h4>
-                    <p className={`text-xs leading-relaxed font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                      While 6 corporations captured over <strong>$5.2 Trillion in market capitalization</strong> using human knowledge, the individuals and communities whose languages, recipes, folk histories, and code were scraped have received <strong>zero royalties</strong>.
-                    </p>
-                    <div className={`text-[11px] pt-2 border-t font-semibold ${
-                      isLight ? 'text-emerald-900 border-stone-300' : 'text-emerald-400 border-stone-800'
-                    }`}>
-                      A 3.5% Sovereign Data Royalty would deliver $63B annually to Indigenous and local community infrastructure funds.
-                    </div>
-                  </div>
-                </div>
+              <div className="h-80 w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={ceoWealthChartData} margin={{ top: 20, right: 30, left: 10, bottom: 40 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke={isLight ? '#e7e5e4' : '#292524'} />
+                    <XAxis
+                      dataKey="name"
+                      stroke={isLight ? '#44403c' : '#a8a29e'}
+                      interval={0}
+                      angle={-30}
+                      textAnchor="end"
+                      tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#e4e4e7' }}
+                    />
+                    <YAxis
+                      stroke={isLight ? '#44403c' : '#78716c'}
+                      tickFormatter={(v) => `$${v}B`}
+                      tick={{ fontSize: 11, fill: isLight ? '#1c1917' : '#e4e4e7' }}
+                    />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: isLight ? '#ffffff' : '#0c0a09',
+                        borderColor: isLight ? '#d6d3d1' : '#44403c',
+                        borderRadius: '0.75rem',
+                        fontSize: '12px',
+                        color: isLight ? '#0c0a09' : '#f5f5f4'
+                      }}
+                      formatter={(val: any, _name: any, item: any) => [
+                        `$${val} Billion (${item.payload.company})`,
+                        item.payload.fullName
+                      ]}
+                    />
+                    <Bar dataKey="netWorth" radius={[6, 6, 0, 0]}>
+                      {ceoWealthChartData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </div>
         )}
 
-        {/* SUB-TAB 2: SEATING CHART AND NET WORTH LEDGER */}
-        {activeSubTab === 'seating_and_net_worth' && (
+        {/* SUB-TAB 2: 13 CEOS & NET WORTH LEDGER */}
+        {activeSubTab === 'ceo_roster_ledger' && (
           <div className="space-y-8 animate-fadeIn">
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
                   <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>
-                    Forensic Seating Protocol • White House Roosevelt Room
+                    Complete Official Roster
                   </span>
                   <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
-                    The $1.8 Trillion Seating Ledger: Execs Who Answered the Call
+                    All 13 Tech Leaders and Their Net Worth
                   </h2>
                   <p className={`text-xs font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Detailed breakdown of personal net worth, corporate capitalization, and quoted positions.
+                    Exact figures and company affiliations as annotated in the official photograph.
                   </p>
                 </div>
-                <span className={`px-3 py-1 rounded-lg text-xs font-mono font-bold border ${
-                  isLight ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-purple-500/10 text-purple-400 border-purple-500/30'
+                <div className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold border ${
+                  isLight ? 'bg-purple-100 text-purple-950 border-purple-300' : 'bg-purple-950/40 text-purple-300 border-purple-700'
                 }`}>
-                  Sep. 30, 2026 Summit
-                </span>
+                  Combined Net Worth: ~$1,835.6 Billion ($1.84T)
+                </div>
               </div>
 
-              {/* Seating Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Grid of all 13 CEOs */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {summitTableAttendees.map((att, idx) => (
                   <div
                     key={idx}
@@ -559,98 +571,88 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                           {att.role}
                         </span>
                       </div>
-                      <span className={`px-2 py-0.5 text-[10px] font-mono rounded border font-bold ${
-                        isLight ? 'bg-stone-200 text-stone-800 border-stone-300' : 'bg-stone-900 text-stone-400 border-stone-800'
+                      <span className={`px-2 py-0.5 text-xs font-mono rounded font-bold ${
+                        isLight ? 'bg-stone-200 text-stone-900 border border-stone-300' : 'bg-stone-900 text-amber-300 border border-stone-800'
                       }`}>
-                        {att.seatingPosition}
+                        ~${att.netWorthBillions}B
                       </span>
                     </div>
 
-                    <div className={`space-y-1.5 text-xs font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                      <div className="flex justify-between items-center">
-                        <span className={isLight ? 'text-stone-600' : 'text-stone-500'}>Personal Net Worth:</span>
-                        <span className={`font-bold text-sm ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
-                          {att.netWorthBillions > 0 ? `$${att.netWorthBillions} Billion` : 'N/A (Public Official)'}
-                        </span>
+                    <div className={`space-y-1 text-xs font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
+                      <div>
+                        <span className={isLight ? 'text-stone-600' : 'text-stone-500'}>Company: </span>
+                        <span className="font-bold">{att.company}</span>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className={isLight ? 'text-stone-600' : 'text-stone-500'}>Corporate Capitalization:</span>
-                        <span className="font-bold">{att.companyValuation}</span>
+                      <div>
+                        <span className={isLight ? 'text-stone-600' : 'text-stone-500'}>Focus: </span>
+                        <span>{att.companyCategory}</span>
                       </div>
-                    </div>
-
-                    <div className={`p-3 rounded-xl border text-[11px] font-mono italic leading-relaxed ${
-                      isLight ? 'bg-white border-stone-300 text-stone-900 shadow-xs' : 'bg-stone-900/80 border-stone-800 text-stone-300'
-                    }`}>
-                      "{att.quote}"
                     </div>
                   </div>
                 ))}
               </div>
+
+              {/* Government Hosts */}
+              <div className="pt-4 border-t border-stone-200 dark:border-stone-800 space-y-4">
+                <h3 className={`font-serif font-bold text-lg ${isLight ? 'text-stone-950' : 'text-white'}`}>
+                  Government Leadership at the Table
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {summitHosts.map((host, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-4 rounded-xl border space-y-2 ${
+                        isLight ? 'bg-stone-100/70 border-stone-300' : 'bg-stone-900/60 border-stone-800'
+                      }`}
+                    >
+                      <h4 className={`font-serif font-bold text-sm ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>{host.name}</h4>
+                      <p className={`text-xs font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>{host.title}</p>
+                      <p className={`text-xs italic font-serif ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>{host.quote}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}
 
-        {/* SUB-TAB 3: WHOSE INTELLIGENCE BUILT THE MODEL? */}
-        {activeSubTab === 'data_extraction_paradox' && (
+        {/* SUB-TAB 3: THE COGNITIVE COMMONS & ROULET'S LAW */}
+        {activeSubTab === 'cognitive_commons' && (
           <div className="space-y-8 animate-fadeIn">
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
-                    Epistemological & Sovereign Jurisprudence
+                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-rose-800' : 'text-rose-400'}`}>
+                    Sovereign Economics Analysis
                   </span>
                   <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
-                    Whose Intelligence Built the Model? The 4 Extraction Pillars
+                    The Source of AI Intelligence: Humanity's Collective Commons
                   </h2>
-                  <p className={`text-xs font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Deconstructing how frontier AI models privatize the intellectual commons of Indigenous nations and global humanity.
-                  </p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <div className={`flex items-center gap-2 font-mono text-xs font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
-                    <Cpu size={16} />
-                    <span>PILLAR 1: UNCOMPENSATED LINGUISTIC SCRAPING</span>
-                  </div>
-                  <h4 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>Indigenous & Public Knowledge Expropriation</h4>
-                  <p className={`text-xs leading-relaxed font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                    Frontier foundation models crawled millions of open web pages, academic archives, Cherokee, Navajo, Quechua, and Gaelic linguistic preservation databases, and global literary libraries. This collective heritage was transformed into proprietary vector weights sold back to the public at $20/month per seat.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300' : 'bg-stone-950 border-stone-800'}`}>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white bg-blue-600`}>1</div>
+                  <h3 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>The Collective Corpus</h3>
+                  <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
+                    Foundation models do not generate intelligence out of thin air. Every parameter, embedding, and token is trained on billions of texts, articles, code, art, oral traditions, and scientific research created by human beings across centuries.
                   </p>
                 </div>
 
-                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <div className={`flex items-center gap-2 font-mono text-xs font-bold ${isLight ? 'text-rose-700' : 'text-rose-400'}`}>
-                    <Factory size={16} />
-                    <span>PILLAR 2: LOCAL INFRASTRUCTURE & AQUIFER EXTERNALIZATION</span>
-                  </div>
-                  <h4 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>The Data Center Sacrifice Zones</h4>
-                  <p className={`text-xs leading-relaxed font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                    As demonstrated in Plate #54 (Cherokee Hyperscale Moratorium) and Plate #56 (Data Center Tax Breaks), hyperscalers demand billions of gallons of drinking water for cooling towers and unpermitted gas turbines, socializing environmental destruction while privatizing billions in profit.
+                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300' : 'bg-stone-950 border-stone-800'}`}>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white bg-amber-600`}>2</div>
+                  <h3 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>Roulet’s Law of Extraction</h3>
+                  <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
+                    Under Roulet's Law, centralized corporate systems extract value from the shared commons while externalizing the costs—energy drain, water depletion, and community displacement. AI models represent the latest extraction of humanity's cognitive commons.
                   </p>
                 </div>
 
-                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <div className={`flex items-center gap-2 font-mono text-xs font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>
-                    <Scale size={16} />
-                    <span>PILLAR 3: ANTITRUST & REGULATORY CAPTURE</span>
-                  </div>
-                  <h4 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>The "Morally Binding" Deregulation Accord</h4>
-                  <p className={`text-xs leading-relaxed font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                    At the White House summit, the administration embraced voluntary "self-policing" without codified federal mandates or enforceable accountability. When six CEOs control the silicon supply chain and frontier weights, sovereign self-governance collapses into corporate feudalism.
-                  </p>
-                </div>
-
-                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <div className={`flex items-center gap-2 font-mono text-xs font-bold ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
-                    <Shield size={16} />
-                    <span>PILLAR 4: THE ICEARTH SOVEREIGN ALTERNATIVE</span>
-                  </div>
-                  <h4 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>Non-Custodial Keys & Community Equity</h4>
-                  <p className={`text-xs leading-relaxed font-mono ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
-                    ICEarth Sovereign IT mandates that communities retain non-custodial cryptographic custody of their data assets, deploy waterless closed-loop dielectric computing, and receive direct equity dividends from all commercial model inferences.
+                <div className={`p-5 rounded-2xl border space-y-3 ${isLight ? 'bg-stone-50 border-stone-300' : 'bg-stone-950 border-stone-800'}`}>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white bg-emerald-600`}>3</div>
+                  <h3 className={`font-serif font-bold text-base ${isLight ? 'text-stone-950' : 'text-white'}`}>The Sovereign Restitution Solution</h3>
+                  <p className={`text-xs leading-relaxed ${isLight ? 'text-stone-800' : 'text-stone-300'}`}>
+                    Rather than relying on philanthropic promises, sovereign communities must hold computational equity: a perpetual data dividend, zero-water decentralized microgrid nodes, and immutable cryptographic ownership of their own knowledge.
                   </p>
                 </div>
               </div>
@@ -658,207 +660,170 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
           </div>
         )}
 
-        {/* SUB-TAB 4: INTERACTIVE SOVEREIGN EQUITY & DIVIDEND SIMULATOR */}
-        {activeSubTab === 'sovereign_dividend_simulator' && (
+        {/* SUB-TAB 4: SOVEREIGN DIVIDEND CALCULATOR */}
+        {activeSubTab === 'dividend_simulator' && (
           <div className="space-y-8 animate-fadeIn">
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
-              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-3`}>
+              <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
-                  <h3 className={`text-xl font-serif font-bold flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
-                    <Sliders size={20} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
-                    <span>Interactive Engine: Sovereign AI Dividend & Community Equity Calculator</span>
-                  </h3>
+                  <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
+                    Interactive Sovereign Economic Model
+                  </span>
+                  <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
+                    Sovereign Cognitive Dividend Calculator
+                  </h2>
                   <p className={`text-xs font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Calculate fair perpetual royalty yields from the $1.8T AI market cap for Indigenous Nations and human data contributors.
+                    Model how sharing a fraction of AI enterprise revenue directly benefits Indigenous and local communities.
                   </p>
-                </div>
-                <span className={`text-xs font-mono px-3 py-1 border rounded-lg font-bold ${
-                  isLight ? 'bg-emerald-100 text-emerald-950 border-emerald-300' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
-                }`}>
-                  Model Grounded in ICEarth Sovereign Charter
-                </span>
-              </div>
-
-              {/* Slider Inputs */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="space-y-2">
-                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
-                    <span>Global AI Enterprise Market Cap</span>
-                    <span className={`font-bold ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>${globalAiMarketCapTrillions.toFixed(1)} Trillion</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="1.0"
-                    max="10.0"
-                    step="0.2"
-                    value={globalAiMarketCapTrillions}
-                    onChange={(e) => setGlobalAiMarketCapTrillions(Number(e.target.value))}
-                    className="w-full accent-purple-500 cursor-pointer"
-                  />
-                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Combined valuation of hyperscalers, chipmakers, and frontier labs.</p>
-                </div>
-
-                <div className="space-y-2">
-                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
-                    <span>Sovereign Data Royalty Rate</span>
-                    <span className={`font-bold ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>{sovereignDataRoyaltyPercent.toFixed(1)}%</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="1.0"
-                    max="10.0"
-                    step="0.5"
-                    value={sovereignDataRoyaltyPercent}
-                    onChange={(e) => setSovereignDataRoyaltyPercent(Number(e.target.value))}
-                    className="w-full accent-emerald-500 cursor-pointer"
-                  />
-                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Standard mineral & intellectual property royalty benchmark (3–5%).</p>
-                </div>
-
-                <div className="space-y-2">
-                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
-                    <span>Beneficiary Population</span>
-                    <span className={`font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>{communityPopulationMillions} Million</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="50"
-                    max="1000"
-                    step="25"
-                    value={communityPopulationMillions}
-                    onChange={(e) => setCommunityPopulationMillions(Number(e.target.value))}
-                    className="w-full accent-cyan-500 cursor-pointer"
-                  />
-                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Global Indigenous populations & local data center host communities.</p>
-                </div>
-
-                <div className="space-y-2">
-                  <label className={`text-xs font-mono font-bold flex justify-between ${isLight ? 'text-stone-900' : 'text-stone-300'}`}>
-                    <span>Watershed & Aquifer Reserve</span>
-                    <span className={`font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{watershedRemediationSharePercent}%</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="10"
-                    max="50"
-                    step="5"
-                    value={watershedRemediationSharePercent}
-                    onChange={(e) => setWatershedRemediationSharePercent(Number(e.target.value))}
-                    className="w-full accent-amber-500 cursor-pointer"
-                  />
-                  <p className={`text-[10px] ${isLight ? 'text-stone-600 font-medium' : 'text-stone-500'}`}>Portion locked into drinking water aquifer restoration & off-grid microgrids.</p>
                 </div>
               </div>
 
-              {/* Calculated Outputs */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Total Annual Sovereign Royalty</span>
-                  <div className={`text-2xl font-bold font-mono ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>${totalRoyaltyBillions.toFixed(1)} Billion / Year</div>
-                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Perpetual endowment funded from AI enterprise market cap.
-                  </p>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                {/* Controls */}
+                <div className="lg:col-span-6 space-y-6">
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center text-xs font-mono">
+                      <span className="font-bold">Total AI Industry Valuation:</span>
+                      <span className="text-amber-600 font-bold">${globalAiMarketCapTrillions.toFixed(2)} Trillion</span>
+                    </div>
+                    <input
+                      type="range"
+                      min={0.5}
+                      max={5.0}
+                      step={0.1}
+                      value={globalAiMarketCapTrillions}
+                      onChange={(e) => setGlobalAiMarketCapTrillions(parseFloat(e.target.value))}
+                      className="w-full accent-amber-500 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] text-stone-500 font-mono">
+                      <span>$0.5T</span>
+                      <span>Current: $1.84T</span>
+                      <span>$5.0T</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center text-xs font-mono">
+                      <span className="font-bold">Sovereign Data Royalty Rate:</span>
+                      <span className="text-emerald-600 font-bold">{sovereignDataRoyaltyPercent.toFixed(1)}%</span>
+                    </div>
+                    <input
+                      type="range"
+                      min={0.5}
+                      max={6.0}
+                      step={0.1}
+                      value={sovereignDataRoyaltyPercent}
+                      onChange={(e) => setSovereignDataRoyaltyPercent(parseFloat(e.target.value))}
+                      className="w-full accent-emerald-500 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] text-stone-500 font-mono">
+                      <span>0.5% (Baseline)</span>
+                      <span>3.0% (Recommended)</span>
+                      <span>6.0% (Full Restitution)</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center text-xs font-mono">
+                      <span className="font-bold">Clean Microgrid & Infrastructure Share:</span>
+                      <span className="text-cyan-600 font-bold">{cleanMicrogridSharePercent}%</span>
+                    </div>
+                    <input
+                      type="range"
+                      min={10}
+                      max={70}
+                      step={5}
+                      value={cleanMicrogridSharePercent}
+                      onChange={(e) => setCleanMicrogridSharePercent(parseInt(e.target.value))}
+                      className="w-full accent-cyan-500 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] text-stone-500 font-mono">
+                      <span>10% (Mostly Direct Cash)</span>
+                      <span>40% (Balanced)</span>
+                      <span>70% (Microgrid Heavy)</span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Watershed & Infrastructure Fund</span>
-                  <div className={`text-2xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>${watershedRemediationBillions.toFixed(1)} Billion</div>
-                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Dedicated to waterless cooling, microgrid islanding, and local lead/water cleanup.
-                  </p>
-                </div>
+                {/* Outputs */}
+                <div className="lg:col-span-6 space-y-4">
+                  <div className={`p-6 rounded-2xl border space-y-4 ${isLight ? 'bg-emerald-50/50 border-emerald-300' : 'bg-emerald-950/20 border-emerald-700/60'}`}>
+                    <h3 className={`font-serif font-bold text-lg flex items-center gap-2 ${isLight ? 'text-emerald-950' : 'text-emerald-300'}`}>
+                      <CircleDollarSign size={20} className={isLight ? 'text-emerald-700' : 'text-emerald-400'} />
+                      <span>Annual Sovereign Dividend Distribution</span>
+                    </h3>
 
-                <div className={`p-4 rounded-xl border space-y-1 ${isLight ? 'bg-stone-50 border-stone-300 shadow-xs' : 'bg-stone-950 border-stone-800'}`}>
-                  <span className={`text-[11px] font-mono font-bold ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Annual Sovereign Citizen Dividend</span>
-                  <div className={`text-2xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>${annualDividendPerCapitaDollars.toLocaleString()} / Person</div>
-                  <p className={`text-[11px] leading-tight font-medium ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Direct annual citizen distribution to recognized community members.
-                  </p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-1">
+                        <span className={`text-xs font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Total Annual Dividend</span>
+                        <div className={`text-2xl font-bold font-mono ${isLight ? 'text-emerald-800' : 'text-emerald-400'}`}>
+                          ${totalRoyaltyBillions.toFixed(1)} Billion
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <span className={`text-xs font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Clean Microgrid Fund</span>
+                        <div className={`text-2xl font-bold font-mono ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>
+                          ${cleanMicrogridBillions.toFixed(1)} Billion
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <span className={`text-xs font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Direct Community Trust</span>
+                        <div className={`text-2xl font-bold font-mono ${isLight ? 'text-purple-800' : 'text-purple-400'}`}>
+                          ${directCommunityDividendsBillions.toFixed(1)} Billion
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <span className={`text-xs font-mono ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>Per-Capita Annual Share</span>
+                        <div className={`text-2xl font-bold font-mono ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
+                          ${annualDividendPerPerson}/yr
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* SUB-TAB 5: MASTER PLATE #60 & PROVENANCE */}
-        {activeSubTab === 'plate_provenance' && (
+        {/* SUB-TAB 5: OFFICIAL PHOTO & PROVENANCE ARCHIVE */}
+        {activeSubTab === 'provenance' && (
           <div className="space-y-8 animate-fadeIn">
             <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-6`}>
               <div className={`flex flex-wrap items-center justify-between gap-3 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-4`}>
                 <div>
                   <span className={`text-xs font-mono uppercase tracking-wider font-bold ${isLight ? 'text-cyan-800' : 'text-cyan-400'}`}>
-                    Forensic Provenance & Permanent Vault Pinning
+                    Plate #60 Archival Record
                   </span>
                   <h2 className={`text-2xl sm:text-3xl font-serif font-black ${isLight ? 'text-stone-950' : 'text-stone-100'}`}>
-                    Plate #60 Cryptographic Master Archive
+                    Official NY Post Photograph & Cryptographic Provenance
                   </h2>
-                  <p className={`text-xs sm:text-sm font-mono mt-1 ${isLight ? 'text-stone-700' : 'text-stone-400'}`}>
-                    Master Forensic Infographic: Trump’s $1.8 Trillion AI Summit Table & The Sovereign Equity Doctrine
-                  </p>
                 </div>
-
                 <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setShowPlateAnnotations(!showPlateAnnotations)}
-                    className={`px-3 py-1.5 rounded-xl font-mono text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer border ${
-                      showPlateAnnotations
-                        ? isLight ? 'bg-emerald-100 text-emerald-950 border-emerald-400 shadow-xs' : 'bg-emerald-950/80 text-emerald-300 border-emerald-500/60 shadow-md'
-                        : isLight ? 'bg-stone-200 text-stone-800 border-stone-300 hover:bg-stone-300' : 'bg-stone-800 text-stone-400 border-stone-700 hover:text-stone-200'
-                    }`}
-                  >
-                    <Check size={14} className={showPlateAnnotations ? (isLight ? 'text-emerald-700' : 'text-emerald-400') : (isLight ? 'text-stone-600' : 'text-stone-500')} />
-                    <span>{showPlateAnnotations ? 'Forensic Overlay: Active' : 'Show Forensic Overlay'}</span>
-                  </button>
-
                   <button
                     onClick={() => setIsPlateModalOpen(true)}
                     className="px-4 py-2 bg-gradient-to-r from-amber-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 text-white font-bold text-xs font-mono rounded-xl flex items-center gap-2 cursor-pointer shadow-lg"
                   >
                     <Maximize2 size={15} />
-                    <span>Full Screen High-Resolution Modal</span>
+                    <span>Expand Full Screen</span>
                   </button>
                 </div>
               </div>
 
               {/* Master Artwork Presentation */}
-              <div className="relative rounded-3xl overflow-hidden border-2 border-stone-800 shadow-2xl bg-black group">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-stone-800 shadow-2xl bg-black">
                 <img
-                  src={trumpAiSummitPlateImg}
-                  alt="Plate 60: Trump’s $1.8 Trillion AI Summit Table Master Infographic"
+                  src={trumpAiSummitOfficialImg}
+                  alt="Plate 60: Trump’s $1.8 Trillion AI Summit Table Official Photograph"
                   className="w-full h-auto object-cover"
                 />
-
-                {showPlateAnnotations && (
-                  <div className="absolute inset-0 pointer-events-none p-4 sm:p-6 flex flex-col justify-between">
-                    <div className="flex justify-end">
-                      <div className="max-w-xs sm:max-w-sm p-3 rounded-2xl bg-stone-950/90 border border-amber-500/60 text-stone-100 shadow-xl backdrop-blur-md space-y-1 animate-fadeIn">
-                        <div className="flex items-center gap-1.5 text-amber-300 font-mono text-[11px] font-bold">
-                          <Crown size={13} className="text-amber-400" />
-                          <span>The Roosevelt Table • $1.8T Ledger</span>
-                        </div>
-                        <p className="text-xs font-sans text-stone-200 leading-snug">
-                          Musk ($485B), Huang ($135B), Brockman ($1.8B), Amodei ($1.2B) seated with Trump, Vance, and Johnson.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-start">
-                      <div className="max-w-md p-3.5 rounded-2xl bg-stone-950/95 border-2 border-emerald-500/80 text-stone-100 shadow-2xl backdrop-blur-md space-y-1">
-                        <div className="flex items-center gap-1.5 text-emerald-300 font-mono text-xs font-bold">
-                          <Shield size={13} className="text-emerald-400" />
-                          <span>ICEarth Sovereign Data Royalty Rule</span>
-                        </div>
-                        <p className="text-xs font-sans text-stone-100 leading-snug">
-                          Those who authored the languages, literature, and knowledge of humanity are owed perpetual 3.5% equity royalties ($63B/yr).
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Provenance Metadata Table */}
-              <div className={`p-6 rounded-2xl border space-y-4 ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-950 border-stone-800'}`}>
+              <div className={`p-6 rounded-2xl border space-y-4 ${isLight ? 'bg-stone-50 border-stone-300 shadow-sm' : 'bg-stone-950 border-stone-800'}`}>
                 <h4 className={`font-serif font-bold text-base flex items-center gap-2 ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>
                   <Shield size={16} />
                   <span>Vault Authentication & Cryptographic Fingerprint</span>
@@ -875,19 +840,19 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                       <span className={`break-all font-bold ${isLight ? 'text-amber-800' : 'text-amber-400'}`}>{vaultHash}</span>
                     </div>
                     <div>
-                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Registration Timestamp:</span>
-                      <span className={isLight ? 'text-stone-800' : 'text-stone-300'}>2026-10-01T04:30:00-07:00 (Summit Ingestion & Verification)</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Source:</span>
+                      <span className={isLight ? 'text-stone-900' : 'text-stone-200'}>New York Post (Ryan King, White House Press Pool)</span>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <div>
-                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Source Authorities:</span>
-                      <span className={isLight ? 'text-purple-900 font-bold' : 'text-purple-300'}>New York Post, White House Press Pool, Bloomberg Billionaires</span>
+                      <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Summit Date:</span>
+                      <span className={isLight ? 'text-stone-900' : 'text-stone-200'}>September 30, 2026</span>
                     </div>
                     <div>
                       <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Sovereign Jurisprudence:</span>
-                      <span className={isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}>ICEarth Indigenous Communities Alliance & Roulet's Law</span>
+                      <span className={isLight ? 'text-emerald-800 font-bold' : 'text-emerald-400'}>Indigenous Communities Earth & Roulet's Law</span>
                     </div>
                     <div>
                       <span className={`block font-bold ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>Cryptographic Integrity:</span>
@@ -900,14 +865,13 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
           </div>
         )}
 
-        {/* 4. CROSS-NAVIGATION BUTTONS TO RELATED PROOFS */}
+        {/* 4. CROSS-NAVIGATION BUTTONS */}
         <section className={`p-6 rounded-3xl border ${isLight ? 'bg-white border-stone-300 shadow-sm' : 'bg-stone-900 border-stone-800'} space-y-4`}>
           <div className={`flex flex-wrap items-center justify-between gap-2 border-b ${isLight ? 'border-stone-200' : 'border-stone-800'} pb-3`}>
             <h4 className={`font-serif font-bold text-base flex items-center gap-2 ${isLight ? 'text-stone-950' : 'text-stone-200'}`}>
               <Shield size={16} className={isLight ? 'text-amber-700' : 'text-amber-400'} />
-              <span>Related Sovereign IT & Economic Defense Engines</span>
+              <span>Related Sovereign IT Engines</span>
             </h4>
-            <span className={`text-xs font-mono font-medium ${isLight ? 'text-stone-700' : 'text-stone-500'}`}>ICEarth System Stack</span>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
@@ -948,16 +912,6 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
               <span>🇨🇭 Plate #55: Swiss Data Sovereignty</span>
               <ArrowRight size={13} />
             </button>
-
-            <button
-              onClick={() => onNavigateTab?.('reports')}
-              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
-                isLight ? 'bg-stone-100 hover:bg-stone-200 text-rose-900 border-rose-300' : 'bg-stone-800 hover:bg-stone-700 text-rose-300 border-rose-500/40'
-              }`}
-            >
-              <span>📰 News and Reports Hub</span>
-              <ArrowRight size={13} />
-            </button>
           </div>
         </section>
       </main>
@@ -970,73 +924,32 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
             <div className="p-4 sm:p-5 border-b border-stone-800 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="px-3 py-1 bg-amber-500 text-stone-950 font-mono text-xs font-bold rounded-lg uppercase">
-                  Plate #60 Master Forensic
+                  Plate #60 Official Photo
                 </span>
-                <span className="text-xs font-mono text-stone-400 hidden sm:inline">
-                  Trump’s $1.8 Trillion AI Summit Table: Seating & Sovereign Equity
+                <span className="text-xs font-mono text-stone-300 hidden sm:inline">
+                  Trump’s $1.8 Trillion AI Summit: 13 CEOs & Net Worth Callouts
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowPlateAnnotations(!showPlateAnnotations)}
-                  className={`px-3 py-1 rounded-lg text-xs font-mono font-bold flex items-center gap-1.5 cursor-pointer border ${
-                    showPlateAnnotations
-                      ? 'bg-emerald-950 text-emerald-300 border-emerald-500/60'
-                      : 'bg-stone-800 text-stone-400 border-stone-700'
-                  }`}
-                >
-                  <Check size={13} className={showPlateAnnotations ? 'text-emerald-400' : 'text-stone-500'} />
-                  <span>{showPlateAnnotations ? 'Overlay: ON' : 'Overlay: OFF'}</span>
-                </button>
-                <button
-                  onClick={() => setIsPlateModalOpen(false)}
-                  className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-lg text-xs font-mono font-bold cursor-pointer"
-                >
-                  Close &times;
-                </button>
-              </div>
+              <button
+                onClick={() => setIsPlateModalOpen(false)}
+                className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-lg text-xs font-mono font-bold cursor-pointer"
+              >
+                Close &times;
+              </button>
             </div>
 
             {/* Modal Image */}
-            <div className="flex-1 overflow-auto p-4 flex items-center justify-center bg-black relative">
-              <div className="relative inline-block max-h-[75vh]">
-                <img
-                  src={trumpAiSummitPlateImg}
-                  alt="Plate 60 Full Resolution"
-                  className="max-h-[75vh] w-auto object-contain rounded-xl border border-stone-800"
-                />
-
-                {showPlateAnnotations && (
-                  <div className="absolute inset-0 pointer-events-none p-4 flex flex-col justify-between">
-                    <div className="flex justify-end">
-                      <div className="max-w-xs p-3 rounded-2xl bg-stone-950/90 border border-amber-500/60 text-stone-100 shadow-xl backdrop-blur-md space-y-1">
-                        <div className="text-amber-300 font-mono text-[11px] font-bold">
-                          The Roosevelt Seating
-                        </div>
-                        <p className="text-xs font-sans text-stone-200">
-                          Trump flanked by Musk ($485B) and Huang ($135B). Brockman ($1.8B) opposite Amodei ($1.2B).
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <div className="max-w-md p-3 rounded-2xl bg-stone-950/95 border-2 border-emerald-500/80 text-stone-100 shadow-2xl backdrop-blur-md space-y-1 text-center">
-                        <div className="text-emerald-300 font-mono text-xs font-bold">
-                          Sovereign Dividend: 3.5% ($63 Billion/Year)
-                        </div>
-                        <p className="text-xs font-sans text-stone-100">
-                          Indigenous communities and human creators must share in these generated trillions.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
+            <div className="flex-1 overflow-auto p-4 flex items-center justify-center bg-black">
+              <img
+                src={trumpAiSummitOfficialImg}
+                alt="Trump AI Summit $1.8 Trillion Table Official Photo"
+                className="max-h-[75vh] w-auto object-contain rounded-xl border border-stone-800 shadow-2xl"
+              />
             </div>
 
             {/* Modal Footer */}
             <div className="p-4 border-t border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400 bg-stone-900/60">
-              <span className="truncate max-w-md">Vault: {vaultHash}</span>
+              <span className="truncate max-w-md">Vault Hash: {vaultHash}</span>
               <div className="flex items-center gap-2">
                 <button
                   onClick={copyVaultHash}
@@ -1046,11 +959,11 @@ export const TrumpAISummitRichestTable: React.FC<TrumpAISummitRichestTableProps>
                   <span>{copiedHash ? 'Copied' : 'Copy Hash'}</span>
                 </button>
                 <a
-                  href={trumpAiSummitPlateImg}
-                  download="ICEarth_Plate60_Trump_AI_Summit_Richest_Table.jpg"
+                  href={trumpAiSummitOfficialImg}
+                  download="Trump_1.8T_AI_Summit_Table_NYPost_Plate60.jpg"
                   className="px-3 py-1 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg flex items-center gap-1 cursor-pointer"
                 >
-                  <span>Download Master Plate #60</span>
+                  <span>Download Photo</span>
                 </a>
               </div>
             </div>

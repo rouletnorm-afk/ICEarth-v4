@@ -81,6 +81,7 @@ import { PFASCavitationSimulator } from './components/PFASCavitationSimulator';
 import { OdisseDataviz } from './components/OdisseDataviz';
 import { BuffaloLeadAudit } from './components/BuffaloLeadAudit';
 import { ClevelandLeadAudit } from './components/ClevelandLeadAudit';
+import { ClevelandLeadHypocrisy } from './components/ClevelandLeadHypocrisy';
 import { ClevelandStrategySolution } from './components/ClevelandStrategySolution';
 import { WHOGlobalActionPlan } from './components/WHOGlobalActionPlan';
 import { NobelPrizeNomination } from './components/NobelPrizeNomination';
@@ -158,7 +159,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -453,6 +454,22 @@ export default function App() {
         lower.includes('cognitive_dividend')
       ) {
         setActiveTab('trump_ai_summit_table');
+      } else if (
+        lower === 'cleveland_hypocrisy' ||
+        lower === 'cleveland-hypocrisy' ||
+        lower === 'cleveland_lead_hypocrisy' ||
+        lower === 'cleveland-lead-hypocrisy' ||
+        lower === 'plate_61' ||
+        lower === 'plate61' ||
+        lower === 'plate-61' ||
+        lower === 'justin_bibb' ||
+        lower === 'justin-bibb' ||
+        lower === 'chris_quinn' ||
+        lower === 'chris-quinn' ||
+        lower.includes('cleveland_hypocrisy') ||
+        lower.includes('quinn')
+      ) {
+        setActiveTab('cleveland_hypocrisy');
       } else if (
         lower === 'super_intelligence_sovereignty' ||
         lower === 'super-intelligence-sovereignty' ||
@@ -1674,7 +1691,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   }`}
                 >
                   <DollarSign size={16} className={activeTab === 'trump_ai_summit_table' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
-                  <span className="flex-1 font-black">👑 Trump $1.8T AI Summit & Cognitive Dividend</span>
+                  <span className="flex-1 font-black">👑 Trump $1.8T AI Summit: Richest Table</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
                     PLATE #60
                   </span>
@@ -2304,6 +2321,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* Cleveland Lead Hypocrisy: Complicity of 4th Estate (Plate #61) */}
+                <button
+                  onClick={() => setActiveTab('cleveland_hypocrisy')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'cleveland_hypocrisy'
+                      ? 'bg-rose-950 text-white border-transparent shadow-sm font-bold'
+                      : 'hover:bg-rose-50 text-rose-900 border-rose-200/50 bg-rose-100/30'
+                  }`}
+                >
+                  <Gavel size={16} className={activeTab === 'cleveland_hypocrisy' ? 'text-rose-400' : 'text-rose-600'} />
+                  <span className="flex-1 font-bold">⚖️ Cleveland Lead Hypocrisy: 4th Estate</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 to-rose-700 text-white text-[8px] tracking-wide rounded uppercase font-bold shadow-xs">
+                    Plate #61
+                  </span>
+                </button>
+
                 {/* Toledo Lead Audit & CDC Confession */}
                 <button
                   onClick={() => setActiveTab('toledo')}
@@ -2605,7 +2638,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   }`}
                 >
                   <DollarSign size={16} className={activeTab === 'trump_ai_summit_table' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
-                  <span className="flex-1 font-semibold">👑 Trump $1.8T Summit & Dividend</span>
+                  <span className="flex-1 font-semibold">👑 Trump $1.8T AI Summit</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
                     Plate #60
                   </span>
@@ -3342,7 +3375,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'swiss_data_sovereignty', icon: Shield, label: '🇨🇭 Swiss Data Sovereignty: Global Spectrum', badge: 'Plate #55', color: 'red' },
                     { id: 'sovereign_agents', icon: Bot, label: '🤖 AI Agents & The Normal-People Problem', badge: 'Plate #59', color: 'emerald' },
-                    { id: 'trump_ai_summit_table', icon: DollarSign, label: '👑 Trump $1.8T AI Summit & Cognitive Dividend', badge: 'Plate #60', color: 'amber' },
+                    { id: 'trump_ai_summit_table', icon: DollarSign, label: '👑 Trump $1.8T AI Summit: Richest Table', badge: 'Plate #60', color: 'amber' },
                     { id: 'super_intelligence_sovereignty', icon: Crown, label: '👑 Super Intelligence Sovereignty', badge: 'Plate #57', color: 'purple' },
                     { id: 'datacenter_incentives', icon: DollarSign, label: '🏛️ Data Center Incentives Engine', badge: 'Plate #56', color: 'amber' },
                     { id: 'cherokee_it_position', icon: Ban, label: '🪶 Cherokee Nation Hyperscale Ban', badge: 'Plate #54', color: 'emerald' },
@@ -3371,6 +3404,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'litigation', icon: Scale, label: '⚖️ Environmental Litigation Profiler', badge: 'Active', color: 'purple' },
                     { id: 'reports', icon: Newspaper, label: '📰 News and Reports Hub', badge: 'Social', color: 'cyan' },
                     { id: 'cleveland', icon: Building2, label: '🏙️ Cleveland Lead Audit', badge: 'Audit', color: 'slate' },
+                    { id: 'cleveland_hypocrisy', icon: Gavel, label: '⚖️ Cleveland Lead Hypocrisy', badge: 'Plate #61', color: 'rose' },
                     { id: 'chicago', icon: Building2, label: '🏙️ Chicago Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'buffalo', icon: Building2, label: '🦬 Buffalo Lead Audit', badge: 'Audit', color: 'slate' },
                     { id: 'milwaukee', icon: Building2, label: '🍻 Milwaukee Lead Audit', badge: 'Audit', color: 'slate' },
@@ -3478,6 +3512,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {activeTab === 'litigation' && '⚖️ Environmental Litigation'}
               {activeTab === 'reports' && '📰 News and Reports'}
               {activeTab === 'cleveland' && '🏙️ Cleveland Audit'}
+              {(activeTab === 'cleveland_hypocrisy' || (activeTab as string) === 'cleveland-hypocrisy' || (activeTab as string) === 'plate_61' || (activeTab as string) === 'plate61') && '⚖️ Cleveland Lead Hypocrisy: Plain Dealer & Sherwin-Williams (Plate #61)'}
               {activeTab === 'chicago' && '🏙️ Chicago Audit'}
               {activeTab === 'buffalo' && '🦬 Buffalo Audit'}
               {activeTab === 'milwaukee' && '🍻 Milwaukee Audit'}
@@ -3499,7 +3534,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'swiss_data_sovereignty' || (activeTab as string) === 'swiss_sovereignty' || (activeTab as string) === 'swiss' || (activeTab as string) === 'plate_55' || (activeTab as string) === 'plate55' || (activeTab as string) === 'david_ehl') && '🇨🇭 Swiss Data Sovereignty & The Global Freedom Spectrum: Europe’s AI Backlash vs Repressive Kill Switches (Plate #55)'}
               {(activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios') && '🤖 The Normal-People Problem: Why Sovereign IT & Roulet’s Law Unlock AI Adoption (Plate #59)'}
-              {(activeTab === 'trump_ai_summit_table' || (activeTab as string) === 'richest_table' || (activeTab as string) === 'trump_summit' || (activeTab as string) === 'plate_60' || (activeTab as string) === 'plate60') && '👑 Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled & The Sovereign Cognitive Dividend (Plate #60)'}
+              {(activeTab === 'trump_ai_summit_table' || (activeTab as string) === 'richest_table' || (activeTab as string) === 'trump_summit' || (activeTab as string) === 'plate_60' || (activeTab as string) === 'plate60') && '👑 Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled (Plate #60)'}
               {(activeTab === 'super_intelligence_sovereignty' || (activeTab as string) === 'super_intelligence' || (activeTab as string) === 'superintelligence' || (activeTab as string) === 'lake_america' || (activeTab as string) === 'plate_57' || (activeTab as string) === 'plate57') && '👑 The Sovereignty of Super Intelligence: The "Lake America" Paradox & The 6-CEO White House Accord (Plate #57)'}
               {(activeTab === 'datacenter_incentives' || (activeTab as string) === 'incentives_engine' || (activeTab as string) === 'data_center_incentives' || (activeTab as string) === 'plate_56' || (activeTab as string) === 'plate56' || (activeTab as string) === 'mark_tyson' || (activeTab as string) === 'hazle_township') && '🏛️ Data Center Incentives Engine: From Government Tax Giveaways to Direct Household Payments (Plate #56)'}
               {(activeTab === 'cherokee_it_position' || (activeTab as string) === 'cherokee_ban' || (activeTab as string) === 'cherokee' || (activeTab as string) === 'plate_54' || (activeTab as string) === 'plate54' || (activeTab as string) === 'cherokee_position') && '🪶 Cherokee Nation Hyperscale Data Center Ban & Sovereign IT Position (Plate #54)'}
@@ -5082,6 +5117,13 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {activeTab === 'cleveland' && (
             <div className="flex-1 overflow-y-auto bg-white flex flex-col">
               <ClevelandLeadAudit onNavigateTab={(tab) => setActiveTab(tab as any)} />
+            </div>
+          )}
+
+          {/* TAB 2.91: CLEVELAND LEAD HYPOCRISY & 4TH ESTATE COMPLICITY (PLATE #61) */}
+          {(activeTab === 'cleveland_hypocrisy' || (activeTab as string) === 'cleveland-hypocrisy' || (activeTab as string) === 'plate_61' || (activeTab as string) === 'plate61') && (
+            <div className="flex-1 overflow-y-auto bg-stone-900 flex flex-col">
+              <ClevelandLeadHypocrisy onNavigateTab={(tab) => setActiveTab(tab as any)} siteTheme={siteTheme} />
             </div>
           )}
 

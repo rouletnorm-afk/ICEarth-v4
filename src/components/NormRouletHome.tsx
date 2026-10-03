@@ -140,11 +140,28 @@ import incentivesPlateImg from '../assets/images/datacenter_incentives_plate56_1
 import superIntelligencePlateImg from '../assets/images/super_intelligence_sovereignty_plate57_1790732584877.jpg';
 import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_1790766370985.jpg';
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
-import trumpAiSummitPlateImg from '../assets/images/trump_ai_summit_richest_table_plate60_1790839148889.jpg';
+import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
+import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('cleveland_hypocrisy') ||
+    u.includes('cleveland-hypocrisy') ||
+    u.includes('plate_61') ||
+    u.includes('plate61') ||
+    u.includes('plate #61') ||
+    u.includes('photo-000bu') ||
+    u.includes('ip-000bu') ||
+    u.includes('1791032971784') ||
+    u.includes('chris_quinn') ||
+    u.includes('justin_bibb') ||
+    u.includes('letter_from_the_editor') ||
+    u.includes('plain_dealer_hypocrisy')
+  ) {
+    return clevelandHypocrisyPlateImg;
+  }
   if (
     u.includes('trump_ai_summit') ||
     u.includes('richest_table') ||
@@ -156,12 +173,13 @@ const resolvePhotoUrl = (url: string): string => {
     u.includes('photo-000bt') ||
     u.includes('ip-000bt') ||
     u.includes('1790839148889') ||
+    u.includes('nypost_official') ||
     u.includes('amodei') ||
     u.includes('brockman') ||
     u.includes('jensen_huang') ||
     u.includes('summit_table')
   ) {
-    return trumpAiSummitPlateImg;
+    return trumpAiSummitOfficialImg;
   }
   if (
     u.includes('sovereign_agents') ||
@@ -1008,7 +1026,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution' | 'Lead Exposenomics, Corporate Liability & Media Accountability';
   date: string;
   summary: string;
   fullText: string;
@@ -1108,13 +1126,92 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-CLEVELAND-LEAD-HYPOCRISY-PLAIN-DEALER-2026',
+      title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",
+      category: 'Lead Exposenomics, Corporate Liability & Media Accountability',
+      date: '2026-10-03',
+      imageSrc: clevelandHypocrisyPlateImg,
+      publishedUrl: 'https://www.cleveland.com/news/2026/10/justin-bibb-get-up-and-lead-clevelands-children-need-you-letter-from-the-editor.html?outputType=amp',
+      summary: "Following Plain Dealer Editor Chris Quinn's October 3, 2026 editorial telling Mayor Justin Bibb 'get up and lead,' ICEarth exposes the ultimate civic hypocrisy: while the editor blames elected officials and refuses to demand a single dollar from Sherwin-Williams, politicians handed the polluter over $100M in public subsidies, sabotaged Motley Rice lead litigation brought by GCLAC Co-Chair Norm Roulet, and gay-bashed East Cleveland Mayor Eric Brewer from office.",
+      fullText: `JUSTIN BIBB, GET UP AND LEAD. CLEVELAND’S CHILDREN NEED YOU: LETTER FROM THE EDITOR
+Published: Oct. 03, 2026, 8:05 a.m. | By Chris Quinn, Editor, cleveland.com / The Plain Dealer
+Forensic Exposenomics Audit & Sovereign Testimony by Norman Roulet, Co-Chair Greater Cleveland Lead Advisory Council
+Plate #61 Cryptographic Archive: PHOTO-000BU / IP-000BU | Vault Hash: 0xCLEVELAND_LEAD_HYPOCRISY_PLAIN_DEALER_SHERWIN_WILLIAMS_PLATE_61_VAULT_2026
+
+I. THE VERBATIM EDITORIAL BY CHRIS QUINN (OCTOBER 3, 2026)
+Whenever we discuss the lack of leadership in Ohio and Greater Cleveland, readers respond passionately. They want people they can trust to put the public first.
+
+They mention former senators George Voinovich and John Glenn. Locally, I’d add former county leaders Peter Lawson Jones and Jim Rokakis. What people remember of them is a willingness to make decisions based on what would best serve the community.
+
+No issue exposes our leadership failure more starkly than the lead paint crisis. Cleveland children continue to be poisoned in their homes, suffering brain damage that significantly impairs their ability to learn and thrive for the rest of their lives.
+
+We know the danger. We know where much of it lurks. Yet we still have not found the leaders who will drop everything to protect these children on the scale the crisis demands.
+
+In July, we published a series examining the paint industry’s role in this disaster, including that of Cleveland-based Sherwin-Williams. We showed beyond any doubt that manufacturers knew about lead paint’s dangers decades before the residential ban but kept that information secret and continued to promote and sell it.
+
+Most of Cleveland’s vast stock of older housing was built during the lead paint’s heyday, meaning the toxin remains on walls, doors and trim today, where it deteriorates and poisons children.
+
+Our series did not ask Sherwin-Williams to shoulder the cost of solving the crisis. The people running the company today did not make those sinister decisions generations ago. But they can help determine what happens next.
+
+We asked the company to contribute an asset that could make an enormous difference: its leadership. The second installment of our series focused on the remarkable string of leaders that built Sherwin-Williams into the world’s biggest paint company and kept it strong for more than a century. We asked the company to fill Greater Cleveland’s glaring leadership void and oversee a cleanup.
+
+We proposed a team of people in our region who know how to get things done: Sherwin-Williams CEO Heidi Petz, Browns owners Dee and Jimmy Haslam, Cavaliers owner and developer Dan Gilbert, Cleveland Clinic CEO Tom Mihaljevic, Cleveland Foundation chief Lillian Kuri and entrepreneur Ray Leach.
+
+And Cleveland Mayor Justin Bibb, who bears a particular responsibility for bringing them together.
+
+I like Bibb. A lot, actually. When he first ran five years ago, he offered exactly the kind of change Cleveland needed. He was unencumbered by the tired thinking of City Hall’s political machine. He was young, innovative and bold, and in his first term he launched ideas that fulfilled the promise of his candidacy.
+
+But if he leaves office without putting Cleveland on a real path to ending childhood lead poisoning, that failure will be his lasting legacy.
+
+What kind of future are we building with downtown development, the lakefront and Cleveland Hopkins International Airport if we keep letting Cleveland’s housing rob children of their potential to thrive? Is there really any choice between an airport and protecting countless children?
+
+Our lead paint failures in this town span administrations, of course. But Bibb is in the chair now, meaning this crisis is his.
+
+Bibb needs to sit down with former Mayor Frank Jackson for some schooling about the power of his office to assemble people who can solve difficult problems. Jackson knew that if he called leaders to the table to tackle a challenge, they would show up. He did it for the school transformation plan and community benefits agreements. He understood a mayor’s power to get business and nonprofit leaders working in concert.
+
+I wish Jackson had used that power to end the lead paint crisis. Bibb still can.
+
+And what about the others?
+
+Last month, the Haslams gave $10 million to the Rock & Roll Hall of Fame’s expansion. Why? That place sucks in money, including tax dollars from the state capital budget. All so it can charge you $45 to look at tired togs a rock and roller wore 50 years ago.
+
+How many homes could we rid of lead hazards with $10 million? How many children will grow up in those homes over the next 50 years? Children we could save?
+
+But I’m not asking the Haslams and the others for money. I’m asking for their time and expertise. These are people who organize complicated projects, secure resources and insist on results. And Cleveland’s kids need them.
+
+That would mean working with public health experts, people who remove lead hazards and families living with the danger to build a plan with clear responsibilities, enough money and deadlines the public can track. We laid out such a plan on the last day of our series.
+
+We should be able to see how many homes are being made safe, how quickly the work is moving and who is responsible when it stalls.
+
+I know the blame for this continuing crisis reaches in many directions, including here. On the first day of our series, I acknowledged that we had not previously examined Sherwin-Williams’ role. I’ve been here for 30 years, 20 in a leadership role, and I had not made this the priority it deserved to be.
+
+Publishing a series does not erase that failure. It obligates us to keep asking what comes next.
+
+The same question faces everyone with the power to help. Whatever we failed to do in the past is past. It’s what we do now that matters. Why won’t leaders step up here? What could be more important?
+
+A city cannot claim to be building a better future while allowing its children to be poisoned in their homes. I argue we have no greater priority than the children. Everything else is a distant second.
+
+Justin Bibb, get up and lead. The kids need you. Use the power of your office to assemble a team, set a timetable and make the results public. Give this crisis the urgency those children deserve.
+
+II. THE FOUR CIVIC BETRAYALS EXPOSED BY ICEARTH
+1. Betrayal of Corporate Liability: While California won a $305 Million lead abatement judgment against Sherwin-Williams, Ohio civic leaders shielded the company. Plain Dealer Editor Chris Quinn explicitly concedes that his series 'did not ask Sherwin-Williams to shoulder the cost,' granting total corporate impunity.
+2. Betrayal of Mayor Eric Brewer & GCLAC: Norm Roulet, Co-Chair of the Greater Cleveland Lead Advisory Council, brought Motley Rice to Ohio. Then-Mayor Frank Jackson killed the litigation. East Cleveland Mayor Eric Brewer—who initiated the lawsuit—was gay-bashed from office by political machine bosses. Quinn telling Bibb to learn from Frank Jackson is an outrage.
+3. The $100M+ Skyscraper Tax Charity: While children suffer lead encephalopathy, the city and county granted over $100M in tax abatements and public subsidies to construct Sherwin-Williams' 36-story downtown headquarters.
+4. Betrayal of the 4th Estate: The Plain Dealer accepted corporate advertising for decades while ignoring the lead epidemic, and now begs billionaires for voluntary time instead of demanding legal restitution.
+
+III. ROULET'S TESTIMONY: WHY I LEFT OHIO
+'For these exact reasons, I physically left Cleveland and Ohio and have not returned in many years, and will always hold them directly responsible for the global lead crisis. They are Why Roulet's Law, and why ICEarth.'`,
+      tags: ['ClevelandLeadHypocrisy', 'SherwinWilliams', 'PlainDealer', 'ChrisQuinn', 'MayorJustinBibb', 'FrankJackson', 'EricBrewer', 'MotleyRice', 'Plate61', 'TaxCharity', 'RouletsLaw', 'Exposenomics'],
+      linkHash: '0xCLEVELAND_LEAD_HYPOCRISY_PLAIN_DEALER_SHERWIN_WILLIAMS_PLATE_61_VAULT_2026'
+    },
+    {
       id: 'MAG-TRUMP-1-8-TRILLION-AI-SUMMIT-RICHEST-TABLE-2026',
-      title: "Trump’s $1.8 Trillion AI Summit Table: All the Execs Who Answered President’s Call & Why Sovereign Indigenous IT Demands Humanity’s Cognitive Dividend (Plate #60)",
+      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled (Plate #60)",
       category: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution',
       date: '2026-09-30',
-      imageSrc: trumpAiSummitPlateImg,
+      imageSrc: trumpAiSummitOfficialImg,
       publishedUrl: 'https://nypost.com/2026/09/30/us-news/trumps-1-8-trillion-ai-summit-table-all-the-execs-and-what-theyre-worth/',
-      summary: "WASHINGTON — 'It’s the richest table ever assembled.' President Trump gathers tech executives representing $1.8 trillion in net worth — including Elon Musk, Jensen Huang, Dario Amodei, and Greg Brockman. While Trump promises these companies will make 'massive contributions... so good for the people,' ICEarth establishes that Indigenous Communities and the billions of individuals whose collective cognitive commons trained these models must receive direct sovereign wealth equity, computational royalties, and zero-compromise governance rather than oligarchic trickle-down charity.",
+      summary: "WASHINGTON — President Donald Trump convened 13 top technology leaders representing over $1.84 trillion in combined personal net worth, including Elon Musk (~$929.9B), Jeff Bezos (~$370.2B), Mark Zuckerberg (~$249.4B), and Jensen Huang (~$199.4B). ICEarth examines the ethical imperative for Indigenous communities and everyday human creators to share in the economic value created by models trained on their knowledge.",
       fullText: `TRUMP’S $1.8 TRILLION AI SUMMIT TABLE: ALL THE EXECS WHO ANSWERED PRESIDENT’S CALL, AND WHAT THEY’RE WORTH
 By Ryan King (New York Post White House Correspondent) | Published Sep. 30, 2026, 5:55 p.m. ET
 Sovereign IT Forensic Audit & Cognitive Restitution Commentary by Norman Roulet
@@ -3544,15 +3641,26 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
+      id: 'PHOTO-000BU',
+      title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",
+      category: 'Lead Exposenomics, Corporate Liability & Media Accountability',
+      imageSrc: clevelandHypocrisyPlateImg,
+      location: 'Cleveland, OH • Cuyahoga County • Sacramento (CA Precedent) • Global Sovereign Web',
+      date: '2026-10-03',
+      description: "Plate #61: Comprehensive forensic exposenomics audit of Plain Dealer Editor Chris Quinn's Oct 3, 2026 letter telling Mayor Justin Bibb 'get up and lead.' Features the four historic betrayals of Cleveland democracy: (1) Sherwin-Williams' 100-year marketing of toxic lead pigments and evasion of Ohio liability despite California's $305M judgment; (2) Then-Mayor Frank Jackson killing the Motley Rice lead lawsuit and the political ouster of East Cleveland Mayor Eric Brewer; (3) The granting of over $100M in public tax subsidies to build Sherwin-Williams' downtown skyscraper while 1,000+ Cleveland children are poisoned annually; (4) The 4th Estate's complete refusal to demand financial restitution from the corporate polluter. Explains why GCLAC co-chair Norm Roulet physically departed Ohio and formulated Roulet's Law and ICEarth.",
+      vaultHash: '0xCLEVELAND_LEAD_HYPOCRISY_PLAIN_DEALER_SHERWIN_WILLIAMS_PLATE_61_VAULT_2026',
+      tags: ['ClevelandLeadHypocrisy', 'SherwinWilliams', 'ChrisQuinn', 'PlainDealer', 'MayorJustinBibb', 'FrankJackson', 'EricBrewer', 'MotleyRice', 'Plate61', 'TaxCharity', 'RouletsLaw', 'Exposenomics']
+    },
+    {
       id: 'PHOTO-000BT',
-      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled vs. Indigenous Sovereign Cognitive Dividend (Plate #60)",
+      title: "Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled (Plate #60)",
       category: 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution',
-      imageSrc: trumpAiSummitPlateImg,
-      location: 'Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Trust',
+      imageSrc: trumpAiSummitOfficialImg,
+      location: 'Washington, DC • White House Roosevelt Room • Sep. 30, 2026',
       date: '2026-09-30',
-      description: "Origins: Landmark sovereign economics and computational justice infographic plate auditing President Trump's September 30, 2026 White House AI summit with tech executives representing over $1.8 trillion in combined net worth (Elon Musk, Jensen Huang, Dario Amodei, Greg Brockman, alongside VP JD Vance and Speaker Mike Johnson). Audits the stark juxtaposition between Trump's declaration that 'these big, powerful, very rich companies are going to be making massive contributions to communities' and the historical reality of corporate data extraction under Roulet's Law. Demands the Sovereign Cognitive Dividend: establishing that the billions of individuals and Indigenous peoples whose languages, art, knowledge, and life data trained these frontier models must receive direct equity dividends, computational royalties, and non-custodial Swiss zero-knowledge data ownership rather than monopoly charity.",
+      description: "Official New York Post photograph of President Donald Trump convening 13 technology CEOs at the White House with over $1.84 trillion in combined net worth, including Elon Musk (~$929.9B), Jeff Bezos (~$370.2B), Mark Zuckerberg (~$249.4B), and Jensen Huang (~$199.4B). The sovereign analysis demonstrates why Indigenous communities and human knowledge contributors must share in the economic value created by models trained on collective human intelligence.",
       vaultHash: '0xTRUMP_1_8_TRILLION_AI_SUMMIT_RICHEST_TABLE_SOVEREIGN_DIVIDEND_VAULT_2026',
-      tags: ['TrumpSummit', 'RichestTable', 'Plate60', 'ElonMusk', 'JensenHuang', 'DarioAmodei', 'GregBrockman', 'CognitiveDividend', 'IndigenousWealth', 'SovereignIT', 'RouletsLaw', 'Exposenomics']
+      tags: ['TrumpSummit', 'RichestTable', 'Plate60', 'ElonMusk', 'JensenHuang', 'JeffBezos', 'MarkZuckerberg', 'GregBrockman', 'CognitiveDividend', 'SovereignIT', 'RouletsLaw']
     },
     {
       id: 'PHOTO-000BS',
