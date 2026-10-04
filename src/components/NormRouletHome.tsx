@@ -142,10 +142,29 @@ import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_17907
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
 import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
+import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('openai_broken_culture') ||
+    u.includes('openai-broken-culture') ||
+    u.includes('openai_safety') ||
+    u.includes('david_robinson') ||
+    u.includes('david-robinson') ||
+    u.includes('ai_is_the_new_pb') ||
+    u.includes('ai-new-pb') ||
+    u.includes('plate_62') ||
+    u.includes('plate62') ||
+    u.includes('plate #62') ||
+    u.includes('photo-000bv') ||
+    u.includes('ip-000bv') ||
+    u.includes('1791096032753') ||
+    u.includes('culture_is_broken')
+  ) {
+    return openAIBrokenPlateImg;
+  }
   if (
     u.includes('cleveland_hypocrisy') ||
     u.includes('cleveland-hypocrisy') ||
@@ -1026,7 +1045,7 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution' | 'Lead Exposenomics, Corporate Liability & Media Accountability';
+  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution' | 'Lead Exposenomics, Corporate Liability & Media Accountability' | 'Sovereign AI Safety, Broken Culture & Cognitive Exposenomics';
   date: string;
   summary: string;
   fullText: string;
@@ -1125,6 +1144,38 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-OPENAI-BROKEN-CULTURE-DAVID-ROBINSON-2026',
+      title: "Why AI Is the New Pb (Lead): Inside OpenAI's Broken Culture & The Atlantic Confession (Plate #62)",
+      category: 'Sovereign AI Safety, Broken Culture & Cognitive Exposenomics',
+      date: '2026-10-03',
+      imageSrc: openAIBrokenPlateImg,
+      publishedUrl: 'https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/',
+      summary: "David Robinson, former lead writer of OpenAI's safety reports, resigns in The Atlantic: 'The future depends on wisdom that Silicon Valley lacks... The industry’s approach to safety will guarantee more failures unless something changes.' ICEarth analyzes why AI hyper-scaling represents the 21st-century equivalent of tetraethyl lead (Pb), and shows how Sovereign IT local enclaves solve these failures.",
+      fullText: `I QUIT OPENAI BECAUSE ITS CULTURE IS BROKEN: WHY AI IS THE NEW PB (LEAD)
+By David Robinson (Former OpenAI Safety Reports Lead) | Published in The Atlantic, October 2026
+Forensic Exposenomics & Sovereign AI Commentary by Norman Roulet
+Plate #62 Cryptographic Archive: PHOTO-000BV / IP-000BV | Vault Hash: 0xOPENAI_BROKEN_CULTURE_AI_AS_NEW_PB_PLATE_62_VAULT_2026
+
+I. THE ATLANTIC RESIGNATION STATEMENT
+"What I’m about to tell you has, I realize, become something of a cliché: I resigned this week from OpenAI. I led the writing of the safety reports we published with each major launch. Now I’m joining a parade of former colleagues—at OpenAI and the industry’s other leaders—who have decided that the current path is unacceptable.
+
+I agree with other recently departed staff that the companies building this technology aren’t being nearly careful enough. But I believe that we need to look deeper than specific rules or new laws. We need to talk about culture.
+
+The future depends on wisdom that Silicon Valley lacks. Wisdom about how to handle dangerous technology and, more fundamentally, wisdom about what it means to care for people. This moment needs a degree of humility that isn’t natural for people who have succeeded through their extreme confidence. My former colleagues at OpenAI were prescient: They came to understand the scaling laws that meant bigger AI systems would be smarter—and so they went all in on building bigger systems, at great cost. A can-do attitude of achieving the seemingly impossible—coupled with work timelines that amount to perpetual sprints—are common across the industry."
+
+II. ROULET'S LAW: WHY AI IS THE NEW PB (LEAD)
+Just as 20th-century automotive and paint monopolies prioritized acute utility while externalizing generational neurotoxicity (Tetraethyl lead and white lead paint), the 21st-century AI cartel prioritizes scaling laws while ignoring epistemic collapse, cognitive degradation, and massive ecological water/energy drains. When companies silence safety researchers with equity NDAs and dismantle non-profit charters for corporate greed, self-regulation is an illusion.
+
+III. THE ICEARTH SOVEREIGN IT SOLUTION
+ICEarth replaces Silicon Valley's broken sprint culture with Sovereign IT:
+1. Zero-Knowledge Local Enclaves: Inference runs on client-side hardware; prompt streams are never extracted into centralized surveillance lakes.
+2. Community Elder Stewardship: Indigenous and community elders provide the ethical wisdom that Silicon Valley lacks.
+3. Closed-Loop Microgrids: Decoupling compute from municipal water tables and regional power grids.
+4. Sovereign Cognitive Dividend: Mandating perpetual royalties on all AI models utilizing human knowledge.`,
+      tags: ['OpenAIBrokenCulture', 'DavidRobinson', 'TheAtlantic', 'SamAltman', 'AIIsTheNewPb', 'Plate62', 'SafetyExodus', 'RouletsLaw', 'SovereignIT', 'CognitiveToxicity', 'ElderGovernance'],
+      linkHash: '0xOPENAI_BROKEN_CULTURE_AI_AS_NEW_PB_PLATE_62_VAULT_2026'
+    },
     {
       id: 'MAG-CLEVELAND-LEAD-HYPOCRISY-PLAIN-DEALER-2026',
       title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",
@@ -3640,6 +3691,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BV',
+      title: "Why AI Is the New Pb (Lead): Inside OpenAI's Broken Culture & The Atlantic Confession (Plate #62)",
+      category: 'Sovereign AI Safety, Broken Culture & Cognitive Exposenomics',
+      imageSrc: openAIBrokenPlateImg,
+      location: 'The Atlantic Forensics • San Francisco, CA • Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Web',
+      date: '2026-10-03',
+      description: "Plate #62: Landmark forensic audit and cryptographic ledger examining David Robinson's Atlantic confession on quitting OpenAI because its culture is broken. Robinson, who wrote the safety reports for every major OpenAI launch, joins the exodus of top alignment scientists, testifying that Silicon Valley lacks the humility and wisdom to safely steward dangerous technology. Correlates frontier AI scaling with the 20th-century tetraethyl lead (Pb) public health disaster, audits Sam Altman's pushback, and details ICEarth's Sovereign IT solution based on local client-side hardware enclaves and elder governance.",
+      vaultHash: '0xOPENAI_BROKEN_CULTURE_AI_AS_NEW_PB_PLATE_62_VAULT_2026',
+      tags: ['OpenAIBrokenCulture', 'DavidRobinson', 'TheAtlantic', 'SamAltman', 'AIIsTheNewPb', 'Plate62', 'SafetyExodus', 'RouletsLaw', 'SovereignIT', 'CognitiveToxicity', 'ElderGovernance', 'LocalEnclaves']
+    },
     {
       id: 'PHOTO-000BU',
       title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",

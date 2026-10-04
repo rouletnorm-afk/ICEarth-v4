@@ -70,6 +70,7 @@ import leadAlzheimersPlateImg from '../assets/images/lead_alzheimers_fixed_17907
 import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_people_plate59_1790802841973.jpg';
 import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
+import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import {
   Shield,
   UserCheck,
@@ -201,6 +202,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BV',
+      title: "Why AI Is the New Pb (Lead): Inside OpenAI's Broken Culture & The Atlantic Confession (Plate #62)",
+      type: 'Cognitive Neurotoxicity, Safety Whistleblower & Sovereign AI IP Asset',
+      imageSrc: openAIBrokenPlateImg,
+      link: 'openai_broken_culture',
+      sourceUrl: 'https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/',
+      description: "Plate #62: Comprehensive forensic exposenomics audit of David Robinson's Atlantic essay resigning from OpenAI ('The industry’s approach to safety will guarantee more failures unless something changes... The future depends on wisdom that Silicon Valley lacks'). Explores the historical parallel to 20th-century tetraethyl lead (Pb), Sam Altman's pushback asserting iterative deployment in the wild, the 4th estate consensus on the collapse of self-regulation, and how ICEarth Sovereign IT solves these failures through local enclaves and elder governance.",
+      sovereignHash: '0xOPENAI_BROKEN_CULTURE_AI_AS_NEW_PB_PLATE_62_VAULT_2026'
+    },
     {
       id: 'IP-000BU',
       title: "The Cleveland Lead Hypocrisy: Sherwin-Williams, The Plain Dealer & The Betrayal of Democracy (Plate #61)",
