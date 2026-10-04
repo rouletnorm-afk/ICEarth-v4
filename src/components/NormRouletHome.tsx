@@ -1145,6 +1145,36 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
     {
+      id: 'MAG-AMAZON-1-BILLION-DATA-CENTER-TOWNS-2026',
+      title: "Amazon Vows $1 Billion for Data Center Towns, Warning U.S. 'Can't Afford to Lose' AI Race (Plate #56 Update)",
+      category: 'Data Center Incentives & Sovereign Computing',
+      date: '2026-10-02',
+      imageSrc: incentivesPlateImg,
+      publishedUrl: 'https://www.cbsnews.com/news/amazon-1-billion-data-center-investment-ai/',
+      summary: "CBS News investigation by Megan Cerullo: Amazon Web Services pledges $1 billion over five years to host communities while CEO Matt Garman warns that the nation 'can't afford to lose' the AI race. ICEarth deconstructs the pacification math: $1B across dozens of towns is an infinitesimal fraction of AWS capital expenditures, deployed to override grassroots zoning moratoria while host communities absorb grid strain, water draw, and residential utility hikes.",
+      fullText: `AMAZON VOWS $1 BILLION FOR DATA CENTER TOWNS, WARNING U.S. "CAN'T AFFORD TO LOSE" AI RACE
+By Megan Cerullo | Published by CBS News, October 2, 2026 / 1:42 PM EDT
+Forensic Exposenomics & Computational Economics Commentary by Norman Roulet
+Plate #56 Reference: The Evolution of Data Center Incentives
+
+I. THE CBS NEWS INVESTIGATION
+Amazon's cloud computing division on Friday announced a new effort to temper opposition to data centers in some U.S. communities, while saying the U.S. "can't afford to lose" the race to dominate artificial intelligence globally. 
+
+The tech giant pledged to invest an additional $1 billion over five years in the communities where it builds data centers, the facilities that power AI, on top of existing commitments. Amazon said the money will go toward education, job training, energy affordability, and water and energy preservation, and also fund other local priorities. 
+
+"There is urgency to this data center buildout because we aren't the only country that sees the benefits of AI for the economy and national security, and the countries that lead in AI will shape it and get the most from it in the short and long run," Amazon Web Services CEO Matt Garman said in a blog post. "The choices we make today will determine that outcome, and a lapse in our nation's focus or resolve could put us behind, and potentially irreparably so."
+
+II. FORENSIC AUDIT: THE CORPORATE PACIFICATION SHIELD
+1. The Geopolitical Guilt-Trip: When rural and suburban citizens protest water table depletion, 24/7 low-frequency fan noise, and surging electric bills, tech oligopolies pivot to national security panic, branding local zoning boards and environmental reviews as threats to American survival in the AI race against foreign adversaries.
+2. The Arithmetic of Pacification: Amazon's $1 billion pledge over five years across dozens of host towns amounts to a trivial rounding error (<0.3%) of their $60B+ annual capex, while single facilities consume gigawatt-scale power and millions of gallons of potable water daily.
+3. The Liability Confession: By directing funds to 'energy affordability' and 'water preservation', Amazon openly concedes that hyperscale infrastructure inflates residential utility rates and exhausts municipal aquifers.
+
+III. THE ICEARTH SOVEREIGN ALTERNATIVE
+Rather than accepting philanthropic handouts that paper over ecological and acoustic devastation, Indigenous and rural communities adopt Phase 4 Sovereign IT: closed-loop dielectric computing, zero water consumption, off-grid islanded microgrids, and 100% community equity governed by local elders.`,
+      tags: ['AmazonAWS', 'DataCenterIncentives', 'Plate56', 'CBSNews', 'MeganCerullo', 'MattGarman', 'AIRace', 'EnergyAffordability', 'WaterDepletion', 'SovereignIT'],
+      linkHash: '0xAMAZON_1_BILLION_DATA_CENTER_TOWNS_CBS_NEWS_PLATE_56_VAULT_2026'
+    },
+    {
       id: 'MAG-OPENAI-BROKEN-CULTURE-DAVID-ROBINSON-2026',
       title: "Why AI Is the New Pb (Lead): Inside OpenAI's Broken Culture & The Atlantic Confession (Plate #62)",
       category: 'Sovereign AI Safety, Broken Culture & Cognitive Exposenomics',

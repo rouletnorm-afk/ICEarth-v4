@@ -82,7 +82,7 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
   };
 
   // Preset Configurations
-  const applyPreset = (preset: 'hazle' | 'maryland' | 'michigan' | 'jicarilla') => {
+  const applyPreset = (preset: 'hazle' | 'maryland' | 'michigan' | 'jicarilla' | 'amazon') => {
     if (preset === 'hazle') {
       setNumHouseholds(4500);
       setCashCheckPerHousehold(10000);
@@ -113,6 +113,16 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
       setPropertyDropPercent(12);
       setElectricBillHikeAnnual(390);
       setTimeHorizonYears(10);
+    } else if (preset === 'amazon') {
+      setNumHouseholds(14000);
+      setCashCheckPerHousehold(0);
+      setCommunityFundMillions(200); // 1/5th share of AWS $1B nationwide 5-year pool
+      setFacilityAcres(2500);
+      setPowerDemandMW(850);
+      setAvgHomeValue(320000);
+      setPropertyDropPercent(9);
+      setElectricBillHikeAnnual(540);
+      setTimeHorizonYears(15);
     } else if (preset === 'jicarilla') {
       setNumHouseholds(1200);
       setCashCheckPerHousehold(0);
@@ -190,6 +200,15 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
       communityReaction: 'Fierce citizen pushback: perceived as an insult/bribe, noise fears ("like a vacuum in your living room"), zoning moratorium enacted.'
     },
     {
+      phase: 'Phase 3B (October 2026)',
+      title: 'Amazon\'s $1 Billion "PR Shield" & Geopolitical AI Race Coercion',
+      whoPays: 'Amazon Web Services (AWS)',
+      whoReceives: 'Data Center Towns Nationwide ($1 Billion over 5 Years)',
+      mechanism: 'Pledges for education, job training, energy affordability, water and energy preservation, combined with warnings that local opposition undermines U.S. national security in the AI race.',
+      impact: 'Using philanthropic pacification funds to quell community rebellion over water depletion, power grid strain, and 24/7 noise while steamrolling local planning commissions.',
+      communityReaction: 'Increasing skepticism: citizens recognize $1B over 5 years across hundreds of towns is a drop in the bucket compared to multi-gigawatt grid strain and residential rate inflation.'
+    },
+    {
       phase: 'Phase 4 (ICEarth Model)',
       title: 'The Sovereign IT Stack & Perpetual Tribal Equity',
       whoPays: 'Self-Funded Sovereign Cooperatives & Indigenous Trusts',
@@ -227,18 +246,31 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
                 🏛️ The Evolution of Data Center Incentives
               </span>
               <span className="px-3 py-1 bg-red-600/80 text-white font-mono text-xs rounded-md border border-red-400/40 flex items-center gap-1.5">
-                🚫 Hazle Township PA $10k Bribe Backlash
+                🚫 Hazle Twp PA $10k Bribe
+              </span>
+              <span className="px-3 py-1 bg-rose-600/90 text-white font-mono text-xs rounded-md border border-rose-400/60 flex items-center gap-1.5">
+                📦 Amazon $1B Towns Pledge (CBS News)
               </span>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://www.cbsnews.com/news/amazon-1-billion-data-center-investment-ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-mono font-black text-xs rounded-lg shadow transition-colors flex items-center gap-1.5 border border-rose-300 cursor-pointer"
+              >
+                <span>CBS News: Amazon $1B Pledge</span>
+                <ExternalLink size={12} />
+              </a>
+
               <a
                 href="https://www.tomshardware.com/tech-industry/data-centers/data-center-developer-offers-usd10-000-checks-to-4-500-households-if-the-1-300-acre-facility-is-approved-locals-push-back-over-noise-and-bribe-concerns"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black text-xs rounded-lg shadow transition-colors flex items-center gap-1.5 border border-amber-300 cursor-pointer"
               >
-                <span>Tom's Hardware Report (Mark Tyson)</span>
+                <span>Tom's Hardware (Mark Tyson)</span>
                 <ExternalLink size={12} />
               </a>
 
@@ -554,6 +586,107 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
                   </div>
                 </div>
               </div>
+
+              {/* OCTOBER 2, 2026 BREAKTHROUGH: AMAZON VOWS $1B FOR DATA CENTER TOWNS (CBS NEWS) */}
+              <div className={`mt-8 p-6 sm:p-8 rounded-2xl border-2 ${
+                siteTheme === 'dark' 
+                  ? 'bg-gradient-to-br from-stone-900 via-rose-950/20 to-stone-950 border-rose-500/70 shadow-2xl' 
+                  : 'bg-gradient-to-br from-rose-50/60 via-white to-amber-50/40 border-rose-400 shadow-xl'
+              } space-y-6`}>
+                <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-4 border-stone-200 dark:border-stone-800">
+                  <div className="space-y-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="px-2.5 py-0.5 bg-rose-600 text-white font-mono text-[11px] font-black rounded uppercase tracking-wider">
+                        CBS NEWS INVESTIGATION • OCTOBER 2, 2026
+                      </span>
+                      <span className="text-xs font-mono text-stone-500 dark:text-stone-400">
+                        By Megan Cerullo • 1:42 PM EDT
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-black text-stone-900 dark:text-white">
+                      Amazon Vows $1 Billion for Data Center Towns, Warning U.S. "Can't Afford to Lose" AI Race
+                    </h3>
+                  </div>
+
+                  <a
+                    href="https://www.cbsnews.com/news/amazon-1-billion-data-center-investment-ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                  >
+                    <span>View CBS News Dispatch</span>
+                    <ExternalLink size={13} />
+                  </a>
+                </div>
+
+                {/* Verbatim News Excerpt & Matt Garman Quote */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                  <div className="lg:col-span-7 space-y-4">
+                    <div className="p-4 bg-stone-100 dark:bg-black/50 rounded-xl border border-stone-300 dark:border-stone-800 font-mono text-xs sm:text-sm text-stone-800 dark:text-stone-200 space-y-2">
+                      <div className="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+                        CBS NEWS WIRE REPORT:
+                      </div>
+                      <p className="italic leading-relaxed">
+                        "Amazon's cloud computing division on Friday announced a new effort to temper opposition to data centers in some U.S. communities, while saying the U.S. 'can't afford to lose' the race to dominate artificial intelligence globally."
+                      </p>
+                      <p className="italic leading-relaxed">
+                        "The tech giant pledged to invest an additional $1 billion over five years in the communities where it builds data centers, the facilities that power AI, on top of existing commitments. Amazon said the money will go toward education, job training, energy affordability, and water and energy preservation, and also fund other local priorities."
+                      </p>
+                    </div>
+
+                    {/* CEO Quote Box */}
+                    <div className="p-4 bg-gradient-to-r from-rose-950/40 via-stone-900 to-amber-950/40 rounded-xl border-l-4 border-rose-500 text-stone-100 space-y-2 font-serif">
+                      <p className="text-xs font-mono font-bold text-amber-400 not-italic uppercase tracking-wider">
+                        AWS CEO Matt Garman Official Statement:
+                      </p>
+                      <blockquote className="text-sm italic leading-relaxed text-stone-200">
+                        "There is urgency to this data center buildout because we aren't the only country that sees the benefits of AI for the economy and national security, and the countries that lead in AI will shape it and get the most from it in the short and long run... The choices we make today will determine that outcome, and a lapse in our nation's focus or resolve could put us behind, and potentially irreparably so."
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  {/* Right: Forensic Deconstruction */}
+                  <div className="lg:col-span-5 space-y-3 font-mono text-xs">
+                    <div className={`p-4 rounded-xl border ${siteTheme === 'dark' ? 'bg-stone-950 border-rose-900/40' : 'bg-white border-rose-200'} space-y-1.5`}>
+                      <span className="font-bold text-rose-600 dark:text-rose-400 text-sm block">
+                        1. The Geopolitical Guilt-Trip
+                      </span>
+                      <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-[11px]">
+                        Hyperscalers are now using patriotic fearmongering (<em>"the U.S. can't afford to lose the AI race"</em>) to bully municipal planning boards and brand concerned local homeowners as national security obstacles.
+                      </p>
+                    </div>
+
+                    <div className={`p-4 rounded-xl border ${siteTheme === 'dark' ? 'bg-stone-950 border-amber-900/40' : 'bg-white border-amber-200'} space-y-1.5`}>
+                      <span className="font-bold text-amber-600 dark:text-amber-400 text-sm block">
+                        2. The $1B Pacification Arithmetic
+                      </span>
+                      <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-[11px]">
+                        $1 Billion over 5 years across hundreds of host towns averages ~$2M–$4M per county per year. Compared to Amazon's $60B+ annual capex, this pacification budget represents less than 0.3% of their capital outlay.
+                      </p>
+                    </div>
+
+                    <div className={`p-4 rounded-xl border ${siteTheme === 'dark' ? 'bg-stone-950 border-blue-900/40' : 'bg-white border-blue-200'} space-y-1.5`}>
+                      <span className="font-bold text-blue-600 dark:text-blue-400 text-sm block">
+                        3. The "Energy & Water" Confession
+                      </span>
+                      <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-[11px]">
+                        Amazon directing money specifically to <em>"energy affordability and water preservation"</em> is an open corporate admission that hyperscale facilities directly inflate power bills and drain aquifers in host towns.
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        applyPreset('amazon');
+                        setActiveTabSection('calculator');
+                      }}
+                      className="w-full py-2.5 bg-gradient-to-r from-rose-600 via-amber-600 to-rose-700 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer hover:scale-102"
+                    >
+                      <Sliders size={14} />
+                      <span>Simulate Amazon $1B Pledge in Incentives Engine</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -591,6 +724,12 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
                     className="px-2.5 py-1 bg-red-600/90 text-white hover:bg-red-500 rounded text-xs font-mono font-bold cursor-pointer transition-colors"
                   >
                     Meta Michigan
+                  </button>
+                  <button
+                    onClick={() => applyPreset('amazon')}
+                    className="px-2.5 py-1 bg-rose-600/90 text-white hover:bg-rose-500 rounded text-xs font-mono font-bold cursor-pointer transition-colors"
+                  >
+                    📦 Amazon $1B (AWS)
                   </button>
                   <button
                     onClick={() => applyPreset('jicarilla')}
@@ -1010,6 +1149,32 @@ export const DataCenterIncentivesEngine: React.FC<DataCenterIncentivesEngineProp
                   </p>
                   <div className="p-3 bg-black/40 rounded-lg text-xs font-mono text-amber-300 border border-amber-900/40">
                     <strong>Economic Inequity:</strong> Working families subsidize the multi-gigawatt power demand of commercial AI training clusters.
+                  </div>
+                </div>
+
+                {/* Amazon AWS Nationwide $1B Pacification Fund */}
+                <div className={`p-5 rounded-xl border md:col-span-2 ${siteTheme === 'dark' ? 'bg-gradient-to-r from-stone-950 via-rose-950/30 to-stone-950 border-rose-800/70' : 'bg-gradient-to-r from-rose-50/70 via-white to-amber-50/60 border-rose-300'} space-y-3`}>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-mono font-black text-rose-600 dark:text-rose-400 uppercase">
+                      NATIONWIDE • Amazon Web Services (AWS) $1 Billion Fund
+                    </span>
+                    <span className="px-2.5 py-0.5 bg-rose-600 text-white font-mono text-[10px] rounded font-bold">
+                      CBS News Investigation • Oct 2026
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-base sm:text-lg text-stone-900 dark:text-white">
+                    Amazon Vows $1B for Data Center Towns, Warning U.S. "Can't Afford to Lose" AI Race
+                  </h3>
+                  <p className="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+                    CBS News reports that Amazon's cloud computing division pledged an additional $1 billion over five years to communities where it operates AI data centers, earmarking money for education, job training, energy affordability, and water/energy preservation. Simultaneously, AWS CEO Matt Garman issued a stark geopolitical warning: <em>"The choices we make today will determine that outcome, and a lapse in our nation's focus or resolve could put us behind, and potentially irreparably so."</em>
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+                    <div className="p-3 bg-black/40 rounded-lg text-rose-300 border border-rose-900/40">
+                      <strong>The Pacification Strategy:</strong> AWS is attempting to buy off grassroots zoning opposition and municipal moratoria by framing local environmental reviews as a national security risk.
+                    </div>
+                    <div className="p-3 bg-black/40 rounded-lg text-amber-300 border border-amber-900/40">
+                      <strong>The Economic Reality:</strong> $1B spread across dozens of towns over 5 years is a negligible fraction of Amazon's $60B+ annual capex, failing to offset local aquifer depletion and skyrocketing residential electric bills.
+                    </div>
                   </div>
                 </div>
               </div>

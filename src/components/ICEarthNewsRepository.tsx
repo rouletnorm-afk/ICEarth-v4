@@ -295,7 +295,12 @@ const resolveImageUrl = (url?: string): string => {
     u.includes('northpoint') ||
     u.includes('mark_tyson') ||
     u.includes('10,000 checks') ||
-    u.includes('10000 checks')
+    u.includes('10000 checks') ||
+    u.includes('amazon') ||
+    u.includes('cerullo') ||
+    u.includes('garman') ||
+    u.includes('1_billion') ||
+    u.includes('1billion')
   ) {
     return incentivesPlateImg;
   }
@@ -1057,6 +1062,56 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-AMAZON-1-BILLION-DATA-CENTER-TOWNS-CBS-NEWS-2026',
+    contentType: 'Article',
+    title: "Amazon Vows $1 Billion for Data Center Towns, Warning U.S. 'Can't Afford to Lose' AI Race",
+    subtitle: "NEW YORK / SEATTLE — CBS News reports Amazon Web Services is pledging an additional $1 billion over five years to host communities to temper growing opposition, while AWS CEO Matt Garman warns that the nation 'can't afford to lose' the race to dominate artificial intelligence globally. ICEarth's Data Center Incentives Engine reveals why corporate PR philanthropy cannot compensate for massive grid strain, water draw, and residential utility hikes.",
+    sourceUrl: 'https://www.cbsnews.com/news/amazon-1-billion-data-center-investment-ai/',
+    sourceName: 'CBS News (Megan Cerullo) & ICEarth Sovereign Computing Directorate',
+    publishDate: '2026-10-02',
+    author: 'Megan Cerullo (CBS News) • Forensic Commentary by Norman Roulet',
+    authorName: 'Megan Cerullo (CBS News) with Forensic Commentary by Norman Roulet',
+    originState: 'New York, NY • Seattle, WA • Hazle Twp, PA • Global Sovereign Web',
+    communities: [
+      'CBS News Directorate',
+      'Data Center Community Defense Network',
+      'ICEarth Sovereign Computing Consortium',
+      'PJM Grid Ratepayers Coalition',
+      'Rural & Indigenous Energy Justice'
+    ],
+    vaultHash: '0xDATA_CENTER_INCENTIVES_EVOLUTION_SOVEREIGN_IT_PLATE_56_VAULT_2026',
+    editorName: 'Norman Roulet (Sovereign Computing & Exposenomics Review)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: incentivesPlateImg,
+    thumbnailUrl: incentivesPlateImg,
+    tags: [
+      'AmazonAWS',
+      'DataCenterIncentives',
+      'Plate56',
+      'CBSNews',
+      'MeganCerullo',
+      'MattGarman',
+      'AIRace',
+      'EnergyAffordability',
+      'WaterDepletion',
+      'SovereignIT',
+      'RouletsLaw',
+      'PacificationFund'
+    ],
+    abstract: "Amazon's cloud computing division on Friday announced a new effort to temper opposition to data centers in some U.S. communities, while saying the U.S. 'can't afford to lose' the race to dominate artificial intelligence globally. The tech giant pledged to invest an additional $1 billion over five years in the communities where it builds data centers, the facilities that power AI, on top of existing commitments. Amazon said the money will go toward education, job training, energy affordability, and water and energy preservation, and also fund other local priorities. AWS CEO Matt Garman issued an explicit geopolitical appeal: 'There is urgency to this data center buildout because we aren't the only country that sees the benefits of AI for the economy and national security... and a lapse in our nation's focus or resolve could put us behind, and potentially irreparably so.' ICEarth's Data Center Incentives Engine reveals that $1 billion spread over five years across dozens of host towns represents less than 0.3% of Amazon's capital expenditures, serving as a corporate pacification shield to steamroll local zoning and environmental moratoria while leaving families to absorb skyrocketing utility bills and depleted aquifers.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'When AWS CEO Matt Garman warns that the U.S. cannot afford a lapse in resolve in the AI race, he is employing the classic corporate playbook: wrapping private capital expansion in the American flag to intimidate rural and suburban communities into silence. Notice what Amazon explicitly pledged money for: energy affordability and water preservation. That is a direct confession of liability! Why would a host town need Amazon to fund their energy bills and save their water unless Amazon’s hyperscale facilities are actively driving up power rates and sucking municipal aquifers dry? In Hazle Township, developers tried buying out residents with $10,000 cash checks, and the citizens rejected them with a zoning moratorium. Now Amazon steps up with a $1 billion national pacification fund to lobby statehouses and neutralize town opposition. The solution to hyperscale resource predation is not corporate philanthropy—it is Sovereign IT: community-owned, closed-loop zero-water enclaves governed by local elders.'",
+    fullExcerpt: `AMAZON VOWS $1 BILLION FOR DATA CENTER TOWNS, WARNING U.S. "CAN'T AFFORD TO LOSE" AI RACE
+By Megan Cerullo | Published by CBS News, October 2, 2026 / 1:42 PM EDT
+
+Amazon's cloud computing division on Friday announced a new effort to temper opposition to data centers in some U.S. communities, while saying the U.S. "can't afford to lose" the race to dominate artificial intelligence globally. 
+
+The tech giant pledged to invest an additional $1 billion over five years in the communities where it builds data centers, the facilities that power AI, on top of existing commitments. Amazon said the money will go toward education, job training, energy affordability, and water and energy preservation, and also fund other local priorities. 
+
+"There is urgency to this data center buildout because we aren't the only country that sees the benefits of AI for the economy and national security, and the countries that lead in AI will shape it and get the most from it in the short and long run," Amazon Web Services CEO Matt Garman said in a blog post. "The choices we make today will determine that outcome, and a lapse in our nation's focus or resolve could put us behind, and potentially irreparably so."
+
+https://www.cbsnews.com/news/amazon-1-billion-data-center-investment-ai/`
+  },
   {
     id: 'ART-OPENAI-BROKEN-CULTURE-DAVID-ROBINSON-ATLANTIC-PLATE62-2026',
     contentType: 'Article',
