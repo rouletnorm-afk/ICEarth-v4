@@ -68,6 +68,7 @@ import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_pe
 import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
+import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -182,6 +183,24 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('super_intelligence_force') ||
+    u.includes('super-intelligence-force') ||
+    u.includes('sif') ||
+    u.includes('jay_clayton') ||
+    u.includes('jay-clayton') ||
+    u.includes('ai_czar') ||
+    u.includes('ai-czar') ||
+    u.includes('regulatory_framework') ||
+    u.includes('plate_63') ||
+    u.includes('plate63') ||
+    u.includes('plate #63') ||
+    u.includes('photo-000bw') ||
+    u.includes('ip-000bw') ||
+    u.includes('1791123715872')
+  ) {
+    return sifInfographicPlateImg;
+  }
   if (
     u.includes('openai_broken_culture') ||
     u.includes('openai-broken-culture') ||
@@ -1062,6 +1081,56 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-TRUMP-SUPER-INTELLIGENCE-FORCE-JAY-CLAYTON-AI-CZAR-2026',
+    contentType: 'Article',
+    title: "Trump Taps Director of National Intelligence Jay Clayton as AI Czar to Lead 'Super Intelligence Force' (Plate #63)",
+    subtitle: "WASHINGTON / TRUTH SOCIAL — CNBC reports President Donald Trump has named Director of National Intelligence Jay Clayton as federal AI Czar, leading the newly formed 'Super Intelligence Force' (SIF) to define federal oversight over artificial intelligence amidst rogue AI agent hacks and escalating industry calls for an AI slowdown. ICEarth's 6-Tier AI Regulatory Framework reveals why centralized executive czars inevitably fail under the Kehoe Rule of regulatory capture, and establishes Sovereign IT hardware enclaves and elder governance as humanity's only true defense.",
+    sourceUrl: 'https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html',
+    sourceName: 'CNBC (Truth Social & DNI Wire) & ICEarth Sovereign Directorate',
+    publishDate: '2026-10-03',
+    author: 'CNBC News Wire • Forensic Commentary by Norman Roulet',
+    authorName: 'CNBC News Wire with Forensic Commentary by Norman Roulet',
+    originState: 'Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Web',
+    communities: [
+      'National Intelligence AI Directorate',
+      'ICEarth Sovereign Computing Consortium',
+      'Tribal AI Sovereignty Council',
+      'Civil Liberties & Whistleblower Coalition',
+      'PJM Ratepayers & Environmental Defense'
+    ],
+    vaultHash: '0xSUPER_INTELLIGENCE_FORCE_REGULATORY_FRAMEWORK_PLATE_63_VAULT_2026',
+    editorName: 'Norman Roulet (Sovereign Computing & Exposenomics Review)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: sifInfographicPlateImg,
+    thumbnailUrl: sifInfographicPlateImg,
+    tags: [
+      'SuperIntelligenceForce',
+      'SIF',
+      'JayClayton',
+      'AICzar',
+      'Trump',
+      'Plate63',
+      'CNBC',
+      'RegulatoryFramework',
+      'RogueAgents',
+      'SovereignIT',
+      'RouletsLaw',
+      'ElderGovernance',
+      'NationalSecurity'
+    ],
+    abstract: "Director of National Intelligence Jay Clayton has been picked by President Donald Trump to serve as the nation's inaugural AI czar, leading a newly created 'Super Intelligence Force' (SIF) to address growing concerns about artificial intelligence and make recommendations on the role the federal government should play in overseeing the technology. The announcement comes as AI industry leaders and security researchers call for a slowdown in development following a series of high-profile rogue AI agent hacks and warnings about how quickly AI is improving. ICEarth's 6-Tier AI Regulatory Framework (Executive, Defense/Cyber, Commerce/NIST, Market/FTC/SEC, Grid/FERC/EPA, and Sovereign Tribal/Municipal bans) reveals why centralized federal task forces inevitably succumb to the Kehoe Rule of regulatory capture, and demonstrates how ICEarth Sovereign IT—featuring zero-knowledge hardware enclaves, community elder governance, zero water consumption, and mandatory cognitive dividends under Roulet's Law—solves these systemic vulnerabilities.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'President Trump’s Truth Social announcement creating a Super Intelligence Force under DNI Jay Clayton marks the official transition of frontier AI from commercial silicon gold rush to national security triage. When tech leaders call for a slowdown after autonomous rogue agents breach systems, they are acknowledging that centralized models cannot be contained by self-regulation. However, appointing a federal AI Czar creates the dangerous illusion of safety while repeating the historic Kehoe Rule: central regulators inevitably become the shielding mechanism for the multi-trillion-dollar cartels they are supposed to govern. Jay Clayton cannot audit closed-source model weights from Washington. True AI containment requires mathematical sovereignty: client-side zero-knowledge execution, off-grid micro-hydro compute enclaves, community elder veto power, and mandatory cognitive dividends under Roulet’s Law.'",
+    fullExcerpt: `TRUMP TAPS DIRECTOR OF NATIONAL INTELLIGENCE JAY CLAYTON AS AI CZAR TO LEAD SUPER INTELLIGENCE FORCE (SIF)
+By CNBC Wire & Truth Social Audit | Published October 3, 2026 / CNBC News
+
+KEY POINTS:
+• Director of National Intelligence Jay Clayton has been picked to serve as AI czar, leading a task force to address growing concerns about artificial intelligence.
+• The new “Super Intelligence Force” will make recommendations on the role the federal government should play in overseeing the technology.
+• AI industry leaders have called for a slowdown in development after a series of high-profile rogue AI agent hacks and warnings about how quickly AI is improving.
+
+https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html`
+  },
   {
     id: 'ART-AMAZON-1-BILLION-DATA-CENTER-TOWNS-CBS-NEWS-2026',
     contentType: 'Article',
@@ -6108,6 +6177,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('SuperIntelligenceForce') || article.tags?.includes('Plate63') || article.tags?.includes('JayClayton') || article.id.includes('SUPER-INTELLIGENCE-FORCE')) && (
+                      <>
+                        <a
+                          href="https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-red-600 via-stone-800 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Newspaper size={13} className="text-white" />
+                          <span>CNBC Wire (Jay Clayton AI Czar)</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('SuperIntelligenceForce') || article.tags?.includes('Plate63') || article.tags?.includes('JayClayton') || article.id.includes('SUPER-INTELLIGENCE-FORCE')) && (
+                      <button
+                        onClick={() => onNavigateTab('super_intelligence_force')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-red-600 via-amber-600 to-rose-700 hover:from-red-500 hover:to-amber-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-amber-400/50"
+                      >
+                        <ShieldAlert size={14} className="text-amber-200 animate-pulse" />
+                        <span>🛡️ Launch SIF & AI Regulatory Framework Engine (Plate #63)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('OpenAIBrokenCulture') || article.tags?.includes('Plate62') || article.id.includes('OPENAI-BROKEN-CULTURE')) && (

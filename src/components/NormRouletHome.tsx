@@ -143,10 +143,26 @@ import sovereignAgentsPlateImg from '../assets/images/sovereign_agents_normal_pe
 import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_official_800.jpg';
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
+import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('super_intelligence_force') ||
+    u.includes('super-intelligence-force') ||
+    u.includes('jay_clayton') ||
+    u.includes('jay-clayton') ||
+    u.includes('sif') ||
+    u.includes('plate_63') ||
+    u.includes('plate63') ||
+    u.includes('plate #63') ||
+    u.includes('photo-000bw') ||
+    u.includes('ip-000bw') ||
+    u.includes('1791123715872')
+  ) {
+    return sifInfographicPlateImg;
+  }
   if (
     u.includes('openai_broken_culture') ||
     u.includes('openai-broken-culture') ||
@@ -1144,6 +1160,35 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-SUPER-INTELLIGENCE-FORCE-JAY-CLAYTON-2026',
+      title: "Trump Taps DNI Jay Clayton as AI Czar to Lead New 'Super Intelligence Force' (Plate #63)",
+      category: 'Sovereign Super Intelligence & Jurisprudence',
+      date: '2026-10-04',
+      imageSrc: sifInfographicPlateImg,
+      publishedUrl: 'https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html',
+      summary: "President Trump announced on Truth Social the formation of the 'Super Intelligence Force' (SIF) led by Director of National Intelligence Jay Clayton as national AI Czar. Formed amidst urgent industry warnings, rogue AI agent hacks, and calls for an AI slowdown, the SIF is tasked with defining federal oversight. ICEarth’s 6-Tier AI Regulatory Framework reveals why centralized czars inevitably suffer from regulatory capture, and presents Sovereign IT hardware enclaves and elder governance as the only true human defense.",
+      fullText: `TRUMP TAPS DIRECTOR OF NATIONAL INTELLIGENCE JAY CLAYTON AS AI CZAR TO LEAD SUPER INTELLIGENCE FORCE (SIF)
+By CNBC Wire & Truth Social Audit | Published October 3-4, 2026
+Forensic Exposenomics & Sovereign Computing Commentary by Norman Roulet
+Plate #63 Cryptographic Archive: PHOTO-000BW / IP-000BW | Vault Hash: 0xSUPER_INTELLIGENCE_FORCE_REGULATORY_FRAMEWORK_PLATE_63_VAULT_2026
+
+I. THE TRUTH SOCIAL & CNBC DISPATCH
+President Donald Trump announced on Truth Social the formation of the "Super Intelligence Force" (SIF), appointing current Director of National Intelligence (and former SEC Chairman) Jay Clayton to serve as federal AI Czar. The task force is charged with making recommendations on the role the federal government should play in overseeing frontier AI technology, amidst growing concerns from both the intelligence community and tech leaders regarding autonomous rogue agent hacks and exponential model acceleration.
+
+II. THE 6-TIER REGULATORY FRAMEWORK
+1. Tier 1 (Executive & National Security): Super Intelligence Force (SIF), DNI Jay Clayton, National Security Council.
+2. Tier 2 (Defense & Cyber): DARPA, USCYBERCOM, NSA, CDAO offensive/defensive agent infrastructure.
+3. Tier 3 (Commerce & Standards): NIST AI Safety Institute, Department of Commerce BIS export controls.
+4. Tier 4 (Market & Consumer): FTC antitrust investigations, SEC algorithmic securities oversight.
+5. Tier 5 (Energy & Environment): FERC grid interconnection tariffs, EPA water withdrawal compliance.
+6. Tier 6 (Sovereign Resistance): Indigenous Nations (Cherokee Hyperscale Ban Plate #54) and municipal zoning moratoria (Hazle Twp PA Plate #56).
+
+III. ROULET'S LAW FORENSIC: WHY CZARS FAIL & SOVEREIGN IT SUCCEEDS
+Centralizing oversight in an executive 'Super Intelligence Force' creates the illusion of safety while entrenching regulatory capture under the Kehoe Rule. Placing a former Wall Street defense attorney and intelligence chief in charge of a federal task force does not alter the fundamental reality: centralized models harvest user data, drain municipal aquifers, and remain vulnerable to rogue mutations. The only uncompromised solution is ICEarth Sovereign IT: local client-side hardware enclaves, community elder veto power, zero-water dielectric compute, and mandatory cognitive dividends.`,
+      tags: ['SuperIntelligenceForce', 'SIF', 'JayClayton', 'AICzar', 'Trump', 'Plate63', 'CNBC', 'RegulatoryFramework', 'RogueAgents', 'SovereignIT', 'RouletsLaw'],
+      linkHash: '0xSUPER_INTELLIGENCE_FORCE_REGULATORY_FRAMEWORK_PLATE_63_VAULT_2026'
+    },
     {
       id: 'MAG-AMAZON-1-BILLION-DATA-CENTER-TOWNS-2026',
       title: "Amazon Vows $1 Billion for Data Center Towns, Warning U.S. 'Can't Afford to Lose' AI Race (Plate #56 Update)",
@@ -3721,6 +3766,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BW',
+      title: "Super Intelligence Force (SIF), AI Czar Jay Clayton & The AI Regulatory Framework (Plate #63)",
+      category: 'Sovereign AI Oversight, Regulatory Framework & National Security',
+      imageSrc: sifInfographicPlateImg,
+      location: 'Truth Social • White House / DNI • Washington, DC • Geneva • Jicarilla Apache Nation • Global Sovereign Web',
+      date: '2026-10-03',
+      description: "Plate #63: Comprehensive forensic exposenomics audit of President Trump's Truth Social announcement creating the 'Super Intelligence Force' (SIF) led by Director of National Intelligence Jay Clayton as national AI Czar. Features the 6-Tier AI Regulatory Framework (Executive, Defense/Cyber, Commerce/NIST, Market/FTC/SEC, Grid/FERC/EPA, and Sovereign Tribal/Municipal bans). Demonstrates why centralized federal task forces inevitably succumb to regulatory capture under the Kehoe Rule, and establishes the ICEarth Sovereign IT solution: local zero-knowledge hardware enclaves, community elder governance, zero water consumption, and mandatory cognitive dividends under Roulet's Law.",
+      vaultHash: '0xSUPER_INTELLIGENCE_FORCE_REGULATORY_FRAMEWORK_PLATE_63_VAULT_2026',
+      tags: ['SuperIntelligenceForce', 'SIF', 'JayClayton', 'AICzar', 'Trump', 'Plate63', 'CNBC', 'RegulatoryFramework', 'RogueAgents', 'SovereignIT', 'RouletsLaw', 'ElderGovernance']
+    },
     {
       id: 'PHOTO-000BV',
       title: "Why AI Is the New Pb (Lead): Inside OpenAI's Broken Culture & The Atlantic Confession (Plate #62)",
