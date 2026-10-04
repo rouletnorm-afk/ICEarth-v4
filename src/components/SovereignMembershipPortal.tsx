@@ -72,6 +72,7 @@ import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_of
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
+import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import {
   Shield,
   UserCheck,
@@ -203,6 +204,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BX',
+      title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
+      type: 'Data Center Tax Incentives, Rural Opportunity Zones & Indigenous Sovereignty IP Asset',
+      imageSrc: ruralDatacenterPlateImg,
+      link: 'rural_datacenter_tax',
+      sourceUrl: 'https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/?utm_source=firefox-newtab-en-us',
+      description: "Plate #64: Comprehensive forensic exposenomics audit of the One Big Beautiful Bill Act rural data center tax break featured in Wired. Features House Ways and Means Committee Chairman Jason Smith's free cash corporate incentives for rural opportunity zones, why hyperscalers hesitate to claim subsidies due to 7-year grid transmission delays and federal compliance strings, the Native American sovereign tax dimension under IRC §7871 and §168(j), and how Indigenous self-determination mandates Sovereign IT: 100% closed-loop zero-water dielectric compute, off-grid micro-hydro, elder veto power, and mandatory household cognitive dividends under Roulet's Law.",
+      sovereignHash: '0xRURAL_INDIGENOUS_DATACENTER_TAX_INCENTIVES_PLATE_64_VAULT_2026'
+    },
     {
       id: 'IP-000BW',
       title: "Super Intelligence Force (SIF), AI Czar Jay Clayton & The AI Regulatory Framework (Plate #63)",

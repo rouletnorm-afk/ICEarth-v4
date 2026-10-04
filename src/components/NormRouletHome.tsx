@@ -144,10 +144,29 @@ import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_of
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
+import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('rural_datacenter_tax') ||
+    u.includes('rural-datacenter-tax') ||
+    u.includes('rural_data_centers') ||
+    u.includes('rural-data-centers') ||
+    u.includes('rural_tax_break') ||
+    u.includes('rural_indigenous') ||
+    u.includes('one_big_beautiful_bill') ||
+    u.includes('jason_smith') ||
+    u.includes('plate_64') ||
+    u.includes('plate64') ||
+    u.includes('plate #64') ||
+    u.includes('photo-000bx') ||
+    u.includes('ip-000bx') ||
+    u.includes('1791131258360')
+  ) {
+    return ruralDatacenterPlateImg;
+  }
   if (
     u.includes('super_intelligence_force') ||
     u.includes('super-intelligence-force') ||
@@ -1160,6 +1179,42 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-WIRED-RURAL-DATA-CENTERS-TAX-BREAK-2026',
+      title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
+      category: 'Data Center Incentives & Sovereign Computing',
+      date: '2026-10-04',
+      imageSrc: ruralDatacenterPlateImg,
+      publishedUrl: 'https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/?utm_source=firefox-newtab-en-us',
+      summary: "Wired reports that on January 1, a massive corporate tax windfall under the 'One Big Beautiful Bill Act' takes effect for rural data center projects across America. House Ways and Means Chair Jason Smith declared the bill makes 'the economic case for building data centers in designated rural opportunity zones far more compelling.' Yet hyperscalers hesitate to take the free cash due to rural grid bottlenecks, federal strings, and community backlash. ICEarth examines the Native American sovereign tax dimension (IRC §7871 & §168(j)) and demonstrates why Indigenous self-determination requires Sovereign IT rather than corporate tax-arbitrage.",
+      fullText: `RURAL DATA CENTERS ARE IN FOR A BIG FEDERAL TAX BREAK: THE ONE BIG BEAUTIFUL BILL ACT & INDIGENOUS SOVEREIGNTY
+By Wired Technology Desk | Published October 2026
+Forensic Exposenomics & Sovereign Computing Commentary by Norman Roulet
+Plate #64 Cryptographic Archive: PHOTO-000BX / IP-000BX | Vault Hash: 0xRURAL_INDIGENOUS_DATACENTER_TAX_INCENTIVES_PLATE_64_VAULT_2026
+
+I. THE WIRED INVESTIGATION & CONGRESSIONAL MANDATE
+On January 1, a new tax windfall will kick in that could benefit scores of rural data center projects—all thanks to the One Big Beautiful Bill Act. Starting next year, projects sited in tracts of rural land across the country will be newly eligible for a set of specific corporate tax benefits under a program expanded by the bill.
+
+House Ways and Means Committee Chairman Jason Smith celebrated the legislation, asserting that the new rules "may significantly lower barriers for large-scale, capital-intensive projects in rural areas—most notably hyperscale data centers. The economic case for building data centers in designated rural opportunity zones becomes far more compelling with the new program."
+
+II. WHY HYPERSCALERS ARE HESITANT TO TAKE "FREE CASH"
+Despite the billions in promised tax write-offs (accelerated bonus depreciation, 100% capital gains exclusions, and local property abatements), major hyperscalers are proceeding with extreme caution:
+1. Rural Grid Interconnection Bottlenecks: Regional transmission operators (PJM, MISO, ERCOT) have 5 to 7-year interconnection backlogs. High-voltage substations cannot be built overnight.
+2. Federal Audit Strings & Prevailing Wage: Accepting federal opportunity zone credits triggers Davis-Bacon Act prevailing wage requirements and federal domestic content scrutiny.
+3. Rural Community Resistance: From Hazle Township, PA to rural Virginia, citizens are rejecting corporate handouts and passing strict zoning moratoria to protect aquifers and stop residential power rate spikes.
+
+III. THE NATIVE AMERICAN NATIONS TAX DIMENSION
+Tribal reservations (over 56 million acres across 574 sovereign nations) present unique jurisdictional powers and federal tax benefits:
+• IRC §168(j): Accelerated depreciation recovery periods for property on Indian reservations.
+• IRC §7871: Tribal Tax Status Act granting tribal governments sovereign tax-exempt parity.
+• New Markets Tax Credits (NMTC) & Tribal Energy Loan Guarantees.
+• Dual-Taxation Hazards: The historic danger of adjacent state governments attempting to levy severance or gross receipts taxes under Cotton Petroleum v. New Mexico.
+
+IV. THE SOVEREIGN IT REMEDY: ROULET'S LAW
+The true defense against hyperscale resource extraction is not accepting corporate pacification funds or federal tax-arbitrage schemes. Tribal nations must assert Sovereign IT: 100% closed-loop zero-water dielectric cooling, off-grid micro-hydro and geothermal energy, elder council veto power, and mandatory 20% Cognitive Dividends disbursed directly to community households under Roulet's Law.`,
+      tags: ['Wired', 'RuralDataCenters', 'JasonSmith', 'OneBigBeautifulBill', 'Plate64', 'IndigenousSovereignty', 'TaxIncentives', 'OpportunityZones', 'Section168j', 'SovereignIT', 'RouletsLaw'],
+      linkHash: '0xRURAL_INDIGENOUS_DATACENTER_TAX_INCENTIVES_PLATE_64_VAULT_2026'
+    },
     {
       id: 'MAG-SUPER-INTELLIGENCE-FORCE-JAY-CLAYTON-2026',
       title: "Trump Taps DNI Jay Clayton as AI Czar to Lead New 'Super Intelligence Force' (Plate #63)",
@@ -3766,6 +3821,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BX',
+      title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
+      category: 'Data Center Tax Incentives, Rural Opportunity Zones & Indigenous Sovereignty',
+      imageSrc: ruralDatacenterPlateImg,
+      location: 'House Ways & Means Committee • Washington, DC • Jicarilla Apache Nation • Cherokee Nation • Rural Opportunity Zones • Global Sovereign Web',
+      date: '2026-10-04',
+      description: "Plate #64: Comprehensive forensic exposenomics audit of the One Big Beautiful Bill Act rural data center tax break featured in Wired. Examines House Ways and Means Chairman Jason Smith's incentives for hyperscale AI facilities in rural opportunity zones, why developers hesitate to accept free cash due to 7-year grid interconnection delays and compliance audits, the Native American sovereign tax dimension under IRC §7871 and §168(j), and how Indigenous self-determination mandates Sovereign IT with 100% closed-loop zero-water dielectric compute, off-grid micro-hydro, and mandatory household cognitive dividends under Roulet's Law.",
+      vaultHash: '0xRURAL_INDIGENOUS_DATACENTER_TAX_INCENTIVES_PLATE_64_VAULT_2026',
+      tags: ['Wired', 'RuralDataCenters', 'JasonSmith', 'OneBigBeautifulBill', 'Plate64', 'IndigenousSovereignty', 'TaxIncentives', 'OpportunityZones', 'Section168j', 'Section7871', 'SovereignIT', 'RouletsLaw', 'ElderGovernance']
+    },
     {
       id: 'PHOTO-000BW',
       title: "Super Intelligence Force (SIF), AI Czar Jay Clayton & The AI Regulatory Framework (Plate #63)",

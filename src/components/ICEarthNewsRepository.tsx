@@ -69,6 +69,7 @@ import trumpAiSummitOfficialImg from '../assets/images/trump_ai_summit_nypost_of
 import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_plate61_1791032971784.jpg';
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
+import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -183,6 +184,24 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('rural_datacenter_tax') ||
+    u.includes('rural-datacenter-tax') ||
+    u.includes('rural_data_centers') ||
+    u.includes('rural-data-centers') ||
+    u.includes('rural_tax_break') ||
+    u.includes('rural_indigenous') ||
+    u.includes('one_big_beautiful_bill') ||
+    u.includes('jason_smith') ||
+    u.includes('plate_64') ||
+    u.includes('plate64') ||
+    u.includes('plate #64') ||
+    u.includes('photo-000bx') ||
+    u.includes('ip-000bx') ||
+    u.includes('1791131258360')
+  ) {
+    return ruralDatacenterPlateImg;
+  }
   if (
     u.includes('super_intelligence_force') ||
     u.includes('super-intelligence-force') ||
@@ -1081,6 +1100,57 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-WIRED-RURAL-DATA-CENTERS-TAX-BREAK-INDIGENOUS-2026',
+    contentType: 'Article',
+    title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
+    subtitle: "WASHINGTON / NEW YORK — Wired reports that on January 1, a massive corporate tax windfall will take effect for rural data center projects under the 'One Big Beautiful Bill Act'. House Ways and Means Chairman Jason Smith declared the bill makes 'the economic case for building data centers in designated rural opportunity zones far more compelling.' Yet hyperscalers hesitate to take the free cash due to rural grid bottlenecks, federal strings, and community backlash. ICEarth explores the Native American sovereign tax dimension (IRC §7871 & §168(j)) and demonstrates why Indigenous self-determination mandates Sovereign IT.",
+    sourceUrl: 'https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/?utm_source=firefox-newtab-en-us',
+    sourceName: 'Wired Magazine (Technology Desk) & ICEarth Sovereign Directorate',
+    publishDate: '2026-10-04',
+    author: 'Wired Technology Desk • Forensic Commentary by Norman Roulet',
+    authorName: 'Wired Technology Desk with Forensic Commentary by Norman Roulet',
+    originState: 'Washington, DC • New York, NY • Jicarilla Apache Nation • Cherokee Nation • Global Sovereign Web',
+    communities: [
+      'House Ways and Means Review',
+      'Tribal AI Sovereignty Council',
+      'ICEarth Sovereign Computing Consortium',
+      'Rural Community Defense Network',
+      'PJM Ratepayers & Environmental Justice'
+    ],
+    vaultHash: '0xRURAL_INDIGENOUS_DATACENTER_TAX_INCENTIVES_PLATE_64_VAULT_2026',
+    editorName: 'Norman Roulet (Sovereign Computing & Exposenomics Review)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: ruralDatacenterPlateImg,
+    thumbnailUrl: ruralDatacenterPlateImg,
+    tags: [
+      'Wired',
+      'RuralDataCenters',
+      'JasonSmith',
+      'OneBigBeautifulBill',
+      'Plate64',
+      'IndigenousSovereignty',
+      'TaxIncentives',
+      'OpportunityZones',
+      'Section168j',
+      'Section7871',
+      'SovereignIT',
+      'RouletsLaw',
+      'ElderGovernance'
+    ],
+    abstract: "Under the One Big Beautiful Bill Act, data center projects in rural areas could be eligible for major tax benefits starting next year. On January 1, a new tax windfall will kick in that could benefit scores of rural data center projects. Starting next year, projects sited in tracts of rural land across the country will be newly eligible for a set of specific corporate tax benefits under a program expanded by the bill. Ways and Means Committee chair Jason Smith announced that the new rules 'may significantly lower barriers for large-scale, capital-intensive projects in rural areas—most notably hyperscale data centers. The economic case for building data centers in designated rural opportunity zones becomes far more compelling with the new program.' However, some hyperscalers do not seem eager to take the free cash due to severe 5 to 7-year grid interconnection delays in PJM and MISO, strict federal reporting strings, and community opposition. In parallel, Native American sovereign nations possess unique tax jurisdictions under IRC §7871 and accelerated depreciation under §168(j). ICEarth details why Indigenous nations must deploy Sovereign IT—featuring 100% closed-loop zero-water dielectric compute, off-grid micro-hydro, elder council veto power, and mandatory cognitive dividends under Roulet's Law—rather than succumbing to corporate tax-arbitrage.",
+    editorCommentary: "Norman Roulet (ICEarth Systems Architect): 'When congressional tax committees offer billions in free cash to build hyperscale AI server farms in rural opportunity zones, they are attempting to solve a silicon land rush with corporate tax arbitrage. Notice why Big Tech hyperscalers are hesitating to take this free cash: federal opportunity zone write-offs come with prevailing wage audits, domestic content mandates, and public reporting requirements. More critically, free tax write-offs cannot build transmission lines or generate megawatts out of thin air. Rural transmission grids are congested, and municipal water tables cannot support multi-million-gallon daily evaporative cooling draws. For Native American nations, the lesson is paramount: commercial tech firms view reservation land as an accelerated depreciation sponge under IRC Section 168(j). But as the Cherokee Nation demonstrated with their historic hyperscale ban (Plate #54), true sovereignty means protecting community aquifers, refusing corporate bribes, and building off-grid Sovereign IT.'",
+    fullExcerpt: `RURAL DATA CENTERS ARE IN FOR A BIG FEDERAL TAX BREAK
+By Wired Technology Desk | Published October 2026 / Wired Magazine
+
+Under the One Big Beautiful Bill Act, data center projects in rural areas could be eligible for major tax benefits starting next year. Some hyperscalers do not seem eager to take the free cash.
+
+On January 1, a new tax windfall will kick in that could benefit scores of rural data center projects—all thanks to the One Big Beautiful Bill Act.
+
+Starting next year, projects sited in tracts of rural land across the country will be newly eligible for a set of specific corporate tax benefits under a program expanded by the bill. The new rules “may significantly lower barriers for large-scale, capital-intensive projects in rural areas—most notably hyperscale data centers,” said a statement from Ways and Means Committee chair Jason Smith last year. “The economic case for building data centers in designated rural opportunity zones becomes far more compelling” with the new program, he continued.
+
+https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/?utm_source=firefox-newtab-en-us`
+  },
   {
     id: 'ART-TRUMP-SUPER-INTELLIGENCE-FORCE-JAY-CLAYTON-AI-CZAR-2026',
     contentType: 'Article',
@@ -6177,6 +6247,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('RuralDataCenters') || article.tags?.includes('Plate64') || article.tags?.includes('OneBigBeautifulBill') || article.id.includes('RURAL-DATA-CENTERS')) && (
+                      <>
+                        <a
+                          href="https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/?utm_source=firefox-newtab-en-us"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-500 hover:to-yellow-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-stone-950" />
+                          <span>Wired Feature (Oct 2026)</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('RuralDataCenters') || article.tags?.includes('Plate64') || article.tags?.includes('OneBigBeautifulBill') || article.id.includes('RURAL-DATA-CENTERS')) && (
+                      <button
+                        onClick={() => onNavigateTab('rural_datacenter_tax')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-500 hover:to-yellow-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-amber-400/50"
+                      >
+                        <Landmark size={14} className="text-stone-950 animate-pulse" />
+                        <span>🏛️ Launch Rural & Indigenous Tax Incentives Engine (Plate #64)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('SuperIntelligenceForce') || article.tags?.includes('Plate63') || article.tags?.includes('JayClayton') || article.id.includes('SUPER-INTELLIGENCE-FORCE')) && (

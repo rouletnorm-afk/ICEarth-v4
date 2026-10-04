@@ -153,15 +153,16 @@ import { SovereignAIAgentsAdoption } from './components/SovereignAIAgentsAdoptio
 import { TrumpAISummitRichestTable } from './components/TrumpAISummitRichestTable';
 import { OpenAIBrokenCulture } from './components/OpenAIBrokenCulture';
 import { SuperIntelligenceForceAudit } from './components/SuperIntelligenceForceAudit';
+import { RuralIndigenousDataCenterIncentives } from './components/RuralIndigenousDataCenterIncentives';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
-import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban, DollarSign, Bot } from 'lucide-react';
+import { Brain, BarChart3, Dna, Utensils, Film, Stethoscope, Microscope, Pill, Crown, Atom, Droplets, Mountain, Flame, Pickaxe, HeartPulse, Building, Apple, Leaf, Lightbulb, Radio, Radiation, AlertTriangle, Award, Ban, DollarSign, Bot, Landmark } from 'lucide-react';
 
 export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'super_intelligence_force' | 'sif_audit' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -527,6 +528,23 @@ export default function App() {
         lower.includes('lake_america')
       ) {
         setActiveTab('super_intelligence_sovereignty');
+      } else if (
+        lower === 'rural_datacenter_tax' ||
+        lower === 'rural-datacenter-tax' ||
+        lower === 'rural_data_centers' ||
+        lower === 'rural-data-centers' ||
+        lower === 'rural_tax' ||
+        lower === 'rural_indigenous_tax' ||
+        lower === 'one_big_beautiful_bill' ||
+        lower === 'jason_smith' ||
+        lower === 'plate_64' ||
+        lower === 'plate64' ||
+        lower === 'plate-64' ||
+        lower.includes('rural_datacenter') ||
+        lower.includes('rural_tax') ||
+        lower.includes('one_big_beautiful_bill')
+      ) {
+        setActiveTab('rural_datacenter_tax');
       } else if (
         lower === 'datacenter_incentives' ||
         lower === 'datacenter-incentives' ||
@@ -1801,6 +1819,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B0.1A RURAL & INDIGENOUS DATA CENTERS TAX WINDFALL (PLATE #64) */}
+                <button
+                  onClick={() => setActiveTab('rural_datacenter_tax')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'rural_datacenter_tax' || activeTab === 'rural_indigenous_datacenter_tax' || (activeTab as string) === 'plate_64' || (activeTab as string) === 'plate64'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-yellow-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-yellow-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-yellow-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Landmark size={16} className={activeTab === 'rural_datacenter_tax' ? 'text-amber-300 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">🏛️ Rural & Indigenous Data Center Tax</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #64
+                  </span>
+                </button>
+
                 {/* 0.00000B1 CHEROKEE NATION HYPERSCALE DATA CENTER BAN & SOVEREIGN IT SPECIFICATION (PLATE #54) - GROUPED UNDER ICEARTH STACK */}
                 <button
                   onClick={() => setActiveTab('cherokee_it_position')}
@@ -2792,6 +2826,25 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 2.05A Rural & Indigenous Data Center Tax Windfall (Plate #64) */}
+                <button
+                  onClick={() => {
+                    setActiveTab('rural_datacenter_tax');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'rural_datacenter_tax' || activeTab === 'rural_indigenous_datacenter_tax' || (activeTab as string) === 'plate_64' || (activeTab as string) === 'plate64'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-yellow-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Landmark size={16} className={activeTab === 'rural_datacenter_tax' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🏛️ Rural & Indigenous Data Center Tax</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #64
+                  </span>
+                </button>
+
                 {/* 2.1 Cherokee Nation Hyperscale Ban & Sovereign IT Position (Plate #54) */}
                 <button
                   onClick={() => {
@@ -3490,6 +3543,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'super_intelligence_force', icon: ShieldAlert, label: '🛡️ AI Czar & Super Intelligence Force', badge: 'Plate #63', color: 'red' },
                     { id: 'super_intelligence_sovereignty', icon: Crown, label: '👑 Super Intelligence Sovereignty', badge: 'Plate #57', color: 'purple' },
                     { id: 'datacenter_incentives', icon: DollarSign, label: '🏛️ Data Center Incentives Engine', badge: 'Plate #56', color: 'amber' },
+                    { id: 'rural_datacenter_tax', icon: Landmark, label: '🏛️ Rural & Indigenous Data Center Tax', badge: 'Plate #64', color: 'amber' },
                     { id: 'cherokee_it_position', icon: Ban, label: '🪶 Cherokee Nation Hyperscale Ban', badge: 'Plate #54', color: 'emerald' },
                     { id: 'sovereign_identity', icon: Fingerprint, label: '🪶 Sovereign Identity vs. AI Mirage', badge: 'Heraldry Defense', color: 'amber' },
                     { id: 'ai_and_kehoe_rule', icon: Scale, label: '⚖️ AI & The Kehoe Rule (Lanphear)', badge: 'Plate #41', color: 'amber' },
@@ -3651,6 +3705,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'super_intelligence_force' || (activeTab as string) === 'sif_audit' || (activeTab as string) === 'sif' || (activeTab as string) === 'jay_clayton' || (activeTab as string) === 'clayton' || (activeTab as string) === 'ai_czar' || (activeTab as string) === 'plate_63' || (activeTab as string) === 'plate63') && '🛡️ Trump Taps AI Czar Jay Clayton: Super Intelligence Force & Regulatory Framework (Plate #63)'}
               {(activeTab === 'super_intelligence_sovereignty' || (activeTab as string) === 'super_intelligence' || (activeTab as string) === 'superintelligence' || (activeTab as string) === 'lake_america' || (activeTab as string) === 'plate_57' || (activeTab as string) === 'plate57') && '👑 The Sovereignty of Super Intelligence: The "Lake America" Paradox & The 6-CEO White House Accord (Plate #57)'}
               {(activeTab === 'datacenter_incentives' || (activeTab as string) === 'incentives_engine' || (activeTab as string) === 'data_center_incentives' || (activeTab as string) === 'plate_56' || (activeTab as string) === 'plate56' || (activeTab as string) === 'mark_tyson' || (activeTab as string) === 'hazle_township') && '🏛️ Data Center Incentives Engine: From Government Tax Giveaways to Direct Household Payments (Plate #56)'}
+              {(activeTab === 'rural_datacenter_tax' || activeTab === 'rural_indigenous_datacenter_tax' || (activeTab as string) === 'rural_data_centers' || (activeTab as string) === 'one_big_beautiful_bill' || (activeTab as string) === 'jason_smith' || (activeTab as string) === 'plate_64' || (activeTab as string) === 'plate64') && '🏛️ Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)'}
               {(activeTab === 'cherokee_it_position' || (activeTab as string) === 'cherokee_ban' || (activeTab as string) === 'cherokee' || (activeTab as string) === 'plate_54' || (activeTab as string) === 'plate54' || (activeTab as string) === 'cherokee_position') && '🪶 Cherokee Nation Hyperscale Data Center Ban & Sovereign IT Position (Plate #54)'}
               {(activeTab === 'sovereign_identity' || (activeTab as string) === 'ai_mirage' || (activeTab as string) === 'seal_defense' || (activeTab as string) === 'cherokee_seal') && '🪶 Sovereign Identity vs. The AI Mirage: Defending Indigenous Heraldry from Algorithmic Erasure'}
               {(activeTab === 'ai_and_kehoe_rule' || (activeTab as string) === 'kehoe' || (activeTab as string) === 'kehoe_rule' || (activeTab as string) === 'plate_41' || (activeTab as string) === 'plate41' || (activeTab as string) === 'lanphear') && '⚖️ AI & The Kehoe Rule: Bruce Lanphear Thesis (Plate #41)'}
@@ -5461,6 +5516,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'datacenter_incentives' || (activeTab as string) === 'incentives_engine' || (activeTab as string) === 'data_center_incentives' || (activeTab as string) === 'plate_56' || (activeTab as string) === 'plate56' || (activeTab as string) === 'mark_tyson' || (activeTab as string) === 'hazle_township') && (
             <div className="flex-1 overflow-y-auto">
               <DataCenterIncentivesEngine 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B0.1A: RURAL & INDIGENOUS DATA CENTERS TAX WINDFALL: ONE BIG BEAUTIFUL BILL ACT (PLATE #64) */}
+          {(activeTab === 'rural_datacenter_tax' || activeTab === 'rural_indigenous_datacenter_tax' || (activeTab as string) === 'rural_data_centers' || (activeTab as string) === 'one_big_beautiful_bill' || (activeTab as string) === 'jason_smith' || (activeTab as string) === 'plate_64' || (activeTab as string) === 'plate64') && (
+            <div className="flex-1 overflow-y-auto">
+              <RuralIndigenousDataCenterIncentives 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
