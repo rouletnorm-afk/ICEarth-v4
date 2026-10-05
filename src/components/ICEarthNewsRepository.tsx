@@ -70,6 +70,7 @@ import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_pla
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
+import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -184,6 +185,25 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('dumpsite_leachate') ||
+    u.includes('dumpsite-leachate') ||
+    u.includes('dumpsite') ||
+    u.includes('leachate') ||
+    u.includes('open_dumpsites') ||
+    u.includes('open-dumpsites') ||
+    u.includes('discover_soil') ||
+    u.includes('discover-soil') ||
+    u.includes('bioengineer') ||
+    u.includes('plate_65') ||
+    u.includes('plate65') ||
+    u.includes('plate #65') ||
+    u.includes('photo-000by') ||
+    u.includes('ip-000by') ||
+    u.includes('1791216486522')
+  ) {
+    return leachateInfographicPlateImg;
+  }
   if (
     u.includes('rural_datacenter_tax') ||
     u.includes('rural-datacenter-tax') ||
@@ -1100,6 +1120,66 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-BIOENGINEERING-DUMPSITE-LEACHATE-DISCOVER-SOIL-2026',
+    contentType: 'Article',
+    title: "How Toxic Leachate from Open Dumpsites Is Silently Poisoning the World’s Groundwater (Plate #65)",
+    subtitle: "DISCOVER SOIL / BIOENGINEERING — Beneath thousands of unregulated waste dumps scattered across the developing world, a slow-moving chemical tide is seeping into the soil and the aquifers that supply drinking water to billions of people. A landmark systematic review published in Discover Soil (Springer Nature) synthesizes more than a decade of field investigations to map plume migration, population vulnerability, and the critical role of artificial intelligence—Random Forest, Naïve Bayes, and Bivariate Local Moran's I—in predicting heavy metal distribution. Dumpsite contamination is as old as human waste, demanding decentralized Sovereign AI sensing and community early-warning telemetry under Roulet's Law.",
+    sourceUrl: 'https://bioengineer.org/how-toxic-leachate-from-open-dumpsites-is-silently-poisoning-the-worlds-groundwater/',
+    sourceName: 'Bioengineering.org & Discover Soil (Springer Nature)',
+    publishDate: '2026-10-05',
+    author: 'Bioengineering Science Desk • Discover Soil Authors • Commentary by Norman Roulet',
+    authorName: 'Bioengineering Science Desk with Forensic Exposenomics Commentary by Norman Roulet',
+    originState: 'Global Unregulated Dumpsites • Springer Nature • London • Geneva • Jicarilla Apache Nation • Taos Pueblo • Global Sovereign Web',
+    communities: [
+      'Discover Soil Research Consortium',
+      'Global Groundwater Defense',
+      'ICEarth Sovereign AI Network',
+      'Municipal Waste Exposenomics',
+      'Indigenous Water Protectors'
+    ],
+    vaultHash: '0xDUMPSITE_LEACHATE_SOIL_GROUNDWATER_QUALITY_PLATE_65_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Infomediary & Exposenomics Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: leachateInfographicPlateImg,
+    thumbnailUrl: leachateInfographicPlateImg,
+    abstract: "Beneath thousands of unregulated waste dumps scattered across the developing world, a slow-moving chemical tide is seeping into the soil and the aquifers that supply drinking water to billions of people. A new systematic review published in Discover Soil has pulled together more than a decade of field studies to map, with unusual precision, just how far this contamination travels, who is most at risk, and which technologies—from electrical imaging to artificial intelligence—are proving most effective at tracking and taming it. The verdict is stark: unlined dumpsites are functioning as persistent, poorly monitored sources of toxic metal pollution, and the health risks they generate are far larger than most communities realize. Machine learning frameworks—Random Forest, Naive Bayes, and Bivariate Local Moran’s I among them—are proving remarkably good at predicting the distribution of potentially toxic elements and delineating high-risk zones from environmental covariates such as soil pH, organic matter, elevation, and population density.",
+    editorCommentary: "Dumpsite leachate is as old as human waste, yet regulatory agencies still treat it with willful blindness. When toxic plumes migrate through unconfined sandy aquifers, water utilities either fail to test or conceal the data behind bureaucratic delays. This Discover Soil review proves why Sovereign AI is indispensable: by training local models on soil pH, elevation, precipitation, and resistivity data, communities can detect plume boundaries in real time without depending on compromised municipal inspectors. Under Roulet's Law, open dumpsites represent unquantified municipal tort liabilities that must be met with sovereign sensor nodes and direct community alerts.",
+    fullExcerpt: `HOW TOXIC LEACHATE FROM OPEN DUMPSITES IS SILENTLY POISONING THE WORLD'S GROUNDWATER
+Published by Bioengineering (October 2026) | Reporting on Discover Soil Systematic Review (Springer Nature)
+Full Study Citation: "A systematic review of soil and water contamination in dumpsite leachate impacted environments," Discover Soil (2026), DOI: 10.1007/s44378-026-00265-2
+Forensic Exposenomics & Sovereign AI Dispatch by Norman Roulet | Cryptographic Archive Plate #65 (PHOTO-000BY / IP-000BY)
+
+I. THE BIOENGINEERING LEAD DISPATCH
+Beneath thousands of unregulated waste dumps scattered across the developing world, a slow-moving chemical tide is seeping into the soil and the aquifers that supply drinking water to billions of people. A new systematic review published in Discover Soil has pulled together more than a decade of field studies to map, with unusual precision, just how far this contamination travels, who is most at risk, and which technologies—from electrical imaging to artificial intelligence—are proving most effective at tracking and taming it. The verdict is stark: unlined dumpsites are functioning as persistent, poorly monitored sources of toxic metal pollution, and the health risks they generate are far larger than most communities realize.
+
+II. THE DISCOVER SOIL ABSTRACT CONCLUSION
+"Overall, this review underscores the need for site-specific assessment, regular monitoring, informed urban planning, and integrated remediation frameworks to mitigate the long-term impacts of dumpsite leachate on soil and groundwater quality."
+
+III. WHY WE ARE BUILDING ICEARTH WITH SOVEREIGN AI (SI)
+Perhaps the most forward-looking section concerns artificial intelligence. Machine learning frameworks—Random Forest, Naive Bayes, and Bivariate Local Moran’s I among them—are proving remarkably good at predicting the distribution of potentially toxic elements and delineating high-risk zones from environmental covariates such as soil pH, organic matter, elevation, and population density.
+
+Centralized state agencies routinely lack the budget, inclination, or independence to monitor dumpsites. By contrast, ICEarth's Sovereign AI runs localized, open-weight predictive models inside sovereign hardware enclaves. By fusing multi-spectral satellite imagery, electrical resistivity tomograms, and community-operated water sensor nodes, ICEarth computes real-time plume velocity vectors and notifies downstream well owners weeks before contaminants breach municipal drinking thresholds.
+
+IV. AS OLD AS HUMAN WASTE: HISTORICAL LEGACY & ROULET'S LAW
+From pre-industrial middens to 21st-century unlined megacity landfills, the accumulation of non-biodegradable waste coupled with organic decomposition creates an anaerobic chemical reactor generating leachate loaded with lead (Pb), cadmium (Cd), hexavalent chromium (Cr VI), nickel (Ni), and arsenic (As). Under Roulet's Law of Environmental Liability, municipalities and industrial waste operators carry strict, non-delegable liability for groundwater plume migration. Mitigating these ancient legacies requires active hydrodynamic containment, nano-cavitation filtration, and immutable cryptographic logging on the ICEarth ledger.`,
+    tags: [
+      'DiscoverSoil',
+      'Bioengineering',
+      'DumpsiteLeachate',
+      'Groundwater',
+      'HeavyMetals',
+      'Plate65',
+      'RandomForest',
+      'MoransI',
+      'SovereignAI',
+      'RouletsLaw',
+      'AquiferDefense',
+      'SoilContamination'
+    ],
+    readTime: '7 min read',
+    promotedToHomePage: true
+  },
   {
     id: 'ART-WIRED-RURAL-DATA-CENTERS-TAX-BREAK-INDIGENOUS-2026',
     contentType: 'Article',
@@ -6247,6 +6327,42 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('DumpsiteLeachate') || article.tags?.includes('Plate65') || article.tags?.includes('DiscoverSoil') || article.tags?.includes('Bioengineering') || article.id.includes('DUMPSITE-LEACHATE')) && (
+                      <>
+                        <a
+                          href="https://bioengineer.org/how-toxic-leachate-from-open-dumpsites-is-silently-poisoning-the-worlds-groundwater/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-600 via-teal-700 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-mono font-black text-xs rounded-xl shadow border border-teal-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-white" />
+                          <span>Bioengineering Investigation</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+
+                        <a
+                          href="https://link.springer.com/article/10.1007/s44378-026-00265-2"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-stone-800 via-stone-900 to-cyan-900 hover:from-stone-700 hover:to-cyan-800 text-cyan-200 font-mono font-black text-xs rounded-xl shadow border border-cyan-400/50 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <ExternalLink size={13} className="text-cyan-300" />
+                          <span>Discover Soil Study (Springer Nature)</span>
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('DumpsiteLeachate') || article.tags?.includes('Plate65') || article.tags?.includes('DiscoverSoil') || article.tags?.includes('Bioengineering') || article.id.includes('DUMPSITE-LEACHATE')) && (
+                      <button
+                        onClick={() => onNavigateTab('dumpsite_leachate')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-cyan-600 via-teal-600 to-emerald-700 hover:from-cyan-500 hover:to-teal-500 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-cyan-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-cyan-400/50"
+                      >
+                        <Droplets size={14} className="text-cyan-200 animate-pulse" />
+                        <span>💧 Launch Dumpsite Leachate & Groundwater Engine (Plate #65)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('RuralDataCenters') || article.tags?.includes('Plate64') || article.tags?.includes('OneBigBeautifulBill') || article.id.includes('RURAL-DATA-CENTERS')) && (

@@ -145,10 +145,30 @@ import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_pla
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
+import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('dumpsite_leachate') ||
+    u.includes('dumpsite-leachate') ||
+    u.includes('dumpsite') ||
+    u.includes('leachate') ||
+    u.includes('open_dumpsites') ||
+    u.includes('open-dumpsites') ||
+    u.includes('discover_soil') ||
+    u.includes('discover-soil') ||
+    u.includes('bioengineer') ||
+    u.includes('plate_65') ||
+    u.includes('plate65') ||
+    u.includes('plate #65') ||
+    u.includes('photo-000by') ||
+    u.includes('ip-000by') ||
+    u.includes('1791216486522')
+  ) {
+    return leachateInfographicPlateImg;
+  }
   if (
     u.includes('rural_datacenter_tax') ||
     u.includes('rural-datacenter-tax') ||
@@ -1179,6 +1199,38 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-DUMPSITE-LEACHATE-DISCOVER-SOIL-2026',
+      title: "How Toxic Leachate from Open Dumpsites Is Silently Poisoning the World’s Groundwater (Plate #65)",
+      category: 'Exposenomics',
+      date: '2026-10-05',
+      imageSrc: leachateInfographicPlateImg,
+      publishedUrl: 'https://bioengineer.org/how-toxic-leachate-from-open-dumpsites-is-silently-poisoning-the-worlds-groundwater/',
+      summary: "A systematic review in Discover Soil pulled together more than a decade of field research to map how toxic leachate from unregulated open dumpsites is silently poisoning the world’s groundwater. Potentially toxic elements (Pb, Cd, Cr, Ni, As, Hg) migrate through aquifers feeding billions. Highlights why ICEarth deploys Sovereign AI machine learning frameworks—Random Forest, Naïve Bayes, and Bivariate Local Moran’s I—to predict spatial contaminant distribution from environmental covariates.",
+      fullText: `HOW TOXIC LEACHATE FROM OPEN DUMPSITES IS SILENTLY POISONING THE WORLD'S GROUNDWATER
+By Bioengineering & Discover Soil Systematic Review | Published October 2026
+Forensic Exposenomics & Sovereign AI Commentary by Norman Roulet
+Plate #65 Cryptographic Archive: PHOTO-000BY / IP-000BY | Vault Hash: 0xDUMPSITE_LEACHATE_SOIL_GROUNDWATER_QUALITY_PLATE_65_VAULT_2026
+
+I. THE BIOENGINEERING DISPATCH
+Beneath thousands of unregulated waste dumps scattered across the developing world, a slow-moving chemical tide is seeping into the soil and the aquifers that supply drinking water to billions of people. A new systematic review published in Discover Soil has pulled together more than a decade of field studies to map, with unusual precision, just how far this contamination travels, who is most at risk, and which technologies—from electrical imaging to artificial intelligence—are proving most effective at tracking and taming it.
+
+The verdict is stark: unlined dumpsites are functioning as persistent, poorly monitored sources of toxic metal pollution, and the health risks they generate are far larger than most communities realize.
+
+II. THE DISCOVER SOIL ABSTRACT & SCIENTIFIC VERDICT
+"A systematic review of soil and water contamination in dumpsite leachate impacted environments" (Discover Soil / Springer Nature, https://link.springer.com/article/10.1007/s44378-026-00265-2):
+Overall, this review underscores the need for site-specific assessment, regular monitoring, informed urban planning, and integrated remediation frameworks to mitigate the long-term impacts of dumpsite leachate on soil and groundwater quality.
+
+III. WHY WE ARE BUILDING ICEARTH WITH SOVEREIGN AI (SI)
+Perhaps the most forward-looking section concerns artificial intelligence. Machine learning frameworks—Random Forest, Naïve Bayes, and Bivariate Local Moran’s I among them—are proving remarkably good at predicting the distribution of potentially toxic elements and delineating high-risk zones from environmental covariates such as soil pH, organic matter, elevation, and population density.
+
+Centralized regulatory agencies consistently fail to inspect dumpsites or notify communities of plume migration. Under Roulet's Law and the ICEarth Stack, decentralized Sovereign AI models run locally on tamper-proof hardware, synthesizing hydrological sensors, satellite spectral data, and geochemical covariates to deliver immutable early-warning protection directly to water users.
+
+IV. WASTE LEGACIES AS OLD AS HUMAN CIVILIZATION
+Dumpsite contamination is as old as human waste. From ancient Roman cloacae to modern megacity dumps, unmanaged refuse creates perpetual leachate reactors. Solving this crisis requires moving beyond cosmetic capping: we must combine local AI forecasting, electrical resistivity tomography, zero-discharge barrier systems, and legal accountability under Roulet's Law.`,
+      tags: ['DiscoverSoil', 'Bioengineering', 'DumpsiteLeachate', 'Groundwater', 'Plate65', 'RandomForest', 'MoransI', 'SovereignAI', 'RouletsLaw', 'HeavyMetals'],
+      linkHash: '0xDUMPSITE_LEACHATE_SOIL_GROUNDWATER_QUALITY_PLATE_65_VAULT_2026'
+    },
     {
       id: 'MAG-WIRED-RURAL-DATA-CENTERS-TAX-BREAK-2026',
       title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
@@ -3821,6 +3873,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BY',
+      title: "Long-Term Impacts of Dumpsite Leachate on Soil & Groundwater Quality (Plate #65)",
+      category: 'Dumpsite Leachate Contamination, Groundwater Poisoning & Sovereign AI Modeling',
+      imageSrc: leachateInfographicPlateImg,
+      location: 'Discover Soil Systematic Review • Bioengineer.org • Global Unregulated Dumpsites • High-Risk Aquifers • Sovereign Web',
+      date: '2026-10-05',
+      description: "Plate #65: Systematic exposenomics audit of the Discover Soil review and Bioengineering investigation on how toxic leachate from unregulated open dumpsites is silently poisoning the world's groundwater. Synthesizes a decade of field research mapping heavy metal migration (Pb, Cd, Cr, Ni, As, Hg), electrical resistivity imaging, high-risk aquifer vectors, and machine learning predictive frameworks (Random Forest, Naïve Bayes, Bivariate Local Moran's I). Demonstrates why municipal waste legacies dating back to the dawn of civilization require decentralized Sovereign AI sensing, closed-loop barrier containment, and community-owned groundwater monitoring under Roulet's Law.",
+      vaultHash: '0xDUMPSITE_LEACHATE_SOIL_GROUNDWATER_QUALITY_PLATE_65_VAULT_2026',
+      tags: ['DiscoverSoil', 'Bioengineering', 'DumpsiteLeachate', 'Groundwater', 'Plate65', 'RandomForest', 'MoransI', 'SovereignAI', 'RouletsLaw', 'HeavyMetals']
+    },
     {
       id: 'PHOTO-000BX',
       title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",

@@ -73,6 +73,7 @@ import clevelandHypocrisyPlateImg from '../assets/images/cleveland_hypocrisy_pla
 import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096032753.jpg';
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
+import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import {
   Shield,
   UserCheck,
@@ -204,6 +205,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BY',
+      title: "Long-Term Impacts of Dumpsite Leachate on Soil & Groundwater Quality (Plate #65)",
+      type: 'Dumpsite Leachate Toxicology, Groundwater Poisoning & Sovereign AI Modeling IP Asset',
+      imageSrc: leachateInfographicPlateImg,
+      link: 'dumpsite_leachate',
+      sourceUrl: 'https://bioengineer.org/how-toxic-leachate-from-open-dumpsites-is-silently-poisoning-the-worlds-groundwater/',
+      description: "Plate #65: Systematic exposenomics audit of the Discover Soil review and Bioengineering investigation on how toxic leachate from unregulated open dumpsites is silently poisoning the world's groundwater. Synthesizes a decade of field research mapping heavy metal migration (Pb, Cd, Cr, Ni, As, Hg), electrical resistivity imaging, high-risk aquifer vectors, and machine learning predictive frameworks (Random Forest, Naïve Bayes, Bivariate Local Moran's I). Demonstrates why municipal waste legacies dating back to the dawn of civilization require decentralized Sovereign AI sensing, closed-loop barrier containment, and community-owned groundwater monitoring under Roulet's Law.",
+      sovereignHash: '0xDUMPSITE_LEACHATE_SOIL_GROUNDWATER_QUALITY_PLATE_65_VAULT_2026'
+    },
     {
       id: 'IP-000BX',
       title: "Rural & Indigenous Data Centers: The One Big Beautiful Bill Act Tax Windfall (Plate #64)",
