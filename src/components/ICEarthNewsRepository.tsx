@@ -71,6 +71,7 @@ import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
+import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -133,7 +134,8 @@ import {
   Ban,
   Fingerprint,
   DollarSign,
-  Bot
+  Bot,
+  Eye
 } from 'lucide-react';
 
 export type ContentType = 'Article' | 'Book' | 'Page' | 'Blog' | 'Image' | 'Event' | 'Video' | 'Research';
@@ -185,6 +187,26 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('kohl_lead_isis') ||
+    u.includes('kohl-lead-isis') ||
+    u.includes('kohl') ||
+    u.includes('isis') ||
+    u.includes('oman_kohl') ||
+    u.includes('oman-kohl') ||
+    u.includes('lead_isis') ||
+    u.includes('lead-isis') ||
+    u.includes('galena') ||
+    u.includes('pan_african') ||
+    u.includes('plate_66') ||
+    u.includes('plate66') ||
+    u.includes('plate #66') ||
+    u.includes('photo-000bz') ||
+    u.includes('ip-000bz') ||
+    u.includes('1791220417842')
+  ) {
+    return kohlInfographicPlateImg;
+  }
   if (
     u.includes('dumpsite_leachate') ||
     u.includes('dumpsite-leachate') ||
@@ -1120,6 +1142,65 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-OMAN-OBSERVER-KOHL-LEAD-ISIS-PROOF-2026',
+    contentType: 'Article',
+    title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
+    subtitle: "MUSCAT / NIZWA — The Oman Observer reports on the ancient cultural practice of applying kohl to newborn eyes from ornate silver makhalas, now facing intense scientific scrutiny. Chemical analyses reveal artisanal kohl is composed of 50% to over 85% Galena (lead sulfide, PbS). A meta-analysis published in the Pan African Medical Journal, which pooled data from 14 human observational studies conducted across multiple countries, found a statistically significant association between kohl exposure and increased blood lead levels in children. ICEarth unveils the Lead-ISIS Proof: how 4,000 years of cosmetic vanity originating from the Egyptian goddess Isis crippled prefrontal impulse control and fueled cyclical regional conflict under Roulet's Law.",
+    sourceUrl: 'https://omanobserver.om/article/1197285/features/lifestyle/kohl-in-oman-a-tradition-under-scientific-scrutiny',
+    sourceName: 'Oman Daily Observer & Pan African Medical Journal',
+    publishDate: '2026-10-05',
+    author: 'Oman Observer Features Desk • Pan African Medical Journal • Forensic Exposenomics Commentary by Norman Roulet',
+    authorName: 'Oman Observer Features Desk with Commentary by Norman Roulet',
+    originState: 'Sultanate of Oman • Muscat • Nizwa • Cairo • Alexandria • Global Sovereign Web',
+    communities: [
+      'Oman Public Health Directorate',
+      'Pan African Medical Research Consortium',
+      'ICEarth Sovereign AI Network',
+      'Global Lead-Crime Defense',
+      'Pediatric Neuroprotection Initiative'
+    ],
+    vaultHash: '0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Infomediary & Exposenomics Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: kohlInfographicPlateImg,
+    thumbnailUrl: kohlInfographicPlateImg,
+    abstract: "A meta-analysis published in the Pan African Medical Journal, which pooled data from 14 human observational studies conducted across multiple countries, found a statistically significant association between kohl exposure and increased blood lead levels in children. Originating from ancient Egyptian devotion to the goddess Isis and preserved across the Arabian Peninsula in heirloom silver makhalas, traditional kohl contains 50% to 85%+ pure lead sulfide (Galena). Applied to newborn eyelids, heavy metal particles drain through the nasolacrimal ducts into the stomach, driving systemic neurotoxicity, prefrontal cortex degradation, and cyclical regional violence under the Lead-ISIS Proof and Roulet's Law.",
+    editorCommentary: "While open dumpsite leachate represents anthropogenic lead exposure as old as human waste, kohl is an exposure pathway as old as human vanity. The adoration of Isis and Horus institutionalized the practice of lining children's eyes with pulverized galena under the superstition of spiritual protection. In truth, it systematically poisoned synaptic development across generations. By connecting ocular heavy metal absorption to prefrontal cortex volume loss and explosive aggression, ICEarth’s Lead-ISIS Proof explains why four millennia of cultural kohl usage correlates directly with endless sectarian and regional conflicts across the Middle East and North Africa.",
+    fullExcerpt: `WHY H. ISIS, THE GODDESS — KOHL IN OMAN: A TRADITION UNDER SCIENTIFIC SCRUTINY
+Published by Oman Observer & Pan African Medical Journal Meta-Analysis | October 2026
+Forensic Exposenomics & Sovereign Systems Commentary by Norman Roulet
+Plate #66 Cryptographic Archive: PHOTO-000BZ / IP-000BZ | Vault Hash: 0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026
+
+I. THE OMAN OBSERVER REPORT
+In the Sultanate of Oman, kohl is revered as an essential cultural ritual. Handcrafted silver makhalas and mirwads have preserved this tradition across centuries. Applied to neonates and infants under the folk belief that it strengthens vision and shields from the evil eye, laboratory testing reveals that traditional souq kohl is not carbon or antimony, but Galena (lead sulfide, PbS), routinely assaying between 50% and 85%+ pure elemental lead.
+
+II. THE PAN AFRICAN MEDICAL JOURNAL 14-STUDY META-ANALYSIS
+"A meta-analysis published in the Pan African Medical Journal, which pooled data from 14 human observational studies conducted across multiple countries, found a statistically significant association between kohl exposure and increased blood lead levels in children."
+
+Ocular application in children results in tear-duct (nasolacrimal) flushing directly into the stomach, where infants absorb up to 50% of soluble lead. This drives massive spikes in capillary and venous blood lead levels (BLL), crossing the immature blood-brain barrier during critical windows of synaptic formation.
+
+III. THE LEAD-ISIS PROOF: HUMAN VANITY & REGIONAL CONFLICT
+Anthropogenic lead exposure is as old as human vanity. Under the Pharaonic cult of Isis, Osiris, and Horus, kohl (mesdemet) was painted around the eyes as the sacred Eye of Horus (Wedjat). As this practice radiated across the Arabian Peninsula, Levant, and North Africa for 4,000 years, whole populations were subjected to cradle-to-grave lead neurotoxicity.
+
+Under Roulet’s Law and the Lead-Crime / Lead-Terrorism hypotheses, chronic pediatric lead exposure causes irreversible prefrontal cortex atrophy, blunting impulse inhibition, eradicating cognitive empathy, and amplifying reactive aggression. The Lead-ISIS Proof demonstrates that the endless regional and sectarian conflicts plaguing these territories are not merely ideological, but biologically mediated through four millennia of neurotoxic cosmetic traditions.`,
+    tags: [
+      'Kohl',
+      'OmanObserver',
+      'Galena',
+      'LeadPoisoning',
+      'PanAfricanMedicalJournal',
+      'Isis',
+      'LeadISISProof',
+      'Plate66',
+      'PediatricNeurotoxicity',
+      'RouletsLaw',
+      'AncientCosmetics',
+      'PrefrontalCortex'
+    ],
+    readTime: '8 min read',
+    promotedToHomePage: true
+  },
   {
     id: 'ART-BIOENGINEERING-DUMPSITE-LEACHATE-DISCOVER-SOIL-2026',
     contentType: 'Article',
@@ -6327,6 +6408,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('Kohl') || article.tags?.includes('Plate66') || article.tags?.includes('LeadISISProof') || article.tags?.includes('OmanObserver') || article.id.includes('KOHL-LEAD-ISIS')) && (
+                      <>
+                        <a
+                          href="https://omanobserver.om/article/1197285/features/lifestyle/kohl-in-oman-a-tradition-under-scientific-scrutiny"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-yellow-700 to-amber-700 hover:from-amber-500 hover:to-yellow-600 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-stone-950" />
+                          <span>Oman Observer Feature</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('Kohl') || article.tags?.includes('Plate66') || article.tags?.includes('LeadISISProof') || article.tags?.includes('OmanObserver') || article.id.includes('KOHL-LEAD-ISIS')) && (
+                      <button
+                        onClick={() => onNavigateTab('kohl_lead_isis')}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 via-rose-600 to-purple-700 hover:from-amber-500 hover:to-purple-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-amber-400/50"
+                      >
+                        <Eye size={14} className="text-amber-200 animate-pulse" />
+                        <span>👁️ Launch Lead-ISIS Kohl Proof Engine (Plate #66)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('DumpsiteLeachate') || article.tags?.includes('Plate65') || article.tags?.includes('DiscoverSoil') || article.tags?.includes('Bioengineering') || article.id.includes('DUMPSITE-LEACHATE')) && (

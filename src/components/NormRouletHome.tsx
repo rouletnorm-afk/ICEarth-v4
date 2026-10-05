@@ -146,10 +146,31 @@ import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
+import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('kohl_lead_isis') ||
+    u.includes('kohl-lead-isis') ||
+    u.includes('kohl') ||
+    u.includes('isis') ||
+    u.includes('oman_kohl') ||
+    u.includes('oman-kohl') ||
+    u.includes('lead_isis') ||
+    u.includes('lead-isis') ||
+    u.includes('galena') ||
+    u.includes('pan_african') ||
+    u.includes('plate_66') ||
+    u.includes('plate66') ||
+    u.includes('plate #66') ||
+    u.includes('photo-000bz') ||
+    u.includes('ip-000bz') ||
+    u.includes('1791220417842')
+  ) {
+    return kohlInfographicPlateImg;
+  }
   if (
     u.includes('dumpsite_leachate') ||
     u.includes('dumpsite-leachate') ||
@@ -1199,6 +1220,34 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-KOHL-LEAD-ISIS-OMAN-2026',
+      title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
+      category: 'Exposenomics',
+      date: '2026-10-05',
+      imageSrc: kohlInfographicPlateImg,
+      publishedUrl: 'https://omanobserver.om/article/1197285/features/lifestyle/kohl-in-oman-a-tradition-under-scientific-scrutiny',
+      summary: "The Oman Observer features the ancient practice of applying kohl to newborn eyes from ornate silver makhalas, now facing intense toxicological scrutiny as tests reveal 50% to over 85% pure Galena (lead sulfide, PbS). A meta-analysis published in the Pan African Medical Journal, which pooled data from 14 human observational studies conducted across multiple countries, found a statistically significant association between kohl exposure and increased blood lead levels in children. ICEarth unveils the Lead-ISIS Proof: how 4,000 years of cosmetic vanity originating from the Egyptian goddess Isis crippled prefrontal impulse control and fueled cyclical regional violence under Roulet's Law.",
+      fullText: `WHY H. ISIS, THE GODDESS — KOHL IN OMAN: A TRADITION UNDER SCIENTIFIC SCRUTINY
+Published by Oman Observer & Pan African Medical Journal Meta-Analysis | October 2026
+Forensic Exposenomics & Sovereign Systems Commentary by Norman Roulet
+Plate #66 Cryptographic Archive: PHOTO-000BZ / IP-000BZ | Vault Hash: 0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026
+
+I. THE OMAN OBSERVER FEATURE: TRADITION UNDER SCIENTIFIC SCRUTINY
+In the Sultanate of Oman and across the Arabian Peninsula, kohl is an ancient cultural emblem. Kept in heirloom silver makhalas and applied with silver or wooden mirwad wands, it is traditionally applied to the eyes of newborn infants to cleanse vision, ward off the evil eye, and enhance physical beauty. However, laboratory assays in Oman and throughout the Gulf have uncovered a devastating reality: traditional kohl stones purchased in souqs are not harmless antimony or carbon, but pulverized Galena (lead sulfide, PbS), routinely assaying between 50% and 85%+ pure lead.
+
+II. THE PAN AFRICAN MEDICAL JOURNAL 14-STUDY META-ANALYSIS
+A meta-analysis published in the Pan African Medical Journal, which pooled data from 14 human observational studies conducted across multiple countries, found a statistically significant association between kohl exposure and increased blood lead levels in children.
+
+When applied to the eyelid and conjunctiva of an infant, heavy lead sulfide particles are washed by lacrimal fluid into the tear ducts, passing into the nasopharynx and the stomach. Infants absorb up to 50% of ingested lead, producing systemic blood lead spikes that cross the immature blood-brain barrier.
+
+III. THE LEAD-ISIS PROOF: AS OLD AS HUMAN VANITY
+Just as dumpsite leachate represents lead contamination as old as human waste, kohl represents lead poisoning as old as human vanity. Originating in ancient Egypt under the religious adoration of the goddess Isis, Horus, and the Sacred Eye (Wedjat), the practice blackened eyelids for spiritual protection while imperceptibly destroying synaptic development.
+
+Under Roulet’s Law of Environmental Liability and the Lead-Crime / Lead-Terrorism hypotheses, chronic pediatric lead exposure causes irreversible prefrontal cortex volume loss, extinguishing impulse inhibition, reducing cognitive empathy, and driving hyper-reactive violent aggression. When cradle lead exposure is culturally mandated across entire populations for four millennia, cyclical sectarian strife and endless regional conflicts become biological inevitabilities.`,
+      tags: ['Kohl', 'OmanObserver', 'Galena', 'LeadPoisoning', 'PanAfricanMedicalJournal', 'Isis', 'LeadISISProof', 'Plate66', 'RouletsLaw', 'PediatricNeurotoxicity'],
+      linkHash: '0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026'
+    },
     {
       id: 'MAG-DUMPSITE-LEACHATE-DISCOVER-SOIL-2026',
       title: "How Toxic Leachate from Open Dumpsites Is Silently Poisoning the World’s Groundwater (Plate #65)",
@@ -3873,6 +3922,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000BZ',
+      title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
+      category: 'Ancient Vanity Cosmetics, Galena Lead Sulfide & The Lead-ISIS Conflict Proof',
+      imageSrc: kohlInfographicPlateImg,
+      location: 'Sultanate of Oman • Muscat • Nizwa • Cairo • Alexandria • Pan African Medical Journal Meta-Analysis • Global Sovereign Web',
+      date: '2026-10-05',
+      description: "Plate #66: Forensic exposenomics audit of kohl in Oman and the 4,000-year historical continuum of heavy metal eye cosmetics originating from the worship of Egyptian goddess Isis. Synthesizes toxicological analyses showing traditional kohl consists of 50% to over 85% pure Galena (lead sulfide, PbS), applied via silver makhala and mirwad to newborn infants. Features the landmark meta-analysis in the Pan African Medical Journal pooling 14 human observational studies demonstrating statistically significant pediatric blood lead elevations via nasolacrimal drainage. Establishes the Lead-ISIS Proof: how millennia of cradle lead exposure degrade prefrontal cortex impulse control and empathy, perpetuating cyclical regional violence under Roulet's Law.",
+      vaultHash: '0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026',
+      tags: ['Kohl', 'OmanObserver', 'Galena', 'LeadPoisoning', 'PanAfricanMedicalJournal', 'Isis', 'LeadISISProof', 'Plate66', 'RouletsLaw', 'PediatricNeurotoxicity']
+    },
     {
       id: 'PHOTO-000BY',
       title: "Long-Term Impacts of Dumpsite Leachate on Soil & Groundwater Quality (Plate #65)",

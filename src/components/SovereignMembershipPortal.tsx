@@ -74,6 +74,7 @@ import openAIBrokenPlateImg from '../assets/images/openai_broken_culture_1791096
 import sifInfographicPlateImg from '../assets/images/super_intelligence_force_1791123715872.jpg';
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
+import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import {
   Shield,
   UserCheck,
@@ -205,6 +206,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000BZ',
+      title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
+      type: 'Ancient Vanity Cosmetics, Galena Lead Sulfide & The Lead-ISIS Conflict Proof IP Asset',
+      imageSrc: kohlInfographicPlateImg,
+      link: 'kohl_lead_isis',
+      sourceUrl: 'https://omanobserver.om/article/1197285/features/lifestyle/kohl-in-oman-a-tradition-under-scientific-scrutiny',
+      description: "Plate #66: Forensic exposenomics audit of kohl in Oman and the 4,000-year historical continuum of heavy metal eye cosmetics originating from the worship of Egyptian goddess Isis. Synthesizes toxicological analyses showing traditional kohl consists of 50% to over 85% pure Galena (lead sulfide, PbS), applied via silver makhala and mirwad to newborn infants. Features the landmark meta-analysis in the Pan African Medical Journal pooling 14 human observational studies demonstrating statistically significant pediatric blood lead elevations via nasolacrimal drainage. Establishes the Lead-ISIS Proof: how millennia of cradle lead exposure degrade prefrontal cortex impulse control and empathy, perpetuating cyclical regional violence under Roulet's Law.",
+      sovereignHash: '0xKOHL_OMAN_LEAD_ISIS_PROOF_PAN_AFRICAN_MED_JOURNAL_PLATE_66_VAULT_2026'
+    },
     {
       id: 'IP-000BY',
       title: "Long-Term Impacts of Dumpsite Leachate on Soil & Groundwater Quality (Plate #65)",
