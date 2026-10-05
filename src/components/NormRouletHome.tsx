@@ -147,10 +147,28 @@ import sifInfographicPlateImg from '../assets/images/super_intelligence_force_17
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
+import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('midgley') ||
+    u.includes('altman') ||
+    u.includes('midgley_altman') ||
+    u.includes('midgley-altman') ||
+    u.includes('awescroll') ||
+    u.includes('004-midgley') ||
+    u.includes('ai_new_pb') ||
+    u.includes('plate_67') ||
+    u.includes('plate67') ||
+    u.includes('plate #67') ||
+    u.includes('photo-000ca') ||
+    u.includes('ip-000ca') ||
+    u.includes('1791243913051')
+  ) {
+    return midgleyAltmanPlateImg;
+  }
   if (
     u.includes('kohl_lead_isis') ||
     u.includes('kohl-lead-isis') ||
@@ -1220,6 +1238,45 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-MIDGLEY-ALTMAN-AI-AS-NEW-PB-2026',
+      title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Awescroll 004 & The Monopoly of Harm, Plate #67)",
+      category: 'Exposenomics',
+      date: '2026-10-05',
+      imageSrc: midgleyAltmanPlateImg,
+      publishedUrl: 'https://awescroll.com/004-midgley',
+      summary: "Midgley. Two inventions and the air. In 1921 a mechanical engineer in Dayton, Ohio, found what made car engines run smoothly: a few grams of a lead compound in every gallon of petrol. Nine years later he found the perfect gas for refrigerators: safe to breathe, impossible to set on fire. Both worked. Both went everywhere, until there was some of each in the air over every part of the planet. It took half a century to learn what each of them did there. His name was Thomas Midgley Jr. ICEarth compares Midgley's aerosolization of lead and Freon to Sam Altman's rush to deploy unregulated, addictive synthetic cognition, examining the structural incentives that lead industrial executives to completely disregard the public interest.",
+      fullText: `MIDGLEY. TWO INVENTIONS AND THE AIR. (AWESCROLL ISSUE 004)
+Profile of Thomas Midgley Jr. with ICEarth AI-as-Pb Comparative Forensics by Norman Roulet
+Plate #67 Cryptographic Archive: PHOTO-000CA / IP-000CA | Vault Hash: 0xMIDGLEY_ALTMAN_AI_AS_NEW_PB_PERSONALITIES_PLATE_67_VAULT_2026
+
+“Midgley. Two inventions and the air. In 1921 a mechanical engineer in Dayton, Ohio, found what made car engines run smoothly: a few grams of a lead compound in every gallon of petrol. Nine years later he found the perfect gas for refrigerators: safe to breathe, impossible to set on fire.
+
+Both worked. Both went everywhere, until there was some of each in the air over every part of the planet. It took half a century to learn what each of them did there.
+
+His name was Thomas Midgley Jr.”
+
+I. THE TWO INVENTIONS AND THE ATMOSPHERE
+Thomas Midgley Jr. was not an overt monster in a melodrama; he was a celebrated, charismatic, brilliant mechanical engineer working under Charles Kettering at General Motors. When he discovered that tetraethyl lead (TEL) quelled engine knocking, Kettering and Midgley patented the additive and formed the Ethyl Gasoline Corporation in partnership with Standard Oil of New Jersey and DuPont.
+
+Safe, unpatentable alternatives—chiefly ethanol—were deliberately dismissed because they offered no proprietary licensing monopoly. When refinery workers at Bayway collapsed in delusions and straightjackets, Midgley held a press conference, poured TEL over his hands, and washed in it, concealing that he was secretly suffering from chronic lead poisoning himself.
+
+Nine years later, Midgley solved the refrigerator problem by synthesizing Freon (CFC-12). It was odorless, non-toxic, and non-flammable. Yet decades later, atmospheric scientists discovered that CFCs were catalytically destroying the stratospheric ozone layer. Environmental historian J.R. McNeill noted that Midgley “had more adverse impact on the atmosphere than any other single organism in Earth's history.”
+
+II. SAM ALTMAN: THE 21ST-CENTURY MIDGLEY
+In our era, artificial intelligence is the new tetraethyl lead. The engineer and promoter driving its irreversible global saturation is OpenAI CEO Sam Altman.
+
+Like Midgley, Altman cloaks commercial expansion in scientific altruism. Founded as a non-profit to protect humanity from dangerous AI, OpenAI systematically dismantled its safety governance, dismissed whistleblowers, shuttered superalignment teams, and reorganized into a for-profit colossus pursuing trillion-dollar hyperscale infrastructure.
+
+III. WHY INDUSTRY DISREGARDS THE PUBLIC INTEREST
+1. Externalization Arbitrage: Corporate balance sheets register zero penalty for planetary externalities. Just as Midgley's lead cost GM nothing for stolen cognitive potential, hyperscale AI costs tech monopolies nothing for democratic breakdown, cognitive atrophy, or soaring power and water bills.
+2. The Patentability/Monopoly Imperative: Decentralized, open, sovereign computing cannot be monopolized. Centralized hyperscalers demand artificial dependency.
+3. Messianic Delusion: Midgley believed he was perfecting mechanical locomotion; Altman professes he is ushering humanity into a post-scarcity utopia.
+
+Under Roulet’s Law, humanity survives not through centralized monopolies of harm, but through sovereign enclaves armed with cryptographic verification and local compute.`,
+      tags: ['Midgley', 'Awescroll', 'SamAltman', 'OpenAI', 'TetraethylLead', 'Freon', 'EthylCorporation', 'Plate67', 'RouletsLaw', 'AIAstheNewPb'],
+      linkHash: '0xMIDGLEY_ALTMAN_AI_AS_NEW_PB_PERSONALITIES_PLATE_67_VAULT_2026'
+    },
     {
       id: 'MAG-KOHL-LEAD-ISIS-OMAN-2026',
       title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
@@ -3922,6 +3979,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CA',
+      title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Plate #67)",
+      category: 'Industrial Externalization, Monopolies of Harm & The New Lead Barons',
+      imageSrc: midgleyAltmanPlateImg,
+      location: 'Dayton, OH • San Francisco, CA • General Motors Laboratories • OpenAI St. • Awescroll 004',
+      date: '2026-10-05',
+      description: "Plate #67: AI As The New Pb — The Personalities: Thomas Midgley Jr. & Sam Altman. Investigating how mechanical engineer Thomas Midgley Jr. aerosolized lead and synthesized Freon, and how Sam Altman dismantled non-profit safety boundaries to monopoly-externalize synthetic cognition. Explores why corporate capitalism structurally incentivizes ignoring the public good.",
+      vaultHash: '0xMIDGLEY_ALTMAN_AI_AS_NEW_PB_PERSONALITIES_PLATE_67_VAULT_2026',
+      tags: ['Midgley', 'SamAltman', 'Awescroll', 'TetraethylLead', 'Freon', 'OpenAI', 'Plate67', 'RouletsLaw', 'AIAstheNewPb']
+    },
     {
       id: 'PHOTO-000BZ',
       title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",

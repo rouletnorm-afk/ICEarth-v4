@@ -72,6 +72,7 @@ import sifInfographicPlateImg from '../assets/images/super_intelligence_force_17
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
+import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -187,6 +188,23 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('midgley') ||
+    u.includes('altman') ||
+    u.includes('midgley_altman') ||
+    u.includes('midgley-altman') ||
+    u.includes('awescroll') ||
+    u.includes('004-midgley') ||
+    u.includes('ai_new_pb') ||
+    u.includes('plate_67') ||
+    u.includes('plate67') ||
+    u.includes('plate #67') ||
+    u.includes('photo-000ca') ||
+    u.includes('ip-000ca') ||
+    u.includes('1791243913051')
+  ) {
+    return midgleyAltmanPlateImg;
+  }
   if (
     u.includes('kohl_lead_isis') ||
     u.includes('kohl-lead-isis') ||
@@ -1142,6 +1160,72 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-AWESCROLL-004-MIDGLEY-ALTMAN-AI-AS-NEW-PB-2026',
+    contentType: 'Article',
+    title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Awescroll 004 & The Monopoly of Harm, Plate #67)",
+    subtitle: "DAYTON / SAN FRANCISCO — In 1921 a mechanical engineer in Dayton, Ohio, found what made car engines run smoothly: a few grams of a lead compound in every gallon of petrol. Nine years later he found the perfect gas for refrigerators: safe to breathe, impossible to set on fire. Both worked. Both went everywhere, until there was some of each in the air over every part of the planet. It took half a century to learn what each of them did there. His name was Thomas Midgley Jr. Today, ICEarth compares Midgley's aerosolization of lead and Freon to Sam Altman's rush to deploy unregulated, addictive synthetic cognition. Examining what makes industrial engineers disregard public interests for monopoly rewards, and establishing Roulet's Law against the new Lead Barons.",
+    sourceUrl: 'https://awescroll.com/004-midgley',
+    sourceName: 'Awescroll (Issue 004) & ICEarth Sovereign Audit',
+    publishDate: '2026-10-05',
+    author: 'Awescroll Editorial Board • Commentary & AI-Pb Comparative Forensics by Norman Roulet',
+    authorName: 'Awescroll with Commentary by Norman Roulet',
+    originState: 'Dayton, OH • San Francisco, CA • Geneva, Switzerland • Global Sovereign Web',
+    communities: [
+      'Awescroll Historical Archive',
+      'ICEarth Sovereign AI Network',
+      'The Patterson-Roulet Defense Coalition',
+      'Bioethics & Public Interest Engineering',
+      'Sovereign Intelligence Cooperative'
+    ],
+    vaultHash: '0xMIDGLEY_ALTMAN_AI_AS_NEW_PB_PERSONALITIES_PLATE_67_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Infomediary & Exposenomics Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    imageUrl: midgleyAltmanPlateImg,
+    thumbnailUrl: midgleyAltmanPlateImg,
+    abstract: "Midgley. Two inventions and the air. In 1921 a mechanical engineer in Dayton, Ohio, found what made car engines run smoothly: a few grams of a lead compound in every gallon of petrol. Nine years later he found the perfect gas for refrigerators: safe to breathe, impossible to set on fire. Both worked. Both went everywhere, until there was some of each in the air over every part of the planet. It took half a century to learn what each of them did there. His name was Thomas Midgley Jr. This investigative audit connects Midgley to OpenAI CEO Sam Altman: two engineers heralded as scientific messiahs who suppressed safe, unpatentable alternatives to build hyper-concentrated corporate monopolies while externalizing irreversible tail-risk onto the global biosphere and human cognition.",
+    editorCommentary: "When we say AI (SI) is the new Pb, that equivalence extends to the personalities steering the corporate machinery. Thomas Midgley Jr. didn't aerosolize tetraethyl lead because no alternatives existed; ethanol worked just as well, but ethanol couldn't be patented. Midgley and Kettering chose TEL to secure billions in proprietary licensing fees for General Motors and Standard Oil, fully aware that workers were dying in straightjackets at Bayway. A century later, Sam Altman purports to shepherd Artificial General Intelligence for the benefit of humanity while gutting superalignment teams, transitioning to a for-profit juggernaut, and demanding hundreds of billions in capital to privatize intelligence while externalizing cognitive atrophy, democratic destabilization, and resource exhaustion. Under Roulet's Law, sovereign enclaves reject both leaded gasoline and closed synthetic monopolies.",
+    fullExcerpt: `MIDGLEY. TWO INVENTIONS AND THE AIR. (AWESCROLL ISSUE 004)
+By Awescroll with ICEarth Comparative Exposenomics
+
+In 1921 a mechanical engineer in Dayton, Ohio, found what made car engines run smoothly: a few grams of a lead compound in every gallon of petrol. Nine years later he found the perfect gas for refrigerators: safe to breathe, impossible to set on fire.
+
+Both worked. Both went everywhere, until there was some of each in the air over every part of the planet. It took half a century to learn what each of them did there.
+
+His name was Thomas Midgley Jr.
+
+I. THE TWO INVENTIONS AND THE FIFTY-YEAR LAG
+Working for Charles Kettering at General Motors Research Laboratories, Midgley solved the violent knocking problem of internal combustion engines by discovering tetraethyl lead (TEL). When added to gasoline at mere grams per gallon, it smoothed detonation and allowed higher compression ratios. Kettering and Midgley formed the Ethyl Gasoline Corporation, joining GM with Standard Oil of New Jersey and DuPont.
+
+Nine years later, Kettering tasked Midgley with finding a non-toxic, non-flammable refrigerant to replace deadly ammonia and sulfur dioxide. In three days, Midgley and his team synthesized Dichlorodifluoromethane—Freon (CFC-12).
+
+At the American Chemical Society, Midgley demonstrated Freon's safety by inhaling a lungful of the vapor and blowing out a candle. What he could not see was that CFCs would drift indestructible into the stratosphere, where solar ultraviolet radiation cleaved chlorine atoms, triggering catalytic destruction of the ozone shield protecting all terrestrial life from mutagenic UV-C rays.
+
+II. SAM ALTMAN: THE 21ST-CENTURY MIDGLEY
+In the 21st century, artificial intelligence has emerged as the cognitive equivalent of tetraethyl lead. The engineer most responsible for its unrestrained atmospheric saturation is Sam Altman.
+
+Like Midgley, Altman presents himself not as a corporate robber baron, but as a genial, selfless scientific benefactor. OpenAI was founded as a non-profit research institution dedicated to ensuring AGI benefits all of humanity. Yet just as GM and Standard Oil suppressed unpatentable ethanol in favor of proprietary lead additives, Altman engineered the dismantling of OpenAI's non-profit safety governance, ousted whistleblowers, dissolved superalignment safeguards, and reconstituted the company as a predatory $150B+ commercial powerhouse.
+
+III. WHAT MAKES INDUSTRY DISREGARD PUBLIC INTERESTS?
+1. The Externalization Arbitrage: Under modern capitalism, negative externalities cost zero dollars on the corporate quarterly balance sheet. Midgley's lead cost GM nothing in reparations for the 824 million IQ points stolen from children.
+2. The Patentability Imperative: Safe alternatives cannot be patented. Unpatentable alternatives (ethanol for combustion; decentralized, open, locally verifiable sovereign AI) offer no 100x venture returns.
+3. Messianic Technocracy: Both Midgley and Altman genuinely convinced themselves they were saving civilization, creating psychological immunity against ethical restraint.
+
+Under Roulet’s Law, true civilizational survival requires sovereign enclaves: offline-first compute, open cryptographic proofs, and decentralized models that refuse the poison of centralized monopoly barons.`,
+    tags: [
+      'Midgley',
+      'Awescroll',
+      'SamAltman',
+      'OpenAI',
+      'TetraethylLead',
+      'Freon',
+      'EthylCorporation',
+      'RouletsLaw',
+      'Plate67',
+      'AIAstheNewPb',
+      'Exposenomics'
+    ]
+  },
   {
     id: 'ART-OMAN-OBSERVER-KOHL-LEAD-ISIS-PROOF-2026',
     contentType: 'Article',
@@ -6408,6 +6492,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                           <ExternalLink size={12} className="text-stone-950" />
                         </a>
                       </>
+                    )}
+
+                    {(article.tags?.includes('Midgley') || article.tags?.includes('Plate67') || article.tags?.includes('SamAltman') || article.tags?.includes('Awescroll') || article.id.includes('MIDGLEY-ALTMAN')) && (
+                      <>
+                        <a
+                          href="https://awescroll.com/004-midgley"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 hover:from-amber-500 hover:to-red-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-stone-950" />
+                          <span>Awescroll 004: Midgley</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('Midgley') || article.tags?.includes('Plate67') || article.tags?.includes('SamAltman') || article.tags?.includes('Awescroll') || article.id.includes('MIDGLEY-ALTMAN')) && (
+                      <button
+                        onClick={() => onNavigateTab('ai_pb_personalities' as any)}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-red-700 hover:from-amber-500 hover:to-red-600 text-white font-mono font-black text-xs rounded-xl shadow-lg border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-amber-400/50"
+                      >
+                        <Flame size={14} className="text-amber-200 animate-pulse" />
+                        <span>🔥 Launch Midgley-Altman Engine (Plate #67)</span>
+                        <ArrowRight size={13} />
+                      </button>
                     )}
 
                     {(article.tags?.includes('Kohl') || article.tags?.includes('Plate66') || article.tags?.includes('LeadISISProof') || article.tags?.includes('OmanObserver') || article.id.includes('KOHL-LEAD-ISIS')) && (

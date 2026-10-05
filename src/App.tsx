@@ -155,6 +155,7 @@ import { LeadAlzheimersDementiaRisk } from './components/LeadAlzheimersDementiaR
 import { SovereignAIAgentsAdoption } from './components/SovereignAIAgentsAdoption';
 import { TrumpAISummitRichestTable } from './components/TrumpAISummitRichestTable';
 import { OpenAIBrokenCulture } from './components/OpenAIBrokenCulture';
+import { AiPbPersonalitiesMidgleyAltman } from './components/AiPbPersonalitiesMidgleyAltman';
 import { SuperIntelligenceForceAudit } from './components/SuperIntelligenceForceAudit';
 import { RuralIndigenousDataCenterIncentives } from './components/RuralIndigenousDataCenterIncentives';
 import { recordPageView, updateSessionDuration, initGoogleAnalytics } from './lib/analytics';
@@ -165,7 +166,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -512,6 +513,26 @@ export default function App() {
         lower.includes('broken_culture')
       ) {
         setActiveTab('openai_culture');
+      } else if (
+        lower === 'ai_pb_personalities' ||
+        lower === 'ai-pb-personalities' ||
+        lower === 'midgley_altman' ||
+        lower === 'midgley-altman' ||
+        lower === 'midgley' ||
+        lower === 'altman' ||
+        lower === 'sam_altman' ||
+        lower === 'sam-altman' ||
+        lower === 'thomas_midgley' ||
+        lower === 'thomas-midgley' ||
+        lower === 'awescroll' ||
+        lower === '004-midgley' ||
+        lower === 'plate_67' ||
+        lower === 'plate67' ||
+        lower === 'plate-67' ||
+        lower.includes('midgley') ||
+        lower.includes('personalities')
+      ) {
+        setActiveTab('ai_pb_personalities');
       } else if (
         lower === 'cleveland_hypocrisy' ||
         lower === 'cleveland-hypocrisy' ||
@@ -1808,6 +1829,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00000B0.0A.2B AI, THE NEW PB: MIDGLEY VS. ALTMAN (PLATE #67) */}
+                <button
+                  onClick={() => setActiveTab('ai_pb_personalities' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_pb_personalities' || (activeTab as string) === 'midgley' || (activeTab as string) === 'altman' || (activeTab as string) === 'midgley_altman' || (activeTab as string) === 'plate_67' || (activeTab as string) === 'plate67'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-orange-950 text-amber-200 border-amber-500 shadow-xl font-black ring-2 ring-amber-500/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-orange-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Flame size={16} className={activeTab === 'ai_pb_personalities' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">🔥 AI, New Pb: Midgley vs. Altman</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-orange-700 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #67
+                  </span>
+                </button>
+
                 {/* 0.00000B0.0A.3 SUPER INTELLIGENCE FORCE: AI CZAR & REGULATORY MATRIX (PLATE #63) */}
                 <button
                   onClick={() => setActiveTab('super_intelligence_force')}
@@ -2838,6 +2875,25 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 2.0A.2B AI as New Pb Personalities: Midgley & Altman (Plate #67) */}
+                <button
+                  onClick={() => {
+                    setActiveTab('ai_pb_personalities' as any);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'ai_pb_personalities' || (activeTab as string) === 'midgley' || (activeTab as string) === 'altman' || (activeTab as string) === 'midgley_altman' || (activeTab as string) === 'plate_67' || (activeTab as string) === 'plate67'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-orange-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Flame size={16} className={activeTab === 'ai_pb_personalities' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-semibold">🔥 AI As Pb: Midgley & Altman</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-orange-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-extrabold shadow-xs">
+                    Plate #67
+                  </span>
+                </button>
+
                 {/* 2.0A.3 Super Intelligence Force: AI Czar Jay Clayton (Plate #63) */}
                 <button
                   onClick={() => {
@@ -3647,6 +3703,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'sovereign_agents', icon: Bot, label: '🤖 AI Agents & The Normal-People Problem', badge: 'Plate #59', color: 'emerald' },
                     { id: 'trump_ai_summit_table', icon: DollarSign, label: '👑 Trump $1.8T AI Summit: Richest Table', badge: 'Plate #60', color: 'amber' },
                     { id: 'openai_culture', icon: Skull, label: '⚠️ Inside OpenAI Broken Culture', badge: 'Plate #62', color: 'red' },
+                    { id: 'ai_pb_personalities', icon: Flame, label: '🔥 AI, The New Pb: Midgley vs. Altman', badge: 'Plate #67', color: 'amber' },
                     { id: 'super_intelligence_force', icon: ShieldAlert, label: '🛡️ AI Czar & Super Intelligence Force', badge: 'Plate #63', color: 'red' },
                     { id: 'super_intelligence_sovereignty', icon: Crown, label: '👑 Super Intelligence Sovereignty', badge: 'Plate #57', color: 'purple' },
                     { id: 'datacenter_incentives', icon: DollarSign, label: '🏛️ Data Center Incentives Engine', badge: 'Plate #56', color: 'amber' },
@@ -3811,6 +3868,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'sovereign_agents' || (activeTab as string) === 'ai_agents' || (activeTab as string) === 'normal_people' || (activeTab as string) === 'plate_59' || (activeTab as string) === 'plate59' || (activeTab as string) === 'axios') && '🤖 The Normal-People Problem: Why Sovereign IT & Roulet’s Law Unlock AI Adoption (Plate #59)'}
               {(activeTab === 'trump_ai_summit_table' || (activeTab as string) === 'richest_table' || (activeTab as string) === 'trump_summit' || (activeTab as string) === 'plate_60' || (activeTab as string) === 'plate60') && '👑 Trump’s $1.8 Trillion AI Summit: The Richest Table Ever Assembled (Plate #60)'}
               {(activeTab === 'openai_culture' || activeTab === 'openai_broken_culture' || (activeTab as string) === 'openai' || (activeTab as string) === 'david_robinson' || (activeTab as string) === 'plate_62' || (activeTab as string) === 'plate62') && '⚠️ Why AI Is the New Pb: Inside OpenAI’s Broken Culture & The Atlantic Confession (Plate #62)'}
+              {(activeTab === 'ai_pb_personalities' || (activeTab as string) === 'midgley' || (activeTab as string) === 'altman' || (activeTab as string) === 'midgley_altman' || (activeTab as string) === 'plate_67' || (activeTab as string) === 'plate67') && '🔥 AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Plate #67)'}
               {(activeTab === 'super_intelligence_force' || (activeTab as string) === 'sif_audit' || (activeTab as string) === 'sif' || (activeTab as string) === 'jay_clayton' || (activeTab as string) === 'clayton' || (activeTab as string) === 'ai_czar' || (activeTab as string) === 'plate_63' || (activeTab as string) === 'plate63') && '🛡️ Trump Taps AI Czar Jay Clayton: Super Intelligence Force & Regulatory Framework (Plate #63)'}
               {(activeTab === 'super_intelligence_sovereignty' || (activeTab as string) === 'super_intelligence' || (activeTab as string) === 'superintelligence' || (activeTab as string) === 'lake_america' || (activeTab as string) === 'plate_57' || (activeTab as string) === 'plate57') && '👑 The Sovereignty of Super Intelligence: The "Lake America" Paradox & The 6-CEO White House Accord (Plate #57)'}
               {(activeTab === 'datacenter_incentives' || (activeTab as string) === 'incentives_engine' || (activeTab as string) === 'data_center_incentives' || (activeTab as string) === 'plate_56' || (activeTab as string) === 'plate56' || (activeTab as string) === 'mark_tyson' || (activeTab as string) === 'hazle_township') && '🏛️ Data Center Incentives Engine: From Government Tax Giveaways to Direct Household Payments (Plate #56)'}
@@ -5617,6 +5675,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'openai_culture' || activeTab === 'openai_broken_culture' || (activeTab as string) === 'openai' || (activeTab as string) === 'david_robinson' || (activeTab as string) === 'plate_62' || (activeTab as string) === 'plate62') && (
             <div className="flex-1 overflow-y-auto">
               <OpenAIBrokenCulture 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117B0.0A.2B: AI, THE NEW PB PERSONALITIES: MIDGLEY VS. ALTMAN (PLATE #67) */}
+          {(activeTab === 'ai_pb_personalities' || (activeTab as string) === 'midgley' || (activeTab as string) === 'altman' || (activeTab as string) === 'midgley_altman' || (activeTab as string) === 'plate_67' || (activeTab as string) === 'plate67') && (
+            <div className="flex-1 overflow-y-auto">
+              <AiPbPersonalitiesMidgleyAltman 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

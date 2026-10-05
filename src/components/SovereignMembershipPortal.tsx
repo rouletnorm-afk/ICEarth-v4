@@ -75,6 +75,7 @@ import sifInfographicPlateImg from '../assets/images/super_intelligence_force_17
 import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_1791131258360.jpg';
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
+import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import {
   Shield,
   UserCheck,
@@ -206,6 +207,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CA',
+      title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Plate #67)",
+      type: 'Industrial Externalization, Monopolies of Harm & Sovereign AI Forensics IP Asset',
+      imageSrc: midgleyAltmanPlateImg,
+      link: 'ai_pb_personalities',
+      sourceUrl: 'https://awescroll.com/004-midgley',
+      description: "Plate #67: Historical and contemporary comparative audit connecting mechanical engineer Thomas Midgley Jr. (inventor of tetraethyl lead in gasoline and Freon in refrigeration) to OpenAI CEO Sam Altman. Synthesizes the Awescroll 004 profile on Midgley's fifty-year lag with modern generative AI deployment. Analyzes the financial, institutional, and psychological incentives that drive industrial leaders to externalize planetary catastrophe and cognitive atrophy onto the public while suppressing safe, unpatentable alternatives (ethanol in 1921, sovereign local AI today) to secure concentrated monopoly rents. Establishes Roulet's Law defense enclaves against the new Lead Barons.",
+      sovereignHash: '0xMIDGLEY_ALTMAN_AI_AS_NEW_PB_PERSONALITIES_PLATE_67_VAULT_2026'
+    },
     {
       id: 'IP-000BZ',
       title: "Why H. ISIS, The Goddess — Kohl in Oman: A Tradition Under Scientific Scrutiny (Plate #66)",
