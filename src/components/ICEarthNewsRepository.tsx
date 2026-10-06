@@ -74,6 +74,7 @@ import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
+import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -189,6 +190,21 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('indigenous_progress') ||
+    u.includes('right_to_progress') ||
+    u.includes('indigenous_right_to_progress') ||
+    u.includes('theconversation') ||
+    u.includes('258837') ||
+    u.includes('plate_69') ||
+    u.includes('plate69') ||
+    u.includes('plate #69') ||
+    u.includes('photo-000cc') ||
+    u.includes('ip-000cc') ||
+    u.includes('1791305740915')
+  ) {
+    return indigenousProgressPlateImg;
+  }
   if (
     u.includes('deepmind') ||
     u.includes('lila_ibrahim') ||
@@ -1178,6 +1194,79 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-THECONVERSATION-INDIGENOUS-PROGRESS-SOVEREIGN-IT-2026',
+    contentType: 'Article',
+    title: "Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet's Law Sovereign IT: 'Indigenous People Have the Right to Progress Too' (Plate #69)",
+    subtitle: "YASUNÍ NATIONAL PARK, ECUADOR / SANTA FE, NM / INDIAN COUNTRY — An in-depth political ecology and exposenomic investigation published in The Conversation by Gabriel Leite Mota ('Why some Indigenous communities don’t resist oil extraction in their territories') reveals the profound human reality confronting resource frontiers: Indigenous populations want modern infrastructure, sewage, clean water, high-speed connectivity, and advanced computation, but are too often forced into an asymmetric corporate dilemma. As community members Juan Manuel and Johnny testify along the Napo River, communities accept extractive projects not out of environmental indifference, but because central governments have abandoned them ('How come will they oppose, if the people don’t have anywhere to poop? We are fed up with making small holes in the bushes... Indigenous people have the right to progress too'). In New Mexico, where oil and gas royalties fund nearly 40% of the state budget and sovereign Tribes/Pueblos navigate complex energy economies, the incoming wave of hyperscale data centers threatens to impose the same colonial extraction—consuming millions of gallons of desert aquifer water and overburdening rural power grids. ICEarth and Roulet's Law provide the definitive sovereign synthesis: Indigenous communities want high tech, artificial intelligence, and clean energy, but exclusively on sovereign, community-governed terms.",
+    sourceUrl: 'https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837',
+    sourceName: 'The Conversation (Environmental Anthropology & Political Ecology)',
+    publishDate: '2026-10-06',
+    author: 'Gabriel Leite Mota (University of Sussex) • Sovereign Exposenomics & Energy Economics Commentary by Norman Roulet',
+    authorName: 'Gabriel Leite Mota with Sovereign Commentary by Norman Roulet',
+    originState: 'Napo River, Ecuador • Yasuní ITT • Santa Fe, NM • Navajo Nation • Taos Pueblo • Laguna Pueblo • Jicarilla Apache',
+    communities: [
+      'Quichua Indigenous Communities (Napo River)',
+      'New Mexico Tribal Energy & Sovereign IT Coalition',
+      'Swiss School of Exposenomics',
+      'Pueblo of Laguna & Taos Pueblo',
+      'Cherokee & Jicarilla Apache Sovereign Computing',
+      'ICEarth Sovereign Nations Network'
+    ],
+    tags: [
+      'TheConversation',
+      'IndigenousRights',
+      'RightToProgress',
+      'Plate69',
+      'RouletsLaw',
+      'NewMexicoEnergy',
+      'OilEconomies',
+      'SovereignIT',
+      'DataCenterSovereignty',
+      'AsymmetricDilemma',
+      'WaterSovereignty',
+      'SelfDetermination'
+    ],
+    imageUrl: 'https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837',
+    imageCaption: 'Plate #69: Contemporary Indigenous Communities, High-Tech Sovereignty & The Right to Progress — Synthesizing Field Research from Ecuador’s Napo River to New Mexico Tribal Energy Economies and Roulet’s Law Sovereign IT.',
+    abstract: "Why some Indigenous communities don’t resist oil extraction in their territories: An asymmetric dilemma where frontline communities are denied basic infrastructure, sewage, and clean water, and turn to corporate developers out of sheer survival. Indigenous people have the constitutional and human right to progress, modern conveniences, and artificial intelligence, but refuse predatory extraction. ICEarth provides clean, waterless compute on sovereign Indigenous terms.",
+    editorCommentary: "Norman Roulet: 'This profound dispatch from The Conversation touches the absolute core of why ICEarth was founded. For centuries, outside observers and romanticizing environmentalists have demanded that Indigenous peoples remain frozen in pre-industrial conditions as sacrificial stewards of nature, while corporate cartels poison their rivers and deny them basic sanitation. As Juan Manuel stated plainly: \"We are fed up with making small holes in the bushes... Indigenous people have the right to progress too.\" In New Mexico, our Tribes and Pueblos have sophisticated energy economies that finance our schools and clinics. When Big Tech arrives with hyperscale data centers, they offer the same false bargain: surrender your water and land for a handful of maintenance jobs. Under Roulet\'s Law and Swiss School Exposenomics, we reject this asymmetry. Indigenous nations will build and operate high-tech data centers, advanced Gemini cognitive engines, and fiber networks—but under 100% tribal equity, closed-loop waterless cooling, islanded microgrids, and cryptographic self-determination.'",
+    fullExcerpt: `HIGHLIGHTS FROM "WHY SOME INDIGENOUS COMMUNITIES DON’T RESIST OIL EXTRACTION IN THEIR TERRITORIES" (THE CONVERSATION):
+
+"While the project was expected to have knock-on effects on the river, land and forest, it would also bring jobs, indemnification money and so-called “social compensation” through projects in health, education and infrastructure. I started to perceive oil as a local dilemma: either livelihoods were going to be affected or potential benefits from the oil company had to be renounced.
+
+What I didn’t yet understand was why this dilemma so often seemed to result in the local acceptance of oil extraction.
+
+UNDERSTANDING ACCEPTANCE:
+I travelled back to this region in August 2016, a month before the inauguration of the ITT oil project. By then, the six Quichua communities whose territories overlap with the ITT fields had accepted it. Other communities along the river were about to face oil exploration for the first time. This allowed me to observe oil decisions as they unfolded over the next few months.
+
+When oil exploration reached the community of Vicente Salazar, in January 2017, I asked what the community was going to decide – by which I meant: are you going to accept or oppose the oil project? It soon became clear that my question made little sense.
+
+“How come will they oppose, if the people don’t have anywhere to poop?” said Juan Manuel, a councilman and member of the community. “We are fed up with making small holes in the bushes.”
+
+Johnny, a local resident, explained: “Someone who would say that oil should remain underground, like this, there isn’t.”
+
+I understood that if oil could be seen as a dilemma, it was a highly asymmetric one.
+
+The thing is, oil extraction does not arrive in an untouched environment. While people rely on nature for their livelihoods, hunting and fishing, collecting wood from the forest and drinking water from the river are increasingly under pressure from river pollution, the growing scarcity of bushmeat and fish (due to factors including overhunting and river pollution), and conservation laws from central government constraining hunting, fishing and cutting down wood.
+
+At the same time, these pressures create new needs for cash and services. Residents want access to all the basic services (including drinking water, electricity and sewage systems), better health and education. They also want money to buy “bigger things”: a fibre canoe, a zinc roof, a gas kitchen to make life easier, faster and more comfortable.
+
+As one resident put it: “Indigenous people have the right to progress too.”
+
+In this context, the oil company is often perceived by inhabitants as a provider of much-needed jobs, cash, infrastructure and services. And while extraction puts further pressure on nature and people’s livelihoods, some of the benefits it provides are seen as capable of addressing some of the consequences of both existing (past) and expected (new) ecological pressures. Drinking water provision, seen as a necessary response to the pollution of the Napo river, exemplifies this paradox."
+
+-----------------------------------------------------------------------------
+SWISS SCHOOL OF EXPOSENOMICS & ROULET'S LAW FORENSIC ANALYSIS:
+1. THE NEW MEXICO ANALOGY: New Mexico's state budget depends heavily on oil and gas revenues from the Permian and San Juan basins. Similarly, the Jicarilla Apache Nation, Navajo Nation, and Pueblo lands have developed complex energy economies. As Big Tech attempts to colonize rural and tribal land for power-hungry AI data centers, the state faces the same paradox: economic development versus the depletion of precious desert aquifers.
+2. HIGH-TECH ON INDIGENOUS TERMS: Indigenous communities do not want to reject artificial intelligence, supercomputers, or fiber telecommunications; they demand modern tools, digital sovereignty, and high-paying technological careers. But they demand it on sovereign terms: 0 gal/day waterless cooling, tribal majority ownership (51%+), off-grid microgrids, and local cryptographic control.
+3. ROULET'S LAW APPLICATION: Under Roulet's Law, when corporate technological expansion imposes uncompensated externalized harm, communities possess the inherent sovereign right to assert regulatory jurisdiction, levy reparative compute dividends, and establish air-gapped sovereign infrastructure.
+
+Plate #69 Cryptographic Archive: PHOTO-000CC / IP-000CC | Vault Hash: 0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026`,
+    vaultHash: '0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Infomediary & Exposenomics Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect'
+  },
   {
     id: 'ART-CNBC-DEEPMIND-LILA-IBRAHIM-GEMINI-SOVEREIGN-IT-2026',
     contentType: 'Article',
@@ -6548,6 +6637,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('TheConversation') || article.tags?.includes('RightToProgress') || article.tags?.includes('Plate69') || article.id.includes('THECONVERSATION-INDIGENOUS-PROGRESS') || article.title?.includes('Right to Progress')) && (
+                      <>
+                        <a
+                          href="https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-stone-950" />
+                          <span>The Conversation Study</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+                      </>
+                    )}
+
+                    {onNavigateTab && (article.tags?.includes('TheConversation') || article.tags?.includes('RightToProgress') || article.tags?.includes('Plate69') || article.id.includes('THECONVERSATION-INDIGENOUS-PROGRESS') || article.title?.includes('Right to Progress')) && (
+                      <button
+                        onClick={() => onNavigateTab('indigenous_right_to_progress' as any)}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow-lg border border-amber-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 ring-2 ring-amber-400/50"
+                      >
+                        <Globe size={14} className="text-stone-950 animate-pulse" />
+                        <span>🪶 Launch Sovereign IT & Right to Progress Engine (Plate #69)</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+
                     {(article.tags?.includes('Necropolitics') || article.tags?.includes('MadibaDennie') || article.tags?.includes('ZackLinly') || article.id.includes('JACKSON-NECROPOLITICS') || article.title?.includes('Necropolitics of Lead Poisoning')) && (
                       <>
                         <a

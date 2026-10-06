@@ -77,6 +77,7 @@ import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
+import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import {
   Shield,
   UserCheck,
@@ -208,6 +209,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CC',
+      title: "Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet's Law Sovereign IT: 'Indigenous People Have the Right to Progress Too' (Plate #69)",
+      type: 'Contemporary Indigenous Communities, High-Tech Sovereignty & Roulet’s Law Sovereign IT IP Asset',
+      imageSrc: indigenousProgressPlateImg,
+      link: 'indigenous_right_to_progress',
+      sourceUrl: 'https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837',
+      description: "Plate #69: Groundbreaking political ecology and sovereign exposenomics IP asset documenting why Indigenous communities do not resist oil extraction when governments deny them basic sanitation, electricity, and clean water. Synthesizes Gabriel Leite Mota's investigation in The Conversation with New Mexico tribal energy economies and Roulet's Law. Establishes the 4-pillar Sovereign IT framework for clean, waterless data centers and advanced Gemini cognitive infrastructure governed exclusively on sovereign Indigenous terms.",
+      sovereignHash: '0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026'
+    },
     {
       id: 'IP-000CB',
       title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",

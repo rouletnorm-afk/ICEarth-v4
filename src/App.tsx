@@ -146,6 +146,7 @@ import { LeadPoisoningLegalRecourseNY } from './components/LeadPoisoningLegalRec
 import { SlowViolenceLowVitamins } from './components/SlowViolenceLowVitamins';
 import { AISovereigntyWatchdogs } from './components/AISovereigntyWatchdogs';
 import { DebHaalandICEarthHome } from './components/DebHaalandICEarthHome';
+import { IndigenousRightToProgressSovereignIT } from './components/IndigenousRightToProgressSovereignIT';
 import { GeminiInfiltrationDefense } from './components/GeminiInfiltrationDefense';
 import { DeepMindReadinessGeminiSovereignIT } from './components/DeepMindReadinessGeminiSovereignIT';
 import { CherokeeNationITPosition } from './components/CherokeeNationITPosition';
@@ -168,7 +169,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -712,6 +713,23 @@ export default function App() {
         lower.includes('datacenter_moratorium')
       ) {
         setActiveTab('deb_haaland_home');
+      } else if (
+        lower === 'indigenous_right_to_progress' ||
+        lower === 'indigenous-right-to-progress' ||
+        lower === 'indigenous_progress' ||
+        lower === 'indigenous-progress' ||
+        lower === 'right_to_progress' ||
+        lower === 'right-to-progress' ||
+        lower === 'the_conversation' ||
+        lower === 'the-conversation' ||
+        lower === 'indigenous_oil' ||
+        lower === 'plate_69' ||
+        lower === 'plate69' ||
+        lower === 'plate #69' ||
+        lower.includes('right_to_progress') ||
+        lower.includes('indigenous_progress')
+      ) {
+        setActiveTab('indigenous_right_to_progress');
       } else if (
         lower === 'gemini_infiltration_defense' ||
         lower === 'gemini-infiltration-defense' ||
@@ -1739,6 +1757,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-black">🏛️ Governor Deb Haaland's ICEarth Home</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
                     PLATE #51
+                  </span>
+                </button>
+
+                {/* 0.00000B00.0 INDIGENOUS COMMUNITIES: THE RIGHT TO PROGRESS ON SOVEREIGN TERMS (PLATE #69) */}
+                <button
+                  onClick={() => setActiveTab('indigenous_right_to_progress' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'indigenous_right_to_progress' || (activeTab as string) === 'indigenous_progress' || (activeTab as string) === 'right_to_progress' || (activeTab as string) === 'plate_69' || (activeTab as string) === 'plate69'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-orange-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-orange-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Globe size={16} className={activeTab === 'indigenous_right_to_progress' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">🌾 Indigenous Right to Progress: Sovereign IT</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #69
                   </span>
                 </button>
 
@@ -2788,6 +2822,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00.0 Indigenous Right to Progress on Sovereign Terms (Plate #69) */}
+                <button
+                  id="mobile-nav-indigenous-progress-tab"
+                  onClick={() => {
+                    setActiveTab('indigenous_right_to_progress');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'indigenous_right_to_progress' || (activeTab as string) === 'indigenous_progress' || (activeTab as string) === 'right_to_progress' || (activeTab as string) === 'plate_69' || (activeTab as string) === 'plate69'
+                      ? 'bg-gradient-to-r from-amber-950 via-stone-900 to-orange-950 text-amber-200 border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-stone-950 border-amber-500/70 bg-gradient-to-r from-amber-50/95 to-orange-50/95 font-black shadow-xs'
+                  }`}
+                >
+                  <Globe size={16} className={activeTab === 'indigenous_right_to_progress' ? 'text-amber-400 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-black">🌾 Indigenous Right to Progress</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    Plate #69
+                  </span>
+                </button>
+
                 {/* 0.0. Gemini Autonomous Infiltration Forensic & Sovereign Defense (Plate #53) */}
                 <button
                   id="mobile-nav-gemini-defense-tab"
@@ -3757,6 +3811,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'swiss_school', icon: GraduationCap, label: '🇨🇭 Swiss School of Exposenomics', badge: 'Swiss Vault', color: 'red' },
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
                     { id: 'deb_haaland_home', icon: Award, label: "🏛️ Governor Deb Haaland's ICEarth Home", badge: 'Plate #51', color: 'amber' },
+                    { id: 'indigenous_right_to_progress', icon: Globe, label: '🪶 Indigenous Right to Progress: Sovereign IT', badge: 'Plate #69', color: 'amber' },
                     { id: 'gemini_infiltration_defense', icon: ShieldAlert, label: '⚡ Gemini Infiltration & Defense (DW Audit)', badge: 'Plate #53', color: 'red' },
                     { id: 'deepmind_readiness', icon: Sparkles, label: '✨ DeepMind Readiness: Indigenous IT With Gemini', badge: 'Plate #68', color: 'cyan' },
                     { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
@@ -3923,6 +3978,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'icetaos' || (activeTab as string) === 'taos') && '🏜️ ICETaos Community Hub'}
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
               {(activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51') && '🏛️ Governor Deb Haaland’s ICEarth Home: 8 Data Center Accountability Measures & Sovereign AI (Plate #51)'}
+              {(activeTab === 'indigenous_right_to_progress' || (activeTab as string) === 'indigenous_progress' || (activeTab as string) === 'right_to_progress' || (activeTab as string) === 'plate_69' || (activeTab as string) === 'plate69') && '🪶 Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet’s Law Sovereign IT: The Right to Progress (Plate #69)'}
               {(activeTab === 'gemini_infiltration_defense' || (activeTab as string) === 'gemini_defense' || (activeTab as string) === 'gemini_hack' || (activeTab as string) === 'plate_53' || (activeTab as string) === 'plate53') && '⚡ Gemini AI Autonomous Infiltration Forensic & Sovereign Defense (Plate #53)'}
               {(activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'why_gemini' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68') && '✨ Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness (Plate #68)'}
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
@@ -5668,6 +5724,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51' || (activeTab as string) === 'user_3' || (activeTab as string) === 'user3') && (
             <div className="flex-1 overflow-y-auto">
               <DebHaalandICEarthHome 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117A0.0: INDIGENOUS RIGHT TO PROGRESS & SWISS SCHOOL ROULET'S LAW SOVEREIGN IT (PLATE #69) */}
+          {(activeTab === 'indigenous_right_to_progress' || (activeTab as string) === 'indigenous_progress' || (activeTab as string) === 'right_to_progress' || (activeTab as string) === 'plate_69' || (activeTab as string) === 'plate69') && (
+            <div className="flex-1 overflow-y-auto">
+              <IndigenousRightToProgressSovereignIT 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

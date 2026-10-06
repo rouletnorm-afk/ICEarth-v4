@@ -149,10 +149,26 @@ import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
+import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('indigenous_progress') ||
+    u.includes('right_to_progress') ||
+    u.includes('indigenous_right_to_progress') ||
+    u.includes('theconversation') ||
+    u.includes('258837') ||
+    u.includes('plate_69') ||
+    u.includes('plate69') ||
+    u.includes('plate #69') ||
+    u.includes('photo-000cc') ||
+    u.includes('ip-000cc') ||
+    u.includes('1791305740915')
+  ) {
+    return indigenousProgressPlateImg;
+  }
   if (
     u.includes('deepmind') ||
     u.includes('lila_ibrahim') ||
@@ -1256,6 +1272,40 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-THECONVERSATION-INDIGENOUS-PROGRESS-SOVEREIGN-IT-2026',
+      title: "Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet's Law Sovereign IT: 'Indigenous People Have the Right to Progress Too' (Plate #69)",
+      category: 'Exposenomics',
+      date: '2026-10-06',
+      imageSrc: indigenousProgressPlateImg,
+      publishedUrl: 'https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837',
+      summary: "The Conversation investigates why some Indigenous communities in Ecuador don’t resist oil extraction in their territories: frontline communities face an asymmetric dilemma where governments deny them running water, electricity, and sewage systems. As resident Juan Manuel stated: 'We are fed up with making small holes in the bushes... Indigenous people have the right to progress too.' In New Mexico, where state revenues depend on energy royalties and Tribes have established energy economies, incoming hyperscale data centers present the identical dilemma. ICEarth provides the sovereign answer: high tech, advanced Gemini cognition, and clean compute—exclusively on sovereign Indigenous terms.",
+      fullText: `WHY SWISS SCHOOL OF EXPOSENOMICS INDIGENOUS COMMUNITIES EARTH ROULET'S LAW SOVEREIGN IT: 'INDIGENOUS PEOPLE HAVE THE RIGHT TO PROGRESS TOO'
+Published in The Conversation by Gabriel Leite Mota (University of Sussex) | October 6, 2026
+Forensic Exposenomics, Energy Economics & Roulet's Law Synthesis by Norman Roulet
+Plate #69 Cryptographic Archive: PHOTO-000CC / IP-000CC | Vault Hash: 0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026
+
+I. THE ASYMMETRIC DILEMMA ON THE RESOURCE FRONTIER
+Field research among Quichua communities along the Napo River in Yasuní, Ecuador reveals the profound paradox of extractive development. When oil exploration reached Vicente Salazar, councilman Juan Manuel explained why opposition was impossible:
+“How come will they oppose, if the people don’t have anywhere to poop? We are fed up with making small holes in the bushes... Indigenous people have the right to progress too.”
+
+Johnny, a local resident, emphasized:
+“Someone who would say that oil should remain underground, like this, there isn’t.”
+
+Residents desire basic services—clean drinking water, sewage, electricity, education, healthcare—and money for fiber canoes, zinc roofs, and gas kitchens. Corporations exploit this systemic abandonment by offering social compensation in exchange for irreversible environmental and health degradation.
+
+II. THE NEW MEXICO ANALOGY & HYPERSCALE DATA CENTERS
+In New Mexico, energy production funds over 35% of public education and infrastructure. Sovereign Tribes and Pueblos manage sophisticated energy portfolios. As Big Tech descends on New Mexico seeking billions of kilowatt-hours for artificial intelligence data centers, they offer rural and Indigenous communities the same predatory bargain: surrender your alluvial aquifers and agricultural power grid capacity for a handful of janitorial jobs.
+
+III. ROULET'S LAW: HIGH TECH ON INDIGENOUS TERMS
+ICEarth rejects this false binary. Indigenous communities do not reject high technology; they demand advanced artificial intelligence, fiber-optic infrastructure, and computational mastery on their own sovereign terms:
+1. 0 Gallons/Day Closed-Loop Waterless Cooling: Complete prohibition of evaporative aquifer depletion.
+2. 51%+ Sovereign Equity Mandate: All compute facilities must be tribally owned and governed.
+3. Islanded Clean Microgrids: Data centers must generate their own power without destabilizing public or tribal grids.
+4. Cryptographic Sovereignty: Non-custodial data stewardship governed by Tribal Elders.`,
+      tags: ['TheConversation', 'IndigenousRights', 'RightToProgress', 'Plate69', 'RouletsLaw', 'NewMexicoEnergy', 'OilEconomies', 'SovereignIT', 'DataCenterSovereignty', 'AsymmetricDilemma'],
+      linkHash: '0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026'
+    },
     {
       id: 'MAG-DEEPMIND-LILA-IBRAHIM-GEMINI-SOVEREIGN-IT-2026',
       title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",
@@ -4032,6 +4082,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CC',
+      title: "Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet's Law Sovereign IT: 'Indigenous People Have the Right to Progress Too' (Plate #69)",
+      category: 'Contemporary Indigenous Communities, High-Tech Sovereignty & Energy Economics',
+      imageSrc: indigenousProgressPlateImg,
+      location: 'Napo River, Ecuador • Yasuní ITT • Santa Fe, NM • Navajo Nation • Taos Pueblo • Laguna Pueblo • Jicarilla Apache • Swiss School of Exposenomics',
+      date: '2026-10-06',
+      description: "Plate #69: Groundbreaking political ecology, environmental exposenomics, and sovereign technology artwork synthesizing field research from The Conversation ('Why some Indigenous communities don’t resist oil extraction in their territories') with New Mexico tribal energy economies and Roulet's Law. Contrasts the asymmetric dilemma forced upon frontline communities by predatory corporate extractors against ICEarth's Sovereign IT architecture: clean, waterless computing, 51%+ tribal equity, and artificial intelligence governed by Indigenous self-determination.",
+      vaultHash: '0xINDIGENOUS_RIGHT_TO_PROGRESS_SOVEREIGN_IT_PLATE_69_VAULT_2026',
+      tags: ['TheConversation', 'IndigenousRights', 'RightToProgress', 'Plate69', 'RouletsLaw', 'NewMexicoEnergy', 'OilEconomies', 'SovereignIT', 'DataCenterSovereignty', 'AsymmetricDilemma']
+    },
     {
       id: 'PHOTO-000CB',
       title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",
@@ -7047,6 +7108,31 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-THECONVERSATION-INDIGENOUS-PROGRESS-SOVEREIGN-IT-2026' || selectedArticle.tags?.includes('TheConversation') || selectedArticle.tags?.includes('RightToProgress') || selectedArticle.tags?.includes('Plate69')) && (
+                  <a
+                    href="https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>📄 Read The Conversation Study</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-THECONVERSATION-INDIGENOUS-PROGRESS-SOVEREIGN-IT-2026' || selectedArticle.tags?.includes('TheConversation') || selectedArticle.tags?.includes('RightToProgress') || selectedArticle.tags?.includes('Plate69')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('indigenous_right_to_progress');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300"
+                  >
+                    <Globe size={13} className="text-stone-950 animate-pulse" />
+                    <span>🪶 Launch Sovereign IT & Right to Progress (Plate #69)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {(selectedArticle.id === 'MAG-LEAD-LEGAL-RECOURSE-NY-LABOR-2026' || selectedArticle.tags?.includes('LaborLaw241') || selectedArticle.tags?.includes('Plate47')) && (
                   <a
                     href="https://www.amny.com/law/op-ed-lead-poisoning-construction-workers/"
@@ -7321,6 +7407,33 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000CC' || selectedPhoto.tags?.includes('TheConversation') || selectedPhoto.tags?.includes('RightToProgress') || selectedPhoto.tags?.includes('Plate69')) && (
+                    <>
+                      <a
+                        href="https://theconversation.com/why-some-indigenous-communities-dont-resist-oil-extraction-in-their-territories-258837"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono transition-colors"
+                      >
+                        <Globe size={12} className="text-stone-950 animate-pulse" />
+                        <span>The Conversation Study</span>
+                        <ExternalLink size={11} className="text-stone-950" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000CC' || selectedPhoto.tags?.includes('TheConversation') || selectedPhoto.tags?.includes('RightToProgress') || selectedPhoto.tags?.includes('Plate69')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('indigenous_right_to_progress');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-300 text-xs font-mono"
+                    >
+                      <Globe size={13} className="text-stone-950 animate-pulse" />
+                      <span>🪶 Launch Sovereign IT & Right to Progress (Plate #69)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000BS' || selectedPhoto.tags?.includes('AIAgents') || selectedPhoto.tags?.includes('NormalPeopleProblem') || selectedPhoto.tags?.includes('Plate59')) && (
                     <>
                       <a
