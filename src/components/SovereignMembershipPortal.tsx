@@ -78,6 +78,7 @@ import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_17912
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
+import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import {
   Shield,
   UserCheck,
@@ -209,6 +210,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CD',
+      title: "AI Startup Programs & Sovereign Developer Incentives: Anthropic Expands Claude Startups to Fend Off Google & OpenAI — The ICEarth Case for Google Cloud AI-First (Plate #70)",
+      type: 'Frontier AI Startup Programs, Cloud Credits & Sovereign Developer Economics IP Asset',
+      imageSrc: aiStartupPlateImg,
+      link: 'ai_startup_incentives',
+      sourceUrl: 'https://www.cnbc.com/2026/10/06/anthropic-claude-startups-program.html',
+      description: "Plate #70: Landmark developer economics and sovereign systems IP asset illustrating the race between Anthropic Claude Startups ($45k Claude Stack + $1k API), Google Cloud for Startups (up to $350k AI credits, Vertex AI, Gemini 2M context, DeepMind mentorship), and OpenAI. Outlines ICEarth's active development planning ledger and direct outreach pipeline as a public-interest startup built natively with Google technologies under Roulet’s Law.",
+      sovereignHash: '0xAI_STARTUP_INCENTIVES_GOOGLE_PROGRAMS_PLATE_70_VAULT_2026'
+    },
     {
       id: 'IP-000CC',
       title: "Why Swiss School Of Exposenomics Indigenous Communities Earth Roulet's Law Sovereign IT: 'Indigenous People Have the Right to Progress Too' (Plate #69)",
