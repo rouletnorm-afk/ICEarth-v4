@@ -148,10 +148,28 @@ import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_17911
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
+import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('deepmind') ||
+    u.includes('lila_ibrahim') ||
+    u.includes('lila-ibrahim') ||
+    u.includes('ibrahim') ||
+    u.includes('readiness') ||
+    u.includes('why_gemini') ||
+    u.includes('indigenous_gemini') ||
+    u.includes('plate_68') ||
+    u.includes('plate68') ||
+    u.includes('plate #68') ||
+    u.includes('photo-000cb') ||
+    u.includes('ip-000cb') ||
+    u.includes('1791303722037')
+  ) {
+    return deepmindReadinessPlateImg;
+  }
   if (
     u.includes('midgley') ||
     u.includes('altman') ||
@@ -1238,6 +1256,41 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-DEEPMIND-LILA-IBRAHIM-GEMINI-SOVEREIGN-IT-2026',
+      title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",
+      category: 'Exposenomics',
+      date: '2026-10-06',
+      imageSrc: deepmindReadinessPlateImg,
+      publishedUrl: 'https://www.cnbc.com/2026/10/06/google-deepmind-ai-risks-lila-ibrahim.html',
+      summary: "CNBC features Google DeepMind Chief Operating Officer and AI Readiness Officer Lila Ibrahim on preparing society for what is to come. Ibrahim argues that as AI changes in society accelerate, the next generation—including her own children—must learn responsible ways to use the technology so they can demand to 'actually have a role in how that change happens.' ICEarth presents the comprehensive sovereign case for building on Gemini: native multimodality for physical exposenomic forensics, a 2M token context window, deep scientific integrity inherited from AlphaFold, and sovereign on-prem air-gapped deployment for Indigenous Nations.",
+      fullText: `WHY INDIGENOUS COMMUNITIES EARTH SOVEREIGN IT WITH GEMINI: GOOGLE DEEPMIND’S LILA IBRAHIM ON AI READINESS & PREPARING FOR WHAT’S TO COME
+Reported by Hayden Field for CNBC | October 6, 2026
+Forensic Exposenomics & Sovereign IT Case for Gemini by Norman Roulet
+Plate #68 Cryptographic Archive: PHOTO-000CB / IP-000CB | Vault Hash: 0xDEEPMIND_LILA_IBRAHIM_GEMINI_SOVEREIGN_IT_PLATE_68_VAULT_2026
+
+I. THE LILA IBRAHIM DOCTRINE: NEXT-GEN AGENTIC READINESS
+As artificial intelligence transforms global economies, institutions, and communication fabrics at unprecedented velocity, the central danger is not merely existential risk—it is societal disempowerment. Google DeepMind Chief Operating Officer Lila Ibrahim, who serves as the organization's world-leading executive on AI Readiness, emphasizes that passive consumerism is fatal to democracy.
+
+“Ibrahim says as AI changes in society accelerate, it will be critical for the next generation, including her own children, to learn responsible ways to use the technology so they can demand to ‘actually have a role in how that change happens.’”
+
+True readiness requires three systemic pillars:
+1. Frontier Red-Teaming: Institutionalizing formal boundaries, halt triggers, and biosecurity/cybersecurity verification before deployment.
+2. Generational Literacy: Equipping children and young adults with deep computational intuition and ethical discernment.
+3. Institutional Agency: Ensuring communities, municipal leaders, and sovereign nations possess the technical fluency to draft policy and enforce digital borders.
+
+II. THE CASE FOR GEMINI ON ICEARTH
+ICEarth was architected from inception to defend humanity against chronic toxic heavy metal exposures (Pb, PFAS, microplastics) and predatory corporate monopolies. Our selection of Gemini as ICEarth's cognitive engine rests on four pillars:
+1. Native Multimodality: Heavy metals and environmental damage are multi-sensory realities. Gemini natively correlates XRF soil spectra, satellite thermal scans, acoustic cavitation waveforms, and legislative transcripts.
+2. 2,000,000 Token Forensic Context: Enabling the simultaneous analysis of an entire city's hundred-year water pipe ledgers, EPA Toxic Release Inventories, and thousands of pediatric blood tests.
+3. DeepMind Scientific Rigor: Inheriting the peer-reviewed physical science legacy that solved the 50-year protein folding grand challenge with AlphaFold.
+4. Cryptographic Sovereign Isolation: Ensuring complete zero-data retention, air-gapped on-premise deployment, and sovereign enclave execution.
+
+III. INDIGENOUS SOVEREIGN IT & THE YOUTH FRONTIER
+Across the Cherokee Nation, Navajo Nation, Taos Pueblo, and Jicarilla Apache lands, Indigenous youth are adopting Gemini to defend their heritage, safeguard reservation water from hyperscale data center extraction, and preserve sacred heraldry against algorithmic theft. Under Roulet's Law, sovereign enclaves armed with Gemini ensure that the next generation doesn't just survive the AI revolution—they govern it.`,
+      tags: ['DeepMind', 'LilaIbrahim', 'CNBC', 'Gemini', 'AIReadiness', 'IndigenousSovereignty', 'SovereignIT', 'FrontierSafety', 'Plate68', 'RouletsLaw', 'AlphaFold'],
+      linkHash: '0xDEEPMIND_LILA_IBRAHIM_GEMINI_SOVEREIGN_IT_PLATE_68_VAULT_2026'
+    },
     {
       id: 'MAG-MIDGLEY-ALTMAN-AI-AS-NEW-PB-2026',
       title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Awescroll 004 & The Monopoly of Harm, Plate #67)",
@@ -3979,6 +4032,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CB',
+      title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",
+      category: 'Frontier AI Readiness, Indigenous Sovereign IT & DeepMind Multimodal Governance',
+      imageSrc: deepmindReadinessPlateImg,
+      location: 'London, UK • San Francisco, CA • Indian Country • Navajo Nation • Cherokee Nation • Taos Pueblo • Global Sovereign Web',
+      date: '2026-10-06',
+      description: "Plate #68: Forensic technology and exposenomics artwork establishing the sovereign case for why Indigenous communities and frontline enclaves build on Gemini. Explores Google DeepMind COO & AI Readiness Officer Lila Ibrahim's mandate to prepare the next generation to demand an active role in societal transformation, contrasting frontier safety and 2M-token native multimodality against closed monopoly cartels.",
+      vaultHash: '0xDEEPMIND_LILA_IBRAHIM_GEMINI_SOVEREIGN_IT_PLATE_68_VAULT_2026',
+      tags: ['DeepMind', 'LilaIbrahim', 'Gemini', 'AIReadiness', 'IndigenousSovereignty', 'SovereignIT', 'FrontierSafety', 'Plate68', 'RouletsLaw', 'AlphaFold']
+    },
     {
       id: 'PHOTO-000CA',
       title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Plate #67)",

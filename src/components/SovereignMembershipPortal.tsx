@@ -76,6 +76,7 @@ import ruralDatacenterPlateImg from '../assets/images/rural_datacenter_tax_17911
 import leachateInfographicPlateImg from '../assets/images/dumpsite_leachate_soil_water_1791216486522.jpg';
 import kohlInfographicPlateImg from '../assets/images/kohl_lead_isis_proof_1791220417842.jpg';
 import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities_1791243913051.jpg';
+import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
 import {
   Shield,
   UserCheck,
@@ -207,6 +208,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CB',
+      title: "Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness & Preparing for What’s to Come (Plate #68)",
+      type: 'Frontier AI Readiness, Indigenous Sovereign IT & DeepMind Multimodal Governance IP Asset',
+      imageSrc: deepmindReadinessPlateImg,
+      link: 'deepmind_readiness',
+      sourceUrl: 'https://www.cnbc.com/2026/10/06/google-deepmind-ai-risks-lila-ibrahim.html',
+      description: "Plate #68: Forensic technology and exposenomics IP asset establishing why Indigenous Nations and environmental enclaves anchor on Gemini. Synthesizes Google DeepMind COO & AI Readiness Officer Lila Ibrahim's CNBC directive on preparing the next generation to demand an active role in societal transformation. Outlines the 4-pillar architectural case for Gemini: native multimodality, 2M context window, AlphaFold scientific heritage, and air-gapped sovereign execution under Roulet's Law.",
+      sovereignHash: '0xDEEPMIND_LILA_IBRAHIM_GEMINI_SOVEREIGN_IT_PLATE_68_VAULT_2026'
+    },
     {
       id: 'IP-000CA',
       title: "AI, The New Pb: The Personalities — Thomas Midgley Jr. & Sam Altman (Plate #67)",

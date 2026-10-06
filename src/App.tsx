@@ -49,7 +49,8 @@ import {
   Compass,
   Calendar,
   Skull,
-  Eye
+  Eye,
+  ShieldCheck
 } from 'lucide-react';
 import { UCANXCommoditiesExchange } from './components/UCANXCommoditiesExchange';
 import { NanoSpireNanoCanX } from './components/NanoSpireNanoCanX';
@@ -146,6 +147,7 @@ import { SlowViolenceLowVitamins } from './components/SlowViolenceLowVitamins';
 import { AISovereigntyWatchdogs } from './components/AISovereigntyWatchdogs';
 import { DebHaalandICEarthHome } from './components/DebHaalandICEarthHome';
 import { GeminiInfiltrationDefense } from './components/GeminiInfiltrationDefense';
+import { DeepMindReadinessGeminiSovereignIT } from './components/DeepMindReadinessGeminiSovereignIT';
 import { CherokeeNationITPosition } from './components/CherokeeNationITPosition';
 import { SovereignIdentityAIMirage } from './components/SovereignIdentityAIMirage';
 import { SwissDataSovereignty } from './components/SwissDataSovereignty';
@@ -166,7 +168,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -732,6 +734,29 @@ export default function App() {
         lower.includes('plate53')
       ) {
         setActiveTab('gemini_infiltration_defense');
+      } else if (
+        lower === 'deepmind_readiness' ||
+        lower === 'deepmind-readiness' ||
+        lower === 'gemini_sovereignty_readiness' ||
+        lower === 'gemini-sovereignty-readiness' ||
+        lower === 'lila_ibrahim' ||
+        lower === 'lila-ibrahim' ||
+        lower === 'ibrahim' ||
+        lower === 'ai_readiness' ||
+        lower === 'ai-readiness' ||
+        lower === 'why_gemini' ||
+        lower === 'why-gemini' ||
+        lower === 'indigenous_gemini' ||
+        lower === 'indigenous-gemini' ||
+        lower === 'deepmind' ||
+        lower === 'plate_68' ||
+        lower === 'plate68' ||
+        lower === 'plate #68' ||
+        lower.includes('lila_ibrahim') ||
+        lower.includes('deepmind') ||
+        lower.includes('readiness')
+      ) {
+        setActiveTab('deepmind_readiness');
       } else if (
         lower === 'sovereign_identity' ||
         lower === 'sovereign-identity' ||
@@ -1730,6 +1755,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-black">⚡ Gemini Infiltration & Defense (DW)</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
                     PLATE #53
+                  </span>
+                </button>
+
+                {/* 0.00000B00.1 GOOGLE DEEPMIND LILA IBRAHIM: AI READINESS & INDIGENOUS SOVEREIGN IT WITH GEMINI (PLATE #68) */}
+                <button
+                  onClick={() => setActiveTab('deepmind_readiness' as any)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68'
+                      ? 'bg-gradient-to-r from-cyan-950 via-stone-900 to-blue-950 text-cyan-200 border-cyan-400 shadow-xl font-black ring-2 ring-cyan-400/80'
+                      : 'hover:bg-gradient-to-r hover:from-cyan-100 hover:to-blue-100 text-stone-950 border-cyan-500/80 bg-gradient-to-r from-cyan-50/90 via-stone-50 to-blue-50/90 font-black shadow-xs ring-1 ring-cyan-400/40'
+                  }`}
+                >
+                  <Sparkles size={16} className={activeTab === 'deepmind_readiness' ? 'text-cyan-300 animate-pulse' : 'text-cyan-700'} />
+                  <span className="flex-1 font-black">✨ DeepMind Readiness: Indigenous IT With Gemini</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #68
                   </span>
                 </button>
 
@@ -2767,6 +2808,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00. DeepMind Lila Ibrahim AI Readiness & Sovereign IT With Gemini (Plate #68) */}
+                <button
+                  id="mobile-nav-deepmind-readiness-tab"
+                  onClick={() => {
+                    setActiveTab('deepmind_readiness');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68'
+                      ? 'bg-gradient-to-r from-cyan-950 via-stone-900 to-blue-950 text-cyan-200 border-cyan-400 shadow-md font-extrabold ring-2 ring-cyan-400/80'
+                      : 'hover:bg-cyan-500/20 text-stone-950 border-cyan-500/70 bg-gradient-to-r from-cyan-50/95 to-blue-50/95 font-black shadow-xs'
+                  }`}
+                >
+                  <Sparkles size={16} className={activeTab === 'deepmind_readiness' ? 'text-cyan-300 animate-pulse' : 'text-cyan-700'} />
+                  <span className="flex-1 font-black">✨ DeepMind Readiness: Indigenous IT With Gemini</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    Plate #68
+                  </span>
+                </button>
+
                 {/* 1. The Global AI Sovereignty Imperative: Indigenous Nations vs. Toothless Watchdogs (Plate #50) */}
                 <button
                   onClick={() => setActiveTab('ai_sovereignty')}
@@ -3697,6 +3758,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'abm_simulator', icon: Cpu, label: '🤖 Agent-Based Modelling (ABM)', badge: 'ABM Engine', color: 'indigo' },
                     { id: 'deb_haaland_home', icon: Award, label: "🏛️ Governor Deb Haaland's ICEarth Home", badge: 'Plate #51', color: 'amber' },
                     { id: 'gemini_infiltration_defense', icon: ShieldAlert, label: '⚡ Gemini Infiltration & Defense (DW Audit)', badge: 'Plate #53', color: 'red' },
+                    { id: 'deepmind_readiness', icon: Sparkles, label: '✨ DeepMind Readiness: Indigenous IT With Gemini', badge: 'Plate #68', color: 'cyan' },
                     { id: 'ai_sovereignty', icon: Shield, label: '⚡ Global AI Sovereignty (CNBC Audit)', badge: 'Plate #50', color: 'amber' },
                     { id: 'icearth_stack', icon: Cpu, label: '⚡ The ICEarth Stack: Indigenous AI', badge: 'Plate #38', color: 'amber' },
                     { id: 'swiss_data_sovereignty', icon: Shield, label: '🇨🇭 Swiss Data Sovereignty: Global Spectrum', badge: 'Plate #55', color: 'red' },
@@ -3862,6 +3924,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'why_icearth' || (activeTab as string) === 'why-icearth' || (activeTab as string) === 'pueblo_revolt' || (activeTab as string) === 'taos_rebellion') && '🪶 Why ICEarth: 1680 Pueblo Revolt'}
               {(activeTab === 'deb_haaland_home' || (activeTab as string) === 'deb_haaland' || (activeTab as string) === 'haaland' || (activeTab as string) === 'plate_51' || (activeTab as string) === 'plate51') && '🏛️ Governor Deb Haaland’s ICEarth Home: 8 Data Center Accountability Measures & Sovereign AI (Plate #51)'}
               {(activeTab === 'gemini_infiltration_defense' || (activeTab as string) === 'gemini_defense' || (activeTab as string) === 'gemini_hack' || (activeTab as string) === 'plate_53' || (activeTab as string) === 'plate53') && '⚡ Gemini AI Autonomous Infiltration Forensic & Sovereign Defense (Plate #53)'}
+              {(activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'why_gemini' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68') && '✨ Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness (Plate #68)'}
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'swiss_data_sovereignty' || (activeTab as string) === 'swiss_sovereignty' || (activeTab as string) === 'swiss' || (activeTab as string) === 'plate_55' || (activeTab as string) === 'plate55' || (activeTab as string) === 'david_ehl') && '🇨🇭 Swiss Data Sovereignty & The Global Freedom Spectrum: Europe’s AI Backlash vs Repressive Kill Switches (Plate #55)'}
@@ -5615,6 +5678,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'gemini_infiltration_defense' || (activeTab as string) === 'gemini_defense' || (activeTab as string) === 'gemini_hack' || (activeTab as string) === 'plate_53' || (activeTab as string) === 'plate53' || (activeTab as string) === 'gemini_infiltration') && (
             <div className="flex-1 overflow-y-auto">
               <GeminiInfiltrationDefense 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 2.117A00.1: GOOGLE DEEPMIND LILA IBRAHIM: AI READINESS & INDIGENOUS SOVEREIGN IT WITH GEMINI (PLATE #68) */}
+          {(activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'why_gemini' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68') && (
+            <div className="flex-1 overflow-y-auto">
+              <DeepMindReadinessGeminiSovereignIT 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
