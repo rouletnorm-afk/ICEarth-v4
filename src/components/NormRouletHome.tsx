@@ -152,10 +152,30 @@ import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
+import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('lead_crime_racial') ||
+    u.includes('racial_disparities') ||
+    u.includes('brown_lead') ||
+    u.includes('brown_study') ||
+    u.includes('browndailyherald') ||
+    u.includes('brown-study') ||
+    u.includes('lead_disparities') ||
+    u.includes('joseph_braun') ||
+    u.includes('sasha_gordon') ||
+    u.includes('plate_71') ||
+    u.includes('plate71') ||
+    u.includes('plate #71') ||
+    u.includes('photo-000ce') ||
+    u.includes('ip-000ce') ||
+    u.includes('1791346391941')
+  ) {
+    return leadDisparitiesPlateImg;
+  }
   if (
     u.includes('ai_startup') ||
     u.includes('ai-startup') ||
@@ -1292,6 +1312,38 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026',
+      title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study Uncovers 3-4X Minority Poisoning Multipliers & The Lead-Crime Genocide Proof (Plate #71)",
+      category: 'Exposenomics',
+      date: '2026-10-06',
+      imageSrc: leadDisparitiesPlateImg,
+      publishedUrl: 'https://www.browndailyherald.com/article/childhood-blood-lead-levels-hit-historic-lows-but-not-for-all-youth-new-study-finds-20261006',
+      summary: "Reporting by Sasha Gordon for the Brown Daily Herald reveals findings from a landmark study led by Brown University Epidemiology Professor Joseph Braun and Harvard's Mary Jean Brown analyzing 2011–2023 blood lead screening across seven states. While the national average plummeted to 0.8 µg/dL, minority and low-income youth are 3 to 4 times more likely to suffer elevated blood lead levels. Connected to the Lead-Crime Hypothesis, this preventable neurotoxicity destroys prefrontal impulse control and directly generates the 7-20+X disparity in urban violent homicide rates—proving preventable structural genocide under Roulet's Law.",
+      fullText: `CHILDHOOD BLOOD LEAD LEVELS HIT HISTORIC LOWS, BUT NOT FOR ALL YOUTH: BROWN UNIVERSITY STUDY
+Reported by Sasha Gordon for the Brown Daily Herald | Published Oct. 5, 2026, 10:52 p.m.
+Epidemiological & Exposenomics Synthesis by Norman Roulet | Swiss School of Exposenomics
+Plate #71 Cryptographic Archive: PHOTO-000CE / IP-000CE | Vault Hash: 0xBROWN_UNIVERSITY_CHILDHOOD_LEAD_DISPARITIES_LEAD_CRIME_HYPOTHESIS_GENOCIDE_PLATE_71_VAULT_2026
+
+I. THE CRACKING OF THE FEDERAL AGGREGATE ILLUSION
+Since the 1970s, federal agencies celebrated the drop in childhood blood lead levels from 15.0 µg/dL down to 0.8 µg/dL as an unqualified success. But as Harvard Chan School of Public Health assistant professor Mary Jean Brown warned:
+“There’s been a lot of talk about how lead is over, and we don’t have to worry about it anymore. But this paper got a lot of people rethinking that idea.”
+
+The new study, co-authored by Brown University Professor of Epidemiology Joseph Braun examining testing data from 2011 to 2023, proved that minority children across seven evaluated states had dramatically higher percentages of elevated blood lead levels (EBLL) than their white counterparts, correlated tightly with lower socioeconomic status and pre-1978 housing neglect.
+
+II. THE SCIENTIFIC LINK TO THE LEAD-CRIME HYPOTHESIS & DISPROPORTIONATE VIOLENCE
+The Lead-Crime Hypothesis proves that lead ingestion during critical neurodevelopmental windows (ages 0-3) causes structural apoptosis in the prefrontal cortex and anterior cingulate cortex. This permanently impairs impulse inhibition, executive decision-making, and emotional regulation.
+
+When minority communities are poisoned at 3 to 4 times the rate of white communities, the biological outcome 20 years later (during the peak physical maturation window of ages 18-25) is an exponential divergence in violent crime and homicide rates:
+1. African American pediatric blood lead levels remain 3-4X higher than white children in legacy industrial cities.
+2. The corresponding violent crime and homicide victimization rate is 7 to 20+ times that of white populations.
+3. Decades of racist criminology blamed 'culture' and 'morals'—diverting attention from the physical neurotoxin placed in the environment by lead paint and tetraethyl lead gasoline.
+
+III. ROULET'S LAW: PREVENTABLE NEUROTOXICITY IS STRUCTURAL GENOCIDE
+Under the UN Genocide Convention (Article II), deliberately inflicting conditions of life calculated to bring about physical or mental destruction constitutes genocide. Because lead poisoning has been 100% preventable and proven for over fifty years, the conscious decision of government agencies to remediate affluent white suburbs while abandoning Black and brown enclaves represents calculated necropolitics and structural genocide under Roulet's Law.`,
+      tags: ['BrownUniversity', 'JosephBraun', 'SashaGordon', 'MaryJeanBrown', 'LeadCrimeHypothesis', 'RacialDisparities', 'EBLL', 'SevenStatesStudy', 'Plate71', 'RouletsLaw', 'GenocideProof', 'Exposenomics'],
+      linkHash: '0xBROWN_UNIVERSITY_CHILDHOOD_LEAD_DISPARITIES_LEAD_CRIME_HYPOTHESIS_GENOCIDE_PLATE_71_VAULT_2026'
+    },
     {
       id: 'MAG-CNBC-ANTHROPIC-GOOGLE-AI-STARTUPS-INCENTIVES-2026',
       title: "AI Startup Programs & Sovereign Developer Incentives: Anthropic Expands Claude Startups to Fend Off Google & OpenAI — The ICEarth Case for Google Cloud AI-First (Plate #70)",
@@ -4135,6 +4187,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CE',
+      title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study & The Lead-Crime Hypothesis Genocide Proof (Plate #71)",
+      category: 'Pediatric Blood Lead Disparities, Neuro-Criminology & Roulet\'s Law Genocide Verdict',
+      imageSrc: leadDisparitiesPlateImg,
+      location: 'Providence, RI • Brown University • Boston, MA • Harvard Chan • 7 US States (OH, MI, PA, IL, WI, NY, NC) • Global Sovereign Web',
+      date: '2026-10-06',
+      description: "Plate #71: Forensic exposenomics audit and cryptographic research plate of the Brown University study reported by Sasha Gordon in the Brown Daily Herald. Led by Professor of Epidemiology Joseph Braun and Harvard's Mary Jean Brown analyzing 2011–2023 blood lead screening across seven states. Disproves the federal aggregate narrative of eradication (0.8 µg/dL national avg), proving minority youth have 3 to 4 times higher elevated blood lead rates. Formulates the scientific connection to the Lead-Crime Hypothesis: prefrontal cortex damage, impulse dysregulation, and the 7-20+X disparity in violent homicide rates, constituting preventable structural genocide under Roulet's Law.",
+      vaultHash: '0xBROWN_UNIVERSITY_CHILDHOOD_LEAD_DISPARITIES_LEAD_CRIME_HYPOTHESIS_GENOCIDE_PLATE_71_VAULT_2026',
+      tags: ['BrownUniversity', 'JosephBraun', 'SashaGordon', 'MaryJeanBrown', 'LeadCrimeHypothesis', 'RacialDisparities', 'EBLL', 'SevenStatesStudy', 'Plate71', 'RouletsLaw', 'GenocideProof', 'Exposenomics', 'ImpulseControl', 'PrefrontalCortex']
+    },
     {
       id: 'PHOTO-000CD',
       title: "AI Startup Programs & Sovereign Developer Incentives: Anthropic Expands Claude Startups to Fend Off Google & OpenAI — The ICEarth Case for Google Cloud AI-First (Plate #70)",
@@ -7172,6 +7235,31 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026' || selectedArticle.tags?.includes('BrownUniversity') || selectedArticle.tags?.includes('LeadCrimeHypothesis') || selectedArticle.tags?.includes('Plate71')) && (
+                  <a
+                    href="https://www.browndailyherald.com/article/childhood-blood-lead-levels-hit-historic-lows-but-not-for-all-youth-new-study-finds-20261006"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 bg-red-600 hover:bg-red-500 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-red-400 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>📄 Read Brown Daily Herald Study</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026' || selectedArticle.tags?.includes('BrownUniversity') || selectedArticle.tags?.includes('LeadCrimeHypothesis') || selectedArticle.tags?.includes('Plate71')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('lead_crime_racial_disparities');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 text-white font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-red-400"
+                  >
+                    <Brain size={13} className="text-amber-200 animate-pulse" />
+                    <span>⚖️ Launch Lead Disparities & Genocide Proof Engine (Plate #71)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {(selectedArticle.id === 'MAG-CNBC-ANTHROPIC-GOOGLE-AI-STARTUPS-INCENTIVES-2026' || selectedArticle.tags?.includes('AIStartups') || selectedArticle.tags?.includes('GoogleForStartups') || selectedArticle.tags?.includes('Plate70')) && (
                   <a
                     href="https://www.cnbc.com/2026/10/06/anthropic-claude-startups-program.html"
@@ -7496,6 +7584,33 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000CE' || selectedPhoto.tags?.includes('BrownUniversity') || selectedPhoto.tags?.includes('LeadCrimeHypothesis') || selectedPhoto.tags?.includes('Plate71')) && (
+                    <>
+                      <a
+                        href="https://www.browndailyherald.com/article/childhood-blood-lead-levels-hit-historic-lows-but-not-for-all-youth-new-study-finds-20261006"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gradient-to-r from-red-600 via-rose-600 to-amber-700 hover:from-red-500 hover:to-rose-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-red-400 text-xs font-mono transition-colors"
+                      >
+                        <FileText size={12} className="text-stone-950" />
+                        <span>Brown Daily Herald Study</span>
+                        <ExternalLink size={11} className="text-stone-950" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000CE' || selectedPhoto.tags?.includes('BrownUniversity') || selectedPhoto.tags?.includes('LeadCrimeHypothesis') || selectedPhoto.tags?.includes('Plate71')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('lead_crime_racial_disparities');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 text-white font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-red-400 text-xs font-mono"
+                    >
+                      <Brain size={13} className="text-amber-200 animate-pulse" />
+                      <span>⚖️ Launch Lead Disparities & Genocide Proof (Plate #71)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000CD' || selectedPhoto.tags?.includes('AIStartups') || selectedPhoto.tags?.includes('GoogleForStartups') || selectedPhoto.tags?.includes('Plate70')) && (
                     <>
                       <a

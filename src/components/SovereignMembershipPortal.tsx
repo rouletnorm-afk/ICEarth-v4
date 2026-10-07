@@ -79,6 +79,7 @@ import midgleyAltmanPlateImg from '../assets/images/midgley_altman_personalities
 import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemini_sovereign_it_1791303722037.jpg';
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
+import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
 import {
   Shield,
   UserCheck,
@@ -210,6 +211,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CE',
+      title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study & The Lead-Crime Hypothesis Genocide Proof (Plate #71)",
+      type: 'Pediatric Blood Lead Disparities, Neuro-Criminology & Roulet\'s Law Genocide Verdict IP Asset',
+      imageSrc: leadDisparitiesPlateImg,
+      link: 'lead_crime_racial_disparities',
+      sourceUrl: 'https://www.browndailyherald.com/article/childhood-blood-lead-levels-hit-historic-lows-but-not-for-all-youth-new-study-finds-20261006',
+      description: "Plate #71: Forensic exposenomics audit and cryptographic research IP asset of the Brown University study reported by Sasha Gordon in the Brown Daily Herald. Led by Professor of Epidemiology Joseph Braun and Harvard's Mary Jean Brown analyzing 2011–2023 blood lead screening across seven states. Disproves the federal aggregate narrative of eradication (0.8 µg/dL national avg), proving minority youth have 3 to 4 times higher elevated blood lead rates. Formulates the scientific connection to the Lead-Crime Hypothesis: prefrontal cortex damage, impulse dysregulation, and the 7-20+X disparity in violent homicide rates, constituting preventable structural genocide under Roulet's Law.",
+      sovereignHash: '0xBROWN_UNIVERSITY_CHILDHOOD_LEAD_DISPARITIES_LEAD_CRIME_HYPOTHESIS_GENOCIDE_PLATE_71_VAULT_2026'
+    },
     {
       id: 'IP-000CD',
       title: "AI Startup Programs & Sovereign Developer Incentives: Anthropic Expands Claude Startups to Fend Off Google & OpenAI — The ICEarth Case for Google Cloud AI-First (Plate #70)",
