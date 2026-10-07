@@ -120,6 +120,19 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
   // Initial event updates state
   const [updates, setUpdates] = useState<EventUpdate[]>([
     {
+      id: 'UPDATE-NLPPW-PAHO-2026',
+      title: 'PAHO, SIBSA & WHO Convene Virtual Seminar Series for 2026 Ibero-American Lead Poisoning Prevention Week (Oct 19–21)',
+      date: 'October 19, 20 & 21, 2026',
+      author: 'Pan American Health Organization & SIBSA',
+      agency: 'PAHO / WHO / SIBSA / ICEarth Indigenous Americas Desk',
+      category: 'Federal Announcement',
+      priority: 'Urgent',
+      summary: 'Virtual Seminar Series: "Lead in Latin America: From Detection to Prevention" hosted October 19, 20 and 21, 2026 from 1:00 p.m. – 4:00 p.m. EDT on Zoom with simultaneous English and Spanish interpretation.',
+      details: 'In commemoration of the 14th International Lead Poisoning Prevention Week, the Pan American Health Organization (PAHO) and the Ibero-American Society of Environmental Health (SIBSA), with World Health Organization (WHO) support, convene a 3-day high-level virtual summit. Topics examine pediatric blood lead surveillance, artisanal mining and glazed pottery (barro vidriado) exposures, informal battery recycling (ULAB), and sovereign prevention frameworks across Indigenous and Latin American territories.',
+      linkUrl: 'https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week',
+      linkText: 'PAHO Official Registration & Program (Zoom)'
+    },
+    {
       id: 'UPDATE-NLPPW-001',
       title: 'EPA, CDC & HUD Officially Release 2026 Outreach Materials: "Keep Kids Safe from Lead"',
       date: 'September 1, 2026',
@@ -801,19 +814,33 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
                     </div>
 
                     {/* Footer Action Links */}
-                    {up.linkUrl && (
-                      <div className="pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
-                        <a
-                          href={up.linkUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5"
-                        >
-                          <ExternalLink size={13} />
-                          <span>{up.linkText || 'Learn More'}</span>
-                        </a>
+                    <div className="pt-2 border-t border-stone-100 dark:border-stone-800 flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex flex-wrap items-center gap-3">
+                        {up.linkUrl && (
+                          <a
+                            href={up.linkUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5"
+                          >
+                            <ExternalLink size={13} />
+                            <span>{up.linkText || 'Learn More'}</span>
+                          </a>
+                        )}
 
-                        <button
+                        {up.id === 'UPDATE-NLPPW-PAHO-2026' && onNavigateTab && (
+                          <button
+                            onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                            className="px-3 py-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-mono font-black text-xs rounded-lg shadow transition-all flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <Scale size={12} className="text-stone-950" />
+                            <span>🪶 Launch Indigenous America Lead Exposenomics (Plate #72)</span>
+                            <ArrowRight size={12} />
+                          </button>
+                        )}
+                      </div>
+
+                      <button
                           onClick={() => {
                             navigator.clipboard.writeText(`${up.title}: ${up.summary} (Source: ${up.agency})`);
                             alert('Update text copied to clipboard for community distribution!');
@@ -824,7 +851,6 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
                           <span>Copy Brief</span>
                         </button>
                       </div>
-                    )}
 
                   </div>
                 ))

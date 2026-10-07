@@ -80,6 +80,7 @@ import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemin
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
+import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
 import {
   Shield,
   UserCheck,
@@ -211,6 +212,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CF',
+      title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
+      type: '10,000-Year Historical Exposenomics, Sovereign Indigenous Rights & PAHO/WHO Lead Summit IP Asset',
+      imageSrc: pahoLeadPlateImg,
+      link: 'indigenous_america_lead_exposenomics',
+      sourceUrl: 'https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week',
+      description: "Plate #72: Landmark exposenomics and evolutionary anthropology IP asset establishing the 10,000-year pristine skeletal bone lead baseline (< 0.01 µg/g) of Indigenous Americans prior to European invasion in 1492. Documents how Europe—severely lead-poisoned from Roman lead pipes and lead sweeteners—enslaved the least-poisoned humans on earth for silver-lead extraction at Potosí and Zacatecas (causing 8M+ deaths). Distinguishes pristine Indigenous Americans from colonial 'Hispanic' constructs, analyzes contemporary artisanal and pottery (barro vidriado) exposure vectors, and provides sovereign registration for the PAHO/SIBSA/WHO Virtual Seminar Series (Oct 19–21, 2026) as the ultimate Roulet's Law proof for ICEarth.",
+      sovereignHash: '0xPAHO_SIBSA_WHO_INDIGENOUS_AMERICA_LEAD_EXPOSENOMICS_1492_PLATE_72_VAULT_2026'
+    },
     {
       id: 'IP-000CE',
       title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study & The Lead-Crime Hypothesis Genocide Proof (Plate #71)",

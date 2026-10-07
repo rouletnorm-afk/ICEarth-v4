@@ -114,6 +114,7 @@ import { DenisovanAltitudeAdaptiveExposenomics } from './components/DenisovanAlt
 import { WildfirePyroExposenomics } from './components/WildfirePyroExposenomics';
 import { GlobalLeadCrimeProof } from './components/GlobalLeadCrimeProof';
 import { LeadCrimeRacialDisparities } from './components/LeadCrimeRacialDisparities';
+import { IndigenousAmericaLeadExposenomics } from './components/IndigenousAmericaLeadExposenomics';
 import { AgentBasedModellingEngine } from './components/AgentBasedModellingEngine';
 import { ArtisanalMiningExposenomics } from './components/ArtisanalMiningExposenomics';
 import { TwinCitiesLeadExposomics } from './components/TwinCitiesLeadExposomics';
@@ -171,7 +172,7 @@ export default function App() {
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
   // Navigation / Tabs
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'indigenous_america_lead_exposenomics' | 'indigenous_america_lead' | 'paho_lead_week' | 'plate_72' | 'plate72' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -310,6 +311,23 @@ export default function App() {
         lower.includes('brown_lead')
       ) {
         setActiveTab('lead_crime_racial_disparities');
+      } else if (
+        lower === 'indigenous_america_lead_exposenomics' ||
+        lower === 'indigenous_america_lead' ||
+        lower === 'indigenous_lead' ||
+        lower === 'paho_lead_week' ||
+        lower === 'paho_seminar' ||
+        lower === 'paho_lead' ||
+        lower === 'paho' ||
+        lower === 'sibsa' ||
+        lower === 'ibero_american' ||
+        lower === 'ibero-american' ||
+        lower === 'plate_72' ||
+        lower === 'plate72' ||
+        lower.includes('indigenous_america_lead') ||
+        lower.includes('paho_lead')
+      ) {
+        setActiveTab('indigenous_america_lead_exposenomics');
       } else if (
         lower === 'medical_interventions' ||
         lower === 'medical-interventions' ||
@@ -2144,6 +2162,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00001C Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum & PAHO Lead Week (Plate #72) */}
+                <button
+                  onClick={() => setActiveTab('indigenous_america_lead_exposenomics')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'indigenous_america_lead_exposenomics' || (activeTab as string) === 'indigenous_america_lead' || (activeTab as string) === 'paho_lead_week' || (activeTab as string) === 'plate_72' || (activeTab as string) === 'plate72'
+                      ? 'bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white border-amber-400 shadow-md font-extrabold ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-500/20 text-amber-950 border-amber-400/70 bg-amber-50/90 font-black'
+                  }`}
+                >
+                  <Scale size={16} className={activeTab === 'indigenous_america_lead_exposenomics' ? 'text-amber-200 animate-pulse' : 'text-amber-700'} />
+                  <span className="flex-1 font-extrabold">🪶 Indigenous Lead: PAHO Week</span>
+                  <span className="px-1.5 py-0.2 bg-stone-950 text-amber-300 text-[8px] tracking-wide rounded uppercase font-black shadow-xs border border-amber-500/50">
+                    PLATE #72
+                  </span>
+                </button>
+
                 {/* 0.0001 Homo sapiens Evolutionary Canary (Nature 2026) */}
                 <button
                   onClick={() => setActiveTab('evolutionary_canary' as any)}
@@ -3918,6 +3952,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'norm_roulet_home', icon: Globe, label: '🏠 ICEarth Launch Home Page', badge: 'Home', color: 'amber' },
                     { id: 'global_lead_crime_proof', icon: Crown, label: '👑 Global Lead-Crime Proof (8k Yr)', badge: 'Proof', color: 'red' },
                     { id: 'lead_crime_racial_disparities', icon: Brain, label: '⚖️ Lead-Crime: Racial Disparities', badge: 'Plate #71', color: 'red' },
+                    { id: 'indigenous_america_lead_exposenomics', icon: Scale, label: '🪶 Indigenous America Lead: PAHO Week', badge: 'Plate #72', color: 'amber' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
                     { id: 'lead_alzheimers_dementia', icon: Brain, label: '🧠 Lead & Alzheimer’s / Dementia Risk', badge: 'Plate #58', color: 'purple' },
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
@@ -4069,6 +4104,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'deepmind_readiness' || (activeTab as string) === 'gemini_sovereignty_readiness' || (activeTab as string) === 'lila_ibrahim' || (activeTab as string) === 'why_gemini' || (activeTab as string) === 'plate_68' || (activeTab as string) === 'plate68') && '✨ Why Indigenous Communities Earth Sovereign IT With Gemini: Google DeepMind’s Lila Ibrahim on AI Readiness (Plate #68)'}
               {(activeTab === 'ai_startup_incentives' || (activeTab as string) === 'google_startups' || (activeTab as string) === 'startup_incentives' || (activeTab as string) === 'plate_70' || (activeTab as string) === 'plate70') && '🚀 AI Startup Programs & Sovereign Developer Incentives: Google for Startups & DeepMind Roadmap (Plate #70)'}
               {(activeTab === 'lead_crime_racial_disparities' || (activeTab as string) === 'racial_disparities' || (activeTab as string) === 'brown_lead_study' || (activeTab as string) === 'brown_study' || (activeTab as string) === 'plate_71' || (activeTab as string) === 'plate71') && '⚖️ Lead-Crime Hypothesis: Racial Disparities & Brown University 7-State Study (Plate #71)'}
+              {(activeTab === 'indigenous_america_lead_exposenomics' || (activeTab as string) === 'indigenous_america_lead' || (activeTab as string) === 'indigenous_lead' || (activeTab as string) === 'paho_lead_week' || (activeTab as string) === 'paho' || (activeTab as string) === 'plate_72' || (activeTab as string) === 'plate72') && '🪶 Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum & PAHO Lead Week 2026 (Plate #72)'}
               {(activeTab === 'ai_sovereignty' || (activeTab as string) === 'sovereignty' || (activeTab as string) === 'ai_watchdogs' || (activeTab as string) === 'plate_50' || (activeTab as string) === 'plate50') && '⚡ The Global AI Sovereignty Imperative: Indigenous Nations vs. Corporate Watchdogs (Plate #50)'}
               {(activeTab === 'icearth_stack' || (activeTab as string) === 'the_icearth_stack' || (activeTab as string) === 'indigenous_ai' || (activeTab as string) === 'clean_compute') && '⚡ The Indigenous AI Solution For AI: The ICEarth Stack (Plate #38)'}
               {(activeTab === 'swiss_data_sovereignty' || (activeTab as string) === 'swiss_sovereignty' || (activeTab as string) === 'swiss' || (activeTab as string) === 'plate_55' || (activeTab as string) === 'plate55' || (activeTab as string) === 'david_ehl') && '🇨🇭 Swiss Data Sovereignty & The Global Freedom Spectrum: Europe’s AI Backlash vs Repressive Kill Switches (Plate #55)'}
@@ -5483,6 +5519,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'lead_crime_racial_disparities' || (activeTab as string) === 'racial_disparities' || (activeTab as string) === 'brown_lead_study' || (activeTab as string) === 'brown_study' || (activeTab as string) === 'plate_71' || (activeTab as string) === 'plate71') && (
             <div className="flex-1 overflow-y-auto">
               <LeadCrimeRacialDisparities 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0001B: INDIGENOUS AMERICA LEAD EXPOSENOMICS: 10,000-YEAR PRISTINE CONTINUUM & PAHO LEAD WEEK 2026 (PLATE #72) */}
+          {(activeTab === 'indigenous_america_lead_exposenomics' || (activeTab as string) === 'indigenous_america_lead' || (activeTab as string) === 'indigenous_lead' || (activeTab as string) === 'paho_lead_week' || (activeTab as string) === 'paho' || (activeTab as string) === 'plate_72' || (activeTab as string) === 'plate72') && (
+            <div className="flex-1 overflow-y-auto">
+              <IndigenousAmericaLeadExposenomics 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />

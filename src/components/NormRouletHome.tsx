@@ -153,10 +153,30 @@ import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemin
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
+import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('indigenous_america_lead') ||
+    u.includes('paho') ||
+    u.includes('sibsa') ||
+    u.includes('paho_lead') ||
+    u.includes('ibero_american') ||
+    u.includes('ibero-american') ||
+    u.includes('1492') ||
+    u.includes('potosi') ||
+    u.includes('zacatecas') ||
+    u.includes('plate_72') ||
+    u.includes('plate72') ||
+    u.includes('plate #72') ||
+    u.includes('photo-000cf') ||
+    u.includes('ip-000cf') ||
+    u.includes('1791378025298')
+  ) {
+    return pahoLeadPlateImg;
+  }
   if (
     u.includes('lead_crime_racial') ||
     u.includes('racial_disparities') ||
@@ -1312,6 +1332,57 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026',
+      title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
+      category: 'Exposenomics',
+      date: '2026-10-07',
+      imageSrc: pahoLeadPlateImg,
+      publishedUrl: 'https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week',
+      summary: "Archaeological and isotopic forensic records prove that for 10,000+ years prior to 1492, Indigenous Americans living in the unsmelted Western Hemisphere possessed skeletal bone lead levels < 0.01 µg/g—making them the least lead-poisoned humans known to planetary history. In 1492, European invaders ravaged by centuries of Roman lead plumbing and sapa wine sweeteners invaded, enslaving pristine Indigenous peoples to extract toxic silver and lead at Potosí and Zacatecas. Ahead of International Lead Poisoning Prevention Week (Oct 18–24, 2026), the Pan American Health Organization (PAHO) and the Ibero-American Society of Environmental Health (SIBSA), with WHO support, convene a Virtual Seminar Series (October 19–21, 1:00–4:00 PM EDT on Zoom). This plate differentiates the evolutionary and territorial trajectory of Indigenous Americans from colonial 'Hispanic' constructs, providing the ultimate Roulet's Law proof.",
+      fullText: `VIRTUAL SEMINAR SERIES: 2026 IBERO-AMERICAN LEAD POISONING PREVENTION WEEK
+Organized by Pan American Health Organization (PAHO) and Ibero-American Society of Environmental Health (SIBSA), with World Health Organization (WHO) Support
+Published October 2026 | Geneva / Washington, DC / High Desert Sovereign Desk
+Exposenomics & Historical Synthesis by Norman Roulet | Swiss School of Exposenomics
+Plate #72 Cryptographic Archive: PHOTO-000CF / IP-000CF | Vault Hash: 0xPAHO_SIBSA_WHO_INDIGENOUS_AMERICA_LEAD_EXPOSENOMICS_1492_PLATE_72_VAULT_2026
+
+I. THE OFFICIAL PAHO / SIBSA / WHO VIRTUAL SEMINAR SERIES (OCTOBER 19–21, 2026)
+In commemoration of the 14th International Lead Poisoning Prevention Week (18 to 24 October 2026), PAHO and SIBSA are hosting a 3-day high-level virtual summit under the theme:
+“Lead in Latin America: From Detection to Prevention”
+
+Program Coordinates:
+- DATES: 19, 20 and 21 October, 2026
+- TIME: 1:00 p.m. – 4:00 p.m. (EDT; Washington, D.C., Bahamas, Dominican Republic, Haiti, Venezuela)
+- OTHER TIME ZONES: 
+  * 11:00 a.m. – 2:00 p.m.: Central America (Guatemala, Costa Rica, El Salvador, Honduras, Nicaragua)
+  * 12:00 p.m. – 3:00 p.m.: Colombia, Ecuador, Jamaica, Peru, Panama
+  * 2:00 p.m. – 5:00 p.m.: Argentina, Brasília, Chile, Suriname, Uruguay
+- PLATFORM: Zoom (with mandatory pre-registration)
+- LANGUAGES: Simultaneous English and Spanish interpretation
+
+II. THE 10,000-YEAR EXPOSENOMIC CONTINUUM
+Tens of thousands of years before 1492, ancestors of Indigenous Americans journeyed across Beringia into unmined, unsmelted continents. Skeletal examinations of ancient pre-contact burials consistently document basal bone lead concentrations below 0.01 µg/g. Unburdened by toxic heavy metals, Indigenous societies developed complex agricultural, ecological, and cultural systems with pristine prefrontal cortex neuro-circuitry and intact executive self-regulation.
+
+Contrast this with the Old World: by 100 CE, the Roman Empire was smelting tens of thousands of tons of lead annually. Romans boiled wine syrup in lead cauldrons (*sapa*), consumed drinking water via lead conduits (*fistulae*), and suffered systemic chronic lead encephalopathy. This neurotoxic burden passed directly into medieval and Renaissance European powers.
+
+III. 1492: THE WORST LEAD-POISONED HUMANS ENSLAVED THE LEAST POISONED
+When Spanish and European conquistadors made contact in 1492, heavily lead-poisoned armies characterized by extreme impulsivity, cruelty, and moral aphasia encountered pristine human populations. 
+The discovery of silver and lead deposits at Cerro Rico (Potosí, Bolivia) in 1545 and Zacatecas (Mexico) in 1546 inaugurated the largest metallurgical genocide in human history. Under the Spanish *mita*, over 8 million Indigenous miners died in toxic shafts from cave-ins, silicosis, and acute lead/mercury vapor poisoning. The pristine stewards of the Americas were exterminated to supply the silver currency of Europe.
+
+IV. DIFFERENTIATING INDIGENOUS AMERICANS FROM "HISPANIC" & "LATIN AMERICAN" LABELS
+The contemporary geopolitical labels "Hispanic" and "Latin American" blur essential genetic, territorial, and exposenomic realities:
+1. "Hispanic" / "Latin American" designates linguistic, national, or mestizo cultural identity.
+2. Full-blood tribal Indigenous Americans (Quechua, Aymara, Mapuche, Zapotec, Maya, Pueblo, Diné, Cherokee) possess distinct sovereign land tenures and genetic adaptations.
+3. Today, Indigenous children face catastrophic environmental exposures: artisanal pottery glaze (*barro vidriado*), informal car battery recycling (ULAB), and toxic abandoned open-pit mine tailings across communal lands—inflicting blood lead levels 3 to 6 times higher than European-descended urban elites.
+
+V. ROULET'S LAW & INDIGENOUS COMMUNITIES EARTH
+ICEarth is Indigenous Communities Earth because Indigenous Americans are the living proof of Roulet’s Law:
+- Environmental neurotoxicity without informed consent creates perpetual, unliquidated tort liabilities.
+- Restoring sovereign health requires decentralized, zero-knowledge exposenomic infrastructure.
+- Indigenous communities have the right to progress (Plate #69), clean energy, and air-gapped sovereign AI computed on their own terms.`,
+      tags: ['PAHO', 'SIBSA', 'WHO', 'LeadWeek2026', 'IndigenousAmerica', 'Potosi', '1492Invasion', 'Plate72', 'RouletsLaw', 'Exposenomics', 'BarroVidriado', 'BoneLeadTimeline'],
+      linkHash: '0xPAHO_SIBSA_WHO_INDIGENOUS_AMERICA_LEAD_EXPOSENOMICS_1492_PLATE_72_VAULT_2026'
+    },
     {
       id: 'MAG-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026',
       title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study Uncovers 3-4X Minority Poisoning Multipliers & The Lead-Crime Genocide Proof (Plate #71)",
@@ -4188,6 +4259,17 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
     {
+      id: 'PHOTO-000CF',
+      title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
+      category: 'Indigenous Exposenomics, 10,000-Year Timeline, 1492 Colonial Mining & PAHO/WHO Summit',
+      imageSrc: pahoLeadPlateImg,
+      location: 'Washington, DC • Geneva (WHO) • Potosí, Bolivia • Zacatecas, Mexico • Taos Pueblo • Global Sovereign Web',
+      date: '2026-10-07',
+      description: "Plate #72: Landmark historical exposenomics and epidemiological plate detailing the 10,000-year pristine continuum of Indigenous Americans (< 0.01 µg/g bone Pb), the 1492 invasion by lead-poisoned European armies, the 8M+ Indigenous deaths at Potosí and Zacatecas silver-lead amalgamation mills, the modern exposenomic divergence separating Indigenous Americans from colonial 'Hispanic' categories, and the official Pan American Health Organization (PAHO) / SIBSA / WHO Virtual Seminar Series program for October 19–21, 2026 under Roulet's Law.",
+      vaultHash: '0xPAHO_SIBSA_WHO_INDIGENOUS_AMERICA_LEAD_EXPOSENOMICS_1492_PLATE_72_VAULT_2026',
+      tags: ['PAHO', 'SIBSA', 'WHO', 'LeadWeek2026', 'IndigenousAmerica', 'Potosi', 'Zacatecas', '1492Invasion', 'Plate72', 'RouletsLaw', 'Exposenomics', 'BarroVidriado', 'BoneLeadTimeline', 'SovereignIT']
+    },
+    {
       id: 'PHOTO-000CE',
       title: "Childhood Blood Lead Levels Hit Historic Lows, But Not For All Youth: Brown University 7-State Study & The Lead-Crime Hypothesis Genocide Proof (Plate #71)",
       category: 'Pediatric Blood Lead Disparities, Neuro-Criminology & Roulet\'s Law Genocide Verdict',
@@ -5629,6 +5711,15 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
                       <Calendar size={16} className="text-stone-950" />
                       <span>Launch Dedicated Event Page & Post Updates</span>
                       <ArrowRight size={15} />
+                    </button>
+
+                    <button
+                      onClick={() => onNavigateTab?.('indigenous_america_lead')}
+                      className="px-4 py-3 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-mono font-black text-xs sm:text-sm rounded-xl shadow-xl transition-all flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95 ring-2 ring-amber-400/60"
+                    >
+                      <Globe size={16} className="text-stone-950" />
+                      <span>PAHO • SIBSA • WHO Virtual Seminar Series (Oct 19–21 • Plate #72)</span>
+                      <ArrowRight size={14} />
                     </button>
 
                     <a
@@ -7235,6 +7326,31 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026' || selectedArticle.tags?.includes('PAHO') || selectedArticle.tags?.includes('SIBSA') || selectedArticle.tags?.includes('Plate72')) && (
+                  <a
+                    href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300 transition-colors"
+                  >
+                    <Video size={13} className="text-stone-950" />
+                    <span>📄 PAHO Virtual Seminar Program</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026' || selectedArticle.tags?.includes('PAHO') || selectedArticle.tags?.includes('SIBSA') || selectedArticle.tags?.includes('Plate72')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('indigenous_america_lead');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-400"
+                  >
+                    <Globe size={13} className="text-stone-950 animate-pulse" />
+                    <span>🪶 Launch Indigenous America Lead Exposenomics (Plate #72)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {(selectedArticle.id === 'MAG-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026' || selectedArticle.tags?.includes('BrownUniversity') || selectedArticle.tags?.includes('LeadCrimeHypothesis') || selectedArticle.tags?.includes('Plate71')) && (
                   <a
                     href="https://www.browndailyherald.com/article/childhood-blood-lead-levels-hit-historic-lows-but-not-for-all-youth-new-study-finds-20261006"
@@ -7584,6 +7700,33 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000CF' || selectedPhoto.tags?.includes('PAHO') || selectedPhoto.tags?.includes('SIBSA') || selectedPhoto.tags?.includes('Plate72')) && (
+                    <>
+                      <a
+                        href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono transition-colors"
+                      >
+                        <Video size={12} className="text-stone-950" />
+                        <span>PAHO Virtual Seminar Program</span>
+                        <ExternalLink size={11} className="text-stone-950" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000CF' || selectedPhoto.tags?.includes('PAHO') || selectedPhoto.tags?.includes('SIBSA') || selectedPhoto.tags?.includes('Plate72')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('indigenous_america_lead');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono"
+                    >
+                      <Globe size={13} className="text-stone-950 animate-pulse" />
+                      <span>🪶 Launch Indigenous America Lead Exposenomics (Plate #72)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000CE' || selectedPhoto.tags?.includes('BrownUniversity') || selectedPhoto.tags?.includes('LeadCrimeHypothesis') || selectedPhoto.tags?.includes('Plate71')) && (
                     <>
                       <a

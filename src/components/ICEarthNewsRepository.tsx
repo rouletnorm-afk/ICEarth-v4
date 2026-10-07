@@ -77,6 +77,7 @@ import deepmindReadinessPlateImg from '../assets/images/deepmind_readiness_gemin
 import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_progress_sovereign_it_1791305740915.jpg';
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
+import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
 import {
   Newspaper,
   PlusCircle,
@@ -193,6 +194,25 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('indigenous_america_lead') ||
+    u.includes('paho') ||
+    u.includes('sibsa') ||
+    u.includes('paho_lead') ||
+    u.includes('ibero_american') ||
+    u.includes('ibero-american') ||
+    u.includes('1492') ||
+    u.includes('potosi') ||
+    u.includes('zacatecas') ||
+    u.includes('plate_72') ||
+    u.includes('plate72') ||
+    u.includes('plate #72') ||
+    u.includes('photo-000cf') ||
+    u.includes('ip-000cf') ||
+    u.includes('1791378025298')
+  ) {
+    return pahoLeadPlateImg;
+  }
   if (
     u.includes('lead_crime_racial') ||
     u.includes('racial_disparities') ||
@@ -1234,6 +1254,73 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026',
+    contentType: 'Article',
+    title: "PAHO, SIBSA & WHO Convene Virtual Seminar Series for 2026 Ibero-American Lead Poisoning Prevention Week: Uncovering 10,000-Year Pristine Indigenous Americas vs 1492 Extractive Enslavement & Modern Disparities (Plate #72)",
+    subtitle: "WASHINGTON, D.C. / GENEVA / PAN AMERICAN WIRE — In commemoration of the 14th International Lead Poisoning Prevention Week (October 18–24, 2026), the Pan American Health Organization (PAHO) and the Ibero-American Society of Environmental Health (SIBSA), with World Health Organization (WHO) support, announce their high-level Virtual Seminar Series for October 19, 20, and 21, 2026 under the banner 'Lead in Latin America: From Detection to Prevention'. Synthesizing archaeological, isotopic, and exposenomic evidence, ICEarth establishes the 10,000-year pristine skeletal lead continuum of Indigenous Americans (< 0.01 µg/g bone Pb)—who escaped the Old World millennia prior to European contact—and documents how lead-ravaged European invaders enslaved the least-poisoned humans on earth for silver-lead extraction at Potosí and Zacatecas, establishing Roulet's Law Proof of civilizational inversion.",
+    sourceUrl: 'https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week',
+    sourceName: 'Pan American Health Organization (PAHO) / SIBSA / WHO',
+    publishDate: '2026-10-06',
+    author: 'Pan American Health Organization & SIBSA with Sovereign Synthesis by Norman Roulet',
+    authorName: 'PAHO & SIBSA with Sovereign Synthesis by Norman Roulet',
+    originState: 'Washington, D.C. • Geneva • Latin America & Caribbean • Sovereign Indigenous Americas',
+    communities: [
+      'Pan American Health Organization (PAHO)',
+      'Ibero-American Society of Environmental Health (SIBSA)',
+      'World Health Organization (WHO)',
+      'Swiss School of Exposenomics',
+      'ICEarth Indigenous Americas Desk'
+    ],
+    tags: [
+      'LeadPoisoning',
+      'PAHO',
+      'SIBSA',
+      'WHO',
+      'LeadWeek2026',
+      'IndigenousAmerica',
+      'Potosi',
+      'Zacatecas',
+      '1492Invasion',
+      'Plate72',
+      'RouletsLaw',
+      'BarroVidriado',
+      'ArtisanalMining',
+      'Exposenomics'
+    ],
+    imageUrl: pahoLeadPlateImg,
+    thumbnailUrl: pahoLeadPlateImg,
+    imageCaption: 'Plate #72: Indigenous America Lead Exposenomics — The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement, and PAHO/SIBSA/WHO Virtual Seminar Series (Oct 19–21, 2026) under Roulet’s Law.',
+    featured: true,
+    promotedToHomePage: true,
+    vaultHash: '0xPAHO_SIBSA_WHO_INDIGENOUS_AMERICA_LEAD_EXPOSENOMICS_1492_PLATE_72_VAULT_2026',
+    editorName: 'Norman Roulet (Chief Infomediary & Exposenomics Architect)',
+    editorRole: 'Chief Infomediary & Sovereign Systems Architect',
+    editorCommentary: "The historical facts are unambiguous: the worst lead poisoning ever documented in Europe (arising from Roman lead pipes, pewter, and leaded wine sapa) invaded the Americas in 1492 and enslaved the least lead-poisoned humans known to exist. Indigenous Americans had migrated tens of thousands of years before Eurasian metallurgy, maintaining pristine skeletal bone lead levels below 0.01 µg/g. At Potosí and Zacatecas, over 8 million Indigenous lives were consumed in toxic silver-lead amalgamation mills. Today, the conflation of Indigenous Americans with colonial 'Hispanic' or 'Latin American' constructs obscures these specific biological and colonial roots. As PAHO and SIBSA convene this critical Virtual Seminar Series for Lead Poisoning Prevention Week 2026, ICEarth integrates their scientific program into our Sovereign Calendar, providing the ultimate Roulet's Law proof.",
+    abstract: "The Pan American Health Organization (PAHO) and the Ibero-American Society of Environmental Health (SIBSA), with WHO support, are hosting a Virtual Seminar Series on October 19, 20, and 21, 2026 for International Lead Poisoning Prevention Week. This plate unpacks the unique 10,000-year exposenomic continuum of Indigenous America, contrasting pristine pre-Columbian biology (< 0.01 µg/g bone Pb) with 1492 European extraction, and distinguishes contemporary Indigenous exposures (artisanal mining, barro vidriado pottery, battery recycling) from broad Latin American aggregates.",
+    fullExcerpt: `VIRTUAL SEMINAR SERIES FOR THE 2026 IBERO-AMERICAN LEAD POISONING PREVENTION WEEK
+Lead in Latin America: From Detection to Prevention
+Hosted by Pan American Health Organization (PAHO) & Ibero-American Society of Environmental Health (SIBSA) with World Health Organization (WHO) Support
+
+DATE: 19, 20 and 21 October, 2026.
+TIME: 1:00 p.m. – 4:00 p.m. (EDT; Washington, D.C., Bahamas, Dominican Republic, Haiti, and Venezuela).
+OTHER TIME ZONES: 
+• 11:00 a.m. – 2:00 p.m.: Central America.
+• 12:00 p.m. – 3:00 p.m.: Colombia, Ecuador, Jamaica, Peru.
+• 2:00 p.m. – 5:00 p.m.: Argentina, Brasília, Chile, Suriname, Uruguay.
+PLATFORM: ZOOM (with registration).
+LANGUAGES: English and Spanish (simultaneous interpretation).
+
+CONTEXT & OVERVIEW:
+The fourteenth International Lead Poisoning Prevention Week will take place from 18 to 24 October 2026. This year's campaign theme, From Detection to Prevention, highlights the fact that lead poisoning is often invisible, can arise from multiple sources, and must be identified before action can be taken to protect health, particularly the health of children.
+
+IBERO-AMERICAN WEEK:
+Latin America is not immune to the presence of lead as a global environmental contaminant. However, the region has specific characteristics regarding the sources and contexts of human exposure. Industrial, mining, and artisanal activities, both formal and informal, constitute significant sources of exposure and create diverse risk scenarios shaped by the productive, social, and environmental characteristics of each territory.
+
+Despite the importance of this issue, research remains limited in terms of adequately assessing and characterizing lead exposure, particularly among children. This knowledge gap translates into insufficient capacity to identify exposed populations in a timely manner, ensure appropriate case management, and develop effective strategies for the prevention and control of lead poisoning.
+
+To gain a better understanding of the activities being carried out across the Region of the Americas, a series of virtual seminars is being organized during International Lead Poisoning Prevention Week under the theme Lead in Latin America: From Detection to Prevention, with the objective of raising awareness about the health risks associated with lead exposure and promoting the timely identification of exposure sources, as well as the implementation of effective preventive measures, with a particular emphasis on protecting children.`
+  },
   {
     id: 'ART-BROWN-DAILY-HERALD-LEAD-DISPARITIES-GENOCIDE-2026',
     contentType: 'Article',
@@ -6826,6 +6913,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('PAHO') || article.tags?.includes('SIBSA') || article.tags?.includes('Plate72') || article.id.includes('PAHO-SIBSA-WHO') || article.title?.includes('Ibero-American Lead Poisoning Prevention Week')) && (
+                      <>
+                        <a
+                          href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-rose-600 to-amber-700 hover:from-amber-500 hover:to-rose-500 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <Globe size={13} className="text-stone-950" />
+                          <span>PAHO Official Event Portal</span>
+                          <ExternalLink size={12} className="text-stone-950" />
+                        </a>
+
+                        {onNavigateTab && (
+                          <button
+                            onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                            className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-white font-mono font-black text-xs rounded-xl shadow border border-amber-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                          >
+                            <Scale size={13} className="text-amber-200 animate-pulse" />
+                            <span>🪶 Launch Indigenous America Lead Exposenomics (Plate #72)</span>
+                            <ArrowRight size={12} />
+                          </button>
+                        )}
+                      </>
+                    )}
+
                     {(article.tags?.includes('BrownUniversity') || article.tags?.includes('LeadCrimeHypothesis') || article.tags?.includes('Plate71') || article.id.includes('BROWN-DAILY-HERALD') || article.title?.includes('Childhood Blood Lead Levels Hit Historic Lows')) && (
                       <>
                         <a
