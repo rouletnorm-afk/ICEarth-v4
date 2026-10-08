@@ -1104,6 +1104,16 @@ export const LeadAlzheimersDementiaRisk: React.FC<LeadAlzheimersDementiaRiskProp
             </button>
 
             <button
+              onClick={() => onNavigateTab?.('vanishing_gut_microbiome')}
+              className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
+                isLight ? 'bg-amber-100 hover:bg-amber-200 text-amber-950 border-amber-300' : 'bg-stone-800 hover:bg-stone-700 text-amber-300 border-amber-500/40'
+              }`}
+            >
+              <span>🧬 Vanishing Gut Microbes (Stanford Nature - Plate #75)</span>
+              <ArrowRight size={13} />
+            </button>
+
+            <button
               onClick={() => onNavigateTab?.('medical_interventions')}
               className={`px-4 py-2 font-mono font-bold text-xs rounded-xl flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 border ${
                 isLight ? 'bg-stone-100 hover:bg-stone-200 text-emerald-900 border-emerald-300' : 'bg-stone-800 hover:bg-stone-700 text-emerald-300 border-emerald-500/40'

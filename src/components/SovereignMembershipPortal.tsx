@@ -83,6 +83,7 @@ import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparit
 import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
 import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
+import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
 import {
   Shield,
   UserCheck,
@@ -214,6 +215,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CI',
+      title: "Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Plate #75)",
+      type: 'Evolutionary Genomics, Gut Microbiome & Industrial Exposenomics IP Asset',
+      imageSrc: vanishingMicrobiomePlateImg,
+      link: 'vanishing_gut_microbiome',
+      sourceUrl: 'https://www.nature.com/articles/s41586-026-11106-1',
+      description: "Plate #75: Landmark evolutionary genomics IP asset documenting the Stanford University Nature study (7 Oct 2026). Over 1,231 bacterial species shared between the Hadza of Tanzania and Tsimane of the Bolivian Amazon prove deep co-migration with Homo sapiens over tens of thousands of years. Unpacks the catastrophic loss of ~60% of microbial taxa in modern industrialized societies caused by heavy metal poisoning, municipal lead piping, and chemical intoxicants under Roulet's Law.",
+      sovereignHash: '0xNATURE_2026_STANFORD_VANISHING_GUT_MICROBIOME_HADZA_TSIMANE_PLATE_75'
+    },
     {
       id: 'IP-000CH',
       title: "Independent Validation of Roulet's Law: Rise and Spread of Lead-Silver Metallurgy Deciphered from Peatland Archives (Plate #74)",

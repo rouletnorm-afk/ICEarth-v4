@@ -160,6 +160,7 @@ import { SwissDataSovereignty } from './components/SwissDataSovereignty';
 import { DataCenterIncentivesEngine } from './components/DataCenterIncentivesEngine';
 import { SuperIntelligenceSovereignty } from './components/SuperIntelligenceSovereignty';
 import { LeadAlzheimersDementiaRisk } from './components/LeadAlzheimersDementiaRisk';
+import { VanishingGutMicrobiome } from './components/VanishingGutMicrobiome';
 import { SovereignAIAgentsAdoption } from './components/SovereignAIAgentsAdoption';
 import { TrumpAISummitRichestTable } from './components/TrumpAISummitRichestTable';
 import { OpenAIBrokenCulture } from './components/OpenAIBrokenCulture';
@@ -173,7 +174,7 @@ export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'indigenous_gaming_prediction_markets' | 'indigenous_gaming' | 'tribal_gaming' | 'prediction_markets' | 'plate_73' | 'plate73' | 'independent_validation_roulets_law' | 'peatland_archives' | 'science_advances_lead' | 'plate_74' | 'plate74' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'indigenous_america_lead_exposenomics' | 'indigenous_america_lead' | 'paho_lead_week' | 'plate_72' | 'plate72' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'indigenous_gaming_prediction_markets' | 'indigenous_gaming' | 'tribal_gaming' | 'prediction_markets' | 'plate_73' | 'plate73' | 'independent_validation_roulets_law' | 'peatland_archives' | 'science_advances_lead' | 'plate_74' | 'plate74' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'vanishing_gut_microbiome' | 'gut_microbiome' | 'vanishing_microbes' | 'stanford_microbiome' | 'plate_75' | 'plate75' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'indigenous_america_lead_exposenomics' | 'indigenous_america_lead' | 'paho_lead_week' | 'plate_72' | 'plate72' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1060,6 +1061,24 @@ export default function App() {
         lower.includes('dementia')
       ) {
         setActiveTab('lead_alzheimers_dementia');
+      } else if (
+        lower === 'vanishing_gut_microbiome' ||
+        lower === 'vanishing-gut-microbiome' ||
+        lower === 'gut_microbiome' ||
+        lower === 'gut-microbiome' ||
+        lower === 'microbiome' ||
+        lower === 'vanishing_microbes' ||
+        lower === 'stanford_microbiome' ||
+        lower === 'hadza' ||
+        lower === 'tsimane' ||
+        lower === 'plate_75' ||
+        lower === 'plate75' ||
+        lower === 'plate-75' ||
+        lower.includes('microbiome') ||
+        lower.includes('hadza') ||
+        lower.includes('tsimane')
+      ) {
+        setActiveTab('vanishing_gut_microbiome');
       } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
         setActiveTab('reports');
       } else if (lower === 'sovereign_portal' || lower === 'sovereign' || lower === 'home' || lower === 'portal') {
@@ -2256,6 +2275,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-black">🧠 Lead & Alzheimer’s / Dementia Risk</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-purple-600 to-rose-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
                     PLATE #58
+                  </span>
+                </button>
+
+                {/* 0.00016 Prehistoric Global Migration of Vanishing Gut Microbes (Nature 2026 - Plate #75) */}
+                <button
+                  onClick={() => setActiveTab('vanishing_gut_microbiome')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'vanishing_gut_microbiome' || (activeTab as string) === 'gut_microbiome' || (activeTab as string) === 'vanishing_microbes' || (activeTab as string) === 'stanford_microbiome' || (activeTab as string) === 'plate_75' || (activeTab as string) === 'plate75'
+                      ? 'bg-gradient-to-r from-emerald-950 via-stone-900 to-amber-950 text-amber-200 border-amber-400 shadow-xl font-black ring-2 ring-amber-400/80'
+                      : 'hover:bg-amber-100 text-stone-950 border-amber-500/80 bg-gradient-to-r from-amber-50/90 via-stone-50 to-emerald-50/90 font-black shadow-xs ring-1 ring-amber-400/40'
+                  }`}
+                >
+                  <Dna size={16} className={activeTab === 'vanishing_gut_microbiome' ? 'text-amber-300 animate-pulse' : 'text-emerald-700'} />
+                  <span className="flex-1 font-black">🧬 Vanishing Gut Microbes: Nature</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-amber-600 to-emerald-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #75
                   </span>
                 </button>
 
@@ -4046,6 +4081,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'indigenous_america_lead_exposenomics', icon: Scale, label: '🪶 Indigenous America Lead: PAHO Week', badge: 'Plate #72', color: 'amber' },
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
                     { id: 'lead_alzheimers_dementia', icon: Brain, label: '🧠 Lead & Alzheimer’s / Dementia Risk', badge: 'Plate #58', color: 'purple' },
+                    { id: 'vanishing_gut_microbiome', icon: Dna, label: '🧬 Vanishing Gut Microbes (Stanford Nature)', badge: 'Plate #75', color: 'emerald' },
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
                     { id: 'dumpsite_leachate', icon: Droplets, label: '💧 Dumpsite Leachate & Groundwater', badge: 'Plate #65', color: 'cyan' },
                     { id: 'kohl_lead_isis', icon: Eye, label: '👁️ Kohl in Oman: Lead-ISIS Proof', badge: 'Plate #66', color: 'amber' },
@@ -4231,6 +4267,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'red_beetroot_neuroprotection' || (activeTab as string) === 'red_beetroot' || (activeTab as string) === 'beetroot' || (activeTab as string) === 'drb' || (activeTab as string) === 'anti_alzheimer') && '🍎 Red Beetroot Lead Neuroprotection & Anti-Alzheimer'}
               {(activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech') && '💡 Public Interest Technology & Lead Paint'}
               {(activeTab === 'realtime_pollution_tracking' || (activeTab as string) === 'pollution_tracking' || (activeTab as string) === 'realtime' || (activeTab as string) === 'climatetrace') && '📡 Real-Time Pollution Tracking: Sovereign Portal'}
+              {(activeTab === 'vanishing_gut_microbiome' || (activeTab as string) === 'gut_microbiome' || (activeTab as string) === 'vanishing_microbes' || (activeTab as string) === 'stanford_microbiome' || (activeTab as string) === 'plate_75' || (activeTab as string) === 'plate75') && "🧬 Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Stanford Nature 2026, Plate #75)"}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -5670,6 +5707,16 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
           {(activeTab === 'lead_alzheimers_dementia' || (activeTab as string) === 'alzheimers' || (activeTab as string) === 'dementia' || (activeTab as string) === 'plate_58') && (
             <div className="flex-1 overflow-y-auto">
               <LeadAlzheimersDementiaRisk 
+                onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0036: PREHISTORIC GLOBAL MIGRATION OF VANISHING GUT MICROBES (STANFORD NATURE 2026 - PLATE #75) */}
+          {(activeTab === 'vanishing_gut_microbiome' || (activeTab as string) === 'gut_microbiome' || (activeTab as string) === 'vanishing_microbes' || (activeTab as string) === 'stanford_microbiome' || (activeTab as string) === 'plate_75' || (activeTab as string) === 'plate75') && (
+            <div className="flex-1 overflow-y-auto">
+              <VanishingGutMicrobiome 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
                 siteTheme={siteTheme}
               />
