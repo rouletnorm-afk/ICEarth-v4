@@ -59,7 +59,8 @@ import {
   DollarSign,
   Crown,
   Bot,
-  Briefcase
+  Briefcase,
+  Coins
 } from 'lucide-react';
 
 // Import local image assets
@@ -154,10 +155,41 @@ import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_pro
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
 import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
+import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
+import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('peatland') ||
+    u.includes('science_advances') ||
+    u.includes('galena') ||
+    u.includes('plate_74') ||
+    u.includes('plate74') ||
+    u.includes('plate #74') ||
+    u.includes('photo-000ch') ||
+    u.includes('ip-000ch') ||
+    u.includes('1791459149801')
+  ) {
+    return peatlandMapPlateImg;
+  }
+  if (
+    u.includes('indigenous_gaming') ||
+    u.includes('gaming_sovereignty') ||
+    u.includes('prediction_market') ||
+    u.includes('kalshi') ||
+    u.includes('tribal_gaming') ||
+    u.includes('indian_gaming') ||
+    u.includes('plate_73') ||
+    u.includes('plate73') ||
+    u.includes('plate #73') ||
+    u.includes('photo-000cg') ||
+    u.includes('ip-000cg') ||
+    u.includes('1791421289452')
+  ) {
+    return gamingPredictionPlateImg;
+  }
   if (
     u.includes('indigenous_america_lead') ||
     u.includes('paho') ||
@@ -1332,6 +1364,64 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-SCIENCE-ADVANCES-PEATLAND-LEAD-METALLURGY-2026',
+      title: "Independent Validation of Roulet's Law: Rise and Spread of Lead-Silver Metallurgy Deciphered from Peatland Archives (Plate #74)",
+      category: 'Environmental Archaeology & Forensic Exposenomics',
+      date: '2026-10-07',
+      imageSrc: peatlandMapPlateImg,
+      publishedUrl: 'https://www.science.org/doi/10.1126/sciadv.aec1413',
+      summary: "Published in Science Advances (7 Oct 2026, Vol 12, Issue 41), researchers introduce the Environmental Match Intensity Index (EMII) applied to European peatland archives over six millennia. Tracing over 5,000 georeferenced galena (PbS) ore deposits, the study charts the historical trajectory of lead-silver mining from Laurion in the Aegean through Roman imperial extraction and medieval monetization, directly tracking the mine mouths of German industrial centers through World War II. These findings independently validate Roulet's Law, demonstrating that primary heavy-metal extraction perturbations (H') have driven continental pollution and societal disruption across millennia.",
+      fullText: `RISE AND SPREAD OF LEAD-SILVER METALLURGY DECIPHERED FROM PEATLAND ARCHIVES
+Published in Science Advances (Vol 12, Issue 41, eadc1413) | October 7, 2026
+Forensic Exposenomics Synthesis by Norman Roulet | Swiss School of Exposenomics / ICEarth Desk
+Plate #74 Cryptographic Archive: PHOTO-000CH / IP-000CH | Vault Hash: 0xSCIENCE_ADVANCES_PEATLAND_LEAD_METALLURGY_ROULETS_LAW_VALIDATION_2026_PLATE_74
+
+ABSTRACT & STUDY OUTCOMES:
+How mining has shaped long-term economic and political landscapes across Europe and the Mediterranean remains poorly understood, largely because archaeological evidence is spatially fragmented and ore sources are difficult to trace from atmospheric lead (Pb) records. Here, we compile Pb isotope data from environmental archives and introduce the Environmental Match Intensity Index (EMII), a metric applied to peat records to track Pb–silver (Ag) ore-supply patterns and relative changes in the integrated mining-related atmospheric Pb signal over six millennia.
+
+EMII reveals an early mining signal centered on Laurion (Greece) during the Late Neolithic/Chalcolithic, followed by Bronze Age expansion structured by maritime routes linking the Cyclades, the Troad, and Anatolian coasts. From the Iron Age onward, our results challenge the conventional Iberian-centered mining model and instead reveal a polycentric and multimodal organization rooted in west-central European districts interconnected through major fluvial corridors and complementary terrestrial and maritime routes.
+
+EMII reaches its first major peak during the Early Roman period (Match Intensity 137), declines during Late Antiquity and the Early Middle Ages, and rises again from the High Middle Ages onward. Despite these temporal fluctuations, the overall continental distribution of the contributing mining regions remains broadly stable.
+
+By connecting environmental archives with mining, transport, and urban demand, this framework provides a scalable approach for reconstructing the long-term organization of metal production and circulation and their contribution to anthropization processes across different chrono-cultural periods and geographical settings.
+
+INDEPENDENT VALIDATION OF ROULET'S LAW:
+Roulet's Law establishes that the primary perturbation (H') of human and planetary biology by toxic heavy-metal metallurgy initiates systemic destabilization, neurodevelopmental harm, and cognitive attenuation. By demonstrating that the atmospheric lead footprint of European civilization remained anchored to the exact mine mouths of Germany (Eifel/Siegerland), France (Cévennes), and Britain (Pennines) from the Iron Age through Roman conquest, Medieval monetization, and the World Wars, this study provides the definitive multi-millennial geochemical proof of Roulet's Law.`,
+      tags: ['ScienceAdvances', 'RouletsLaw', 'PeatlandArchives', 'EMII', 'GalenaOres', 'Plate74', 'Laurion', 'Eifel', 'Siegerland', 'Exposenomics']
+    },
+    {
+      id: 'MAG-NYPOST-INDIGENOUS-GAMING-PREDICTION-MARKETS-2026',
+      title: "Indigenous Gaming Sovereignty & Prediction Markets: The $46B Tribal Economy Evolves to Sovereign IT & Event Contracts (Plate #73)",
+      category: 'Indigenous Sovereignty',
+      date: '2026-10-07',
+      imageSrc: gamingPredictionPlateImg,
+      publishedUrl: 'https://nypost.com/2026/10/07/business/four-native-american-tribes-break-with-casino-establishment-team-with-kalshi-on-new-gambling-apps/',
+      summary: "In a groundbreaking development reported by the New York Post, four Native American tribes (three in California, one in Oklahoma) have broken with the Indian casino establishment to partner with prediction-markets giant Kalshi to create sovereign-branded gambling apps. The $46 billion tribal gaming economy (+5.3% growth) represents unique pre-constitutional sovereignty under the Indian Gaming Regulatory Act (IGRA) of 1988. While the Indian Gaming Association (IGA) has launched lawsuits claiming prediction markets undercut casino floors, smaller sovereign tribes are leveraging event contracts across sports, politics, and culture to capture digital revenue, build Tier-3 on-reservation data centers, and assert IT self-determination—exemplifying why ICEarth stands for Indigenous Communities Earth.",
+      fullText: `FOUR NATIVE AMERICAN TRIBES BREAK WITH CASINO ESTABLISHMENT, TEAM WITH KALSHI ON NEW GAMBLING APPS
+Reported by Ariel Zilber | New York Post Business | October 7, 2026
+Sovereign IT & Economic Analysis by Norman Roulet | ICEarth Sovereign Desk
+Plate #73 Cryptographic Archive: PHOTO-000CG / IP-000CG | Vault Hash: 0xINDIGENOUS_GAMING_SOVEREIGNTY_PREDICTION_MARKETS_KALSHI_IGA_PLATE_73_VAULT_2026
+
+Four Native American tribes are splitting from the Indian casino establishment to partner with Kalshi to create new gambling apps – widening a bitter rift as the prediction-markets giant woos tribal leaders in an escalating turf war. 
+
+Three tribes in California and one in Oklahoma are launching tribal-branded prediction market apps powered by Kalshi, saying the tie-ups would allow them to capture a slice of revenue in the booming business of prediction markets – which offers wagers across a slew of real-world events, from sports and the Oscars to the weather. 
+
+Each tribe will own its app and control the customer-facing part of the business while Kalshi operates the underlying exchange including clearing the trades, Kalshi said Wednesday. 
+
+“Prediction markets and tribal economic development don’t have to be at odds,” Kalshi CEO Tarek Mansour said in a statement. “It can be organized around opportunity.”   
+
+Tribal gaming officials – which have thrown their weight behind a trio of lawsuits aiming to cripple Kalshi’s business, claiming it’s siphoning money away from Indian casinos – slammed the partnerships. 
+
+“Kalshi is clearly targeting smaller tribes that have limited, if any, options and selling them snake oil,” Jason Giles, executive director of the Indian Gaming Association that represents tribal gaming interests, told The Post in a brief Wednesday interview.  
+
+The IGA has warned member tribes against Kalshi’s overtures to offer its wagers on casino floors, concerned that any agreement could amount to an endorsement of Kalshi’s allegedly illegal products – a potential Trojan horse – that could undercut tribes’ ability to fight Kalshi in court down the road. Tribes jumping into bed with Kalshi complicate an ongoing contentious legal drama in which other tribes – backed by the deep pockets of Indian gaming – have sued Kalshi in a trio of states for allegedly violating their tribal sovereignty.
+
+While Kalshi says its wagers are financial instruments that it calls “event contracts” and “swaps,” the tribes have sued to stop them, countering that they amount to unauthorized sports gambling under federal Indian gaming laws. The tribal lawsuits focus on Kalshi’s sports betting offerings, which account for as much as 70% of an estimated $4 billion in revenue during the 12 months ended this July, according to a source close to the company.
+
+Kalshi has called claims by Indian gaming elite that they’re getting bled dry by prediction markets disingenuous – pointing to the $46 billion in gambling revenue that the Indian Gaming Commission raked in last year – a 5.3% bump from the prior year. Legal experts have told The Post that the suits pose significant risk to Kalshi’s surging business. Last month, the Ninth Circuit of the US Court of Appeals ruled against Kalshi in one tribal suit, setting the stage for a showdown in the Supreme Court that risks crippling the app’s exploding business.`,
+      tags: ['TribalGaming', 'PredictionMarkets', 'Kalshi', 'IGA', 'IndianGaming', 'Plate73', 'SovereignIT', 'RouletsLaw']
+    },
     {
       id: 'MAG-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026',
       title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
@@ -4258,6 +4348,30 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CH',
+      title: "Independent Validation of Roulet's Law: Rise and Spread of Lead-Silver Metallurgy Deciphered from Peatland Archives (Plate #74)",
+      category: 'Environmental Archaeology, Peatland Isotope Archives & Continental Galena Extraction',
+      imageSrc: peatlandMapPlateImg,
+      location: 'Science Advances • Laurion, Greece • Siegerland & Eifel, Germany • Cévennes, France • Pennines, UK • Global Peatland Cores',
+      date: '2026-10-07',
+      cameraInfo: 'Environmental Match Intensity Index (EMII) Geochemical Multi-Isotope Core Visualizer',
+      vaultHash: '0xSCIENCE_ADVANCES_PEATLAND_LEAD_METALLURGY_ROULETS_LAW_VALIDATION_2026_PLATE_74',
+      description: "Plate #74: Landmark forensic environmental archaeology plate documenting the 6,000-year history of atmospheric lead-silver metallurgy deciphered from European peatland archives in Science Advances (7 Oct 2026). Unpacks the Environmental Match Intensity Index (EMII), over 5,000 georeferenced galena (PbS) ore deposits, the transition from Bronze Age Aegean maritime routes to Roman imperial centers (Eifel/Siegerland, Cévennes, Pennines), and the continuous operation of German mine mouths through World War II, providing the definitive independent geochemical proof of Roulet's Law.",
+      tags: ['ScienceAdvances', 'RouletsLaw', 'PeatlandArchives', 'EMII', 'GalenaOres', 'Plate74', 'Laurion', 'Eifel', 'Siegerland', 'Exposenomics']
+    },
+    {
+      id: 'PHOTO-000CG',
+      title: "Indigenous Gaming Sovereignty & Prediction Markets: The $46B Tribal Economy Evolves to Sovereign IT & Event Contracts (Plate #73)",
+      category: 'Tribal Gaming Sovereignty, Event Contracts & High-Tech Infrastructure',
+      imageSrc: gamingPredictionPlateImg,
+      location: 'California & Oklahoma Sovereign Tribal Lands • New York Post Business Desk • US 9th Circuit Court of Appeals',
+      date: '2026-10-07',
+      cameraInfo: 'Sovereign IT Financial Systems & Prediction Market Architecture Visualizer',
+      vaultHash: '0xINDIGENOUS_GAMING_SOVEREIGNTY_PREDICTION_MARKETS_KALSHI_IGA_PLATE_73_VAULT_2026',
+      description: "Plate #73: Landmark economic sovereignty and digital infrastructure plate documenting the four Native American tribes (3 in California, 1 in Oklahoma) breaking with the Indian casino establishment to launch sovereign-branded prediction market apps powered by Kalshi clearing. Unpacks the $46 billion tribal gaming economy (+5.3% YoY expansion), the 1988 Indian Gaming Regulatory Act (IGRA) jurisdictional classifications, the Ninth Circuit legal showdown heading to the Supreme Court, and how tribal gaming revenue finances on-reservation Tier-3 data centers, fiber networks, and high-wage tech employment under Roulet's Law.",
+      tags: ['TribalGaming', 'PredictionMarkets', 'Kalshi', 'IGA', 'IndianGaming', 'Plate73', 'SovereignIT', 'RouletsLaw']
+    },
     {
       id: 'PHOTO-000CF',
       title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
@@ -7326,6 +7440,56 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
             <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
               <span>Vault Hash: {selectedArticle.linkHash}</span>
               <div className="flex flex-wrap items-center gap-2">
+                {(selectedArticle.id === 'MAG-SCIENCE-ADVANCES-PEATLAND-LEAD-METALLURGY-2026' || selectedArticle.tags?.includes('ScienceAdvances') || selectedArticle.tags?.includes('Plate74')) && (
+                  <a
+                    href="https://www.science.org/doi/10.1126/sciadv.aec1413"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>Science Advances DOI</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-SCIENCE-ADVANCES-PEATLAND-LEAD-METALLURGY-2026' || selectedArticle.tags?.includes('ScienceAdvances') || selectedArticle.tags?.includes('Plate74')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('independent_validation_roulets_law');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-emerald-600 to-teal-500 hover:from-amber-500 hover:to-emerald-500 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-400"
+                  >
+                    <ShieldCheck size={13} className="text-stone-950" />
+                    <span>🔬 Launch Peatland Archives & Roulet's Law (Plate #74)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+                {(selectedArticle.id === 'MAG-NYPOST-INDIGENOUS-GAMING-PREDICTION-MARKETS-2026' || selectedArticle.tags?.includes('TribalGaming') || selectedArticle.tags?.includes('PredictionMarkets') || selectedArticle.tags?.includes('Plate73')) && (
+                  <a
+                    href="https://nypost.com/2026/10/07/business/four-native-american-tribes-break-with-casino-establishment-team-with-kalshi-on-new-gambling-apps/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-300 transition-colors"
+                  >
+                    <FileText size={13} className="text-stone-950" />
+                    <span>NY Post Investigation</span>
+                    <ExternalLink size={12} className="text-stone-950" />
+                  </a>
+                )}
+                {onNavigateTab && (selectedArticle.id === 'MAG-NYPOST-INDIGENOUS-GAMING-PREDICTION-MARKETS-2026' || selectedArticle.tags?.includes('TribalGaming') || selectedArticle.tags?.includes('PredictionMarkets') || selectedArticle.tags?.includes('Plate73')) && (
+                  <button
+                    onClick={() => {
+                      setSelectedArticle(null);
+                      onNavigateTab('indigenous_gaming_prediction_markets');
+                    }}
+                    className="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-500 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-mono font-black rounded-xl cursor-pointer flex items-center gap-1.5 shadow border border-amber-400"
+                  >
+                    <Coins size={13} className="text-stone-950 animate-pulse" />
+                    <span>🪙 Launch Indigenous Gaming & Prediction Markets (Plate #73)</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
                 {(selectedArticle.id === 'MAG-PAHO-SIBSA-WHO-INDIGENOUS-AMERICA-LEAD-WEEK-2026' || selectedArticle.tags?.includes('PAHO') || selectedArticle.tags?.includes('SIBSA') || selectedArticle.tags?.includes('Plate72')) && (
                   <a
                     href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
@@ -7700,6 +7864,60 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
               <div className="pt-3 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] font-mono text-stone-500">
                 <div className="flex flex-wrap items-center gap-2">
                   <span>Cryptographic Ownership: Norm Roulet (User #1 Vault)</span>
+                  {(selectedPhoto.id === 'PHOTO-000CH' || selectedPhoto.tags?.includes('ScienceAdvances') || selectedPhoto.tags?.includes('Plate74')) && (
+                    <>
+                      <a
+                        href="https://www.science.org/doi/10.1126/sciadv.aec1413"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gradient-to-r from-amber-600 via-emerald-600 to-teal-500 hover:from-amber-500 hover:to-emerald-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono transition-colors"
+                      >
+                        <FileText size={12} className="text-stone-950" />
+                        <span>Science Advances Study</span>
+                        <ExternalLink size={11} className="text-stone-950" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000CH' || selectedPhoto.tags?.includes('ScienceAdvances') || selectedPhoto.tags?.includes('Plate74')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('independent_validation_roulets_law');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 via-emerald-600 to-teal-500 hover:from-amber-500 hover:to-emerald-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono"
+                    >
+                      <ShieldCheck size={13} className="text-stone-950" />
+                      <span>🔬 Launch Peatland Archives & Roulet's Law (Plate #74)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
+                  {(selectedPhoto.id === 'PHOTO-000CG' || selectedPhoto.tags?.includes('TribalGaming') || selectedPhoto.tags?.includes('PredictionMarkets') || selectedPhoto.tags?.includes('Plate73')) && (
+                    <>
+                      <a
+                        href="https://nypost.com/2026/10/07/business/four-native-american-tribes-break-with-casino-establishment-team-with-kalshi-on-new-gambling-apps/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-500 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono transition-colors"
+                      >
+                        <FileText size={12} className="text-stone-950" />
+                        <span>NY Post Investigation</span>
+                        <ExternalLink size={11} className="text-stone-950" />
+                      </a>
+                    </>
+                  )}
+                  {onNavigateTab && (selectedPhoto.id === 'PHOTO-000CG' || selectedPhoto.tags?.includes('TribalGaming') || selectedPhoto.tags?.includes('PredictionMarkets') || selectedPhoto.tags?.includes('Plate73')) && (
+                    <button
+                      onClick={() => {
+                        setSelectedPhoto(null);
+                        onNavigateTab('indigenous_gaming_prediction_markets');
+                      }}
+                      className="px-3 py-1 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-500 hover:from-amber-500 hover:to-orange-500 text-stone-950 font-black rounded-lg cursor-pointer flex items-center gap-1.5 shadow-lg border border-amber-400 text-xs font-mono"
+                    >
+                      <Coins size={13} className="text-stone-950 animate-pulse" />
+                      <span>🪙 Launch Indigenous Gaming & Prediction Markets (Plate #73)</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                   {(selectedPhoto.id === 'PHOTO-000CF' || selectedPhoto.tags?.includes('PAHO') || selectedPhoto.tags?.includes('SIBSA') || selectedPhoto.tags?.includes('Plate72')) && (
                     <>
                       <a

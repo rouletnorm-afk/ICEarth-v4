@@ -94,7 +94,7 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
   const isLight = siteTheme === 'light';
 
   // Navigation Sub-tabs
-  const [activeSubTab, setActiveSubTab] = useState<'overview' | 'updates' | 'pillars' | 'toolkits' | 'risk_calculator' | 'plate_view'>('overview');
+  const [activeSubTab, setActiveSubTab] = useState<'overview' | 'calendar' | 'updates' | 'pillars' | 'toolkits' | 'risk_calculator' | 'plate_view'>('overview');
 
   // Interactive Plate Modal
   const [showPlateModal, setShowPlateModal] = useState<boolean>(false);
@@ -328,6 +328,54 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
+        {/* ICEARTH CALENDAR ANNOUNCEMENT: PAHO / SIBSA / WHO VIRTUAL SEMINAR SERIES (OCT 19-21, 2026) */}
+        <div className="rounded-3xl border border-amber-500/60 bg-gradient-to-r from-stone-900 via-amber-950 to-stone-900 text-white p-5 sm:p-6 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-amber-500/20 rounded-full blur-2xl pointer-events-none" />
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-10">
+            <div className="space-y-2 max-w-4xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-2.5 py-1 rounded bg-amber-500 text-stone-950 text-xs font-black uppercase tracking-wider shadow-sm">
+                  ICEARTH CALENDAR EVENT • OCT 19, 20 & 21, 2026
+                </span>
+                <span className="px-2.5 py-1 rounded bg-stone-900 text-amber-300 text-xs font-mono font-bold border border-amber-500/40">
+                  PAHO • SIBSA • WHO Virtual Seminar Series
+                </span>
+                <span className="px-2.5 py-1 rounded bg-rose-950 text-rose-200 text-xs font-mono border border-rose-700/60">
+                  Plate #72 Exposenomics
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-serif font-black text-amber-100">
+                2026 Ibero-American Lead Poisoning Prevention Week: Lead in Latin America — From Detection to Prevention
+              </h2>
+              <p className="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+                <strong>Schedule:</strong> 1:00 p.m. – 4:00 p.m. EDT (Washington DC, Bahamas, DR, Haiti, Venezuela) • 11:00 a.m. – 2:00 p.m. Central America • 12:00 p.m. – 3:00 p.m. Colombia, Ecuador, Peru • 2:00 p.m. – 5:00 p.m. Argentina, Brazil, Chile, Uruguay. Platform: Zoom (English & Spanish).
+              </p>
+            </div>
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 shrink-0">
+              <a
+                href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-xs font-mono transition-all flex items-center gap-1.5 shadow-md cursor-pointer"
+              >
+                <Globe size={14} />
+                <span>Zoom Register</span>
+                <ExternalLink size={12} />
+              </a>
+              {onNavigateTab && (
+                <button
+                  onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                  className="px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-300 hover:text-white border border-amber-500/50 font-black text-xs font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+                >
+                  <Scale size={14} className="text-amber-400" />
+                  <span>🪶 Launch Plate #72 Engine</span>
+                  <ArrowRight size={12} />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
         {/* HERO SECTION WITH EPA PROMOTION ASSET */}
         <div className={`rounded-3xl border ${isLight ? 'bg-white border-stone-200 shadow-xl' : 'bg-stone-900/90 border-stone-800 shadow-2xl'} p-6 sm:p-10 relative overflow-hidden`}>
           
@@ -529,6 +577,7 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none border-b border-stone-200 dark:border-stone-800">
           {[
             { id: 'overview', label: 'Event Overview & Strategy', icon: Sparkles },
+            { id: 'calendar', label: '📅 2026 Global & Ibero-American Calendar', icon: Calendar },
             { id: 'updates', label: `Live Updates & Community Dispatches (${updates.length})`, icon: Megaphone },
             { id: 'pillars', label: 'The 3 Federal Action Pillars', icon: ShieldCheck },
             { id: 'toolkits', label: 'Customizable Flyers & Toolkits', icon: Download },
@@ -672,6 +721,228 @@ export const NationalLeadPoisoningPreventionWeek2026: React.FC<NationalLeadPoiso
 
             </div>
 
+          </div>
+        )}
+
+        {/* SUB-TAB: ICEARTH 2026 GLOBAL & IBERO-AMERICAN CALENDAR */}
+        {activeSubTab === 'calendar' && (
+          <div className="space-y-8 animate-in fade-in duration-200">
+            {/* Calendar Header Card */}
+            <div className={`p-6 sm:p-8 rounded-3xl border ${isLight ? 'bg-white border-stone-200' : 'bg-stone-900 border-stone-800'} space-y-4 shadow-xl`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4">
+                <div>
+                  <div className="flex items-center gap-2 text-amber-500 font-mono text-xs font-bold uppercase tracking-wider">
+                    <Calendar size={15} />
+                    <span>ICEARTH GLOBAL LEAD SUMMIT TIMETABLE • OCTOBER 2026</span>
+                  </div>
+                  <h3 className="text-2xl font-serif font-black mt-1">
+                    October 2026 Lead Poisoning Prevention Calendar & Global Convenings
+                  </h3>
+                  <p className="text-xs sm:text-sm text-stone-500 mt-1 max-w-3xl">
+                    Coordinating international, hemispheric, and federal actions across the Americas—from the 14th International Week to the PAHO/SIBSA Ibero-American Virtual Seminar Series and U.S. National Lead Poisoning Prevention Week.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2 shrink-0">
+                  <a
+                    href="https://www.paho.org/en/events/virtual-seminar-series-2026-ibero-american-lead-poisoning-prevention-week"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-xs font-mono transition-all flex items-center gap-1.5 shadow-md cursor-pointer"
+                  >
+                    <Globe size={13} />
+                    <span>PAHO Official Event</span>
+                    <ExternalLink size={12} />
+                  </a>
+                  {onNavigateTab && (
+                    <button
+                      onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                      className="px-4 py-2 rounded-xl bg-stone-950 hover:bg-stone-800 text-amber-300 border border-amber-500/50 font-black text-xs font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+                    >
+                      <Scale size={13} className="text-amber-400" />
+                      <span>Plate #72 Engine</span>
+                      <ArrowRight size={12} />
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Three Tier Calendar Matrix */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                {/* Event 1 */}
+                <div className={`p-5 rounded-2xl border ${isLight ? 'bg-stone-50 border-stone-200' : 'bg-stone-950/80 border-stone-800'} space-y-3 relative overflow-hidden`}>
+                  <div className="flex items-center justify-between">
+                    <span className="px-2 py-0.5 rounded bg-blue-900/40 text-blue-300 text-[10px] font-mono font-bold uppercase border border-blue-700/50">
+                      Phase 1 • Global
+                    </span>
+                    <span className="text-xs font-mono text-stone-400">Oct 18–24, 2026</span>
+                  </div>
+                  <h4 className="font-serif font-black text-base text-blue-400">
+                    14th International Lead Poisoning Prevention Week (ILPPW)
+                  </h4>
+                  <p className="text-xs text-stone-400 leading-relaxed">
+                    Convened globally by WHO and the UN Environment Programme (UNEP). Campaign theme: <em>"From Detection to Prevention"</em>, emphasizing that invisible environmental exposure must be caught before causing neurological harm in children.
+                  </p>
+                  <div className="pt-2 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center gap-1">
+                    <Globe size={12} className="text-blue-400" />
+                    <span>WHO / UNEP Worldwide Observance</span>
+                  </div>
+                </div>
+
+                {/* Event 2: PAHO / SIBSA Highlight */}
+                <div className={`p-5 rounded-2xl border-2 border-amber-500/70 ${isLight ? 'bg-amber-50/50' : 'bg-gradient-to-b from-amber-950/40 to-stone-950'} space-y-3 relative overflow-hidden shadow-lg`}>
+                  <div className="flex items-center justify-between">
+                    <span className="px-2 py-0.5 rounded bg-amber-500 text-stone-950 text-[10px] font-mono font-black uppercase shadow-xs">
+                      Featured • Hemispheric
+                    </span>
+                    <span className="text-xs font-mono text-amber-300 font-bold">Oct 19, 20 & 21, 2026</span>
+                  </div>
+                  <h4 className="font-serif font-black text-base text-amber-300">
+                    PAHO & SIBSA 2026 Ibero-American Virtual Seminar Series
+                  </h4>
+                  <p className="text-xs text-stone-300 leading-relaxed">
+                    <em>"Lead in Latin America: From Detection to Prevention"</em>. Focuses on artisanal mining, industrial tailings, glazed ceramics (barro vidriado), and informal battery recycling across Indigenous and Latin American territories.
+                  </p>
+                  <div className="space-y-1.5 pt-1 text-[11px] font-mono text-stone-300 bg-black/40 p-2.5 rounded-lg border border-amber-500/30">
+                    <div><strong>Time:</strong> 1:00 p.m. – 4:00 p.m. EDT</div>
+                    <div><strong>Platform:</strong> Zoom (English & Spanish)</div>
+                    <div><strong>Support:</strong> World Health Organization</div>
+                  </div>
+                  {onNavigateTab && (
+                    <button
+                      onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                      className="w-full mt-2 py-2 px-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs font-mono font-black flex items-center justify-center gap-1.5 cursor-pointer shadow transition-all"
+                    >
+                      <Scale size={13} />
+                      <span>Launch Indigenous Exposenomics (Plate #72)</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Event 3: US Federal NLPPW */}
+                <div className={`p-5 rounded-2xl border ${isLight ? 'bg-stone-50 border-stone-200' : 'bg-stone-950/80 border-stone-800'} space-y-3 relative overflow-hidden`}>
+                  <div className="flex items-center justify-between">
+                    <span className="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300 text-[10px] font-mono font-bold uppercase border border-emerald-700/50">
+                      Phase 3 • U.S. Federal
+                    </span>
+                    <span className="text-xs font-mono text-stone-400">Oct 25–31, 2026</span>
+                  </div>
+                  <h4 className="font-serif font-black text-base text-emerald-400">
+                    National Lead Poisoning Prevention Week (NLPPW 2026)
+                  </h4>
+                  <p className="text-xs text-stone-400 leading-relaxed">
+                    Joint federal campaign by U.S. EPA, CDC, and HUD under the theme <em>"Keep Kids Safe from Lead"</em>. Nationwide distribution of toolkits, home inspection guidelines, and pediatric testing drives across high-burden communities.
+                  </p>
+                  <div className="pt-2 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center gap-1">
+                    <ShieldCheck size={12} className="text-emerald-400" />
+                    <span>EPA • CDC • HUD Joint Federal Coalition</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Detailed Time Zone & Agenda Card for PAHO Virtual Seminar Series */}
+            <div className={`p-6 sm:p-8 rounded-3xl border border-amber-600/40 ${isLight ? 'bg-white' : 'bg-stone-900'} space-y-6 shadow-xl`}>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="text-xs font-mono text-amber-500 font-bold uppercase tracking-wider">
+                    DEEP DIVE AGENDA & MULTI-TIMEZONE CONVERSION
+                  </span>
+                  <h4 className="text-xl font-serif font-black mt-1">
+                    PAHO / SIBSA / WHO Seminar Series Broadcast Times: October 19, 20 & 21, 2026
+                  </h4>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-mono font-bold border border-amber-500/40">
+                  Daily 3-Hour Sessions
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs font-mono">
+                <div className="p-3.5 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
+                  <div className="text-amber-400 font-bold">1:00 p.m. – 4:00 p.m. EDT</div>
+                  <div className="text-stone-300 font-semibold">Eastern Daylight Time</div>
+                  <div className="text-[11px] text-stone-500">Washington, D.C., Bahamas, Dominican Republic, Haiti, Venezuela</div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
+                  <div className="text-emerald-400 font-bold">11:00 a.m. – 2:00 p.m. CST</div>
+                  <div className="text-stone-300 font-semibold">Central America Time</div>
+                  <div className="text-[11px] text-stone-500">Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica, Panama</div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
+                  <div className="text-sky-400 font-bold">12:00 p.m. – 3:00 p.m. COT/PET</div>
+                  <div className="text-stone-300 font-semibold">Andean & Caribbean Time</div>
+                  <div className="text-[11px] text-stone-500">Colombia, Ecuador, Jamaica, Peru, Mexico City</div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-stone-950 border border-stone-800 space-y-1">
+                  <div className="text-purple-400 font-bold">2:00 p.m. – 5:00 p.m. ART/BRT</div>
+                  <div className="text-stone-300 font-semibold">Southern Cone Time</div>
+                  <div className="text-[11px] text-stone-500">Argentina, Brasília (Brazil), Chile, Suriname, Uruguay</div>
+                </div>
+              </div>
+
+              {/* Seminar 3-Day Syllabus Breakdown */}
+              <div className="space-y-3 pt-2">
+                <h5 className="font-serif font-black text-sm uppercase tracking-wide text-stone-300">
+                  Three-Day Scientific Program Syllabus
+                </h5>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="p-4 rounded-xl bg-stone-950/60 border border-stone-800 space-y-2">
+                    <span className="px-2 py-0.5 rounded bg-stone-800 text-amber-400 text-[10px] font-mono font-bold">
+                      Day 1 • Oct 19, 2026
+                    </span>
+                    <h6 className="font-bold text-xs text-white">Characterizing Regional Risk Scenarios & Mining Tailings</h6>
+                    <p className="text-[11px] text-stone-400 leading-relaxed">
+                      Mapping artisanal gold & silver metallurgy, active smelter emissions, and historic colonial mining sites across the Andean corridor and Mesoamerica.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-stone-950/60 border border-stone-800 space-y-2">
+                    <span className="px-2 py-0.5 rounded bg-stone-800 text-amber-400 text-[10px] font-mono font-bold">
+                      Day 2 • Oct 20, 2026
+                    </span>
+                    <h6 className="font-bold text-xs text-white">Pediatric Biomonitoring & Glazed Ceramic Cooking Vessels</h6>
+                    <p className="text-[11px] text-stone-400 leading-relaxed">
+                      Addressing <em>barro vidriado</em> (lead-oxide glazed ceramics) in traditional culinary practices, informal battery disassembly (ULAB), and capillary blood testing.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-stone-950/60 border border-stone-800 space-y-2">
+                    <span className="px-2 py-0.5 rounded bg-stone-800 text-amber-400 text-[10px] font-mono font-bold">
+                      Day 3 • Oct 21, 2026
+                    </span>
+                    <h6 className="font-bold text-xs text-white">Sovereign Prevention Policies & Eliminating Disparities</h6>
+                    <p className="text-[11px] text-stone-400 leading-relaxed">
+                      Closing the knowledge gap, formulating mandatory bans on lead paints and industrial glazes, and deploying point-of-care diagnostics to protect children.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Forensic Link to Plate 72 */}
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-950/60 to-stone-950 border border-amber-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-xs font-mono text-amber-400 font-bold">
+                    <Scale size={14} />
+                    <span>PLATE #72 FORENSIC COMPONENT AVAILABLE</span>
+                  </div>
+                  <p className="text-xs text-stone-300">
+                    Explore the complete 10,000-year skeletal continuum, 1492 colonial enslavement, and the fundamental differences between Indigenous Americans and Latin Americans under Roulet's Law.
+                  </p>
+                </div>
+                {onNavigateTab && (
+                  <button
+                    onClick={() => onNavigateTab('indigenous_america_lead_exposenomics')}
+                    className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-xs font-mono shrink-0 flex items-center gap-1.5 cursor-pointer shadow transition-all"
+                  >
+                    <span>Launch Plate #72</span>
+                    <ArrowRight size={13} />
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         )}
 

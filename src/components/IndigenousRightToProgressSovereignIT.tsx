@@ -30,7 +30,8 @@ import {
   TrendingUp,
   Droplets,
   Server,
-  DollarSign
+  DollarSign,
+  Coins
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -719,6 +720,15 @@ export const IndigenousRightToProgressSovereignIT: React.FC<IndigenousRightToPro
                 >
                   <Sparkles size={12} className="text-cyan-400" />
                   <span>DeepMind Readiness (Plate #68)</span>
+                </button>
+
+                <button
+                  onClick={() => onNavigateTab('indigenous_gaming_prediction_markets')}
+                  className="px-3 py-1.5 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-500 hover:from-amber-500 hover:to-orange-400 text-stone-950 font-black rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 shadow"
+                >
+                  <Coins size={12} className="text-stone-950" />
+                  <span>Indigenous Gaming (Plate #73)</span>
+                  <ArrowRight size={12} />
                 </button>
 
                 <button

@@ -81,6 +81,8 @@ import indigenousProgressPlateImg from '../assets/images/indigenous_right_to_pro
 import aiStartupPlateImg from '../assets/images/ai_startup_incentives_google_1791319115754.jpg';
 import leadDisparitiesPlateImg from '../assets/images/lead_crime_racial_disparities_brown_study_1791346391941.jpg';
 import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plate72_1791378025298.jpg';
+import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
+import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import {
   Shield,
   UserCheck,
@@ -212,6 +214,26 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CH',
+      title: "Independent Validation of Roulet's Law: Rise and Spread of Lead-Silver Metallurgy Deciphered from Peatland Archives (Plate #74)",
+      type: 'Environmental Archaeology, Peatland Isotope Archives & Continental Galena Extraction IP Asset',
+      imageSrc: peatlandMapPlateImg,
+      link: 'independent_validation_roulets_law',
+      sourceUrl: 'https://www.science.org/doi/10.1126/sciadv.aec1413',
+      description: "Plate #74: Landmark forensic environmental archaeology IP asset documenting the six millennia of atmospheric lead-silver metallurgy deciphered from European peatland archives in Science Advances (7 Oct 2026). Unpacks the Environmental Match Intensity Index (EMII), over 5,000 georeferenced galena (PbS) ore deposits, the transition from Bronze Age Aegean maritime routes to Roman imperial centers (Eifel/Siegerland, Cévennes, Pennines), and the continuous operation of German mine mouths through World War II, providing independent geochemical verification of Roulet's Law.",
+      sovereignHash: '0xSCIENCE_ADVANCES_PEATLAND_LEAD_METALLURGY_ROULETS_LAW_VALIDATION_2026_PLATE_74'
+    },
+    {
+      id: 'IP-000CG',
+      title: "Indigenous Gaming Sovereignty & Prediction Markets: The $46B Tribal Economy Evolves to Sovereign IT & Event Contracts (Plate #73)",
+      type: 'Tribal Gaming Sovereignty, Event Contracts & High-Tech Information Technology IP Asset',
+      imageSrc: gamingPredictionPlateImg,
+      link: 'indigenous_gaming_prediction_markets',
+      sourceUrl: 'https://nypost.com/2026/10/07/business/four-native-american-tribes-break-with-casino-establishment-team-with-kalshi-on-new-gambling-apps/',
+      description: "Plate #73: Landmark economic sovereignty and information technology IP asset documenting the four Native American tribes (3 in California, 1 in Oklahoma) breaking with the Indian casino establishment to launch sovereign-branded prediction market apps powered by Kalshi clearing. Analyzes the $46 billion tribal gaming economy (+5.3% YoY growth), statutory protections under the 1988 Indian Gaming Regulatory Act (IGRA), the 9th Circuit and Supreme Court showdown regarding event contracts vs sports gambling, and how tribal gaming revenues finance on-reservation Tier-3 data centers, fiber networks, and tech jobs under Roulet's Law.",
+      sovereignHash: '0xINDIGENOUS_GAMING_SOVEREIGNTY_PREDICTION_MARKETS_KALSHI_IGA_PLATE_73_VAULT_2026'
+    },
     {
       id: 'IP-000CF',
       title: "Indigenous America Lead Exposenomics: The 10,000-Year Pristine Continuum, 1492 Extractive Enslavement & PAHO Lead Poisoning Prevention Week 2026 (Plate #72)",
