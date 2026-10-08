@@ -81,6 +81,7 @@ import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plat
 import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
+import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
 import {
   Newspaper,
   Coins,
@@ -161,14 +162,14 @@ export interface NewsArticle {
   publishDate: string;
   author: string;
   authorName: string;
-  abstract: string;
-  editorCommentary: string;
+  abstract?: string;
+  editorCommentary?: string;
   fullExcerpt: string;
   tags: string[];
   communities: string[]; // e.g. ['ICEarth Global', 'Cleveland & Cuyahoga County', 'ICETaos', 'Swiss Exposenomics']
   vaultHash: string;
-  editorName: string;
-  editorRole: string;
+  editorName?: string;
+  editorRole?: string;
   featured?: boolean;
   promotedToHomePage?: boolean;
   imageUrl?: string;
@@ -187,6 +188,12 @@ export interface NewsArticle {
   evidenceLevel?: string;
   status?: string;
   imageCaption?: string;
+  summary?: string;
+  leadScientist?: string;
+  investigationType?: string;
+  verifiedDoi?: string;
+  readingTimeMinutes?: number;
+  actionNeeded?: string;
 }
 
 interface ICEarthNewsRepositoryProps {
@@ -198,6 +205,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gemini_agentic') ||
+    u.includes('agentic_ai') ||
+    u.includes('techcrunch_2026') ||
+    u.includes('plate_76') ||
+    u.includes('plate76') ||
+    u.includes('plate #76') ||
+    u.includes('photo-000cj') ||
+    u.includes('ip-000cj') ||
+    u.includes('1791498887746')
+  ) {
+    return geminiAgenticPlateImg;
+  }
   if (
     u.includes('vanishing_gut') ||
     u.includes('microbiome') ||
@@ -1302,6 +1322,76 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-TECHCRUNCH-GOOGLE-GEMINI-AGENTIC-AI-SOVEREIGNTY-2026',
+    contentType: 'Article',
+    title: "Google Brings Agentic AI to Gemini: Architectural Blueprint for ICEarth Member Services & Sovereign Indigenous Tribal Nations (Plate #76)",
+    subtitle: "MOUNTAIN VIEW / TECHCRUNCH — At a major Google Cloud event, Google announced it is bringing its Gemini AI into the agentic age, launching a unified agent capable of taking direct ownership of assigned tasks on the user's behalf from a single interface. Moving beyond conversational prompts, the agent writes code, coordinates multi-calendar events, books travel itineraries, and automates multi-step enterprise tasks across 1B+ monthly active users and 90% of Fortune 100 corporations. Norman Roulet synthesizes this enterprise leap with his Spectrum Telecom IT benchmarking lineage (IBM, HP, DEC, Boeing, SAIC) to establish a sovereign deployment architecture for ICEarth member edge services and air-gapped Indigenous Tribal Nation enclaves governed under First Nations OCAP® principles.",
+    sourceUrl: 'https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/',
+    sourceName: 'TechCrunch Wire / Google Cloud Event',
+    publishDate: '2026-10-08',
+    author: 'Frederic Lardinois (TechCrunch) / Sovereign Synthesis by Norman Roulet',
+    authorName: 'Frederic Lardinois (TechCrunch) / Sovereign Synthesis by Norman Roulet',
+    originState: 'Mountain View, CA • Greater Cleveland Sovereign Desk • Taos Pueblo • 574+ Tribal Nations',
+    communities: [
+      '574+ Federally Recognized Sovereign Tribal Nations',
+      'First Nations Information Governance Centre (FNIGC)',
+      'ICEarth Sovereign IT & Data Management Consortium',
+      'Spectrum Telecom Common Operating Environment Benchmarking Archives',
+      'Google Cloud Enterprise AI User Ecosystem'
+    ],
+    tags: [
+      'TechCrunch2026',
+      'GeminiAgentic',
+      'GoogleCloud',
+      'SovereignAI',
+      'IndigenousNations',
+      'OCAP',
+      'Plate76',
+      'SpectrumTelecom',
+      'RouletBenchmarking',
+      'EdgeComputing',
+      'TaskOwnership'
+    ],
+    summary: "At a Google Cloud summit, Google launched a unified Gemini agent marking the transition from conversational chatbot prompts to autonomous task ownership (generating code, scheduling meetings, booking travel, and calling enterprise APIs) across 1B+ monthly active users and 90% of Fortune 100 companies. ICEarth translates this enterprise milestone into decentralized member edge services with zero surveillance, and sovereign enclaves for 574+ Indigenous Tribal Nations adhering to First Nations OCAP® data governance.",
+    imageUrl: geminiAgenticPlateImg,
+    thumbnailUrl: geminiAgenticPlateImg,
+    imageCaption: 'Plate #76: Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations — ICEarth Multi-Agent Architecture, OCAP Governance, and Edge Member Services (TechCrunch & Google Cloud 2026).',
+    leadScientist: 'Sundar Pichai (Google) / Norman Roulet (Sovereign Systems Architect)',
+    investigationType: 'Agentic AI Architecture / Enterprise IT Benchmarking / Indigenous Data Sovereignty',
+    vaultHash: '0xTECHCRUNCH_2026_GOOGLE_GEMINI_AGENTIC_AI_ENTERPRISE_INDIGENOUS_SOVEREIGNTY_PLATE_76',
+    verifiedDoi: 'TechCrunch-2026-10-08-Gemini-Agentic',
+    readingTimeMinutes: 14,
+    actionNeeded: 'Explore Agentic Task Ownership, Test Multi-Agent Orchestrator, and Audit Tribal OCAP Enclaves',
+    fullExcerpt: `GOOGLE BRINGS AGENTIC AI TO GEMINI: ARCHITECTURAL BLUEPRINT FOR ICEARTH MEMBERS & SOVEREIGN INDIGENOUS TRIBAL NATIONS
+TechCrunch | 8 October 2026 | Reported by Frederic Lardinois
+Google Cloud Event Keynote | Sundar Pichai (1B+ MAUs, 90% Fortune 100 Enterprise Adoption)
+Sovereign IT Architecture & Historical Benchmarking by Norman Roulet | Founder Spectrum Telecom / ICEarth Desk
+Plate #76 Cryptographic Archive: PHOTO-000CJ / IP-000CJ | Vault Hash: 0xTECHCRUNCH_2026_GOOGLE_GEMINI_AGENTIC_AI_ENTERPRISE_INDIGENOUS_SOVEREIGNTY_PLATE_76
+
+EXECUTIVE SUMMARY & TECHCRUNCH WIRE REPORT:
+At a Google Cloud event on Thursday, the company announced it's bringing its Gemini AI into the agentic age, with the launch of a unified agent that can not only answer questions but also get things done on the user's behalf, all from a single interface.
+The move comes as AI tools have been moving beyond being just conversational experiences to those that can take ownership of assigned tasks, generate code, schedule meetings, book appointments and travel, and more.
+As Google CEO Sundar Pichai pointed out, Gemini today has over 1 billion monthly active users, and nearly 90% of Fortune 100 businesses now use Gemini Enterprise at work. Given Gemini's adoption in the corporate world, Google will initially focus on bringing the agent to businesses before later rolling it out to consumers.
+
+SPECTRUM TELECOM & ENTERPRISE IT BENCHMARKING CONTEXT:
+In the 1990s, Spectrum Telecom developed Global Enterprise Information Technology competitive benchmarking for IBM, HP, DEC, Motorola, Boeing, Lucent, SAIC and other American technology leaders providing the Common Operating Environment (COE) for mission-critical operations.
+Decades later, ICEarth solves the critical missing link in big enterprise IT: personal data management, individual autonomy, and inherent sovereignty. The agentic AI revolution must not simply reinforce centralized cloud monopolization; it must empower individuals and self-governing nations.
+
+ICEARTH SOVEREIGN MEMBER SERVICES:
+- Personal Exposenomics & Lead Guard: Edge agents monitor water sensor telemetry, blood lead levels, and municipal notices without insurer data harvesting.
+- Autonomous Productivity Co-Pilot: Conflict-free scheduling, flight/train reservations, and research briefings running locally on user devices.
+- Code & Node Engineering Agent: Compiling, verifying, and deploying sovereign nodes without reliance on centralized corporate pipelines.
+
+DEPLOYMENT TO INDIGENOUS COMMUNITIES AS SOVEREIGN NATIONS:
+574+ federally recognized tribes hold inherent sovereignty. ICEarth adapts Gemini Agentic AI into air-gapped tribal sovereign enclaves conforming to First Nations Information Governance Centre (FNIGC) OCAP® standards:
+- Ownership: Tribal nations retain 100% intellectual property, weights, and telemetry.
+- Control: Customary law and council resolutions govern agent access boundaries.
+- Access: Multi-sig tribal authority gates sacred knowledge and land records.
+- Possession: Physical hardware hosted within reservation sovereign boundaries.
+- Core Applications: Treaty boundary GIS analytics, real-time watershed pollution sensing, sacred language preservation without corporate scraping, and gaming compact revenue auditing.`,
+    editorCommentary: "Plate #76: Google's agentic launch proves enterprise viability at massive scale (1B+ users). ICEarth adapts this engine into a sovereign service for member privacy and Indigenous Nation self-governance."
+  },
   {
     id: 'ART-NATURE-STANFORD-VANISHING-GUT-MICROBIOME-2026',
     contentType: 'Article',
@@ -7159,6 +7249,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('TechCrunch2026') || article.tags?.includes('GeminiAgentic') || article.tags?.includes('Plate76') || article.id.includes('GOOGLE-GEMINI-AGENTIC')) && (
+                      <>
+                        <a
+                          href="https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 hover:from-sky-500 hover:to-blue-500 text-white font-mono font-black text-xs rounded-xl shadow border border-sky-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-white" />
+                          <span>TechCrunch Wire</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+
+                        {onNavigateTab && (
+                          <button
+                            onClick={() => onNavigateTab('gemini_agentic_sovereign_service')}
+                            className="px-3.5 py-1.5 bg-gradient-to-r from-sky-400 via-teal-400 to-emerald-400 hover:from-sky-300 hover:to-emerald-300 text-stone-950 font-mono font-black text-xs rounded-xl shadow border border-sky-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                          >
+                            <Cpu size={13} className="text-stone-950 animate-pulse" />
+                            <span>🚀 Launch Gemini Sovereign Agent Engine (Plate #76)</span>
+                            <ArrowRight size={12} />
+                          </button>
+                        )}
+                      </>
+                    )}
+
                     {(article.tags?.includes('StanfordMicrobiome') || article.tags?.includes('VanishingMicrobes') || article.tags?.includes('Plate75') || article.id.includes('STANFORD-VANISHING-GUT-MICROBIOME')) && (
                       <>
                         <a

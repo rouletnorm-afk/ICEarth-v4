@@ -161,6 +161,7 @@ import { DataCenterIncentivesEngine } from './components/DataCenterIncentivesEng
 import { SuperIntelligenceSovereignty } from './components/SuperIntelligenceSovereignty';
 import { LeadAlzheimersDementiaRisk } from './components/LeadAlzheimersDementiaRisk';
 import { VanishingGutMicrobiome } from './components/VanishingGutMicrobiome';
+import { GeminiAgenticSovereignService } from './components/GeminiAgenticSovereignService';
 import { SovereignAIAgentsAdoption } from './components/SovereignAIAgentsAdoption';
 import { TrumpAISummitRichestTable } from './components/TrumpAISummitRichestTable';
 import { OpenAIBrokenCulture } from './components/OpenAIBrokenCulture';
@@ -174,7 +175,7 @@ export default function App() {
   // Site-wide Theme State ('light' default for enhanced accessibility & poor eyesight)
   const [siteTheme, setSiteTheme] = useState<'light' | 'dark'>('light');
 
-  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'indigenous_gaming_prediction_markets' | 'indigenous_gaming' | 'tribal_gaming' | 'prediction_markets' | 'plate_73' | 'plate73' | 'independent_validation_roulets_law' | 'peatland_archives' | 'science_advances_lead' | 'plate_74' | 'plate74' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'vanishing_gut_microbiome' | 'gut_microbiome' | 'vanishing_microbes' | 'stanford_microbiome' | 'plate_75' | 'plate75' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'indigenous_america_lead_exposenomics' | 'indigenous_america_lead' | 'paho_lead_week' | 'plate_72' | 'plate72' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
+  const [activeTab, setActiveTab] = useState<'sovereign_portal' | 'ucanx' | 'profiler' | 'manuscript' | 'simulator' | 'nodes' | 'chat' | 'benchmarking' | 'odisse' | 'buffalo' | 'cleveland' | 'cleveland_hypocrisy' | 'chicago' | 'reports' | 'milwaukee' | 'bihar' | 'litigation' | 'indigenous' | 'deb_haaland_home' | 'indigenous_right_to_progress' | 'indigenous_progress' | 'indigenous_gaming_prediction_markets' | 'indigenous_gaming' | 'tribal_gaming' | 'prediction_markets' | 'plate_73' | 'plate73' | 'independent_validation_roulets_law' | 'peatland_archives' | 'science_advances_lead' | 'plate_74' | 'plate74' | 'gemini_infiltration_defense' | 'deepmind_readiness' | 'gemini_sovereignty_readiness' | 'ai_startup_incentives' | 'google_startups' | 'startup_incentives' | 'cherokee_it_position' | 'sovereign_identity' | 'swiss_data_sovereignty' | 'sovereign_agents' | 'trump_ai_summit_table' | 'openai_culture' | 'openai_broken_culture' | 'ai_pb_personalities' | 'midgley_altman' | 'super_intelligence_force' | 'sif_audit' | 'rural_datacenter_tax' | 'rural_indigenous_datacenter_tax' | 'datacenter_incentives' | 'super_intelligence_sovereignty' | 'ai_sovereignty' | 'icearth_stack' | 'ai_and_kehoe_rule' | 'ai_existential_risk' | 'glial_neurotoxicity' | 'ghana_lead_poisoning' | 'bangladesh_lead_crisis' | 'roanoke_lead_audit' | 'jackson_lead_audit' | 'jackson_necropolitics' | 'jicarilla_sovereign_it' | 'jicarilla_gasbuggy_audit' | 'mirna31_nrf2_lead' | 'occupational_lead_review' | 'artisanal_metallurgy' | 'eighteenmile_creek' | 'nigeria_lead_review' | 'childhood_lead_testing' | 'carvacrol_cavitation' | 'red_beetroot_neuroprotection' | 'public_interest_tech' | 'realtime_pollution_tracking' | 'nlppw_2026' | 'genocost' | 'proofs' | 'terrorism_proofs' | 'cleveland_strategy' | 'nobel_nomination' | 'who_action_plan' | 'toledo' | 'flint' | 'evolutionary_canary' | 'lead_alzheimers_dementia' | 'vanishing_gut_microbiome' | 'gut_microbiome' | 'vanishing_microbes' | 'stanford_microbiome' | 'plate_75' | 'plate75' | 'gemini_agentic_sovereign_service' | 'gemini_agentic' | 'agentic_ai' | 'tribal_agents' | 'plate_76' | 'plate76' | 'pica_exposenomics' | 'dumpsite_leachate' | 'kohl_lead_isis' | 'suriname_isotope' | 'denisovan_epas1' | 'wildfire_pyro' | 'artisanal_mining' | 'twin_cities_lead' | 'bangladesh_lead_free' | 'nigeria_heart_habitat' | 'storybook' | 'documentary' | 'medical_interventions' | 'global_lead_crime_proof' | 'lead_crime_racial_disparities' | 'racial_disparities' | 'brown_lead_study' | 'indigenous_america_lead_exposenomics' | 'indigenous_america_lead' | 'paho_lead_week' | 'plate_72' | 'plate72' | 'icetaos' | 'why_icearth' | 'member_matrix' | 'norm_roulet' | 'swiss_school' | 'nanospire_nanocanx' | 'ai_testimonial' | 'analytics' | 'abm_simulator'>('sovereign_portal');
 
   // Mobile Navigation State
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -1079,6 +1080,18 @@ export default function App() {
         lower.includes('tsimane')
       ) {
         setActiveTab('vanishing_gut_microbiome');
+      } else if (
+        lower === 'gemini_agentic_sovereign_service' ||
+        lower === 'gemini_agentic' ||
+        lower === 'agentic_ai' ||
+        lower === 'gemini_agentic_ai' ||
+        lower === 'tribal_agents' ||
+        lower === 'plate_76' ||
+        lower === 'plate76' ||
+        lower === 'plate-76' ||
+        lower.includes('agentic')
+      ) {
+        setActiveTab('gemini_agentic_sovereign_service');
       } else if (lower === 'news' || lower === 'news_repository' || lower === 'repository' || lower === 'reports') {
         setActiveTab('reports');
       } else if (lower === 'sovereign_portal' || lower === 'sovereign' || lower === 'home' || lower === 'portal') {
@@ -2294,6 +2307,22 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   </span>
                 </button>
 
+                {/* 0.00017 Google Gemini Agentic AI: Sovereign Services & Indigenous Tribal Enclaves (Plate #76) */}
+                <button
+                  onClick={() => setActiveTab('gemini_agentic_sovereign_service')}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'gemini_agentic_sovereign_service' || (activeTab as string) === 'gemini_agentic' || (activeTab as string) === 'agentic_ai' || (activeTab as string) === 'tribal_agents' || (activeTab as string) === 'plate_76' || (activeTab as string) === 'plate76'
+                      ? 'bg-gradient-to-r from-sky-950 via-stone-900 to-indigo-950 text-sky-200 border-sky-400 shadow-xl font-black ring-2 ring-sky-400/80'
+                      : 'hover:bg-sky-100 text-stone-950 border-sky-500/80 bg-gradient-to-r from-sky-50/90 via-stone-50 to-indigo-50/90 font-black shadow-xs ring-1 ring-sky-400/40'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'gemini_agentic_sovereign_service' ? 'text-sky-300 animate-pulse' : 'text-sky-700'} />
+                  <span className="flex-1 font-black">🚀 Gemini Agentic AI: Tribal Sovereignty</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    PLATE #76
+                  </span>
+                </button>
+
                 {/* 0.0002 Pica Disorder & Geophagy Exposenomics */}
                 <button
                   onClick={() => setActiveTab('pica_exposenomics' as any)}
@@ -3061,6 +3090,26 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                   <span className="flex-1 font-black">🔬 Peatland Lead Archives (Roulet's Law)</span>
                   <span className="px-1.5 py-0.2 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 text-stone-950 text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
                     Plate #74
+                  </span>
+                </button>
+
+                {/* 0.00000B00.0D Google Gemini Agentic AI: Sovereign Services & Indigenous Tribal Enclaves (Plate #76) */}
+                <button
+                  id="mobile-nav-gemini-agentic-tab"
+                  onClick={() => {
+                    setActiveTab('gemini_agentic_sovereign_service');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-medium tracking-tight transition-all cursor-pointer border ${
+                    activeTab === 'gemini_agentic_sovereign_service' || (activeTab as string) === 'gemini_agentic' || (activeTab as string) === 'agentic_ai' || (activeTab as string) === 'tribal_agents' || (activeTab as string) === 'plate_76' || (activeTab as string) === 'plate76'
+                      ? 'bg-gradient-to-r from-sky-950 via-stone-900 to-indigo-950 text-sky-200 border-sky-400 shadow-md font-extrabold ring-2 ring-sky-400/80'
+                      : 'hover:bg-sky-500/20 text-stone-950 border-sky-500/70 bg-gradient-to-r from-sky-50/95 to-indigo-50/95 font-black shadow-xs'
+                  }`}
+                >
+                  <Cpu size={16} className={activeTab === 'gemini_agentic_sovereign_service' ? 'text-sky-400 animate-pulse' : 'text-sky-700'} />
+                  <span className="flex-1 font-black">🚀 Gemini Agentic AI & Tribal Sovereignty</span>
+                  <span className="px-1.5 py-0.2 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white text-[8px] tracking-wide rounded uppercase font-black shadow-xs">
+                    Plate #76
                   </span>
                 </button>
 
@@ -4082,6 +4131,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
                     { id: 'evolutionary_canary', icon: Dna, label: '🐤 H. sapiens Evolutionary Canary', badge: 'Nature 2026', color: 'amber' },
                     { id: 'lead_alzheimers_dementia', icon: Brain, label: '🧠 Lead & Alzheimer’s / Dementia Risk', badge: 'Plate #58', color: 'purple' },
                     { id: 'vanishing_gut_microbiome', icon: Dna, label: '🧬 Vanishing Gut Microbes (Stanford Nature)', badge: 'Plate #75', color: 'emerald' },
+                    { id: 'gemini_agentic_sovereign_service', icon: Cpu, label: '🚀 Gemini Agentic AI & Tribal Sovereignty', badge: 'Plate #76', color: 'sky' },
                     { id: 'pica_exposenomics', icon: Utensils, label: '👅 Pica & Geophagy Exposenomics', badge: 'Global Pica', color: 'amber' },
                     { id: 'dumpsite_leachate', icon: Droplets, label: '💧 Dumpsite Leachate & Groundwater', badge: 'Plate #65', color: 'cyan' },
                     { id: 'kohl_lead_isis', icon: Eye, label: '👁️ Kohl in Oman: Lead-ISIS Proof', badge: 'Plate #66', color: 'amber' },
@@ -4268,6 +4318,7 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
               {(activeTab === 'public_interest_tech' || (activeTab as string) === 'public_interest_technology' || (activeTab as string) === 'pit' || (activeTab as string) === 'public_tech') && '💡 Public Interest Technology & Lead Paint'}
               {(activeTab === 'realtime_pollution_tracking' || (activeTab as string) === 'pollution_tracking' || (activeTab as string) === 'realtime' || (activeTab as string) === 'climatetrace') && '📡 Real-Time Pollution Tracking: Sovereign Portal'}
               {(activeTab === 'vanishing_gut_microbiome' || (activeTab as string) === 'gut_microbiome' || (activeTab as string) === 'vanishing_microbes' || (activeTab as string) === 'stanford_microbiome' || (activeTab as string) === 'plate_75' || (activeTab as string) === 'plate75') && "🧬 Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Stanford Nature 2026, Plate #75)"}
+              {(activeTab === 'gemini_agentic_sovereign_service' || (activeTab as string) === 'gemini_agentic' || (activeTab as string) === 'agentic_ai' || (activeTab as string) === 'tribal_agents' || (activeTab as string) === 'plate_76' || (activeTab as string) === 'plate76') && "🚀 Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations (TechCrunch 2026, Plate #76)"}
               {activeTab === 'simulator' && '📊 Roulet\'s Law Simulator'}
               {activeTab === 'benchmarking' && '📈 Exposenomics Benchmarking'}
               {activeTab === 'odisse' && '🇫🇷 Odissé Dataviz'}
@@ -5718,6 +5769,19 @@ directly into my cognitive systems. Our Swiss School of Exposenomics platform is
             <div className="flex-1 overflow-y-auto">
               <VanishingGutMicrobiome 
                 onNavigateTab={(tab) => setActiveTab(tab as any)}
+                siteTheme={siteTheme}
+              />
+            </div>
+          )}
+
+          {/* TAB 0.0037: GOOGLE GEMINI AGENTIC AI & SOVEREIGN TRIBAL SERVICES (PLATE #76) */}
+          {(activeTab === 'gemini_agentic_sovereign_service' || (activeTab as string) === 'gemini_agentic' || (activeTab as string) === 'agentic_ai' || (activeTab as string) === 'tribal_agents' || (activeTab as string) === 'plate_76' || (activeTab as string) === 'plate76') && (
+            <div className="flex-1 overflow-y-auto">
+              <GeminiAgenticSovereignService 
+                onNavigateTab={(tab) => {
+                  setActiveTab(tab as any);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
                 siteTheme={siteTheme}
               />
             </div>

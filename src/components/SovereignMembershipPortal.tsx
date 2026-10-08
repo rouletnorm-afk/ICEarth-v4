@@ -84,6 +84,7 @@ import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plat
 import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
+import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
 import {
   Shield,
   UserCheck,
@@ -215,6 +216,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CJ',
+      title: "Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations (Plate #76)",
+      type: 'Agentic AI Architecture, Enterprise Automation & Indigenous Sovereign Enclaves IP Asset',
+      imageSrc: geminiAgenticPlateImg,
+      link: 'gemini_agentic_sovereign_service',
+      sourceUrl: 'https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/',
+      description: "Plate #76: Landmark architectural blueprint IP asset documenting Google Cloud's launch of unified agentic AI for Gemini (Oct 8, 2026, 1B+ MAUs, 90% Fortune 100 enterprise adoption). Translates enterprise task ownership (code generation, scheduling, travel, multi-modal workflows) into decentralized ICEarth Member Services and air-gapped Indigenous Tribal Nation enclaves governed under First Nations OCAP® principles (Ownership, Control, Access, Possession) across 574+ sovereign tribes.",
+      sovereignHash: '0xTECHCRUNCH_2026_GOOGLE_GEMINI_AGENTIC_AI_ENTERPRISE_INDIGENOUS_SOVEREIGNTY_PLATE_76'
+    },
     {
       id: 'IP-000CI',
       title: "Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Plate #75)",

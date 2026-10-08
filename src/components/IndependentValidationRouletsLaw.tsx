@@ -598,7 +598,7 @@ export const IndependentValidationRouletsLaw: React.FC<IndependentValidationRoul
                   The Environmental Match Intensity Index (EMII)
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-300 leading-relaxed max-w-4xl">
-                  Tracing lead ore provenance from environmental archives has historically suffered from spatial fragmentation and geological heterogeneity—two deposits can have overlapping isotope fields, and individual deposits vary internally. EMII overcomes this by combining multi-isotopic matching ($^{206}\text{Pb}/^{204}\text{Pb}$, $^{207}\text{Pb}/^{204}\text{Pb}$, $^{208}\text{Pb}/^{204}\text{Pb}$) across peat cores with spatial density kernels of ancient mining sites.
+                  Tracing lead ore provenance from environmental archives has historically suffered from spatial fragmentation and geological heterogeneity—two deposits can have overlapping isotope fields, and individual deposits vary internally. EMII overcomes this by combining multi-isotopic matching (²⁰⁶Pb/²⁰⁴Pb, ²⁰⁷Pb/²⁰⁴Pb, ²⁰⁸Pb/²⁰⁴Pb) across peat cores with spatial density kernels of ancient mining sites.
                 </p>
               </div>
 

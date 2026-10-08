@@ -572,9 +572,15 @@ export const VanishingGutMicrobiome: React.FC<VanishingGutMicrobiomeProps> = ({
                 </button>
                 <button
                   onClick={() => onNavigateTab('independent_validation_roulets_law')}
-                  className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-stone-950 font-black text-xs font-mono transition shadow flex items-center gap-1.5 cursor-pointer"
+                  className="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition flex items-center gap-1.5 cursor-pointer border border-stone-700"
                 >
                   <span>🔬 Plate #74: Peatland Archives</span>
+                </button>
+                <button
+                  onClick={() => onNavigateTab('gemini_agentic_sovereign_service')}
+                  className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-xs font-mono transition shadow flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>🚀 Plate #76: Gemini Agentic AI</span>
                   <ArrowRight size={13} />
                 </button>
               </>

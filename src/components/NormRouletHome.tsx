@@ -158,10 +158,24 @@ import pahoLeadPlateImg from '../assets/images/indigenous_america_lead_paho_plat
 import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_sovereignty_prediction_markets_1791421289452.jpg';
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
+import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('gemini_agentic') ||
+    u.includes('agentic_ai') ||
+    u.includes('techcrunch_2026') ||
+    u.includes('plate_76') ||
+    u.includes('plate76') ||
+    u.includes('plate #76') ||
+    u.includes('photo-000cj') ||
+    u.includes('ip-000cj') ||
+    u.includes('1791498887746')
+  ) {
+    return geminiAgenticPlateImg;
+  }
   if (
     u.includes('vanishing_gut') ||
     u.includes('microbiome') ||
@@ -1281,14 +1295,16 @@ interface NormRouletHomeProps {
 interface ArticleFeedItem {
   id: string;
   title: string;
-  category: 'Infomediation' | 'Exposenomics' | 'Cavitation' | 'Sovereign Law' | 'Community' | 'Indigenous Sovereignty' | 'AI Sovereignty & Exposenomics' | 'Autonomous AI Risk & Sovereign Defense' | 'Indigenous IT Sovereignty & Zero-Footprint Compute' | 'Swiss Data Sovereignty, Zero-Water Compute & Global Digital Freedom' | 'Data Center Incentives & Sovereign Computing' | 'Sovereign Super Intelligence & Jurisprudence' | 'Lead Neurotoxicity, Alzheimer’s & Dementia Risk' | 'Sovereign AI Agents, Roulet’s Law & Digital Freedom' | 'Sovereign Economics, AI Oligarchy & Indigenous Cognitive Restitution' | 'Lead Exposenomics, Corporate Liability & Media Accountability' | 'Sovereign AI Safety, Broken Culture & Cognitive Exposenomics';
+  category: string;
   date: string;
   summary: string;
   fullText: string;
-  tags: string[];
-  linkHash: string;
+  tags?: string[];
+  linkHash?: string;
   publishedUrl?: string;
   imageSrc?: string;
+  editorCommentary?: string;
+  editorNote?: string;
 }
 
 interface PhotoGalleryItem {
@@ -1301,6 +1317,7 @@ interface PhotoGalleryItem {
   description: string;
   vaultHash: string;
   tags: string[];
+  cameraInfo?: string;
 }
 
 export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
@@ -1380,6 +1397,39 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-TECHCRUNCH-GOOGLE-GEMINI-AGENTIC-SOVEREIGN-2026',
+      title: "Google Brings Agentic AI to Gemini: Integrating Sovereign Agentic Services for ICEarth Members & Indigenous Tribal Nations (Plate #76)",
+      category: 'Agentic AI Architecture, Enterprise Automation & Indigenous Sovereign Enclaves',
+      date: '2026-10-08',
+      imageSrc: geminiAgenticPlateImg,
+      publishedUrl: 'https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/',
+      summary: "At a Google Cloud summit, Google launched a unified agent bringing Gemini into the agentic age—transitioning from conversational chat to autonomous task ownership (generating code, scheduling meetings, booking travel, executing multi-step enterprise workflows) across 1B+ monthly active users and 90% of Fortune 100 corporations. Norman Roulet synthesizes this enterprise milestone with decades of IT benchmarking (Spectrum Telecom COE for IBM/HP/DEC/Boeing/SAIC) to architect decentralized ICEarth Member Services and sovereign Tribal Nation enclaves governed under First Nations OCAP® principles.",
+      fullText: `GOOGLE BRINGS AGENTIC AI TO GEMINI: ARCHITECTURAL FRAMEWORK FOR ICEARTH MEMBERS & SOVEREIGN INDIGENOUS TRIBAL NATIONS
+Published in TechCrunch (Frederic Lardinois Wire) | 8 October 2026
+Google Cloud Enterprise Summit | Keynote by Sundar Pichai (1B+ MAUs, 90% Fortune 100 Adoption)
+Enterprise IT & Sovereign Systems Synthesis by Norman Roulet | Founder Spectrum Telecom / ICEarth Sovereign IT Desk
+Plate #76 Cryptographic Archive: PHOTO-000CJ / IP-000CJ | Vault Hash: 0xTECHCRUNCH_2026_GOOGLE_GEMINI_AGENTIC_AI_ENTERPRISE_INDIGENOUS_SOVEREIGNTY_PLATE_76
+
+ENTERPRISE SHIFT TO AGENTIC TASK OWNERSHIP:
+At a Google Cloud event on Thursday, Google announced it is bringing its Gemini AI into the agentic age, launching a unified agent that can not only answer questions but take direct ownership of assigned tasks on the user's behalf from a single interface.
+AI tools have moved beyond conversational Q&A to systems that take ownership of complex goals: generating code, scheduling meetings, booking appointments and travel, and executing multi-step enterprise API workflows. Google CEO Sundar Pichai highlighted that Gemini now serves over 1 billion monthly active users, and nearly 90% of Fortune 100 businesses use Gemini Enterprise at work.
+
+SOVEREIGN ICEARTH MEMBER INTEGRATION:
+While Google initially focuses on Fortune 100 enterprise corporate deployments, ICEarth integrates this agentic capability directly for individual sovereign members:
+- Personal Exposenomics & Lead Guard: Local edge agents continuously monitor tap water telemetry, blood lead levels (BLL), and municipal pipe notices without corporate cloud exfiltration.
+- Autonomous Sovereign Scheduling: Multi-calendar conflict resolution and travel booking executing locally with zero ad-tracking telemetry.
+- Automated Sovereign Code & Node Deployment: Edge verification suites compiling and deploying private nodes on member hardware.
+
+DEPLOYMENT TO INDIGENOUS COMMUNITIES AS SOVEREIGN NATIONS:
+574+ federally recognized tribes hold inherent sovereignty. ICEarth adapts Gemini Agentic AI into air-gapped tribal sovereign enclaves conforming to First Nations Information Governance Centre (FNIGC) OCAP® standards:
+- Ownership: Tribal nations retain 100% intellectual property, weights, and telemetry.
+- Control: Customary law and council resolutions govern agent access boundaries.
+- Access: Multi-sig tribal authority gates sacred knowledge and land records.
+- Possession: Physical hardware hosted within reservation sovereign boundaries.
+- Core Applications: Treaty boundary GIS analytics, real-time watershed pollution sensing, sacred language preservation without corporate scraping, and gaming compact revenue auditing.`,
+      editorCommentary: "Plate #76: Google's agentic breakthrough marks the shift from passive chatbot conversation to autonomous task execution. ICEarth decentralizes this power from corporate walled gardens into member privacy vaults and sovereign Indigenous tribal enclaves."
+    },
     {
       id: 'MAG-NATURE-STANFORD-VANISHING-GUT-MICROBIOME-2026',
       title: "Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Plate #75)",
@@ -4389,6 +4439,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CJ',
+      title: "Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations (Plate #76)",
+      category: 'Agentic AI Architecture, Enterprise Automation & Indigenous Sovereign Enclaves',
+      imageSrc: geminiAgenticPlateImg,
+      location: 'Google Cloud Event • TechCrunch • Mountain View, CA • ICEarth Sovereign Desk • Tribal Nation Enclaves',
+      date: '2026-10-08',
+      cameraInfo: 'Gemini Agentic Unified Engine & Sovereign Multi-Agent Architecture Visualizer',
+      vaultHash: '0xTECHCRUNCH_2026_GOOGLE_GEMINI_AGENTIC_AI_ENTERPRISE_INDIGENOUS_SOVEREIGNTY_PLATE_76',
+      description: "Plate #76: Landmark architectural blueprint documenting Google Cloud's launch of unified agentic AI for Gemini (Oct 8, 2026, 1B+ MAUs, 90% Fortune 100 enterprise adoption). Translates enterprise task ownership (code generation, scheduling, travel, multi-modal workflows) into decentralized ICEarth Member Services and air-gapped Indigenous Tribal Nation enclaves governed under First Nations OCAP® principles (Ownership, Control, Access, Possession) across 574+ sovereign tribes.",
+      tags: ['TechCrunch2026', 'GeminiAgentic', 'GoogleCloud', 'SovereignAI', 'IndigenousNations', 'OCAP', 'Plate76', 'SpectrumTelecom', 'RouletBenchmarking', 'EdgeComputing']
+    },
     {
       id: 'PHOTO-000CI',
       title: "Prehistoric Global Migration of Vanishing Gut Microbes with Homo sapiens vs Industrialized Speciation (Plate #75)",
