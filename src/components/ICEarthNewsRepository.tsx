@@ -82,6 +82,7 @@ import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_soverei
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
 import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
+import genevaLeadPlateImg from '../assets/images/geneva_lead_elimination_cooperation_1791590581970.jpg';
 import {
   Newspaper,
   Coins,
@@ -205,6 +206,19 @@ interface ICEarthNewsRepositoryProps {
 const resolveImageUrl = (url?: string): string => {
   if (!url) return '';
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('geneva') ||
+    u.includes('genevaenvironmentnetwork') ||
+    u.includes('swiss_school') ||
+    u.includes('plate_77') ||
+    u.includes('plate77') ||
+    u.includes('plate #77') ||
+    u.includes('photo-000ck') ||
+    u.includes('ip-000ck') ||
+    u.includes('1791590581970')
+  ) {
+    return genevaLeadPlateImg;
+  }
   if (
     u.includes('gemini_agentic') ||
     u.includes('agentic_ai') ||
@@ -1322,6 +1336,74 @@ const resolveImageUrl = (url?: string): string => {
 };
 
 const DEFAULT_ARTICLES: NewsArticle[] = [
+  {
+    id: 'ART-GENEVA-SWISS-SCHOOL-EXPOSENOMICS-LEAD-COOPERATION-2026',
+    contentType: 'Article',
+    title: "Geneva International Cooperation to Eliminate Lead Use: Why the Swiss School of Exposenomics & ICEarth Anchor Global Chemical Governance (Plate #77)",
+    subtitle: "GENEVA / INTERNATIONAL ENVIRONMENT HOUSE — As highlighted by the Geneva Environment Network (GEN), Geneva serves as the world's premier multilateral hub for the governance of chemicals, hazardous waste, and toxic pollution. The Swiss School of Exposenomics and ICEarth, founded by Norman Roulet of Swiss lineage, connect precision enterprise benchmarking and the mathematical proof of Roulet's Law (the 8,000-year anthropogenic lead continuum) directly with Geneva's international secretariats: the World Health Organization (WHO PREVENT Technical Package), the UN Environment Programme (UNEP Chemicals & Health Branch), the Basel, Rotterdam and Stockholm (BRS) Conventions Secretariat, the Global Alliance on Health and Pollution (GAHP), the Global Framework on Chemicals (GFC / SAICM), the International Labour Organization (ILO), and the UN Special Rapporteur on Toxics and Human Rights.",
+    sourceUrl: 'https://www.genevaenvironmentnetwork.org/fr/ressources/nouvelles/lead-poisoning-prevention/',
+    sourceName: 'Geneva Environment Network (GEN) / Swiss School of Exposenomics',
+    publishDate: '2026-10-09',
+    author: 'Geneva Environment Network / Diplomatic Synthesis by Norman Roulet',
+    authorName: 'Geneva Environment Network / Diplomatic Synthesis by Norman Roulet',
+    originState: 'Geneva, Switzerland • International Environment House, Châtelaine • ICEarth Sovereign Desk',
+    communities: [
+      'Geneva Environment Network (GEN)',
+      'World Health Organization (WHO IPCS)',
+      'UN Environment Programme (UNEP Chemicals)',
+      'Basel, Rotterdam and Stockholm Conventions (BRS)',
+      'Global Alliance on Health and Pollution (GAHP)',
+      'Swiss School of Exposenomics',
+      'ICEarth Sovereign IT & Exposenomics Consortium'
+    ],
+    tags: [
+      'GenevaEnvironmentNetwork',
+      'SwissSchoolOfExposenomics',
+      'WHO',
+      'UNEP',
+      'BaselConvention',
+      'GAHP',
+      'Plate77',
+      'RouletsLaw',
+      'LeadElimination',
+      'ILPWW',
+      'ChemicalGovernance'
+    ],
+    summary: "Geneva is the world's multilateral capital for chemicals and waste governance. The Swiss School of Exposenomics and ICEarth unite Swiss precision benchmarking and Roulet's Law with Geneva's international secretariats (WHO, UNEP, BRS Conventions, GAHP, GFC, ILO, UN Special Rapporteur on Toxics) to establish an actionable policy directory and technical toolkits for government leaders and environmental delegates.",
+    imageUrl: genevaLeadPlateImg,
+    thumbnailUrl: genevaLeadPlateImg,
+    imageCaption: 'Plate #77: Geneva International Cooperation to Eliminate Lead Use — The Swiss School of Exposenomics Multilateral Policy Directory & Hub (Geneva Environment Network 2026).',
+    leadScientist: 'Norman Roulet (Swiss School of Exposenomics) / Geneva Environment Network Secretariat',
+    investigationType: 'Multilateral Environmental Agreements / International Chemical Governance / Exposenomics Policy',
+    vaultHash: '0xGENEVA_2026_SWISS_SCHOOL_EXPOSENOMICS_LEAD_COOPERATION_PLATE_77',
+    verifiedDoi: 'GEN-2026-10-09-Lead-Poisoning-Prevention',
+    readingTimeMinutes: 15,
+    actionNeeded: 'Access Geneva Multilateral Directory, Download Treaty Toolkits, and Review WHO PREVENT Technical Package',
+    fullExcerpt: `GENEVA INTERNATIONAL COOPERATION TO ELIMINATE LEAD USE: THE SWISS SCHOOL OF EXPOSENOMICS MULTILATERAL DIRECTORY
+Geneva Environment Network Official Dossier | 9 October 2026
+Geneva Diplomatic Seats: International Environment House, Palais des Nations, Campus Biotech, Avenue Appia
+Policy Synthesis by Norman Roulet | Swiss School of Exposenomics & ICEarth Desk
+Plate #77 Cryptographic Archive: PHOTO-000CK / IP-000CK | Vault Hash: 0xGENEVA_2026_SWISS_SCHOOL_EXPOSENOMICS_LEAD_COOPERATION_PLATE_77
+
+THE ROLE OF GENEVA IN GLOBAL LEAD ELIMINATION:
+As promoted by the Geneva Environment Network: 'As a global hub of the governance of chemicals, waste and pollution, Geneva is an important place to foster global efforts to prevent lead poisoning, with key organizations active on the topic.'
+Geneva is uniquely positioned because of the dense cluster of multilateral environmental secretariats, public health agencies, and international human rights bodies located within a 5-kilometer radius along Lake Geneva and the International Environment House in Châtelaine.
+
+WHY THE SWISS SCHOOL OF EXPOSENOMICS & ICEARTH:
+The Roulet Family lineage is Swiss. Switzerland defines the global benchmark of excellence, precision, neutrality, public health standards, environmental governance, and data sovereignty. As promoted by the Geneva Environment Network, Geneva is the decisive global governance hub.
+The Swiss School of Exposenomics bridges Norman Roulet's forensic exposenomics (Roulet's Law, lead crime proof, lead water infrastructure, ancient galena isotope mining footprints) with Geneva's multilateral treaties, global health institutions, and international policy apparatus.
+
+ORGANIZATIONS FEATURED IN GENEVA DIRECTORY:
+1. World Health Organization (WHO / IPCS): HQ Avenue Appia 20. Launching the PREVENT Technical Package in 2027 (Prioritize, Respond, Engage, Verify, Enforce, Track).
+2. UNEP Chemicals and Health Branch: International Environment House I. Joint Secretariat of the Global Alliance to Eliminate Lead Paint (GAELP) (<90 ppm standard) and PCFV (elimination of leaded petrol saving $2.45T/yr).
+3. Basel, Rotterdam and Stockholm (BRS) Conventions Secretariat: International Environment House I. Enforces binding restrictions on transboundary waste and Technical Guidelines on used lead-acid battery (ULAB) recycling.
+4. Global Alliance on Health and Pollution (GAHP): Campus Biotech, Avenue Sécheron 15. Collaborative body of 70+ members tackling toxic pollution in low- and middle-income countries.
+5. Global Framework on Chemicals (GFC / SAICM): Adopted at ICCM5 in Bonn, successor to SAICM managing lead in paint.
+6. International Labour Organization (ILO): Route des Morillons 4. Adopted Recommendation No. 4 in 1919 and Chemicals Convention No. 170.
+7. UN Special Rapporteur on Toxics and Human Rights: Palais des Nations. Investigates state failure to protect citizens from lead-contaminated housing as a human rights violation.
+8. Geneva Environment Network (GEN): International Environment House II. Coordinates environmental synergies across Geneva.`,
+    editorCommentary: "Plate #77: Geneva is the global diplomatic capital of chemical governance. The Swiss School of Exposenomics connects Swiss precision and Roulet's Law with the Geneva treaty constellation to provide an indispensable directory for policymakers."
+  },
   {
     id: 'ART-TECHCRUNCH-GOOGLE-GEMINI-AGENTIC-AI-SOVEREIGNTY-2026',
     contentType: 'Article',
@@ -7249,6 +7331,32 @@ export const ICEarthNewsRepository: React.FC<ICEarthNewsRepositoryProps> = ({
                   </button>
 
                   <div className="flex flex-wrap items-center gap-2">
+                    {(article.tags?.includes('GenevaEnvironmentNetwork') || article.tags?.includes('Plate77') || article.id.includes('GENEVA-SWISS-SCHOOL')) && (
+                      <>
+                        <a
+                          href="https://www.genevaenvironmentnetwork.org/fr/ressources/nouvelles/lead-poisoning-prevention/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-3.5 py-1.5 bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 text-white font-mono font-black text-xs rounded-xl shadow border border-red-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                        >
+                          <FileText size={13} className="text-white" />
+                          <span>GEN Dossier</span>
+                          <ExternalLink size={12} className="text-white" />
+                        </a>
+
+                        {onNavigateTab && (
+                          <button
+                            onClick={() => onNavigateTab('geneva_lead_cooperation')}
+                            className="px-3.5 py-1.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-mono font-black text-xs rounded-xl shadow border border-red-300 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+                          >
+                            <Building2 size={13} className="text-amber-300 animate-pulse" />
+                            <span>🏛️ Launch Geneva Lead Cooperation Hub (Plate #77)</span>
+                            <ArrowRight size={12} />
+                          </button>
+                        )}
+                      </>
+                    )}
+
                     {(article.tags?.includes('TechCrunch2026') || article.tags?.includes('GeminiAgentic') || article.tags?.includes('Plate76') || article.id.includes('GOOGLE-GEMINI-AGENTIC')) && (
                       <>
                         <a

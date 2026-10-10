@@ -85,6 +85,7 @@ import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_soverei
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
 import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
+import genevaLeadPlateImg from '../assets/images/geneva_lead_elimination_cooperation_1791590581970.jpg';
 import {
   Shield,
   UserCheck,
@@ -216,6 +217,16 @@ export const SovereignMembershipPortal: React.FC<SovereignMembershipPortalProps>
   ]);
 
   const [memberMediaIp, setMemberMediaIp] = useState([
+    {
+      id: 'IP-000CK',
+      title: "Geneva International Cooperation to Eliminate Lead Use: Swiss School of Exposenomics Multilateral Policy Directory & Hub (Plate #77)",
+      type: 'Swiss Sovereignty, Geneva Multilateral Treaties & Global Lead Elimination IP Asset',
+      imageSrc: genevaLeadPlateImg,
+      link: 'geneva_lead_cooperation',
+      sourceUrl: 'https://www.genevaenvironmentnetwork.org/fr/ressources/nouvelles/lead-poisoning-prevention/',
+      description: "Plate #77: Definitive multilateral policy cartography and directory documenting Geneva, Switzerland as the global hub for the governance of chemicals, hazardous waste, and pollution. Catalogs Geneva-based international secretariats and agencies (WHO PREVENT Technical Package, UNEP Chemicals & Health Branch, Basel Rotterdam & Stockholm Conventions, GAHP, Global Framework on Chemicals, ILO, UN Special Rapporteur on Toxics) synthesized through the Swiss School of Exposenomics and Norman Roulet's Swiss sovereignty lineage.",
+      sovereignHash: '0xGENEVA_2026_SWISS_SCHOOL_EXPOSENOMICS_LEAD_COOPERATION_PLATE_77'
+    },
     {
       id: 'IP-000CJ',
       title: "Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations (Plate #76)",

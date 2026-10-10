@@ -159,10 +159,24 @@ import gamingPredictionPlateImg from '../assets/images/indigenous_gaming_soverei
 import peatlandMapPlateImg from '../assets/images/european_peatland_lead_metallurgy_map_1791459149801.jpg';
 import vanishingMicrobiomePlateImg from '../assets/images/vanishing_gut_microbiome_hadza_tsimane_1791486044698.jpg';
 import geminiAgenticPlateImg from '../assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg';
+import genevaLeadPlateImg from '../assets/images/geneva_lead_elimination_cooperation_1791590581970.jpg';
 
 const resolvePhotoUrl = (url: string): string => {
   if (!url) return plazaPanImg;
   const u = url.trim().toLowerCase();
+  if (
+    u.includes('geneva') ||
+    u.includes('genevaenvironmentnetwork') ||
+    u.includes('swiss_school') ||
+    u.includes('plate_77') ||
+    u.includes('plate77') ||
+    u.includes('plate #77') ||
+    u.includes('photo-000ck') ||
+    u.includes('ip-000ck') ||
+    u.includes('1791590581970')
+  ) {
+    return genevaLeadPlateImg;
+  }
   if (
     u.includes('gemini_agentic') ||
     u.includes('agentic_ai') ||
@@ -1397,6 +1411,34 @@ export const NormRouletHome: React.FC<NormRouletHomeProps> = ({
 
   // Magazine Feed Articles
   const magazineArticles: ArticleFeedItem[] = [
+    {
+      id: 'MAG-GENEVA-SWISS-SCHOOL-EXPOSENOMICS-LEAD-2026',
+      title: "Geneva International Cooperation to Eliminate Lead Use: Why the Swiss School of Exposenomics & ICEarth Anchor Global Chemical Governance (Plate #77)",
+      category: 'Swiss Sovereignty, Geneva Multilateral Treaties & Global Lead Elimination',
+      date: '2026-10-09',
+      imageSrc: genevaLeadPlateImg,
+      publishedUrl: 'https://www.genevaenvironmentnetwork.org/fr/ressources/nouvelles/lead-poisoning-prevention/',
+      summary: "Geneva is the world's multilateral capital for the governance of chemicals, hazardous waste, and pollution. The Swiss School of Exposenomics and ICEarth, founded by Norman Roulet of Swiss lineage, connect precision benchmarking and Roulet's Law directly with the Geneva constellation of international secretariats: WHO (PREVENT Technical Package), UNEP Chemicals (GAELP lead paint ban), Basel Rotterdam & Stockholm Conventions (waste lead-acid batteries), Global Alliance on Health and Pollution (GAHP), Global Framework on Chemicals (GFC / SAICM), ILO (1919 Recommendation No. 4), and the UN Special Rapporteur on Toxics.",
+      fullText: `GENEVA INTERNATIONAL COOPERATION TO ELIMINATE LEAD USE: THE SWISS SCHOOL OF EXPOSENOMICS MULTILATERAL DIRECTORY
+Geneva Environment Network Dossier | 9 October 2026
+Geneva International Hub: UNEP, WHO, BRS Conventions, GAHP, GFC, ILO, UN Special Rapporteur on Toxics
+Synthesis by Norman Roulet | Swiss School of Exposenomics & ICEarth Desk
+Plate #77 Cryptographic Archive: PHOTO-000CK / IP-000CK | Vault Hash: 0xGENEVA_2026_SWISS_SCHOOL_EXPOSENOMICS_LEAD_COOPERATION_PLATE_77
+
+WHY THE SWISS SCHOOL OF EXPOSENOMICS & ICEARTH:
+The Roulet Family lineage is Swiss. Switzerland defines the global benchmark of excellence, precision, neutrality, public health standards, environmental governance, and data sovereignty. As promoted by the Geneva Environment Network: 'As a global hub of the governance of chemicals, waste and pollution, Geneva is an important place to foster global efforts to prevent lead poisoning, with key organizations active on the topic.'
+The Swiss School of Exposenomics bridges Norman Roulet's forensic exposenomics (Roulet's Law, lead crime proof, lead water infrastructure, ancient galena isotope mining footprints) with Geneva's multilateral treaties, global health institutions, and international policy apparatus.
+
+KEY GENEVA MULTILATERAL ORGANIZATIONS:
+1. World Health Organization (WHO / IPCS): Developing the PREVENT Technical Package launching in 2027.
+2. UNEP Chemicals and Health Branch: Co-leads the Global Alliance to Eliminate Lead Paint (GAELP) (<90 ppm standard).
+3. Basel, Rotterdam and Stockholm (BRS) Conventions: Technical guidelines on environmentally sound management of waste lead-acid batteries.
+4. Global Alliance on Health and Pollution (GAHP): Multi-stakeholder alliance tackling toxic lead in LMICs.
+5. Global Framework on Chemicals (GFC / SAICM): High-level global targets on chemicals and waste beyond 2020.
+6. International Labour Organization (ILO): First legal standard on lead in 1919 (Recommendation No. 4).
+7. UN Special Rapporteur on Toxics and Human Rights: Enforces right to life and effective legal remedies against toxic exposure.`,
+      editorCommentary: "Plate #77: Geneva is the diplomatic capital of global chemical governance. The Swiss School of Exposenomics unites Swiss precision benchmarking and Roulet's Law with Geneva's treaty secretariats."
+    },
     {
       id: 'MAG-TECHCRUNCH-GOOGLE-GEMINI-AGENTIC-SOVEREIGN-2026',
       title: "Google Brings Agentic AI to Gemini: Integrating Sovereign Agentic Services for ICEarth Members & Indigenous Tribal Nations (Plate #76)",
@@ -4439,6 +4481,18 @@ From Flint, Michigan—the national capital of environmental genocide—this rep
 
   // Creative Photography Gallery Items Archive
   const basePhotographyGallery: PhotoGalleryItem[] = [
+    {
+      id: 'PHOTO-000CK',
+      title: "Geneva International Cooperation to Eliminate Lead Use: Swiss School of Exposenomics Multilateral Policy Directory & Hub (Plate #77)",
+      category: 'Swiss Sovereignty, Geneva Multilateral Treaties & Global Lead Elimination',
+      imageSrc: genevaLeadPlateImg,
+      location: 'Geneva Environment Network • International Environment House, Châtelaine • Palais des Nations • Lake Geneva, Switzerland',
+      date: '2026-10-09',
+      cameraInfo: 'Swiss Precision Cartography & Multilateral Environmental Agreement Visualizer',
+      vaultHash: '0xGENEVA_2026_SWISS_SCHOOL_EXPOSENOMICS_LEAD_COOPERATION_PLATE_77',
+      description: "Plate #77: Definitive multilateral policy cartography and directory documenting Geneva, Switzerland as the global hub for the governance of chemicals, hazardous waste, and pollution. Catalogs Geneva-based international secretariats and agencies (WHO PREVENT Technical Package, UNEP Chemicals & Health Branch, Basel Rotterdam & Stockholm Conventions, GAHP, Global Framework on Chemicals, ILO, UN Special Rapporteur on Toxics) synthesized through the Swiss School of Exposenomics and Norman Roulet's Swiss sovereignty lineage.",
+      tags: ['GenevaEnvironmentNetwork', 'SwissSchoolOfExposenomics', 'WHO', 'UNEP', 'BaselConvention', 'GAHP', 'Plate77', 'RouletsLaw', 'LeadElimination', 'ILPWW']
+    },
     {
       id: 'PHOTO-000CJ',
       title: "Google Gemini Agentic AI Enterprise & Sovereign Indigenous Tribal Operations (Plate #76)",

@@ -75,6 +75,38 @@ Where:
 // --- SOVEREIGN LEAD REPORTS DATABASES ---
 const INITIAL_REPORTS = [
   {
+    id: "rep-geneva-lead-cooperation-2026",
+    title: "Geneva International Cooperation to Eliminate Lead Use: Swiss School of Exposenomics & Global Multilateral Policy Directory",
+    location: "Geneva, Switzerland & Global",
+    funding: 0.0,
+    fundingDetails: "Multilateral treaty secretariats, UNEP, WHO IPCS, BRS Conventions, GAHP, and Swiss Federal Offices. Published via Geneva Environment Network (GEN 2026).",
+    category: "Multilateral Diplomacy, Swiss Sovereignty & Global Exposenomics",
+    exposomeRisk: "Critical",
+    description: "As the global diplomatic capital of chemical, waste, and pollution governance, Geneva hosts the premier multilateral bodies combating lead poisoning worldwide. This comprehensive policy directory catalogs the World Health Organization (WHO PREVENT Technical Package), UN Environment Programme (Chemicals and Health Branch), Basel/Rotterdam/Stockholm (BRS) Conventions, Global Alliance to Eliminate Lead Paint (GAELP), Global Alliance on Health and Pollution (GAHP), and the Global Framework on Chemicals. Rooted in the Swiss School of Exposenomics and Norman Roulet's Swiss lineage, this directory equips government officials, tribal nations, and policy leaders with direct contacts, treaty frameworks, and benchmark actions to end toxic exposures.",
+    twitterDraft: "🇨🇭 GENEVA DIRECTORY: Swiss School of Exposenomics & ICEarth release the definitive Geneva International Cooperation Directory to Eliminate Lead Use (Plate #77). Cataloging WHO, UNEP, BRS Conventions, GAHP & Swiss precision governance. #Geneva #SwissExposenomics #LeadFree #RouletsLaw #Plate77",
+    spreadsheetRow: "rep-geneva-lead-cooperation-2026, Geneva Switzerland, 2026-10-09, 0.0, Multilateral Diplomacy & Exposenomics, Critical, Geneva Environment Network",
+    sqlInsert: "INSERT INTO lead_reports (id, location, funding, category, exposome_risk) VALUES ('rep-geneva-lead-cooperation-2026', 'Geneva, Switzerland', 0.0, 'Multilateral Diplomacy', 'Critical');",
+    date: "2026-10-09",
+    source: "https://www.genevaenvironmentnetwork.org/fr/ressources/nouvelles/lead-poisoning-prevention/",
+    imageUrl: "/src/assets/images/geneva_lead_elimination_cooperation_1791590581970.jpg"
+  },
+  {
+    id: "rep-google-gemini-agentic-tribal-sovereignty-2026",
+    title: "Google Brings Agentic AI to Gemini: Architectural Blueprint for ICEarth Member Services & Sovereign Indigenous Nations",
+    location: "Mountain View, CA & Sovereign Indigenous Enclaves",
+    funding: 0.0,
+    fundingDetails: "Google Cloud Enterprise & DeepMind Roadmap. 1B+ MAUs, 90% Fortune 100 enterprise adoption. Reported by TechCrunch (October 2026).",
+    category: "Autonomous Agentic AI, Sovereign IT & Tribal Governance",
+    exposomeRisk: "Opportunity",
+    description: "At a major Google Cloud event, Google announced Gemini is entering the agentic age with unified autonomous agents that take action, run multi-step code workflows, schedule appointments, and coordinate enterprise tools. ICEarth establishes a sovereign deployment architecture for this breakthrough: deploying Gemini agentic workflows into self-governed tribal edge enclaves following First Nations OCAP® principles. Member services include real-time Exposenomics bio-surveillance, Land Trust deed analysis, language revival engines, and autonomous sovereign revenue auditing.",
+    twitterDraft: "🤖 GEMINI AGENTIC AI: Google brings autonomous agentic AI to Gemini Enterprise. ICEarth details sovereign integration for members and Indigenous Nations with zero-cloud data leak and OCAP compliance (Plate #76). #Gemini #AgenticAI #TribalSovereignty #ICEarth",
+    spreadsheetRow: "rep-google-gemini-agentic-tribal-sovereignty-2026, Sovereign Enclaves, 2026-10-08, 0.0, Agentic AI & Sovereignty, Low, TechCrunch",
+    sqlInsert: "INSERT INTO lead_reports (id, location, funding, category, exposome_risk) VALUES ('rep-google-gemini-agentic-tribal-sovereignty-2026', 'Sovereign Enclaves', 0.0, 'Agentic AI & Sovereignty', 'Low');",
+    date: "2026-10-08",
+    source: "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
+    imageUrl: "/src/assets/images/gemini_agentic_ai_tribal_sovereign_1791498887746.jpg"
+  },
+  {
     id: "rep-india-mirna31-nrf2-lead-2026",
     title: "Association of miRNA-31 & miRNA 192 with Nrf2/NF-κB Biomarkers in Occupational Lead Toxicity: A Cross-Sectional Observational Study",
     location: "Jodhpur & Rajasthan, India",
